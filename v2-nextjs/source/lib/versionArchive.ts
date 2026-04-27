@@ -16,20 +16,35 @@ export type VersionArchiveEntry = {
 
 const exhibitionRepoUrl = 'https://github.com/yes-U-can/exner-sicp';
 const v1ArchiveUrl = (version: string) => `${exhibitionRepoUrl}/tree/main/v1-gas/releases/${version}`;
-const v2ReleaseUrl = `${exhibitionRepoUrl}/tree/main/v2-nextjs/releases/v2.0.0`;
+const v2ReleaseUrl = (version: string) => `${exhibitionRepoUrl}/tree/main/v2-nextjs/releases/${version}`;
 const v2SourceUrl = `${exhibitionRepoUrl}/tree/main/v2-nextjs/source`;
 
-export const currentVersion: VersionArchiveEntry = {
-  version: 'v2.0.0',
-  title: 'Version 2.0.0',
-  series: 'v2-nextjs',
-  publishedAt: '2026-02-15',
-  releaseKind: 'major',
-  releaseLabel: '메이저 패치',
-  summary: 'Next.js 기반 웹앱으로 재구성하고, BYOK AI 보조 기능과 참조 문서 검색을 추가한 버전입니다.',
-  sourceUrl: v2SourceUrl,
-  releaseUrl: v2ReleaseUrl,
-};
+export const v2NextVersions: VersionArchiveEntry[] = [
+  {
+    version: 'v2.0.1',
+    title: 'Version 2.0.1',
+    series: 'v2-nextjs',
+    publishedAt: '2026-04-27',
+    releaseKind: 'bugfix',
+    releaseLabel: '버그 패치',
+    summary: 'v2.0.0 공개 이후 AI 도우미, BYOK 세션, 다크모드, 참조 문서 라우팅, 문서 정리를 안정화한 버전입니다.',
+    sourceUrl: v2SourceUrl,
+    releaseUrl: v2ReleaseUrl('v2.0.1'),
+  },
+  {
+    version: 'v2.0.0',
+    title: 'Version 2.0.0',
+    series: 'v2-nextjs',
+    publishedAt: '2026-02-15',
+    releaseKind: 'major',
+    releaseLabel: '메이저 패치',
+    summary: 'Next.js 기반 웹앱으로 재구성하고, BYOK AI 보조 기능과 참조 문서 검색을 추가한 버전입니다.',
+    sourceUrl: v2SourceUrl,
+    releaseUrl: v2ReleaseUrl('v2.0.0'),
+  },
+];
+
+export const currentVersion = v2NextVersions[0];
 
 export const v1GasVersions: VersionArchiveEntry[] = [
   {
@@ -211,4 +226,4 @@ export const v1GasVersions: VersionArchiveEntry[] = [
   },
 ];
 
-export const versionArchiveEntries = [currentVersion, ...v1GasVersions] as const;
+export const versionArchiveEntries = [...v2NextVersions, ...v1GasVersions] as const;

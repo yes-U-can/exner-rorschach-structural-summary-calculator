@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import VersionArchiveList from '@/components/versions/VersionArchiveList';
-import { currentVersion, v1GasVersions } from '@/lib/versionArchive';
+import { v1GasVersions, v2NextVersions } from '@/lib/versionArchive';
 
 export const metadata: Metadata = {
   title: 'Version Archive',
@@ -21,7 +21,7 @@ export default function VersionsPage() {
           <h1 className="text-2xl font-semibold tracking-tight text-[var(--text-strong)] sm:text-3xl">
             {'\uBC84\uC804 \uC544\uCE74\uC774\uBE0C'}
           </h1>
-          <VersionArchiveList currentVersion={currentVersion} v1GasVersions={v1GasVersions} />
+          <VersionArchiveList v2NextVersions={v2NextVersions} v1GasVersions={v1GasVersions} />
         </section>
       </main>
       <Footer />

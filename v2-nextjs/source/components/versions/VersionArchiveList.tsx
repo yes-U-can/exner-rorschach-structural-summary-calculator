@@ -7,7 +7,7 @@ import type { ReleaseKind, VersionArchiveEntry } from '@/lib/versionArchive';
 type SortOrder = 'desc' | 'asc';
 
 type VersionArchiveListProps = {
-  currentVersion: VersionArchiveEntry;
+  v2NextVersions: VersionArchiveEntry[];
   v1GasVersions: VersionArchiveEntry[];
 };
 
@@ -94,7 +94,7 @@ function ReleaseList({
   );
 }
 
-export default function VersionArchiveList({ currentVersion, v1GasVersions }: VersionArchiveListProps) {
+export default function VersionArchiveList({ v2NextVersions, v1GasVersions }: VersionArchiveListProps) {
   const [sortOrder, setSortOrder] = useState<SortOrder>('desc');
   const sortedV1Versions = useMemo(() => sortVersions(v1GasVersions, sortOrder), [sortOrder, v1GasVersions]);
 
@@ -105,7 +105,7 @@ export default function VersionArchiveList({ currentVersion, v1GasVersions }: Ve
           {'[NextJS] \uBC84\uC804 2 \uB9B4\uB9AC\uC988 \uAE30\uB85D'}
         </h2>
         <ReleaseList
-          entries={[currentVersion]}
+          entries={v2NextVersions}
           sourceLabel={'\uC18C\uC2A4\uCF54\uB4DC'}
           releaseLabel={'\uD328\uCE58\uB178\uD2B8'}
           showUnavailableActions

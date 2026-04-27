@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /**
- * Rorschach Calculator v2.0.0
+ * Rorschach Calculator v2.0.1
  * Utility Functions
  * 
  * Code.gs의 유틸리티 함수들을 TypeScript로 이전
