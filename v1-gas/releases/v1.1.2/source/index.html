@@ -1,0 +1,1960 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base target="_top">
+    
+    <!--
+    * =================================================================================
+    * 로샤 구조 요약지 계산 프로그램 (Computing Program for Rorschach Structural Summary)
+    * =================================================================================
+    *
+    * 본 스크립트는 서울임상심리연구소(SICP)에 의해 개발되었습니다.
+    * 저작권은 서울임상심리연구소에 귀속되어 있으나, 임상심리학 분야의 발전과
+    * 전문가들의 원활한 업무를 돕기 위한 공익적 목적으로 본 코드를 공개합니다.
+    *
+    * This script was developed by the Seoul Institute of Clinical Psychology (SICP).
+    * While the copyright is owned by SICP, this code is released for the public good
+    * to contribute to the advancement of clinical psychology and to assist professionals.
+    *
+    * ---------------------------------------------------------------------------------
+    *
+    * MIT License
+    * Copyright (c) 2025 서울임상심리연구소 (Seoul Institute of Clinical Psychology, SICP)
+    *
+    * Permission is hereby granted, free of charge, to any person obtaining a copy
+    * of this software and associated documentation files (the "Software"), to deal
+    * in the Software without restriction, including without limitation the rights
+    * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    * copies of the Software, and to permit persons to whom the Software is
+    * furnished to do so, subject to the following conditions:
+    *
+    * The above copyright notice and this permission
+    * notice shall be included in all
+    * copies or substantial portions of the Software.
+    *
+    * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    * SOFTWARE.
+    *
+    * ---------------------------------------------------------------------------------
+    * @author      서울임상심리연구소 (SICP)
+    * @address     서울시 종로구 숭인동 1245번지 3층
+    * @created     2025-10
+    * @version     v1.1.2
+    * =================================================================================
+    *
+    * 로샤 구조 요약지 계산 프로그램 - 메인 HTML 파일 (index.html)
+    * ---------------------------------------------------------------------------------
+    * 이 파일은 웹앱의 사용자 인터페이스와 클라이언트 사이드 로직을 담당합니다.
+    * 
+    * [목차]
+    *
+    * 1. HTML 기본 구조
+    * 1.1. 스타일시트 포함
+    * 1.2. Google Analytics 설정
+    * 
+    * 2. 초기 화면
+    * 2.1. 초기 화면 탭 네비게이션
+    * 2.2. Notice 탭 콘텐츠
+    * 2.2.1. 이용 안내 가이드
+    * 2.2.2. 추가 정보 링크
+    * 2.3. Scoring 탭 콘텐츠
+    * 2.3.1. 채점 시트 안내
+    * 2.3.2. 채점 폼
+    * 2.3.3. 상단 스크롤바
+    * 2.3.4. 채점 테이블
+    * 2.3.5. 행 제어 버튼
+    * 2.3.6. 행 제어 안내
+    * 2.3.7. 계산 버튼
+    * 2.3.8. 로딩 인디케이터
+    * 2.4. List 탭 콘텐츠
+    * 2.4.1. 코드 목록 헤더
+    * 2.4.2. 코드 목록 테이블
+    * 
+    * 3. 결과 화면
+    * 3.1. 결과물 출력 안내
+    * 3.2. 결과 화면 탭 네비게이션
+    * 3.3. Upper Section 탭 콘텐츠
+    * 3.3.1. Location Features 카드
+    * 3.3.2. DQ 카드
+    * 3.3.3. Form Quality 카드
+    * 3.3.4. Blends 카드
+    * 3.3.5. Single 카드
+    * 3.3.6. Pairs 카드
+    * 3.3.7. Contents 카드
+    * 3.3.8. Approach 카드
+    * 3.3.9. Special Scores 카드
+    * 3.3.10. Determinants 카드
+    * 3.4. Lower Section 탭 콘텐츠
+    * 3.4.1. Core 카드
+    * 3.4.2. Affection 카드
+    * 3.4.3. Interpersonal 카드
+    * 3.4.4. Special Indices 카드
+    * 3.4.5. Ideation 카드
+    * 3.4.6. Cognitive Mediation 카드
+    * 3.4.7. Information Processing 카드
+    * 3.4.8. Self-Perception 카드
+    * 3.4.9. Response List 컨테이너
+    * 3.5. Special Indices 탭 콘텐츠
+    * 3.5.1. S-Constellation 카드
+    * 3.5.2. DEPI 카드
+    * 3.5.3. PTI 카드
+    * 3.5.4. CDI 카드
+    * 3.5.5. HVI 카드
+    * 3.5.6. OBS 카드
+    * 3.6. 버튼 컨테이너
+    * 
+    * 4. 푸터
+    * 
+    * 5. 개인정보처리방침 모달
+    * 
+    * 6. JavaScript 코드
+    * 6.1. DOM 요소 참조
+    * 6.2. 버튼 DOM 요소
+    * 6.3. 옵션 데이터 정의
+    * 6.4. Z 점수 테이블
+    * 6.5. GHR/PHR 분류 함수
+    * 6.6. GHR/PHR 업데이트 함수
+    * 6.7. 샘플 데이터
+    * 6.8. 행 계산 업데이트 함수
+    * 6.9. 새 행 생성 함수
+    * 6.10. 마지막 행 삭제 함수
+    * 6.11. 버튼 상태 업데이트 함수
+    * 6.12. 버튼 이벤트 리스너 연결
+    * 6.13. List 탭의 카테고리-배경색 매핑
+    * 6.14. List 탭의 데이터를 파싱하고 계층형 테이블을 생성합니다
+    * 6.15. 로컬 스토리지 키
+    * 6.16. 데이터 로드 함수
+    * 6.17. 첫 로드 플래그
+    * 6.18. Scoring 탭 첫 로드 처리 함수
+    * 6.19. 폼 제출 이벤트 핸들러
+    * 6.20. 초기 탭 전환 함수
+    * 6.21. 결과 탭 전환 함수
+    * 6.22. 체크박스 상태 설정 함수
+    * 6.23. 결과 표시 함수
+    * 6.24. 채점 화면으로 돌아가기 함수
+    * 6.25. 0값 회색 처리 함수
+    * 6.26. 에러 표시 함수
+    * 6.27. CSV 다운로드 헬퍼 함수
+    * 6.28. Summary CSV 내보내기 이벤트 핸들러
+    * 6.29. Raw Data CSV 내보내기 이벤트 핸들러
+    * 6.30. Summary CSV 내보내기 성공 콜백
+    * 6.31. Raw Data CSV 내보내기 성공 콜백
+    * 6.32. 개인정보처리방침 모달 관련 요소
+    * 6.33. '개인정보처리방침' 링크 클릭 시 모달 열기
+    * 6.34. 'X' 버튼 클릭 시 모달 닫기
+    * 6.35. 모달 바깥의 어두운 영역(overlay) 클릭 시 모달 닫기
+    * =================================================================================
+    -->
+    
+    <!-- 1.1. 스타일시트 포함 -->
+    <style>
+        <?!= include('styles'); ?>
+    </style>
+    
+    <!-- 1.2. Google Analytics 설정 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-XXXXXXXXXX', {
+            'cookie_domain': 'none' 
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        
+        <!-- 2. 초기 화면 컨테이너 -->
+        <div id="initial-screen-container">
+            <!-- 2.1. 초기 화면 탭 네비게이션 -->
+            <div class="tab" id="initial-tab">
+                <button class="tablinks-initial active" onclick="openInitialTab(event, 'Notice')">Notice</button>
+                <button class="tablinks-initial" onclick="openInitialTab(event, 'Scoring')">Scoring</button>
+                <button class="tablinks-initial" onclick="openInitialTab(event, 'List')">List</button>
+            </div>
+
+            <!-- 2.2. Notice 탭 콘텐츠 -->
+            <div id="Notice" class="tabcontent-initial" style="display: block;">
+                <!-- 2.2.1. 이용 안내 가이드 -->
+                <div class="print-guide"> 
+                    <details> 
+                        <summary>안녕하세요, 서울임상심리연구소에서 제공하는 간편 로샤 채점 도우미입니다. 이 메시지를 클릭하여 토글을 열고 이용법을 확인하세요!</summary>
+                            <div class="guide-content">
+                                
+                                <h4 style="margin-top: 0; margin-bottom: 5px;">【 작동 방법 】</h4>
+                                <ul style="margin-top: 0; list-style-type: none; padding-left: 25px;">
+                                    <li>① <strong>Scoring</strong> 탭에서 채점 내용을 입력합니다.</li>
+                                    <li>② <strong>Scoring</strong> 탭에 처음 들어가면, 저장된 내용이 없을 경우 테스트용 샘플 데이터를 불러올지 묻습니다. 새로 입력하려면 <u>취소</u>를 누르세요.</li>
+                                    <li>③ 입력 내용은 브라우저에 자동 저장됩니다. 재접속 시 <code style="color: #dc3545;">"이전에 자동 저장된 내용이 있습니다. 불러올까요?"</code>라는 메시지가 뜨며, <u>확인</u>을 누르면 이어서 작업할 수 있습니다.</li>
+                                    <li>④ 채점 내용을 하나도 입력하지 않고 <u>Calculate Results</u>을 누르면 <code style="color: #dc3545;">"Error: No responses entered."</code> 메시지가 나타납니다.</li>
+                                    <li>⑤ 채점 완료 후 <u>Calculate Results</u>을 누르면 결과 화면으로 이동합니다. 이전 화면으로 돌아가려면 <u>Go Back</u>을 누르세요.</li>
+                                  </ul>
+                                <h4 style="margin-top: 15px; margin-bottom: 5px;">【 Scoring 탭에 점수 입력 시 유의사항 】</h4> 
+                                <ul style="margin-top: 0; list-style-type: none; padding-left: 25px;">
+                                    <li>① <strong>[Response]</strong> 항목은 피검자의 언어 반응을 메모하는 공간이며, 계산에 영향을 주지 않으므로 비워둬도 괜찮습니다.</li>
+                                    <li>② <strong>[Determinants]</strong>, <strong>[Contents]</strong>, <strong>[Special Score]</strong>에 여러 코드를 입력할 경우, 왼쪽 칸부터 순서대로 채워주세요.</li>
+                                    <li>③ <strong>[Score]</strong>와 <strong>[G/PHR]</strong> 항목은 자동으로 계산되므로 직접 입력할 필요가 없습니다. 단, <strong>[Score]</strong>는 <strong>[Card]</strong>와 <strong>[Z]</strong> 유형을 선택해야 값이 자동 계산됩니다.</li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+
+                        <hr style="margin: 25px 0; border: none; border-top: 1px solid #eee;">
+                        <!-- 2.2.2. 추가 정보 링크 -->
+                        <p style="font-weight: bold; margin-bottom: 5px;">【 더 자세한 정보는 아래를 참고하세요 】</p>
+                        <ul style="list-style-type: none; padding-left: 0;">
+                            <li style="padding: 3px 0;">① <a href="https://gemini.google.com/gem/1QDCPHshPvq5J9iIKeV-1Nvy0EFzKPN6Y?usp=sharing" target="_blank">프로그램 이용 안내 챗봇</a> (Google 계정이 있어야 이용 가능하며, Gemini로 연결됩니다.)</li>
+                            <li style="padding: 3px 0;">② <a href="https://blog.naver.com/yes-u-can/224043775130" target="_blank">네이버 블로그</a>: 개선사항 및 버그 제보</li>
+                            <li style="padding: 3px 0;">③ <a href="https://exner.yesucan.co.kr/versions" target="_blank">프로그램 패치 노트</a></li>
+                            <li style="padding: 3px 0;">④ <a href="https://sites.google.com/view/yes-u-can-pc?usp=sharing" target="_blank">서울임상심리연구소 공식 홈페이지</a></li>
+                        </ul>
+            </div>
+
+            <!-- 2.3. Scoring 탭 콘텐츠 -->
+            <div id="Scoring" class="tabcontent-initial">
+                <div id="scoring-container">
+                    <!-- 2.3.1. 채점 시트 안내 -->
+                    <p>스크롤을 이용하여 채점 시트를 좌우로 움직이며 점수를 입력할 수 있습니다<br>하단의 <u>행 추가/삭제</u> 버튼을 눌러 입력칸을 조절할 수 있으며, 최대 50개까지 가능합니다.</p>
+                    
+                    <!-- 2.3.2. 채점 폼 -->
+                    <form id="calc-form">
+                        <input type="hidden" id="totalRows" name="totalRows" value="0">
+                        
+                        <!-- 2.3.3. 상단 스크롤바 -->
+                        <div id="top-scrollbar-container" style="overflow-x: auto; overflow-y: hidden; width: 100%;">
+                            <div id="top-scrollbar-sizer" style="height: 1px;"></div>
+                        </div>
+                        
+                        <!-- 2.3.4. 채점 테이블 -->
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="group-basic">No.</th><th class="group-basic">Card</th><th class="group-basic">Response</th>
+                                        <th class="group-loc">Location</th><th class="group-dq">DQ</th>
+                                        <th colspan="6" class="group-det">Determinants</th>
+                                        <th class="group-fq">FQ</th><th class="group-pair">Pair</th>
+                                        <th colspan="6" class="group-con">Contents</th>
+                                        <th class="group-pop">P</th><th class="group-z">Z</th>
+                                        <th class="group-calc">Score</th><th class="group-calc">G/PHR</th>
+                                        <th colspan="6" class="group-special">Special Score</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="input-body"></tbody>
+                            </table>
+                        </div>
+
+                        <!-- 2.3.5. 행 제어 버튼 -->
+                        <div class="row-controls">
+                            <button type="button" id="add-row-btn">추가</button>
+                            <button type="button" id="del-row-btn">삭제</button>
+                        </div>
+                        
+                        <!-- 2.3.6. 행 제어 안내 -->
+                        <div style="text-align: right; margin-top: 5px;">
+                            <small style="color: #6c757d;">최하단의 행에 대해서만 조작 가능</small>
+                        </div>
+
+                        <!-- 2.3.7. 계산 버튼 -->
+                        <div class="button-container"> 
+                            <button type="submit">Calculate Results</button> 
+                        </div>
+                    </form>
+                    
+                    <!-- 2.3.8. 로딩 인디케이터 -->
+                    <div id="loader" style="display:none; text-align:center;">
+                        <h2>Calculating...</h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2.4. List 탭 콘텐츠 -->
+            <div id="List" class="tabcontent-initial">
+                <!-- 2.4.1. 코드 목록 헤더 -->
+                <h2>각 채점 항목의 코드 목록과 설명입니다.</h2>
+                <p><a href="https://gemini.google.com/gem/1QDCPHshPvq5J9iIKeV-1Nvy0EFzKPN6Y?usp=sharing" target="_blank">프로그램 이용 안내 챗봇과 대화하기</a> (Google 계정이 있어야 이용 가능하며, Gemini로 연결됩니다.)</p>
+
+                <!-- 2.4.2. 코드 목록 테이블 -->
+                <div class="table-wrapper">
+                    <table style="width: 100%;">
+                        <colgroup>
+                            <col style="width: 15%;"> 
+                            <col style="width: 15%;">
+                            <col style="width: 70%;">
+                        </colgroup>
+                        <tbody id="list-table-body">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. 결과 화면 컨테이너 -->
+        <div id="results-container">
+            <!-- 3.1. 결과물 출력 안내 -->
+            <div class="print-guide no-print" style="margin-top: 0; margin-bottom: 20px;"> 
+                <details>
+                    <summary>결과물 출력 안내</summary>
+                    <div class="guide-content">
+                        
+                        <h4 style="margin-top: 0; margin-bottom: 5px;">【 구조 요약지 인쇄 】</h4>
+                        <ul style="margin-top: 0; list-style-type: none; padding-left: 25px;">
+                            <li>① 하단의 <u>Print Results</u>을 눌러 구조 요약지를 인쇄할 수 있습니다.</li>
+                            <li>② <strong>Upper/Lower Section</strong> 탭의 화면만 인쇄 가능하며, <strong>Special Indicies</strong> 탭은 따로 인쇄되지 않습니다.</li>
+                            <li>③ 가장 마지막 페이지에는 [Response]에 입력한 메모들이 출력되므로, 불필요하다면 프린트 설정에서 출력 범위를 지정하세요.</li>
+                            <li>④ 인쇄 기본 설정은 A4가로용지 2매, 시트당 페이지 수 (1)입니다.</li>
+                            <li>⑤ 세부 설정에서 시트당 페이지 수를 (2)로 변경하면 <strong>Upper/Lower Section</strong> 탭이 1매 안에 모두 들어옵니다.</li>
+                        </ul>
+
+                        <h4 style="margin-top: 15px; margin-bottom: 5px;">【 Download .csv 】</h4> 
+                        <ul style="margin-top: 0; list-style-type: none; padding-left: 25px;">
+                            <li>① 하단의 초록색 버튼을 누르면 입력한 데이터를 CSV 파일로 내려받을 수 있습니다.</li>
+                            <li>② <strong>Scoring</strong> 탭에서 입력한 모든 데이터는 <u>Raw Data</u>, <strong>Upper/Lower Section</strong> 탭에서 출력된 모든 데이터는 <u>Summary</u>으로 내려받을 수 있습니다.</li>
+                            <li>③ 데이터 분석 시 유용하게 사용하세요.</li>
+                        </ul>
+
+                    </div>
+                </details>
+            </div> 
+            
+            <!-- 3.2. 결과 화면 탭 네비게이션 -->
+            <div class="tab no-print" id="results-tab">
+                <button class="tablinks-results active" onclick="openResultsTab(event, 'Upper_Section')">Upper Section</button>
+                <button class="tablinks-results" onclick="openResultsTab(event, 'Lower_Section')">Lower Section</button>
+                <button class="tablinks-results" onclick="openResultsTab(event, 'Special_Indices')">Special Indices</button>
+            </div>
+            
+            <!-- 3.3. Upper Section 탭 콘텐츠 -->
+            <div id="Upper_Section" class="tabcontent-results printable-area" style="display: block;">
+                <div class="results-grid">
+                    <!-- 3.3.1. Location Features 카드 -->
+                    <div class="grid-card loc-feat">
+                        <h3>Location Features</h3>
+                        
+                        <table><tbody>
+                            <tr><th>Zf</th><td id="res_up_Zf"></td></tr>
+                            <tr><th>ZSum</th><td id="res_up_ZSum"></td></tr>
+                            <tr><th>ZEst</th><td id="res_up_ZEst"></td></tr>
+                        </tbody></table>
+
+                        <div style="margin-top: 10px; border-top: 1px solid #e0e0e0;"></div>
+
+                        <table style="margin-top: 10px;"><tbody>
+                            <tr><th>W</th><td id="res_up_W"></td></tr>
+                            <tr><th>D</th><td id="res_up_D"></td></tr>
+                            <tr><th>W+D</th><td id="res_up_WD"></td></tr>
+                            <tr><th>Dd</th><td id="res_up_Dd"></td></tr>
+                            <tr><th>S</th><td id="res_up_S"></td></tr>
+                        </tbody></table>
+                    </div>
+                    <!-- 3.3.2. DQ 카드 -->
+                    <div class="grid-card dq">
+                        <h3>DQ</h3>
+                        <table><tbody>
+                            <tr><th>+</th><td id="res_up_dq_plus"></td></tr>
+                            <tr><th>o</th><td id="res_up_dq_o"></td></tr>
+                            <tr><th>v/+</th><td id="res_up_dq_vplus"></td></tr>
+                            <tr><th>v</th><td id="res_up_dq_v"></td></tr>
+                        </tbody></table>
+                    </div>
+                    <!-- 3.3.3. Form Quality 카드 -->
+                     <div class="grid-card form-qual">
+                        <h3>Form Quality</h3>
+                        <table>
+                            <thead><tr><th></th><th>FQx</th><th>MQual</th><th>W+D</th></tr></thead>
+                            <tbody>
+                                <tr><th>+</th><td id="res_up_fq_plus_fqx"></td><td id="res_up_fq_plus_mqual"></td><td id="res_up_fq_plus_wd"></td></tr>
+                                <tr><th>o</th><td id="res_up_fq_o_fqx"></td><td id="res_up_fq_o_mqual"></td><td id="res_up_fq_o_wd"></td></tr>
+                                <tr><th>u</th><td id="res_up_fq_u_fqx"></td><td id="res_up_fq_u_mqual"></td><td id="res_up_fq_u_wd"></td></tr>
+                                <tr><th>-</th><td id="res_up_fq_minus_fqx"></td><td id="res_up_fq_minus_mqual"></td><td id="res_up_fq_minus_wd"></td></tr>
+                                <tr><th>none</th><td id="res_up_fq_none_fqx"></td><td id="res_up_fq_none_mqual"></td><td id="res_up_fq_none_wd"></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- 3.3.4. Blends 카드 -->
+                     <div class="grid-card blends">
+                        <h3>Blends</h3>
+                        <div class="blends-table-wrapper">
+                            <table id="res_up_blends_table">
+                                </table>
+                        </div>
+                    </div>
+
+                    <!-- 3.3.5. Single 카드 -->
+                     <div class="grid-card single">
+                        <h3>Single</h3>
+                        <table><tbody>
+                            <tr><th>M</th><td id="res_up_s_m"></td></tr>
+                            <tr><th>FM</th><td id="res_up_s_fm"></td></tr>
+                            <tr><th>m</th><td id="res_up_s_m_lower"></td></tr>
+                            <tr><th>FC</th><td id="res_up_s_fc"></td></tr>
+                            <tr><th>CF</th><td id="res_up_s_cf"></td></tr>
+                            <tr><th>C</th><td id="res_up_s_c"></td></tr>
+                            <tr><th>Cn</th><td id="res_up_s_cn"></td></tr>
+                            <tr><th>FC'</th><td id="res_up_s_fc_prime"></td></tr>
+                            <tr><th>C'F</th><td id="res_up_s_cf_prime"></td></tr>
+                            <tr><th>C'</th><td id="res_up_s_c_prime"></td></tr>
+                            <tr><th>FT</th><td id="res_up_s_ft"></td></tr>
+                            <tr><th>TF</th><td id="res_up_s_tf"></td></tr>
+                            <tr><th>T</th><td id="res_up_s_t"></td></tr>
+                            <tr><th>FV</th><td id="res_up_s_fv"></td></tr>
+                            <tr><th>VF</th><td id="res_up_s_vf"></td></tr>
+                            <tr><th>V</th><td id="res_up_s_v"></td></tr>
+                            <tr><th>FY</th><td id="res_up_s_fy"></td></tr>
+                            <tr><th>YF</th><td id="res_up_s_yf"></td></tr>
+                            <tr><th>Y</th><td id="res_up_s_y"></td></tr>
+                            <tr><th>Fr</th><td id="res_up_s_fr"></td></tr>
+                            <tr><th>rF</th><td id="res_up_s_rf"></td></tr>
+                            <tr><th>FD</th><td id="res_up_s_fd"></td></tr>
+                            <tr><th>F</th><td id="res_up_s_f"></td></tr>
+                        </tbody></table>
+                    </div>
+                    <!-- 3.3.6. Pairs 카드 -->
+                    <div class="grid-card pairs">
+                        <h3>Pairs</h3>
+                        <table><tbody>
+                            <tr><th>(2)</th><td id="res_up_pairs"></td></tr>
+                        </tbody></table>
+                    </div>
+                    <!-- 3.3.7. Contents 카드 -->
+                    <div class="grid-card contents">
+                        <h3>Contents</h3>
+                        <table><tbody>
+                            <tr><th>H</th><td id="res_up_c_h"></td></tr>
+                            <tr><th>(H)</th><td id="res_up_c_h_paren"></td></tr>
+                            <tr><th>Hd</th><td id="res_up_c_hd"></td></tr>
+                            <tr><th>(Hd)</th><td id="res_up_c_hd_paren"></td></tr>
+                            <tr><th>Hx</th><td id="res_up_c_hx"></td></tr>
+                            <tr><th>A</th><td id="res_up_c_a"></td></tr>
+                            <tr><th>(A)</th><td id="res_up_c_a_paren"></td></tr>
+                            <tr><th>Ad</th><td id="res_up_c_ad"></td></tr>
+                            <tr><th>(Ad)</th><td id="res_up_c_ad_paren"></td></tr>
+                            <tr><th>An</th><td id="res_up_c_an"></td></tr>
+                            <tr><th>Art</th><td id="res_up_c_art"></td></tr>
+                            <tr><th>Ay</th><td id="res_up_c_ay"></td></tr>
+                            <tr><th>Bl</th><td id="res_up_c_bl"></td></tr>
+                            <tr><th>Bt</th><td id="res_up_c_bt"></td></tr>
+                            <tr><th>Cg</th><td id="res_up_c_cg"></td></tr>
+                            <tr><th>Cl</th><td id="res_up_c_cl"></td></tr>
+                            <tr><th>Ex</th><td id="res_up_c_ex"></td></tr>
+                            <tr><th>Fd</th><td id="res_up_c_fd"></td></tr>
+                            <tr><th>Fi</th><td id="res_up_c_fi"></td></tr>
+                            <tr><th>Ge</th><td id="res_up_c_ge"></td></tr>
+                            <tr><th>Hh</th><td id="res_up_c_hh"></td></tr>
+                            <tr><th>Ls</th><td id="res_up_c_ls"></td></tr>
+                            <tr><th>Na</th><td id="res_up_c_na"></td></tr>
+                            <tr><th>Sc</th><td id="res_up_c_sc"></td></tr>
+                            <tr><th>Sx</th><td id="res_up_c_sx"></td></tr>
+                            <tr><th>Xy</th><td id="res_up_c_xy"></td></tr>
+                            <tr><th>Id</th><td id="res_up_c_id"></td></tr>
+                        </tbody></table>
+                    </div>
+                    <!-- 3.3.8. Approach 카드 -->
+                    <div class="grid-card approach">
+                        <h3>Approach</h3>
+                        <table>
+                            <tbody>
+                                <tr><th>I</th><td id="res_ap_1_1"></td><td id="res_ap_1_2"></td><td id="res_ap_1_3"></td><td id="res_ap_1_4"></td><td id="res_ap_1_5"></td><td id="res_ap_1_6"></td><td id="res_ap_1_7"></td><td id="res_ap_1_8"></td><td id="res_ap_1_9"></td><td id="res_ap_1_10"></td></tr>
+                                <tr><th>II</th><td id="res_ap_2_1"></td><td id="res_ap_2_2"></td><td id="res_ap_2_3"></td><td id="res_ap_2_4"></td><td id="res_ap_2_5"></td><td id="res_ap_2_6"></td><td id="res_ap_2_7"></td><td id="res_ap_2_8"></td><td id="res_ap_2_9"></td><td id="res_ap_2_10"></td></tr>
+                                <tr><th>III</th><td id="res_ap_3_1"></td><td id="res_ap_3_2"></td><td id="res_ap_3_3"></td><td id="res_ap_3_4"></td><td id="res_ap_3_5"></td><td id="res_ap_3_6"></td><td id="res_ap_3_7"></td><td id="res_ap_3_8"></td><td id="res_ap_3_9"></td><td id="res_ap_3_10"></td></tr>
+                                <tr><th>IV</th><td id="res_ap_4_1"></td><td id="res_ap_4_2"></td><td id="res_ap_4_3"></td><td id="res_ap_4_4"></td><td id="res_ap_4_5"></td><td id="res_ap_4_6"></td><td id="res_ap_4_7"></td><td id="res_ap_4_8"></td><td id="res_ap_4_9"></td><td id="res_ap_4_10"></td></tr>
+                                <tr><th>V</th><td id="res_ap_5_1"></td><td id="res_ap_5_2"></td><td id="res_ap_5_3"></td><td id="res_ap_5_4"></td><td id="res_ap_5_5"></td><td id="res_ap_5_6"></td><td id="res_ap_5_7"></td><td id="res_ap_5_8"></td><td id="res_ap_5_9"></td><td id="res_ap_5_10"></td></tr>
+                                <tr><th>VI</th><td id="res_ap_6_1"></td><td id="res_ap_6_2"></td><td id="res_ap_6_3"></td><td id="res_ap_6_4"></td><td id="res_ap_6_5"></td><td id="res_ap_6_6"></td><td id="res_ap_6_7"></td><td id="res_ap_6_8"></td><td id="res_ap_6_9"></td><td id="res_ap_6_10"></td></tr>
+                                <tr><th>VII</th><td id="res_ap_7_1"></td><td id="res_ap_7_2"></td><td id="res_ap_7_3"></td><td id="res_ap_7_4"></td><td id="res_ap_7_5"></td><td id="res_ap_7_6"></td><td id="res_ap_7_7"></td><td id="res_ap_7_8"></td><td id="res_ap_7_9"></td><td id="res_ap_7_10"></td></tr>
+                                <tr><th>VIII</th><td id="res_ap_8_1"></td><td id="res_ap_8_2"></td><td id="res_ap_8_3"></td><td id="res_ap_8_4"></td><td id="res_ap_8_5"></td><td id="res_ap_8_6"></td><td id="res_ap_8_7"></td><td id="res_ap_8_8"></td><td id="res_ap_8_9"></td><td id="res_ap_8_10"></td></tr>
+                                <tr><th>IX</th><td id="res_ap_9_1"></td><td id="res_ap_9_2"></td><td id="res_ap_9_3"></td><td id="res_ap_9_4"></td><td id="res_ap_9_5"></td><td id="res_ap_9_6"></td><td id="res_ap_9_7"></td><td id="res_ap_9_8"></td><td id="res_ap_9_9"></td><td id="res_ap_9_10"></td></tr>
+                                <tr><th>X</th><td id="res_ap_10_1"></td><td id="res_ap_10_2"></td><td id="res_ap_10_3"></td><td id="res_ap_10_4"></td><td id="res_ap_10_5"></td><td id="res_ap_10_6"></td><td id="res_ap_10_7"></td><td id="res_ap_10_8"></td><td id="res_ap_10_9"></td><td id="res_ap_10_10"></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- 3.3.9. Special Scores 카드 -->
+                    <div class="grid-card spec-scores">
+                          <h3>Special Scores</h3>
+                        <table class="spec-scores-table" id="special-scores-level-table">
+                            <thead>
+                                <tr><th></th><th colspan="2">Level 1</th><th colspan="2">Level 2</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><th>DV</th><td id="res_up_ss_dv1_n"></td><td id="res_up_ss_dv1_w"></td><td id="res_up_ss_dv2_n"></td><td id="res_up_ss_dv2_w"></td></tr>
+                                <tr><th>INCOM</th><td id="res_up_ss_incom1_n"></td><td id="res_up_ss_incom1_w"></td><td id="res_up_ss_incom2_n"></td><td id="res_up_ss_incom2_w"></td></tr>
+                                <tr><th>DR</th><td id="res_up_ss_dr1_n"></td><td id="res_up_ss_dr1_w"></td><td id="res_up_ss_dr2_n"></td><td id="res_up_ss_dr2_w"></td></tr>
+                                <tr><th>FABCOM</th><td id="res_up_ss_fabcom1_n"></td><td id="res_up_ss_fabcom1_w"></td><td id="res_up_ss_fabcom2_n"></td><td id="res_up_ss_fabcom2_w"></td></tr>
+                                <tr><th>ALOG</th><td id="res_up_ss_alog_n"></td><td id="res_up_ss_alog_w"></td><td colspan="2" style="border:none; background-color: white !important;" data-ignore-grayout="true"></td></tr>
+                                <tr><th>CONTAM</th><td id="res_up_ss_contam_n"></td><td id="res_up_ss_contam_w"></td><td colspan="2" style="border:none; background-color: white !important;" data-ignore-grayout="true"></td></tr>
+                                <tr><th colspan="2" style="text-align:right;">Sum6 =</th><td id="res_up_ss_sum6"></td><th style="text-align:right;">WSum6 =</th><td id="res_up_ss_wsum6"></td></tr>
+                            </tbody>
+                        </table>
+
+                        <div style="margin-top: 10px; border-top: 1px solid #e0e0e0;"></div>
+
+                        <table style="margin-top: 10px;">
+                            <tbody><tr><th>AB</th><td id="res_up_ss_ab"></td><th>GHR</th><td id="res_up_ss_ghr"></td></tr>
+                            <tr><th>AG</th><td id="res_up_ss_ag"></td><th>PHR</th><td id="res_up_ss_phr"></td></tr>
+                            <tr><th>COP</th><td id="res_up_ss_cop"></td><th>MOR</th><td id="res_up_ss_mor"></td></tr>
+                            <tr><th>CP</th><td id="res_up_ss_cp"></td><th>PER</th><td id="res_up_ss_per"></td></tr>
+                            <tr><th style="border:none; background-color: white !important;" data-ignore-grayout="true"></th><td style="border:none; background-color: white !important;" data-ignore-grayout="true"></td><th>PSV</th><td id="res_up_ss_psv"></td></tr>
+                        </tbody></table>
+                    </div>
+                    <!-- 3.3.10. Determinants 카드 -->
+                    <div class="grid-card dets-toggle">
+                        <h3>Determinants</h3>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>M</th><td id="res_up_det_m"></td>
+                                    <th>FM</th><td id="res_up_det_fm"></td>
+                                    <th>m</th><td id="res_up_det_m_lower"></td>
+                                    <th>FC</th><td id="res_up_det_fc"></td>
+                                    <th>CF</th><td id="res_up_det_cf"></td>
+                                    <th>C</th><td id="res_up_det_c"></td>
+                                    <th>FC'</th><td id="res_up_det_fc_prime"></td>
+                                    <th>C'F</th><td id="res_up_det_cf_prime"></td>
+                                </tr>
+                                <tr>
+                                    <th>C'</th><td id="res_up_det_c_prime"></td>
+                                    <th>FV</th><td id="res_up_det_fv"></td>
+                                    <th>VF</th><td id="res_up_det_vf"></td>
+                                    <th>V</th><td id="res_up_det_v"></td>
+                                    <th>FT</th><td id="res_up_det_ft"></td>
+                                    <th>TF</th><td id="res_up_det_tf"></td>
+                                    <th>T</th><td id="res_up_det_t"></td>
+                                    <th>FD</th><td id="res_up_det_fd"></td>
+                                </tr>
+                                <tr>
+                                    <th>F</th><td id="res_up_det_f"></td>
+                                    <th>Cn</th><td id="res_up_det_cn"></td>
+                                    <th>FY</th><td id="res_up_det_fy"></td>
+                                    <th>YF</th><td id="res_up_det_yf"></td>
+                                    <th>Y</th><td id="res_up_det_y"></td>
+                                    <th>Fr</th><td id="res_up_det_fr"></td>
+                                    <th>rF</th><td id="res_up_det_rf"></td>
+                                    <th data-ignore-grayout="true" style="background-color: white !important; border: none !important;"></th>
+                                    <td data-ignore-grayout="true" style="background-color: white !important; border: none !important;"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 3.4. Lower Section 탭 콘텐츠 -->
+            <div id="Lower_Section" class="tabcontent-results printable-area">
+                <div class="results-grid">
+                    <!-- 3.4.1. Core 카드 -->
+                    <div class="grid-card">
+                        <h3>Core</h3>
+                        <table class="core-card-table">
+                            <colgroup>
+                                <col style="width: 16%;">
+                                <col style="width: 17.33%;">
+                                <col style="width: 16%;">
+                                <col style="width: 17.33%;">
+                                <col style="width: 16%;">
+                                <col style="width: 17.33%;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>R</th><td id="res_lo_R"></td>
+                                    <th>Lambda</th><td id="res_lo_Lambda"></td>
+                                    <td colspan="2" style="border:none; background-color: white !important;" data-ignore-grayout="true"></td>
+                                <tr>
+                                </tr>
+                                    <th>EB</th><td id="res_lo_EB"></td>
+                                    <th>EA</th><td id="res_lo_EA"></td>
+                                    <th>EBPer</th><td id="res_lo_EBPer"></td>
+                                </tr>
+                                <tr>
+                                    <th>eb</th><td id="res_lo_eb"></td>
+                                    <th>es</th><td id="res_lo_es"></td>
+                                    <th>D</th><td id="res_lo_D"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="border:none; background-color: white !important;" data-ignore-grayout="true"></td>
+                                    <th>Adj es</th><td id="res_lo_AdjEs"></td>
+                                    <th>Adj D</th><td id="res_lo_AdjD"></td>
+                                </tr>
+                                <tr style="border-top: 1px dotted #ccc;">
+                                    <th>FM</th><td id="res_lo_FM"></td>
+                                    <th>SumC'</th><td id="res_lo_SumCprime"></td>
+                                    <th>SumT</th><td id="res_lo_SumT"></td>
+                                </tr>
+                                <tr>
+                                    <th>m</th><td id="res_lo_m"></td>
+                                    <th>SumV</th><td id="res_lo_SumV"></td>
+                                    <th>SumY</th><td id="res_lo_SumY"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- 3.4.2. Affection 카드 -->
+                    <div class="grid-card">
+                        <h3>Affection</h3>
+                        <table><tbody>
+                             <tr><th>FC : CF+C</th><td id="res_lo_FC_CF_C"></td></tr>
+                             <tr><th>Pure C</th><td id="res_lo_PureC"></td></tr>
+                             <tr><th>SumC' : WSumC</th><td id="res_lo_SumC_WSumC"></td></tr>
+                             <tr><th>Afr</th><td id="res_lo_Afr"></td></tr>
+                             <tr><th>S</th><td id="res_lo_S_aff"></td></tr>
+                             <tr><th>Blends : R</th><td id="res_lo_Blends_R"></td></tr>
+                             <tr><th>CP</th><td id="res_lo_CP"></td></tr>
+                        </tbody></table>
+                    </div>
+
+                    <!-- 3.4.3. Interpersonal 카드 -->
+                    <div class="grid-card">
+                        <h3>Interpersonal</h3>
+                        <table><tbody>
+                            <tr><th>COP</th><td id="res_lo_COP"></td></tr>
+                            <tr><th>AG</th><td id="res_lo_AG"></td></tr>
+                            <tr><th>GHR : PHR</th><td id="res_lo_GHR_PHR"></td></tr>
+                            <tr><th>a : p</th><td id="res_lo_a_p_inter"></td></tr>
+                            <tr><th>Food</th><td id="res_lo_Food"></td></tr>
+                            <tr><th>SumT</th><td id="res_lo_SumT_inter"></td></tr>
+                            <tr><th>Human Cont</th><td id="res_lo_HumanCont"></td></tr>
+                            <tr><th>Pure H</th><td id="res_lo_PureH"></td></tr>
+                            <tr><th>PER</th><td id="res_lo_PER"></td></tr>
+                            <tr><th>ISO Index</th><td id="res_lo_ISO_Index"></td></tr>
+                        </tbody></table>
+                    </div>
+                    
+                    <!-- 3.4.4. Special Indices 카드 -->
+                    <div class="grid-card">
+                        <h3>Special Indices</h3>
+                        <table class="special-indices-card-table"><tbody>
+                            <tr><th>PTI</th><td id="res_si_pti_score"></td><td id="res_si_pti_val"></td></tr>
+                            <tr><th>DEPI</th><td id="res_si_depi_score"></td><td id="res_si_depi_val"></td></tr>
+                            <tr><th>CDI</th><td id="res_si_cdi_score"></td><td id="res_si_cdi_val"></td></tr>
+                            <tr><th>S-CON</th><td id="res_si_scon_score"></td><td id="res_si_scon_val"></td></tr>
+                            <tr><th>HVI</th><td id="res_si_hvi_score"></td><td id="res_si_hvi_val"></td></tr>
+                            <tr><th>OBS</th><td id="res_si_obs_score"></td><td id="res_si_obs_val"></td></tr>
+                        </tbody></table>
+                    </div>
+
+                    <!-- 3.4.5. Ideation 카드 -->
+                    <div class="grid-card">
+                        <h3>Ideation</h3>
+                        <table class="ideation-card-table"><tbody>
+                            <tr>
+                                <th>a : p</th><td id="res_lo_a_p"></td>
+                                <th>Sum6</th><td id="res_lo_Sum6"></td>
+                            </tr>
+                            <tr>
+                                <th>Ma : Mp</th><td id="res_lo_Ma_Mp"></td>
+                                <th>Lv2</th><td id="res_lo_Lv2"></td>
+                            </tr>
+                            <tr>
+                                <th>2AB+Art+Ay</th><td id="res_lo_2AB_Art_Ay"></td>
+                                <th>WSum6</th><td id="res_lo_WSum6_ideation"></td>
+                            </tr>
+                            <tr>
+                                <th>MOR</th><td id="res_lo_MOR_ideation"></td>
+                                <th>M-</th><td id="res_lo_M_minus_ideation"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="border:none; background-color: white !important;" data-ignore-grayout="true"></td>
+                                <th>Mnone</th><td id="res_lo_Mnone"></td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+
+                    <!-- 3.4.6. Cognitive Mediation 카드 -->
+                    <div class="grid-card">
+                        <h3>Cognitive Mediation</h3>
+                        <table><tbody>
+                            <tr><th>XA%</th><td id="res_lo_XA_pct"></td></tr>
+                            <tr><th>WDA%</th><td id="res_lo_WDA_pct"></td></tr>
+                            <tr><th>X-%</th><td id="res_lo_Xminus_pct"></td></tr>
+                            <tr><th>S-</th><td id="res_lo_S_minus"></td></tr>
+                            <tr><th>P</th><td id="res_lo_P_cog"></td></tr>
+                            <tr><th>X+%</th><td id="res_lo_Xplus_pct"></td></tr>
+                            <tr><th>Xu%</th><td id="res_lo_Xu_pct"></td></tr>
+                        </tbody></table>
+                    </div>
+
+                    <!-- 3.4.7. Information Processing 카드 -->
+                    <div class="grid-card">
+                        <h3>Information Processing</h3>
+                        <table><tbody>
+                            <tr><th>Zf</th><td id="res_lo_Zf"></td></tr>
+                            <tr><th>W : D : Dd</th><td id="res_lo_W_D_Dd"></td></tr>
+                            <tr><th>W : M</th><td id="res_lo_W_M"></td></tr>
+                            <tr><th>Zd</th><td id="res_lo_Zd"></td></tr>
+                            <tr><th>PSV</th><td id="res_lo_PSV"></td></tr>
+                            <tr><th>DQ+</th><td id="res_lo_DQ_plus"></td></tr>
+                            <tr><th>DQv</th><td id="res_lo_DQ_v"></td></tr>
+                        </tbody></table>
+                    </div>
+
+                    <!-- 3.4.8. Self-Perception 카드 -->
+                    <div class="grid-card">
+                        <h3>Self-Perception</h3>
+                        <table><tbody>
+                            <tr><th>3r+(2)/R</th><td id="res_lo_3r_2_R"></td></tr>
+                            <tr><th>Fr+rF</th><td id="res_lo_Fr_rF"></td></tr>
+                            <tr><th>SumV</th><td id="res_lo_SumV_self"></td></tr>
+                            <tr><th>FD</th><td id="res_lo_FD"></td></tr>
+                            <tr><th>An+Xy</th><td id="res_lo_An_Xy"></td></tr>
+                            <tr><th>MOR</th><td id="res_lo_MOR_self"></td></tr>
+                            <tr><th>H : (H)+Hd+(Hd)</th><td id="res_lo_H_ratio"></td></tr>
+                        </tbody></table>
+                    </div>
+                </div>
+
+                <!-- 3.4.9. Response List 컨테이너 -->
+                <div id="response-list-container" class="grid-card" style="margin-top: 15px;">
+                  <h3>Response List</h3>
+                  <table id="response-list-table" style="width: 100%; table-layout: fixed;">
+                    <colgroup>
+                      <col style="width: 10%;">
+                      <col style="width: 90%;">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>No. (Card)</th>
+                        <th>Response</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      </tbody>
+                  </table>
+                </div>
+            </div>
+            
+            <!-- 3.5. Special Indices 탭 콘텐츠 -->
+            <div id="Special_Indices" class="tabcontent-results printable-area">
+                 <div class="results-grid">
+                    <!-- 3.5.1. S-Constellation 카드 -->
+                    <div class="grid-card">
+                        <h3>S-Constellation (Suicide Potential)</h3>
+                        <div class="criterion-item main-criterion">
+                            <div class="custom-checkbox" id="res_scon_check"></div>
+                            <div class="label">
+                                8개 이상 해당될 경우 체크
+                                <div class="note">( 주의 : 14세 이상의 수검자에게만 적용 )</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_scon_c1"></div><div class="label">FV + VF + V + FD > 2</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_scon_c2"></div><div class="label">Color-Shading Blends > 0</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_scon_c3"></div><div class="label">3r+(2)/R < .31 or > .44</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_scon_c4"></div><div class="label">MOR > 3</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_scon_c5"></div><div class="label">Zd > +3.5 or Zd < -3.5</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_scon_c6"></div><div class="label">es > EA</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_scon_c7"></div><div class="label">CF + C > FC</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_scon_c8"></div><div class="label">X+% < .70</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_scon_c9"></div><div class="label">S > 3</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_scon_c10"></div><div class="label">P < 3 or P > 8</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_scon_c11"></div><div class="label">Pure H < 2</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_scon_c12"></div><div class="label">R < 17</div></div>
+                        </div>
+                    </div>
+                    <!-- 3.5.2. DEPI 카드 -->
+                    <div class="grid-card">
+                        <h3>DEPI (Depression Index)</h3>
+                        <div class="criterion-item main-criterion">
+                            <div class="custom-checkbox" id="res_depi_check"></div><div class="label">5개 이상 해당될 경우 체크</div>
+                        </div>
+                        <div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_depi_c1"></div><div class="label">(FV + VF + V > 0) or (FD > 2)</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_depi_c2"></div><div class="label">(Color-Shading Blends > 0) or (S > 2)</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_depi_c3"></div><div class="label">(3r+(2)/R > .44 and Fr + rF = 0) or (3r+(2)/R < .33)</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_depi_c4"></div><div class="label">(Afr < .46) or (Blends < 4)</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_depi_c5"></div><div class="label">(Sum Shading > FM + m) or (SumC' > 2)</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_depi_c6"></div><div class="label">(MOR > 2) or (2×AB + Art + Ay > 3)</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_depi_c7"></div><div class="label">(COP < 2) or ([Bt + 2×Cl + Ge + Ls + 2×Na] / R > .24)</div></div>
+                        </div>
+                    </div>
+
+                    <!-- 3.5.3. PTI 카드 -->
+                    <div class="grid-card">
+                        <h3>PTI (Perceptual-Thinking Index)</h3>
+                        <div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_pti_c1"></div><div class="label">XA% < .70 and WDA% < .75</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_pti_c2"></div><div class="label">X-% > .29</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_pti_c3"></div><div class="label">Level2 > 2 and FABCOM2 > 0</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_pti_c4"></div><div class="label">(R < 17 and WSum6 > 12) or (R > 16 & WSum6 > 17)</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_pti_c5"></div><div class="label">M- > 1 or X-% > .40</div></div>
+                        </div>
+                    </div>
+                    <!-- 3.5.4. CDI 카드 -->
+                    <div class="grid-card">
+                        <h3>CDI (Coping Deficit Index)</h3>
+                         <div class="criterion-item main-criterion">
+                            <div class="custom-checkbox" id="res_cdi_check"></div><div class="label">4개 이상이면 체크</div>
+                        </div>
+                        <div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_cdi_c1"></div><div class="label">(EA < 6) or (AdjD < 0)</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_cdi_c2"></div><div class="label">(COP < 2) and (AG < 2)</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_cdi_c3"></div><div class="label">(WSumC < 2.5) or (Afr < .46)</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_cdi_c4"></div><div class="label">(Passive > Active+1) or (Pure H < 2)</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_cdi_c5"></div><div class="label">(SumT > 1) or (Isolate/R > .24) or (Food > 0)</div></div>
+                        </div>
+                    </div>
+
+                    <!-- 3.5.5. HVI 카드 -->
+                    <div class="grid-card">
+                        <h3>HVI (Hypervigilance Index)</h3>
+                        <div class="criterion-item main-criterion">
+                            <div class="custom-checkbox" id="res_hvi_check"></div>
+                            <div class="label">(1)번을 만족시키고 아래 (2)~(8) 항목 중 최소 4개가 해당될 경우 체크</div>
+                        </div>
+                        <div>
+                           <div class="criterion-item"><div class="custom-checkbox" id="res_hvi_c1"></div><div class="label">(1) FT + TF + T = 0</div></div>
+                        </div>
+                        <div style="padding-left: 26px; margin-top: 10px;">
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_hvi_c2"></div><div class="label">(2) Zf > 12</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_hvi_c3"></div><div class="label">(3) Zd > +3.0</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_hvi_c4"></div><div class="label">(4) S > 3</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_hvi_c5"></div><div class="label">(5) H + (H) + Hd + (Hd) > 6</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_hvi_c6"></div><div class="label">(6) (H) + (A) + (Hd) + (Ad) > 3</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_hvi_c7"></div><div class="label">(7) H + A : Hd + Ad < 4 : 1</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_hvi_c8"></div><div class="label">(8) Cg > 3</div></div>
+                        </div>
+                    </div>
+                    <!-- 3.5.6. OBS 카드 -->
+                    <div class="grid-card">
+                        <h3>OBS (Obsessive Style Index)</h3>
+                        <div class="criterion-item main-criterion">
+                           <div class="custom-checkbox" id="res_obs_check"></div><div class="label">아래 조건 중 1개 이상 해당되면 체크</div>
+                        </div>
+                        <div class="obs-rules">                                
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_obs_r1"></div><div class="label">(1)~(5) 모두 해당</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_obs_r2"></div><div class="label">(1)~(4) 중에서 2개 이상 해당 & FQ+ > 3</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_obs_r3"></div><div class="label">(1)~(5) 중에서 3개 이상 해당 & X+% > .89</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_obs_r4"></div><div class="label">FQ+ > 3 and X+% > .89</div></div>
+                        </div>
+                        <div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_obs_c1"></div><div class="label">(1) Dd > 3</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_obs_c2"></div><div class="label">(2) Zf > 12</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_obs_c3"></div><div class="label">(3) Zd > +3.0</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_obs_c4"></div><div class="label">(4) Populars > 7</div></div>
+                            <div class="criterion-item"><div class="custom-checkbox" id="res_obs_c5"></div><div class="label">(5) FQ+ > 1</div></div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+
+            <!-- 3.6. 버튼 컨테이너 -->
+            <div class="button-container no-print">
+                <button type="button" id="export-summary-btn" style="background-color:#28a745;">Summary</button>
+                <button type="button" id="export-rawdata-btn" style="background-color:#28a745; margin-left: 10px;">Raw Data</button>
+
+                <button onclick="window.print()" style="background-color:#6c757d; margin-left: 10px;">Print Results</button>
+                <button id="back-button" onclick="showScoring()" style="margin-left:10px;">Go Back</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. 푸터 -->
+    <footer id="main-footer" class="no-print" style="text-align: center; margin-top: 25px; padding-top: 15px; border-top: 1px solid #eee; font-size: 12px; color: #888;">
+        <p style="margin: 5px 0;">
+            © 1997–2025 서울임상심리연구소 (Seoul Institute of Clinical Psychology, SICP). All rights reserved.
+        </p>
+        <p style="margin: 5px 0;">
+            <a href="#" id="privacy-policy-link" style="cursor: pointer; color: #007bff; text-decoration: none;">개인정보처리방침 (Privacy Policy)</a>
+        </p>
+    </footer>
+
+    <!-- 5. 개인정보처리방침 모달 -->
+    <div id="privacy-modal" class="modal-overlay no-print">
+        <div class="modal-content">
+            <span class="modal-close-btn">&times;</span> 
+            
+            <h2>개인정보처리방침 (Privacy Policy)</h2>
+            
+            <div class="modal-body">
+                <p>
+                    본 웹 애플리케이션("앱")은 서비스 품질 개선 및 사용자 경험 분석을 목적으로 Google Analytics를 사용합니다.
+                </p>
+                <p>
+                    Google Analytics는 쿠키(cookie)를 통해 작동하며, 이 과정에서 귀하의 브라우저 정보, 방문 기록 등 개인을 식별할 수 없는 비식별 정보가 수집될 수 있습니다.
+                </p>
+                <p>
+                    수집된 데이터는 Google의 개인정보처리방침에 따라 관리되며, 본 앱의 운영자(서울임상심리연구소)는 이 데이터를 통계 분석 목적으로만 활용합니다.
+                </p>
+                <p>
+                    Google이 데이터를 수집하고 처리하는 방식에 대한 자세한 정보는 <a href="https://policies.google.com/technologies/partner-sites" target="_blank">Google의 'Google 서비스를 사용하는 사이트 또는 앱의 정보 이용'</a> 페이지를 참조하시기 바랍니다.
+                </p>
+                <hr style="margin: 15px 0;">
+                <p style="font-weight: bold;">
+                    ※ 브라우저 저장소(LocalStorage) 사용 고지
+                </p>
+                <p>
+                    또한, 본 앱은 귀하의 채점 편의를 위해 'Scoring' 탭에 입력한 데이터를 귀하의 컴퓨터 브라우저 내의 로컬 스토리지(LocalStorage)에 임시 저장합니다.
+                    이 데이터는 서버로 전송되거나 운영자가 접근할 수 없으며, 브라우저를 재방문할 때 입력 내용을 복원하기 위한 목적으로만 사용됩니다.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. JavaScript 코드 -->
+    <script>
+        // 6.1. DOM 요소 참조
+        const form = document.getElementById('calc-form');
+        const inputBody = document.getElementById('input-body');
+        const initialScreenContainer = document.getElementById('initial-screen-container');
+        const resultsContainer = document.getElementById('results-container');
+        const loader = document.getElementById('loader');
+
+        // 6.2. 버튼 DOM 요소
+        const addBtn = document.getElementById('add-row-btn');
+        const delBtn = document.getElementById('del-row-btn');
+        let currentRowCount = 0;
+
+        // 6.3. 옵션 데이터 정의
+        const options = {
+            card: ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"],
+            location: ["", "D", "Dd", "DdS", "DS", "S", "W", "WS"],
+            dq: ["", "+", "o", "v", "v/+"],
+            determinants: ["","C","C'","CF","C'F","Cn","F","FC","FC'","FD","FM","FMa","FMa-p","FMp","FT","FV","FY","Fr","M","Ma","Ma-p","Mp","T","TF","V","VF","Y","YF","m","ma","ma-p","mp","rF"].sort(),
+            fq: ["", "+", "-", "none", "o", "u", "s-"],
+            pair: ["", "(2)"],
+            contents: ["","(A)","(Ad)","(H)","(Hd)","A","Ad","An","Art","Ay","Bl","Bt","Cg","Cl","Ex","Fd","Fi","Ge","H","Hd","Hh","Hx","Id","Ls","Na","Sc","Sx","Xy"].sort(),
+            popular: ["", "P"],
+            z: ["", "ZA", "ZD", "ZS", "ZW"],
+            special_score: ["","AB","AG","ALOG","CONTAM","COP","CP","DR1","DR2","DV1","DV2","FABCOM1","FABCOM2","GHR","INCOM1","INCOM2","MOR","PER","PHR","PSV"].sort()
+        };
+
+        // 6.4. Z 점수 테이블
+        const Z_SCORE_TABLE = {
+            "I":   {"ZW": 1.0, "ZA": 4.0, "ZD": 6.0, "ZS": 3.5},
+            "II":  {"ZW": 4.5, "ZA": 3.0, "ZD": 5.5, "ZS": 4.5},
+            "III": {"ZW": 5.5, "ZA": 3.0, "ZD": 4.0, "ZS": 4.5},
+            "IV":  {"ZW": 2.0, "ZA": 4.0, "ZD": 3.5, "ZS": 5.0},
+            "V":   {"ZW": 1.0, "ZA": 2.5, "ZD": 5.0, "ZS": 4.0},
+            "VI":  {"ZW": 2.5, "ZA": 2.5, "ZD": 6.0, "ZS": 6.5},
+            "VII": {"ZW": 2.5, "ZA": 1.0, "ZD": 3.0, "ZS": 4.0},
+            "VIII":{"ZW": 4.5, "ZA": 3.0, "ZD": 3.0, "ZS": 4.0},
+            "IX":  {"ZW": 5.5, "ZA": 2.5, "ZD": 4.5, "ZS": 5.0},
+            "X":   {"ZW": 5.5, "ZA": 4.0, "ZD": 4.5, "ZS": 6.0}
+        };
+
+        // 6.5. GHR/PHR 분류 함수
+        function classifyGPHR(r) {
+            const hasAnyContent = (arr) => Array.isArray(r.contents) && r.contents.some(c => arr.includes(c));
+            const hasAnySS = (arr) => Array.isArray(r.special_scores) && r.special_scores.some(s => arr.includes(s));
+            const hasAnyDet = (arr) => Array.isArray(r.determinants) && r.determinants.some(d => arr.includes(d));
+            const hasHumanContent = hasAnyContent(["H", "(H)", "Hd", "(Hd)", "Hx"]);
+            const hasHumanMovement = hasAnyDet(["M", "Ma", "Mp", "Ma-p"]);
+            const hasAnimalMovement = hasAnyDet(["FMa", "FMp", "FMa-p"]);
+            const hasCopOrAg = hasAnySS(["COP", "AG"]);
+            const isEligible = hasHumanContent || hasHumanMovement || (hasAnimalMovement && hasCopOrAg);
+            if (!isEligible) { return ""; }
+            const FQ = r.fq;
+            const popular = r.popular;
+            const card = r.card;
+            const isPureH = hasAnyContent(['H']);
+            const isGoodFQ = ['+', 'o', 'u'].includes(FQ);
+            const hasBadCognitiveSS = hasAnySS(['DR1', 'DR2', 'INCOM1', 'INCOM2', 'FABCOM1', 'FABCOM2', 'ALOG', 'CONTAM']);
+            const hasAgOrMor = hasAnySS(['AG', 'MOR']);
+            if (isPureH && isGoodFQ && !hasBadCognitiveSS && !hasAgOrMor) { return "GHR"; }
+            const isBadFQ = FQ === '-' || FQ === 'none';
+            const hasLevel2SS = hasAnySS(['ALOG', 'CONTAM', 'DV2', 'INCOM2', 'DR2', 'FABCOM2']);
+            if (isBadFQ || hasLevel2SS) { return "PHR"; }
+            if (hasAnySS(['COP']) && !hasAnySS(['AG'])) { return "GHR"; }
+            if (hasAnySS(['FABCOM1', 'MOR']) || hasAnyContent(['An'])) { return "PHR"; }
+            if (popular && ['III', 'IV', 'VII', 'IX'].includes(card)) { return "GHR"; }
+            if (hasAnySS(['AG', 'INCOM1', 'DR1']) || hasAnyContent(['Hd'])) { return "PHR"; }
+            return "GHR";
+        }
+
+        // 6.6. GHR/PHR 업데이트 함수
+        function updateGPHR(rowNumber) {
+            const rowData = { determinants: [], contents: [], special_scores: [] };
+            const inputs = form.elements;
+            if (!inputs[`card${rowNumber}`]) return; 
+            
+            rowData.card = inputs[`card${rowNumber}`].value;
+            rowData.fq = inputs[`fq${rowNumber}`].value;
+            rowData.popular = !!inputs[`pop${rowNumber}`].value;
+            for (let j = 1; j <= 6; j++) {
+                const det = inputs[`det${rowNumber}_${j}`].value;
+                const con = inputs[`con${rowNumber}_${j}`].value;
+                const ss = inputs[`ss${rowNumber}_${j}`].value;
+                if (det) rowData.determinants.push(det);
+                if (con) rowData.contents.push(con);
+                if (ss) rowData.special_scores.push(ss);
+            }
+            const gphrValue = classifyGPHR(rowData);
+            inputs[`gphr${rowNumber}`].value = gphrValue;
+        }
+        
+        // 6.7. 샘플 데이터
+        const sampleData = {
+          "card1":"I", "response1":"왠지… 박쥐 같아요.", "location1":"W", "dq1":"o", "fq1":"o", "pop1":"P", "z1":"ZW", "det1_1":"FC'", "con1_1":"A", "ss1_1":"DR1",
+          "card2":"II", "response2":"해부학적 구조(근육/내장)처럼 보여요. 색이 먼저 눈에 들어와요.", "location2":"W", "dq2":"o", "fq2":"u", "z2":"ZW", "det2_1":"CF", "con2_1":"An",
+          "card3":"II", "response3":"곰 두 마리가 하이파이브", "location3":"D", "dq3":"+", "fq3":"o", "pair3":"(2)", "z3":"ZA", "det3_1":"Ma", "con3_1":"A",
+          "card4":"III", "response4":"두 사람이 나비넥타이를 매고 물건을 옮기고 있네요.", "location4":"D", "dq4":"+", "fq4":"u", "pair4":"(2)", "pop4":"P", "z4":"ZD", "det4_1":"Ma", "det4_2":"FC", "con4_1":"H", "con4_2":"Cg", "con4_3":"Hh", "ss4_1":"COP", "ss4_2":"DR1",
+          "card5":"IV", "response5":"두 존재가 거대한 사람 곁에서 축 늘어진 채 가만히 흔들리는 느낌이 있고, 회색 음영이 번져 이상하고 뒤죽박죽해 보여요. 사람은 손상된 느낌이고, 동물 부분과 특이한 부분도 보여요.", "location5":"W", "dq5":"+", "fq5":"-", "pair5":"(2)", "z5":"ZA", "det5_1":"Mp", "det5_2":"YF", "det5_3":"C'F", "det5_4":"FMp", "det5_5":"mp", "det5_6":"FV", "con5_1":"Hx", "con5_2":"Ad", "con5_3":"Id", "ss5_1":"MOR", "ss5_2":"ALOG",
+          "card6":"V", "response6":"무채색의 박쥐/나방 같아요.", "location6":"W", "dq6":"o", "fq6":"o", "pop6":"P", "z6":"ZW", "det6_1":"FC'", "con6_1":"A", "ss6_1":"DR2", "ss6_2":"PSV",
+          "card7":"VI", "response7":"사람의 신체 일부가 둘, 축 늘어진 채 바닥에 펼쳐진 느낌이에요", "location7":"W", "dq7":"+", "fq7":"-", "pair7":"(2)", "z7":"ZW", "det7_1":"Mp", "con7_1":"H", "con7_2":"Hh",
+          "card8":"VI", "response8":"위쪽 구석의 작은 부분이, 퍼져 보이는 음영 때문에 빵 조각 같아요.", "location8":"Dd", "dq8":"o", "fq8":"-", "det8_1":"FV", "con8_1":"Fd",
+          "card9":"VII", "response9":"사람처럼 보이는 형체 두 개가 가만히 마주 서 있어요, 회색 음영 때문에 실루엣 같고, 흐릿하게 움직임이 번지는 느낌이에요.", "location9":"W", "dq9":"+", "fq9":"o", "pair9":"(2)", "pop9":"P", "z9":"ZW", "det9_1":"Mp", "det9_2":"mp", "det9_3":"YF", "con9_1":"(H)",
+          "card10":"VII", "response10":"가운데 흰 공간이 현미경/과학 장치 부품처럼 보여요.", "location10":"DS", "dq10":"o", "fq10":"u", "det10_1":"F", "con10_1":"Sc",
+          "card11":"VIII", "response11":"갈비뼈처럼 생겼어요.", "location11":"D", "dq11":"o", "fq11":"o", "det11_1":"F", "con11_1":"An", "ss11_1":"ALOG",
+          "card12":"VIII", "response12":"양쪽에 두 마리 동물이 산을 오르고 있어요.", "location12":"W", "dq12":"+", "fq12":"o", "pair12":"(2)", "pop12":"P", "z12":"ZW", "det12_1":"FMa", "con12_1":"A",
+          "card13":"IX", "response13":"여러 색이 번지며 불꽃이 피어오르는 느낌이에요.", "location13":"W", "dq13":"+", "fq13":"-", "z13":"ZW", "det13_1":"Ma", "det13_2":"ma", "det13_3":"CF", "det13_4":"YF", "con13_1":"Fi",
+          "card14":"X", "response14":"불꽃놀이처럼 보이네요, 여러 색깔이 터지는…", "location14":"W", "dq14":"o", "fq14":"o", "pair14":"(2)", "z14":"ZW", "det14_1":"CF", "det14_2":"ma", "con14_1":"Fi",
+          "card15":"X", "response15":"분홍색 부분이 게 두 마리가 집게를 들고 마주보는 모습 같아요.", "location15":"W", "dq15":"+", "fq15":"u", "pair15":"(2)", "pop15":"P", "z15":"ZW", "det15_1":"FMa", "con15_1":"A"
+        };
+        
+        // 6.8. 행 계산 업데이트 함수
+        function updateRowCalculations(rowNumber) {
+            const cardSelect = document.querySelector(`select[name="card${rowNumber}"]`);
+            const zSelect = document.querySelector(`select[name="z${rowNumber}"]`);
+            const scoreInput = document.querySelector(`input[name="score${rowNumber}"]`);
+            
+            if (!cardSelect || !zSelect || !scoreInput) return;
+
+            const card = cardSelect.value;
+            const z = zSelect.value;
+            let score = '';
+            if (card && z && Z_SCORE_TABLE[card] && Z_SCORE_TABLE[card][z] !== undefined) {
+                score = Z_SCORE_TABLE[card][z].toFixed(1);
+            }
+            scoreInput.value = score;
+        }
+
+        // 6.9. 새 행 생성 함수
+        function createNewRow(i) {
+            const row = document.createElement('tr');
+            let cells = `<td class="group-basic">${i}</td>`;
+            cells += `<td class="group-basic"><select name="card${i}">${options.card.map(o => `<option value="${o}">${o}</option>`).join('')}</select></td>`;
+            cells += `<td class="group-basic"><input type="text" name="response${i}"></td>`;
+            cells += `<td class="group-loc"><select name="location${i}">${options.location.map(o => `<option value="${o}">${o}</option>`).join('')}</select></td>`;
+            cells += `<td class="group-dq"><select name="dq${i}">${options.dq.map(o => `<option value="${o}">${o}</option>`).join('')}</select></td>`;
+            for(let j=1; j<=6; j++) cells += `<td class="group-det"><select name="det${i}_${j}">${options.determinants.map(o => `<option value="${o}">${o}</option>`).join('')}</select></td>`;
+            cells += `<td class="group-fq"><select name="fq${i}">${options.fq.map(o => `<option value="${o}">${o}</option>`).join('')}</select></td>`;
+            cells += `<td class="group-pair"><select name="pair${i}">${options.pair.map(o => `<option value="${o}">${o}</option>`).join('')}</select></td>`;
+            for(let j=1; j<=6; j++) cells += `<td class="group-con"><select name="con${i}_${j}">${options.contents.map(o => `<option value="${o}">${o}</option>`).join('')}</select></td>`;
+            cells += `<td class="group-pop"><select name="pop${i}">${options.popular.map(o => `<option value="${o}">${o}</option>`).join('')}</select></td>`;
+            cells += `<td class="group-z"><select name="z${i}">${options.z.map(o => `<option value="${o}">${o}</option>`).join('')}</select></td>`;
+            cells += `<td class="group-calc"><input type="text" name="score${i}" class="auto-calc-input" readonly></td>`;
+            cells += `<td class="group-calc"><input type="text" name="gphr${i}" class="auto-calc-input" readonly></td>`;
+            for(let j=1; j<=6; j++) cells += `<td class="group-special"><select name="ss${i}_${j}">${options.special_score.map(o => `<option value="${o}">${o}</option>`).join('')}</select></td>`;
+            row.innerHTML = cells;
+            inputBody.appendChild(row);
+
+            document.querySelector(`select[name="card${i}"]`).addEventListener('change', () => updateRowCalculations(i));
+            document.querySelector(`select[name="z${i}"]`).addEventListener('change', () => updateRowCalculations(i));
+
+            const gphrRelatedFields = [
+                `card${i}`, `fq${i}`, `pop${i}`,
+                ...Array.from({length: 6}, (_, j) => `det${i}_${j+1}`),
+                ...Array.from({length: 6}, (_, j) => `con${i}_${j+1}`),
+                ...Array.from({length: 6}, (_, j) => `ss${i}_${j+1}`)
+            ];
+            gphrRelatedFields.forEach(fieldName => {
+                const element = document.querySelector(`[name="${fieldName}"]`);
+                if (element) {
+                    element.addEventListener('change', () => updateGPHR(i));
+                }
+            });
+            
+            currentRowCount = i; // 현재 행 번호 업데이트
+            updateButtonStates(); // 버튼 상태 체크
+        }
+        
+        // 6.10. 마지막 행 삭제 함수
+        function removeLastRow() {
+            if (currentRowCount <= 1) return; // (하한선 방어)
+            const lastRow = inputBody.querySelector('tr:last-child');
+            if (lastRow) {
+                inputBody.removeChild(lastRow);
+                currentRowCount--;
+                updateButtonStates(); // 버튼 상태 체크
+            }
+        }
+        
+        // 6.11. 버튼 상태 업데이트 함수
+        function updateButtonStates() {
+            // (상한선) 50개 도달 시 +버튼 비활성화
+            addBtn.disabled = (currentRowCount >= 50);
+
+            // (하한선) 1개 도달 시 -버튼 비활성화
+            delBtn.disabled = (currentRowCount <= 1);
+
+            // hidden input 업데이트
+            document.getElementById('totalRows').value = currentRowCount;
+        }
+
+        // 6.12. 버튼 이벤트 리스너 연결
+        addBtn.addEventListener('click', () => {
+            if (currentRowCount < 50) {
+                createNewRow(currentRowCount + 1);
+            }
+        });
+        delBtn.addEventListener('click', removeLastRow);
+
+        // 6.13. List 탭의 카테고리-배경색 매핑
+        // (Scoring 탭의 CSS 클래스 이름과 일치시킴)
+        const categoryColorMap = {
+            'Card': 'group-basic-bg',
+            'Location': 'group-loc-bg',
+            'Dq': 'group-dq-bg',
+            'Determinants': 'group-det-bg',
+            'Fq': 'group-fq-bg',
+            'Pair': 'group-pair-bg',
+            'Contents': 'group-con-bg',
+            'Popular': 'group-pop-bg',
+            'Z': 'group-z-bg',
+            'Special': 'group-special-bg'
+        };
+
+        // 6.14. List 탭의 데이터를 파싱하고 계층형 테이블을 생성합니다.
+        
+        // 원본 데이터
+        const rawListData = `
+항목,요소,설명
+Card (카드),항목 설명,피험자에게 제시되는 로르샤흐 잉크 반점 검사의 표준화된 10장 카드를 나타내는 항목입니다.
+,I,흑백의 기본 카드로 형태 지각의 기본 반응을 봅니다.
+,II,적색이 포함되어 정서 반응을 유발하는 경향을 봅니다.
+,III,인간의 움직임(M) 반응이 흔하며, 대인관계 지각과 사회적 상호작용의 방식을 봅니다.
+,IV,크기·차원 지각과 자기표상 관련 반응을 자주 유발합니다.
+,V,가장 형태가 잘 구조화되어 있어 흔한(P) 반응이 가장 많이 나오는 카드입니다.
+,VI,질감(Shading-Texture)을 자주 유발하여 촉감적 지각과 관련 반응을 봅니다.
+,VII,인간·애착 관련 표상을 자주 유발하나 성별/모자 규정은 피합니다.
+,VIII,다색 통합이 요구되어 색채 통합과 조직화 활동을 봅니다.
+,IX,모호성 처리와 조직화 활동을 봅니다.
+,X,복잡한 자극에서의 조직화와 통합을 봅니다.
+Location (반응 영역),항목 설명,피험자가 잉크 반점의 어느 부분에 초점을 맞추어 반응했는지를 나타내는 채점 항목입니다.
+,D,피험자가 반응한 영역이 반점의 흔한 세부 영역(Common Detail)임을 나타냅니다.
+,Dd,피험자가 반응한 영역이 반점의 흔하지 않은 세부 영역(Unusual Detail)임을 나타냅니다.
+,DdS,피험자가 반응한 영역이 흔하지 않은 세부 영역(Dd)이며, 흰 공간(S)을 포함하여 사용했음을 나타냅니다.
+,DS,피험자가 반응한 영역이 흔한 세부 영역(D)이며, 흰 공간(S)을 포함하여 사용했음을 나타냅니다.
+,S,피험자가 반응한 영역이 흰 공간(Space)만을 사용하여 반응했음을 나타냅니다.
+,W,피험자가 반응한 영역이 잉크 반점의 전체(Whole)를 모두 사용하여 반응했음을 나타냅니다.
+,WS,피험자가 반응한 영역이 전체(W)를 모두 사용하며, 흰 공간(S)을 포함하여 반응했음을 나타냅니다.
+Dq (발달질),항목 설명,피험자가 반응을 구성하기 위해 반점의 위치적 경계를 어떻게 사용했는지의 질적 수준을 나타내는 채점 항목입니다.
+,+,반응 내용이 분명하고 잘 통합되었으며 특정 위치적 경계를 넘어선(synthesized) 방식으로 사용되었음을 나타냅니다.
+,o,반응 내용이 분명하고 적절한 세부 영역을 사용했지만, 통합은 거의 또는 전혀 없는(ordinary) 방식으로 사용되었음을 나타냅니다.
+,v,반응 내용이 불분명하고 모호하며, 형태가 모호하거나 부정확한(vague) 방식으로 사용되었음을 나타냅니다.
+,v/+,반응 내용이 전체를 사용했으나 모호한 통합을 시도한 후 일부만 통합된(vague and ordinary-synthetic) 경우에 채점됩니다.
+Determinants (결정인),항목 설명,피험자가 반응을 형성할 때 잉크 반점의 어떤 특징(형태, 색채, 움직임, 명암 등)을 사용했는지를 나타내는 가장 중요한 채점 항목입니다.
+,C,형태를 고려하지 않고 순수한 색채(Pure Color)만을 결정인으로 사용하여 반응했음을 나타냅니다.
+,C',형태를 고려하지 않고 순수한 무채색(Pure Achromatic Color)만을 결정인으로 사용하여 반응했음을 나타냅니다.
+,C'F,무채색이 반응의 주된 결정인이며, 형태(F)가 보조적인 역할을 했음을 나타냅니다.
+,CF,색채가 반응의 주된 결정인이며, 형태(F)가 보조적인 역할을 했음을 나타냅니다.
+,Cn,반응 내용이 색채의 명명(Color Naming) 자체이거나 색채를 명명함으로써 반응을 형성했음을 나타냅니다.
+,F,반응 내용이 오직 형태(Form)만을 결정인으로 사용하여 반응했음을 나타냅니다.
+,FC,형태가 반응의 주된 결정인이며, 색채(C)가 보조적인 역할을 했음을 나타냅니다.
+,FC',형태가 반응의 주된 결정인이며, 무채색(C')이 보조적인 역할을 했음을 나타냅니다.
+,FD,반응 내용이 차원(Dimension) 또는 깊이(Depth)에 대한 지각을 포함하며, 명암(Y)과 무관하게 지각된 형태의 거리감을 나타냅니다.
+,FM,동물(Animal)이 움직이는 것으로 지각된 반응을 나타냅니다.
+,FMa,동물 움직임(FM) 결정인 중 능동적인 움직임(Active)을 나타냅니다.
+,FMa-p,동물 움직임(FM) 결정인 중 능동적(a)이면서도 수동적(p)인 양가적인 움직임을 나타냅니다.
+,FMp,동물 움직임(FM) 결정인 중 수동적인 움직임(Passive)을 나타냅니다.
+,FT,형태가 주이고 질감(촉감, Texture)이 보조인 반응입니다.
+,FV,형태가 주이고 비스타(깊이/원근, Vista)가 보조인 반응입니다.
+,FY,형태가 주이고 확산 명암(밝고 어두움의 정도, Diffuse Shading)이 보조인 반응입니다.
+,Fr,반응 내용이 반영(Reflection)을 결정인으로 사용했으며, 형태가 주된 결정인이었음을 나타냅니다.
+,M,인간(Human)이 움직이는 것으로 지각된 반응을 나타냅니다.
+,Ma,인간 움직임(M) 결정인 중 능동적인 움직임(Active)을 나타냅니다.
+,Ma-p,인간 움직임(M) 결정인 중 능동적(a)이면서도 수동적(p)인 양가적인 움직임을 나타냅니다.
+,Mp,인간 움직임(M) 결정인 중 수동적인 움직임(Passive)을 나타냅니다.
+,T,형태를 고려하지 않고 순수한 질감(Pure Texture)만을 결정인으로 사용하여 반응했음을 나타냅니다.
+,TF,질감(T)이 반응의 주된 결정인이며, 형태(F)가 보조적인 역할을 했음을 나타냅니다.
+,V,형태를 고려하지 않고 순수한 비스타(깊이/원근)만을 결정인으로 사용한 반응입니다.
+,VF,비스타가 주이고 형태가 보조인 반응입니다.
+,Y,형태를 고려하지 않고 순수한 확산된 명암(Pure Diffuse Shading)만을 결정인으로 사용하여 반응했음을 나타냅니다.
+,YF,확산된 명암(Y)이 반응의 주된 결정인이며, 형태(F)가 보조적인 역할을 했음을 나타냅니다.
+,m,무생물(Inanimate)이 움직이는 것으로 지각된 반응을 나타냅니다.
+,ma,무생물 움직임(m) 결정인 중 능동적인 움직임(Active)을 나타냅니다.
+,ma-p,무생물 움직임(m) 결정인 중 능동적(a)이면서도 수동적(p)인 양가적인 움직임을 나타냅니다.
+,mp,무생물 움직임(m) 결정인 중 수동적인 움직임(Passive)을 나타냅니다.
+,rF,반영(Reflection)이 반응의 주된 결정인이며, 형태(F)가 보조적인 역할을 했음을 나타냅니다.
+Fq (형태질),항목 설명,피험자가 지각한 반응의 형태가 잉크 반점의 실제 모양과 얼마나 잘 일치하는지의 질적 수준을 나타내는 채점 항목입니다.
+,+,반응 내용이 지각적으로 뛰어난(Superior) 명확성과 정교함을 가졌음을 나타냅니다.
+,-,반응 내용이 지각적으로 왜곡되거나 부적절한(Distorted or Inappropriate) 형태를 가졌음을 나타냅니다.
+,none,형태가 전혀 없는 반응(예: 순수 색채, 순수 명암 등)에 채점되며, 형태질이 무관함을 나타냅니다.
+,o,반응 내용이 일반적으로 정확한(Ordinary) 형태를 가졌음을 나타냅니다.
+,u,반응 내용이 정확하기는 하지만 독특하거나 흔하지 않은(Unusual) 형태를 가졌음을 나타냅니다.
+,s-,백색공간 사용으로 형태 적합도가 마이너스로 평가된 경우를 표시합니다.
+Pair (쌍),항목 설명,반응 내용에 두 개의 동일한 대상이 대칭적으로 지각되었을 때 채점하여 처리 효율성을 탐색하는 항목입니다.
+,(2),반응 내용에 두 개의 동일한 대상이 대칭적으로 나란히 지각되었음을 나타냅니다.
+Contents (내용),항목 설명,피험자가 보고한 반응의 주제적 내용을 분류하는 채점 항목입니다.
+,(A),신화적이거나 상상 속의 동물을 나타냅니다.
+,(Ad),신화적이거나 상상 속의 동물의 세부적인 부분을 나타냅니다.
+,(H),신화적이거나 상상 속의 인간을 나타냅니다.
+,(Hd),신화적이거나 상상 속의 인간의 세부적인 부분을 나타냅니다.
+,A,동물(Animal) 전체를 나타냅니다.
+,Ad,동물의 세부적인 부분을 나타냅니다.
+,An,해부학적 구조(Anatomy)(내부 장기, 뼈 등)를 나타냅니다.
+,Art,예술 작품(Art)(회화, 조각상, 보석 등)을 나타냅니다.
+,Ay,인류학적 주제(Anthropological)(문화적 유물, 의식 등)을 나타냅니다.
+,Bl,피(Blood)를 나타냅니다.
+,Bt,식물학적 주제(Botany)(꽃, 나무, 풀 등)를 나타냅니다.
+,Cg,의류(Clothing)를 나타냅니다.
+,Cl,구름(Cloud) 내용을 의미하며, 안개·비 등 자연현상은 Na로 분류합니다.
+,Ex,폭발(Explosion)을 나타냅니다.
+,Fd,음식(Food)을 나타냅니다.
+,Fi,불(Fire)을 나타냅니다.
+,Ge,지리학적 주제(Geography)(지도, 섬, 강 등)를 나타냅니다.
+,H,인간(Human) 전체를 나타냅니다.
+,Hd,인간의 세부적인 부분을 나타냅니다.
+,Hh,가정용품(Household items)을 나타냅니다.
+,Hx,인간의 경험·정서적 체험에 관한 내용을 의미합니다.
+,Id,기존 분류에 속하지 않는 특이/개별(Idiosyncratic) 내용을 나타냅니다.
+,Ls,풍경(Landscape)을 나타냅니다.
+,Na,자연(Nature)(태양, 달, 비, 무지개 등)을 나타냅니다.
+,Sc,과학(Science)(현미경, 실험 도구 등)을 나타냅니다.
+,Sx,성(Sex) 관련 내용을 나타냅니다.
+,Xy,X-ray 이미지를 나타냅니다.
+Popular (평범 반응),항목 설명,특정 반점에 대해 인구의 대다수가 흔히 지각하는 반응의 출현 여부를 나타내는 항목입니다.
+,P,반응 내용이 문화적으로 흔하게 보고되는 평범 반응(Popular) 중 하나임을 나타냅니다.
+Z (조직화 활동 점수),항목 설명,피험자가 여러 개의 반점 영역을 통합하여 반응을 형성하는 인지적 노력의 정도를 나타내는 채점 항목입니다.
+,ZA,인접한 세부들을 의미 있게 결합해 조직화한 경우입니다.
+,ZD,비인접한 세부들을 의미 있게 결합해 조직화한 경우입니다.
+,ZS,백색공간을 다른 부위와 통합해 조직화한 경우입니다.
+,ZW,전체(W)에서 조직화 활동을 수행한 경우입니다.
+Special score (특수 점수),항목 설명,비전형적이거나 병리적인 사고 과정을 나타내는 언어적, 개념적 이상 반응이 나타날 때 채점하는 항목입니다.
+,AB,추상적·비실체적 개념을 ‘대상’으로 지각한 반응에 부여합니다.
+,AG,공격적 움직임(Aggressive Movement)이 지각되었을 때 채점됩니다.
+,ALOG,비논리적인 연관(Illogical Reasoning)이나 명백하게 틀린 이유를 제시할 때 채점됩니다.
+,CONTAM,두 개의 대상이 비논리적으로 합쳐져(Contamination) 단일한 반응을 형성할 때 채점됩니다.
+,COP,협력적인 움직임(Cooperative Movement)이 지각되었을 때 채점됩니다.
+,CP,색채 투영(Color Projection), 즉 무채색 반점에 색채를 투영하여 지각할 때 채점됩니다.
+,DR1,주제에서 벗어난 우회·산만·비논리적 전개의 경미한 일탈에 부여합니다.
+,DR2,주제에서 벗어난 우회·산만·비논리적 전개의 현저한 일탈에 부여합니다.
+,DV1,단순한 이탈적 언어(Deviant Verbalization), 즉 서술상의 작은 실수나 불분명한 표현이 나타날 때 채점됩니다.
+,DV2,심각한 이탈적 언어, 즉 이해하기 어려운 괴이하거나 부적절한 단어 사용이 나타날 때 채점됩니다.
+,FABCOM1,단순한 비현실적 결합(Fabulized Combination), 즉 논리적으로 가능한 범위를 벗어난 비현실적인 결합이 나타날 때 채점됩니다.
+,FABCOM2,심각한 비현실적 결합, 즉 완전히 터무니없고 괴이한 비현실적인 결합이 나타날 때 채점됩니다.
+,GHR,적응적·건강한 인간표상의 질을 보일 때 부여합니다.
+,INCOM1,서로 양립 불가한 부분·속성의 부적절 결합이 경미한 경우에 부여합니다.
+,INCOM2,서로 양립 불가한 부분·속성의 부적절 결합이 현저한 경우에 부여합니다.
+,MOR,반응 내용에 병리적인 또는 파괴적인 특징(Morbidity), 즉 손상, 파괴, 고통, 죽음 등이 포함될 때 채점됩니다.
+,PER,지각의 근거를 개인적 경험·지식으로 정당화할 때 부여합니다.
+,PHR,미숙·비적응적 인간표상의 질을 보일 때 부여합니다.
+,PSV,고착증(Perseveration), 즉 특정 카드나 반응에 반복적으로 고착되어 비효율적인 반복을 보일 때 채점됩니다.
+`;
+
+        // CSV 데이터를 분석하여 계층형 객체 배열로 변환
+        const parsedListData = [];
+        let currentCategory = null;
+        
+        const lines = rawListData.split('\n').map(s => s.trim()).filter(s => s.length > 0);
+        lines.shift(); // 헤더 "항목,요소,설명" 제거
+
+        lines.forEach(line => {
+            // 설명에 쉼표가 포함될 수 있으므로, 첫 번째와 두 번째 쉼표를 기준으로 분리
+            const parts = [];
+            let firstComma = line.indexOf(',');
+            let secondComma = line.indexOf(',', firstComma + 1);
+
+            parts.push(line.substring(0, firstComma).trim());
+            parts.push(line.substring(firstComma + 1, secondComma).trim());
+            parts.push(line.substring(secondComma + 1).trim());
+
+            const categoryName = parts[0];
+            const code = parts[1];
+            const description = parts[2]; // 원본 텍스트를 그대로 사용
+
+            if (categoryName) { // '항목' 열에 내용이 있으면 새 카테고리
+                const categoryKey = categoryName.split(' ')[0]; // "Card (카드)" -> "Card"
+                currentCategory = {
+                    category: categoryName,
+                    categoryKey: categoryKey, // [추가] CSS 매핑을 위한 키 저장
+                    categoryDescription: (code === "항목 설명") ? description : "", // 원본 변수 사용
+                    items: []
+                };
+                if (code !== "항목 설명") { // '항목 설명'이 아닌 데이터가 첫 줄에 올 경우
+                    currentCategory.items.push({ code, description }); // 원본 변수 사용
+                }
+                parsedListData.push(currentCategory);
+            } else if (currentCategory) { // '항목' 열이 비어있으면 현재 카테고리에 '요소' 추가
+                currentCategory.items.push({ code, description }); // 원본 변수 사용
+            }
+        });
+
+        // 분석된 데이터를 기반으로 HTML 테이블 행(row) 생성
+        const listTableBody = document.getElementById('list-table-body');
+        listTableBody.innerHTML = ''; // 기존 내용 초기화
+
+        parsedListData.forEach(cat => {
+            if (!cat) return;
+
+            // '항목 설명' 행 + '개별 요소' 행의 총 개수
+            const rowspan = cat.items.length + (cat.categoryDescription ? 1 : 0);
+            if (rowspan === 0) return; // 내용이 없으면 그리지 않음
+
+            let isFirstRow = true;
+
+            // "항목 설명" 행 그리기 (존재하는 경우)
+            if (cat.categoryDescription) {
+                const trHead = document.createElement('tr');
+                
+                // '항목 설명' 행에 해당 항목의 배경색 클래스를 적용 (TR에 직접 클래스를 부여합니다)
+                trHead.className = categoryColorMap[cat.categoryKey] || '';
+
+                trHead.innerHTML = `
+                    <td class="list-category-cell" rowspan="${rowspan}">${cat.category}</td>
+                    <td class="list-code-cell"><strong>항목 설명</strong></td>
+                    <td class="list-desc-cell">${cat.categoryDescription}</td>
+                `;
+                listTableBody.appendChild(trHead);
+                isFirstRow = false;
+            }
+
+            // 개별 요소(item) 행들 그리기
+            cat.items.forEach((item, index) => { // index를 받도록 변경
+                const trItem = document.createElement('tr');
+                trItem.className = 'list-item-row';
+                
+                // 1번째 행은 흰색, 2/4/6번째 행은 회색을 JS에서 직접 제어
+                if (index === 0) {
+                    // 1번째 항목 (index 0)
+                    trItem.classList.add('first-item'); // CSS에서 흰색으로 강제
+                } else if (index % 2 === 1) { 
+                    // 2번째, 4번째, 6번째... 항목 (index 1, 3, 5...)
+                    trItem.classList.add('item-even-bg'); // 회색 배경 클래스 추가
+                }
+                // 3번째, 5번째... 항목 (index 2, 4...)은 기본 흰색 배경
+                
+                let html = '';
+                if (isFirstRow) {
+                    // "항목 설명"이 없고 개별 요소만 있을 경우, 첫 번째 행에 rowspan 적용
+                    
+                    // cat.categoryKey로 CSS 클래스 찾기
+                    const colorClass = categoryColorMap[cat.categoryKey] || '';
+
+                    html += `<td class="list-category-cell ${colorClass}" rowspan="${rowspan}">${cat.category}</td>`;
+                    isFirstRow = false;
+                }
+                
+                html += `
+                    <td class="list-code-cell"><strong>${item.code}</strong></td>
+                    <td class="list-desc-cell">${item.description}</td>
+                `;
+                trItem.innerHTML = html;
+                listTableBody.appendChild(trItem);
+            });
+        });
+
+        // 6.15. 로컬 스토리지 키
+        const storageKey = 'rorschachFormData';
+        form.addEventListener('input', (e) => {
+            if(e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT') {
+                const formData = new FormData(form);
+                const data = {};
+                formData.forEach((value, key) => { if (value) data[key] = value; });
+                localStorage.setItem(storageKey, JSON.stringify(data));
+            }
+        });
+
+        // 6.16. 데이터 로드 함수
+        function loadData(data) {
+            for (const key in data) {
+                const element = form.elements[key];
+                if (element) {
+                    if (element.type === 'checkbox') element.checked = !!data[key];
+                    else element.value = data[key];
+                }
+            }
+            for (let i = 1; i <= currentRowCount; i++) {
+                updateRowCalculations(i);
+                updateGPHR(i);
+            }
+        }
+        
+        // 6.17. 첫 로드 플래그
+        let isFirstLoad = true;
+        // 6.18. Scoring 탭 첫 로드 처리 함수
+        function handleScoringTabFirstLoad() {
+            if (!isFirstLoad) return;
+            isFirstLoad = false;
+            
+            inputBody.innerHTML = '';
+            
+            const savedData = localStorage.getItem(storageKey);
+            
+            if (savedData && Object.keys(JSON.parse(savedData)).length > 0) {
+                if (confirm('이전에 자동 저장된 내용이 있습니다. 불러올까요?')) {
+                    const data = JSON.parse(savedData);
+                    const dataSize = Object.keys(data).filter(k => k.startsWith('card')).length;
+                    const rowsToCreate = Math.max(dataSize, 1); // 최소 1행
+                    for (let i = 1; i <= rowsToCreate; i++) {
+                        createNewRow(i);
+                    }
+                    loadData(data); // 데이터 채우기
+                } else {
+                    for (let i = 1; i <= 20; i++) { createNewRow(i); }
+                }
+            } else {
+                if (confirm('테스트용 샘플 데이터를 불러올까요?')) {
+                    // (B) '샘플 데이터 불러오기'
+                    const dataSize = Object.keys(sampleData).filter(k => k.startsWith('card')).length;
+                    const rowsToCreate = Math.max(dataSize, 1); // 15
+                    for (let i = 1; i <= rowsToCreate; i++) {
+                        createNewRow(i);
+                    }
+                    loadData(sampleData); // 샘플 데이터 채우기
+                } else {
+                    // (C) '새로 만들기' (샘플 로드 취소 시)
+                    for (let i = 1; i <= 20; i++) { createNewRow(i); }
+                }
+            }
+            updateButtonStates(); // 최종 버튼 상태 점검
+
+            /* -------- Top Scrollbar Sync Logic (Runs Once) -------- */
+            try {
+                const topScrollbar = document.getElementById('top-scrollbar-container');
+                const tableWrapper = document.querySelector('.table-wrapper');
+                const tableSizer = document.getElementById('top-scrollbar-sizer');
+
+                if (topScrollbar && tableWrapper && tableSizer) {
+                    // 스크롤바 sizer의 너비를 실제 테이블 너비와 맞춥니다.
+                    const table = tableWrapper.querySelector('table');
+                    if (table) {
+                        tableSizer.style.width = table.scrollWidth + 'px';
+                    }
+
+                    // 스크롤 이벤트를 연동합니다.
+                    let isTopScrolling = false;
+                    let isBottomScrolling = false;
+                    let topScrollTimer = null;
+                    let bottomScrollTimer = null;
+
+                    // 상단 스크롤바 -> 하단 스크롤바
+                    topScrollbar.addEventListener('scroll', () => {
+                        if (isBottomScrolling) return; // 무한 루프 방지
+                        isTopScrolling = true;
+                        tableWrapper.scrollLeft = topScrollbar.scrollLeft;
+                        
+                        clearTimeout(topScrollTimer);
+                        topScrollTimer = setTimeout(() => { isTopScrolling = false; }, 100);
+                    });
+
+                    // 하단 스크롤바 -> 상단 스크롤바
+                    tableWrapper.addEventListener('scroll', () => {
+                        if (isTopScrolling) return; // 무한 루프 방지
+                        isBottomScrolling = true;
+                        topScrollbar.scrollLeft = tableWrapper.scrollLeft;
+
+                        clearTimeout(bottomScrollTimer);
+                        bottomScrollTimer = setTimeout(() => { isBottomScrolling = false; }, 100);
+                    });
+                }
+            } catch(e) {
+                console.error("Error setting up top scrollbar:", e);
+            }
+            /* -------- End of Top Scrollbar Sync Logic -------- */
+
+        }
+
+        // 6.19. 폼 제출 이벤트 핸들러
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            loader.style.display = 'block';
+            const dataObject = {};
+            new FormData(form).forEach((value, key) => { dataObject[key] = value; });
+            google.script.run.withSuccessHandler(displayResults).withFailureHandler(displayError).calculateRorschach(dataObject);
+        });
+        
+        // 6.20. 초기 탭 전환 함수
+        function openInitialTab(evt, tabName) {
+            let i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent-initial");
+            for (i=0; i < tabcontent.length; i++) tabcontent[i].style.display = "none";
+            tablinks = document.getElementsByClassName("tablinks-initial");
+            for (i=0; i < tablinks.length; i++) tablinks[i].className = tablinks[i].className.replace(" active", "");
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+
+            if (tabName === 'Scoring') {
+                handleScoringTabFirstLoad();
+            }
+        }
+        
+        // 6.21. 결과 탭 전환 함수
+        function openResultsTab(evt, tabName) {
+            let i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent-results");
+            for (i=0; i < tabcontent.length; i++) tabcontent[i].style.display = "none";
+            tablinks = document.getElementsByClassName("tablinks-results");
+            for (i=0; i < tablinks.length; i++) tablinks[i].className = tablinks[i].className.replace(" active", "");
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // 6.22. 체크박스 상태 설정 함수
+        function setCheck(id, isChecked) {
+            const el = document.getElementById(id);
+            if (el) {
+                el.classList.toggle('checked', !!isChecked);
+            }
+        }
+
+        // 6.23. 결과 표시 함수
+        function displayResults(response) {
+            loader.style.display = 'none';
+
+            if (!response || !response.success) {
+                alert('Error: ' + (response ? response.error : 'Unknown server error'));
+                return;
+            }
+
+            const r = response.results;
+            if (!r) {
+                alert('Error: No results data received from server.');
+                return;
+            }
+
+            const setText = (id, value) => {
+                try {
+                    const el = document.getElementById(id);
+                    if (el) {
+                        el.textContent = (value !== null && value !== undefined) ? value : '';
+                    }
+                } catch (e) {
+                    console.error(`Error setting text for ID "${id}":`, e);
+                }
+            };
+
+            try {
+                const up = r.upper_section;
+                if(up) {
+                    setText('res_up_Zf', up.Zf);
+                    setText('res_up_ZSum', up.ZSum);
+                    setText('res_up_ZEst', up.ZEst);
+                    setText('res_up_W', up.W);
+                    setText('res_up_D', up.D);
+                    setText('res_up_WD', (up.W || 0) + (up.D || 0));
+                    setText('res_up_Dd', up.Dd);
+                    setText('res_up_S', up.S);
+                    setText('res_up_dq_plus', up.dq_plus);
+                    setText('res_up_dq_o', up.dq_o);
+                    setText('res_up_dq_vplus', up.dq_vplus);
+                    setText('res_up_dq_v', up.dq_v);
+
+                    const blendsTable = document.getElementById('res_up_blends_table');
+                    if (blendsTable && Array.isArray(up.blends)) {
+                        blendsTable.innerHTML = ''; 
+                        const totalRows = 20; 
+                        const numCols = 6;
+                        up.blends.forEach(determinantArray => {
+                            const row = blendsTable.insertRow();
+                            for (let i = 0; i < numCols; i++) {
+                                const cell = row.insertCell();
+                                cell.textContent = determinantArray[i] || ''; 
+                                cell.style.padding = '4px';
+                                cell.style.fontSize = '11px';
+                                cell.style.textAlign = 'center';
+                                cell.style.border = '1px solid #eee';
+                            }
+                        });
+                        const filledRows = up.blends.length;
+                        for (let i = filledRows; i < totalRows; i++) {
+                            const row = blendsTable.insertRow();
+                            for (let j = 0; j < numCols; j++) {
+                                const cell = row.insertCell();
+                                cell.innerHTML = '&nbsp;'; 
+                                cell.style.border = '1px solid #eee';
+                            }
+                        }
+                    }
+
+                    if (up.formQuality) {
+                        const fqMapping = {
+                            '+': 'plus', 'o': 'o', 'u': 'u', '-': 'minus', 'none': 'none'
+                        };
+                        for (const fqType in up.formQuality) {
+                            const idPrefix = `res_up_fq_${fqMapping[fqType]}`;
+                            const data = up.formQuality[fqType];
+                            if (data) {
+                                setText(`${idPrefix}_fqx`, data.fqx);
+                                setText(`${idPrefix}_mqual`, data.mqual);
+                                setText(`${idPrefix}_wd`, data.wd);
+                            }
+                        }
+                    }
+
+                    if (up.singleDetCounts) {
+                        for (const det in up.singleDetCounts) {
+                            let id;
+                            if (det === 'm') {
+                                id = 'res_up_s_m_lower';
+                            } else if (det.includes("'")) {
+                                id = `res_up_s_${det.toLowerCase().replace(/'/g, '')}_prime`;
+                            } else {
+                                id = `res_up_s_${det.toLowerCase()}`;
+                            }
+                            setText(id, up.singleDetCounts[det]);
+                        }
+                    }
+
+                    if (up.detCounts) {
+                         for (const det in up.detCounts) {
+                            let id;
+                            if (det.includes("'")) {
+                                id = `res_up_det_${det.toLowerCase().replace(/'/g, '')}_prime`;
+                            } else {
+                                id = `res_up_det_${det.toLowerCase()}`;
+                            }
+
+                            if (det === 'm') {
+                                id = 'res_up_det_m_lower';
+                            }
+                            
+                            const el = document.getElementById(id);
+                            if(el) {
+                                setText(id, up.detCounts[det]);
+                            }
+                        }
+                    }
+
+                    setText('res_up_pairs', up.pairs);
+
+                    if (up.contentCounts) {
+                        for (const con in up.contentCounts) {
+                            let cleanCon = con.replace(/[()]/g, '').toLowerCase();
+                            let suffix = con.includes('(') ? '_paren' : '';
+                            let id = `res_up_c_${cleanCon}${suffix}`;
+                            setText(id, up.contentCounts[con]);
+                        }
+                    }
+                    
+                    if (up.approachData) {
+                        const cardMap = {"I":1, "II":2, "III":3, "IV":4, "V":5, "VI":6, "VII":7, "VIII":8, "IX":9, "X":10};
+                        for (const cardName in cardMap) {
+                            const cardNum = cardMap[cardName];
+                            const locations = up.approachData[cardName] || [];
+                            for (let i = 1; i <= 10; i++) {
+                                const cellId = `res_ap_${cardNum}_${i}`;
+                                const locationValue = locations[i-1] || '';
+                                setText(cellId, locationValue);
+                            }
+                        }
+                    }
+                    
+                    if (up.specialScoreCounts) {
+                        const ss = up.specialScoreCounts;
+                        setText('res_up_ss_dv1_n', ss.DV1);
+                        setText('res_up_ss_incom1_n', ss.INCOM1);
+                        setText('res_up_ss_dr1_n', ss.DR1);
+                        setText('res_up_ss_fabcom1_n', ss.FABCOM1);
+                        setText('res_up_ss_dv2_n', ss.DV2);
+                        setText('res_up_ss_incom2_n', ss.INCOM2);
+                        setText('res_up_ss_dr2_n', ss.DR2);
+                        setText('res_up_ss_fabcom2_n', ss.FABCOM2);
+                        setText('res_up_ss_alog_n', ss.ALOG);
+                        setText('res_up_ss_contam_n', ss.CONTAM);
+
+                        setText('res_up_ss_dv1_w', 'x 1');
+                        setText('res_up_ss_incom1_w', 'x 2');
+                        setText('res_up_ss_dr1_w', 'x 3');
+                        setText('res_up_ss_fabcom1_w', 'x 4');
+                        setText('res_up_ss_dv2_w', 'x 2');
+                        setText('res_up_ss_incom2_w', 'x 4');
+                        setText('res_up_ss_dr2_w', 'x 6');
+                        setText('res_up_ss_fabcom2_w', 'x 7');
+                        setText('res_up_ss_alog_w', 'x 5');
+                        setText('res_up_ss_contam_w', 'x 7');
+
+                        setText('res_up_ss_sum6', up.sum6);
+                        setText('res_up_ss_wsum6', up.wsum6);
+                        setText('res_up_ss_ab', ss.AB);
+                        setText('res_up_ss_ag', ss.AG);
+                        setText('res_up_ss_cop', ss.COP);
+                        setText('res_up_ss_cp', ss.CP);
+                        setText('res_up_ss_mor', ss.MOR);
+                        setText('res_up_ss_per', ss.PER);
+                        setText('res_up_ss_psv', ss.PSV);
+                        setText('res_up_ss_ghr', up.GHR);
+                        setText('res_up_ss_phr', up.PHR);
+                    }
+                }
+            } catch (e) {
+                console.error("Error rendering Upper Section:", e);
+                alert("An error occurred while displaying the Upper Section results. Check the console for details.");
+            }
+
+            try {
+                const lo = r.lower_section;
+                if(lo) {
+                    setText('res_lo_R', lo.R);
+                    setText('res_lo_Lambda', lo.Lambda);
+                    setText('res_lo_EB', lo.EB);
+                    setText('res_lo_EA', lo.EA);
+                    setText('res_lo_EBPer', lo.EBPer);
+                    setText('res_lo_eb', lo.eb);
+                    setText('res_lo_es', lo.es);
+                    setText('res_lo_AdjEs', lo.AdjEs);
+                    setText('res_lo_D', lo.D);
+                    setText('res_lo_AdjD', lo.AdjD);
+                    setText('res_lo_FM', lo.FM);
+                    setText('res_lo_m', lo.m);
+                    setText('res_lo_SumCprime', lo.SumCprime);
+                    setText('res_lo_SumT', lo.SumT);
+                    setText('res_lo_SumV', lo.SumV);
+                    setText('res_lo_SumY', lo.SumY);
+                    setText('res_lo_FC_CF_C', lo.FC_CF_C);
+                    setText('res_lo_PureC', lo.PureC);
+                    setText('res_lo_SumC_WSumC', lo.SumC_WSumC);
+                    setText('res_lo_Afr', lo.Afr);
+                    setText('res_lo_S_aff', lo.S_aff);
+                    setText('res_lo_Blends_R', lo.Blends_R);
+                    setText('res_lo_CP', lo.CP);
+                    setText('res_lo_COP', lo.COP);
+                    setText('res_lo_AG', lo.AG);
+                    setText('res_lo_a_p_inter', lo.a_p_inter);
+                    setText('res_lo_Food', lo.Food);
+                    setText('res_lo_SumT_inter', lo.SumT_inter);
+                    setText('res_lo_HumanCont', lo.HumanCont);
+                    setText('res_lo_PureH', lo.PureH);
+                    setText('res_lo_PER', lo.PER);
+                    setText('res_lo_ISO_Index', lo.ISO_Index);
+                    setText('res_lo_XA_pct', lo.XA_percent);
+                    setText('res_lo_WDA_pct', lo.WDA_percent);
+                    setText('res_lo_Xminus_pct', lo.X_minus_percent);
+                    setText('res_lo_S_minus', lo.S_minus);
+                    setText('res_lo_P_cog', lo.P);
+                    setText('res_lo_Xplus_pct', lo.X_plus_percent);
+                    setText('res_lo_Xu_pct', lo.Xu_percent);
+                    setText('res_lo_Zf', lo.Zf);
+                    setText('res_lo_W_D_Dd', lo.W_D_Dd);
+                    setText('res_lo_W_M', lo.W_M);
+                    setText('res_lo_Zd', lo.Zd);
+                    setText('res_lo_PSV', lo.PSV);
+                    setText('res_lo_DQ_plus', lo.DQ_plus);
+                    setText('res_lo_DQ_v', lo.DQ_v);
+                    setText('res_lo_3r_2_R', lo._3r_2_R);
+                    setText('res_lo_Fr_rF', lo.Fr_rF);
+                    setText('res_lo_SumV_self', lo.SumV_self);
+                    setText('res_lo_FD', lo.FD);
+                    setText('res_lo_An_Xy', lo.An_Xy);
+                    setText('res_lo_MOR_self', lo.MOR_self);
+                    setText('res_lo_H_ratio', lo.H_ratio);
+                    setText('res_lo_a_p', lo.a_p);
+                    setText('res_lo_Ma_Mp', lo.Ma_Mp);
+                    setText('res_lo_2AB_Art_Ay', lo._2AB_Art_Ay);
+                    setText('res_lo_MOR_ideation', lo.MOR);
+                    setText('res_lo_Sum6', lo.Sum6);
+                    setText('res_lo_Lv2', lo.Lv2);
+                    setText('res_lo_WSum6_ideation', lo.WSum6_ideation);
+                    setText('res_lo_M_minus_ideation', lo.M_minus_ideation);
+                    setText('res_lo_Mnone', lo.Mnone);
+                }
+            } catch(e) {
+                console.error("Error rendering Lower Section:", e);
+                alert("An error occurred while displaying the Lower Section results. Check the console for details.");
+            }
+            
+            try {
+              const responseTableBody = document.querySelector("#response-list-table tbody");
+              if (responseTableBody && r.row_calculations) {
+                responseTableBody.innerHTML = ''; // 기존 데이터 지우기
+                let counter = 1;
+                r.row_calculations.forEach(row => {
+                  const tr = document.createElement('tr');
+                  tr.innerHTML = `
+                    <td style="text-align: center; vertical-align: top;">${counter++} (${row.card || 'N/A'})</td>
+                    <td style="white-space: normal; line-height: 1.4; vertical-align: top;">${row.response || ''}</td>
+                  `;
+                  responseTableBody.appendChild(tr);
+                });
+              }
+            } catch (e) {
+              console.error("Error rendering Response List:", e);
+            }
+
+            try {
+                const si = r.special_indices;
+                if(si) {
+                    if (si.PTI) {
+                        const parts = si.PTI.split(',');
+                        setText('res_si_pti_score', parts[0]);
+                        setText('res_si_pti_val', parts[1]);
+                        for(let i = 1; i <= 5; i++) setCheck(`res_pti_c${i}`, si.pti_criteria[`c${i}`]);
+                        setCheck('res_pti_check', parseInt(parts[0]) >= 3);
+                    }
+                    if (si.DEPI) {
+                        const parts = si.DEPI.split(',');
+                        setText('res_si_depi_score', parts[0]);
+                        setText('res_si_depi_val', parts[1]);
+                        for(let i = 1; i <= 7; i++) setCheck(`res_depi_c${i}`, si.depi_criteria[`c${i}`]);
+                        setCheck('res_depi_check', parseInt(parts[0]) >= 5);
+                    }
+                    if (si.CDI) {
+                        const parts = si.CDI.split(',');
+                        setText('res_si_cdi_score', parts[0]);
+                        setText('res_si_cdi_val', parts[1]);
+                        for(let i = 1; i <= 5; i++) setCheck(`res_cdi_c${i}`, si.cdi_criteria[`c${i}`]);
+                        setCheck('res_cdi_check', parseInt(parts[0]) >= 4);
+                    }
+                    if (si.SCON) {
+                        const parts = si.SCON.split(',');
+                        setText('res_si_scon_score', parts[0]);
+                        setText('res_si_scon_val', parts[1]);
+                        for(let i = 1; i <= 12; i++) setCheck(`res_scon_c${i}`, si.scon_criteria[`c${i}`]);
+                        setCheck('res_scon_check', parseInt(parts[0]) >= 8);
+                    }
+                    if (si.HVI) {
+                        const parts = si.HVI.split(',');
+                        setText('res_si_hvi_score', parts[0]);
+                        setText('res_si_hvi_val', parts[1]);
+                        for(let i = 1; i <= 8; i++) setCheck(`res_hvi_c${i}`, si.hvi_criteria[`c${i}`]);
+                        setCheck('res_hvi_check', (parts[1] || '').trim() === 'Positive');
+                    }
+                    if (si.OBS) {
+                        const parts = si.OBS.split(',');
+                        setText('res_si_obs_score', parts[0]);
+                        setText('res_si_obs_val', parts[1]);
+                        for(let i = 1; i <= 5; i++) setCheck(`res_obs_c${i}`, si.obs_criteria[`c${i}`]);
+                        for(let i = 1; i <= 4; i++) setCheck(`res_obs_r${i}`, si.obs_rules[`r${i}`]);
+                        setCheck('res_obs_check', (parts[1] || '').trim() === 'Positive');
+                    }
+
+                    if (si.GHR !== undefined && si.PHR !== undefined) {
+                        setText('res_lo_GHR_PHR', `${si.GHR} : ${si.PHR}`);
+                    }
+                }
+            } catch (e) {
+                console.error("Error rendering Special Indices:", e);
+                alert("An error occurred while displaying the Special Indices results. Check the console for details.");
+            }
+
+            document.getElementById('initial-screen-container').style.display = 'none';
+            document.getElementById('results-container').style.display = 'block';
+            document.querySelector('.tablinks-results').click();
+
+            applyZeroGrayOut();
+        }
+
+        // 6.24. 채점 화면으로 돌아가기 함수
+        function showScoring() {
+            resultsContainer.style.display = 'none';
+            initialScreenContainer.style.display = 'block';
+        }
+        
+        // 6.25. 0값 회색 처리 함수
+        function applyZeroGrayOut() {
+            const tables = document.querySelectorAll('#results-container .results-grid table');
+            tables.forEach(table => {
+                table.querySelectorAll('td').forEach(td => {
+                    if (td.getAttribute('data-ignore-grayout') === 'true') {
+                        return; // 이 셀에 대해서는 아무 작업도 하지 않고 건너뜁니다.
+                    }
+                    // ************************
+                    
+                    const content = td.textContent.trim();
+                    if (content === '0' || content === '-' || content === '' || content.endsWith(':0.0') || content.startsWith('0.0:')) {
+                        if (td.id.startsWith('res_si_') && !td.id.endsWith('_val')) {
+                            td.style.backgroundColor = '#f0f0f0';
+                        } else if (!td.id.startsWith('res_si_') && !td.id.endsWith('_val')) {
+                            td.style.backgroundColor = '#f0f0f0';
+                        }
+                    } else {
+                        td.style.backgroundColor = '';
+                    }
+                });
+            });
+        }
+        
+        // 6.26. 에러 표시 함수
+        function displayError(error) {
+            loader.style.display = 'none';
+            alert('A server error occurred: ' + error.message);
+        }
+        
+        // 6.27. CSV 다운로드 헬퍼 함수
+        function downloadCSV(csvString, fileName) {
+            // Excel에서 한글이 깨지지 않도록 BOM(Byte Order Mark)을 추가합니다.
+            const bom = '\uFEFF';
+            const blob = new Blob([bom + csvString], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement("a");
+            const url = URL.createObjectURL(blob);
+            
+            link.setAttribute("href", url);
+            link.setAttribute("download", fileName);
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // 6.28. Summary CSV 내보내기 이벤트 핸들러
+        document.getElementById('export-summary-btn').addEventListener('click', function() {
+            loader.style.display = 'block';
+            const dataObject = {};
+            new FormData(form).forEach((value, key) => { dataObject[key] = value; });
+            
+            // getSummaryCsvData 함수 호출
+            google.script.run
+                .withSuccessHandler(onSummaryExportSuccess)
+                .withFailureHandler(displayError)
+                .getSummaryCsvData(dataObject);
+        });
+
+        // 6.29. Raw Data CSV 내보내기 이벤트 핸들러
+        document.getElementById('export-rawdata-btn').addEventListener('click', function() {
+            loader.style.display = 'block';
+            const dataObject = {};
+            new FormData(form).forEach((value, key) => { dataObject[key] = value; });
+
+            // getRawDataCsvData 함수 호출
+            google.script.run
+                .withSuccessHandler(onRawDataExportSuccess)
+                .withFailureHandler(displayError)
+                .getRawDataCsvData(dataObject);
+        });
+
+        // 6.30. Summary CSV 내보내기 성공 콜백
+        function onSummaryExportSuccess(response) {
+            loader.style.display = 'none';
+            if (response.success && response.csvString) {
+                downloadCSV(response.csvString, 'Rorschach_Summary.csv');
+            } else {
+                displayError({ message: (response ? response.error : 'Unknown export error') });
+            }
+        }
+
+        // 6.31. Raw Data CSV 내보내기 성공 콜백
+        function onRawDataExportSuccess(response) {
+            loader.style.display = 'none';
+            if (response.success && response.csvString) {
+                downloadCSV(response.csvString, 'Rorschach_RawData.csv');
+            } else {
+                displayError({ message: (response ? response.error : 'Unknown export error') });
+            }
+        }
+
+        // 6.32. 개인정보처리방침 모달 관련 요소
+        const modal = document.getElementById('privacy-modal');
+        const link = document.getElementById('privacy-policy-link');
+        const closeBtn = document.querySelector('.modal-close-btn');
+
+        if (modal && link && closeBtn) {
+            // 6.33. '개인정보처리방침' 링크 클릭 시 모달 열기
+            link.addEventListener('click', (e) => {
+                e.preventDefault(); // 기본 링크 동작 방지
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden'; // 뒷배경 스크롤 고정
+            });
+
+            // 6.34. 'X' 버튼 클릭 시 모달 닫기
+            closeBtn.addEventListener('click', () => {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto'; // 뒷배경 스크롤 복구
+            });
+
+            // 6.35. 모달 바깥의 어두운 영역(overlay) 클릭 시 모달 닫기
+            window.addEventListener('click', (e) => {
+                if (e.target == modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto'; // 뒷배경 스크롤 복구
+                }
+            });
+        }
+    </script>
+</body>
+</html>

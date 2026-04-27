@@ -1,0 +1,796 @@
+ * =================================================================
+ * 로샤 구조 요약지 - 메인 스타일시트 (styles.html)
+ * -----------------------------------------------------------------
+ * 이 파일은 웹앱의 모든 시각적 디자인(레이아웃, 색상, 폰트)을
+ * 담당합니다.
+ *
+ * [목차]
+ *
+ * 1. 전역 (Global) 스타일
+ * 1.1. 기본 (body, h1)
+ * 1.2. 컨테이너 (.container)
+ *
+ * 2. 공용 컴포넌트
+ * 2.1. 버튼 (button, .row-controls)
+ * 2.2. 탭 메뉴 (.tab, .tab button)
+ * 2.3. 탭 내용 (.tabcontent-...)
+ * 2.4. 페이드인 효과 (@keyframes)
+ *
+ * 3. [Scoring 탭] 채점 테이블
+ * 3.1. 테이블 기본 (.table-wrapper, table, th, td)
+ * 3.2. 자동계산 입력칸 (.auto-calc-input)
+ * 3.3. 그룹별 헤더 배경색 (th.group-...)
+ * 3.4. 그룹별 입력칸 줄무늬 (#input-body tr:nth-child...)
+ *
+ * 4. [List 탭] 코드 목록 테이블
+ * 4.1. 테이블 기본 (#List table)
+ * 4.2. 헤더 고정 (#List th)
+ * 4.3. 셀 스타일 (.list-category-cell, .list-item-row)
+ *
+ * 5. [결과 화면] 그리드 레이아웃
+ * 5.1. 그리드 공통 (.results-grid, .grid-card)
+ * 5.2. [Upper Section] 레이아웃 (#Upper_Section ...)
+ * 5.3. [Lower Section] 레이아웃 (#Lower_Section ...)
+ * 5.4. [Special Indices] 레이아웃 (#Special_Indices ...)
+ * 5.5. [인쇄용] 반응 목록 (#response-list-container)
+ *
+ * 6. 인쇄 전용 스타일 (@media print)
+ * 6.1. 페이지 설정 (@page)
+ * 6.2. 인쇄 제외 요소 (.no-print)
+ * 6.3. 기본 인쇄 설정 (body, .container)
+ * 6.4. 1-2페이지 레이아웃 (#Upper_Section, #Lower_Section)
+ * 6.5. 워터마크/로고 (::after)
+ * 6.6. Upper Section 6단 컬럼 인쇄
+ * 6.7. Lower Section 4칸 그리드 인쇄
+ * 6.8. 반응 목록 인쇄 (#response-list-container)
+ * 6.9. 폰트/여백 축소 (최적화)
+ *
+ * 7. 안내/가이드 컴포넌트
+ * 7.1. <details> 아코디언 (.print-guide)
+ * 7.2. Notice 탭 가이드 레이아웃 (.guide-layout)
+ *
+ * 8. 팝업 모달 스타일
+ *
+ * =================================================================
+ */
+
+
+/* =================================
+ * 1. 전역 (Global) 스타일
+ * ================================= */
+
+/* 1.1. 기본 (body, h1) */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+    margin: 0;
+    padding: 20px;
+}
+h1, h2, h3 {
+    color: #343a40;
+}
+h1 {
+    border-bottom: 2px solid #dee2e6;
+    padding-bottom: 10px;
+}
+
+/* 1.2. 컨테이너 (.container) */
+/* 앱 전체를 감싸는 흰색 박스 */
+.container {
+    max-width: 100%;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+
+/* =================================
+ * 2. 공용 컴포넌트
+ * ================================= */
+
+/* 2.1. 버튼 (button, .row-controls) */
+.button-container {
+    text-align: center;
+    margin-top: 30px;
+}
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.row-controls {
+    text-align: right;
+    margin: 15px 0;
+}
+.row-controls button {
+    background-color: #6c757d;
+    padding: 6px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 8px;
+    line-height: 1.5;
+}
+.row-controls button#add-row-btn {
+    background-color: #007bff;
+}
+.row-controls button#del-row-btn {
+    background-color: #ffc107;
+    color: #343a40;
+}
+.row-controls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* 2.2. 탭 메뉴 (.tab, .tab button) */
+/* (Notice/Scoring..., Upper/Lower... 탭 메뉴) */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #e9ecef;
+    border-radius: 5px 5px 0 0;
+}
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    border-radius: 0;
+    color: #212529;
+}
+.tab button:hover {
+    background-color: #dee2e6;
+}
+.tab button.active {
+    background-color: #ffffff;
+    font-weight: bold;
+    border-bottom: 2px solid #007bff;
+}
+
+/* 2.3. 탭 내용 (.tabcontent-...) */
+/* 탭 클릭 시 나타나는 내용 영역 */
+.tabcontent-initial,
+.tabcontent-results {
+    display: none;
+    padding: 20px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    animation: fadeEffect 0.5s;
+}
+
+/* 2.4. 페이드인 효과 (@keyframes) */
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =================================
+ * 3. [Scoring 탭] 채점 테이블
+ * ================================= */
+
+/* 3.1. 테이블 기본 (.table-wrapper, table, th, td) */
+/* .table-wrapper: 테이블을 감싸서 가로 스크롤을 생성합니다. */
+/* white-space: nowrap: 입력 셀들의 내용이 줄바꿈되는 것을 방지합니다. */
+.table-wrapper {
+    overflow-x: auto;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0;
+}
+th,
+td {
+    border: 1px solid #dee2e6;
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+    white-space: nowrap;
+}
+th {
+    text-align: center;
+    color: #495057;
+    font-weight: bold;
+}
+
+/* 3.2. 자동계산 입력칸 (.auto-calc-input) */
+/* (Score, G/PHR) 읽기 전용 회색 입력칸 스타일 */
+.auto-calc-input {
+    background-color: #e9ecef;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 8px;
+    width: 100%;
+    min-width: 80px;
+    box-sizing: border-box;
+}
+
+/* 3.3. 그룹별 헤더 배경색 (th.group-...) */
+/* (List 탭의 .group-basic-bg와 공유됩니다) */
+.group-basic-bg, th.group-basic       { background-color: #f8f9fa; }
+.group-loc-bg,   th.group-loc          { background-color: #e7f3fe; }
+.group-dq-bg,    th.group-dq           { background-color: #e0f7fa; }
+.group-det-bg,   th.group-det          { background-color: #e8f5e9; }
+.group-fq-bg,    th.group-fq           { background-color: #f1f8e9; }
+.group-pair-bg,  th.group-pair         { background-color: #f9fbe7; }
+.group-con-bg,   th.group-con          { background-color: #fff8e1; }
+.group-pop-bg,   th.group-pop          { background-color: #fff3e0; }
+.group-z-bg,     th.group-z            { background-color: #fbe9e7; }
+.group-calc-bg,  th.group-calc         { background-color: #efebe9; }
+.group-special-bg, th.group-special    { background-color: #f3e5f5; }
+
+/* 3.4. 그룹별 입력칸 줄무늬 (#input-body tr:nth-child...) */
+/* 홀수 행 (odd) */
+#input-body tr:nth-child(odd) .group-basic     { background-color: #ffffff; }
+#input-body tr:nth-child(odd) .group-loc       { background-color: #f0f7ff; }
+#input-body tr:nth-child(odd) .group-dq        { background-color: #eefcfd; }
+#input-body tr:nth-child(odd) .group-det       { background-color: #f1f8f2; }
+#input-body tr:nth-child(odd) .group-fq        { background-color: #f6faf2; }
+#input-body tr:nth-child(odd) .group-pair      { background-color: #fbfdec; }
+#input-body tr:nth-child(odd) .group-con       { background-color: #fffaf0; }
+#input-body tr:nth-child(odd) .group-pop       { background-color: #fff8f0; }
+#input-body tr:nth-child(odd) .group-z         { background-color: #fdeee9; }
+#input-body tr:nth-child(odd) .group-calc      { background-color: #f5f2f0; }
+#input-body tr:nth-child(odd) .group-special  { background-color: #f8eef9; }
+/* 짝수 행 (even) */
+#input-body tr:nth-child(even) .group-basic    { background-color: #e9ecef; }
+#input-body tr:nth-child(even) .group-loc      { background-color: #d6eaff; }
+#input-body tr:nth-child(even) .group-dq       { background-color: #cdeff5; }
+#input-body tr:nth-child(even) .group-det      { background-color: #dceadc; }
+#input-body tr:nth-child(even) .group-fq       { background-color: #e7f0e0; }
+#input-body tr:nth-child(even) .group-pair     { background-color: #f0f2d9; }
+#input-body tr:nth-child(even) .group-con      { background-color: #f2eedb; }
+#input-body tr:nth-child(even) .group-pop      { background-color: #f2e9d9; }
+#input-body tr:nth-child(even) .group-z        { background-color: #f2e0da; }
+#input-body tr:nth-child(even) .group-calc     { background-color: #e6e2e0; }
+#input-body tr:nth-child(even) .group-special { background-color: #e9ddea; }
+
+
+/* =================================
+ * 4. [List 탭] 코드 목록 테이블
+ * ================================= */
+
+/* 4.1. 테이블 기본 (#List table) */
+/* table-layout: fixed: 너비를 고정하여 컬럼 너비를 일정하게 유지합니다. */
+/* word-wrap: break-word: 긴 설명 텍스트가 줄바꿈되도록 합니다. */
+#List .table-wrapper {
+    margin-top: 20px;
+}
+#List table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+#List th,
+#List td {
+    border: 1px solid #dee2e6;
+    padding: 12px;
+    text-align: left;
+    vertical-align: top;
+    word-wrap: break-word;
+}
+
+/* 4.2. 헤더 고정 (#List th) */
+/* position: sticky: 스크롤 시 헤더를 상단에 고정시킵니다. */
+#List th {
+    position: sticky;
+    top: 0;
+    background-color: #f1f3f5;
+    z-index: 1;
+}
+
+/* 4.3. 셀 스타일 (.list-category-cell, .list-item-row) */
+/* .list-category-cell: rowspan된 카테고리 셀 (e.g., "Location") */
+/* vertical-align: middle !important: rowspan 셀에서 세로 중앙 정렬 */
+.list-category-cell {
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: center;
+    vertical-align: middle !important;
+}
+/* .list-item-row: 개별 코드 항목 행 (줄무늬 적용) */
+.list-item-row.first-item {
+    background-color: #ffffff !important;
+}
+.list-item-row.item-even-bg {
+    background-color: #f8f9fa;
+}
+.list-code-cell {
+    font-size: 0.95em;
+}
+.list-desc-cell {
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+
+/* =================================
+ * 5. [결과 화면] 그리드 레이아웃
+ * ================================= */
+
+/* 5.1. 그리드 공통 (.results-grid, .grid-card) */
+#results-container {
+    display: none; /* 계산 완료 후 JS가 block으로 변경 */
+}
+.results-grid {
+    display: grid;
+    gap: 10px;
+}
+/* .grid-card: 결과 항목을 감싸는 카드 UI */
+/* flex-direction: column: 카드 내부 요소를 세로로 정렬 (제목, 테이블) */
+/* flex-shrink: 0: (제목에 적용됨) 카드 크기 조절 시 제목이 찌그러지지 않게 함 */
+.results-grid .grid-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.results-grid .grid-card h3 {
+    margin-top: 0;
+    font-size: 1em;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    flex-shrink: 0;
+}
+.results-grid .grid-card table {
+    width: 100%;
+}
+.results-grid .grid-card th,
+.results-grid .grid-card td {
+    padding: 6px;
+    font-size: 12px;
+}
+.results-grid .grid-card th {
+    background-color: #f8f9fa;
+    font-weight: normal;
+    text-align: left;
+}
+.results-grid .grid-card td {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* 5.2. [Upper Section] 레이아웃 (#Upper_Section ...) */
+/* 26컬럼 그리드를 사용하여 복잡한 카드 배치를 구현합니다. */
+#Upper_Section .results-grid {
+    grid-template-columns: repeat(26, 1fr);
+}
+/* 카드 내부 테이블 너비 고정 (일관된 디자인) */
+#Upper_Section .loc-feat table th,
+#Upper_Section .dq table th,
+#Upper_Section .single table th,
+#Upper_Section .pairs table th,
+#Upper_Section .contents table th {
+    width: 35%;
+}
+.approach table { table-layout: fixed; }
+.approach table th { width: 4%; }
+.spec-scores-table { table-layout: fixed; }
+.spec-scores-table th:first-child { width: 28%; }
+#special-scores-level-table td { width: 18%; }
+.spec-scores table:last-of-type { table-layout: fixed; }
+.spec-scores table:last-of-type th { width: 25%; }
+.dets-toggle table { table-layout: fixed; }
+.dets-toggle table th { width: 4.5%; }
+.dets-toggle table td { width: 8%; }
+.form-qual table { table-layout: fixed; }
+.form-qual th { text-align: left; }
+
+/* Upper Section 카드별 위치 (grid-column/row) */
+.loc-feat   { grid-column: 1 / span 4;  grid-row: 1 / span 14; }
+.dq         { grid-column: 1 / span 4;  grid-row: 15 / span 7; }
+.blends     { grid-column: 5 / span 6;  grid-row: 1 / span 21; padding: 0; }
+.single     { grid-column: 11 / span 3; grid-row: 1 / span 25; }
+.pairs      { grid-column: 11 / span 3; grid-row: 26 / span 4; }
+.contents   { grid-column: 14 / span 3; grid-row: 1 / span 29; }
+.approach   { grid-column: 17 / span 10; grid-row: 1 / span 11; }
+.spec-scores{ grid-column: 17 / span 10; grid-row: 13 / span 17; }
+.form-qual  { grid-column: 1 / span 10; grid-row: 22 / span 8; }
+.dets-toggle{ grid-column: 1 / span 26; margin-top: 15px; } /* Determinants Summary (토글) */
+
+/* Blends 카드 내부 스크롤 (overflow-y: auto) */
+.blends h3 { padding: 10px; }
+.blends-table-wrapper {
+    overflow-y: auto;
+    flex-grow: 1;
+}
+.blends table {
+    border-top: 1px solid #e0e0e0;
+    table-layout: fixed;
+}
+/* Determinants Summary <details> 토글 스타일 */
+.dets-toggle summary {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+}
+
+/* 5.3. [Lower Section] 레이아웃 (#Lower_Section ...) */
+/* 4칸 그리드를 사용합니다. */
+#Lower_Section .results-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: min-content;
+}
+#Lower_Section .grid-card table {
+    table-layout: fixed;
+}
+#Lower_Section .ideation-card-table th,
+#Lower_Section .ideation-card-table td {
+    width: 25%;
+}
+#Lower_Section .special-indices-card-table th:nth-child(3) {
+    background-color: #f8f9fa;
+}
+
+/* 5.4. [Special Indices] 레이아웃 (#Special_Indices ...) */
+/* 3칸 그리드를 사용합니다. */
+#Special_Indices .results-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+#Special_Indices .grid-card {
+    padding: 15px;
+}
+#Special_Indices h3 {
+    font-size: 1.1em;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+/* 지표 항목 스타일 (체크박스 영역) */
+.criterion-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+.criterion-item.main-criterion {
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+.criterion-item .label {
+    white-space: normal;
+    line-height: 1.4;
+}
+.criterion-item .label .note {
+    font-weight: normal;
+    font-size: 0.9em;
+    color: #6c757d;
+}
+/* 커스텀 체크박스 (JS로 'checked' 클래스 제어) */
+.custom-checkbox {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border: 1px solid #adb5bd;
+    border-radius: 3px;
+    margin-right: 10px;
+    margin-top: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.custom-checkbox.checked {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+.custom-checkbox.checked::after {
+    content: '✓';
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+}
+/* OBS 지표 전용 룰 스타일 */
+.obs-rules {
+    font-size: 12px;
+    margin-top: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 15px;
+}
+.obs-rules .criterion-item {
+    margin-bottom: 12px;
+}
+
+/* 5.5. [인쇄용] 반응 목록 (#response-list-container) */
+/* 평소엔 숨겨져 있다가 @media print에서 보이게 됩니다. */
+#response-list-container {
+    display: none;
+}
+
+
+/* =================================
+ * 6. 인쇄 전용 스타일 (@media print)
+ * ================================= */
+
+@media print {
+    /* 6.1. 페이지 설정 (@page) */
+    @page {
+        size: A4 landscape; /* A4 가로 */
+        margin: 6mm;
+    }
+
+    /* 6.2. 인쇄 제외 요소 (.no-print) */
+    /* 탭, 버튼, 안내창 등 인쇄 불필요한 요소 숨김 */
+    .no-print,
+    #initial-screen-container,
+    #results-tab,
+    #Special_Indices,
+    .print-guide,
+    .dets-toggle {
+        display: none !important;
+    }
+    #results-container {
+    display: block !important;
+    }
+
+    /* 6.3. 기본 인쇄 설정 (body, .container) */
+    /* -webkit-print-color-adjust: exact: 배경색 강제 인쇄 (Chrome/Safari) */
+    body {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        -webkit-print-color-adjust: exact;
+    }
+    .container {
+        padding: 0;
+        box-shadow: none;
+        border: none;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* 6.4. 1-2페이지 레이아웃 (#Upper_Section, #Lower_Section) */
+    /* page-break-after: always: 1페이지(Upper) 인쇄 후 강제 페이지 넘김 */
+    #Upper_Section {
+        display: block !important;
+        visibility: visible !important;
+        animation: none;
+        border: none;
+        padding: 0;
+        page-break-after: always;
+        position: relative;
+        min-height: 95vh;
+    }
+    #Lower_Section {
+        display: block !important;
+        visibility: visible !important;
+        animation: none;
+        border: none;
+        padding: 0;
+        position: relative;
+        min-height: 95vh;
+    }
+
+    /* 6.5. 워터마크/로고 (::after) */
+    /* 1, 2페이지 하단 우측에 로고 삽입 */
+    #Upper_Section::after,
+    #Lower_Section::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 6mm;
+        right: 6mm;
+        background-image: url('https://raw.githubusercontent.com/yes-U-can/CI/main/SCIP-banner-777777.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        width: 180px;
+        height: 45px;
+        opacity: 0.75;
+    }
+
+    /* 6.6. Upper Section 6단 컬럼 인쇄 */
+    /* 화면의 복잡한 그리드를 해제하고 6단 신문처럼 재배치 */
+    /* break-inside: avoid: 카드가 페이지 중간에 잘리지 않게 함 */
+    #Upper_Section .results-grid {
+        display: block !important;
+        column-count: 6;
+        column-gap: 30px;
+    }
+    #Upper_Section .grid-card {
+        display: inline-block;
+        width: 100%;
+        break-inside: avoid;
+        margin-bottom: 8px;
+    }
+
+    /* 6.7. Lower Section 4칸 그리드 인쇄 */
+    #Lower_Section .results-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 8px !important;
+    }
+
+    /* 6.8. 반응 목록 인쇄 (#response-list-container) */
+    /* 숨겨져 있던 반응 목록을 보이게 함 */
+    #response-list-container {
+        display: block !important;
+        grid-column: 1 / span 4; /* 4칸 모두 차지 */
+        margin-top: 8px !important;
+        page-break-inside: avoid;
+    }
+    #response-list-table th,
+    #response-list-table td {
+        font-size: 8px !important;
+        padding: 5px !important;
+        white-space: normal !important; /* 긴 반응 내용 줄바꿈 */
+        vertical-align: top;
+    }
+    #response-list-table th {
+        text-align: center;
+    }
+
+    /* 6.9. 폰트/여백 축소 (최적화) */
+    /* A4 한 장에 맞추기 위해 폰트와 여백을 최소화 */
+    .results-grid .grid-card {
+        border: 1px solid #ccc;
+        padding: 8px 8px 4 8px;
+    }
+    .results-grid .grid-card h3 {
+        font-size: 11px;
+        padding: 4px;
+        margin-bottom: 0;
+    }
+    .results-grid .grid-card th,
+    .results-grid .grid-card td {
+        padding: 5px;
+        font-size: 8px;
+        white-space: normal;
+    }
+    .approach table th {
+        width: 4% !important;
+    }
+    .approach table td {
+        white-space: nowrap !important;
+        font-size: 7px;
+    }
+}
+
+
+/* =================================
+ * 7. 안내/가이드 컴포넌트
+ * ================================= */
+
+/* 7.1. <details> 아코디언 (.print-guide) */
+/* Notice 탭과 결과 탭의 안내창에 공통 적용 */
+.print-guide details {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    margin-top: 25px;
+    background-color: #f8f9fa;
+}
+.print-guide summary {
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 15px 20px;
+    cursor: pointer;
+    outline: none;
+}
+.print-guide details[open] summary {
+    border-bottom: 1px solid #dee2e6;
+}
+.guide-content {
+    padding: 10px 25px 20px 25px;
+}
+
+/* 7.2. Notice 탭 가이드 레이아웃 (.guide-layout) */
+/* (Notice 탭 전용) */
+.guide-layout {
+    display: flex;
+    gap: 30px;
+}
+.guide-column.left {
+    flex: 0 0 45%;
+}
+.guide-column.right {
+    flex: 1;
+}
+.guide-layout h4 {
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-size: 1em;
+    background-color: #e9ecef;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+.guide-layout ul {
+    list-style-type: 'ㆍ';
+    padding-left: 20px;
+    margin: 0;
+}
+.guide-layout li {
+    padding: 6px 0;
+    color: #495057;
+}
+.guide-layout li strong {
+    color: #212529;
+}
+.guide-layout code {
+    background-color: #e0e7ff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+.guide-content ul li {
+    margin-bottom: 5px;
+}
+
+
+/* =================================
+ * 8. 팝업 모달 스타일
+ * ================================= */
+.modal-overlay {
+    position: fixed; /* 화면 전체에 고정 */
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 반투명 검은 배경 */
+    display: none; /* 평소엔 숨김 */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* 화면 중앙에 위치 */
+    padding: 25px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 700px; /* 최대 너비 고정 */
+    border-radius: 8px;
+    position: relative;
+    /* .tabcontent-에서 이미 정의된 애니메이션 재활용 */
+    animation: fadeEffect 0.3s;
+}
+
+.modal-body {
+    max-height: 60vh; /* 내용이 길어지면 스크롤 */
+    overflow-y: auto;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.modal-close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
