@@ -6,6 +6,7 @@
 
 | Date | Version | Type | Patch Note | Source |
 | --- | --- | --- | --- | --- |
+| 2026-04-27 | v2.0.1 | 버그 패치 | [패치노트](./v2-nextjs/releases/v2.0.1/) | [소스코드](./v2-nextjs/source/) |
 | 2026-02-15 | v2.0.0 | 메이저 패치 | [패치노트](./v2-nextjs/releases/v2.0.0/) | [소스코드](./v2-nextjs/source/) |
 
 ## [Google Apps Script] 버전 1 릴리즈 기록

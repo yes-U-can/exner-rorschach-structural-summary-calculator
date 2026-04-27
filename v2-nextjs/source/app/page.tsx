@@ -37,7 +37,7 @@ import {
   subscribeSessionUiPreferencesClear,
   writeSessionUiPreferences,
 } from '@/lib/sessionUiPreferencesStorage';
-import type { CodingAssistContext, CodingAssistFieldProposal } from '@/types';
+import type { CodingAssistContext } from '@/types';
 
 // Lazy-loaded heavy components (only loaded when actually needed)
 const UpperSection = lazy(() => import('@/components/result/UpperSection'));
@@ -52,7 +52,7 @@ import {
   ArrowLeftIcon,
   PrinterIcon,
   DocumentArrowDownIcon,
-  DocumentDuplicateIcon,
+  ClipboardDocumentIcon,
   TableCellsIcon,
   ExclamationTriangleIcon,
   SparklesIcon,
@@ -67,20 +67,15 @@ const homeUiByLanguage = {
     rawCsvDescription: 'Download the coded scoring inputs entered in the table as CSV.',
     summaryCsvLabel: 'Structural Summary Values CSV',
     summaryCsvDescription: 'Download the calculated Upper, Lower, and Special indices as CSV.',
+    copySummaryButton: 'Copy Structural Summary values',
+    copySummarySuccessTitle: 'Structural Summary values copied',
+    copySummarySuccessMessage: 'Paste them into the interpretation helper.',
+    copySummaryErrorTitle: 'Copy failed',
+    copySummaryErrorMessage: 'Copying failed. Please try again.',
     pdfLabel: 'Structural Summary PDF Print',
     pdfDescription: 'Download a 2-page PDF with the summary sections and response memos.',
-    interpretationButton: 'Open interpretation helper',
-    interpretationTitle: 'Open interpretation helper',
-    interpretationDescription:
-      'Export the structural-summary data as a snapshot. Paste it into the interpretation helper to get help with result interpretation.',
-    interpretationConfirm: 'Copy to clipboard',
-    interpretationCopiedTitle: 'Copied to clipboard',
-    interpretationCopiedMessage: 'Paste the copied snapshot into the interpretation helper whenever you are ready.',
-    interpretationCopyFailedTitle: 'Clipboard copy failed',
-    interpretationCopyFailedMessage: 'The snapshot could not be copied. Please try again.',
     codingStarter: 'If coding feels difficult, talk it through with me.',
     codingOpenButton: 'Coding helper',
-    overwritePrefix: 'This field already has a value. Overwrite it?',
     responseNotesTitle: 'Response Memos',
     responseNotesEmpty: 'No response memos were recorded.',
     pdfErrorTitle: 'PDF download failed',
@@ -94,20 +89,15 @@ const homeUiByLanguage = {
     rawCsvDescription: '채점표에 입력한 부호화 값을 CSV 파일로 저장합니다.',
     summaryCsvLabel: '구조요약 수치 CSV',
     summaryCsvDescription: '계산된 구조요약 수치를 CSV 파일로 저장합니다.',
+    copySummaryButton: '구조요약 값 복사하기',
+    copySummarySuccessTitle: '구조요약 값을 복사했습니다',
+    copySummarySuccessMessage: '해석 도우미의 구조요약 수치 입력란에 붙여넣어 주세요.',
+    copySummaryErrorTitle: '복사 실패',
+    copySummaryErrorMessage: '구조요약 값을 복사하지 못했습니다. 다시 시도해 주세요.',
     pdfLabel: '구조요약지 PDF 인쇄',
     pdfDescription: '구조요약지와 response 메모를 2페이지 PDF 파일로 저장합니다.',
-    interpretationButton: '해석 도우미 열기',
-    interpretationTitle: '해석 도우미 열기',
-    interpretationDescription:
-      '구조요약지 데이터를 스냅샷으로 내보냅니다. 해석 도우미에 붙여넣기하면 결과 해석에 도움을 받을 수 있습니다.',
-    interpretationConfirm: '클립보드에 복사',
-    interpretationCopiedTitle: '클립보드에 복사했습니다',
-    interpretationCopiedMessage: '이제 해석 도우미에 붙여넣어 결과 해석에 활용할 수 있습니다.',
-    interpretationCopyFailedTitle: '복사에 실패했습니다',
-    interpretationCopyFailedMessage: '클립보드 복사에 실패했습니다. 다시 시도해 주세요.',
     codingStarter: '부호화가 어렵다면 저와 대화해보세요!',
     codingOpenButton: '코딩 도우미',
-    overwritePrefix: '이 필드에는 이미 값이 있습니다. 덮어쓸까요?',
     responseNotesTitle: 'Response 메모',
     responseNotesEmpty: '기록된 response 메모가 없습니다.',
     pdfErrorTitle: 'PDF 저장 실패',
@@ -121,20 +111,15 @@ const homeUiByLanguage = {
     rawCsvDescription: '採点表に入力したコード値を CSV で保存します。',
     summaryCsvLabel: '構造要約数値 CSV',
     summaryCsvDescription: '計算された構造要約の数値を CSV で保存します。',
+    copySummaryButton: '構造要約値をコピー',
+    copySummarySuccessTitle: '構造要約値をコピーしました',
+    copySummarySuccessMessage: '解釈ヘルパーの構造要約数値欄に貼り付けてください。',
+    copySummaryErrorTitle: 'コピーに失敗しました',
+    copySummaryErrorMessage: '構造要約値をコピーできませんでした。もう一度お試しください。',
     pdfLabel: '構造要約 PDF 印刷',
     pdfDescription: '構造要約と response メモを 2 ページ PDF で保存します。',
-    interpretationButton: '解釈ヘルパーを開く',
-    interpretationTitle: '解釈ヘルパーを開く',
-    interpretationDescription:
-      '構造要約データをスナップショットとして書き出します。解釈ヘルパーに貼り付けると結果の解釈支援を受けられます。',
-    interpretationConfirm: 'クリップボードにコピー',
-    interpretationCopiedTitle: 'クリップボードにコピーしました',
-    interpretationCopiedMessage: '準備ができたら解釈ヘルパーに貼り付けて使ってください。',
-    interpretationCopyFailedTitle: 'コピーに失敗しました',
-    interpretationCopyFailedMessage: 'クリップボードへのコピーに失敗しました。もう一度お試しください。',
     codingStarter: '符号化に迷ったら、私と一緒に確認してみましょう。',
     codingOpenButton: 'コーディングヘルパー',
-    overwritePrefix: 'この項目には既に値があります。上書きしますか？',
     responseNotesTitle: 'Response メモ',
     responseNotesEmpty: '記録された response メモはありません。',
     pdfErrorTitle: 'PDF 保存失敗',
@@ -148,20 +133,15 @@ const homeUiByLanguage = {
     rawCsvDescription: 'Guarda en CSV los valores codificados ingresados en la tabla.',
     summaryCsvLabel: 'CSV de valores del resumen',
     summaryCsvDescription: 'Guarda en CSV los valores calculados del resumen estructural.',
+    copySummaryButton: 'Copiar valores del resumen',
+    copySummarySuccessTitle: 'Valores del resumen copiados',
+    copySummarySuccessMessage: 'Pégalos en el asistente de interpretación.',
+    copySummaryErrorTitle: 'No se pudo copiar',
+    copySummaryErrorMessage: 'No se pudieron copiar los valores. Inténtalo de nuevo.',
     pdfLabel: 'Imprimir PDF del resumen',
     pdfDescription: 'Guarda un PDF de 2 páginas con el resumen y las notas de response.',
-    interpretationButton: 'Abrir asistente de interpretación',
-    interpretationTitle: 'Abrir asistente de interpretación',
-    interpretationDescription:
-      'Exporta los datos del resumen estructural como una instantánea. Pégalos en el asistente de interpretación para recibir ayuda con la interpretación.',
-    interpretationConfirm: 'Copiar al portapapeles',
-    interpretationCopiedTitle: 'Copiado al portapapeles',
-    interpretationCopiedMessage: 'Pega el contenido copiado en el asistente de interpretación cuando quieras usarlo.',
-    interpretationCopyFailedTitle: 'No se pudo copiar',
-    interpretationCopyFailedMessage: 'No se pudo copiar al portapapeles. Inténtalo de nuevo.',
     codingStarter: 'Si la codificación se complica, conversemos y revisémosla juntos.',
     codingOpenButton: 'Asistente de codificación',
-    overwritePrefix: 'Este campo ya tiene un valor. ¿Quieres sobrescribirlo?',
     responseNotesTitle: 'Notas de response',
     responseNotesEmpty: 'No se registraron notas de response.',
     pdfErrorTitle: 'No se pudo guardar el PDF',
@@ -175,20 +155,15 @@ const homeUiByLanguage = {
     rawCsvDescription: 'Salva em CSV os valores codificados digitados na tabela.',
     summaryCsvLabel: 'CSV dos valores do resumo',
     summaryCsvDescription: 'Salva em CSV os valores calculados do resumo estrutural.',
+    copySummaryButton: 'Copiar valores do resumo',
+    copySummarySuccessTitle: 'Valores do resumo copiados',
+    copySummarySuccessMessage: 'Cole-os no assistente de interpretação.',
+    copySummaryErrorTitle: 'Falha ao copiar',
+    copySummaryErrorMessage: 'Não foi possível copiar os valores. Tente novamente.',
     pdfLabel: 'Imprimir PDF do resumo',
     pdfDescription: 'Salva um PDF de 2 páginas com o resumo e as notas de response.',
-    interpretationButton: 'Abrir assistente de interpretação',
-    interpretationTitle: 'Abrir assistente de interpretação',
-    interpretationDescription:
-      'Exporte os dados do resumo estrutural como um snapshot. Cole no assistente de interpretação para receber ajuda com a interpretação do resultado.',
-    interpretationConfirm: 'Copiar para a área de transferência',
-    interpretationCopiedTitle: 'Copiado para a área de transferência',
-    interpretationCopiedMessage: 'Cole o conteúdo copiado no assistente de interpretação quando quiser usar.',
-    interpretationCopyFailedTitle: 'Falha ao copiar',
-    interpretationCopyFailedMessage: 'Não foi possível copiar para a área de transferência. Tente novamente.',
     codingStarter: 'Se a codificação estiver difícil, converse comigo para revisarmos juntos.',
     codingOpenButton: 'Assistente de codificação',
-    overwritePrefix: 'Este campo já possui um valor. Deseja sobrescrever?',
     responseNotesTitle: 'Notas de response',
     responseNotesEmpty: 'Nenhuma nota de response foi registrada.',
     pdfErrorTitle: 'Falha ao salvar PDF',
@@ -223,7 +198,6 @@ export default function HomePage() {
   const [activeTab, setActiveTab] = useState<'upper' | 'lower' | 'special'>('upper');
   const [isMobile, setIsMobile] = useState(false);
   const [showDownloadModal, setShowDownloadModal] = useState(false);
-  const [showInterpretationModal, setShowInterpretationModal] = useState(false);
   const [isExportingPdf, setIsExportingPdf] = useState(false);
   const [selectedRowIndices, setSelectedRowIndices] = useState<number[]>([]);
   const [selectionAnchorIndex, setSelectionAnchorIndex] = useState<number | null>(null);
@@ -442,67 +416,6 @@ export default function HomePage() {
     setSelectionFocusIndex(allRowIndices.length > 0 ? allRowIndices[allRowIndices.length - 1] : null);
   }, [responses.length]);
 
-  const buildInterpretationClipboardPrompt = () => {
-    if (!result?.data) return '';
-    const summaryCsv = generateSummaryCsv(result.data);
-
-    return [
-      '[STRUCTURAL_SUMMARY_CSV]',
-      '```csv',
-      summaryCsv,
-      '```',
-    ].join('\n');
-  };
-
-  const copyTextToClipboard = async (text: string) => {
-    if (typeof navigator !== 'undefined' && navigator.clipboard?.writeText) {
-      await navigator.clipboard.writeText(text);
-      return;
-    }
-
-    const textarea = document.createElement('textarea');
-    textarea.value = text;
-    textarea.style.position = 'fixed';
-    textarea.style.opacity = '0';
-    document.body.appendChild(textarea);
-    textarea.select();
-    document.execCommand('copy');
-    document.body.removeChild(textarea);
-  };
-
-  const executeInterpretationCopyFlow = () => {
-    if (!hasAiSession) {
-      openByokSessionDialog();
-      showToast({
-        type: 'warning',
-        title: t('toast.aiInterpretLogin.title'),
-        message: t('toast.aiInterpretLogin.message'),
-      });
-      return;
-    }
-
-    const snapshot = buildInterpretationClipboardPrompt();
-    if (!snapshot) return;
-
-    void (async () => {
-      try {
-        await copyTextToClipboard(snapshot);
-        setShowInterpretationModal(false);
-        showToast({
-          type: 'success',
-          title: pageUi.interpretationCopiedTitle,
-          message: pageUi.interpretationCopiedMessage,
-        });
-      } catch {
-        showToast({
-          type: 'warning',
-          title: pageUi.interpretationCopyFailedTitle,
-          message: pageUi.interpretationCopyFailedMessage,
-        });
-      }
-    })();
-  };
-
   const primeCodingAssistState = useCallback((focusRowIndex?: number, explicitSelection?: number[]) => {
     if (!hasAiSession) {
       openByokSessionDialog();
@@ -590,40 +503,6 @@ export default function HomePage() {
 
     setShowChatWidget(true);
   }, [effectiveSelectedRowIndices, primeCodingAssistState, showToast]);
-
-  const handleApplyCodingProposal = (proposal: CodingAssistFieldProposal) => {
-    const rowIndex = codingAssistState?.rowIndex;
-    if (rowIndex === null || rowIndex === undefined) return;
-
-    setResponses((prevResponses) => {
-      const current = prevResponses[rowIndex];
-      if (!current) return prevResponses;
-
-      const next = [...prevResponses];
-      const updated = { ...current };
-      const existingValue = updated[proposal.field as keyof typeof updated];
-      const hasExistingValue = Array.isArray(existingValue)
-        ? existingValue.length > 0
-        : typeof existingValue === 'boolean'
-          ? existingValue
-          : Boolean(existingValue);
-
-      if (hasExistingValue && !window.confirm(`${pageUi.overwritePrefix} (${proposal.field})`)) {
-        return prevResponses;
-      }
-
-      if (proposal.type === 'boolean') {
-        updated[proposal.field] = proposal.value as never;
-      } else if (proposal.type === 'string_array') {
-        updated[proposal.field] = proposal.value as never;
-      } else {
-        updated[proposal.field] = proposal.value as never;
-      }
-
-      next[rowIndex] = updated;
-      return next;
-    });
-  };
 
   const handleInsertRequest = useCallback((rowIndices: number[]) => {
     if (rowIndices.length === 0) {
@@ -909,6 +788,45 @@ export default function HomePage() {
     }
   };
 
+  const copyTextToClipboard = async (text: string) => {
+    if (navigator.clipboard?.writeText) {
+      await navigator.clipboard.writeText(text);
+      return;
+    }
+
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.setAttribute('readonly', 'true');
+    textarea.style.position = 'fixed';
+    textarea.style.left = '-9999px';
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+  };
+
+  const handleCopySummaryForInterpretation = () => {
+    if (!result?.data) return;
+
+    void (async () => {
+      try {
+        await copyTextToClipboard(generateSummaryCsv(result.data));
+        showToast({
+          type: 'success',
+          title: pageUi.copySummarySuccessTitle,
+          message: pageUi.copySummarySuccessMessage,
+        });
+      } catch (error) {
+        console.error('Summary copy error:', error);
+        showToast({
+          type: 'error',
+          title: pageUi.copySummaryErrorTitle,
+          message: pageUi.copySummaryErrorMessage,
+        });
+      }
+    })();
+  };
+
   const handleExportPdf = () => {
     if (!result?.data || isExportingPdf) return;
 
@@ -1008,18 +926,9 @@ export default function HomePage() {
                   <DocumentArrowDownIcon className="w-4 h-4 mr-2" />
                   {pageUi.downloadButton}
                 </Button>
-                <Button 
-                  variant="secondary" 
-                  onClick={() => setShowInterpretationModal(true)}
-                  disabled={!hasAiSession}
-                  title={
-                    !hasAiSession
-                      ? t('nav.loginRequired')
-                      : pageUi.interpretationButton
-                  }
-                >
-                  <SparklesIcon className="w-4 h-4 mr-2" />
-                  {pageUi.interpretationButton}
+                <Button variant="secondary" onClick={handleCopySummaryForInterpretation}>
+                  <ClipboardDocumentIcon className="w-4 h-4 mr-2" />
+                  {pageUi.copySummaryButton}
                 </Button>
               </div>
 
@@ -1162,7 +1071,6 @@ export default function HomePage() {
                   }
                 : null
             }
-            onApplyCodingProposal={handleApplyCodingProposal}
           />
         </Suspense>
       )}
@@ -1266,28 +1174,6 @@ export default function HomePage() {
                 <PrinterIcon className="h-5 w-5" />
               </span>
               <p className="font-semibold text-[var(--text-strong)]">{pageUi.pdfLabel}</p>
-            </div>
-          </button>
-        </div>
-      </Modal>
-      <Modal
-        isOpen={showInterpretationModal}
-        onClose={() => setShowInterpretationModal(false)}
-        size="md"
-        title={pageUi.interpretationTitle}
-      >
-        <div className="space-y-4">
-          <p className="text-sm leading-6 text-[var(--text-body)]">{pageUi.interpretationDescription}</p>
-          <button
-            type="button"
-            onClick={executeInterpretationCopyFlow}
-            className="w-full rounded-xl border border-[var(--brand-200)] bg-[var(--brand-100)]/35 px-4 py-3 text-left transition-colors hover:bg-[var(--brand-100)]"
-          >
-            <div className="flex items-center gap-3">
-              <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--surface-base)] text-[var(--brand-700)]">
-                <DocumentDuplicateIcon className="h-5 w-5" />
-              </span>
-              <span className="font-semibold text-[var(--brand-700)]">{pageUi.interpretationConfirm}</span>
             </div>
           </button>
         </div>

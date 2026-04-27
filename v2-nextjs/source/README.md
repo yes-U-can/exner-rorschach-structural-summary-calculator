@@ -1,46 +1,61 @@
-# Rorschach Structural Summary Calculator v2
+# Computing Program for Rorschach Structural Summary (v2-nextjs)
 
-Next.js 기반 로샤 Exner(CS) 체계 구조요약 계산 도우미입니다.
+Next.js-based web application for Exner structural summary scoring, documentation browsing, and AI-assisted interpretation.
 
-이 폴더는 공개 전시용 소스 패키지입니다. 실제 운영 환경변수, 배포 프로젝트 설정, 로컬 로그, 캐시, 비공개 작업 노트는 포함하지 않습니다.
+## Stack
 
-## 주요 기능
+- Next.js 16 (App Router)
+- React 19 + TypeScript
+- Tailwind CSS 4
+- BYOK AI session cookie (no Google login or server-side account DB)
+- Prisma + Neon PostgreSQL for read-only RAG reference retrieval
 
-- 구조요약 계산 입력 및 결과 확인
-- 한국어, 영어, 일본어, 스페인어, 포르투갈어 UI
-- 참조 문서 검색 및 AI 답변 근거용 코퍼스
-- BYOK 방식의 코딩 도우미와 해석 도우미
-- 라이트/다크 모드
-- v1 GAS와 v2 Next.js 릴리즈 아카이브
+## Main Features
 
-## 실행
+- Scoring input UI (desktop table + mobile card flow)
+- Structural summary calculation and result views
+- AI chat support using a user-provided OpenAI or Google API key
+- Reference-document search backed by public RAG corpus embeddings
+- Privacy policy index and subpages (`/privacy/...`)
+- CSV export, print-friendly result output
+
+## Local Development
 
 ```bash
 npm install
-cp .env.example .env.local
-npm run build
 npm run dev
 ```
 
-`.env.example`에는 필요한 환경변수 이름만 들어 있습니다. 실제 운영 키나 DB 접속 정보는 공개 저장소에 포함하지 않습니다.
-
-## 검사 명령
+## Quality Checks
 
 ```bash
-npm run i18n:audit
-npm run docs:generate-corpus
-npm run docs:assert-runtime-ready
 npm run lint
-npm run test
+npm test
 npm run build
-npm run security:secrets
+npm run security:check
 ```
 
-## 공개에서 제외한 것
+## Deployment
 
-- `.env.local`, `.env.production.local` 등 실제 환경변수 파일
-- `.vercel`, `.next`, `node_modules`, npm 캐시, 로그 파일
-- 과거 실험적 운영 문서와 비공개 작업 노트
-- 삭제된 비즈니스 기능의 DB 마이그레이션 과거 기록
+- Source branch: `main`
+- Deploy target: Vercel Production
+- If Vercel shows an old commit, trigger a new production deployment from the latest `main` commit.
 
-현재 공개 소스는 v2.0.0의 작동 방식과 설계 의도를 검토하기 위한 전시용 패키지입니다.
+## Repository Layout
+
+```text
+app/            Next.js routes and API handlers
+components/     UI and feature components
+hooks/          Client hooks
+i18n/           Translation config and locale JSON
+lib/            Core logic and utilities
+prisma/         Prisma schema and config
+types/          Shared TypeScript types
+```
+
+## Security Notes
+
+- Do not commit secrets (`.env`, API keys, private notes).
+- Keep private operational notes outside tracked files.
+- Do not reintroduce Google OAuth, NextAuth, account pages, server-stored API keys, or chat-history persistence unless the product model intentionally changes.
+- Runtime database credentials should be read-only and scoped to the public RAG corpus tables.

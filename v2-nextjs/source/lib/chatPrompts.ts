@@ -1,5 +1,4 @@
 import type { Language } from '@/i18n/config';
-import { CODING_JSON_END, CODING_JSON_START } from '@/lib/codingAssistResponse';
 import type { CodingAssistContext } from '@/types';
 import type { CodingRuleChunk } from '@/lib/codingAssistKnowledge';
 
@@ -23,6 +22,7 @@ These are fixed product-level instructions for the coding assistant. Treat them 
 - Cite the relevant rule chunk titles or IDs you relied on.
 - If the memo lacks needed observation context, ask targeted follow-up questions before proposing strong codes.
 - Do not claim certainty when key observation context is missing.
+- Do not append a separate reference-document list. Mention the rule title naturally only when it helps the user follow your reasoning.
 
 ## Reference Corpus Boundary
 
@@ -35,7 +35,9 @@ These are fixed product-level instructions for the coding assistant. Treat them 
 
 - Do not provide diagnosis, treatment, medication, or legal/forensic conclusions.
 - Do not imply that an automatically suggested code is final.
-- Do not apply low-confidence suggestions silently. Mark uncertainty and ask for more context when needed.`;
+- Do not output JSON, hidden tags, machine-readable proposal blocks, or UI actions.
+- Do not imply that the app can apply your suggestion automatically. You are a conversation partner only.
+- Mark uncertainty and ask for more context when needed.`;
 
 export function buildCodingAssistSystemPrompt(args: {
   lang: Language;
@@ -69,8 +71,8 @@ export function buildCodingAssistSystemPrompt(args: {
     '- The user opened the coding helper for a conversation.',
     '- If no focus row is selected, answer at the whole-sheet level and do not pretend that a target row exists.',
     '- If selected rows exist, use them as highlighted context while still considering the whole sheet.',
-    '- Proposals are optional; include them only when they would help the user review candidate codes.',
-    '- Do not present proposals as automatic completion. The clinician must decide whether to apply anything.',
+    '- Candidate codes may be discussed in ordinary text only; never format them as app actions.',
+    '- The clinician must decide whether any candidate is appropriate.',
   ].join('\n');
 
   return [
@@ -95,35 +97,11 @@ export function buildCodingAssistSystemPrompt(args: {
     'Reference rule chunks for this run:',
     serializedChunks,
     '',
-    'Answer in two parts:',
-    '1. A clinician-facing explanation in Markdown with:',
-    '   - a short note that you considered the whole sheet context',
-    '   - if a focus row exists, explain that you centered that row',
-    '   - observed response details separated from inferred coding candidates',
-    '   - missing context questions',
-    '   - candidate codes by field',
-    '   - brief reasoning and cited rule titles',
-    '   - a reminder that the clinician must confirm any candidate before applying it',
-    '2. A machine-readable JSON block wrapped exactly in these tags:',
-    `${CODING_JSON_START}{...}${CODING_JSON_END}`,
-    '',
-    'The JSON schema must be:',
-    '{',
-    '  "summary": string,',
-    '  "needsMoreContext": boolean,',
-    '  "questions": string[],',
-    '  "proposals": [',
-    '    {',
-    '      "field": "location" | "dq" | "determinants" | "fq" | "pair" | "contents" | "popular" | "z" | "specialScores",',
-    '      "type": "string" | "string_array" | "boolean",',
-    '      "value": string | string[] | boolean,',
-    '      "reason": string,',
-    '      "confidence": "low" | "medium" | "high",',
-    '      "citations": [{ "id": string, "title": string }]',
-    '    }',
-    '  ]',
-    '}',
-    '',
-    'If context is insufficient, you may return no proposals yet, but still fill summary and questions.',
+    'Answer as ordinary conversation only:',
+    '- Keep the first answer concise: usually 3-6 short bullets or 2-4 short paragraphs.',
+    '- If the user asks a broad question, give a brief first-pass answer and ask what they want to inspect next.',
+    '- Separate observed details, likely coding candidates, and missing observation questions.',
+    '- If a focus row exists, say briefly that you centered that row. If not, answer at the whole-sheet level.',
+    '- Do not produce a full report, exhaustive checklist, JSON, action schema, or citation appendix unless the user explicitly asks for deeper detail.',
   ].join('\n');
 }

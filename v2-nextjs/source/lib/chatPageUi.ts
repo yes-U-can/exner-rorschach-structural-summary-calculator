@@ -5,16 +5,11 @@ type ChatPageUi = {
   inputPlaceholder: string;
   welcomeTitle: string;
   welcomeCopiedTitle: string;
-  attachFile: string;
-  removeAttachment: string;
-  attachmentTooLarge: string;
-  attachmentUnsupported: string;
-  attachmentOneFileOnly: string;
-  attachmentReadFailed: string;
-  attachmentReady: string;
-  attachmentDropHint: string;
-  citationTitle: string;
-  citationOpen: string;
+  summaryCsvLabel: string;
+  summaryCsvPlaceholder: string;
+  summaryCsvReadyLabel: string;
+  summaryCsvRequired: string;
+  summaryCsvInvalid: string;
   modelCatalogFallback: string;
 };
 
@@ -28,18 +23,13 @@ const CHAT_PAGE_UI: Record<Language, ChatPageUi> = {
     copiedDescription:
       'The copied snapshot includes structural-summary values for interpretation review.',
     inputPlaceholder: 'Example: This is a 31-year-old woman’s profile. How can affect regulation and interpersonal patterns be interpreted?',
-    welcomeTitle: 'Attach a CSV file containing Structural Summary values, then start by explaining the context you want the AI to consider.',
-    welcomeCopiedTitle: 'Attach or paste the Structural Summary values CSV, then explain the context you want the AI to consider.',
-    attachFile: 'Attach CSV or text file',
-    removeAttachment: 'Remove attachment',
-    attachmentTooLarge: 'The file is too large. Please attach a CSV or text file under 48 KB.',
-    attachmentUnsupported: 'Only CSV or text files can be attached.',
-    attachmentOneFileOnly: 'Please attach only one CSV or text file at a time.',
-    attachmentReadFailed: 'The file could not be read. Please try another CSV or text file.',
-    attachmentReady: 'Attached',
-    attachmentDropHint: 'Drop one CSV or text file here.',
-    citationTitle: 'References',
-    citationOpen: 'Open reference',
+    welcomeTitle: 'Paste the Structural Summary values copied from the result screen,\nthen start by explaining the context you want the AI to consider.',
+    welcomeCopiedTitle: 'Paste the Structural Summary values copied from the result screen,\nthen start by explaining the context you want the AI to consider.',
+    summaryCsvLabel: 'Structural Summary values',
+    summaryCsvPlaceholder: 'Summary values',
+    summaryCsvReadyLabel: 'Entered',
+    summaryCsvRequired: 'Use only values copied with “Copy Structural Summary values” on the result screen.',
+    summaryCsvInvalid: 'Use only values copied with “Copy Structural Summary values” on the result screen.',
     modelCatalogFallback:
       'Live model lookup is temporarily unavailable. Showing the safe fallback catalog instead. Reference ID: {requestId}',
   },
@@ -47,18 +37,13 @@ const CHAT_PAGE_UI: Record<Language, ChatPageUi> = {
     copiedDescription:
       '복사된 내용에는 해석 검토에 사용할 구조요약 수치가 들어 있습니다.',
     inputPlaceholder: '예시: 31세 여성의 프로파일입니다. 정서조절과 대인관계는 어떻게 해석할 수 있을까요?',
-    welcomeTitle: '구조요약 수치가 적힌 CSV 파일을 첨부하고, AI에게 해석을 부탁할 맥락을 설명하며 대화를 시작하세요.',
-    welcomeCopiedTitle: '구조요약 수치가 적힌 CSV 파일을 첨부하고, AI에게 해석을 부탁할 맥락을 설명하며 대화를 시작하세요.',
-    attachFile: 'CSV 또는 텍스트 파일 첨부',
-    removeAttachment: '첨부 파일 제거',
-    attachmentTooLarge: '파일이 너무 큽니다. 48KB 이하의 CSV 또는 텍스트 파일을 첨부해 주세요.',
-    attachmentUnsupported: 'CSV 또는 텍스트 파일만 첨부할 수 있습니다.',
-    attachmentOneFileOnly: '파일은 한 번에 하나만 첨부할 수 있습니다.',
-    attachmentReadFailed: '파일을 읽지 못했습니다. 다른 CSV 또는 텍스트 파일로 다시 시도해 주세요.',
-    attachmentReady: '첨부됨',
-    attachmentDropHint: 'CSV 또는 텍스트 파일 하나를 여기에 놓아 주세요.',
-    citationTitle: '참조 문서',
-    citationOpen: '참조 열기',
+    welcomeTitle: '결과 화면에서 복사한 구조요약 수치를 붙여넣고,\nAI에게 해석을 부탁할 맥락을 설명하며 대화를 시작하세요.',
+    welcomeCopiedTitle: '결과 화면에서 복사한 구조요약 수치를 붙여넣고,\nAI에게 해석을 부탁할 맥락을 설명하며 대화를 시작하세요.',
+    summaryCsvLabel: '구조요약 수치',
+    summaryCsvPlaceholder: '구조요약 수치 입력',
+    summaryCsvReadyLabel: '입력됨',
+    summaryCsvRequired: '결과 화면의 “구조요약 값 복사하기” 버튼으로 복사한 값만 사용할 수 있습니다.',
+    summaryCsvInvalid: '결과 화면의 “구조요약 값 복사하기” 버튼으로 복사한 값만 사용할 수 있습니다.',
     modelCatalogFallback:
       '실시간 모델 조회를 잠시 사용할 수 없어 안전한 기본 목록을 대신 표시하고 있습니다. 참고 ID: {requestId}',
   },
@@ -66,18 +51,13 @@ const CHAT_PAGE_UI: Record<Language, ChatPageUi> = {
     copiedDescription:
       'コピーされた内容には、解釈検討に使う構造要約の数値が含まれています。',
     inputPlaceholder: '例: 31歳女性のプロフィールです。感情調整と対人関係はどう解釈できますか？',
-    welcomeTitle: '構造要約数値が入ったCSVファイルを添付し、AIに解釈してほしい文脈を説明して対話を始めてください。',
-    welcomeCopiedTitle: '構造要約数値が入ったCSVファイルを添付し、AIに解釈してほしい文脈を説明して対話を始めてください。',
-    attachFile: 'CSVまたはテキストファイルを添付',
-    removeAttachment: '添付を削除',
-    attachmentTooLarge: 'ファイルが大きすぎます。48KB以下のCSVまたはテキストファイルを添付してください。',
-    attachmentUnsupported: 'CSVまたはテキストファイルのみ添付できます。',
-    attachmentOneFileOnly: 'ファイルは一度に1つだけ添付できます。',
-    attachmentReadFailed: 'ファイルを読み取れませんでした。別のCSVまたはテキストファイルでお試しください。',
-    attachmentReady: '添付済み',
-    attachmentDropHint: 'CSVまたはテキストファイルを1つここにドロップしてください。',
-    citationTitle: '参照文書',
-    citationOpen: '参照を開く',
+    welcomeTitle: '結果画面でコピーした構造要約の数値を貼り付け、\nAIに解釈してほしい文脈を説明して対話を始めてください。',
+    welcomeCopiedTitle: '結果画面でコピーした構造要約の数値を貼り付け、\nAIに解釈してほしい文脈を説明して対話を始めてください。',
+    summaryCsvLabel: '構造要約の数値',
+    summaryCsvPlaceholder: '構造要約値',
+    summaryCsvReadyLabel: '入力済み',
+    summaryCsvRequired: '結果画面のコピー機能で取得した値だけを使用できます。',
+    summaryCsvInvalid: '結果画面のコピー機能で取得した値だけを使用できます。',
     modelCatalogFallback:
       'リアルタイムのモデル取得を一時的に使えないため、安全な基本カタログを代わりに表示しています。参照ID: {requestId}',
   },
@@ -85,18 +65,13 @@ const CHAT_PAGE_UI: Record<Language, ChatPageUi> = {
     copiedDescription:
       'La copia incluye los valores del resumen estructural para la revisión interpretativa.',
     inputPlaceholder: 'Ejemplo: Es el perfil de una mujer de 31 años. ¿Cómo se pueden interpretar la regulación afectiva y lo interpersonal?',
-    welcomeTitle: 'Adjunta un CSV con valores del resumen estructural y empieza explicando el contexto que quieres que la IA considere.',
-    welcomeCopiedTitle: 'Adjunta o pega el CSV del resumen estructural y explica el contexto que quieres que la IA considere.',
-    attachFile: 'Adjuntar CSV o texto',
-    removeAttachment: 'Quitar adjunto',
-    attachmentTooLarge: 'El archivo es demasiado grande. Adjunta un CSV o texto de menos de 48 KB.',
-    attachmentUnsupported: 'Solo se pueden adjuntar archivos CSV o de texto.',
-    attachmentOneFileOnly: 'Adjunta solo un archivo CSV o de texto a la vez.',
-    attachmentReadFailed: 'No se pudo leer el archivo. Intenta con otro CSV o texto.',
-    attachmentReady: 'Adjunto',
-    attachmentDropHint: 'Suelta aquí un CSV o archivo de texto.',
-    citationTitle: 'Referencias',
-    citationOpen: 'Abrir referencia',
+    welcomeTitle: 'Pega los valores del resumen estructural copiados desde la pantalla de resultados\ny empieza explicando el contexto que quieres que la IA considere.',
+    welcomeCopiedTitle: 'Pega los valores del resumen estructural copiados desde la pantalla de resultados\ny empieza explicando el contexto que quieres que la IA considere.',
+    summaryCsvLabel: 'Valores del resumen estructural',
+    summaryCsvPlaceholder: 'Valores del resumen',
+    summaryCsvReadyLabel: 'Ingresado',
+    summaryCsvRequired: 'Solo se aceptan los valores copiados desde la pantalla de resultados.',
+    summaryCsvInvalid: 'Solo se aceptan los valores copiados desde la pantalla de resultados.',
     modelCatalogFallback:
       'La consulta en tiempo real de modelos no está disponible temporalmente. Se muestra el catálogo seguro de respaldo. ID de referencia: {requestId}',
   },
@@ -104,18 +79,13 @@ const CHAT_PAGE_UI: Record<Language, ChatPageUi> = {
     copiedDescription:
       'A cópia inclui os valores do resumo estrutural para revisão interpretativa.',
     inputPlaceholder: 'Exemplo: Este é o perfil de uma mulher de 31 anos. Como interpretar regulação afetiva e relações interpessoais?',
-    welcomeTitle: 'Anexe um CSV com os valores do resumo estrutural e comece explicando o contexto que deseja que a IA considere.',
-    welcomeCopiedTitle: 'Anexe ou cole o CSV do resumo estrutural e explique o contexto que deseja que a IA considere.',
-    attachFile: 'Anexar CSV ou texto',
-    removeAttachment: 'Remover anexo',
-    attachmentTooLarge: 'O arquivo é grande demais. Anexe um CSV ou texto com menos de 48 KB.',
-    attachmentUnsupported: 'Só é possível anexar arquivos CSV ou de texto.',
-    attachmentOneFileOnly: 'Anexe apenas um arquivo CSV ou de texto por vez.',
-    attachmentReadFailed: 'Não foi possível ler o arquivo. Tente outro CSV ou texto.',
-    attachmentReady: 'Anexado',
-    attachmentDropHint: 'Solte aqui um CSV ou arquivo de texto.',
-    citationTitle: 'Referências',
-    citationOpen: 'Abrir referência',
+    welcomeTitle: 'Cole os valores do resumo estrutural copiados da tela de resultados\ne comece explicando o contexto que deseja que a IA considere.',
+    welcomeCopiedTitle: 'Cole os valores do resumo estrutural copiados da tela de resultados\ne comece explicando o contexto que deseja que a IA considere.',
+    summaryCsvLabel: 'Valores do resumo estrutural',
+    summaryCsvPlaceholder: 'Valores do resumo',
+    summaryCsvReadyLabel: 'Inserido',
+    summaryCsvRequired: 'Use apenas os valores copiados pela tela de resultados.',
+    summaryCsvInvalid: 'Use apenas os valores copiados pela tela de resultados.',
     modelCatalogFallback:
       'A consulta em tempo real dos modelos está temporariamente indisponível. O catálogo seguro de contingência está sendo exibido. ID de referência: {requestId}',
   },

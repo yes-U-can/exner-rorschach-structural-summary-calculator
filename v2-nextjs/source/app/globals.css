@@ -74,10 +74,25 @@
   --warning-border: #fde68a;
   --warning-text: #92400e;
   --warning-icon: #d97706;
+  --chat-system-bg: #edf3f7;
+  --chat-system-border: #c1d2dc;
+  --chat-system-text: #1e293b;
   --info-bg: var(--brand-50);
   --info-border: var(--brand-200);
   --info-text: var(--brand-700);
   --info-icon: var(--brand-700);
+  --toast-success-bg: #ecfdf5;
+  --toast-success-border: #a7f3d0;
+  --toast-success-text: #047857;
+  --toast-error-bg: #fff1f2;
+  --toast-error-border: #fda4af;
+  --toast-error-text: #e11d48;
+  --toast-warning-bg: #fffbeb;
+  --toast-warning-border: #fde68a;
+  --toast-warning-text: #92400e;
+  --toast-info-bg: #f8fbfd;
+  --toast-info-border: #c1d2dc;
+  --toast-info-text: #2a5f7f;
   --table-header-bg: var(--ci-soft);
   --table-header-border: #A8BCC8;
   --table-row-hover: rgb(193 210 220 / 0.25);
@@ -141,10 +156,25 @@ html.dark {
   --warning-border: rgb(245 158 11 / 0.38);
   --warning-text: #facc15;
   --warning-icon: #fbbf24;
+  --chat-system-bg: #203047;
+  --chat-system-border: #4e73aa;
+  --chat-system-text: #edf4fb;
   --info-bg: rgb(78 115 170 / 0.18);
   --info-border: rgb(138 167 204 / 0.38);
   --info-text: #D7E5F3;
   --info-icon: #8AA7CC;
+  --toast-success-bg: #082f2a;
+  --toast-success-border: #287e67;
+  --toast-success-text: #8ef6bd;
+  --toast-error-bg: #351724;
+  --toast-error-border: #8d3b52;
+  --toast-error-text: #fda4af;
+  --toast-warning-bg: #34270e;
+  --toast-warning-border: #8a671b;
+  --toast-warning-text: #fde68a;
+  --toast-info-bg: #14253a;
+  --toast-info-border: #406384;
+  --toast-info-text: #d7e5f3;
   --table-header-bg: #22324A;
   --table-header-border: #30455F;
   --table-row-hover: rgb(34 50 74 / 0.70);
@@ -788,6 +818,34 @@ html.theme-switching [data-theme-allow-transition]::after {
     color: var(--warning-text);
   }
 
+  .ui-toast {
+    @apply pointer-events-auto w-full max-w-sm overflow-hidden rounded-xl border shadow-lg;
+  }
+
+  .ui-toast-success {
+    background-color: var(--toast-success-bg);
+    border-color: var(--toast-success-border);
+    color: var(--toast-success-text);
+  }
+
+  .ui-toast-error {
+    background-color: var(--toast-error-bg);
+    border-color: var(--toast-error-border);
+    color: var(--toast-error-text);
+  }
+
+  .ui-toast-warning {
+    background-color: var(--toast-warning-bg);
+    border-color: var(--toast-warning-border);
+    color: var(--toast-warning-text);
+  }
+
+  .ui-toast-info {
+    background-color: var(--toast-info-bg);
+    border-color: var(--toast-info-border);
+    color: var(--toast-info-text);
+  }
+
   .ui-copy-button {
     @apply inline-flex items-center justify-center rounded-lg border shadow-sm transition-colors focus:outline-none focus:ring-2;
     background-color: var(--surface-base);
@@ -942,13 +1000,14 @@ html.theme-switching [data-theme-allow-transition]::after {
   }
 
   .ui-chat-system-pill {
-    @apply max-w-[90%] rounded-full px-3 py-1.5 text-xs;
-    background-color: var(--surface-muted);
-    color: var(--text-soft);
+    @apply max-w-[90%] rounded-full border px-3 py-1.5 text-xs shadow-sm;
+    background-color: var(--chat-system-bg) !important;
+    border-color: var(--chat-system-border) !important;
+    color: var(--chat-system-text) !important;
   }
 
   .ui-chat-input {
-    @apply h-11 flex-1 rounded-xl border px-4 py-2.5 text-sm transition-colors;
+    @apply h-11 w-full flex-1 rounded-xl border px-4 py-2.5 text-sm transition-colors;
     background-color: var(--surface-input);
     border-color: var(--border-subtle);
     color: var(--text-body);
@@ -977,6 +1036,36 @@ html.theme-switching [data-theme-allow-transition]::after {
 
   .ui-send-button:hover {
     background-color: var(--brand-700-hover);
+  }
+
+  .ui-summary-csv-inline-input {
+    @apply h-11 w-36 shrink-0 resize-none overflow-hidden rounded-xl border px-3 py-2.5 font-mono text-[11px] leading-5 outline-none transition-colors disabled:cursor-not-allowed disabled:opacity-60;
+    background-color: var(--surface-input);
+    border-color: var(--border-subtle);
+    color: var(--text-body);
+    white-space: pre;
+  }
+
+  @media (min-width: 640px) {
+    .ui-summary-csv-inline-input {
+      @apply w-56;
+    }
+  }
+
+  .ui-summary-csv-inline-input::placeholder {
+    color: var(--text-soft);
+  }
+
+  .ui-summary-csv-inline-input:focus {
+    background-color: var(--surface-base);
+    border-color: var(--brand-500);
+    --tw-ring-color: var(--brand-500);
+    box-shadow: 0 0 0 1px var(--brand-500);
+  }
+
+  .ui-summary-csv-inline-input.is-error {
+    border-color: var(--danger-hover-border);
+    color: var(--danger-text);
   }
 
   .ui-ref-card {

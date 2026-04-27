@@ -48,10 +48,10 @@ function ToastItem({ toast, onRemove }: { toast: Toast; onRemove: (id: string) =
   };
 
   const styles = {
-    success: 'border-[var(--success-border)] bg-[var(--success-bg)] text-[var(--success-text)]',
-    error: 'border-[var(--danger-hover-border)] bg-[var(--danger-hover-bg)] text-[var(--danger-text)]',
-    warning: 'border-[var(--warning-border)] bg-[var(--warning-bg)] text-[var(--warning-text)]',
-    info: 'border-[var(--info-border)] bg-[var(--info-bg)] text-[var(--info-text)]'
+    success: 'ui-toast-success',
+    error: 'ui-toast-error',
+    warning: 'ui-toast-warning',
+    info: 'ui-toast-info'
   };
 
   const iconStyles = {
@@ -74,7 +74,7 @@ function ToastItem({ toast, onRemove }: { toast: Toast; onRemove: (id: string) =
       leaveTo="opacity-0"
     >
       <div
-        className={`pointer-events-auto w-full max-w-sm overflow-hidden rounded-xl border shadow-lg ${styles[toast.type]}`}
+        className={`ui-toast ${styles[toast.type]}`}
       >
         <div className="p-4">
           <div className="flex items-start">

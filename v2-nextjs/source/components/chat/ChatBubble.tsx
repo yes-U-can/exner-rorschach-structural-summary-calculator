@@ -1,13 +1,19 @@
 'use client';
 
-import type { ReactNode } from 'react';
+import type { CSSProperties, ReactNode } from 'react';
 
 type ChatRole = 'ai' | 'user';
 
 export function ChatSystemNotice({ children }: { children: ReactNode }) {
+  const systemNoticeStyle = {
+    backgroundColor: 'var(--chat-system-bg)',
+    borderColor: 'var(--chat-system-border)',
+    color: 'var(--chat-system-text)',
+  } satisfies CSSProperties;
+
   return (
     <div className="ui-chat-system-row">
-      <p className="ui-chat-system-pill">{children}</p>
+      <p className="ui-chat-system-pill" style={systemNoticeStyle}>{children}</p>
     </div>
   );
 }

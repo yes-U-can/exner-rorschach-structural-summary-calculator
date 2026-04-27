@@ -3,7 +3,6 @@
  * TypeScript Type Definitions
  */
 
-import type { Language } from '@/i18n/config';
 export type { Language } from '@/i18n/config';
 
 // Scoring category IDs (internal, lowercase with hyphens)
@@ -63,54 +62,14 @@ export interface RorschachResponse {
 
 export type ChatWorkflowMode = 'interpretation' | 'coding_assist';
 
-export type CodingAssistField =
-  | 'location'
-  | 'dq'
-  | 'determinants'
-  | 'fq'
-  | 'pair'
-  | 'contents'
-  | 'popular'
-  | 'z'
-  | 'specialScores';
-
-export interface ChatCitation {
-  id: string;
-  title: string;
-  canonicalRoute?: string | null;
-  retrievalKind?: string | null;
-  locale?: Language | null;
-  source?: 'builtin' | null;
-}
-
-export type CodingAssistCitation = ChatCitation;
-
-export interface CodingAssistFieldProposal {
-  field: CodingAssistField;
-  type: 'string' | 'string_array' | 'boolean';
-  value: string | string[] | boolean;
-  reason: string;
-  confidence: 'low' | 'medium' | 'high';
-  citations: CodingAssistCitation[];
-}
-
-export interface CodingAssistSuggestion {
-  summary: string;
-  needsMoreContext: boolean;
-  questions: string[];
-  proposals: CodingAssistFieldProposal[];
-}
-
 export interface ChatMessageMetadata {
   workflowType?: ChatWorkflowMode;
   locale?: string;
-  citations?: ChatCitation[];
   attachments?: {
     name: string;
     size: number;
     mimeType: string;
   }[];
-  codingSuggestion?: CodingAssistSuggestion | null;
 }
 
 export interface CodingAssistContextRowSnapshot {

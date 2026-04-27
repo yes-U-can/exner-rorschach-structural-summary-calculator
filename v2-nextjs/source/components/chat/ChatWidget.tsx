@@ -1,20 +1,16 @@
 'use client';
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import Link from 'next/link';
 import { SparklesIcon, XMarkIcon } from '@heroicons/react/24/solid';
-import { PaperAirplaneIcon, ClipboardDocumentCheckIcon } from '@heroicons/react/24/outline';
+import { PaperAirplaneIcon } from '@heroicons/react/24/outline';
 import { toPlainTextChat } from '@/lib/chatPlainText';
 import { useTranslation } from '@/hooks/useTranslation';
-import { splitCodingAssistResponse } from '@/lib/codingAssistResponse';
 import type {
   ChatMessageMetadata,
   CodingAssistContext,
-  CodingAssistFieldProposal,
   Language,
 } from '@/types';
-import { getCodingAssistFieldLabels, getCodingAssistWidgetUi } from '@/lib/codingAssistUi';
-import { toChatCitationHref } from '@/lib/chatMessageMetadata';
+import { getCodingAssistWidgetUi } from '@/lib/codingAssistUi';
 import { ChatBubble, ChatMessageRow, ChatMessageText } from '@/components/chat/ChatBubble';
 import {
   buildEphemeralChatStorageKey,
@@ -62,20 +58,7 @@ type ChatWidgetProps = {
   isOpen: boolean;
   onClose: () => void;
   workflow?: CodingAssistWorkflow | null;
-  onApplyCodingProposal?: (proposal: CodingAssistFieldProposal) => void;
 };
-
-function formatProposalValue(value: CodingAssistFieldProposal['value'], language: string): string {
-  if (Array.isArray(value)) return value.join(', ');
-  if (typeof value === 'boolean') {
-    if (language === 'ko') return value ? '\uC608' : '\uC544\uB2C8\uC694';
-    if (language === 'ja') return value ? '\u306F\u3044' : '\u3044\u3044\u3048';
-    if (language === 'es') return value ? 'S\u00ED' : 'No';
-    if (language === 'pt') return value ? 'Sim' : 'N\u00E3o';
-    return value ? 'Yes' : 'No';
-  }
-  return value;
-}
 
 function buildContextScope(context: CodingAssistContext | null) {
   if (!context) return 'no-context';
@@ -97,11 +80,9 @@ export default function ChatWidget({
   isOpen,
   onClose,
   workflow,
-  onApplyCodingProposal,
 }: ChatWidgetProps) {
   const { t, language } = useTranslation();
   const ui = getCodingAssistWidgetUi(language as Language);
-  const fieldLabels = getCodingAssistFieldLabels(language as Language);
 
   const [provider, setProvider] = useState<Provider>('openai');
   const [modelId, setModelId] = useState('gpt-5.4');
@@ -111,7 +92,9 @@ export default function ChatWidget({
   const [inputText, setInputText] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [loadedStorageKey, setLoadedStorageKey] = useState<string | null>(null);
+  const messagesScrollRef = useRef<HTMLDivElement | null>(null);
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
+  const shouldAutoScrollRef = useRef(true);
 
   const currentWorkflow = useMemo(
     () =>
@@ -131,9 +114,19 @@ export default function ChatWidget({
     [currentWorkflow.context],
   );
 
+  const updateAutoScrollPreference = useCallback(() => {
+    const scrollElement = messagesScrollRef.current;
+    if (!scrollElement) return;
+    const distanceFromBottom = scrollElement.scrollHeight - scrollElement.scrollTop - scrollElement.clientHeight;
+    shouldAutoScrollRef.current = distanceFromBottom < 96;
+  }, []);
+
+  const lastMessageContent = messages[messages.length - 1]?.content ?? '';
+
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages]);
+    if (!shouldAutoScrollRef.current) return;
+    messagesEndRef.current?.scrollIntoView({ behavior: 'auto', block: 'end' });
+  }, [messages.length, lastMessageContent]);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -387,18 +380,10 @@ export default function ChatWidget({
         }
       } catch {
         aiResponseText = `${aiResponseText}\n\n${ui.streamInterrupted}`;
+        setMessages((prev) => prev.map((message) => (
+          message.id === aiMessageId ? { ...message, content: aiResponseText } : message
+        )));
       }
-
-      const parsed = splitCodingAssistResponse(aiResponseText);
-      setMessages((prev) => prev.map((message) => (
-        message.id === aiMessageId
-          ? {
-              ...message,
-              content: parsed.displayText || aiResponseText,
-              metadata: { codingSuggestion: parsed.suggestion },
-            }
-          : message
-      )));
     } catch (error) {
       const friendly = getFriendlyErrorMessage(error instanceof Error ? error.message : '');
       setMessages((prev) => [...prev, { id: Date.now() + 2, role: 'ai', content: friendly }]);
@@ -434,7 +419,11 @@ export default function ChatWidget({
           </button>
         </div>
 
-        <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4 pb-3">
+        <div
+          ref={messagesScrollRef}
+          onScroll={updateAutoScrollPreference}
+          className="min-h-0 flex-1 overflow-y-auto px-4 py-4 pb-3"
+        >
           <div className="space-y-4">
             {messages.map((message) => (
               <ChatMessageRow key={message.id} role={message.role}>
@@ -442,82 +431,6 @@ export default function ChatWidget({
                   <ChatMessageText>
                     {message.role === 'ai' ? toPlainTextChat(message.content) : message.content}
                   </ChatMessageText>
-                  {message.role === 'ai' && message.metadata?.codingSuggestion && (
-                    <div className="mt-3 space-y-3 border-t border-[var(--border-subtle)] pt-3">
-                      {message.metadata.codingSuggestion.questions.length > 0 && (
-                        <div>
-                          <p className="text-[11px] font-semibold uppercase tracking-wide text-[var(--text-soft)]">
-                            {ui.questionsTitle}
-                          </p>
-                          <ul className="mt-1 list-disc space-y-1 pl-5 text-xs text-[var(--text-body)]">
-                            {message.metadata.codingSuggestion.questions.map((question) => (
-                              <li key={question}>{question}</li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
-                      {message.metadata.codingSuggestion.proposals.length > 0 && (
-                        <div>
-                          <p className="text-[11px] font-semibold uppercase tracking-wide text-[var(--text-soft)]">
-                            {ui.proposalTitle}
-                          </p>
-                          <div className="mt-2 space-y-2">
-                            {message.metadata.codingSuggestion.proposals.map((proposal, index) => (
-                              <div key={`${proposal.field}-${index}`} className="rounded-xl border border-[var(--border-subtle)] bg-[var(--surface-muted)] px-3 py-2">
-                                <div className="flex items-center justify-between gap-3">
-                                  <div>
-                                    <p className="text-xs font-semibold text-[var(--text-body)]">
-                                      {fieldLabels[proposal.field]}
-                                    </p>
-                                    <p className="mt-0.5 text-sm text-[var(--text-strong)]">
-                                      {formatProposalValue(proposal.value, language)}
-                                    </p>
-                                  </div>
-                                  <span className="rounded-full bg-[var(--surface-base)] px-2 py-0.5 text-[10px] font-medium text-[var(--text-soft)] ring-1 ring-[var(--border-subtle)]">
-                                    {ui.confidence[proposal.confidence]}
-                                  </span>
-                                </div>
-                                <p className="mt-2 text-xs leading-5 text-[var(--text-body)]">{proposal.reason}</p>
-                                {proposal.citations.length > 0 && (
-                                  <div className="mt-2">
-                                    <p className="text-[11px] font-medium text-[var(--text-soft)]">{ui.citationTitle}</p>
-                                    <ul className="mt-1 space-y-1 text-[11px] text-[var(--text-soft)]">
-                                      {proposal.citations.map((citation) => (
-                                        <li key={citation.id} className="flex items-start gap-1.5">
-                                          <ClipboardDocumentCheckIcon className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[var(--text-soft)]" />
-                                          <div className="min-w-0">
-                                            <p>{citation.title}</p>
-                                            {toChatCitationHref(citation, language as Language) && (
-                                              <Link
-                                                href={toChatCitationHref(citation, language as Language)!}
-                                                target="_blank"
-                                                className="text-[10px] font-medium text-[var(--brand-700)] hover:underline"
-                                              >
-                                                {ui.citationOpen}
-                                              </Link>
-                                            )}
-                                          </div>
-                                        </li>
-                                      ))}
-                                    </ul>
-                                  </div>
-                                )}
-                                {onApplyCodingProposal && (
-                                  <button
-                                    type="button"
-                                    onClick={() => onApplyCodingProposal(proposal)}
-                                    className="mt-3 rounded-lg border border-[var(--brand-300)] bg-[var(--surface-base)] px-3 py-1.5 text-xs font-semibold text-[var(--brand-700)] transition-colors hover:bg-[var(--brand-100)]"
-                                  >
-                                    {ui.apply}
-                                  </button>
-                                )}
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  )}
                 </ChatBubble>
               </ChatMessageRow>
             ))}
@@ -525,9 +438,9 @@ export default function ChatWidget({
               <div className="flex justify-start">
                 <div className="ui-chat-message ui-chat-message-ai">
                   <div className="flex items-center space-x-2">
-                    <div className="h-2 w-2 animate-pulse rounded-full bg-[var(--text-soft)] [animation-delay:-0.3s]" />
-                    <div className="h-2 w-2 animate-pulse rounded-full bg-[var(--text-soft)] [animation-delay:-0.15s]" />
-                    <div className="h-2 w-2 animate-pulse rounded-full bg-[var(--text-soft)]" />
+                    <div className="h-2 w-2 animate-[pulse_1.8s_ease-in-out_infinite] rounded-full bg-[var(--text-soft)] [animation-delay:-0.6s]" />
+                    <div className="h-2 w-2 animate-[pulse_1.8s_ease-in-out_infinite] rounded-full bg-[var(--text-soft)] [animation-delay:-0.3s]" />
+                    <div className="h-2 w-2 animate-[pulse_1.8s_ease-in-out_infinite] rounded-full bg-[var(--text-soft)]" />
                   </div>
                 </div>
               </div>

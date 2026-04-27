@@ -2,14 +2,13 @@
 
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { PaperAirplaneIcon, PaperClipIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import { PaperAirplaneIcon } from '@heroicons/react/24/outline';
 import { useTranslation } from '@/hooks/useTranslation';
 import { getCondensedSystemMessage } from '@/lib/chatMessageVisibility';
 import { toPlainTextChat } from '@/lib/chatPlainText';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import type { ChatMessageMetadata, Language } from '@/types';
-import ChatCitationList from '@/components/chat/ChatCitationList';
+import type { Language } from '@/types';
 import { getChatPageUi, getChatRuntimeUi } from '@/lib/chatPageUi';
 import { ChatBubble, ChatMessageRow, ChatMessageText, ChatSystemNotice } from '@/components/chat/ChatBubble';
 import {
@@ -27,18 +26,11 @@ import {
   subscribeByokSessionDialogClose,
   type ByokSessionStatus,
 } from '@/lib/byokSessionClient';
+import { validateStructuralSummaryCsv } from '@/lib/structuralSummaryCsv';
 
 type Message = {
   id: number;
   role: 'ai' | 'user';
-  content: string;
-  metadata?: ChatMessageMetadata;
-};
-
-type AttachedTextFile = {
-  name: string;
-  size: number;
-  type: string;
   content: string;
 };
 
@@ -54,59 +46,6 @@ type ModelOption = {
   psychologyLabel: string;
   byokAvailable: boolean;
 };
-
-function decodeHeaderJson<T>(value: string | null): T | null {
-  if (!value) return null;
-  try {
-    const base64 = value.replace(/-/g, '+').replace(/_/g, '/');
-    const padded = base64.padEnd(Math.ceil(base64.length / 4) * 4, '=');
-    const binary = atob(padded);
-    const bytes = Uint8Array.from(binary, (char) => char.charCodeAt(0));
-    return JSON.parse(new TextDecoder().decode(bytes)) as T;
-  } catch {
-    return null;
-  }
-}
-
-const MAX_CHAT_ATTACHMENT_BYTES = 48 * 1024;
-
-function formatBytes(bytes: number) {
-  if (bytes < 1024) return `${bytes} B`;
-  return `${Math.round(bytes / 1024)} KB`;
-}
-
-function isSupportedChatAttachment(file: File) {
-  const name = file.name.toLowerCase();
-  const type = file.type.toLowerCase();
-  return (
-    name.endsWith('.csv') ||
-    name.endsWith('.txt') ||
-    type === 'text/csv' ||
-    type === 'text/plain'
-  );
-}
-
-function buildMessageWithAttachment(messageText: string, attachment: AttachedTextFile | null) {
-  const trimmed = messageText.trim();
-  if (!attachment) return trimmed;
-
-  const languageHint = attachment.name.toLowerCase().endsWith('.csv') ? 'csv' : 'text';
-  return [
-    trimmed,
-    `[Attached file for interpretation context: ${attachment.name}, ${attachment.size} bytes]`,
-    `\`\`\`${languageHint}`,
-    attachment.content.trim(),
-    '```',
-  ].filter(Boolean).join('\n\n');
-}
-
-function getVisibleUserMessage(content: string) {
-  return content.split('\n\n[Attached file for interpretation context:')[0]?.trim() || content;
-}
-
-function hasFilesInDragEvent(event: React.DragEvent<HTMLElement>) {
-  return Array.from(event.dataTransfer.types).includes('Files');
-}
 
 function ChatPageClient() {
   const router = useRouter();
@@ -125,9 +64,10 @@ function ChatPageClient() {
   const [streamingMessages, setStreamingMessages] = useState<Message[]>([]);
   const [isStreaming, setIsStreaming] = useState(false);
   const [loadedStorageKey, setLoadedStorageKey] = useState<string | null>(null);
-  const [attachedFile, setAttachedFile] = useState<AttachedTextFile | null>(null);
-  const [attachmentError, setAttachmentError] = useState<string | null>(null);
-  const [isDraggingFile, setIsDraggingFile] = useState(false);
+  const [loadedSummaryCsvStorageKey, setLoadedSummaryCsvStorageKey] = useState<string | null>(null);
+  const [summaryCsvText, setSummaryCsvText] = useState('');
+  const [summaryCsvError, setSummaryCsvError] = useState<string | null>(null);
+  const [systemNotice, setSystemNotice] = useState<string | null>(null);
   const storageKey = useMemo(
     () => buildEphemeralChatStorageKey({
       userId: 'browser',
@@ -135,12 +75,12 @@ function ChatPageClient() {
     }),
     [],
   );
+  const summaryCsvStorageKey = storageKey ? `${storageKey}:structural-summary-csv` : null;
 
+  const messagesScrollRef = useRef<HTMLDivElement | null>(null);
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
-  const fileInputRef = useRef<HTMLInputElement | null>(null);
-  const dragDepthRef = useRef(0);
+  const shouldAutoScrollRef = useRef(true);
   const requiredSessionPromptRef = useRef(false);
-
   useEffect(() => {
     setLoadedStorageKey(null);
     setStreamingMessages(readEphemeralChatMessages<Message>(storageKey));
@@ -148,12 +88,47 @@ function ChatPageClient() {
   }, [storageKey]);
 
   useEffect(() => {
+    if (!summaryCsvStorageKey || typeof window === 'undefined') return;
+
+    setLoadedSummaryCsvStorageKey(null);
+    setSummaryCsvText(sessionStorage.getItem(summaryCsvStorageKey) ?? '');
+    setSummaryCsvError(null);
+    setSystemNotice(null);
+    setLoadedSummaryCsvStorageKey(summaryCsvStorageKey);
+  }, [summaryCsvStorageKey]);
+
+  useEffect(() => {
     if (!storageKey || loadedStorageKey !== storageKey) return;
     writeEphemeralChatMessages(storageKey, streamingMessages);
   }, [loadedStorageKey, storageKey, streamingMessages]);
 
   useEffect(() => {
-    const handleClear = () => setStreamingMessages([]);
+    if (
+      !summaryCsvStorageKey ||
+      loadedSummaryCsvStorageKey !== summaryCsvStorageKey ||
+      typeof window === 'undefined'
+    ) {
+      return;
+    }
+
+    try {
+      if (summaryCsvText.trim()) {
+        sessionStorage.setItem(summaryCsvStorageKey, summaryCsvText);
+      } else {
+        sessionStorage.removeItem(summaryCsvStorageKey);
+      }
+    } catch {
+      // If browser storage is unavailable, keep the value in memory for the current page only.
+    }
+  }, [loadedSummaryCsvStorageKey, summaryCsvStorageKey, summaryCsvText]);
+
+  useEffect(() => {
+    const handleClear = () => {
+      setStreamingMessages([]);
+      setSummaryCsvText('');
+      setSummaryCsvError(null);
+      setSystemNotice(null);
+    };
     window.addEventListener(EPHEMERAL_CHAT_CLEAR_EVENT, handleClear);
     return () => window.removeEventListener(EPHEMERAL_CHAT_CLEAR_EVENT, handleClear);
   }, []);
@@ -236,6 +211,9 @@ function ChatPageClient() {
   const getFriendlyErrorMessage = useCallback(
     (rawError: string) => {
       const message = rawError.toLowerCase();
+      if (message.includes('invalid_structural_summary_csv')) {
+        return pageUi.summaryCsvInvalid;
+      }
       if (message.includes('chat_provider_invalid_api_key')) {
         return t('chat.invalidApiKey');
       }
@@ -266,16 +244,33 @@ function ChatPageClient() {
       }
       return t('chat.errorMessage');
     },
-    [t],
+    [pageUi.summaryCsvInvalid, t],
   );
 
+  const updateAutoScrollPreference = useCallback(() => {
+    const scrollElement = messagesScrollRef.current;
+    if (!scrollElement) return;
+    const distanceFromBottom = scrollElement.scrollHeight - scrollElement.scrollTop - scrollElement.clientHeight;
+    shouldAutoScrollRef.current = distanceFromBottom < 120;
+  }, []);
+
+  const lastMessageContent = streamingMessages[streamingMessages.length - 1]?.content ?? '';
+
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [streamingMessages]);
+    if (!shouldAutoScrollRef.current) return;
+    messagesEndRef.current?.scrollIntoView({ behavior: 'auto', block: 'end' });
+  }, [streamingMessages.length, lastMessageContent]);
 
   const sendMessage = useCallback(
-    async (messageText: string, fileForContext: AttachedTextFile | null) => {
+    async (messageText: string) => {
       if (messageText.trim() === '' || isLoading || !isModelStateLoaded) return;
+      const summaryValidation = validateStructuralSummaryCsv(summaryCsvText);
+      if (!summaryValidation.ok) {
+        const notice = summaryCsvText.trim() ? pageUi.summaryCsvInvalid : pageUi.summaryCsvRequired;
+        setSummaryCsvError(notice);
+        setSystemNotice(notice);
+        return;
+      }
       const activeSession = await fetchByokSessionStatus();
       if (!activeSession.active) {
         setByokStatus(activeSession);
@@ -285,27 +280,18 @@ function ChatPageClient() {
       }
       if (!hasSelectableModel) return;
 
-      const userMessageContent = buildMessageWithAttachment(messageText, fileForContext);
+      const userMessageContent = messageText.trim();
       const userMessage: Message = {
         id: Date.now(),
         role: 'user',
         content: userMessageContent,
-        metadata: fileForContext
-          ? {
-              attachments: [{
-                name: fileForContext.name,
-                size: fileForContext.size,
-                mimeType: fileForContext.type || 'text/plain',
-              }],
-            }
-          : undefined,
       };
       const newMessages = [...streamingMessages, userMessage];
 
       setStreamingMessages(newMessages);
       setInputText('');
-      setAttachedFile(null);
-      setAttachmentError(null);
+      setSummaryCsvError(null);
+      setSystemNotice(null);
       setIsLoading(true);
       setIsStreaming(true);
 
@@ -317,7 +303,10 @@ function ChatPageClient() {
             message: userMessageContent,
             contextMessages: toEphemeralChatContext(streamingMessages),
             mode: 'interpretation',
-            workflowContext: { source: draftCopied ? 'calculation-result-copy' : 'chat-page' },
+            workflowContext: {
+              source: draftCopied ? 'calculation-result-copy' : 'chat-page',
+              structuralSummaryCsv: summaryValidation.csv,
+            },
             lang: language,
           }),
         });
@@ -348,11 +337,6 @@ function ChatPageClient() {
           throw new Error(serverError);
         }
 
-        const citations = decodeHeaderJson<ChatMessageMetadata['citations']>(
-          response.headers.get('X-Chat-Citations'),
-        ) ?? [];
-        const aiMetadata = citations.length > 0 ? { citations } : undefined;
-
         const reader = response.body.getReader();
         const decoder = new TextDecoder();
         let aiResponseText = '';
@@ -360,7 +344,7 @@ function ChatPageClient() {
 
         setStreamingMessages((prev) => [
           ...prev,
-          { id: aiMessageId, role: 'ai', content: '', metadata: aiMetadata },
+          { id: aiMessageId, role: 'ai', content: '' },
         ]);
 
         try {
@@ -422,111 +406,72 @@ function ChatPageClient() {
       isModelStateLoaded,
       isLoading,
       language,
+      pageUi.summaryCsvInvalid,
+      pageUi.summaryCsvRequired,
       streamingMessages,
+      summaryCsvText,
     ],
   );
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    void sendMessage(inputText, attachedFile);
+    void sendMessage(inputText);
   };
 
-  const handleAttachFile = useCallback(async (file: File | undefined) => {
-    if (!file) return;
-    setAttachmentError(null);
-
-    if (!isSupportedChatAttachment(file)) {
-      setAttachedFile(null);
-      setAttachmentError(pageUi.attachmentUnsupported);
-      return;
-    }
-
-    if (file.size > MAX_CHAT_ATTACHMENT_BYTES) {
-      setAttachedFile(null);
-      setAttachmentError(pageUi.attachmentTooLarge);
-      return;
-    }
-
-    try {
-      const content = await file.text();
-      setAttachedFile({
-        name: file.name,
-        size: file.size,
-        type: file.type || 'text/plain',
-        content,
-      });
-    } catch {
-      setAttachedFile(null);
-      setAttachmentError(pageUi.attachmentReadFailed);
-    }
-  }, [pageUi.attachmentReadFailed, pageUi.attachmentTooLarge, pageUi.attachmentUnsupported]);
-
-  const handleAttachFiles = useCallback(async (files: FileList | File[]) => {
-    const fileArray = Array.from(files);
-    if (fileArray.length === 0) return;
-    if (fileArray.length > 1) {
-      setAttachedFile(null);
-      setAttachmentError(pageUi.attachmentOneFileOnly);
-      return;
-    }
-    await handleAttachFile(fileArray[0]);
-  }, [handleAttachFile, pageUi.attachmentOneFileOnly]);
-
-  const handleDragEnter = useCallback((event: React.DragEvent<HTMLDivElement>) => {
-    if (!canUseChatInput || !hasFilesInDragEvent(event)) return;
-    event.preventDefault();
-    dragDepthRef.current += 1;
-    setIsDraggingFile(true);
-  }, [canUseChatInput]);
-
-  const handleDragOver = useCallback((event: React.DragEvent<HTMLDivElement>) => {
-    if (!canUseChatInput || !hasFilesInDragEvent(event)) return;
-    event.preventDefault();
-    event.dataTransfer.dropEffect = 'copy';
-  }, [canUseChatInput]);
-
-  const handleDragLeave = useCallback((event: React.DragEvent<HTMLDivElement>) => {
-    if (!canUseChatInput || !hasFilesInDragEvent(event)) return;
-    event.preventDefault();
-    dragDepthRef.current = Math.max(0, dragDepthRef.current - 1);
-    if (dragDepthRef.current === 0) setIsDraggingFile(false);
-  }, [canUseChatInput]);
-
-  const handleDrop = useCallback((event: React.DragEvent<HTMLDivElement>) => {
-    if (!hasFilesInDragEvent(event)) return;
-    event.preventDefault();
-    dragDepthRef.current = 0;
-    setIsDraggingFile(false);
-    if (!canUseChatInput) return;
-    void handleAttachFiles(event.dataTransfer.files);
-  }, [canUseChatInput, handleAttachFiles]);
-
   const showConversation = streamingMessages.length > 0 || isStreaming;
-  const showEmptyState = streamingMessages.length === 0 && !isStreaming;
   const greetingTitle = draftCopied ? pageUi.welcomeCopiedTitle : pageUi.welcomeTitle;
-  const inputPlaceholder = pageUi.inputPlaceholder;
+  const inputPlaceholder = streamingMessages.length === 0 ? pageUi.inputPlaceholder : '';
+  const showMessageArea = showConversation || Boolean(systemNotice);
+  const showInitialState = streamingMessages.length === 0 && !isStreaming && !systemNotice;
+  const hasSummaryCsvValidationError = Boolean(summaryCsvError);
+  const clearSummaryCsvInput = () => {
+    setSummaryCsvText('');
+    setSummaryCsvError(null);
+    setSystemNotice(null);
+  };
+  const summaryCsvInput = (
+    <input
+      type="text"
+      id="structural-summary-csv"
+      value={summaryCsvText.trim() ? pageUi.summaryCsvReadyLabel : ''}
+      onChange={(event) => {
+        setSummaryCsvText(event.target.value);
+        setSummaryCsvError(null);
+        setSystemNotice(null);
+      }}
+      onPaste={(event) => {
+        event.preventDefault();
+        setSummaryCsvText(event.clipboardData.getData('text'));
+        setSummaryCsvError(null);
+        setSystemNotice(null);
+      }}
+      onKeyDown={(event) => {
+        if ((event.key === 'Backspace' || event.key === 'Delete') && summaryCsvText.trim()) {
+          event.preventDefault();
+          clearSummaryCsvInput();
+        }
+      }}
+      placeholder={pageUi.summaryCsvPlaceholder}
+      disabled={!canUseChatInput || isLoading}
+      spellCheck={false}
+      className={`ui-summary-csv-inline-input ${hasSummaryCsvValidationError ? 'is-error' : ''}`}
+      aria-label={pageUi.summaryCsvLabel}
+      title={pageUi.summaryCsvLabel}
+    />
+  );
 
   return (
     <div className="flex min-h-screen flex-col bg-[var(--brand-page)]">
       <Header />
       <div className="mx-auto flex w-full max-w-5xl flex-1 px-4 py-8 sm:px-6 lg:px-8">
-        <div
-          className="ui-chat-panel relative flex min-w-0 flex-1 flex-col overflow-hidden rounded-2xl border shadow-sm"
-          onDragEnter={handleDragEnter}
-          onDragOver={handleDragOver}
-          onDragLeave={handleDragLeave}
-          onDrop={handleDrop}
-        >
-          {isDraggingFile && (
-            <div className="pointer-events-none absolute inset-0 z-20 flex items-center justify-center rounded-2xl border-2 border-dashed border-[var(--brand-500)] bg-[var(--surface-base)]/85 p-6 text-center shadow-inner backdrop-blur-sm">
-              <div className="rounded-2xl border border-[var(--border-subtle)] bg-[var(--surface-elevated)] px-5 py-4 text-sm font-semibold text-[var(--text-strong)] shadow-lg">
-                {pageUi.attachmentDropHint}
-              </div>
-            </div>
-          )}
+        <div className="ui-chat-panel relative flex min-w-0 flex-1 flex-col overflow-hidden rounded-2xl border shadow-sm">
           <main className="flex min-h-0 flex-1 flex-col">
-            <div className="flex-1 overflow-y-auto bg-gradient-to-b from-[var(--surface-muted)] to-[var(--surface-base)]">
-              {showConversation && (
+            <div
+              ref={messagesScrollRef}
+              onScroll={updateAutoScrollPreference}
+              className="flex-1 overflow-y-auto bg-gradient-to-b from-[var(--surface-muted)] to-[var(--surface-base)]"
+            >
+              {showMessageArea && (
                 <div className="flex-1 overflow-y-auto p-4">
                   <div className="space-y-4">
                     {streamingMessages.map((message) => {
@@ -541,41 +486,22 @@ function ChatPageClient() {
                         <ChatMessageRow key={message.id} role={message.role}>
                           <ChatBubble role={message.role}>
                             <ChatMessageText>
-                              {message.role === 'ai' ? toPlainTextChat(message.content) : getVisibleUserMessage(message.content)}
+                              {message.role === 'ai' ? toPlainTextChat(message.content) : message.content}
                             </ChatMessageText>
-                            {message.role === 'user' && (message.metadata?.attachments?.length ?? 0) > 0 && (
-                              <div className="mt-2 flex flex-wrap gap-2">
-                                {message.metadata?.attachments?.map((attachment) => (
-                                  <span
-                                    key={`${message.id}-${attachment.name}`}
-                                    className="inline-flex items-center rounded-full bg-[var(--surface-muted)] px-2.5 py-1 text-[11px] font-medium text-[var(--text-soft)] ring-1 ring-[var(--border-subtle)]"
-                                  >
-                                    {pageUi.attachmentReady}: {attachment.name} ({formatBytes(attachment.size)})
-                                  </span>
-                                ))}
-                              </div>
-                            )}
-                            {message.role === 'ai' &&
-                              (message.metadata?.citations?.length ?? 0) > 0 && (
-                                <ChatCitationList
-                                  citations={message.metadata?.citations ?? []}
-                                  language={language as Language}
-                                  title={pageUi.citationTitle}
-                                  openLabel={pageUi.citationOpen}
-                                  className="mt-3 border-t border-[var(--border-subtle)] pt-3"
-                                />
-                              )}
                           </ChatBubble>
                         </ChatMessageRow>
                       );
                     })}
+                    {systemNotice && (
+                      <ChatSystemNotice>{systemNotice}</ChatSystemNotice>
+                    )}
                     {isLoading && streamingMessages[streamingMessages.length - 1]?.role !== 'ai' && (
                       <div className="flex justify-start">
                         <div className="ui-chat-message ui-chat-message-ai">
                           <div className="flex items-center space-x-2">
-                            <div className="h-2 w-2 animate-pulse rounded-full bg-[var(--text-soft)] [animation-delay:-0.3s]" />
-                            <div className="h-2 w-2 animate-pulse rounded-full bg-[var(--text-soft)] [animation-delay:-0.15s]" />
-                            <div className="h-2 w-2 animate-pulse rounded-full bg-[var(--text-soft)]" />
+                            <div className="h-2 w-2 animate-[pulse_1.8s_ease-in-out_infinite] rounded-full bg-[var(--text-soft)] [animation-delay:-0.6s]" />
+                            <div className="h-2 w-2 animate-[pulse_1.8s_ease-in-out_infinite] rounded-full bg-[var(--text-soft)] [animation-delay:-0.3s]" />
+                            <div className="h-2 w-2 animate-[pulse_1.8s_ease-in-out_infinite] rounded-full bg-[var(--text-soft)]" />
                           </div>
                         </div>
                       </div>
@@ -584,10 +510,10 @@ function ChatPageClient() {
                   </div>
                 </div>
               )}
-              {showEmptyState && (
+              {showInitialState && (
                 <div className="flex h-full flex-1 items-center justify-center p-8">
                   <div className="w-full max-w-xl text-center">
-                    <h2 className="text-base font-semibold leading-7 text-[var(--text-strong)] sm:text-lg">{greetingTitle}</h2>
+                    <h2 className="whitespace-pre-line text-sm font-semibold leading-7 text-[var(--text-strong)] sm:text-base">{greetingTitle}</h2>
                     {draftCopied && (
                       <p className="mx-auto mt-3 max-w-lg text-sm leading-6 text-[var(--text-soft)]">
                         {pageUi.copiedDescription}
@@ -599,62 +525,18 @@ function ChatPageClient() {
             </div>
 
             <div className="pb-safe rounded-b-2xl border-t border-[var(--border-subtle)] bg-[var(--surface-base)] p-3 md:p-4">
-              {(attachedFile || attachmentError) && (
-                <div className="mb-2 flex flex-wrap items-center gap-2 text-xs">
-                  {attachedFile && (
-                    <span className="inline-flex max-w-full items-center gap-2 rounded-full border border-[var(--border-subtle)] bg-[var(--surface-muted)] px-3 py-1.5 text-[var(--text-body)]">
-                      <PaperClipIcon className="h-3.5 w-3.5 shrink-0 text-[var(--text-soft)]" />
-                      <span className="truncate">
-                        {pageUi.attachmentReady}: {attachedFile.name} ({formatBytes(attachedFile.size)})
-                      </span>
-                      <button
-                        type="button"
-                        onClick={() => {
-                          setAttachedFile(null);
-                          setAttachmentError(null);
-                        }}
-                        className="rounded-full p-0.5 text-[var(--text-soft)] transition hover:bg-[var(--surface-base)] hover:text-[var(--text-body)]"
-                        aria-label={pageUi.removeAttachment}
-                        title={pageUi.removeAttachment}
-                      >
-                        <XMarkIcon className="h-3.5 w-3.5" />
-                      </button>
-                    </span>
-                  )}
-                  {attachmentError && (
-                    <span className="text-[var(--danger-text)]">{attachmentError}</span>
-                  )}
-                </div>
-              )}
               <form onSubmit={handleSubmit} className="flex items-center gap-2">
-                <input
-                  ref={fileInputRef}
-                  type="file"
-                  accept=".csv,.txt,text/csv,text/plain"
-                  className="hidden"
-                  onChange={(event) => {
-                    void handleAttachFiles(event.target.files ?? []);
-                    event.currentTarget.value = '';
-                  }}
-                />
-                <button
-                  type="button"
-                  onClick={() => fileInputRef.current?.click()}
-                  disabled={!canUseChatInput || isLoading}
-                  className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[var(--border-subtle)] bg-[var(--surface-muted)] text-[var(--text-soft)] transition hover:border-[var(--brand-300)] hover:bg-[var(--brand-100)] hover:text-[var(--brand-700)] disabled:cursor-not-allowed disabled:opacity-50"
-                  aria-label={pageUi.attachFile}
-                  title={pageUi.attachFile}
-                >
-                  <PaperClipIcon className="h-5 w-5" />
-                </button>
-                <input
-                  type="text"
-                  value={inputText}
-                  onChange={(event) => setInputText(event.target.value)}
-                  placeholder={inputPlaceholder}
-                  disabled={!canUseChatInput || isLoading}
-                  className="ui-chat-input focus:ring-1"
-                />
+                {summaryCsvInput}
+                <div className="min-w-0 flex-1">
+                  <input
+                    type="text"
+                    value={inputText}
+                    onChange={(event) => setInputText(event.target.value)}
+                    placeholder={inputPlaceholder}
+                    disabled={!canUseChatInput || isLoading}
+                    className="ui-chat-input focus:ring-1"
+                  />
+                </div>
                 <button
                   type="submit"
                   className="ui-send-button"
