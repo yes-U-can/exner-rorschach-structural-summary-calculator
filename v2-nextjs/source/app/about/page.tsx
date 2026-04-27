@@ -43,45 +43,51 @@ const CONTENT: Record<Language, AboutContent> = {
   ko: {
     title: '서비스 소개',
     introParagraphs: [
-      '이 웹앱은 Exner(CS) 체계에 따른 로르샤흐 구조요약 계산과 참조문서 검색을 더 안정적으로 돕기 위해 만들었습니다. 구조요약 계산과 참조문서 검색은 계정 없이 사용할 수 있습니다.',
-      'AI 기능은 로그인 계정이 아니라 BYOK 세션으로 동작합니다. 사용자가 OpenAI 또는 Google API 키를 입력하면, 그 키는 서버 DB에 저장되지 않고 24시간짜리 HttpOnly 쿠키에 암호화되어 보관됩니다.',
-      'Neon DB는 사용자 계정이나 채팅 기록을 저장하는 용도가 아니라, 공개 가능한 참조문서 벡터 검색(RAG) 품질을 유지하는 용도로만 사용합니다.',
-      'AI 도우미는 최종 판단자가 아니라 참고와 검토를 돕는 보조 도구입니다. 최종 해석과 임상적 책임은 항상 사용자에게 있습니다.',
+      '이 웹앱은 Exner(CS) 체계에 따른 로샤 검사 구조요약 계산을 보다 안정적이고 효율적으로 돕기 위해 만들어졌습니다. 반복적으로 입력하고 계산해야 하는 항목들을 한 흐름 안에서 정리할 수 있도록 구성되어 있으며, 사용자는 위치, 결정인, 형태질, 특수점수와 주요 지표를 한 화면에서 검토하면서 구조요약 작업을 진행할 수 있습니다. 이 서비스의 목적은 계산과 정리의 부담을 줄여, 임상심리사와 수련생이 더 중요한 검토와 판단에 집중할 수 있도록 돕는 데 있습니다.',
+      '이 웹앱 안에는 구조요약 계산과 부호화 과정에서 참고할 수 있는 문서들도 함께 정리되어 있습니다. 여기서 말하는 참조 문서는 로샤 검사와 Exner(CS) 체계의 규칙, 개념, 변수, 부호화 기준 등을 주제별로 나누어 정리해 둔 읽기 전용 참고 자료 모음이며, 서울임상심리연구소(SICP)와 모오(MOW)가 함께 제작하고 정리한 문서들입니다. 사용자는 필요한 개념이나 규칙이 헷갈릴 때 이 문서들을 직접 검색해서 찾아볼 수 있고, 웹앱의 AI 기능도 이 문서들을 바탕으로 답변하도록 설계되어 있습니다. 즉, 이 서비스는 단순히 계산만 해주는 도구가 아니라, 계산 과정에서 필요한 기준과 개념을 바로 확인할 수 있도록 돕는 학습 보조 도구의 역할도 함께 합니다.',
+      'AI 기능은 BYOK 방식으로만 사용할 수 있습니다. BYOK는 Bring Your Own Key의 약자로, 사용자가 본인의 OpenAI 또는 Google API 키를 직접 입력해 AI 기능을 사용하는 방식을 뜻합니다. 이 웹앱은 별도의 플랫폼 과금, 크레딧, 월정액, 자체 제공 AI 모델을 운영하지 않으며, 입력된 API 키를 서버 DB에 저장하지 않습니다. API 키는 이번 로그인 세션에서만 사용되도록 24시간짜리 HttpOnly 쿠키에 암호화되어 보관되고, AI 요청을 처리할 때 필요한 범위 안에서만 사용됩니다.',
+      '이 서비스의 AI는 사용자가 입력한 질문, 현재 작업 맥락, 그리고 웹앱 안의 참조 문서를 함께 바탕으로 응답합니다. 코딩 도우미는 반응을 Exner(CS) 체계의 부호화 기준에 비추어 검토할 수 있도록 돕고, 해석 도우미는 구조요약 수치 CSV를 바탕으로 해석 가설을 점검할 수 있도록 돕습니다. 다만 이 서비스와 AI 기능은 어디까지나 참고와 보조를 위한 도구이며, 전문가의 독립적인 임상 판단이나 공식적인 진단을 대체하지 않습니다. 최종적인 해석과 책임은 언제나 사용자에게 있습니다.',
+      '이 서비스는 서울임상심리연구소(SICP)와 MOW가 함께 운영합니다. SICP는 임상심리학적 자문과 운영 방향을, MOW는 제품 구현과 기술 운영을 맡고 있습니다. 우리는 이 웹앱이 로샤 검사를 공부하는 학생과 수련생, 그리고 실제로 구조요약 작업을 수행하는 사용자들에게 실질적인 도움이 되는 도구가 되기를 목표로 하고 있습니다. 서비스 운영, 오류 제보, 보안 관련 문의는 mow.coding@gmail.com 으로 보내주시면 됩니다.',
     ],
-    frameworkTitle: 'Human-in-the-Loop: 인간 중심 AI 원칙',
+    frameworkTitle: '인간 중심 AI와 5대 윤리 원칙 기반 통합 프레임워크',
     frameworkLead:
-      '이 서비스는 AI가 전문가를 대체하는 구조가 아니라, 사람이 더 분명한 기준 위에서 검토하고 판단하도록 돕는 구조를 목표로 합니다.',
-    workshopSentence: '인간 중심 AI와 HITL에 대한 자세한 내용은 다음 링크에서 확인할 수 있습니다.',
+      '이 웹앱은 AI가 전문가를 대신해 판단하도록 만들기보다, 임상심리사와 수련생이 더 분명한 기준 위에서 검토하고 판단하도록 돕는 방향을 목표로 설계되었습니다. 이러한 방향은 인간 중심 AI, Human-in-the-Loop(HITL), 그리고 APA, ACA, AMA, NASW 등 주요 전문직 윤리 원칙에서 공통적으로 강조하는 자율성, 선행, 기밀성, 공정성, 전문적 책임의 기준과 연결됩니다.',
+    workshopSentence: '이 원칙과 연결되는 연구소 워크숍 자료 일부는 다음 링크에서 확인할 수 있습니다.',
     workshopLabel: '워크숍 영상 보기',
     principles: [
       {
-        title: '1. 자율성과 설명 가능한 선택',
+        title: '1. 자율성과 고지된 동의 (Autonomy & Informed Consent)',
         paragraphs: [
-          '사용자는 AI를 쓸지 말지를 선택할 수 있어야 하며, API 키가 어디에 저장되고 어떤 데이터가 외부 제공자에게 전송되는지 이해할 수 있어야 합니다.',
+          '사용자는 AI가 어떤 목적으로 사용되는지, 어떤 자료가 AI 제공자에게 전달될 수 있는지, AI의 응답이 어떤 한계를 갖는지 이해할 수 있어야 합니다. 이 웹앱이 BYOK 구조를 택한 이유도 사용자가 자신의 API 제공자와 사용 범위를 직접 선택하고 통제할 수 있게 하기 위해서입니다.',
+          'AI 사용은 사용자가 선택할 수 있는 보조 기능이어야 하며, AI를 사용하지 않더라도 구조요약 계산과 참조 문서 검색이라는 핵심 기능은 계속 사용할 수 있어야 합니다.',
         ],
       },
       {
-        title: '2. 이익과 위해 최소화',
+        title: '2. 선행 및 악행 금지 (Beneficence & Non-Malfeasance)',
         paragraphs: [
-          'AI는 효율을 높일 수 있지만 오류가 날 수 있습니다. 따라서 AI 출력은 반드시 비판적으로 검토되어야 합니다.',
+          'AI는 계산과 검토의 효율을 높일 수 있지만, 오류나 과잉 해석의 가능성을 항상 갖고 있습니다. 따라서 AI 출력은 최종 답이 아니라 검토해야 할 제안으로 다루어야 하며, 위험한 판단이나 중대한 임상적 결정은 반드시 전문가의 책임 아래 이루어져야 합니다.',
+          '이 웹앱은 자동으로 결론을 확정하거나 행을 채우는 기능을 줄이고, 사용자가 AI와 대화하며 근거와 추가 질문을 검토하도록 설계했습니다. 이는 편의성보다 임상적 숙고와 검토 가능성을 우선하는 선택입니다.',
         ],
       },
       {
-        title: '3. 개인정보 최소화',
+        title: '3. 기밀 유지, 개인정보 보호, 투명성 (Confidentiality, Privacy, & Transparency)',
         paragraphs: [
-          '이 앱은 계정, API 키, 채팅 기록, 계산 데이터를 서버 DB에 저장하지 않는 방향으로 설계되어 있습니다. 서버에 남는 DB 데이터는 공개 참조문서 RAG 데이터입니다.',
+          '이 웹앱은 사용자 계정, API 키, AI 대화 기록, 계산 데이터를 서버 DB에 지속적으로 저장하지 않는 방향으로 설계되어 있습니다. 입력된 API 키도 서버 DB가 아니라 암호화된 세션 쿠키로만 보관되며, 세션이 종료되면 더 이상 유지되지 않습니다.',
+          'AI가 참조하는 문서를 공개하는 것도 같은 원칙과 연결됩니다. 사용자는 AI가 어떤 자료를 근거로 답변하는지 확인할 수 있어야 하며, AI의 판단 과정을 블랙박스로 받아들이지 않고 스스로 검토할 수 있어야 합니다.',
         ],
       },
       {
-        title: '4. 투명성과 검토 가능성',
+        title: '4. 정의, 공정성 및 포용성 (Justice, Fairness, & Inclusiveness)',
         paragraphs: [
-          'AI가 참고하는 참조문서를 공개하고, 사용자가 그 근거를 직접 확인할 수 있게 하는 것을 중요한 설계 원칙으로 둡니다.',
+          'AI 시스템은 특정 문화권, 언어, 집단에 대해 편향된 방식으로 작동할 수 있습니다. 따라서 이 웹앱은 여러 언어의 UI와 참조 문서 접근성을 제공하되, AI 응답이 모든 임상적 맥락을 자동으로 공정하게 반영한다고 가정하지 않습니다.',
+          '사용자는 AI가 제시한 설명을 그대로 받아들이기보다, 피검자의 문화적 배경, 검사 맥락, 임상적 관찰을 함께 고려해 비판적으로 검토해야 합니다.',
         ],
       },
       {
-        title: '5. 전문적 책임',
+        title: '5. 전문적 진실성과 책임 (Fidelity, Professional Integrity, & Accountability)',
         paragraphs: [
-          '이 서비스는 학습과 검토를 위한 도구입니다. 공식 진단, 독립적인 임상 판단, 전문가 책임을 대체하지 않습니다.',
+          '이 서비스는 로샤 검사를 배우고 구조요약 작업을 점검하는 데 도움을 주기 위한 도구입니다. AI가 제시한 후보나 해석은 전문가의 책임 있는 판단을 대신할 수 없으며, 공식적인 진단이나 임상적 의사결정의 최종 근거가 되어서는 안 됩니다.',
+          '전문가는 AI 도구를 사용할 때에도 자신의 역량과 윤리 기준을 유지해야 하며, AI가 만든 문장을 그대로 권위로 삼기보다 근거를 확인하고 필요한 경우 수정하거나 배제할 수 있어야 합니다.',
         ],
       },
     ],
@@ -91,7 +97,7 @@ const CONTENT: Record<Language, AboutContent> = {
     introParagraphs: [
       'This web app supports Exner (CS) Rorschach Structural Summary calculation and reference-document search. Calculation and reference search are available without creating an account.',
       'AI features use a BYOK session rather than a user account. When a user enters an OpenAI or Google API key, the key is encrypted into a 24-hour HttpOnly cookie and is not stored in the server database.',
-      'Neon is retained only for public reference-document vector retrieval (RAG). It is not used as a user account, API-key, or chat-history database.',
+      'The server database is used only to support public reference-document retrieval (RAG). It is not used as a user account, API-key, or chat-history database.',
       'The AI helper is a support tool for review and learning. It does not replace independent professional clinical judgment, formal diagnosis, or the user’s final responsibility.',
     ],
     frameworkTitle: 'Human-in-the-Loop: Human-Centered AI Principles',
@@ -137,7 +143,7 @@ const CONTENT: Record<Language, AboutContent> = {
     introParagraphs: [
       'このWebアプリは、Exner (CS) に基づくロールシャッハ構造要約の計算と参照文書検索を支援します。計算と参照文書検索はアカウントなしで利用できます。',
       'AI機能はログインアカウントではなくBYOKセッションで動作します。OpenAIまたはGoogleのAPIキーを入力すると、キーは24時間のHttpOnly Cookieに暗号化され、サーバーDBには保存されません。',
-      'Neon DBは公開可能な参照文書のベクトル検索(RAG)のためだけに残しています。ユーザーアカウント、APIキー、チャット履歴の保存には使いません。',
+      'サーバーDBは公開可能な参照文書検索(RAG)を支える範囲でのみ使用します。ユーザーアカウント、APIキー、チャット履歴の保存には使いません。',
       'AIヘルパーは最終判断者ではなく、確認と学習を助ける補助ツールです。最終的な解釈と責任は常に利用者にあります。',
     ],
     frameworkTitle: 'Human-in-the-Loop: 人間中心AIの原則',
@@ -183,7 +189,7 @@ const CONTENT: Record<Language, AboutContent> = {
     introParagraphs: [
       'Esta aplicación apoya el cálculo del Structural Summary de Rorschach según Exner (CS) y la búsqueda de documentos de referencia. El cálculo y la búsqueda pueden usarse sin crear cuenta.',
       'Las funciones de IA usan una sesión BYOK, no una cuenta de usuario. Cuando se introduce una clave API de OpenAI o Google, la clave se cifra en una cookie HttpOnly de 24 horas y no se guarda en la base de datos del servidor.',
-      'Neon se conserva solo para la recuperación vectorial de documentos públicos de referencia (RAG). No se usa como base de datos de cuentas, claves API ni historial de chat.',
+      'La base de datos del servidor se usa solo para apoyar la recuperación de documentos públicos de referencia (RAG). No se usa como base de datos de cuentas, claves API ni historial de chat.',
       'El asistente de IA es una herramienta de apoyo para revisión y aprendizaje. No sustituye el juicio clínico profesional, el diagnóstico formal ni la responsabilidad final de la persona usuaria.',
     ],
     frameworkTitle: 'Human-in-the-Loop: principios de IA centrada en la persona',
@@ -229,7 +235,7 @@ const CONTENT: Record<Language, AboutContent> = {
     introParagraphs: [
       'Este aplicativo apoia o cálculo do Structural Summary de Rorschach segundo Exner (CS) e a busca de documentos de referência. O cálculo e a busca podem ser usados sem criar conta.',
       'Os recursos de IA usam uma sessão BYOK, não uma conta de usuário. Ao inserir uma chave API da OpenAI ou do Google, a chave é criptografada em um cookie HttpOnly de 24 horas e não é salva no banco de dados do servidor.',
-      'O Neon permanece apenas para recuperação vetorial de documentos públicos de referência (RAG). Ele não é usado como banco de contas, chaves API ou histórico de chat.',
+      'O banco de dados do servidor é usado apenas para apoiar a recuperação de documentos públicos de referência (RAG). Ele não é usado como banco de contas, chaves API ou histórico de chat.',
       'O assistente de IA é uma ferramenta de apoio para revisão e aprendizagem. Ele não substitui julgamento clínico profissional, diagnóstico formal nem a responsabilidade final da pessoa usuária.',
     ],
     frameworkTitle: 'Human-in-the-Loop: princípios de IA centrada na pessoa',

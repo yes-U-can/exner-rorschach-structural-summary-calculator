@@ -39,41 +39,41 @@ const CONTENT: Record<Language, PrivacyContent> = {
     title: '개인정보처리방침',
     effectiveDate: '시행일: 2026년 2월 15일',
     intro:
-      '이 문서는 현재 BYOK-only 구조에서 어떤 데이터가 처리되고 어디에 저장되는지 설명합니다. 핵심 원칙은 사용자 계정, API 키, 채팅 기록, 계산 데이터를 서버 DB에 저장하지 않는 것입니다.',
+      '이 문서는 현재 서비스가 어떤 데이터를 처리하고, 어떤 데이터를 서버에 저장하지 않는지 설명합니다. 이 서비스의 기본 원칙은 사용자 계정, API 키, AI 대화 기록, 구조요약 계산 데이터를 서버 DB에 지속적으로 저장하지 않는 것입니다.',
     sections: [
       {
-        heading: '처리하는 데이터',
+        heading: '서버에 저장하지 않는 데이터',
         paragraphs: [
-          '계산 화면에 입력한 값은 사용자의 브라우저 저장소에만 임시 저장됩니다. 이 데이터는 서버 DB로 저장되지 않습니다.',
-          'AI 사용을 위해 입력한 API 키는 서버 DB에 저장되지 않습니다. 24시간짜리 HttpOnly 쿠키에 암호화되어 보관되고, AI 요청을 처리할 때만 서버에서 복호화됩니다.',
-          'AI 대화 기록은 서버 DB에 저장되지 않습니다. 브라우저 세션 동안만 임시로 유지되며, AI 세션 종료 또는 브라우저 세션 종료 시 삭제될 수 있습니다.',
+          '구조요약 계산 화면에 입력한 값은 사용자의 브라우저 저장소에만 임시 저장됩니다. 이 데이터는 서버 DB에 저장되지 않으며, 사용자가 브라우저 저장소를 지우거나 입력값을 초기화하면 삭제됩니다.',
+          'AI 사용을 위해 입력한 API 키는 서버 DB에 저장되지 않습니다. API 키는 24시간짜리 HttpOnly 쿠키에 암호화되어 보관되고, AI 요청을 처리할 때 필요한 경우에만 서버에서 복호화됩니다.',
+          'AI 대화 기록은 서버 DB에 저장되지 않습니다. 대화 내용은 현재 브라우저 세션 동안만 임시로 유지되며, AI 세션을 종료하거나 브라우저 세션이 종료되면 삭제될 수 있습니다.',
         ],
       },
       {
-        heading: 'Neon DB 사용 범위',
+        heading: '서버 DB 사용 범위',
         paragraphs: [
-          'Neon DB는 공개 가능한 참조문서의 벡터 검색(RAG)을 위해서만 사용합니다. 사용자 계정, API 키, 채팅 기록, 계산 데이터는 Neon에 저장하지 않습니다.',
-          '운영 환경에서는 RAG 조회에 필요한 읽기 전용 DB 권한을 사용하는 것을 원칙으로 합니다.',
+          '서버 DB는 사용자의 개인정보나 검사자료를 보관하기 위한 용도로 사용하지 않습니다. 현재 서버 DB는 공개 가능한 참조문서의 검색과 RAG 처리를 지원하기 위한 데이터에 한정해 사용합니다.',
+          '따라서 사용자 계정 정보, API 키, AI 대화 기록, 구조요약 계산 데이터는 서버 DB의 보관 대상이 아닙니다.',
         ],
       },
       {
-        heading: '외부 AI 제공자',
+        heading: '외부 AI 제공자에게 전송될 수 있는 정보',
         paragraphs: [
-          '사용자가 AI 응답을 요청하면, 답변 생성에 필요한 프롬프트, 현재 대화 문맥, 계산 결과 일부, 참조문서 문맥이 사용자가 선택한 OpenAI 또는 Google로 전송될 수 있습니다.',
-          '외부 제공자의 처리 방식은 각 제공자의 약관과 개인정보 정책을 따릅니다. 사용자는 자신이 선택한 API 제공자의 정책을 확인해야 합니다.',
+          '사용자가 AI 응답을 요청하면, 답변 생성에 필요한 프롬프트, 현재 대화 문맥, 구조요약 수치 또는 채점 화면 맥락, 참조문서 일부가 사용자가 선택한 OpenAI 또는 Google로 전송될 수 있습니다.',
+          '외부 AI 제공자의 데이터 처리 방식은 각 제공자의 약관과 개인정보 정책을 따릅니다. 사용자는 본인이 선택한 API 제공자의 정책을 확인하고, 민감한 개인정보나 불필요한 식별정보를 입력하지 않도록 주의해야 합니다.',
         ],
       },
       {
         heading: '보관과 삭제',
         paragraphs: [
-          'BYOK 쿠키는 최대 24시간 동안 유지됩니다. 사용자가 AI 세션 종료 버튼을 누르면 쿠키와 임시 채팅 상태를 삭제합니다.',
-          '브라우저에 저장된 계산 데이터는 사용자가 직접 삭제하거나 브라우저 저장소를 지울 때 삭제됩니다.',
+          'BYOK 세션 쿠키는 최대 24시간 동안 유지됩니다. 사용자가 AI 세션 종료 버튼을 누르면 쿠키와 임시 대화 상태를 삭제합니다.',
+          '브라우저에 저장된 계산 데이터와 임시 대화 내용은 사용자가 직접 삭제하거나 브라우저 저장소를 지울 때 삭제됩니다. 서버 DB에 저장된 사용자별 계산 기록이나 대화 기록은 없으므로, 별도의 서버 DB 삭제 절차를 두지 않습니다.',
         ],
       },
       {
         heading: '문의',
         paragraphs: [
-          '개인정보, 보안, 삭제 요청 관련 문의는 mow.coding@gmail.com 으로 보낼 수 있습니다.',
+          '서비스 운영, 오류 제보, 보안 관련 문의는 mow.coding@gmail.com 으로 보낼 수 있습니다.',
         ],
       },
     ],
@@ -93,10 +93,10 @@ const CONTENT: Record<Language, PrivacyContent> = {
         ],
       },
       {
-        heading: 'Neon database scope',
+        heading: 'Server database scope',
         paragraphs: [
-          'Neon is used only for public reference-document vector retrieval (RAG). User accounts, API keys, chat history, and calculator data are not stored in Neon.',
-          'Production runtime should use a read-only DB role for RAG retrieval.',
+          'The server database is used only for public reference-document retrieval (RAG). User accounts, API keys, chat history, and calculator data are not stored in the server database.',
+          'Production runtime should use the minimum DB permissions needed for reference retrieval.',
         ],
       },
       {
@@ -116,7 +116,7 @@ const CONTENT: Record<Language, PrivacyContent> = {
       {
         heading: 'Contact',
         paragraphs: [
-          'For privacy, security, or deletion requests, contact mow.coding@gmail.com.',
+          'For service, error, or security questions, contact mow.coding@gmail.com.',
         ],
       },
     ],
@@ -136,9 +136,9 @@ const CONTENT: Record<Language, PrivacyContent> = {
         ],
       },
       {
-        heading: 'Neon DBの範囲',
+        heading: 'サーバーDBの使用範囲',
         paragraphs: [
-          'Neonは公開参照文書のベクトル検索(RAG)のためだけに使用されます。ユーザーアカウント、APIキー、チャット履歴、計算データはNeonに保存されません。',
+          'サーバーDBは公開参照文書検索(RAG)のために必要な範囲でのみ使用されます。ユーザーアカウント、APIキー、チャット履歴、計算データはサーバーDBに保存されません。',
           '本番環境ではRAG検索用の読み取り専用DB権限を使うことを原則とします。',
         ],
       },
@@ -159,7 +159,7 @@ const CONTENT: Record<Language, PrivacyContent> = {
       {
         heading: '問い合わせ',
         paragraphs: [
-          'プライバシー、セキュリティ、削除依頼については mow.coding@gmail.com までご連絡ください。',
+          'サービス運営、エラー、セキュリティに関するお問い合わせは mow.coding@gmail.com までご連絡ください。',
         ],
       },
     ],
@@ -179,9 +179,9 @@ const CONTENT: Record<Language, PrivacyContent> = {
         ],
       },
       {
-        heading: 'Alcance de Neon DB',
+        heading: 'Alcance de la base de datos del servidor',
         paragraphs: [
-          'Neon se usa solo para recuperación vectorial de documentos públicos de referencia (RAG). Las cuentas, claves API, historial de chat y datos de cálculo no se guardan en Neon.',
+          'La base de datos del servidor se usa solo en la medida necesaria para recuperar documentos públicos de referencia (RAG). Las cuentas, claves API, historial de chat y datos de cálculo no se guardan en la base de datos del servidor.',
           'En producción debe usarse un rol de base de datos de solo lectura para la recuperación RAG.',
         ],
       },
@@ -202,7 +202,7 @@ const CONTENT: Record<Language, PrivacyContent> = {
       {
         heading: 'Contacto',
         paragraphs: [
-          'Para solicitudes de privacidad, seguridad o eliminación, contacte mow.coding@gmail.com.',
+          'Para preguntas sobre el servicio, errores o seguridad, contacte mow.coding@gmail.com.',
         ],
       },
     ],
@@ -222,9 +222,9 @@ const CONTENT: Record<Language, PrivacyContent> = {
         ],
       },
       {
-        heading: 'Escopo do Neon DB',
+        heading: 'Escopo do banco de dados do servidor',
         paragraphs: [
-          'O Neon é usado apenas para recuperação vetorial de documentos públicos de referência (RAG). Contas, chaves API, histórico de chat e dados de cálculo não são salvos no Neon.',
+          'O banco de dados do servidor é usado apenas na medida necessária para recuperar documentos públicos de referência (RAG). Contas, chaves API, histórico de chat e dados de cálculo não são salvos no banco de dados do servidor.',
           'Em produção, deve ser usado um papel de banco de dados somente leitura para recuperação RAG.',
         ],
       },
@@ -245,7 +245,7 @@ const CONTENT: Record<Language, PrivacyContent> = {
       {
         heading: 'Contato',
         paragraphs: [
-          'Para solicitações de privacidade, segurança ou exclusão, contate mow.coding@gmail.com.',
+          'Para dúvidas sobre o serviço, erros ou segurança, contate mow.coding@gmail.com.',
         ],
       },
     ],
