@@ -96,18 +96,23 @@ function ReleaseList({
 
 export default function VersionArchiveList({ v2NextVersions, v1GasVersions }: VersionArchiveListProps) {
   const [sortOrder, setSortOrder] = useState<SortOrder>('desc');
+  const v2SourceUrl = v2NextVersions.find((entry) => entry.sourceUrl)?.sourceUrl ?? null;
   const sortedV1Versions = useMemo(() => sortVersions(v1GasVersions, sortOrder), [sortOrder, v1GasVersions]);
 
   return (
     <div className="mt-8">
       <section>
-        <h2 className="mb-3 text-base font-semibold text-[var(--text-strong)]">
-          {'[NextJS] \uBC84\uC804 2 \uB9B4\uB9AC\uC988 \uAE30\uB85D'}
-        </h2>
+        <div className="mb-3 flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+          <h2 className="text-base font-semibold text-[var(--text-strong)]">
+            {'[NextJS] \uBC84\uC804 2 \uB9B4\uB9AC\uC988 \uAE30\uB85D'}
+          </h2>
+          {v2SourceUrl ? <TextLink href={v2SourceUrl}>{'\uC18C\uC2A4\uCF54\uB4DC'}</TextLink> : null}
+        </div>
         <ReleaseList
           entries={v2NextVersions}
           sourceLabel={'\uC18C\uC2A4\uCF54\uB4DC'}
           releaseLabel={'\uD328\uCE58\uB178\uD2B8'}
+          showSource={false}
           showUnavailableActions
         />
       </section>
