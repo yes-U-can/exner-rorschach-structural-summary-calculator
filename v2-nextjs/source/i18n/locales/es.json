@@ -409,7 +409,9 @@
     "resultsReady": "He terminado de leer todos los resultados. Hazme las preguntas que quieras.",
     "apiKeyMissing": "Introduce una API key para iniciar una sesion de IA.",
     "billingOrQuota": "Revisa el estado de facturación o cuota de tu API. Después, vuelve a intentarlo.",
-    "invalidApiKey": "Revisa la API key ingresada. Puede estar inválida o vencida."
+    "invalidApiKey": "Revisa la API key ingresada. Puede estar inválida o vencida.",
+    "modelUnavailable": "Esta clave de API no puede acceder al modelo de IA seleccionado. Revisa el acceso al modelo en la cuenta del proveedor.",
+    "providerRejected": "El proveedor de IA rechazó la solicitud. Revisa la clave de API, el estado de facturación y el acceso al modelo."
   },
   "auth": {
     "googleContinue": "Start with API key"

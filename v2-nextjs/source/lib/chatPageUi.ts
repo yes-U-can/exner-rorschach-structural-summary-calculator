@@ -8,8 +8,11 @@ type ChatPageUi = {
   attachFile: string;
   removeAttachment: string;
   attachmentTooLarge: string;
+  attachmentUnsupported: string;
+  attachmentOneFileOnly: string;
   attachmentReadFailed: string;
   attachmentReady: string;
+  attachmentDropHint: string;
   citationTitle: string;
   citationOpen: string;
   modelCatalogFallback: string;
@@ -30,8 +33,11 @@ const CHAT_PAGE_UI: Record<Language, ChatPageUi> = {
     attachFile: 'Attach CSV or text file',
     removeAttachment: 'Remove attachment',
     attachmentTooLarge: 'The file is too large. Please attach a CSV or text file under 48 KB.',
+    attachmentUnsupported: 'Only CSV or text files can be attached.',
+    attachmentOneFileOnly: 'Please attach only one CSV or text file at a time.',
     attachmentReadFailed: 'The file could not be read. Please try another CSV or text file.',
     attachmentReady: 'Attached',
+    attachmentDropHint: 'Drop one CSV or text file here.',
     citationTitle: 'References',
     citationOpen: 'Open reference',
     modelCatalogFallback:
@@ -46,8 +52,11 @@ const CHAT_PAGE_UI: Record<Language, ChatPageUi> = {
     attachFile: 'CSV 또는 텍스트 파일 첨부',
     removeAttachment: '첨부 파일 제거',
     attachmentTooLarge: '파일이 너무 큽니다. 48KB 이하의 CSV 또는 텍스트 파일을 첨부해 주세요.',
+    attachmentUnsupported: 'CSV 또는 텍스트 파일만 첨부할 수 있습니다.',
+    attachmentOneFileOnly: '파일은 한 번에 하나만 첨부할 수 있습니다.',
     attachmentReadFailed: '파일을 읽지 못했습니다. 다른 CSV 또는 텍스트 파일로 다시 시도해 주세요.',
     attachmentReady: '첨부됨',
+    attachmentDropHint: 'CSV 또는 텍스트 파일 하나를 여기에 놓아 주세요.',
     citationTitle: '참조 문서',
     citationOpen: '참조 열기',
     modelCatalogFallback:
@@ -62,8 +71,11 @@ const CHAT_PAGE_UI: Record<Language, ChatPageUi> = {
     attachFile: 'CSVまたはテキストファイルを添付',
     removeAttachment: '添付を削除',
     attachmentTooLarge: 'ファイルが大きすぎます。48KB以下のCSVまたはテキストファイルを添付してください。',
+    attachmentUnsupported: 'CSVまたはテキストファイルのみ添付できます。',
+    attachmentOneFileOnly: 'ファイルは一度に1つだけ添付できます。',
     attachmentReadFailed: 'ファイルを読み取れませんでした。別のCSVまたはテキストファイルでお試しください。',
     attachmentReady: '添付済み',
+    attachmentDropHint: 'CSVまたはテキストファイルを1つここにドロップしてください。',
     citationTitle: '参照文書',
     citationOpen: '参照を開く',
     modelCatalogFallback:
@@ -78,8 +90,11 @@ const CHAT_PAGE_UI: Record<Language, ChatPageUi> = {
     attachFile: 'Adjuntar CSV o texto',
     removeAttachment: 'Quitar adjunto',
     attachmentTooLarge: 'El archivo es demasiado grande. Adjunta un CSV o texto de menos de 48 KB.',
+    attachmentUnsupported: 'Solo se pueden adjuntar archivos CSV o de texto.',
+    attachmentOneFileOnly: 'Adjunta solo un archivo CSV o de texto a la vez.',
     attachmentReadFailed: 'No se pudo leer el archivo. Intenta con otro CSV o texto.',
     attachmentReady: 'Adjunto',
+    attachmentDropHint: 'Suelta aquí un CSV o archivo de texto.',
     citationTitle: 'Referencias',
     citationOpen: 'Abrir referencia',
     modelCatalogFallback:
@@ -94,8 +109,11 @@ const CHAT_PAGE_UI: Record<Language, ChatPageUi> = {
     attachFile: 'Anexar CSV ou texto',
     removeAttachment: 'Remover anexo',
     attachmentTooLarge: 'O arquivo é grande demais. Anexe um CSV ou texto com menos de 48 KB.',
+    attachmentUnsupported: 'Só é possível anexar arquivos CSV ou de texto.',
+    attachmentOneFileOnly: 'Anexe apenas um arquivo CSV ou de texto por vez.',
     attachmentReadFailed: 'Não foi possível ler o arquivo. Tente outro CSV ou texto.',
     attachmentReady: 'Anexado',
+    attachmentDropHint: 'Solte aqui um CSV ou arquivo de texto.',
     citationTitle: 'Referências',
     citationOpen: 'Abrir referência',
     modelCatalogFallback:

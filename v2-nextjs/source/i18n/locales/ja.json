@@ -409,7 +409,9 @@
     "resultsReady": "検査結果をすべて読み込みました。気になる点を質問してください。",
     "apiKeyMissing": "AIセッションを開始するにはAPIキーを入力してください。",
     "billingOrQuota": "APIの請求状態または利用上限を確認してから、もう一度お試しください。",
-    "invalidApiKey": "入力したAPIキーを確認してください。無効または期限切れの可能性があります。"
+    "invalidApiKey": "入力したAPIキーを確認してください。無効または期限切れの可能性があります。",
+    "modelUnavailable": "現在接続されているAPIキーでは、このAIモデルを利用できません。API提供元のモデルアクセス権限を確認してください。",
+    "providerRejected": "AIプロバイダーがリクエストを拒否しました。APIキー、請求状態、モデルアクセス権限を確認してください。"
   },
   "auth": {
     "googleContinue": "Start with API key"

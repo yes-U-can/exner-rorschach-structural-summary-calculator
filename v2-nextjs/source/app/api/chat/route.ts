@@ -237,21 +237,113 @@ async function callOpenAI(
   messages: { role: 'system' | 'user' | 'assistant'; content: string }[],
 ) {
   const openai = new OpenAI({ apiKey });
-  const stream = await openai.chat.completions.create({
+
+  const instructions = messages
+    .filter((message) => message.role === 'system')
+    .map((message) => message.content)
+    .join('\n\n')
+    .trim();
+  const input = messages
+    .filter((message) => message.role !== 'system')
+    .map((message) => ({
+      role: message.role === 'assistant' ? 'assistant' as const : 'user' as const,
+      content: message.content,
+    }));
+
+  const stream = await openai.responses.create({
     model,
-    messages,
-    max_tokens: maxOutputTokens,
+    ...(instructions ? { instructions } : {}),
+    input,
+    max_output_tokens: maxOutputTokens,
+    store: false,
     stream: true,
   });
 
   return new ReadableStream({
     async start(controller) {
-      for await (const chunk of stream) {
-        controller.enqueue(new TextEncoder().encode(chunk.choices[0]?.delta?.content || ''));
+      const encoder = new TextEncoder();
+      for await (const event of stream) {
+        if (event.type === 'response.output_text.delta') {
+          controller.enqueue(encoder.encode(event.delta));
+          continue;
+        }
+        if (event.type === 'error') {
+          throw new Error(event.message);
+        }
+        if (event.type === 'response.failed') {
+          const message = event.response.error?.message || 'OpenAI response failed.';
+          throw new Error(message);
+        }
       }
       controller.close();
     },
   });
+}
+
+function classifyProviderError(error: unknown): {
+  code: string;
+  publicMessage: string;
+  status: number;
+} {
+  const candidate = error as {
+    status?: number;
+    code?: string;
+    type?: string;
+    message?: string;
+    error?: { code?: string; type?: string; message?: string };
+  };
+  const status = Number(candidate?.status ?? 0);
+  const code = String(candidate?.code ?? candidate?.error?.code ?? '').toLowerCase();
+  const type = String(candidate?.type ?? candidate?.error?.type ?? '').toLowerCase();
+  const message = String(candidate?.message ?? candidate?.error?.message ?? '').toLowerCase();
+  const haystack = [code, type, message].join(' ');
+
+  if (status === 401 || haystack.includes('invalid_api_key') || haystack.includes('api key')) {
+    return {
+      code: 'chat_provider_invalid_api_key',
+      publicMessage: 'The API key was rejected by the AI provider.',
+      status: 401,
+    };
+  }
+
+  if (
+    status === 402 ||
+    status === 429 ||
+    haystack.includes('insufficient_quota') ||
+    haystack.includes('quota') ||
+    haystack.includes('billing') ||
+    haystack.includes('payment')
+  ) {
+    return {
+      code: 'chat_provider_quota_or_billing',
+      publicMessage: 'The AI provider reported a billing, quota, or rate-limit problem.',
+      status: 402,
+    };
+  }
+
+  if (
+    status === 404 ||
+    haystack.includes('model_not_found') ||
+    (haystack.includes('model') && (
+      haystack.includes('does not exist') ||
+      haystack.includes('not found') ||
+      haystack.includes('not available') ||
+      haystack.includes('not supported') ||
+      haystack.includes('access')
+    ))
+  ) {
+    return {
+      code: 'chat_provider_model_unavailable',
+      publicMessage: 'The selected AI model is not available for this API key.',
+      status: 502,
+    };
+  }
+
+  return {
+    code: 'chat_provider_request_failed',
+    publicMessage: 'AI provider rejected the request. Check your API key access or model availability.',
+    status: 502,
+  };
 }
 
 async function callGoogle(
@@ -522,8 +614,9 @@ export async function POST(req: Request) {
         return new NextResponse('Provider is not supported.', { status: 400 });
       }
     } catch (providerError) {
+      const providerFailure = classifyProviderError(providerError);
       await finalizeStreamResult('provider_init_failed');
-      logApiError('chat_provider_request_failed', requestId, providerError, {
+      logApiError(providerFailure.code, requestId, providerError, {
         locale: workflowLocale,
         workflowType: workflowMode,
         modelId: selectedModel.id,
@@ -531,9 +624,9 @@ export async function POST(req: Request) {
       });
       return buildSafeApiErrorResponse({
         requestId,
-        publicMessage: 'AI provider rejected the request. Check your API key access or model availability.',
-        status: 502,
-        code: 'chat_provider_request_failed',
+        publicMessage: providerFailure.publicMessage,
+        status: providerFailure.status,
+        code: providerFailure.code,
       });
     }
 

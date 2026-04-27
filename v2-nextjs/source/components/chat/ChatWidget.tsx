@@ -282,6 +282,18 @@ export default function ChatWidget({
     : null;
   const getFriendlyErrorMessage = useCallback((rawError: string) => {
     const message = rawError.toLowerCase();
+    if (message.includes('chat_provider_invalid_api_key')) {
+      return t('chat.invalidApiKey');
+    }
+    if (message.includes('chat_provider_quota_or_billing')) {
+      return t('chat.billingOrQuota');
+    }
+    if (message.includes('chat_provider_model_unavailable')) {
+      return t('chat.modelUnavailable');
+    }
+    if (message.includes('chat_provider_request_failed')) {
+      return t('chat.providerRejected');
+    }
     if (message.includes('api key not found') || message.includes('api key not configured')) {
       return t('chat.apiKeyMissing');
     }
@@ -294,6 +306,9 @@ export default function ChatWidget({
     }
     if (message.includes('invalid') && message.includes('key')) {
       return t('chat.invalidApiKey');
+    }
+    if (message.includes('model') && (message.includes('unavailable') || message.includes('not found'))) {
+      return t('chat.modelUnavailable');
     }
     return t('chat.errorMessage');
   }, [t]);
@@ -337,7 +352,9 @@ export default function ChatWidget({
         let serverError: string = ui.serverFallbackError;
         try {
           const data = await response.json();
-          if (data?.error && typeof data.error === 'string') {
+          if (data?.code && typeof data.code === 'string') {
+            serverError = data.code;
+          } else if (data?.error && typeof data.error === 'string') {
             serverError = data.error;
           }
         } catch {

@@ -75,6 +75,17 @@ function formatBytes(bytes: number) {
   return `${Math.round(bytes / 1024)} KB`;
 }
 
+function isSupportedChatAttachment(file: File) {
+  const name = file.name.toLowerCase();
+  const type = file.type.toLowerCase();
+  return (
+    name.endsWith('.csv') ||
+    name.endsWith('.txt') ||
+    type === 'text/csv' ||
+    type === 'text/plain'
+  );
+}
+
 function buildMessageWithAttachment(messageText: string, attachment: AttachedTextFile | null) {
   const trimmed = messageText.trim();
   if (!attachment) return trimmed;
@@ -91,6 +102,10 @@ function buildMessageWithAttachment(messageText: string, attachment: AttachedTex
 
 function getVisibleUserMessage(content: string) {
   return content.split('\n\n[Attached file for interpretation context:')[0]?.trim() || content;
+}
+
+function hasFilesInDragEvent(event: React.DragEvent<HTMLElement>) {
+  return Array.from(event.dataTransfer.types).includes('Files');
 }
 
 function ChatPageClient() {
@@ -112,6 +127,7 @@ function ChatPageClient() {
   const [loadedStorageKey, setLoadedStorageKey] = useState<string | null>(null);
   const [attachedFile, setAttachedFile] = useState<AttachedTextFile | null>(null);
   const [attachmentError, setAttachmentError] = useState<string | null>(null);
+  const [isDraggingFile, setIsDraggingFile] = useState(false);
   const storageKey = useMemo(
     () => buildEphemeralChatStorageKey({
       userId: 'browser',
@@ -122,6 +138,7 @@ function ChatPageClient() {
 
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
+  const dragDepthRef = useRef(0);
   const requiredSessionPromptRef = useRef(false);
 
   useEffect(() => {
@@ -219,6 +236,18 @@ function ChatPageClient() {
   const getFriendlyErrorMessage = useCallback(
     (rawError: string) => {
       const message = rawError.toLowerCase();
+      if (message.includes('chat_provider_invalid_api_key')) {
+        return t('chat.invalidApiKey');
+      }
+      if (message.includes('chat_provider_quota_or_billing')) {
+        return t('chat.billingOrQuota');
+      }
+      if (message.includes('chat_provider_model_unavailable')) {
+        return t('chat.modelUnavailable');
+      }
+      if (message.includes('chat_provider_request_failed')) {
+        return t('chat.providerRejected');
+      }
       if (message.includes('api key not found') || message.includes('api key not configured')) {
         return t('chat.apiKeyMissing');
       }
@@ -231,6 +260,9 @@ function ChatPageClient() {
       }
       if (message.includes('invalid') && message.includes('key')) {
         return t('chat.invalidApiKey');
+      }
+      if (message.includes('model') && (message.includes('unavailable') || message.includes('not found'))) {
+        return t('chat.modelUnavailable');
       }
       return t('chat.errorMessage');
     },
@@ -300,7 +332,9 @@ function ChatPageClient() {
           let serverError: string = chatUi.serverFallbackError;
           try {
             const data = await response.json();
-            if (data?.error && typeof data.error === 'string') {
+            if (data?.code && typeof data.code === 'string') {
+              serverError = data.code;
+            } else if (data?.error && typeof data.error === 'string') {
               serverError = data.error;
             }
           } catch {
@@ -401,6 +435,12 @@ function ChatPageClient() {
     if (!file) return;
     setAttachmentError(null);
 
+    if (!isSupportedChatAttachment(file)) {
+      setAttachedFile(null);
+      setAttachmentError(pageUi.attachmentUnsupported);
+      return;
+    }
+
     if (file.size > MAX_CHAT_ATTACHMENT_BYTES) {
       setAttachedFile(null);
       setAttachmentError(pageUi.attachmentTooLarge);
@@ -419,7 +459,47 @@ function ChatPageClient() {
       setAttachedFile(null);
       setAttachmentError(pageUi.attachmentReadFailed);
     }
-  }, [pageUi.attachmentReadFailed, pageUi.attachmentTooLarge]);
+  }, [pageUi.attachmentReadFailed, pageUi.attachmentTooLarge, pageUi.attachmentUnsupported]);
+
+  const handleAttachFiles = useCallback(async (files: FileList | File[]) => {
+    const fileArray = Array.from(files);
+    if (fileArray.length === 0) return;
+    if (fileArray.length > 1) {
+      setAttachedFile(null);
+      setAttachmentError(pageUi.attachmentOneFileOnly);
+      return;
+    }
+    await handleAttachFile(fileArray[0]);
+  }, [handleAttachFile, pageUi.attachmentOneFileOnly]);
+
+  const handleDragEnter = useCallback((event: React.DragEvent<HTMLDivElement>) => {
+    if (!canUseChatInput || !hasFilesInDragEvent(event)) return;
+    event.preventDefault();
+    dragDepthRef.current += 1;
+    setIsDraggingFile(true);
+  }, [canUseChatInput]);
+
+  const handleDragOver = useCallback((event: React.DragEvent<HTMLDivElement>) => {
+    if (!canUseChatInput || !hasFilesInDragEvent(event)) return;
+    event.preventDefault();
+    event.dataTransfer.dropEffect = 'copy';
+  }, [canUseChatInput]);
+
+  const handleDragLeave = useCallback((event: React.DragEvent<HTMLDivElement>) => {
+    if (!canUseChatInput || !hasFilesInDragEvent(event)) return;
+    event.preventDefault();
+    dragDepthRef.current = Math.max(0, dragDepthRef.current - 1);
+    if (dragDepthRef.current === 0) setIsDraggingFile(false);
+  }, [canUseChatInput]);
+
+  const handleDrop = useCallback((event: React.DragEvent<HTMLDivElement>) => {
+    if (!hasFilesInDragEvent(event)) return;
+    event.preventDefault();
+    dragDepthRef.current = 0;
+    setIsDraggingFile(false);
+    if (!canUseChatInput) return;
+    void handleAttachFiles(event.dataTransfer.files);
+  }, [canUseChatInput, handleAttachFiles]);
 
   const showConversation = streamingMessages.length > 0 || isStreaming;
   const showEmptyState = streamingMessages.length === 0 && !isStreaming;
@@ -430,7 +510,20 @@ function ChatPageClient() {
     <div className="flex min-h-screen flex-col bg-[var(--brand-page)]">
       <Header />
       <div className="mx-auto flex w-full max-w-5xl flex-1 px-4 py-8 sm:px-6 lg:px-8">
-        <div className="ui-chat-panel flex min-w-0 flex-1 flex-col overflow-hidden rounded-2xl border shadow-sm">
+        <div
+          className="ui-chat-panel relative flex min-w-0 flex-1 flex-col overflow-hidden rounded-2xl border shadow-sm"
+          onDragEnter={handleDragEnter}
+          onDragOver={handleDragOver}
+          onDragLeave={handleDragLeave}
+          onDrop={handleDrop}
+        >
+          {isDraggingFile && (
+            <div className="pointer-events-none absolute inset-0 z-20 flex items-center justify-center rounded-2xl border-2 border-dashed border-[var(--brand-500)] bg-[var(--surface-base)]/85 p-6 text-center shadow-inner backdrop-blur-sm">
+              <div className="rounded-2xl border border-[var(--border-subtle)] bg-[var(--surface-elevated)] px-5 py-4 text-sm font-semibold text-[var(--text-strong)] shadow-lg">
+                {pageUi.attachmentDropHint}
+              </div>
+            </div>
+          )}
           <main className="flex min-h-0 flex-1 flex-col">
             <div className="flex-1 overflow-y-auto bg-gradient-to-b from-[var(--surface-muted)] to-[var(--surface-base)]">
               {showConversation && (
@@ -540,7 +633,7 @@ function ChatPageClient() {
                   accept=".csv,.txt,text/csv,text/plain"
                   className="hidden"
                   onChange={(event) => {
-                    void handleAttachFile(event.target.files?.[0]);
+                    void handleAttachFiles(event.target.files ?? []);
                     event.currentTarget.value = '';
                   }}
                 />

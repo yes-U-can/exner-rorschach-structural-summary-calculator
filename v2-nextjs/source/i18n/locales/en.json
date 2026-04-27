@@ -409,7 +409,9 @@
     "resultsReady": "I have finished reading all results. Please ask any questions you have.",
     "apiKeyMissing": "Enter an API key to start an AI session.",
     "billingOrQuota": "Please check your API billing or quota status. After updating it, try again and I will continue helping.",
-    "invalidApiKey": "Please check the API key you entered. It may be invalid or expired."
+    "invalidApiKey": "Please check the API key you entered. It may be invalid or expired.",
+    "modelUnavailable": "This API key cannot access the selected AI model. Check model access in your provider account.",
+    "providerRejected": "The AI provider rejected the request. Check your API key, billing status, and model access."
   },
   "auth": {
     "googleContinue": "Start with API key"
