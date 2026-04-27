@@ -1,0 +1,320 @@
+import { DOC_STRUCTURE, INFO_CATEGORIES_MAP } from '@/lib/constants';
+import { getCategoryDescription, getCodeDescription } from '@/lib/infoTranslations';
+import { resultVariableDescriptions } from '@/lib/result-variables';
+import { Code, Language } from '@/types';
+import { GROUP_COLORS, HEADER_ACCENT } from '@/lib/colors';
+import { buildDetailedDocDescription } from '@/lib/docsDetailed';
+import { getActiveReferenceDocByCanonicalRoute } from '@/lib/referenceCorpus';
+
+export type DocKind = 'category' | 'entry';
+
+export type DocRouteItem = {
+  kind: DocKind;
+  id: string;
+  slug: string[];
+};
+
+export type ResolvedDocContent = {
+  title: string;
+  description: string;
+  markdown?: string;
+  aliases?: string[];
+  relatedRoutes?: string[];
+  canonicalRoute?: string;
+  authorityPolicy?: string;
+  status?: string;
+  runtimeReady?: boolean;
+};
+
+const CATEGORY_ONLY_DOC_IDS = new Set(['pair', 'popular']);
+
+export const FIXED_EN_CATEGORY_LABELS: Record<string, string> = {
+  'scoring-input': 'Scoring Input',
+  'result-interpretation': 'Result Interpretation',
+  'upper-section': 'Upper Section',
+  'lower-section': 'Lower Section',
+  'special-indices': 'Special Indices',
+  card: 'Card',
+  location: 'Location',
+  dq: 'DQ',
+  determinants: 'Determinants',
+  fq: 'FQ',
+  pair: 'Pair',
+  contents: 'Contents',
+  popular: 'Popular',
+  z: 'Z',
+  score: 'Score',
+  gphr: 'G/PHR',
+  'special-score': 'Special Score',
+  core: 'Core',
+  ideation: 'Ideation',
+  affect: 'Affection',
+  mediation: 'Cognitive Mediation',
+  processing: 'Information Processing',
+  interpersonal: 'Interpersonal',
+  selfPerception: 'Self-Perception',
+};
+
+const TOP_LEVEL_CATEGORY_LABELS: Record<string, Record<Language, string>> = {
+  'scoring-input': {
+    en: 'Scoring Input',
+    ko: '채점 입력',
+    ja: '採点入力',
+    es: 'Entrada de codificacion',
+    pt: 'Entrada de codificacao',
+  },
+  'result-interpretation': {
+    en: 'Result Interpretation',
+    ko: '결과 해석',
+    ja: '結果解釈',
+    es: 'Interpretacion de resultados',
+    pt: 'Interpretacao de resultados',
+  },
+};
+
+export const CANONICAL_ENTRY_LABELS: Record<string, string> = {
+  Zf: 'Zf',
+  ZSum: 'ZSum',
+  ZEst: 'ZEst',
+  Zd: 'Zd',
+  W: 'W',
+  D: 'D',
+  Dd: 'Dd',
+  S: 'S',
+  dq_plus: '+',
+  dq_o: 'o',
+  dq_vplus: 'v/+',
+  dq_v: 'v',
+  R: 'R',
+  Lambda: 'L',
+  EB: 'EB',
+  EA: 'EA',
+  EBPer: 'EBPer',
+  eb: 'eb',
+  es: 'es',
+  AdjD: 'Adj D',
+  AdjEs: 'Adj es',
+  SumCprime: "SumC'",
+  a_p: 'a:p',
+  Ma_Mp: 'Ma:Mp',
+  _2AB_Art_Ay: '2AB+(Art+Ay)',
+  WSum6: 'WSum6',
+  M_minus: 'M-',
+  FC_CF_C: 'FC:CF+C',
+  PureC: 'Pure C',
+  SumC_WSumC: "SumC':WSumC",
+  S_aff: 'S',
+  Blends_R: 'Blends:R',
+  XA_percent: 'XA%',
+  WDA_percent: 'WDA%',
+  X_minus_percent: 'X-%',
+  S_minus: 'S-',
+  X_plus_percent: 'X+%',
+  Xu_percent: 'Xu%',
+  Zf_proc: 'Zf',
+  Zd_proc: 'Zd',
+  W_D_Dd: 'W:D:Dd',
+  W_M: 'W:M',
+  DQ_plus_proc: 'DQ+',
+  DQ_v_proc: 'DQv',
+  a_p_inter: 'a:p',
+  SumT_inter: 'SumT',
+  HumanCont: 'Human Cont',
+  PureH: 'Pure H',
+  ISO_Index: 'Isol Idx',
+  _3r_2_R: '3r+(2)/R',
+  Fr_rF: 'Fr+rF',
+  SumV_self: 'SumV',
+  An_Xy: 'An+Xy',
+  MOR_self: 'MOR',
+  H_ratio: 'H:(H)+Hd+(Hd)',
+  PTI: 'PTI',
+  DEPI: 'DEPI',
+  CDI: 'CDI',
+  SCON: 'S-CON',
+  HVI: 'HVI',
+  OBS: 'OBS',
+};
+
+const CATEGORY_COLOR_KEYS: Partial<Record<string, keyof typeof GROUP_COLORS.header>> = {
+  card: 'basic',
+  location: 'location',
+  dq: 'dq',
+  determinants: 'determinants',
+  fq: 'fq',
+  pair: 'pair',
+  contents: 'contents',
+  popular: 'popular',
+  z: 'z',
+  score: 'score',
+  gphr: 'gphr',
+  'special-score': 'special',
+};
+
+function fallbackLabel(id: string): string {
+  return id
+    .replace(/_/g, ' ')
+    .replace(/-/g, ' ')
+    .replace(/\b\w/g, (m) => m.toUpperCase());
+}
+
+export function resolveCategoryTitle(id: string, lang: Language = 'en'): string {
+  const topLevel = TOP_LEVEL_CATEGORY_LABELS[id];
+  if (topLevel) return topLevel[lang] ?? topLevel.en;
+  return FIXED_EN_CATEGORY_LABELS[id] ?? fallbackLabel(id);
+}
+
+export function resolveEntryTitle(id: string, lang: Language): string {
+  const canonical = CANONICAL_ENTRY_LABELS[id];
+  if (canonical) return canonical;
+  if (getCodeDescription(id as Code, lang)) return id;
+  return resultVariableDescriptions[id]?.[lang]?.title ?? id;
+}
+
+function fallbackEntryDescription(title: string, lang: Language): string {
+  const messages: Record<Language, string> = {
+    en: `Temporary note for ${title}. This documentation will be refined later.`,
+    ko: `Temporary note for ${title}. This documentation will be refined later.`,
+    ja: `Temporary note for ${title}. This documentation will be refined later.`,
+    es: `Temporary note for ${title}. This documentation will be refined later.`,
+    pt: `Temporary note for ${title}. This documentation will be refined later.`,
+  };
+  return messages[lang];
+}
+
+function fallbackCategoryDescription(title: string, lang: Language): string {
+  const messages: Record<Language, string> = {
+    en: `Temporary overview for ${title}. Detailed guidance will be added later.`,
+    ko: `Temporary overview for ${title}. Detailed guidance will be added later.`,
+    ja: `Temporary overview for ${title}. Detailed guidance will be added later.`,
+    es: `Temporary overview for ${title}. Detailed guidance will be added later.`,
+    pt: `Temporary overview for ${title}. Detailed guidance will be added later.`,
+  };
+  return messages[lang];
+}
+
+export function resolveDocCanonicalRoute(item: DocRouteItem): string {
+  return item.slug.join('/');
+}
+
+export function resolveDocContent(item: DocRouteItem, lang: Language = 'en'): ResolvedDocContent {
+  const canonicalRoute = resolveDocCanonicalRoute(item);
+  const referenceDoc = getActiveReferenceDocByCanonicalRoute(lang, canonicalRoute);
+  if (referenceDoc) {
+    return {
+      title: referenceDoc.title,
+      description: referenceDoc.bodyText,
+      markdown: referenceDoc.bodyMarkdown,
+      aliases: referenceDoc.aliases,
+      relatedRoutes: referenceDoc.relatedRoutes,
+      canonicalRoute: referenceDoc.canonicalRoute,
+      authorityPolicy: referenceDoc.authorityPolicy,
+      status: referenceDoc.status,
+      runtimeReady: referenceDoc.runtimeReady,
+    };
+  }
+
+  if (item.kind === 'entry') {
+    const title = resolveEntryTitle(item.id, lang);
+    const resultDesc =
+      resultVariableDescriptions[item.id]?.[lang]?.description ??
+      resultVariableDescriptions[item.id]?.en?.description ??
+      '';
+    const detailed = buildDetailedDocDescription(item, lang, title, resultDesc);
+    if (detailed) return { title, description: detailed };
+
+    const fallbackResultDesc = resultVariableDescriptions[item.id]?.[lang]?.description;
+    if (fallbackResultDesc) return { title, description: fallbackResultDesc };
+
+    const codeDesc = getCodeDescription(item.id as Code, lang);
+    if (codeDesc?.description) return { title, description: codeDesc.description };
+
+    return { title, description: fallbackEntryDescription(title, lang) };
+  }
+
+  const title = resolveCategoryTitle(item.id, lang);
+  const detailed = buildDetailedDocDescription(item, lang, title, '');
+  if (detailed) return { title, description: detailed };
+
+  const infoCategory = INFO_CATEGORIES_MAP[item.id as keyof typeof INFO_CATEGORIES_MAP];
+  if (infoCategory) {
+    const desc = getCategoryDescription(infoCategory, lang);
+    if (desc) return { title, description: desc };
+  }
+  return { title, description: fallbackCategoryDescription(title, lang) };
+}
+
+export function resolveToneBySlug(slug: string[]): { bg: string; accent: string } | null {
+  const categoryCandidate = slug.find((segment) => CATEGORY_COLOR_KEYS[segment]);
+  if (!categoryCandidate) return null;
+  const key = CATEGORY_COLOR_KEYS[categoryCandidate];
+  if (!key) return null;
+  return {
+    bg: GROUP_COLORS.header[key],
+    accent: HEADER_ACCENT.light[key],
+  };
+}
+
+function walkDocStructure(): DocRouteItem[] {
+  const items: DocRouteItem[] = [];
+
+  const walk = (nodes: typeof DOC_STRUCTURE, parentSlug: string[] = []) => {
+    for (const node of nodes) {
+      const nodeSlug = [...parentSlug, node.id];
+      items.push({ kind: 'category', id: node.id, slug: nodeSlug });
+
+      const effectiveCodes = CATEGORY_ONLY_DOC_IDS.has(node.id) ? [] : (node.codes ?? []);
+      if (effectiveCodes.length) {
+        for (const code of effectiveCodes) {
+          items.push({ kind: 'entry', id: code, slug: [...nodeSlug, code] });
+        }
+      }
+
+      if (node.children?.length) {
+        const leafEntries = node.children.filter((c) => !c.children?.length && !c.codes?.length);
+        for (const leaf of leafEntries) {
+          items.push({ kind: 'entry', id: leaf.id, slug: [...nodeSlug, leaf.id] });
+        }
+
+        const nested = node.children.filter((c) => c.children?.length || c.codes?.length);
+        if (nested.length) {
+          walk(nested as typeof DOC_STRUCTURE, nodeSlug);
+        }
+      }
+    }
+  };
+
+  walk(DOC_STRUCTURE);
+  return items;
+}
+
+const DOC_ROUTE_ITEMS = walkDocStructure();
+
+export function getAllDocRoutes(): DocRouteItem[] {
+  return DOC_ROUTE_ITEMS;
+}
+
+export function findDocRouteBySlug(slug?: string[]): DocRouteItem | undefined {
+  if (!slug?.length) return undefined;
+  const key = slug.join('/');
+  return DOC_ROUTE_ITEMS.find((item) => item.slug.join('/') === key);
+}
+
+export function getDocChildren(parentSlug: string[]): DocRouteItem[] {
+  return DOC_ROUTE_ITEMS.filter((item) => {
+    if (item.slug.length !== parentSlug.length + 1) return false;
+    return parentSlug.every((segment, idx) => item.slug[idx] === segment);
+  });
+}
+
+export function findDocRouteByCanonicalRoute(canonicalRoute: string): DocRouteItem | undefined {
+  return DOC_ROUTE_ITEMS.find((item) => resolveDocCanonicalRoute(item) === canonicalRoute);
+}
+
+export function buildDocHrefFromCanonicalRoute(canonicalRoute: string, lang: Language): string {
+  const encoded = canonicalRoute
+    .split('/')
+    .map((segment) => encodeURIComponent(segment))
+    .join('/');
+  return `/ref/${encoded}?lang=${lang}`;
+}

@@ -1,0 +1,65 @@
+---
+canonicalRoute: "scoring-input/card/III"
+locale: "ja"
+docKind: "coding-entry"
+canonicalTitle: "scoring-input/card/III"
+displayTitle: "[符号化/カード] III"
+aliases:
+  - "Card III"
+  - "カードIII"
+  - "カード3"
+  - "図版III"
+relatedRoutes:
+  - "scoring-input/score"
+  - "scoring-input/determinants/M"
+  - "scoring-input/contents/H"
+  - "scoring-input/gphr"
+  - "scoring-input/special-score/COP"
+  - "scoring-input/special-score/AG"
+  - "scoring-input/popular"
+authorityPolicy: "exner-base"
+status: "draft"
+runtimeReady: false
+provenanceNote: "docs/reference-authoring/notes/provenance-ja-card-i-v-2026-03-10.md"
+---
+
+# Document Name: [符号化/カード] III
+
+## Aliases / Search Terms
+
+- Card III
+- カードIII
+- カード3
+- 図版III
+
+## Core Definition
+
+`Card III` は、人間反応や相互作用場面を促しやすいカードです。  
+このページは、人間内容、運動、関係性の質を符号化するときの確認ポイントをまとめます。
+
+## Application Conditions
+
+- 二人の人物、二つの人型、関係し合う人物場面が出やすいです。
+- 人間運動が明確なら `M` を見直します。
+- 動いている人物同士の協力や攻撃が明確なら `COP` や `AG` を見直します。
+- 人間内容が出やすいので、`H` と `GHR / PHR` の判断も一緒に確認します。
+
+## Cautions / Distinctions
+
+- 二つの人物がいるだけでは `COP` や `AG` にはなりません。
+- 社会的に見える反応でも、人間運動が自動的にあるとは限りません。
+- 二つの独立した対象として述べられているだけなら、直感だけで関係コードを加えません。
+
+## Cross References
+
+- [[符号化] score](ref://scoring-input/score)
+- [[符号化/決定因] M](ref://scoring-input/determinants/M)
+- [[符号化/内容] H](ref://scoring-input/contents/H)
+- [[符号化/GHR-PHR] GHR/PHR](ref://scoring-input/gphr)
+- [[符号化/特殊得点] COP](ref://scoring-input/special-score/COP)
+- [[符号化/特殊得点] AG](ref://scoring-input/special-score/AG)
+- [[符号化/Popular] Popular](ref://scoring-input/popular)
+
+## Evidence Note
+
+- 詳細な出典比較は内部 provenance note に分離してあります。

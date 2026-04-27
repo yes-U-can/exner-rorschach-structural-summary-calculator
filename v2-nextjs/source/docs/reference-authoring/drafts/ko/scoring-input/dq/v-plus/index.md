@@ -1,0 +1,61 @@
+---
+canonicalRoute: "scoring-input/dq/v/+"
+locale: "ko"
+docKind: "coding-entry"
+canonicalTitle: "scoring-input/dq/v/+"
+displayTitle: "[부호화/발달질] v/+"
+aliases:
+  - "DQv/+"
+  - "synthesized response (v/+)"
+  - "발달질 v/+"
+relatedRoutes:
+  - "scoring-input/dq/+"
+  - "scoring-input/dq/o"
+  - "scoring-input/dq/v"
+  - "result-interpretation/lower-section/processing/DQ_v_proc"
+  - "result-interpretation/lower-section/processing/DQ_plus_proc"
+authorityPolicy: "exner+ko-guide"
+status: "draft"
+runtimeReady: false
+provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/dq/v-plus/index.md"
+---
+
+# 문서명: [부호화/발달질] v/+
+
+## 별칭/검색어
+
+- DQv/+
+- synthesized response (v/+)
+- 발달질 v/+
+
+## 핵심 정의
+
+DQv/+는 둘 이상의 부분이나 대상을 하나의 응답으로 결합했지만, 그 결합된 대상들 중 어느 것도 명확한 형태 요구를 가지지 않을 때 부여하는 발달질 코드다.  
+즉, `결합은 있으나 형태 요구는 약한` 통합 반응이다.
+
+## 채점/적용 조건
+
+- 반응 안에 둘 이상의 대상 또는 부분의 결합이 있어야 한다.
+- 그 대상들은 서로 `개별적이지만 관련된` 것으로 보고되어야 한다.
+- 그러나 결합된 대상 중 어느 것도 `specific form demand`를 가지지 않는다.
+- 보통 모양이 매우 가변적인 대상들이 관계를 이루는 반응에서 검토한다.
+
+## 주의사항/감별 기준
+
+- 결합이 있으면 `+`와 `v/+`를 먼저 구분해야 한다.
+- 구분의 핵심은 `대상 중 적어도 하나가 구체적 형태를 요구하는가`이다.
+- 형태 요구가 있는 대상이 하나라도 있으면 `+` 쪽이 더 적합하다.
+- 결합 자체가 없다면 `v/+`가 아니라 `v` 또는 `o`를 검토한다.
+
+## 상호 참조
+
+- [\[부호화/발달질\] +](ref://scoring-input/dq/%2B)
+- [\[부호화/발달질\] o](ref://scoring-input/dq/o)
+- [\[부호화/발달질\] v](ref://scoring-input/dq/v)
+- [\[해석/Processing\] DQv](ref://result-interpretation/lower-section/processing/DQ_v_proc)
+- [\[해석/Processing\] DQ+](ref://result-interpretation/lower-section/processing/DQ_plus_proc)
+
+## 근거 메모
+
+- 세부 근거 대조와 용어 판단 기록은 내부 작업 메모에서 관리한다.
+- 공개 참조 문서 반영 단계에서는 내부 provenance가 노출되지 않도록 분리한다.

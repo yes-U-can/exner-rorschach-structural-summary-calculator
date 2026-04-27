@@ -1,0 +1,125 @@
+{
+  "generatedAt": "2026-03-14T14:05:18.605Z",
+  "providers": [
+    "openai",
+    "google"
+  ],
+  "totals": {
+    "localeCount": 5,
+    "readyLocalesByProvider": {
+      "openai": 5,
+      "google": 5
+    },
+    "allProvidersReady": true
+  },
+  "providerSnapshots": {
+    "openai": {
+      "provider": "openai",
+      "embeddingModel": "text-embedding-3-large",
+      "dimensions": 3072,
+      "totalEmbeddings": 6597,
+      "latestRefreshedAt": "2026-03-14T04:40:40.741Z",
+      "locales": {
+        "ko": {
+          "locale": "ko",
+          "chunkCount": 1398,
+          "embeddedChunkCount": 1398,
+          "dimensions": 3072,
+          "staleEmbeddingCount": 0,
+          "ready": true,
+          "latestRefreshedAt": "2026-03-14T04:38:57.285Z"
+        },
+        "en": {
+          "locale": "en",
+          "chunkCount": 1276,
+          "embeddedChunkCount": 1276,
+          "dimensions": 3072,
+          "staleEmbeddingCount": 0,
+          "ready": true,
+          "latestRefreshedAt": "2026-03-14T04:39:22.968Z"
+        },
+        "ja": {
+          "locale": "ja",
+          "chunkCount": 1276,
+          "embeddedChunkCount": 1276,
+          "dimensions": 3072,
+          "staleEmbeddingCount": 0,
+          "ready": true,
+          "latestRefreshedAt": "2026-03-14T04:40:00.282Z"
+        },
+        "es": {
+          "locale": "es",
+          "chunkCount": 1399,
+          "embeddedChunkCount": 1399,
+          "dimensions": 3072,
+          "staleEmbeddingCount": 0,
+          "ready": true,
+          "latestRefreshedAt": "2026-03-14T04:40:22.330Z"
+        },
+        "pt": {
+          "locale": "pt",
+          "chunkCount": 1248,
+          "embeddedChunkCount": 1248,
+          "dimensions": 3072,
+          "staleEmbeddingCount": 0,
+          "ready": true,
+          "latestRefreshedAt": "2026-03-14T04:40:40.741Z"
+        }
+      }
+    },
+    "google": {
+      "provider": "google",
+      "embeddingModel": "gemini-embedding-001",
+      "dimensions": 3072,
+      "totalEmbeddings": 6597,
+      "latestRefreshedAt": "2026-03-14T05:05:17.901Z",
+      "locales": {
+        "ko": {
+          "locale": "ko",
+          "chunkCount": 1398,
+          "embeddedChunkCount": 1398,
+          "dimensions": 3072,
+          "staleEmbeddingCount": 0,
+          "ready": true,
+          "latestRefreshedAt": "2026-03-14T04:59:16.067Z"
+        },
+        "en": {
+          "locale": "en",
+          "chunkCount": 1276,
+          "embeddedChunkCount": 1276,
+          "dimensions": 3072,
+          "staleEmbeddingCount": 0,
+          "ready": true,
+          "latestRefreshedAt": "2026-03-14T05:00:46.849Z"
+        },
+        "ja": {
+          "locale": "ja",
+          "chunkCount": 1276,
+          "embeddedChunkCount": 1276,
+          "dimensions": 3072,
+          "staleEmbeddingCount": 0,
+          "ready": true,
+          "latestRefreshedAt": "2026-03-14T05:02:14.776Z"
+        },
+        "es": {
+          "locale": "es",
+          "chunkCount": 1399,
+          "embeddedChunkCount": 1399,
+          "dimensions": 3072,
+          "staleEmbeddingCount": 0,
+          "ready": true,
+          "latestRefreshedAt": "2026-03-14T05:03:52.548Z"
+        },
+        "pt": {
+          "locale": "pt",
+          "chunkCount": 1248,
+          "embeddedChunkCount": 1248,
+          "dimensions": 3072,
+          "staleEmbeddingCount": 0,
+          "ready": true,
+          "latestRefreshedAt": "2026-03-14T05:05:17.901Z"
+        }
+      }
+    }
+  }
+}

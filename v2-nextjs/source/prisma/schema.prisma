@@ -1,0 +1,29 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum EmbeddingProvider {
+  openai
+  google
+}
+
+model ReferenceChunkEmbedding {
+  id             String                @id @default(cuid())
+  chunkId        String
+  canonicalRoute String
+  locale         String
+  provider       EmbeddingProvider
+  embeddingModel String
+  dimensions     Int
+  vector         Unsupported("vector")
+  createdAt      DateTime              @default(now())
+  updatedAt      DateTime              @updatedAt
+
+  @@unique([chunkId, locale, provider])
+  @@index([locale, provider, updatedAt])
+  @@index([provider, canonicalRoute])
+}

@@ -2,14 +2,28 @@
 
 로샤 구조요약 계산 도우미의 공개 전시 및 릴리즈 아카이브입니다.
 
-이 저장소는 배포된 버전의 패치노트와 소스코드를 공개하기 위한 공간입니다. 현재는 Google Apps Script로 만든 버전 1 시리즈를 먼저 정리해 두었고, Next.js로 만든 버전 2 소스코드와 패치노트는 정리 후 이 저장소에 이어서 추가할 예정입니다.
+이 저장소는 배포된 버전의 패치노트와 소스코드를 공개하기 위한 공간입니다. v1은 Google Apps Script 웹앱으로, v2는 Next.js 웹앱으로 정리했습니다.
 
 ## 현재 공개된 항목
 
+- [Next.js] 버전 2 릴리즈 기록: [v2-nextjs/releases/v2.0.0](./v2-nextjs/releases/v2.0.0/)
+- [Next.js] 버전 2 공개 소스코드: [v2-nextjs/source](./v2-nextjs/source/)
 - [Google Apps Script] 버전 1 릴리즈 기록: [v1-gas/releases](./v1-gas/releases/)
 - 최신 v1 실행본: [v1.4.1 배포링크](https://script.google.com/macros/s/AKfycbxMCx13pkrSzFs8f2qXfmxy2LRhkBpZTItFTIfEOoOi-zwurbysnKGfDIYtAeEdQP99/exec)
 - 최신 v1 소스코드: [v1-gas/current](./v1-gas/current/)
-- [Next.js] 버전 2 릴리즈 기록: 준비 중
+
+## [Next.js] 버전 2 릴리즈 기록
+
+- **[2026-02-15] v2.0.0 (메이저 패치)** [패치노트](./v2-nextjs/releases/v2.0.0/) [소스코드](./v2-nextjs/source/)
+
+## v2 Next.js 사용 방법
+
+1. [v2-nextjs/source](./v2-nextjs/source/) 폴더를 엽니다.
+2. `npm install`로 의존성을 설치합니다.
+3. `.env.example`을 참고해 로컬 환경변수 파일을 만듭니다.
+4. `npm run build` 또는 `npm run dev`로 앱을 확인합니다.
+
+공개 저장소에는 실제 운영 환경변수, Vercel 설정, 로컬 로그, 캐시, 비공개 작업 노트가 포함되어 있지 않습니다.
 
 ## v1 GAS 사용 방법
 
@@ -32,11 +46,7 @@
 - **[2025-10-24] v1.1.1 (버그 패치)** [배포링크](https://script.google.com/macros/s/AKfycbw6XZZ7D3qiCeSsJPG6aj3DzMMPdA2p0kWhT8WU21WGVFqUltOmAXs3zOx4kXw2u5ul6Q/exec) [패치노트/소스코드](./v1-gas/releases/v1.1.1/)
 - **[2025-10-23] v1.1.0 (마이너 패치)** [배포링크](https://script.google.com/macros/s/AKfycbw2J6gd4Sf_Tjx6s9GdQrWu4b_tOtqwFLtKJCs-vSFRR0c4NZ0Mlb5UFm7-V9zkBPzitg/exec) [패치노트/소스코드](./v1-gas/releases/v1.1.0/)
 - **[2025-10-20] v1.0.4 (핫픽스)** [배포링크](https://script.google.com/macros/s/AKfycbw1GLfIvehoz4wAzC4LicjD_oB0Dpy_sLJ30da9qobx5X4wa3nJr0pLewV0lVPPv1ptGw/exec) [패치노트/소스코드](./v1-gas/releases/v1.0.4/)
-- **[2025-10-19] v1.0.2 (핫픽스)** [배포링크](https://script.google.com/macros/s/AKfycbwtBFge9jPS03Mz4QD5IlUDfHOetaVGsIe48y9dZESkfWtsJ-dnYv9S5iZ_4wxx4dCOUw/exec) [패치노트/소스코드](./v1-gas/releases/v1.0.2/)
 - **[2025-10-19] v1.0.3 (버그 패치)** [배포링크](https://script.google.com/macros/s/AKfycbzoiaofs_I5Ue4p7Eo5XQp0OmUtmbbqkpJuwD-FQ1R4PLscULJB_AHVBb-VylICEKJB1A/exec) [패치노트/소스코드](./v1-gas/releases/v1.0.3/)
+- **[2025-10-19] v1.0.2 (핫픽스)** [배포링크](https://script.google.com/macros/s/AKfycbwtBFge9jPS03Mz4QD5IlUDfHOetaVGsIe48y9dZESkfWtsJ-dnYv9S5iZ_4wxx4dCOUw/exec) [패치노트/소스코드](./v1-gas/releases/v1.0.2/)
 - **[2025-10-18] v1.0.1 (핫픽스)** [배포링크](https://script.google.com/macros/s/AKfycbwNNeJsgRx0sEnZO4X9XxEUEthQlVS3Ttk6k_OSmIj8aTPlpdBQV1653hmBtzLnVX8Q/exec) [패치노트/소스코드](./v1-gas/releases/v1.0.1/)
 - **[2025-10-16] v1.0.0 (메이저 패치)** [배포링크](https://script.google.com/macros/s/AKfycbxYTxqKcmRNJhpE8eCGTBZPyUFVJIRQiUTbyW48lJKg2E7Bgc5RKSitdDTVcE3bzk07JA/exec) [패치노트/소스코드](./v1-gas/releases/v1.0.0/)
-
-## License
-
-MIT License. See [LICENSE](./LICENSE).

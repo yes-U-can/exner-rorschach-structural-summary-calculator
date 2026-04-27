@@ -1,0 +1,433 @@
+{
+  "app": {
+    "title": "Computing Program for Rorschach Structural Summary",
+    "version": "v2.0.0",
+    "provider": "Fornecido pelo Instituto de Psicologia Clínica de Seul"
+  },
+  "nav": {
+    "scoring": "Codificação e Sumário Estrutural",
+    "more": "Documentos de referência",
+    "login": "Iniciar sessão de IA com API key",
+    "logout": "Encerrar sessao de IA",
+    "loginRequired": "API key necessaria",
+    "aiAssistant": "Assistente de codificação",
+    "aiGuide": "Insira uma API key da OpenAI ou do Google para usar o assistente de IA por 24 horas.",
+    "chatSession": "Assistente de interpretação",
+    "home": "Ir para o início",
+    "referenceDocuments": "Documentos de Referencia",
+    "aiChatTop": "Assistente de interpretação",
+    "interpretationNotes": "Notas de Interpretação",
+    "transparencyCenter": "Referência",
+    "homeIntroLine1": "Calculadora do Structural Summary do teste de Rorschach no sistema Exner (CS).",
+    "homeIntroLine2": "Este serviço não substitui o julgamento clínico de um profissional."
+  },
+  "buttons": {
+    "calculate": "Calcular Resultados",
+    "reset": "Redefinir Entrada",
+    "add": "Adicionar",
+    "delete": "Excluir",
+    "print": "Imprimir",
+    "rawData": "Dados Brutos",
+    "summary": "Resumo",
+    "aiInterpret": "Solicitar Interpretação de IA",
+    "yes": "Sim",
+    "no": "Não",
+    "close": "Fechar",
+    "save": "Salvar",
+    "load": "Carregar",
+    "backToInput": "Voltar à Entrada"
+  },
+  "modal": {
+    "welcome": {
+      "title": "Computing Program for Rorschach Structural Summary",
+      "new": "Criar Novo",
+      "loadSample": "Iniciar com Dados de Exemplo",
+      "loadSaved": "Carregar Conteúdo Salvo Automaticamente",
+      "continue": "Continuar Trabalho",
+      "continueMsg": "Há conteúdo em que você trabalhou da última vez."
+    },
+    "reset": {
+      "title": "Por favor, confirme novamente",
+      "message": "Deseja redefinir todos os valores inseridos?"
+    },
+    "ai": {
+      "title": "Etapa de preparação: Baixe o arquivo CSV clicando nos botões verdes na tela anterior.",
+      "message": "Para usar os recursos de IA, inicie uma sessao com uma API key da OpenAI ou do Google.",
+      "open": "Abrir em Nova Janela",
+      "cancel": "Voltar para Resultados"
+    },
+    "privacy": {
+      "title": "Política de Privacidade",
+      "noticeTitle": "※ Aviso de Uso do Armazenamento do Navegador (LocalStorage)",
+      "noticeText_part1": "Este aplicativo armazena temporariamente os dados inseridos na aba 'Codificação e Sumário Estrutural' no armazenamento local (LocalStorage) do navegador do seu computador para sua conveniência de codificação.",
+      "noticeText_part2": "Esses dados não são transmitidos ao servidor nem acessíveis pelo operador, e são usados apenas para restaurar o conteúdo de entrada quando você revisitar o navegador.",
+      "noticeText_part3": "As API keys inseridas para recursos de IA nao sao salvas no banco de dados do servidor. Elas sao criptografadas em um cookie HttpOnly de 24 horas. O historico de chat de IA tambem nao e salvo no banco de dados e fica apenas durante a sessao do navegador."
+    }
+  },
+  "input": {
+    "card": "Cartão",
+    "response": "Resposta",
+    "location": "Localização",
+    "dq": "DQ",
+    "determinants": "Determinantes",
+    "fq": "FQ",
+    "pair": "Par",
+    "contents": "Conteúdos",
+    "popular": "P",
+    "z": "Z",
+    "specialScores": "Pontuações Especiais",
+    "score": "Pontuação",
+    "gphr": "G/PHR",
+    "guideResponse": "Usado para registrar as respostas verbais do avaliado; nao entra no calculo, portanto pode ficar em branco.",
+    "tooltipInfo": "Apenas a linha inferior pode ser manipulada,\ne até 50 linhas são possíveis.",
+    "rowOrderTip": "A ordem das linhas de resposta não afeta os resultados do cálculo.\nPor exemplo, registrar conteúdo para o Cartão 6 na linha 8 e registrar conteúdo para o Cartão 2 na linha 14 está bem.",
+    "scoreTooltip": "Calculado automaticamente com base em [Card] e [Z].",
+    "gphrTooltip": "Classificado automaticamente com base em [Contents], [Determinants], [FQ] e [Special Score].",
+    "noReorderTooltip": "Clique na area da alca para levantar uma linha e movela de posicao.",
+    "responseNumber": "Resposta #{index}",
+    "responseMemo": "Memo da resposta",
+    "pairDisabledTooltip": "Reflection (Fr/rF) ja implica simetria. Pair (2) nao pode ser registrado ao mesmo tempo.",
+    "mobile": {
+      "progressTitle": "Resposta {current} / {total}",
+      "addRow": "Adicionar linha de resposta",
+      "deleteLastRow": "Excluir a última linha de resposta",
+      "previousResponse": "Resposta anterior",
+      "nextResponse": "Próxima resposta",
+      "goToResponse": "Ir para a resposta {index}"
+    }
+  },
+  "info": {
+    "categories": {
+      "scoring-input": "Scoring Input",
+      "result-interpretation": "Result Interpretation",
+      "upper-section": "Upper Section",
+      "lower-section": "Lower Section",
+      "special-indices": "Special Indices",
+      "core": "Core",
+      "ideation": "Ideation",
+      "affect": "Affect",
+      "mediation": "Mediation",
+      "processing": "Processing",
+      "interpersonal": "Interpersonal",
+      "selfPerception": "Self-Perception"
+    },
+    "searchLabel": "Buscar documentos",
+    "searchPlaceholder": "Buscar docs...",
+    "noMatches": "Nenhum documento correspondente nesta aba."
+  },
+  "result": {
+    "tabs": {
+      "upper": "Upper Section",
+      "lower": "Lower Section",
+      "special": "Special Indices"
+    },
+    "upper": {
+      "title": "Upper Section",
+      "location": "Localização",
+      "dq": "Qualidade de Desenvolvimento",
+      "formQuality": "Qualidade da Forma",
+      "determinants": "Determinantes",
+      "contents": "Conteúdos",
+      "approach": "Abordagem",
+      "specialScores": "Pontuações Especiais",
+      "locationFeatures": "Características de localização",
+      "blends": "Misturas",
+      "single": "Simples",
+      "pairs": "Pares"
+    },
+    "core": {
+      "title": "Seção Central",
+      "R": "R",
+      "Lambda": "L",
+      "EB": "EB",
+      "EA": "EA",
+      "EBPer": "EBPer",
+      "eb": "eb",
+      "es": "es",
+      "D": "Pontuação D",
+      "AdjD": "D Ajustado",
+      "AdjEs": "es Ajustado",
+      "FM": "FM",
+      "m": "m",
+      "SumCprime": "SumC'",
+      "SumT": "SumT",
+      "SumV": "SumV",
+      "SumY": "SumY"
+    },
+    "ideation": {
+      "title": "Ideação",
+      "a_p": "a:p",
+      "Ma_Mp": "Ma:Mp",
+      "_2AB_Art_Ay": "2AB+(Art+Ay)",
+      "MOR": "MOR",
+      "Sum6": "Sum6",
+      "Lv2": "Lv2",
+      "WSum6": "WSum6",
+      "M_minus": "M-",
+      "Mnone": "Mnone"
+    },
+    "affect": {
+      "title": "Afeto",
+      "FC_CF_C": "FC:CF+C",
+      "PureC": "C Puro",
+      "SumC_WSumC": "SumC':WSumC",
+      "Afr": "Afr",
+      "S": "S",
+      "Blends_R": "Blends:R",
+      "CP": "CP"
+    },
+    "mediation": {
+      "title": "Mediação",
+      "XA_percent": "XA%",
+      "WDA_percent": "WDA%",
+      "X_minus_percent": "X-%",
+      "S_minus": "S-",
+      "P": "P",
+      "X_plus_percent": "X+%",
+      "Xu_percent": "Xu%"
+    },
+    "processing": {
+      "title": "Processamento",
+      "Zf": "Zf",
+      "Zd": "Zd",
+      "W_D_Dd": "W:D:Dd",
+      "W_M": "W:M",
+      "PSV": "PSV",
+      "DQ_plus": "DQ+",
+      "DQ_v": "DQv"
+    },
+    "interpersonal": {
+      "title": "Interpessoal",
+      "COP": "COP",
+      "AG": "AG",
+      "a_p": "a:p",
+      "Food": "Fd",
+      "SumT": "SumT",
+      "HumanCont": "Cont. Humano",
+      "PureH": "H Puro",
+      "PER": "PER",
+      "ISO_Index": "Índice de Isolamento"
+    },
+    "selfPerception": {
+      "title": "Autopercepção",
+      "_3r_2_R": "3r+(2)/R",
+      "Fr_rF": "Fr+rF",
+      "SumV": "SumV",
+      "FD": "FD",
+      "An_Xy": "An+Xy",
+      "MOR": "MOR",
+      "H_ratio": "H:(H)+Hd+(Hd)"
+    }
+  },
+  "indices": {
+    "title": "Índices Especiais",
+    "PTI": "PTI",
+    "DEPI": "DEPI",
+    "CDI": "CDI",
+    "SCON": "S-CON",
+    "HVI": "HVI",
+    "OBS": "OBS",
+    "sconNote": "( Nota: Aplica-se apenas a examinandos com 14 anos ou mais )",
+    "sconMain": "Marcar se 8 ou mais critérios forem atendidos",
+    "depiMain": "Marcar se 5 ou mais critérios forem atendidos",
+    "cdiMain": "Marcar se 4 ou mais critérios forem atendidos",
+    "hviMain": "Marcar se o critério (1) for atendido e 4 ou mais dos critérios (2)~(8) forem atendidos",
+    "obsMain": "Marcar se 1 ou mais das condições abaixo forem atendidas",
+    "obsR1": "Todos os critérios (1)~(5) são atendidos",
+    "obsR2": "2 ou mais de (1)~(4) são atendidos",
+    "obsR3": "3 ou mais de (1)~(5) são atendidos",
+    "positive": "Positivo",
+    "negative": "Negativo"
+  },
+  "toast": {
+    "overScoring": {
+      "title": "Aviso de Sobre-pontuação",
+      "message": "Ter 4 ou mais determinantes é raro.\n1. O examinando realmente disse isso?\n2. Você pontuou acidentalmente a Forma (F) várias vezes?"
+    },
+    "categoryDup": {
+      "title": "Verificação de Duplicação de Categoria",
+      "message": "Não se trata do número de objetos. Insira a mesma categoria (ex: Animal A) apenas uma vez."
+    },
+    "hierarchy": {
+      "title": "Verificação de Hierarquia",
+      "message": "Muitas pontuações. Tenha cuidado para não inserir pontuações cognitivas múltiplas vezes para a mesma expressão. (Pontuações superiores incluem as inferiores.)"
+    },
+    "tooManyResponses": {
+      "title": "Aviso de Muitas Respostas (R ≥ 45)",
+      "message": "O número de respostas é muito alto. Por favor, revise o processo de administração do teste."
+    },
+    "validity": {
+      "title": "Aviso de Validade",
+      "message": "Se o número de respostas for menor que 14, a validade do perfil pode ser baixa, reduzindo a confiabilidade da interpretação."
+    },
+    "resetComplete": {
+      "title": "Redefinição Completa",
+      "message": "Todos os valores de entrada foram redefinidos."
+    },
+    "autoSaved": {
+      "title": "Salvo Automaticamente",
+      "message": "Sua entrada foi salva automaticamente."
+    },
+    "reflectionPair": {
+      "title": "Exclusão Reflexo-Par",
+      "message": "Reflexo (Fr/rF) foi pontuado, então o par (2) foi automaticamente desmarcado."
+    },
+    "dqVagueFq": {
+      "title": "Restrição DQ-FQ",
+      "message": "Quando DQ é 'v' (vago), FQ '+' (superior) não pode ser selecionado e foi redefinido."
+    },
+    "dqVagueZ": {
+      "title": "Restrição DQ-Z",
+      "message": "Quando DQ é 'v' (vago), a atividade organizacional (Z) não é aplicável."
+    },
+    "pureDeterminantFq": {
+      "title": "FQ de Determinante Puro",
+      "message": "Apenas determinantes sem forma foram pontuados, então FQ foi automaticamente definido como 'none'."
+    },
+    "specialScoreLevel": {
+      "title": "Conflito de Nível de Pontuação Especial",
+      "message": "Nível 1 e Nível 2 da mesma pontuação especial não podem coexistir. O nível anterior foi removido."
+    },
+    "apiKeySaved": {
+      "title": "Chave API conectada",
+      "message": "A chave API da {provider} esta conectada para esta sessao."
+    },
+    "apiKeyError": {
+      "title": "Erro",
+      "message": "Nao foi possivel conectar a chave API. Tente novamente."
+    },
+    "aiInterpretLogin": {
+      "title": "API key necessaria",
+      "message": "Para usar o assistente de IA, inicie uma sessao com uma API key da OpenAI ou do Google."
+    },
+    "aiInterpretApiKey": {
+      "title": "Configuração da API key necessária",
+      "message": "Insira a chave API desta sessao para usar o assistente de IA."
+    }
+  },
+  "loader": {
+    "calculating": "Calculando...",
+    "subtext": "Os resultados do cálculo são salvos automaticamente no navegador e podem ser carregados posteriormente."
+  },
+  "links": {
+    "manual": "Manual do Usuário",
+    "bug": "Relatar Erros e Melhorias",
+    "patch": "Notas de Atualização",
+    "lab": "Instituto de Psicologia Clínica de Seul",
+    "privacy": "Política de Privacidade"
+  },
+  "language": {
+    "select": "Selecionar Idioma",
+    "ko": "Coreano",
+    "en": "Inglês",
+    "ja": "Japonês",
+    "es": "Espanhol",
+    "pt": "Português"
+  },
+  "export": {
+    "rawDataTitle": "Exportar todos os itens inseridos pelo usuário em formato CSV",
+    "summaryTitle": "Exportar todos os itens calculados no sumário estrutural em formato CSV"
+  },
+  "footer": {
+    "title": "Computing Program for Rorschach Structural Summary",
+    "copyright": "© 1997–2026 Instituto de Psicologia Clínica de Seul (Seoul Institute of Clinical Psychology, SICP). Todos os direitos reservados."
+  },
+  "codeList": {
+    "header": "Lista de códigos e descrição de cada item de pontuação."
+  },
+  "specialIndices": {
+    "scon_main": "Marcar se 8 ou mais critérios forem atendidos",
+    "scon_note": "( Nota: Aplica-se apenas a examinandos com 14 anos ou mais )",
+    "depi_main": "Marcar se 5 ou mais critérios forem atendidos",
+    "pti_main": "Pontuação exibida (sem ponto de corte)",
+    "cdi_main": "Marcar se 4 ou mais critérios forem atendidos",
+    "hvi_main": "Marcar se o critério (1) for atendido e 4 ou mais dos critérios (2)~(8) forem atendidos",
+    "obs_main": "Marcar se 1 ou mais das condições abaixo forem atendidas",
+    "obs_r1": "Todos os critérios (1)~(5) são atendidos",
+    "obs_r2": "2 ou mais de (1)~(4) são atendidos",
+    "obs_r3": "3 ou mais de (1)~(5) são atendidos",
+    "positive": "Positivo"
+  },
+  "aiSession": {
+    "title": "Sessao de IA",
+    "subtitle": "Sua API key nao e salva no banco de dados do servidor e fica apenas em um cookie de sessao de 24 horas.",
+    "apiKeys": {
+      "title": "API key da sessao de IA",
+      "openai": "Chave de API da OpenAI",
+      "google": "Chave de API do Google",
+      "placeholder": "Insira a chave API da {provider}",
+      "openaiPlaceholder": "Insira uma API key da OpenAI que comece com sk-...",
+      "googlePlaceholder": "Insira uma API key do Google que comece com AIza...",
+      "saveButton": "Conectar sessao",
+      "setupRequired": "Chave API necessaria",
+      "deleteButton": "Excluir",
+      "saved": "Conectada",
+      "notSaved": "Nao conectada",
+      "storedKey": "Chave da sessao",
+      "exclusiveTitle": "Conecte um provedor de IA",
+      "exclusiveDescription": "Conecte OpenAI ou Google para esta sessao. Uma nova chave substitui a chave anterior da sessao.",
+      "exclusiveNotice": "Conecte OpenAI ou Google.",
+      "loadedModel": "Modelo automatico",
+      "modelPolicy": "O app usa automaticamente o modelo mais recente disponivel que tenha pelo menos um mes de lancamento.",
+      "activeProvider": "Ativo",
+      "currentProviderHelp": "O assistente de interpretacao e o assistente de codificacao usam {provider}.",
+      "optionalProviderHelp": "Insira uma chave da {provider} somente se quiser usa-la.",
+      "replacementNotice": "Esta chave substituira a chave atual da {otherProvider}.",
+      "conflictNotice": "Somente um provedor pode ficar ativo. Uma nova chave substitui a chave atual da sessao.",
+      "saveAndReplaceButton": "Conectar e substituir",
+      "replacedToast": "A chave API da {provider} esta conectada para esta sessao.",
+      "connectedProvider": "{provider} conectado",
+      "noProviderConnected": "Nenhuma chave conectada",
+      "emptyProviderHelp": "Conecte somente um provedor.",
+      "inputLabel": "Chave da {provider}",
+      "showKey": "Mostrar chave API",
+      "hideKey": "Ocultar chave API",
+      "notConnected": "Nao conectada",
+      "sessionKey": "Chave desta sessao",
+      "sessionDescription": "A API key inserida nao e salva no banco de dados do servidor. Ela e criptografada em um cookie HttpOnly de 24 horas. Use apenas uma chave de provedor: OpenAI ou Google.",
+      "promptTitle": "Iniciar sessao de IA",
+      "promptDescription": "A chave nao e salva no banco de dados do servidor. Ela e criptografada em um cookie HttpOnly por 24 horas e excluida ao encerrar a sessao de IA.",
+      "promptLater": "Mais tarde",
+      "connectForSession": "Iniciar sessao de IA",
+      "clearSessionKey": "Encerrar sessao de IA",
+      "providerFormatError": "A aba selecionada nao corresponde ao formato da chave API. Chaves da OpenAI devem comecar com sk-..., e chaves do Google com AIza...."
+    }
+  },
+  "chat": {
+    "title": "Assistente de interpretação",
+    "placeholder": "Faça uma pergunta...",
+    "errorMessage": "Desculpe, não foi possível obter uma resposta. Por favor, verifique sua chave de API e tente novamente.",
+    "history": "Chat temporario",
+    "selectChat": "Esta conversa temporaria fica apenas durante a sessao atual do navegador.",
+    "startNew": "Digite uma mensagem para iniciar uma conversa temporaria.",
+    "noSessions": "Nenhuma conversa salva.",
+    "loading": "Carregando...",
+    "emptyStateTitle": "Chat temporario de IA",
+    "emptyStateDescription": "O chat nao e salvo no banco de dados do servidor e fica apenas durante esta sessao do navegador.",
+    "newChat": "Reiniciar chat temporario",
+    "readingResults": "Lendo os resultados da avaliação. Aguarde um momento...",
+    "resultsReady": "Terminei de ler todos os resultados. Pode enviar suas perguntas.",
+    "apiKeyMissing": "Insira uma API key para iniciar uma sessao de IA.",
+    "billingOrQuota": "Verifique o status de cobrança ou cota da sua API. Depois, tente novamente.",
+    "invalidApiKey": "Verifique a API key informada. Ela pode estar inválida ou expirada."
+  },
+  "auth": {
+    "googleContinue": "Start with API key"
+  },
+  "errors": {
+    "title": "Erro",
+    "calculation": "Ocorreu um erro durante o cálculo."
+  },
+  "reference": {
+    "title": "Documentos de referência",
+    "subtitle": "Pesquise páginas de referência sobre códigos e variáveis do resumo estrutural em formato wiki somente leitura.",
+    "searchLabel": "Pesquisar documentos de referência",
+    "searchPlaceholder": "Buscar por código, título ou palavra-chave...",
+    "empty": "Nenhum documento de referência correspondente foi encontrado. Tente uma palavra-chave mais ampla.",
+    "idle": "Digite uma palavra-chave para pesquisar os documentos de referência.",
+    "results": "{count} resultado(s) para \"{query}\""
+  },
+  "common": {
+    "close": "Fechar"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "name": "rorschach-calculator-v2",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "docs:generate-corpus": "node scripts/generate-reference-corpus.mjs && node scripts/generate-reference-quality-report.mjs && node scripts/generate-reference-release-snapshot.mjs",
+    "docs:audit-authoring": "node scripts/audit-reference-authoring.mjs",
+    "docs:qa-corpus": "node scripts/generate-reference-quality-report.mjs && node scripts/generate-reference-release-snapshot.mjs",
+    "docs:assert-runtime-ready": "node scripts/assert-reference-runtime-ready.mjs",
+    "i18n:audit": "node scripts/audit-i18n-copy.mjs",
+    "dev": "npm run docs:generate-corpus && prisma generate && next dev",
+    "build": "npm run i18n:audit && npm run docs:generate-corpus && npm run docs:assert-runtime-ready && prisma generate && next build",
+    "start": "next start",
+    "lint": "npm run i18n:audit && eslint",
+    "test": "npm run docs:generate-corpus && npm run docs:assert-runtime-ready && prisma generate && vitest run",
+    "security:secrets": "node scripts/security-scan.mjs",
+    "security:audit": "npm audit --omit=dev --audit-level=high && npm audit --audit-level=high",
+    "security:check": "npm run security:secrets && npm run security:audit"
+  },
+  "overrides": {
+    "@hono/node-server": "1.19.14",
+    "postcss": "8.5.12"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@headlessui/react": "^2.2.9",
+    "@heroicons/react": "^2.2.0",
+    "@prisma/client": "^7.8.0",
+    "gray-matter": "^4.0.3",
+    "next": "^16.2.4",
+    "openai": "^6.21.0",
+    "pg": "^8.18.0",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "react-markdown": "^10.1.0",
+    "remark": "^15.0.1",
+    "remark-gfm": "^4.0.1",
+    "strip-markdown": "^6.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.11",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/pg": "^8.18.0",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "^16.2.4",
+    "prisma": "^7.8.0",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vitest": "^4.1.5"
+  }
+}

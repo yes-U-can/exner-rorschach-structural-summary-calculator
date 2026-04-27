@@ -1,0 +1,296 @@
+{
+  "generatedAt": "2026-04-25T16:31:16.683Z",
+  "version": "2026-03-11-all-locales-go-live-v1",
+  "locales": [
+    "ko",
+    "en",
+    "ja",
+    "es",
+    "pt"
+  ],
+  "totals": {
+    "localeCount": 5,
+    "promotedLocales": 5,
+    "runtimeLocales": 5,
+    "allLocalesReady": true,
+    "localesWithBrokenRefs": [],
+    "localesWithBlockers": []
+  },
+  "localeSnapshots": {
+    "ko": {
+      "locale": "ko",
+      "totalDocs": 203,
+      "entryDocs": 180,
+      "categoryDocs": 23,
+      "runtimeReadyDocs": 203,
+      "statusCounts": {
+        "stub": 0,
+        "draft": 203,
+        "reviewed": 0,
+        "locked": 0
+      },
+      "activeRuntimeSource": "reference-corpus",
+      "authorityPolicies": [
+        "exner+ko-guide"
+      ],
+      "promotionEnabled": true,
+      "promotedAt": "2026-03-09",
+      "promotionReason": "KO corpus passed inline-ref QA, public-body QA, 100-query retrieval gate, full test, and production build.",
+      "version": "2026-03-11-all-locales-go-live-v1",
+      "structural": {
+        "totalDocs": 203,
+        "entryDocs": 180,
+        "categoryDocs": 23,
+        "pass": true
+      },
+      "querySet": {
+        "filePath": "docs/reference-authoring/evals/ko-curated-query-set.json",
+        "currentCount": 100,
+        "targetCount": 100,
+        "coveragePass": true,
+        "bucketCounts": {
+          "coding": 40,
+          "interpretation": 40,
+          "graph-navigation": 20
+        }
+      },
+      "inlineRefs": {
+        "count": 1251,
+        "brokenTargetsCount": 0,
+        "pass": true
+      },
+      "publicBodySourceTitles": {
+        "hitsCount": 0,
+        "pass": true
+      },
+      "runtimePromotion": {
+        "readyToPromote": true,
+        "blockers": []
+      },
+      "runtimeFlags": {
+        "allRuntimeReady": true
+      },
+      "readyToServe": true
+    },
+    "en": {
+      "locale": "en",
+      "totalDocs": 203,
+      "entryDocs": 180,
+      "categoryDocs": 23,
+      "runtimeReadyDocs": 203,
+      "statusCounts": {
+        "stub": 0,
+        "draft": 203,
+        "reviewed": 0,
+        "locked": 0
+      },
+      "activeRuntimeSource": "reference-corpus",
+      "authorityPolicies": [
+        "exner-base"
+      ],
+      "promotionEnabled": true,
+      "promotedAt": "2026-03-10",
+      "promotionReason": "EN corpus passed full authoring completion, inline-ref QA, public-body QA, 60-query retrieval gate, full test, and production build.",
+      "version": "2026-03-11-all-locales-go-live-v1",
+      "structural": {
+        "totalDocs": 203,
+        "entryDocs": 180,
+        "categoryDocs": 23,
+        "pass": true
+      },
+      "querySet": {
+        "filePath": "docs/reference-authoring/evals/en-curated-query-set.json",
+        "currentCount": 60,
+        "targetCount": 60,
+        "coveragePass": true,
+        "bucketCounts": {
+          "coding": 24,
+          "interpretation": 24,
+          "graph-navigation": 12
+        }
+      },
+      "inlineRefs": {
+        "count": 1879,
+        "brokenTargetsCount": 0,
+        "pass": true
+      },
+      "publicBodySourceTitles": {
+        "hitsCount": 0,
+        "pass": true
+      },
+      "runtimePromotion": {
+        "readyToPromote": true,
+        "blockers": []
+      },
+      "runtimeFlags": {
+        "allRuntimeReady": true
+      },
+      "readyToServe": true
+    },
+    "ja": {
+      "locale": "ja",
+      "totalDocs": 203,
+      "entryDocs": 180,
+      "categoryDocs": 23,
+      "runtimeReadyDocs": 203,
+      "statusCounts": {
+        "stub": 0,
+        "draft": 203,
+        "reviewed": 0,
+        "locked": 0
+      },
+      "activeRuntimeSource": "reference-corpus",
+      "authorityPolicies": [
+        "exner-base"
+      ],
+      "promotionEnabled": true,
+      "promotedAt": "2026-03-10",
+      "promotionReason": "JA corpus passed full authoring completion, locale QA, 60-query retrieval gate, full test, and production build.",
+      "version": "2026-03-11-all-locales-go-live-v1",
+      "structural": {
+        "totalDocs": 203,
+        "entryDocs": 180,
+        "categoryDocs": 23,
+        "pass": true
+      },
+      "querySet": {
+        "filePath": "docs/reference-authoring/evals/ja-curated-query-set.json",
+        "currentCount": 60,
+        "targetCount": 60,
+        "coveragePass": true,
+        "bucketCounts": {
+          "coding": 24,
+          "interpretation": 24,
+          "graph-navigation": 12
+        }
+      },
+      "inlineRefs": {
+        "count": 1939,
+        "brokenTargetsCount": 0,
+        "pass": true
+      },
+      "publicBodySourceTitles": {
+        "hitsCount": 0,
+        "pass": true
+      },
+      "runtimePromotion": {
+        "readyToPromote": true,
+        "blockers": []
+      },
+      "runtimeFlags": {
+        "allRuntimeReady": true
+      },
+      "readyToServe": true
+    },
+    "es": {
+      "locale": "es",
+      "totalDocs": 203,
+      "entryDocs": 180,
+      "categoryDocs": 23,
+      "runtimeReadyDocs": 203,
+      "statusCounts": {
+        "stub": 0,
+        "draft": 203,
+        "reviewed": 0,
+        "locked": 0
+      },
+      "activeRuntimeSource": "reference-corpus",
+      "authorityPolicies": [
+        "exner+es-manual"
+      ],
+      "promotionEnabled": true,
+      "promotedAt": "2026-03-09",
+      "promotionReason": "ES corpus passed full authoring completion, inline-ref QA, public-body QA, 80-query retrieval gate, full test, and production build.",
+      "version": "2026-03-11-all-locales-go-live-v1",
+      "structural": {
+        "totalDocs": 203,
+        "entryDocs": 180,
+        "categoryDocs": 23,
+        "pass": true
+      },
+      "querySet": {
+        "filePath": "docs/reference-authoring/evals/es-curated-query-set.json",
+        "currentCount": 80,
+        "targetCount": 80,
+        "coveragePass": true,
+        "bucketCounts": {
+          "coding": 32,
+          "interpretation": 32,
+          "graph-navigation": 16
+        }
+      },
+      "inlineRefs": {
+        "count": 1865,
+        "brokenTargetsCount": 0,
+        "pass": true
+      },
+      "publicBodySourceTitles": {
+        "hitsCount": 0,
+        "pass": true
+      },
+      "runtimePromotion": {
+        "readyToPromote": true,
+        "blockers": []
+      },
+      "runtimeFlags": {
+        "allRuntimeReady": true
+      },
+      "readyToServe": true
+    },
+    "pt": {
+      "locale": "pt",
+      "totalDocs": 203,
+      "entryDocs": 180,
+      "categoryDocs": 23,
+      "runtimeReadyDocs": 203,
+      "statusCounts": {
+        "stub": 0,
+        "draft": 203,
+        "reviewed": 0,
+        "locked": 0
+      },
+      "activeRuntimeSource": "reference-corpus",
+      "authorityPolicies": [
+        "exner-base"
+      ],
+      "promotionEnabled": true,
+      "promotedAt": "2026-03-11",
+      "promotionReason": "PT corpus passed full authoring completion, inline-ref QA, public-body QA, 60-query retrieval gate, full test, and production build.",
+      "version": "2026-03-11-all-locales-go-live-v1",
+      "structural": {
+        "totalDocs": 203,
+        "entryDocs": 180,
+        "categoryDocs": 23,
+        "pass": true
+      },
+      "querySet": {
+        "filePath": "docs/reference-authoring/evals/pt-curated-query-set.json",
+        "currentCount": 60,
+        "targetCount": 60,
+        "coveragePass": true,
+        "bucketCounts": {
+          "coding": 24,
+          "interpretation": 24,
+          "graph-navigation": 12
+        }
+      },
+      "inlineRefs": {
+        "count": 1862,
+        "brokenTargetsCount": 0,
+        "pass": true
+      },
+      "publicBodySourceTitles": {
+        "hitsCount": 0,
+        "pass": true
+      },
+      "runtimePromotion": {
+        "readyToPromote": true,
+        "blockers": []
+      },
+      "runtimeFlags": {
+        "allRuntimeReady": true
+      },
+      "readyToServe": true
+    }
+  }
+}

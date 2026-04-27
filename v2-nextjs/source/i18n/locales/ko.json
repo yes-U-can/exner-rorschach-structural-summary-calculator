@@ -1,0 +1,433 @@
+{
+  "app": {
+    "title": "로샤 구조요약 계산 도우미",
+    "version": "v2.0.0",
+    "provider": "Sicp Seoul"
+  },
+  "nav": {
+    "scoring": "채점 & 구조 요약",
+    "more": "참조 문서",
+    "login": "API 키로 AI 세션 시작",
+    "logout": "AI 세션 종료",
+    "loginRequired": "API 키가 필요합니다",
+    "aiAssistant": "코딩 도우미",
+    "aiGuide": "OpenAI 또는 Google API 키를 입력하면 24시간 동안 AI 도우미를 사용할 수 있습니다.",
+    "chatSession": "해석 도우미",
+    "home": "작업공간 홈으로 이동",
+    "referenceDocuments": "참조 문서",
+    "aiChatTop": "해석 도우미",
+    "interpretationNotes": "해석 노트",
+    "transparencyCenter": "참조",
+    "homeIntroLine1": "Exner(CS) 체계 로샤 검사 구조요약 계산기입니다.",
+    "homeIntroLine2": "본 서비스는 전문가의 임상 판단을 대체하지 않습니다."
+  },
+  "buttons": {
+    "calculate": "결과 계산하기",
+    "reset": "입력값 초기화하기",
+    "add": "추가",
+    "delete": "삭제",
+    "print": "인쇄",
+    "rawData": "입력값 원본",
+    "summary": "구조요약 수치",
+    "aiInterpret": "AI에게 해석 부탁하기",
+    "yes": "예",
+    "no": "아니오",
+    "close": "닫기",
+    "save": "저장",
+    "load": "불러오기",
+    "backToInput": "입력으로 돌아가기"
+  },
+  "modal": {
+    "welcome": {
+      "title": "로샤 구조요약 계산 도우미",
+      "new": "새로 만들기",
+      "loadSample": "샘플 데이터로 시작하기",
+      "loadSaved": "자동저장된 내용 불러오기",
+      "continue": "작업 이어하기",
+      "continueMsg": "마지막에 작업했던 내용이 있습니다."
+    },
+    "reset": {
+      "title": "다시 한 번 확인해 주세요",
+      "message": "현재 입력된 모든 값들을 초기화 하시겠습니까?"
+    },
+    "ai": {
+      "title": "준비 단계: 이전 화면의 초록색 버튼을 눌러 CSV 파일을 먼저 내려받아 주세요.",
+      "message": "AI 기능을 사용하려면 OpenAI 또는 Google API 키로 AI 세션을 시작해 주세요.",
+      "open": "새 창에서 열기",
+      "cancel": "결과 화면으로 돌아가기"
+    },
+    "privacy": {
+      "title": "개인정보처리방침",
+      "noticeTitle": "브라우저 저장소(LocalStorage) 사용 안내",
+      "noticeText_part1": "이 앱은 채점 편의를 위해 '채점 & 구조 요약' 탭에 입력한 데이터를 사용자의 브라우저 로컬 저장소(LocalStorage)에 임시 저장합니다.",
+      "noticeText_part2": "이 데이터는 서버로 전송되지 않으며 운영자가 열람할 수 없습니다. 브라우저를 다시 방문했을 때 입력 내용을 복원하는 용도로만 사용됩니다.",
+      "noticeText_part3": "AI 기능에 입력한 API 키는 서버 데이터베이스에 저장되지 않습니다. 24시간짜리 HttpOnly 쿠키에 암호화되어 보관되며, AI 대화 기록도 서버 데이터베이스에 저장되지 않고 브라우저 세션 동안만 유지됩니다."
+    }
+  },
+  "input": {
+    "card": "카드",
+    "response": "반응",
+    "location": "위치",
+    "dq": "DQ",
+    "determinants": "결정인",
+    "fq": "FQ",
+    "pair": "Pair",
+    "contents": "내용",
+    "popular": "P",
+    "z": "Z",
+    "specialScores": "특수점수",
+    "score": "점수",
+    "gphr": "G/PHR",
+    "guideResponse": "피검자의 언어 반응을 메모하는 용도이며 계산에는 사용되지 않으므로 비워 두어도 됩니다.",
+    "tooltipInfo": "맨 아래 행만 조작할 수 있으며,\n최대 50행까지 입력할 수 있습니다.",
+    "rowOrderTip": "반응 행의 순서는 결과 계산에 영향을 미치지 않습니다.\n예를 들어, 8번째 행에 6번 카드 내용을, 14번째 행에 2번 카드 내용을 기록해도 문제 없습니다.",
+    "scoreTooltip": "[Card]와 [Z] 선택에 따라 자동 계산됩니다.",
+    "gphrTooltip": "Contents, Determinants, FQ, Special Score를 바탕으로 자동 분류됩니다.",
+    "responseNumber": "반응 #{index}",
+    "responseMemo": "반응 메모",
+    "pairDisabledTooltip": "Reflection (Fr/rF)은 이미 대칭성을 포함하므로 Pair (2)와 동시 기록할 수 없습니다.",
+    "noReorderTooltip": "핸들 부분을 클릭하면 행을 들어 올려 새 위치로 옮길 수 있습니다.",
+    "mobile": {
+      "progressTitle": "반응 {current} / {total}",
+      "addRow": "반응 행 추가",
+      "deleteLastRow": "마지막 반응 행 삭제",
+      "previousResponse": "이전 반응",
+      "nextResponse": "다음 반응",
+      "goToResponse": "반응 {index}로 이동"
+    }
+  },
+  "info": {
+    "categories": {
+      "scoring-input": "Scoring Input",
+      "result-interpretation": "Result Interpretation",
+      "upper-section": "Upper Section",
+      "lower-section": "Lower Section",
+      "special-indices": "Special Indices",
+      "core": "Core",
+      "ideation": "Ideation",
+      "affect": "Affect",
+      "mediation": "Mediation",
+      "processing": "Processing",
+      "interpersonal": "Interpersonal",
+      "selfPerception": "Self-Perception"
+    },
+    "searchLabel": "문서 검색",
+    "searchPlaceholder": "문서 검색...",
+    "noMatches": "이 탭에서 일치하는 문서가 없습니다."
+  },
+  "result": {
+    "tabs": {
+      "upper": "Upper Section",
+      "lower": "Lower Section",
+      "special": "Special Indices"
+    },
+    "upper": {
+      "title": "Upper Section",
+      "location": "위치",
+      "dq": "발달질",
+      "formQuality": "형태질",
+      "determinants": "결정인",
+      "contents": "내용",
+      "approach": "접근",
+      "specialScores": "특수점수",
+      "locationFeatures": "위치 특징",
+      "blends": "혼합",
+      "single": "단일",
+      "pairs": "쌍"
+    },
+    "core": {
+      "title": "Core Section",
+      "R": "R",
+      "Lambda": "L",
+      "EB": "EB",
+      "EA": "EA",
+      "EBPer": "EBPer",
+      "eb": "eb",
+      "es": "es",
+      "D": "D Score",
+      "AdjD": "Adj D",
+      "AdjEs": "Adj es",
+      "FM": "FM",
+      "m": "m",
+      "SumCprime": "SumC'",
+      "SumT": "SumT",
+      "SumV": "SumV",
+      "SumY": "SumY"
+    },
+    "ideation": {
+      "title": "Ideation",
+      "a_p": "a:p",
+      "Ma_Mp": "Ma:Mp",
+      "_2AB_Art_Ay": "2AB+(Art+Ay)",
+      "MOR": "MOR",
+      "Sum6": "Sum6",
+      "Lv2": "Lv2",
+      "WSum6": "WSum6",
+      "M_minus": "M-",
+      "Mnone": "Mnone"
+    },
+    "affect": {
+      "title": "Affect",
+      "FC_CF_C": "FC:CF+C",
+      "PureC": "Pure C",
+      "SumC_WSumC": "SumC':WSumC",
+      "Afr": "Afr",
+      "S": "S",
+      "Blends_R": "Blends:R",
+      "CP": "CP"
+    },
+    "mediation": {
+      "title": "Mediation",
+      "XA_percent": "XA%",
+      "WDA_percent": "WDA%",
+      "X_minus_percent": "X-%",
+      "S_minus": "S-",
+      "P": "P",
+      "X_plus_percent": "X+%",
+      "Xu_percent": "Xu%"
+    },
+    "processing": {
+      "title": "Processing",
+      "Zf": "Zf",
+      "Zd": "Zd",
+      "W_D_Dd": "W:D:Dd",
+      "W_M": "W:M",
+      "PSV": "PSV",
+      "DQ_plus": "DQ+",
+      "DQ_v": "DQv"
+    },
+    "interpersonal": {
+      "title": "Interpersonal",
+      "COP": "COP",
+      "AG": "AG",
+      "a_p": "a:p",
+      "Food": "Food",
+      "SumT": "SumT",
+      "HumanCont": "Human Cont",
+      "PureH": "Pure H",
+      "PER": "PER",
+      "ISO_Index": "Isol Idx"
+    },
+    "selfPerception": {
+      "title": "Self-Perception",
+      "_3r_2_R": "3r+(2)/R",
+      "Fr_rF": "Fr+rF",
+      "SumV": "SumV",
+      "FD": "FD",
+      "An_Xy": "An+Xy",
+      "MOR": "MOR",
+      "H_ratio": "H:(H)+Hd+(Hd)"
+    }
+  },
+  "indices": {
+    "title": "특수 지표",
+    "PTI": "PTI",
+    "DEPI": "DEPI",
+    "CDI": "CDI",
+    "SCON": "S-CON",
+    "HVI": "HVI",
+    "OBS": "OBS",
+    "sconNote": "( 주의 : 14세 이상의 수검자에게만 적용 )",
+    "sconMain": "8개 이상 해당될 경우 체크",
+    "depiMain": "5개 이상 해당될 경우 체크",
+    "cdiMain": "4개 이상이면 체크",
+    "hviMain": "(1)번을 만족시키고 아래 (2)~(8) 항목 중 4개 이상 해당될 경우 체크",
+    "obsMain": "아래 조건 중 1개 이상 해당되면 체크",
+    "obsR1": "(1)~(5) 모두 해당",
+    "obsR2": "(1)~(4) 중에서 2개 이상 해당",
+    "obsR3": "(1)~(5) 중에서 3개 이상 해당",
+    "positive": "Positive",
+    "negative": "NO"
+  },
+  "toast": {
+    "overScoring": {
+      "title": "과잉 채점 주의",
+      "message": "결정인이 4개 이상인 경우는 드뭅니다.\n1. 수검자가 직접 말한 내용인가요?\n2. 혹시 형태(F)를 중복 채점하지 않았나요?"
+    },
+    "categoryDup": {
+      "title": "범주 중복 확인",
+      "message": "사물의 개수가 아닙니다. 같은 범주(예: 동물 A)는 한 번만 입력하세요."
+    },
+    "hierarchy": {
+      "title": "위계(Hierarchy) 점검",
+      "message": "점수가 많습니다. 동일한 표현에 대해 인지 점수를 중복 입력하지 않도록 주의하세요. (상위 점수가 하위 점수를 포함함)"
+    },
+    "tooManyResponses": {
+      "title": "반응 과다 주의 (R ≥ 45)",
+      "message": "반응 수가 너무 많습니다. 검사 실시 과정을 점검해 보세요."
+    },
+    "validity": {
+      "title": "타당도 주의",
+      "message": "반응 수가 14개 미만이면 프로파일의 타당도가 낮아져 해석의 신뢰도가 떨어질 수 있습니다."
+    },
+    "resetComplete": {
+      "title": "초기화 완료",
+      "message": "모든 입력값이 초기화되었습니다."
+    },
+    "autoSaved": {
+      "title": "자동 저장됨",
+      "message": "입력 내용이 자동 저장되었습니다."
+    },
+    "reflectionPair": {
+      "title": "반사-쌍반응 상호배제",
+      "message": "반사반응(Fr/rF)이 채점된 경우, 쌍반응(2)은 자동으로 해제됩니다."
+    },
+    "dqVagueFq": {
+      "title": "DQ-FQ 제약",
+      "message": "DQ가 'v'(모호)인 경우, FQ '+'(우수)는 선택할 수 없어 초기화됩니다."
+    },
+    "dqVagueZ": {
+      "title": "DQ-Z 제약",
+      "message": "DQ가 'v'(모호)인 경우, 조직화 활동(Z)은 부여되지 않습니다."
+    },
+    "pureDeterminantFq": {
+      "title": "순수 결정인 FQ",
+      "message": "형태가 포함되지 않은 순수 결정인만 채점되어, FQ가 'none'으로 자동 설정됩니다."
+    },
+    "specialScoreLevel": {
+      "title": "특수점수 수준 중복",
+      "message": "같은 특수점수의 Level 1과 Level 2는 동시에 부여할 수 없습니다. 이전 수준이 자동으로 제거됩니다."
+    },
+    "apiKeySaved": {
+      "title": "API 키 연결됨",
+      "message": "{provider} API 키를 이번 세션에 연결했습니다."
+    },
+    "apiKeyError": {
+      "title": "오류",
+      "message": "API 키를 연결하지 못했습니다. 다시 시도해 주세요."
+    },
+    "aiInterpretLogin": {
+      "title": "API 키가 필요합니다",
+      "message": "AI 도우미를 사용하려면 OpenAI 또는 Google API 키로 AI 세션을 시작해 주세요."
+    },
+    "aiInterpretApiKey": {
+      "title": "API 키 설정이 필요합니다",
+      "message": "이번 세션에서 사용할 API 키를 입력해 주세요. 그러면 AI 해석을 바로 사용할 수 있습니다."
+    }
+  },
+  "loader": {
+    "calculating": "계산 중...",
+    "subtext": "계산 결과는 브라우저에 자동 저장되며 나중에 다시 불러올 수 있습니다."
+  },
+  "links": {
+    "manual": "사용자 안내",
+    "bug": "버그 및 개선 제보",
+    "patch": "패치 노트",
+    "lab": "서울임상심리연구소",
+    "privacy": "개인정보처리방침"
+  },
+  "language": {
+    "select": "언어 선택",
+    "ko": "한국어",
+    "en": "English",
+    "ja": "日本語",
+    "es": "Español",
+    "pt": "Português"
+  },
+  "export": {
+    "rawDataTitle": "사용자가 입력한 항목을 모두 csv 형태로 내보냅니다",
+    "summaryTitle": "구조 요약지에 산출된 항목을 모두 csv 형태로 내보냅니다"
+  },
+  "footer": {
+    "title": "로샤 구조요약 계산 도우미",
+    "copyright": "© 1997-2026 서울임상심리연구소(Seoul Institute of Clinical Psychology, SICP). All rights reserved."
+  },
+  "codeList": {
+    "header": "각 채점 항목의 코드 목록과 설명입니다."
+  },
+  "specialIndices": {
+    "scon_main": "8개 이상 해당될 경우 체크",
+    "scon_note": "( 주의 : 14세 이상의 수검자에게만 적용 )",
+    "depi_main": "5개 이상 해당될 경우 체크",
+    "pti_main": "점수 표시 (컷오프 없음)",
+    "cdi_main": "4개 이상이면 체크",
+    "hvi_main": "(1)번을 만족시키고 아래 (2)~(8) 항목 중 4개 이상 해당될 경우 체크",
+    "obs_main": "아래 조건 중 1개 이상 해당되면 체크",
+    "obs_r1": "(1)~(5) 모두 해당",
+    "obs_r2": "(1)~(4) 중에서 2개 이상 해당",
+    "obs_r3": "(1)~(5) 중에서 3개 이상 해당",
+    "positive": "양성"
+  },
+  "aiSession": {
+    "title": "AI 세션",
+    "subtitle": "API 키는 서버 데이터베이스에 저장되지 않고 24시간 세션 쿠키에만 보관됩니다.",
+    "apiKeys": {
+      "title": "AI 세션 API 키",
+      "openai": "OpenAI API 키",
+      "google": "Google API 키",
+      "placeholder": "{provider} API 키 입력",
+      "openaiPlaceholder": "sk-...로 시작하는 OpenAI API 키 입력",
+      "googlePlaceholder": "AIza...로 시작하는 Google API 키 입력",
+      "saveButton": "세션에 연결",
+      "setupRequired": "API 키 연결이 필요합니다",
+      "deleteButton": "삭제",
+      "saved": "연결됨",
+      "notSaved": "미연결",
+      "storedKey": "세션 키",
+      "exclusiveTitle": "하나의 AI 제공자만 연결하면 됩니다",
+      "exclusiveDescription": "OpenAI 또는 Google 중 하나만 이번 세션에 연결합니다. 새 키를 연결하면 이전 세션 키는 교체됩니다.",
+      "exclusiveNotice": "OpenAI 또는 Google 중 하나만 연결하면 됩니다.",
+      "loadedModel": "자동 선택 모델",
+      "modelPolicy": "출시된 지 한 달 이상 지나 안정성이 확인된 모델 중, 현재 사용할 수 있는 가장 최신 모델을 자동으로 사용합니다.",
+      "activeProvider": "사용 중",
+      "currentProviderHelp": "현재 {provider} 키로 해석 도우미와 코딩 도우미가 작동합니다.",
+      "optionalProviderHelp": "{provider} 키를 쓰고 싶을 때만 입력하면 됩니다.",
+      "replacementNotice": "저장하면 기존 {otherProvider} 키가 삭제됩니다.",
+      "conflictNotice": "두 제공자의 키가 모두 저장되어 있습니다. 새로 사용할 키 하나를 저장하면 다른 키는 자동으로 정리됩니다.",
+      "saveAndReplaceButton": "연결하고 교체",
+      "replacedToast": "{provider} API 키를 이번 세션에 연결했습니다.",
+      "connectedProvider": "{provider} 연결됨",
+      "noProviderConnected": "연결 없음",
+      "emptyProviderHelp": "필요한 제공자 하나만 연결해 주세요.",
+      "inputLabel": "{provider} 키 입력",
+      "showKey": "API 키 보기",
+      "hideKey": "API 키 숨기기",
+      "notConnected": "미연결",
+      "sessionKey": "이번 세션 키",
+      "sessionDescription": "입력한 API 키는 서버 데이터베이스에 저장되지 않습니다. 24시간짜리 HttpOnly 쿠키에 암호화되어 보관되며, OpenAI 또는 Google 중 하나의 키만 사용할 수 있습니다.",
+      "promptTitle": "AI 세션 시작",
+      "promptDescription": "API 키는 서버 데이터베이스에 저장되지 않습니다. 24시간 동안 HttpOnly 쿠키에 암호화되어 보관되며, AI 세션을 종료하면 삭제됩니다.",
+      "promptLater": "나중에",
+      "connectForSession": "AI 세션 시작",
+      "clearSessionKey": "AI 세션 종료",
+      "providerFormatError": "선택한 탭과 API 키 형식이 맞지 않습니다. OpenAI 키는 sk-..., Google 키는 AIza...로 시작해야 합니다."
+    }
+  },
+  "chat": {
+    "title": "해석 도우미",
+    "placeholder": "질문을 입력하세요...",
+    "errorMessage": "응답을 받지 못했습니다. API 키를 확인하고 다시 시도해 주세요.",
+    "history": "임시 대화",
+    "selectChat": "현재 브라우저 세션에서만 유지되는 임시 대화입니다.",
+    "startNew": "메시지를 입력하면 임시 대화가 시작됩니다.",
+    "noSessions": "저장된 대화가 없습니다.",
+    "loading": "로딩 중...",
+    "emptyStateTitle": "임시 AI 대화",
+    "emptyStateDescription": "대화는 서버 데이터베이스에 저장되지 않고 현재 브라우저 세션 동안만 유지됩니다.",
+    "newChat": "임시 대화 초기화",
+    "readingResults": "검사 결과를 읽고 있습니다. 잠시만 기다려 주세요...",
+    "resultsReady": "검사 결과를 모두 읽었습니다. 궁금한 점을 질문해 주세요.",
+    "apiKeyMissing": "AI 세션을 시작하려면 API 키를 입력해 주세요.",
+    "billingOrQuota": "API 사용 한도 또는 결제 상태를 확인한 뒤 다시 시도해 주세요.",
+    "invalidApiKey": "입력한 API 키를 확인해 주세요. 키가 잘못되었거나 만료되었을 수 있습니다."
+  },
+  "auth": {
+    "googleContinue": "Start with API key"
+  },
+  "errors": {
+    "title": "오류",
+    "calculation": "계산 중 오류가 발생했습니다."
+  },
+  "reference": {
+    "title": "참조 문서",
+    "subtitle": "채점 항목과 구조요약 변수를 읽기 전용 위키 형식으로 검색할 수 있습니다.",
+    "searchLabel": "참조 문서 검색",
+    "searchPlaceholder": "코드, 제목, 키워드로 검색...",
+    "empty": "일치하는 참조 문서를 찾지 못했습니다. 더 넓은 키워드로 다시 검색해 보세요.",
+    "idle": "키워드를 입력해 참조 문서를 검색해 보세요.",
+    "results": "\"{query}\" 검색 결과 {count}건"
+  },
+  "common": {
+    "close": "닫기"
+  }
+}

@@ -1,0 +1,433 @@
+{
+  "app": {
+    "title": "ロールシャッハ構造要約計算ヘルパー",
+    "version": "v2.0.0",
+    "provider": "Sicp Seoul"
+  },
+  "nav": {
+    "scoring": "採点 & 構造要約",
+    "more": "参照文書",
+    "login": "APIキーでAIセッションを開始",
+    "logout": "AIセッションを終了",
+    "loginRequired": "APIキーが必要です",
+    "aiAssistant": "コーディング補助",
+    "aiGuide": "OpenAIまたはGoogleのAPIキーを入力すると、24時間AIアシスタントを利用できます。",
+    "chatSession": "解釈補助",
+    "home": "ワークスペースのホームへ移動",
+    "referenceDocuments": "参照文書",
+    "aiChatTop": "解釈補助",
+    "interpretationNotes": "解釈ノート",
+    "transparencyCenter": "参照",
+    "homeIntroLine1": "Exner(CS)体系ロールシャッハ検査の構造要約計算機です。",
+    "homeIntroLine2": "本サービスは専門家の臨床判断を代替するものではありません。"
+  },
+  "buttons": {
+    "calculate": "結果を計算する",
+    "reset": "入力をリセット",
+    "add": "追加",
+    "delete": "削除",
+    "print": "印刷",
+    "rawData": "生データ",
+    "summary": "要約",
+    "aiInterpret": "AI解釈をリクエスト",
+    "yes": "はい",
+    "no": "いいえ",
+    "close": "閉じる",
+    "save": "保存",
+    "load": "読み込み",
+    "backToInput": "入力に戻る"
+  },
+  "modal": {
+    "welcome": {
+      "title": "Computing Program for Rorschach Structural Summary",
+      "new": "新規作成",
+      "loadSample": "サンプルデータで開始",
+      "loadSaved": "自動保存された内容を読み込む",
+      "continue": "作業を続ける",
+      "continueMsg": "前回作業した内容があります。"
+    },
+    "reset": {
+      "title": "再確認してください",
+      "message": "現在の入力値をすべてリセットしますか？"
+    },
+    "ai": {
+      "title": "準備手順: 前の画面の緑色のボタンを押して、先にCSVファイルをダウンロードしてください。",
+      "message": "AI機能を使うには、OpenAIまたはGoogleのAPIキーでAIセッションを開始してください。",
+      "open": "新しいウィンドウで開く",
+      "cancel": "結果画面に戻る"
+    },
+    "privacy": {
+      "title": "プライバシーポリシー",
+      "noticeTitle": "ブラウザ保存領域(LocalStorage)の利用案内",
+      "noticeText_part1": "このアプリは採点の利便性のために、『採点 & 構造要約』タブへ入力したデータをブラウザのローカルストレージ(LocalStorage)に一時保存します。",
+      "noticeText_part2": "このデータはサーバーへ送信されず、運営者が閲覧することもありません。ブラウザを再訪したときに入力内容を復元する目的にのみ使われます。",
+      "noticeText_part3": "AI機能に入力したAPIキーはサーバーデータベースには保存されません。24時間のHttpOnly Cookieに暗号化して保存され、AIチャット履歴もサーバーデータベースには保存されず、ブラウザセッション中だけ保持されます。"
+    }
+  },
+  "input": {
+    "card": "カード",
+    "response": "反応",
+    "location": "位置",
+    "dq": "DQ",
+    "determinants": "決定因",
+    "fq": "FQ",
+    "pair": "Pair",
+    "contents": "内容",
+    "popular": "P",
+    "z": "Z",
+    "specialScores": "特殊得点",
+    "score": "得点",
+    "gphr": "G/PHR",
+    "guideResponse": "被検者の言語反応をメモする用途であり、計算には使われないため空欄でも構いません。",
+    "tooltipInfo": "一番下の行のみ操作でき、\n最大50行まで入力できます。",
+    "rowOrderTip": "反応行の順序は結果計算に影響しません。\n例えば8行目に6番カードの内容を記録し、14行目に2番カードの内容を記録しても問題ありません。",
+    "scoreTooltip": "[Card]と[Z]の選択に基づいて自動計算されます。",
+    "gphrTooltip": "Contents, Determinants, FQ, Special Score をもとに自動分類されます。",
+    "responseNumber": "反応 #{index}",
+    "responseMemo": "反応メモ",
+    "pairDisabledTooltip": "Reflection (Fr/rF)はすでに対称性を含むため、Pair (2)と同時に記録できません。",
+    "noReorderTooltip": "ハンドル部分をクリックすると行を持ち上げて新しい位置へ移動できます。",
+    "mobile": {
+      "progressTitle": "反応 {current} / {total}",
+      "addRow": "反応行を追加",
+      "deleteLastRow": "最後の反応行を削除",
+      "previousResponse": "前の反応",
+      "nextResponse": "次の反応",
+      "goToResponse": "反応 {index}へ移動"
+    }
+  },
+  "info": {
+    "categories": {
+      "scoring-input": "Scoring Input",
+      "result-interpretation": "Result Interpretation",
+      "upper-section": "Upper Section",
+      "lower-section": "Lower Section",
+      "special-indices": "Special Indices",
+      "core": "Core",
+      "ideation": "Ideation",
+      "affect": "Affect",
+      "mediation": "Mediation",
+      "processing": "Processing",
+      "interpersonal": "Interpersonal",
+      "selfPerception": "Self-Perception"
+    },
+    "searchLabel": "文書検索",
+    "searchPlaceholder": "文書検索...",
+    "noMatches": "このタブに一致する文書はありません。"
+  },
+  "result": {
+    "tabs": {
+      "upper": "Upper Section",
+      "lower": "Lower Section",
+      "special": "Special Indices"
+    },
+    "upper": {
+      "title": "Upper Section",
+      "location": "位置",
+      "dq": "発達質",
+      "formQuality": "形態質",
+      "determinants": "決定因",
+      "contents": "内容",
+      "approach": "アプローチ",
+      "specialScores": "特殊スコア",
+      "locationFeatures": "位置特徴",
+      "blends": "混合",
+      "single": "単一",
+      "pairs": "対"
+    },
+    "core": {
+      "title": "Core Section",
+      "R": "R",
+      "Lambda": "L",
+      "EB": "EB",
+      "EA": "EA",
+      "EBPer": "EBPer",
+      "eb": "eb",
+      "es": "es",
+      "D": "D Score",
+      "AdjD": "Adj D",
+      "AdjEs": "Adj es",
+      "FM": "FM",
+      "m": "m",
+      "SumCprime": "SumC'",
+      "SumT": "SumT",
+      "SumV": "SumV",
+      "SumY": "SumY"
+    },
+    "ideation": {
+      "title": "Ideation",
+      "a_p": "a:p",
+      "Ma_Mp": "Ma:Mp",
+      "_2AB_Art_Ay": "2AB+(Art+Ay)",
+      "MOR": "MOR",
+      "Sum6": "Sum6",
+      "Lv2": "Lv2",
+      "WSum6": "WSum6",
+      "M_minus": "M-",
+      "Mnone": "Mnone"
+    },
+    "affect": {
+      "title": "Affect",
+      "FC_CF_C": "FC:CF+C",
+      "PureC": "Pure C",
+      "SumC_WSumC": "SumC':WSumC",
+      "Afr": "Afr",
+      "S": "S",
+      "Blends_R": "Blends:R",
+      "CP": "CP"
+    },
+    "mediation": {
+      "title": "Mediation",
+      "XA_percent": "XA%",
+      "WDA_percent": "WDA%",
+      "X_minus_percent": "X-%",
+      "S_minus": "S-",
+      "P": "P",
+      "X_plus_percent": "X+%",
+      "Xu_percent": "Xu%"
+    },
+    "processing": {
+      "title": "Processing",
+      "Zf": "Zf",
+      "Zd": "Zd",
+      "W_D_Dd": "W:D:Dd",
+      "W_M": "W:M",
+      "PSV": "PSV",
+      "DQ_plus": "DQ+",
+      "DQ_v": "DQv"
+    },
+    "interpersonal": {
+      "title": "Interpersonal",
+      "COP": "COP",
+      "AG": "AG",
+      "a_p": "a:p",
+      "Food": "Food",
+      "SumT": "SumT",
+      "HumanCont": "Human Cont",
+      "PureH": "Pure H",
+      "PER": "PER",
+      "ISO_Index": "Isol Idx"
+    },
+    "selfPerception": {
+      "title": "Self-Perception",
+      "_3r_2_R": "3r+(2)/R",
+      "Fr_rF": "Fr+rF",
+      "SumV": "SumV",
+      "FD": "FD",
+      "An_Xy": "An+Xy",
+      "MOR": "MOR",
+      "H_ratio": "H:(H)+Hd+(Hd)"
+    }
+  },
+  "indices": {
+    "title": "特殊指標",
+    "PTI": "PTI",
+    "DEPI": "DEPI",
+    "CDI": "CDI",
+    "SCON": "S-CON",
+    "HVI": "HVI",
+    "OBS": "OBS",
+    "sconNote": "( 注意：14歳以上の受検者にのみ適用 )",
+    "sconMain": "8個以上該当する場合チェック",
+    "depiMain": "5個以上該当する場合チェック",
+    "cdiMain": "4個以上の場合チェック",
+    "hviMain": "(1)を満たし、(2)~(8)項目のうち4個以上該当する場合チェック",
+    "obsMain": "以下の条件のうち1個以上該当する場合チェック",
+    "obsR1": "(1)~(5)すべて該当",
+    "obsR2": "(1)~(4)のうち2個以上該当",
+    "obsR3": "(1)~(5)のうち3個以上該当",
+    "positive": "Positive",
+    "negative": "NO"
+  },
+  "toast": {
+    "overScoring": {
+      "title": "過剰採点注意",
+      "message": "決定因が4個以上の場合は稀です。\n1. 被検者が実際に言った内容ですか？\n2. 形態(F)を重複して採点していませんか？"
+    },
+    "categoryDup": {
+      "title": "カテゴリ重複確認",
+      "message": "対象の個数ではありません。同じカテゴリ（例：動物A）は一度だけ入力してください。"
+    },
+    "hierarchy": {
+      "title": "階層(Hierarchy)点検",
+      "message": "点数が多すぎます。同じ表現に対して認知点数を重複入力しないよう注意してください。（上位点数は下位点数を含みます）"
+    },
+    "tooManyResponses": {
+      "title": "反応過多注意 (R ≥ 45)",
+      "message": "反応数が多すぎます。検査実施過程を点検してください。"
+    },
+    "validity": {
+      "title": "妥当性注意",
+      "message": "反応数が14個未満の場合、プロファイルの妥当性が低くなり、解釈の信頼性が低下する可能性があります。"
+    },
+    "resetComplete": {
+      "title": "初期化完了",
+      "message": "すべての入力値が初期化されました。"
+    },
+    "autoSaved": {
+      "title": "自動保存完了",
+      "message": "入力内容が自動保存されました。"
+    },
+    "reflectionPair": {
+      "title": "反射-ペア相互排除",
+      "message": "反射反応（Fr/rF）が採点されたため、ペア反応（2）は自動的に解除されます。"
+    },
+    "dqVagueFq": {
+      "title": "DQ-FQ制約",
+      "message": "DQが'v'（曖昧）の場合、FQ'+'（優秀）は選択できずリセットされます。"
+    },
+    "dqVagueZ": {
+      "title": "DQ-Z制約",
+      "message": "DQが'v'（曖昧）の場合、組織化活動（Z）は付与されません。"
+    },
+    "pureDeterminantFq": {
+      "title": "純粋決定因FQ",
+      "message": "形態を含まない純粋決定因のみが採点されたため、FQは自動的に'none'に設定されます。"
+    },
+    "specialScoreLevel": {
+      "title": "特殊スコアレベル重複",
+      "message": "同じ特殊スコアのLevel 1とLevel 2は同時に付与できません。以前のレベルが自動的に削除されます。"
+    },
+    "apiKeySaved": {
+      "title": "APIキーを接続しました",
+      "message": "{provider} APIキーをこのセッションに接続しました。"
+    },
+    "apiKeyError": {
+      "title": "エラー",
+      "message": "APIキーを接続できませんでした。もう一度お試しください。"
+    },
+    "aiInterpretLogin": {
+      "title": "APIキーが必要です",
+      "message": "AIアシスタントを使うには、OpenAIまたはGoogleのAPIキーでAIセッションを開始してください。"
+    },
+    "aiInterpretApiKey": {
+      "title": "APIキー設定が必要です",
+      "message": "このセッションで使うAPIキーを入力すると、AIアシスタントを利用できます。"
+    }
+  },
+  "loader": {
+    "calculating": "計算中...",
+    "subtext": "計算結果はブラウザに自動保存されるため、後で読み込むことができます。"
+  },
+  "links": {
+    "manual": "プログラムの使い方",
+    "bug": "バグ・改善報告",
+    "patch": "パッチノート",
+    "lab": "ソウル臨床心理研究所",
+    "privacy": "個人情報処理方針"
+  },
+  "language": {
+    "select": "言語を選択",
+    "ko": "韓国語",
+    "en": "English",
+    "ja": "日本語",
+    "es": "Español",
+    "pt": "Português"
+  },
+  "export": {
+    "rawDataTitle": "ユーザーが入力したすべての項目をCSV形式でエクスポートします",
+    "summaryTitle": "構造一覧表に算出されたすべての項目をCSV形式でエクスポートします"
+  },
+  "footer": {
+    "title": "Computing Program for Rorschach Structural Summary",
+    "copyright": "© 1997–2026 ソウル臨床心理研究所 (Seoul Institute of Clinical Psychology, SICP). All rights reserved."
+  },
+  "codeList": {
+    "header": "各スコアリング項目のコード一覧と説明です。"
+  },
+  "specialIndices": {
+    "scon_main": "8個以上該当する場合チェック",
+    "scon_note": "( 注意：14歳以上の受検者にのみ適用 )",
+    "depi_main": "5個以上該当する場合チェック",
+    "pti_main": "スコア表示（カットオフなし）",
+    "cdi_main": "4個以上の場合チェック",
+    "hvi_main": "(1)を満たし、(2)~(8)項目のうち4個以上該当する場合チェック",
+    "obs_main": "以下の条件のうち1個以上該当する場合チェック",
+    "obs_r1": "(1)~(5)すべて該当",
+    "obs_r2": "(1)~(4)のうち2個以上該当",
+    "obs_r3": "(1)~(5)のうち3個以上該当",
+    "positive": "陽性"
+  },
+  "aiSession": {
+    "title": "AIセッション",
+    "subtitle": "APIキーはサーバーデータベースに保存されず、24時間のセッションCookieにのみ保持されます。",
+    "apiKeys": {
+      "title": "AIセッションAPIキー",
+      "openai": "OpenAI APIキー",
+      "google": "Google APIキー",
+      "placeholder": "{provider} APIキーを入力",
+      "openaiPlaceholder": "sk-...で始まるOpenAI APIキーを入力",
+      "googlePlaceholder": "AIza...で始まるGoogle APIキーを入力",
+      "saveButton": "セッションに接続",
+      "setupRequired": "APIキーの接続が必要です",
+      "deleteButton": "削除",
+      "saved": "接続済み",
+      "notSaved": "未接続",
+      "storedKey": "セッションキー",
+      "exclusiveTitle": "AI提供元は一つだけ接続します",
+      "exclusiveDescription": "OpenAIまたはGoogleのどちらか一方を、このセッションに接続します。新しいキーを接続すると前のセッションキーは置き換わります。",
+      "exclusiveNotice": "OpenAIまたはGoogleのどちらか一方を接続してください。",
+      "loadedModel": "自動選択モデル",
+      "modelPolicy": "リリースから1か月以上経ち、安定性を確認できたモデルの中から、現在使える最新モデルを自動で使用します。",
+      "activeProvider": "使用中",
+      "currentProviderHelp": "現在、解釈アシスタントとコーディングアシスタントは{provider}キーで動作します。",
+      "optionalProviderHelp": "{provider}キーを使いたい場合だけ入力してください。",
+      "replacementNotice": "接続すると現在の{otherProvider}キーは置き換わります。",
+      "conflictNotice": "有効にできる提供元は一つだけです。新しいキーを接続すると現在のセッションキーは置き換わります。",
+      "saveAndReplaceButton": "接続して置き換え",
+      "replacedToast": "{provider} APIキーをこのセッションに接続しました。",
+      "connectedProvider": "{provider}接続中",
+      "noProviderConnected": "未接続",
+      "emptyProviderHelp": "必要な提供元を一つだけ接続してください。",
+      "inputLabel": "{provider}キー入力",
+      "showKey": "APIキーを表示",
+      "hideKey": "APIキーを隠す",
+      "notConnected": "未接続",
+      "sessionKey": "今回のセッションキー",
+      "sessionDescription": "入力したAPIキーはサーバーデータベースに保存されません。24時間のHttpOnly Cookieに暗号化して保存され、OpenAIまたはGoogleのどちらか一方のキーだけを使用します。",
+      "promptTitle": "AIセッションを開始",
+      "promptDescription": "APIキーはサーバーデータベースに保存されません。24時間HttpOnly Cookieに暗号化して保存され、AIセッションを終了すると削除されます。",
+      "promptLater": "あとで",
+      "connectForSession": "AIセッションを開始",
+      "clearSessionKey": "AIセッションを終了",
+      "providerFormatError": "選択したタブとAPIキーの形式が一致しません。OpenAIキーは sk-...、Googleキーは AIza... で始まる必要があります。"
+    }
+  },
+  "chat": {
+    "title": "解釈補助",
+    "placeholder": "質問を入力...",
+    "errorMessage": "応答を取得できませんでした。APIキーを確認してもう一度お試しください。",
+    "history": "一時チャット",
+    "selectChat": "現在のブラウザセッション中だけ保持される一時会話です。",
+    "startNew": "メッセージを入力すると一時会話が始まります。",
+    "noSessions": "保存された会話はありません。",
+    "loading": "読み込み中...",
+    "emptyStateTitle": "一時AIチャット",
+    "emptyStateDescription": "チャットはサーバーデータベースに保存されず、このブラウザセッション中だけ保持されます。",
+    "newChat": "一時チャットをリセット",
+    "readingResults": "検査結果を読み込んでいます。少しお待ちください...",
+    "resultsReady": "検査結果をすべて読み込みました。気になる点を質問してください。",
+    "apiKeyMissing": "AIセッションを開始するにはAPIキーを入力してください。",
+    "billingOrQuota": "APIの請求状態または利用上限を確認してから、もう一度お試しください。",
+    "invalidApiKey": "入力したAPIキーを確認してください。無効または期限切れの可能性があります。"
+  },
+  "auth": {
+    "googleContinue": "Start with API key"
+  },
+  "errors": {
+    "title": "エラー",
+    "calculation": "計算中にエラーが発生しました。"
+  },
+  "reference": {
+    "title": "参照文書",
+    "subtitle": "採点項目や構造要約変数を検索できる読み取り専用ウィキです。",
+    "searchLabel": "参照文書を検索",
+    "searchPlaceholder": "コード、タイトル、キーワードで検索...",
+    "empty": "該当する参照文書が見つかりません。より広いキーワードで検索してください。",
+    "idle": "キーワードを入力して参照文書を検索してください。",
+    "results": "検索結果 {count}件: \"{query}\""
+  },
+  "common": {
+    "close": "閉じる"
+  }
+}

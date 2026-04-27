@@ -1,0 +1,217 @@
+{
+  "generatedAt": "2026-04-25T16:31:16.632Z",
+  "locales": [
+    "ko",
+    "en",
+    "ja",
+    "es",
+    "pt"
+  ],
+  "localeQuality": {
+    "ko": {
+      "structural": {
+        "totalDocs": 203,
+        "entryDocs": 180,
+        "categoryDocs": 23,
+        "pass": true
+      },
+      "inlineRefs": {
+        "count": 1251,
+        "brokenTargets": [],
+        "pass": true
+      },
+      "publicBodySourceTitles": {
+        "hits": [],
+        "pass": true
+      },
+      "querySet": {
+        "filePath": "docs/reference-authoring/evals/ko-curated-query-set.json",
+        "targetCount": 100,
+        "currentCount": 100,
+        "minimums": {
+          "coding": 40,
+          "interpretation": 40,
+          "graph-navigation": 20
+        },
+        "bucketCounts": {
+          "coding": 40,
+          "interpretation": 40,
+          "graph-navigation": 20
+        },
+        "missingRouteReferences": [],
+        "coveragePass": true
+      },
+      "runtimeFlags": {
+        "allRuntimeReady": true
+      },
+      "runtimePromotion": {
+        "readyToPromote": true,
+        "blockers": []
+      }
+    },
+    "en": {
+      "structural": {
+        "totalDocs": 203,
+        "entryDocs": 180,
+        "categoryDocs": 23,
+        "pass": true
+      },
+      "inlineRefs": {
+        "count": 1879,
+        "brokenTargets": [],
+        "pass": true
+      },
+      "publicBodySourceTitles": {
+        "hits": [],
+        "pass": true
+      },
+      "querySet": {
+        "filePath": "docs/reference-authoring/evals/en-curated-query-set.json",
+        "targetCount": 60,
+        "currentCount": 60,
+        "minimums": {
+          "coding": 24,
+          "interpretation": 24,
+          "graph-navigation": 12
+        },
+        "bucketCounts": {
+          "coding": 24,
+          "interpretation": 24,
+          "graph-navigation": 12
+        },
+        "missingRouteReferences": [],
+        "coveragePass": true
+      },
+      "runtimeFlags": {
+        "allRuntimeReady": true
+      },
+      "runtimePromotion": {
+        "readyToPromote": true,
+        "blockers": []
+      }
+    },
+    "ja": {
+      "structural": {
+        "totalDocs": 203,
+        "entryDocs": 180,
+        "categoryDocs": 23,
+        "pass": true
+      },
+      "inlineRefs": {
+        "count": 1939,
+        "brokenTargets": [],
+        "pass": true
+      },
+      "publicBodySourceTitles": {
+        "hits": [],
+        "pass": true
+      },
+      "querySet": {
+        "filePath": "docs/reference-authoring/evals/ja-curated-query-set.json",
+        "targetCount": 60,
+        "currentCount": 60,
+        "minimums": {
+          "coding": 24,
+          "interpretation": 24,
+          "graph-navigation": 12
+        },
+        "bucketCounts": {
+          "coding": 24,
+          "interpretation": 24,
+          "graph-navigation": 12
+        },
+        "missingRouteReferences": [],
+        "coveragePass": true
+      },
+      "runtimeFlags": {
+        "allRuntimeReady": true
+      },
+      "runtimePromotion": {
+        "readyToPromote": true,
+        "blockers": []
+      }
+    },
+    "es": {
+      "structural": {
+        "totalDocs": 203,
+        "entryDocs": 180,
+        "categoryDocs": 23,
+        "pass": true
+      },
+      "inlineRefs": {
+        "count": 1865,
+        "brokenTargets": [],
+        "pass": true
+      },
+      "publicBodySourceTitles": {
+        "hits": [],
+        "pass": true
+      },
+      "querySet": {
+        "filePath": "docs/reference-authoring/evals/es-curated-query-set.json",
+        "targetCount": 80,
+        "currentCount": 80,
+        "minimums": {
+          "coding": 32,
+          "interpretation": 32,
+          "graph-navigation": 16
+        },
+        "bucketCounts": {
+          "coding": 32,
+          "interpretation": 32,
+          "graph-navigation": 16
+        },
+        "missingRouteReferences": [],
+        "coveragePass": true
+      },
+      "runtimeFlags": {
+        "allRuntimeReady": true
+      },
+      "runtimePromotion": {
+        "readyToPromote": true,
+        "blockers": []
+      }
+    },
+    "pt": {
+      "structural": {
+        "totalDocs": 203,
+        "entryDocs": 180,
+        "categoryDocs": 23,
+        "pass": true
+      },
+      "inlineRefs": {
+        "count": 1862,
+        "brokenTargets": [],
+        "pass": true
+      },
+      "publicBodySourceTitles": {
+        "hits": [],
+        "pass": true
+      },
+      "querySet": {
+        "filePath": "docs/reference-authoring/evals/pt-curated-query-set.json",
+        "targetCount": 60,
+        "currentCount": 60,
+        "minimums": {
+          "coding": 24,
+          "interpretation": 24,
+          "graph-navigation": 12
+        },
+        "bucketCounts": {
+          "coding": 24,
+          "interpretation": 24,
+          "graph-navigation": 12
+        },
+        "missingRouteReferences": [],
+        "coveragePass": true
+      },
+      "runtimeFlags": {
+        "allRuntimeReady": true
+      },
+      "runtimePromotion": {
+        "readyToPromote": true,
+        "blockers": []
+      }
+    }
+  }
+}

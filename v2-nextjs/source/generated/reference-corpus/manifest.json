@@ -1,0 +1,107 @@
+{
+  "generatedAt": "2026-04-25T16:31:16.418Z",
+  "locales": [
+    "ko",
+    "en",
+    "ja",
+    "es",
+    "pt"
+  ],
+  "localeSummaries": {
+    "ko": {
+      "totalDocs": 203,
+      "entryDocs": 180,
+      "categoryDocs": 23,
+      "runtimeReadyDocs": 203,
+      "statusCounts": {
+        "stub": 0,
+        "draft": 203,
+        "reviewed": 0,
+        "locked": 0
+      },
+      "activeRuntimeSource": "reference-corpus",
+      "authorityPolicies": [
+        "exner+ko-guide"
+      ],
+      "promotionEnabled": true,
+      "promotedAt": "2026-03-09",
+      "promotionReason": "KO corpus passed inline-ref QA, public-body QA, 100-query retrieval gate, full test, and production build."
+    },
+    "en": {
+      "totalDocs": 203,
+      "entryDocs": 180,
+      "categoryDocs": 23,
+      "runtimeReadyDocs": 203,
+      "statusCounts": {
+        "stub": 0,
+        "draft": 203,
+        "reviewed": 0,
+        "locked": 0
+      },
+      "activeRuntimeSource": "reference-corpus",
+      "authorityPolicies": [
+        "exner-base"
+      ],
+      "promotionEnabled": true,
+      "promotedAt": "2026-03-10",
+      "promotionReason": "EN corpus passed full authoring completion, inline-ref QA, public-body QA, 60-query retrieval gate, full test, and production build."
+    },
+    "ja": {
+      "totalDocs": 203,
+      "entryDocs": 180,
+      "categoryDocs": 23,
+      "runtimeReadyDocs": 203,
+      "statusCounts": {
+        "stub": 0,
+        "draft": 203,
+        "reviewed": 0,
+        "locked": 0
+      },
+      "activeRuntimeSource": "reference-corpus",
+      "authorityPolicies": [
+        "exner-base"
+      ],
+      "promotionEnabled": true,
+      "promotedAt": "2026-03-10",
+      "promotionReason": "JA corpus passed full authoring completion, locale QA, 60-query retrieval gate, full test, and production build."
+    },
+    "es": {
+      "totalDocs": 203,
+      "entryDocs": 180,
+      "categoryDocs": 23,
+      "runtimeReadyDocs": 203,
+      "statusCounts": {
+        "stub": 0,
+        "draft": 203,
+        "reviewed": 0,
+        "locked": 0
+      },
+      "activeRuntimeSource": "reference-corpus",
+      "authorityPolicies": [
+        "exner+es-manual"
+      ],
+      "promotionEnabled": true,
+      "promotedAt": "2026-03-09",
+      "promotionReason": "ES corpus passed full authoring completion, inline-ref QA, public-body QA, 80-query retrieval gate, full test, and production build."
+    },
+    "pt": {
+      "totalDocs": 203,
+      "entryDocs": 180,
+      "categoryDocs": 23,
+      "runtimeReadyDocs": 203,
+      "statusCounts": {
+        "stub": 0,
+        "draft": 203,
+        "reviewed": 0,
+        "locked": 0
+      },
+      "activeRuntimeSource": "reference-corpus",
+      "authorityPolicies": [
+        "exner-base"
+      ],
+      "promotionEnabled": true,
+      "promotedAt": "2026-03-11",
+      "promotionReason": "PT corpus passed full authoring completion, inline-ref QA, public-body QA, 60-query retrieval gate, full test, and production build."
+    }
+  }
+}

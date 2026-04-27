@@ -1,0 +1,64 @@
+---
+canonicalRoute: "result-interpretation/lower-section/core/SumT"
+locale: "ja"
+docKind: "interpretation-entry"
+canonicalTitle: "result-interpretation/lower-section/core/SumT"
+displayTitle: "[Interpretation/Core] SumT"
+aliases:
+  - "SumT"
+  - "texture total"
+  - "total texture"
+  - "質感総数"
+relatedRoutes:
+  - "result-interpretation/lower-section/core"
+  - "result-interpretation/lower-section/core/eb"
+  - "result-interpretation/lower-section/core/es"
+  - "result-interpretation/lower-section/interpersonal/SumT_inter"
+  - "scoring-input/determinants/T"
+  - "scoring-input/determinants/FT"
+  - "scoring-input/determinants/TF"
+authorityPolicy: "exner-base"
+status: "draft"
+runtimeReady: false
+provenanceNote: "docs/reference-authoring/notes/provenance-ja-core-sumt-sumv-sumy-2026-03-10.md"
+---
+
+# Document Name: [Interpretation/Core] SumT
+
+## Aliases / Search Terms
+
+- SumT
+- texture total
+- total texture
+- 質感総数
+
+## Core Definition
+
+`SumT` は質感決定因の合計である。
+`core` では、親密さ、安心感、保護的接触を求める必要が、現在の負荷にどの程度関わっているかを示しやすい。
+
+## Interpretation Points
+
+- `SumT` が高い場合、情緒的近接や支えを求める必要が、現在の負荷の一部として活性化していることを示しやすい。
+- `SumT` は [`eb`](ref://result-interpretation/lower-section/core/eb) の陰影側に属し、[`es`](ref://result-interpretation/lower-section/core/es) を高めることがある。
+- `core` ではまず必要や負荷の変数として読み、人との関わり方としての意味は [`SumT_inter`](ref://result-interpretation/lower-section/interpersonal/SumT_inter) でさらに検討する。
+- 意味は `eb`、`es`、利用可能な資源の全体文脈によって変わる。
+
+## Cautions / Distinctions
+
+- `SumT` が高いだけで、関係の温かさや良好な愛着能力をそのまま示すとは限らない。
+- `SumT = 0` でも、愛着や近接欲求が完全にないと断定してはいけない。
+- `core` における現在負荷としての読みと、`interpersonal` における関係様式としての読みを分けておくことが重要である。
+
+## Cross References
+
+- [[Interpretation/Lower Section/Core] Core](ref://result-interpretation/lower-section/core)
+- [[Interpretation/Core] eb](ref://result-interpretation/lower-section/core/eb)
+- [[Interpretation/Core] es](ref://result-interpretation/lower-section/core/es)
+- [[Interpretation/Interpersonal] SumT](ref://result-interpretation/lower-section/interpersonal/SumT_inter)
+- [[Coding/Determinants] T](ref://scoring-input/determinants/T)
+- [[Coding/Determinants] FT](ref://scoring-input/determinants/FT)
+- [[Coding/Determinants] TF](ref://scoring-input/determinants/TF)
+
+## Evidence Note
+- Detailed source comparison is stored in internal provenance notes.
