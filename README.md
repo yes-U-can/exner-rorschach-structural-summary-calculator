@@ -1,23 +1,24 @@
 # exner-sicp
 
-로샤 구조요약 계산 도우미의 Google Apps Script 버전 1 공개 아카이브입니다.
+로샤 구조요약 계산 도우미의 공개 전시 및 릴리즈 아카이브입니다.
 
-이 저장소는 전시와 교육, 재현을 위한 공개용 저장소입니다. 현재는 v1 GAS 릴리즈만 포함하며, v2 Next.js 웹앱 소스는 아직 포함하지 않습니다.
+이 저장소는 배포된 버전의 패치노트와 소스코드를 공개하기 위한 공간입니다. 현재는 Google Apps Script로 만든 버전 1 시리즈를 먼저 정리해 두었고, Next.js로 만든 버전 2 소스코드와 패치노트는 정리 후 이 저장소에 이어서 추가할 예정입니다.
 
-## 빠른 시작
+## 현재 공개된 항목
 
+- [Google Apps Script] 버전 1 릴리즈 기록: [v1-gas/releases](./v1-gas/releases/)
 - 최신 v1 실행본: [v1.4.1 배포링크](https://script.google.com/macros/s/AKfycbxMCx13pkrSzFs8f2qXfmxy2LRhkBpZTItFTIfEOoOi-zwurbysnKGfDIYtAeEdQP99/exec)
 - 최신 v1 소스코드: [v1-gas/current](./v1-gas/current/)
-- 버전별 패치노트와 소스코드: [v1-gas/releases](./v1-gas/releases/)
+- [Next.js] 버전 2 릴리즈 기록: 준비 중
 
-## 사용 방법
+## v1 GAS 사용 방법
 
 1. 원하는 버전의 `패치노트/소스코드` 링크를 엽니다.
 2. `source/` 폴더 안의 `Code.gs`, `index.html`, `styles.html` 파일을 확인합니다.
 3. Google Apps Script 프로젝트를 새로 만들고 같은 이름의 파일을 만든 뒤 내용을 붙여넣습니다.
-4. GAS에서 웹앱으로 배포하거나, 아래 `배포링크`로 해당 버전을 직접 실행합니다.
+4. GAS에서 웹앱으로 배포하거나, 각 버전의 `배포링크`로 해당 버전을 직접 실행합니다.
 
-## 버전 1 릴리즈 기록
+## [Google Apps Script] 버전 1 릴리즈 기록
 
 - **[2026-01-07] v1.4.1 (버그 패치)** [배포링크](https://script.google.com/macros/s/AKfycbxMCx13pkrSzFs8f2qXfmxy2LRhkBpZTItFTIfEOoOi-zwurbysnKGfDIYtAeEdQP99/exec) [패치노트/소스코드](./v1-gas/releases/v1.4.1/)
 - **[2026-01-03] v1.4.0 (마이너 패치)** [배포링크](https://script.google.com/macros/s/AKfycbxWtI1q27rXuH4feBEGpoy0fIhXZU0ROJ2gRv5RbaQVPxnNgznTI9czHDrVzaS7wSMM/exec) [패치노트/소스코드](./v1-gas/releases/v1.4.0/)
