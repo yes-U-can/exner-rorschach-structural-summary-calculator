@@ -5,7 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import type { ComponentPropsWithoutRef } from 'react';
 
-import { buildReferenceDocHref } from '@/lib/referenceCorpus';
+import { buildReferenceRouteHref } from '@/lib/referenceRoutes';
 import type { Language } from '@/types';
 
 type ReferenceMarkdownProps = {
@@ -17,7 +17,7 @@ type ReferenceMarkdownProps = {
 function resolveRefHref(href: string, language: Language): string {
   const raw = href.slice('ref://'.length);
   const canonicalRoute = decodeURIComponent(raw);
-  return buildReferenceDocHref(canonicalRoute, language);
+  return buildReferenceRouteHref(canonicalRoute, language);
 }
 
 function ExternalAnchor(props: ComponentPropsWithoutRef<'a'>) {

@@ -21,6 +21,29 @@ const v2SourceUrl = `${exhibitionRepoUrl}/tree/main/v2-nextjs/source`;
 
 export const v2NextVersions: VersionArchiveEntry[] = [
   {
+    version: 'v2.0.3',
+    title: 'Version 2.0.3',
+    series: 'v2-nextjs',
+    publishedAt: '2026-06-11',
+    releaseKind: 'bugfix',
+    releaseLabel: '버그 패치',
+    summary:
+      '참조 문서 페이지가 참조 코퍼스 데이터 전체를 브라우저에 내려보내던 문제를 수정해 로딩 성능을 크게 개선하고, BYOK 세션 쿠키 처리 보강과 Next.js 16.2.9 보안 패치 적용을 함께 반영한 버전입니다.',
+    sourceUrl: v2SourceUrl,
+    releaseUrl: v2ReleaseUrl('v2.0.3'),
+  },
+  {
+    version: 'v2.0.2',
+    title: 'Version 2.0.2',
+    series: 'v2-nextjs',
+    publishedAt: '2026-05-21',
+    releaseKind: 'bugfix',
+    releaseLabel: '버그 패치',
+    summary: '구조요약 값 복사와 구조요약 CSV 내보내기의 중복 헤더 및 누락 항목 문제를 수정하고, 데이터 다운로드 항목명, 해석 도우미 입력 완료 표시, BYOK 채팅 오류 처리, OpenAI 기본 모델 GPT-5.5 전환을 함께 반영한 버전입니다.',
+    sourceUrl: v2SourceUrl,
+    releaseUrl: v2ReleaseUrl('v2.0.2'),
+  },
+  {
     version: 'v2.0.1',
     title: 'Version 2.0.1',
     series: 'v2-nextjs',

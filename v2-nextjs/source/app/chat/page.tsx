@@ -26,6 +26,7 @@ import {
   subscribeByokSessionDialogClose,
   type ByokSessionStatus,
 } from '@/lib/byokSessionClient';
+import { isByokSessionMissingError, readChatApiErrorPayload } from '@/lib/chatApiErrors';
 import { validateStructuralSummaryCsv } from '@/lib/structuralSummaryCsv';
 
 type Message = {
@@ -56,7 +57,7 @@ function ChatPageClient() {
   const draftCopied = searchParams.get('draft') === 'summary-copied';
 
   const [provider, setProvider] = useState<Provider>('openai');
-  const [modelId, setModelId] = useState('gpt-5.4');
+  const [modelId, setModelId] = useState('gpt-5.5');
   const [models, setModels] = useState<ModelOption[]>([]);
   const [byokStatus, setByokStatus] = useState<ByokSessionStatus | null>(null);
   const [inputText, setInputText] = useState('');
@@ -298,6 +299,7 @@ function ChatPageClient() {
       try {
         const response = await fetch('/api/chat', {
           method: 'POST',
+          credentials: 'include',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             message: userMessageContent,
@@ -311,30 +313,18 @@ function ChatPageClient() {
           }),
         });
 
-        if (response.status === 401) {
-          clearAllEphemeralChatStorage();
-          openByokSessionDialog({ required: true, source: 'chat' });
-          throw new Error('Unauthorized');
+        if (!response.ok) {
+          const serverError = await readChatApiErrorPayload(response, chatUi.serverFallbackError);
+          if (isByokSessionMissingError(response.status, serverError)) {
+            clearAllEphemeralChatStorage();
+            openByokSessionDialog({ required: true, source: 'chat' });
+            return;
+          }
+          throw new Error(serverError.message);
         }
 
-        if (!response.ok || !response.body) {
-          let serverError: string = chatUi.serverFallbackError;
-          try {
-            const data = await response.json();
-            if (data?.code && typeof data.code === 'string') {
-              serverError = data.code;
-            } else if (data?.error && typeof data.error === 'string') {
-              serverError = data.error;
-            }
-          } catch {
-            try {
-              const text = await response.text();
-              if (text) serverError = text;
-            } catch {
-              // no-op
-            }
-          }
-          throw new Error(serverError);
+        if (!response.body) {
+          throw new Error(chatUi.serverFallbackError);
         }
 
         const reader = response.body.getReader();

@@ -1,6 +1,7 @@
 import routeDocsArtifact from '@/generated/reference-corpus/route-docs.json';
 import chunksArtifact from '@/generated/reference-corpus/chunks.json';
 import manifestArtifact from '@/generated/reference-corpus/manifest.json';
+import { buildReferenceHrefFromSlug, buildReferenceUrlSlug } from '@/lib/referenceRoutes';
 import type { Language } from '@/types';
 
 export type ReferenceDocStatus = 'stub' | 'draft' | 'reviewed' | 'locked';
@@ -123,36 +124,6 @@ for (const locale of routeDocs.locales) {
   runtimeDocChildrenByLocaleMap.set(locale, runtimeChildren);
 }
 
-function buildReferenceUrlSlug(canonicalRoute: string): string[] {
-  const parts = canonicalRoute.split('/').filter(Boolean);
-  const slug: string[] = [];
-
-  for (let index = 0; index < parts.length; index += 1) {
-    const current = parts[index];
-    const next = parts[index + 1];
-
-    if (current === 'v' && next === '+') {
-      slug.push('v-plus');
-      index += 1;
-      continue;
-    }
-
-    if (current === '+') {
-      slug.push('plus');
-      continue;
-    }
-
-    if (current === '-') {
-      slug.push('minus');
-      continue;
-    }
-
-    slug.push(current);
-  }
-
-  return slug;
-}
-
 function legacySlugToCanonicalRoute(slug: string[]): string {
   const parts: string[] = [];
 
@@ -239,10 +210,7 @@ export function getReferenceRuntimeChunks(locale: Language): ReferenceChunkRecor
 export function buildReferenceDocHref(canonicalRoute: string, locale: Language): string {
   const doc = docsByLocaleMap.get(locale)?.get(canonicalRoute);
   const slug = doc?.slug ?? buildReferenceUrlSlug(canonicalRoute);
-  const encodedRoute = slug
-    .map((segment) => encodeURIComponent(segment))
-    .join('/');
-  return `/ref/${encodedRoute}?lang=${locale}`;
+  return buildReferenceHrefFromSlug(slug, locale);
 }
 
 export function getReferenceRuntimeDocBySlug(

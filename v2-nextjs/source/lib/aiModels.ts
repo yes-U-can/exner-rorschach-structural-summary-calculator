@@ -21,7 +21,7 @@ export type AIModelConfig = {
 };
 
 export const DEFAULT_PROVIDER_MODEL_IDS: Record<Provider, string> = {
-  openai: 'gpt-5.4',
+  openai: 'gpt-5.5',
   google: 'gemini-2.5-pro',
 };
 
@@ -29,16 +29,16 @@ const MODEL_CATALOG: AIModelConfig[] = [
   {
     id: DEFAULT_PROVIDER_MODEL_IDS.openai,
     provider: 'openai',
-    label: 'GPT-5.4',
-    description: 'Stable high-end GPT model for coding and professional reasoning.',
+    label: 'GPT-5.5',
+    description: 'Newest frontier GPT model for complex professional reasoning and coding.',
     descriptionKo: '부호화와 전문적 추론에 맞춘 안정적인 고급 GPT 모델입니다.',
-    contextWindowTokens: 1_000_000,
+    contextWindowTokens: 1_050_000,
     qualityLevel: 'advanced',
     priceLevel: 'high',
     speedLevel: 'balanced',
-    inputUsdPer1M: 2.5,
-    outputUsdPer1M: 15,
-    maxOutputTokens: 4096,
+    inputUsdPer1M: 5,
+    outputUsdPer1M: 30,
+    maxOutputTokens: 128000,
     recommended: true,
   },
   {

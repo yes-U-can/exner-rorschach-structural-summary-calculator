@@ -85,7 +85,7 @@ const homeUiByLanguage = {
     downloadButton: '데이터 다운로드',
     downloadTitle: '데이터 다운로드',
     downloadDescription: '이번 계산 결과에서 내려받을 파일 형식을 선택하세요.',
-    rawCsvLabel: '입력값 원자료 CSV',
+    rawCsvLabel: '점수계열 원자료 CSV',
     rawCsvDescription: '채점표에 입력한 부호화 값을 CSV 파일로 저장합니다.',
     summaryCsvLabel: '구조요약 수치 CSV',
     summaryCsvDescription: '계산된 구조요약 수치를 CSV 파일로 저장합니다.',
@@ -808,9 +808,10 @@ export default function HomePage() {
   const handleCopySummaryForInterpretation = () => {
     if (!result?.data) return;
 
+    const summaryData = result.data;
     void (async () => {
       try {
-        await copyTextToClipboard(generateSummaryCsv(result.data));
+        await copyTextToClipboard(generateSummaryCsv(summaryData));
         showToast({
           type: 'success',
           title: pageUi.copySummarySuccessTitle,

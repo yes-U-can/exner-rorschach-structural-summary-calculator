@@ -26,6 +26,7 @@ import { buildSafeApiErrorResponse, logApiError } from '@/lib/apiError';
 import { parseJsonWithSizeLimit, REQUEST_BODY_SIZE_POLICIES } from '@/lib/requestBodyGuard';
 import { normalizeEphemeralChatContext } from '@/lib/chatEphemeralContext';
 import { readByokSessionFromRequest } from '@/lib/byokSession';
+import { BYOK_SESSION_MISSING_CODE } from '@/lib/chatApiErrors';
 import {
   getHybridCodingRuleChunks,
   getHybridInterpretationKnowledge,
@@ -355,7 +356,10 @@ export async function POST(req: Request) {
     const byokSession = readByokSessionFromRequest(req);
     if (!byokSession) {
       return NextResponse.json(
-        { error: 'API key not found. Start an AI session with your API key and try again.' },
+        {
+          error: 'API key not found. Start an AI session with your API key and try again.',
+          code: BYOK_SESSION_MISSING_CODE,
+        },
         { status: 401 },
       );
     }

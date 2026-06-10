@@ -27,7 +27,7 @@ const CHAT_PAGE_UI: Record<Language, ChatPageUi> = {
     welcomeCopiedTitle: 'Paste the Structural Summary values copied from the result screen,\nthen start by explaining the context you want the AI to consider.',
     summaryCsvLabel: 'Structural Summary values',
     summaryCsvPlaceholder: 'Summary values',
-    summaryCsvReadyLabel: 'Entered',
+    summaryCsvReadyLabel: 'Entered ✅',
     summaryCsvRequired: 'Use only values copied with “Copy Structural Summary values” on the result screen.',
     summaryCsvInvalid: 'Use only values copied with “Copy Structural Summary values” on the result screen.',
     modelCatalogFallback:
@@ -41,7 +41,7 @@ const CHAT_PAGE_UI: Record<Language, ChatPageUi> = {
     welcomeCopiedTitle: '결과 화면에서 복사한 구조요약 수치를 붙여넣고,\nAI에게 해석을 부탁할 맥락을 설명하며 대화를 시작하세요.',
     summaryCsvLabel: '구조요약 수치',
     summaryCsvPlaceholder: '구조요약 수치 입력',
-    summaryCsvReadyLabel: '입력됨',
+    summaryCsvReadyLabel: '입력됨 ✅',
     summaryCsvRequired: '결과 화면의 “구조요약 값 복사하기” 버튼으로 복사한 값만 사용할 수 있습니다.',
     summaryCsvInvalid: '결과 화면의 “구조요약 값 복사하기” 버튼으로 복사한 값만 사용할 수 있습니다.',
     modelCatalogFallback:
@@ -55,7 +55,7 @@ const CHAT_PAGE_UI: Record<Language, ChatPageUi> = {
     welcomeCopiedTitle: '結果画面でコピーした構造要約の数値を貼り付け、\nAIに解釈してほしい文脈を説明して対話を始めてください。',
     summaryCsvLabel: '構造要約の数値',
     summaryCsvPlaceholder: '構造要約値',
-    summaryCsvReadyLabel: '入力済み',
+    summaryCsvReadyLabel: '入力済み ✅',
     summaryCsvRequired: '結果画面のコピー機能で取得した値だけを使用できます。',
     summaryCsvInvalid: '結果画面のコピー機能で取得した値だけを使用できます。',
     modelCatalogFallback:
@@ -69,7 +69,7 @@ const CHAT_PAGE_UI: Record<Language, ChatPageUi> = {
     welcomeCopiedTitle: 'Pega los valores del resumen estructural copiados desde la pantalla de resultados\ny empieza explicando el contexto que quieres que la IA considere.',
     summaryCsvLabel: 'Valores del resumen estructural',
     summaryCsvPlaceholder: 'Valores del resumen',
-    summaryCsvReadyLabel: 'Ingresado',
+    summaryCsvReadyLabel: 'Ingresado ✅',
     summaryCsvRequired: 'Solo se aceptan los valores copiados desde la pantalla de resultados.',
     summaryCsvInvalid: 'Solo se aceptan los valores copiados desde la pantalla de resultados.',
     modelCatalogFallback:
@@ -83,7 +83,7 @@ const CHAT_PAGE_UI: Record<Language, ChatPageUi> = {
     welcomeCopiedTitle: 'Cole os valores do resumo estrutural copiados da tela de resultados\ne comece explicando o contexto que deseja que a IA considere.',
     summaryCsvLabel: 'Valores do resumo estrutural',
     summaryCsvPlaceholder: 'Valores do resumo',
-    summaryCsvReadyLabel: 'Inserido',
+    summaryCsvReadyLabel: 'Inserido ✅',
     summaryCsvRequired: 'Use apenas os valores copiados pela tela de resultados.',
     summaryCsvInvalid: 'Use apenas os valores copiados pela tela de resultados.',
     modelCatalogFallback:
@@ -121,3 +121,4 @@ export function getChatPageUi(language: string): ChatPageUi {
 export function getChatRuntimeUi(language: string): ChatRuntimeUi {
   return CHAT_RUNTIME_UI[(language as Language) in CHAT_RUNTIME_UI ? (language as Language) : 'en'];
 }
+

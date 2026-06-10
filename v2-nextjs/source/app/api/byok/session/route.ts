@@ -19,7 +19,9 @@ const BYOK_BODY_POLICY = {
 };
 
 export function GET(request: Request) {
-  return NextResponse.json(toByokSessionStatus(readByokSessionFromRequest(request)));
+  const response = NextResponse.json(toByokSessionStatus(readByokSessionFromRequest(request)));
+  response.headers.set('Cache-Control', 'no-store');
+  return response;
 }
 
 export async function POST(request: Request) {

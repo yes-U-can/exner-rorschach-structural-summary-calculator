@@ -116,7 +116,12 @@ export function readByokSessionFromRequest(request: Request): ByokSession | null
   for (const segment of cookieHeader.split(';')) {
     const [rawName, ...rawValueParts] = segment.trim().split('=');
     if (rawName !== cookieName) continue;
-    return decryptByokSession(decodeURIComponent(rawValueParts.join('=')));
+    try {
+      return decryptByokSession(decodeURIComponent(rawValueParts.join('=')));
+    } catch {
+      // Malformed percent-encoding in the cookie value; treat as no session.
+      return null;
+    }
   }
 
   return null;

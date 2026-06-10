@@ -1,3 +1,5 @@
+import { SUMMARY_CSV_HEADERS } from './csv';
+
 const REQUIRED_SUMMARY_HEADERS = [
   'Zf',
   'ZSum',
@@ -23,69 +25,7 @@ const REQUIRED_SUMMARY_HEADERS = [
   'PHR',
 ];
 
-const ALLOWED_SUMMARY_HEADERS = new Set([
-  ...REQUIRED_SUMMARY_HEADERS,
-  'W',
-  'Dd',
-  'S',
-  'dq_plus',
-  'dq_o',
-  'dq_vplus',
-  'dq_v',
-  'pairs',
-  'sum6',
-  'wsum6',
-  'FM',
-  'm',
-  'SumCprime',
-  'SumT',
-  'SumV',
-  'SumY',
-  'Afr',
-  'XA_percent',
-  'WDA_percent',
-  'X_minus_percent',
-  'S_minus',
-  'P',
-  'X_plus_percent',
-  'Xu_percent',
-  'PSV',
-  'DQ_plus',
-  'DQ_v',
-  'W_D_Dd',
-  'W_M',
-  'a_p',
-  'Ma_Mp',
-  '_2AB_Art_Ay',
-  'MOR',
-  'Sum6',
-  'Lv2',
-  'WSum6_ideation',
-  'M_minus_ideation',
-  'Mnone',
-  'FC_CF_C',
-  'PureC',
-  'SumC_WSumC',
-  'S_aff',
-  'Blends_R',
-  'CP',
-  '_3r_2_R',
-  'Fr_rF',
-  'SumV_self',
-  'FD',
-  'An_Xy',
-  'MOR_self',
-  'H_ratio',
-  'COP',
-  'AG',
-  'a_p_inter',
-  'Food',
-  'SumT_inter',
-  'HumanCont',
-  'PureH',
-  'PER',
-  'ISO_Index',
-]);
+const ALLOWED_SUMMARY_HEADERS = new Set(SUMMARY_CSV_HEADERS);
 
 type StructuralSummaryCsvResult =
   | { ok: true; csv: string; headers: string[]; values: string[] }
@@ -125,7 +65,7 @@ function parseCsvLine(line: string): string[] | null {
 }
 
 function isSafeSummaryValue(value: string) {
-  if (value.length > 80) return false;
+  if (value.length > 500) return false;
   if (/[<>{}`\[\]]/.test(value)) return false;
   if (/ignore|system|prompt|assistant|developer/i.test(value)) return false;
   return /^[\p{L}\p{N}\s'.:,%_+\-/()]*$/u.test(value);

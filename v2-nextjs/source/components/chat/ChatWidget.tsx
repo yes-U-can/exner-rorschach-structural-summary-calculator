@@ -26,6 +26,7 @@ import {
   subscribeByokSessionChange,
   type ByokSessionStatus,
 } from '@/lib/byokSessionClient';
+import { isByokSessionMissingError, readChatApiErrorPayload } from '@/lib/chatApiErrors';
 
 type Provider = 'openai' | 'google';
 type ModelOption = {
@@ -85,7 +86,7 @@ export default function ChatWidget({
   const ui = getCodingAssistWidgetUi(language as Language);
 
   const [provider, setProvider] = useState<Provider>('openai');
-  const [modelId, setModelId] = useState('gpt-5.4');
+  const [modelId, setModelId] = useState('gpt-5.5');
   const [models, setModels] = useState<ModelOption[]>([]);
   const [byokStatus, setByokStatus] = useState<ByokSessionStatus | null>(null);
   const [messages, setMessages] = useState<Message[]>([]);
@@ -325,6 +326,7 @@ export default function ChatWidget({
     try {
       const response = await fetch('/api/chat', {
         method: 'POST',
+        credentials: 'include',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           message: messageText,
@@ -335,25 +337,18 @@ export default function ChatWidget({
         }),
       });
 
-      if (response.status === 401) {
-        clearAllEphemeralChatStorage();
-        openByokSessionDialog();
-        throw new Error('Unauthorized');
+      if (!response.ok) {
+        const serverError = await readChatApiErrorPayload(response, ui.serverFallbackError);
+        if (isByokSessionMissingError(response.status, serverError)) {
+          clearAllEphemeralChatStorage();
+          openByokSessionDialog({ source: 'widget' });
+          return;
+        }
+        throw new Error(serverError.message);
       }
 
-      if (!response.ok || !response.body) {
-        let serverError: string = ui.serverFallbackError;
-        try {
-          const data = await response.json();
-          if (data?.code && typeof data.code === 'string') {
-            serverError = data.code;
-          } else if (data?.error && typeof data.error === 'string') {
-            serverError = data.error;
-          }
-        } catch {
-          // no-op
-        }
-        throw new Error(serverError);
+      if (!response.body) {
+        throw new Error(ui.serverFallbackError);
       }
 
       const aiMessageId = Date.now() + 1;
