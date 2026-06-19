@@ -4,6 +4,8 @@
 
 이 저장소는 배포된 버전의 패치노트와 소스코드를 공개하기 위한 공간입니다. v1은 Google Apps Script 웹앱으로, v2는 Next.js 웹앱으로 정리했습니다.
 
+감사의 말과 초기 학습 참고 자료는 [ACKNOWLEDGEMENTS.md](./ACKNOWLEDGEMENTS.md)에 정리했습니다.
+
 ## 현재 공개된 항목
 
 - [Next.js] 버전 2 최신 릴리즈: [v2-nextjs/releases/v2.0.3](./v2-nextjs/releases/v2.0.3/)
