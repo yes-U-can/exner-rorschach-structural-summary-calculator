@@ -1,5 +1,5 @@
 /**
- * Computing Program for Rorschach Structural Summary v2.0.3
+ * Computing Program for Rorschach Structural Summary v2.0.4
  * TypeScript Type Definitions
  */
 

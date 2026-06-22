@@ -1,7 +1,7 @@
 {
   "app": {
     "title": "ロールシャッハ構造要約計算ヘルパー",
-    "version": "v2.0.3",
+    "version": "v2.0.4",
     "provider": "Sicp Seoul"
   },
   "nav": {

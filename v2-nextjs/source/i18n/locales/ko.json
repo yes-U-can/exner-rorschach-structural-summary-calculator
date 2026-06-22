@@ -1,7 +1,7 @@
 {
   "app": {
     "title": "로샤 구조요약 계산 도우미",
-    "version": "v2.0.3",
+    "version": "v2.0.4",
     "provider": "Sicp Seoul"
   },
   "nav": {

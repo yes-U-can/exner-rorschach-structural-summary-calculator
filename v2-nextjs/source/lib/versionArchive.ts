@@ -21,6 +21,18 @@ const v2SourceUrl = `${exhibitionRepoUrl}/tree/main/v2-nextjs/source`;
 
 export const v2NextVersions: VersionArchiveEntry[] = [
   {
+    version: 'v2.0.4',
+    title: 'Version 2.0.4',
+    series: 'v2-nextjs',
+    publishedAt: '2026-06-22',
+    releaseKind: 'minor',
+    releaseLabel: '마이너 패치',
+    summary:
+      '웹앱을 설치형 앱처럼 열 수 있도록 manifest-only PWA 지원을 추가하고, 보안 범위를 유지하기 위해 service worker와 오프라인 캐시는 도입하지 않았습니다. 초기 구현 학습 참고 자료였던 RorScore에 대한 감사 기록도 함께 정리한 버전입니다.',
+    sourceUrl: v2SourceUrl,
+    releaseUrl: v2ReleaseUrl('v2.0.4'),
+  },
+  {
     version: 'v2.0.3',
     title: 'Version 2.0.3',
     series: 'v2-nextjs',

@@ -18,6 +18,7 @@ type QueryIntent = {
   graphIntent: boolean;
   explicitCoding: boolean;
   explicitInterpretation: boolean;
+  interpretationSignal: boolean;
 };
 
 type ResolvedKnowledgeMeta = {
@@ -35,6 +36,29 @@ const TOKEN_SUFFIX_PATTERNS = [
   /(은|는|이|가|을|를|와|과|만|에서|으로|로|의|도|야|요|까|인가)$/u,
   /(이라|라고|이면|이란)$/u,
 ];
+
+const PRIMARY_CODE_TOKEN_STOPWORDS = new Set([
+  'a',
+  'an',
+  'as',
+  'card',
+  'code',
+  'coded',
+  'coding',
+  'does',
+  'do',
+  'for',
+  'how',
+  'i',
+  'if',
+  'is',
+  'mean',
+  'response',
+  'should',
+  'the',
+  'what',
+  'when',
+]);
 
 export type KnowledgeItem = {
   id?: string;
@@ -61,6 +85,31 @@ function tokenizePreserveCase(text: string): string[] {
 
 function normalizeCompact(text: string): string {
   return text.replace(/[^\p{L}\p{N}%+]+/gu, '').toLowerCase();
+}
+
+function isPotentialCodeToken(token: string): boolean {
+  const normalized = token.trim();
+  if (!normalized) return false;
+  if (PRIMARY_CODE_TOKEN_STOPWORDS.has(normalized.toLowerCase())) return false;
+  if (!/[A-Z]/.test(normalized)) return false;
+
+  return /[%+/'_:-]/.test(normalized) || normalized.length <= 6;
+}
+
+function findPrimaryCodeToken(rawTokens: string[]): string | null {
+  const codingCueIndex = rawTokens.findIndex((token) =>
+    /^(code|coded|coding)$/i.test(token) || /채점|부호화|코딩/u.test(token),
+  );
+  const candidates = rawTokens.filter(isPotentialCodeToken);
+
+  if (!candidates.length) return null;
+
+  if (codingCueIndex >= 0) {
+    const afterCue = rawTokens.slice(codingCueIndex + 1).find(isPotentialCodeToken);
+    if (afterCue) return afterCue;
+  }
+
+  return candidates[0];
 }
 
 function stripTokenSuffixes(token: string): string[] {
@@ -226,8 +275,9 @@ function inferQueryIntent(queryText: string): QueryIntent {
   const graphPatterns = [/같이/u, /연결/u, /상호참조/u, /문서/u, /링크/u, /보고 싶/u];
 
   const explicitCoding = codingPatterns.some((pattern) => pattern.test(normalized));
+  const interpretationSignal = interpretationPatterns.some((pattern) => pattern.test(normalized));
   const explicitInterpretation =
-    !explicitCoding && interpretationPatterns.some((pattern) => pattern.test(normalized));
+    !explicitCoding && interpretationSignal;
   const graphIntent = graphPatterns.some((pattern) => pattern.test(normalized));
 
   return {
@@ -235,6 +285,7 @@ function inferQueryIntent(queryText: string): QueryIntent {
     graphIntent,
     explicitCoding,
     explicitInterpretation,
+    interpretationSignal,
   };
 }
 
@@ -338,6 +389,8 @@ function scoreKnowledgeItem(
   const rawAliases = item.aliases ?? [];
   const meta = resolveKnowledgeMeta(item, lang);
   const codeFocused = rawQueryTokens.some((token) => /[A-Z%+\-]/.test(token));
+  const primaryCodeToken = findPrimaryCodeToken(rawQueryTokens);
+  const primaryCompactCode = primaryCodeToken ? normalizeCompact(primaryCodeToken) : '';
 
   let score = 0;
   score += overlapScore(queryTokens, item.title) * 6;
@@ -393,6 +446,21 @@ function scoreKnowledgeItem(
 
     if (meta.compactTitle.includes(term)) {
       score += 12;
+    }
+  }
+
+  if (primaryCompactCode) {
+    const primaryCodeMatches =
+      meta.compactLeaf === primaryCompactCode ||
+      meta.compactTail === primaryCompactCode ||
+      meta.compactAliases.some((alias) => alias === primaryCompactCode);
+
+    if (primaryCodeMatches) {
+      if (intent.explicitCoding && !intent.interpretationSignal && meta.domain === 'coding') {
+        score += 42;
+      } else {
+        score += 14;
+      }
     }
   }
 

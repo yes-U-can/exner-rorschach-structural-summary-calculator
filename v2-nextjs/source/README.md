@@ -16,6 +16,7 @@ Next.js-based web application for Exner structural summary scoring, documentatio
 - Structural summary calculation and result views
 - AI chat support using a user-provided OpenAI or Google API key
 - Reference-document search backed by public RAG corpus embeddings
+- Manifest-only PWA install support without service worker or offline caching
 - Privacy policy index and subpages (`/privacy/...`)
 - CSV export, print-friendly result output
 
@@ -59,3 +60,4 @@ types/          Shared TypeScript types
 - Keep private operational notes outside tracked files.
 - Do not reintroduce Google OAuth, NextAuth, account pages, server-stored API keys, or chat-history persistence unless the product model intentionally changes.
 - Runtime database credentials should be read-only and scoped to the public RAG corpus tables.
+- Keep PWA support manifest-only unless service worker caching gets a separate privacy and security review.
