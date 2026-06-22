@@ -30,7 +30,7 @@ describe('PWA manifest', () => {
     );
   });
 
-  it('keeps v2.0.4 install support manifest-only without an offline service worker', () => {
+  it('keeps v2.1.0 install support manifest-only without an offline service worker', () => {
     const serviceWorkerCandidates = [
       join(process.cwd(), 'public', 'sw.js'),
       join(process.cwd(), 'public', 'service-worker.js'),
