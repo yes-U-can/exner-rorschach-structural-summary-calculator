@@ -19,28 +19,21 @@ import {
   subscribeByokSessionDialogOpen,
 } from '@/lib/byokSessionClient';
 
-const PROVIDERS: { id: Provider; name: string }[] = [
-  { id: 'openai', name: 'OpenAI' },
-  { id: 'google', name: 'Google' },
-];
+const PROVIDER: Provider = 'openai';
+const PROVIDER_NAME = 'OpenAI';
 
 export default function ByokSessionDialog() {
   const { t } = useTranslation();
   const { showToast } = useToast();
   const [isOpen, setIsOpen] = useState(false);
-  const [provider, setProvider] = useState<Provider>('openai');
   const [apiKey, setApiKey] = useState('');
   const [showKey, setShowKey] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
   const [openDetail, setOpenDetail] = useState<ByokSessionDialogOpenDetail>({});
-  const providerName = PROVIDERS.find((item) => item.id === provider)?.name ?? provider;
+  const defaultModel = getDefaultModelForProvider(PROVIDER);
   const hasApiKey = Boolean(apiKey.trim());
-  const hasFormatError = hasApiKey && !hasValidByokApiKeyFormat(provider, apiKey);
-  const apiKeyPlaceholder = t(
-    provider === 'openai'
-      ? 'aiSession.apiKeys.openaiPlaceholder'
-      : 'aiSession.apiKeys.googlePlaceholder',
-  );
+  const hasFormatError = hasApiKey && !hasValidByokApiKeyFormat(PROVIDER, apiKey);
+  const apiKeyPlaceholder = t('aiSession.apiKeys.openaiPlaceholder');
 
   useEffect(() => {
     return subscribeByokSessionDialogOpen((detail) => {
@@ -51,16 +44,7 @@ export default function ByokSessionDialog() {
 
   useEffect(() => {
     if (!isOpen) return;
-    let cancelled = false;
-    void (async () => {
-      const status = await fetchByokSessionStatus();
-      if (!cancelled && status.provider) {
-        setProvider(status.provider);
-      }
-    })();
-    return () => {
-      cancelled = true;
-    };
+    void fetchByokSessionStatus();
   }, [isOpen]);
 
   const close = (connected = false) => {
@@ -87,11 +71,11 @@ export default function ByokSessionDialog() {
 
     setIsSaving(true);
     try {
-      await saveByokSession(provider, apiKey);
+      await saveByokSession(PROVIDER, apiKey);
       showToast({
         type: 'success',
         title: t('toast.apiKeySaved.title'),
-        message: t('toast.apiKeySaved.message', { provider: providerName }),
+        message: t('toast.apiKeySaved.message', { provider: PROVIDER_NAME }),
       });
       close(true);
     } catch {
@@ -115,10 +99,10 @@ export default function ByokSessionDialog() {
             <h2 className="text-xl font-bold text-[var(--text-strong)]">
               {t('aiSession.apiKeys.promptTitle')}
             </h2>
-            <p className="mt-2 text-sm leading-6 text-[var(--text-soft)]">
+            <p className="mt-2 whitespace-pre-line text-sm leading-6 text-[var(--text-soft)]">
               {t('aiSession.apiKeys.promptDescription')}
             </p>
-            <p className="mt-2 text-xs leading-5 text-[var(--text-soft)]">
+            <p className="mt-3 whitespace-pre-line text-xs leading-5 text-[var(--text-soft)]">
               {t('aiSession.apiKeys.modelPolicy')}
             </p>
           </div>
@@ -133,25 +117,14 @@ export default function ByokSessionDialog() {
         </div>
 
         <form onSubmit={handleSubmit} className="mt-5 space-y-4">
-          <div className="grid grid-cols-2 gap-2 rounded-2xl bg-[var(--surface-muted)] p-1">
-            {PROVIDERS.map((item) => (
-              <button
-                key={item.id}
-                type="button"
-                onClick={() => setProvider(item.id)}
-                className={`rounded-xl px-3 py-2 text-sm font-semibold transition-colors ${
-                  provider === item.id
-                    ? 'bg-[var(--surface-base)] text-[var(--brand-700)] shadow-sm'
-                    : 'text-[var(--text-soft)] hover:text-[var(--text-strong)]'
-                }`}
-              >
-                {item.name} {getDefaultModelForProvider(item.id).label}
-              </button>
-            ))}
+          <div className="rounded-2xl bg-[var(--surface-muted)] p-1">
+            <div className="rounded-xl bg-[var(--surface-base)] px-3 py-2 text-sm font-semibold text-[var(--brand-700)] shadow-sm">
+              {PROVIDER_NAME} {defaultModel.label}
+            </div>
           </div>
 
           <label htmlFor="byok-session-api-key" className="sr-only">
-            {t('aiSession.apiKeys.inputLabel', { provider: providerName })}
+            {t('aiSession.apiKeys.inputLabel', { provider: PROVIDER_NAME })}
           </label>
           <div className="ui-api-key-input-wrap">
             <div className="ui-api-key-icon">

@@ -1,7 +1,7 @@
 {
   "app": {
     "title": "ロールシャッハ構造要約計算ヘルパー",
-    "version": "v2.1.0",
+    "version": "v2.1.1",
     "provider": "Sicp Seoul"
   },
   "nav": {
@@ -11,7 +11,7 @@
     "logout": "AIセッションを終了",
     "loginRequired": "APIキーが必要です",
     "aiAssistant": "コーディング補助",
-    "aiGuide": "OpenAIまたはGoogleのAPIキーを入力すると、24時間AIアシスタントを利用できます。",
+    "aiGuide": "OpenAI APIキーを入力すると、24時間AIアシスタントを利用できます。",
     "chatSession": "解釈補助",
     "home": "ワークスペースのホームへ移動",
     "referenceDocuments": "参照文書",
@@ -52,7 +52,7 @@
     },
     "ai": {
       "title": "準備手順: 前の画面の緑色のボタンを押して、先にCSVファイルをダウンロードしてください。",
-      "message": "AI機能を使うには、OpenAIまたはGoogleのAPIキーでAIセッションを開始してください。",
+      "message": "AI機能を使うには、OpenAI APIキーでAIセッションを開始してください。",
       "open": "新しいウィンドウで開く",
       "cancel": "結果画面に戻る"
     },
@@ -298,7 +298,7 @@
     },
     "aiInterpretLogin": {
       "title": "APIキーが必要です",
-      "message": "AIアシスタントを使うには、OpenAIまたはGoogleのAPIキーでAIセッションを開始してください。"
+      "message": "AIアシスタントを使うには、OpenAI APIキーでAIセッションを開始してください。"
     },
     "aiInterpretApiKey": {
       "title": "APIキー設定が必要です",
@@ -354,21 +354,19 @@
     "apiKeys": {
       "title": "AIセッションAPIキー",
       "openai": "OpenAI APIキー",
-      "google": "Google APIキー",
       "placeholder": "{provider} APIキーを入力",
       "openaiPlaceholder": "sk-...で始まるOpenAI APIキーを入力",
-      "googlePlaceholder": "AIza...で始まるGoogle APIキーを入力",
       "saveButton": "セッションに接続",
       "setupRequired": "APIキーの接続が必要です",
       "deleteButton": "削除",
       "saved": "接続済み",
       "notSaved": "未接続",
       "storedKey": "セッションキー",
-      "exclusiveTitle": "AI提供元は一つだけ接続します",
-      "exclusiveDescription": "OpenAIまたはGoogleのどちらか一方を、このセッションに接続します。新しいキーを接続すると前のセッションキーは置き換わります。",
-      "exclusiveNotice": "OpenAIまたはGoogleのどちらか一方を接続してください。",
+      "exclusiveTitle": "OpenAIキーを接続します",
+      "exclusiveDescription": "このセッションで使うOpenAI APIキーを接続します。新しいキーを接続すると前のセッションキーは置き換わります。",
+      "exclusiveNotice": "OpenAI APIキーを接続してください。",
       "loadedModel": "自動選択モデル",
-      "modelPolicy": "リリースから1か月以上経ち、安定性を確認できたモデルの中から、現在使える最新モデルを自動で使用します。",
+      "modelPolicy": "リリースから1か月以上経ち、安定性を確認できたモデルの中から、\n現在使える最新モデルを自動で使用します。",
       "activeProvider": "使用中",
       "currentProviderHelp": "現在、解釈アシスタントとコーディングアシスタントは{provider}キーで動作します。",
       "optionalProviderHelp": "{provider}キーを使いたい場合だけ入力してください。",
@@ -378,19 +376,19 @@
       "replacedToast": "{provider} APIキーをこのセッションに接続しました。",
       "connectedProvider": "{provider}接続中",
       "noProviderConnected": "未接続",
-      "emptyProviderHelp": "必要な提供元を一つだけ接続してください。",
+      "emptyProviderHelp": "OpenAI APIキーを接続してください。",
       "inputLabel": "{provider}キー入力",
       "showKey": "APIキーを表示",
       "hideKey": "APIキーを隠す",
       "notConnected": "未接続",
       "sessionKey": "今回のセッションキー",
-      "sessionDescription": "入力したAPIキーはサーバーデータベースに保存されません。24時間のHttpOnly Cookieに暗号化して保存され、OpenAIまたはGoogleのどちらか一方のキーだけを使用します。",
+      "sessionDescription": "入力したAPIキーはサーバーデータベースに保存されません。24時間のHttpOnly Cookieに暗号化して保存され、このセッションではOpenAI APIキーのみ使用します。",
       "promptTitle": "AIセッションを開始",
-      "promptDescription": "APIキーはサーバーデータベースに保存されません。24時間HttpOnly Cookieに暗号化して保存され、AIセッションを終了すると削除されます。",
+      "promptDescription": "APIキーはサーバーデータベースに保存されません。\n24時間HttpOnly Cookieに暗号化して保存され、\nAIセッションを終了すると削除されます。",
       "promptLater": "あとで",
       "connectForSession": "AIセッションを開始",
       "clearSessionKey": "AIセッションを終了",
-      "providerFormatError": "選択したタブとAPIキーの形式が一致しません。OpenAIキーは sk-...、Googleキーは AIza... で始まる必要があります。"
+      "providerFormatError": "sk-...で始まるOpenAI APIキーを入力してください。"
     }
   },
   "chat": {
@@ -412,9 +410,6 @@
     "invalidApiKey": "入力したAPIキーを確認してください。無効または期限切れの可能性があります。",
     "modelUnavailable": "現在接続されているAPIキーでは、このAIモデルを利用できません。API提供元のモデルアクセス権限を確認してください。",
     "providerRejected": "AIプロバイダーがリクエストを拒否しました。APIキー、請求状態、モデルアクセス権限を確認してください。"
-  },
-  "auth": {
-    "googleContinue": "Start with API key"
   },
   "errors": {
     "title": "エラー",

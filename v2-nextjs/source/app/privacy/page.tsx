@@ -59,7 +59,7 @@ const CONTENT: Record<Language, PrivacyContent> = {
       {
         heading: '외부 AI 제공자에게 전송될 수 있는 정보',
         paragraphs: [
-          '사용자가 AI 응답을 요청하면, 답변 생성에 필요한 프롬프트, 현재 대화 문맥, 구조요약 수치 또는 채점 화면 맥락, 참조문서 일부가 사용자가 선택한 OpenAI 또는 Google로 전송될 수 있습니다.',
+          '사용자가 AI 응답을 요청하면, 답변 생성에 필요한 프롬프트, 현재 대화 문맥, 구조요약 수치 또는 채점 화면 맥락, 참조문서 일부가 사용자가 선택한 OpenAI로 전송될 수 있습니다.',
           '외부 AI 제공자의 데이터 처리 방식은 각 제공자의 약관과 개인정보 정책을 따릅니다. 사용자는 본인이 선택한 API 제공자의 정책을 확인하고, 민감한 개인정보나 불필요한 식별정보를 입력하지 않도록 주의해야 합니다.',
         ],
       },
@@ -102,7 +102,7 @@ const CONTENT: Record<Language, PrivacyContent> = {
       {
         heading: 'External AI providers',
         paragraphs: [
-          'When a user requests an AI response, prompt text, current chat context, relevant calculator output, and reference-document context may be sent to the selected provider, such as OpenAI or Google.',
+          'When a user requests an AI response, prompt text, current chat context, relevant calculator output, and reference-document context may be sent to OpenAI.',
           'Processing by the external provider is governed by that provider’s own terms and privacy policy. Users should review the policies of the API provider they choose.',
         ],
       },
@@ -145,7 +145,7 @@ const CONTENT: Record<Language, PrivacyContent> = {
       {
         heading: '外部AI提供者',
         paragraphs: [
-          'AI応答を求めると、プロンプト、現在の会話文脈、関連する計算結果、参照文書文脈が、選択されたOpenAIまたはGoogleに送信される場合があります。',
+          'AI応答を求めると、プロンプト、現在の会話文脈、関連する計算結果、参照文書文脈が、選択されたOpenAIに送信される場合があります。',
           '外部提供者での処理は各提供者の規約とプライバシーポリシーに従います。利用者は選択したAPI提供者の方針を確認してください。',
         ],
       },
@@ -188,7 +188,7 @@ const CONTENT: Record<Language, PrivacyContent> = {
       {
         heading: 'Proveedores externos de IA',
         paragraphs: [
-          'Cuando se solicita una respuesta de IA, el prompt, el contexto actual de chat, resultados relevantes de la calculadora y contexto de documentos de referencia pueden enviarse al proveedor elegido, como OpenAI o Google.',
+          'Cuando se solicita una respuesta de IA, el prompt, el contexto actual de chat, resultados relevantes de la calculadora y contexto de documentos de referencia pueden enviarse a OpenAI.',
           'El tratamiento por el proveedor externo se rige por sus propios términos y política de privacidad. La persona usuaria debe revisar las políticas del proveedor API que elija.',
         ],
       },
@@ -231,7 +231,7 @@ const CONTENT: Record<Language, PrivacyContent> = {
       {
         heading: 'Provedores externos de IA',
         paragraphs: [
-          'Quando uma resposta de IA é solicitada, prompt, contexto atual do chat, resultados relevantes da calculadora e contexto de documentos de referência podem ser enviados ao provedor escolhido, como OpenAI ou Google.',
+          'Quando uma resposta de IA é solicitada, prompt, contexto atual do chat, resultados relevantes da calculadora e contexto de documentos de referência podem ser enviados a OpenAI.',
           'O tratamento pelo provedor externo segue seus próprios termos e política de privacidade. A pessoa usuária deve revisar as políticas do provedor API escolhido.',
         ],
       },

@@ -1,5 +1,5 @@
 /**
- * Rorschach Calculator v2.1.0
+ * Rorschach Calculator v2.1.1
  * Sample Data (원본 GAS index.html에서 이전)
  * 
  * 원본 샘플 데이터를 그대로 유지

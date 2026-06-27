@@ -40,7 +40,7 @@ export async function POST(request: Request) {
     const apiKey = normalizeByokApiKey(parsedBody.value.apiKey);
     if (!provider || !apiKey) {
       return NextResponse.json(
-        { error: 'Enter a valid OpenAI or Google API key.', code: 'invalid_byok_session' },
+        { error: 'Enter a valid OpenAI API key.', code: 'invalid_byok_session' },
         { status: 400 },
       );
     }

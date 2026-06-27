@@ -30,7 +30,7 @@ export function getByokCookieName() {
 }
 
 export function normalizeByokProvider(input: unknown): Provider | null {
-  return input === 'openai' || input === 'google' ? input : null;
+  return input === 'openai' ? input : null;
 }
 
 export function normalizeByokApiKey(input: unknown): string | null {

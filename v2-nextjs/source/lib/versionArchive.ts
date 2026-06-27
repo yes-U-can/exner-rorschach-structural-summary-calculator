@@ -21,6 +21,18 @@ const v2SourceUrl = `${exhibitionRepoUrl}/tree/main/v2-nextjs/source`;
 
 export const v2NextVersions: VersionArchiveEntry[] = [
   {
+    version: 'v2.1.1',
+    title: 'Version 2.1.1',
+    series: 'v2-nextjs',
+    publishedAt: '2026-06-28',
+    releaseKind: 'bugfix',
+    releaseLabel: '버그 패치',
+    summary:
+      '반응 메모 팝업이 텍스트 드래그 중 닫히던 UX 문제와 코딩 도우미 대화가 행 전환 때 초기화되던 문제를 수정하고, AI 세션을 OpenAI 전용 BYOK 흐름으로 정리한 안정화 버전입니다.',
+    sourceUrl: v2SourceUrl,
+    releaseUrl: v2ReleaseUrl('v2.1.1'),
+  },
+  {
     version: 'v2.1.0',
     title: 'Version 2.1.0',
     series: 'v2-nextjs',

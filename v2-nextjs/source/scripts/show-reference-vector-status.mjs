@@ -15,7 +15,7 @@ function readJson(filePath) {
 
 try {
   const snapshot = readJson(snapshotPath);
-  const providers = snapshot.providers ?? [];
+  const providers = ["openai"];
   const rows = providers.flatMap((provider) => {
     const providerSnapshot = snapshot.providerSnapshots?.[provider] ?? {};
     const locales = providerSnapshot.locales ?? {};
@@ -36,12 +36,15 @@ try {
   console.log("[reference-vector-status]");
   console.table(rows);
   console.log(`Generated at: ${snapshot.generatedAt ?? "-"}`);
-  console.log(`All providers ready: ${snapshot.totals?.allProvidersReady ? "yes" : "no"}`);
   console.log(
-    `OpenAI ready locales: ${snapshot.totals?.readyLocalesByProvider?.openai ?? 0}/${snapshot.totals?.localeCount ?? 0}`,
+    `All supported providers ready: ${
+      (snapshot.totals?.readyLocalesByProvider?.openai ?? 0) === (snapshot.totals?.localeCount ?? 0)
+        ? "yes"
+        : "no"
+    }`,
   );
   console.log(
-    `Google ready locales: ${snapshot.totals?.readyLocalesByProvider?.google ?? 0}/${snapshot.totals?.localeCount ?? 0}`,
+    `OpenAI ready locales: ${snapshot.totals?.readyLocalesByProvider?.openai ?? 0}/${snapshot.totals?.localeCount ?? 0}`,
   );
 } catch (error) {
   console.error("[reference-vector-status] failed");

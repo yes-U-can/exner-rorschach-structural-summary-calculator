@@ -17,7 +17,6 @@ export async function GET(request: Request) {
 
     const keyStatus: Record<Provider, boolean> = {
       openai: byokSession?.provider === 'openai',
-      google: byokSession?.provider === 'google',
     };
 
     const models = getModelCatalog().map((model) => ({
@@ -44,7 +43,7 @@ export async function GET(request: Request) {
           byokAvailable: false,
           psychologyLabel: toPsychologyLabel(model.qualityLevel),
         })),
-        keyStatus: { openai: false, google: false },
+        keyStatus: { openai: false },
         defaultProvider: null,
         defaultModelId: null,
       },

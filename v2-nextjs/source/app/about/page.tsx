@@ -45,7 +45,7 @@ const CONTENT: Record<Language, AboutContent> = {
     introParagraphs: [
       '이 웹앱은 Exner(CS) 체계에 따른 로샤 검사 구조요약 계산을 보다 안정적이고 효율적으로 돕기 위해 만들어졌습니다. 반복적으로 입력하고 계산해야 하는 항목들을 한 흐름 안에서 정리할 수 있도록 구성되어 있으며, 사용자는 위치, 결정인, 형태질, 특수점수와 주요 지표를 한 화면에서 검토하면서 구조요약 작업을 진행할 수 있습니다. 이 서비스의 목적은 계산과 정리의 부담을 줄여, 임상심리사와 수련생이 더 중요한 검토와 판단에 집중할 수 있도록 돕는 데 있습니다.',
       '이 웹앱 안에는 구조요약 계산과 부호화 과정에서 참고할 수 있는 문서들도 함께 정리되어 있습니다. 여기서 말하는 참조 문서는 로샤 검사와 Exner(CS) 체계의 규칙, 개념, 변수, 부호화 기준 등을 주제별로 나누어 정리해 둔 읽기 전용 참고 자료 모음이며, 서울임상심리연구소(SICP)와 모오(MOW)가 함께 제작하고 정리한 문서들입니다. 사용자는 필요한 개념이나 규칙이 헷갈릴 때 이 문서들을 직접 검색해서 찾아볼 수 있고, 웹앱의 AI 기능도 이 문서들을 바탕으로 답변하도록 설계되어 있습니다. 즉, 이 서비스는 단순히 계산만 해주는 도구가 아니라, 계산 과정에서 필요한 기준과 개념을 바로 확인할 수 있도록 돕는 학습 보조 도구의 역할도 함께 합니다.',
-      'AI 기능은 BYOK 방식으로만 사용할 수 있습니다. BYOK는 Bring Your Own Key의 약자로, 사용자가 본인의 OpenAI 또는 Google API 키를 직접 입력해 AI 기능을 사용하는 방식을 뜻합니다. 이 웹앱은 별도의 플랫폼 과금, 크레딧, 월정액, 자체 제공 AI 모델을 운영하지 않으며, 입력된 API 키를 서버 DB에 저장하지 않습니다. API 키는 이번 로그인 세션에서만 사용되도록 24시간짜리 HttpOnly 쿠키에 암호화되어 보관되고, AI 요청을 처리할 때 필요한 범위 안에서만 사용됩니다.',
+      'AI 기능은 BYOK 방식으로만 사용할 수 있습니다. BYOK는 Bring Your Own Key의 약자로, 사용자가 본인의 OpenAI API 키를 직접 입력해 AI 기능을 사용하는 방식을 뜻합니다. 이 웹앱은 별도의 플랫폼 과금, 크레딧, 월정액, 자체 제공 AI 모델을 운영하지 않으며, 입력된 API 키를 서버 DB에 저장하지 않습니다. API 키는 이번 로그인 세션에서만 사용되도록 24시간짜리 HttpOnly 쿠키에 암호화되어 보관되고, AI 요청을 처리할 때 필요한 범위 안에서만 사용됩니다.',
       '이 서비스의 AI는 사용자가 입력한 질문, 현재 작업 맥락, 그리고 웹앱 안의 참조 문서를 함께 바탕으로 응답합니다. 코딩 도우미는 반응을 Exner(CS) 체계의 부호화 기준에 비추어 검토할 수 있도록 돕고, 해석 도우미는 구조요약 수치 CSV를 바탕으로 해석 가설을 점검할 수 있도록 돕습니다. 다만 이 서비스와 AI 기능은 어디까지나 참고와 보조를 위한 도구이며, 전문가의 독립적인 임상 판단이나 공식적인 진단을 대체하지 않습니다. 최종적인 해석과 책임은 언제나 사용자에게 있습니다.',
       '이 서비스는 서울임상심리연구소(SICP)와 MOW가 함께 운영합니다. SICP는 임상심리학적 자문과 운영 방향을, MOW는 제품 구현과 기술 운영을 맡고 있습니다. 우리는 이 웹앱이 로샤 검사를 공부하는 학생과 수련생, 그리고 실제로 구조요약 작업을 수행하는 사용자들에게 실질적인 도움이 되는 도구가 되기를 목표로 하고 있습니다. 서비스 운영, 오류 제보, 보안 관련 문의는 mow.coding@gmail.com 으로 보내주시면 됩니다.',
     ],
@@ -97,7 +97,7 @@ const CONTENT: Record<Language, AboutContent> = {
     title: 'About',
     introParagraphs: [
       'This web app supports Exner (CS) Rorschach Structural Summary calculation and reference-document search. Calculation and reference search are available without creating an account.',
-      'AI features use a BYOK session rather than a user account. When a user enters an OpenAI or Google API key, the key is encrypted into a 24-hour HttpOnly cookie and is not stored in the server database.',
+      'AI features use a BYOK session rather than a user account. When a user enters an OpenAI API key, the key is encrypted into a 24-hour HttpOnly cookie and is not stored in the server database.',
       'The server database is used only to support public reference-document retrieval (RAG). It is not used as a user account, API-key, or chat-history database.',
       'The AI helper is a support tool for review and learning. It does not replace independent professional clinical judgment, formal diagnosis, or the user’s final responsibility.',
     ],
@@ -143,7 +143,7 @@ const CONTENT: Record<Language, AboutContent> = {
     title: 'サービス紹介',
     introParagraphs: [
       'このWebアプリは、Exner (CS) に基づくロールシャッハ構造要約の計算と参照文書検索を支援します。計算と参照文書検索はアカウントなしで利用できます。',
-      'AI機能はログインアカウントではなくBYOKセッションで動作します。OpenAIまたはGoogleのAPIキーを入力すると、キーは24時間のHttpOnly Cookieに暗号化され、サーバーDBには保存されません。',
+      'AI機能はログインアカウントではなくBYOKセッションで動作します。OpenAIのAPIキーを入力すると、キーは24時間のHttpOnly Cookieに暗号化され、サーバーDBには保存されません。',
       'サーバーDBは公開可能な参照文書検索(RAG)を支える範囲でのみ使用します。ユーザーアカウント、APIキー、チャット履歴の保存には使いません。',
       'AIヘルパーは最終判断者ではなく、確認と学習を助ける補助ツールです。最終的な解釈と責任は常に利用者にあります。',
     ],
@@ -189,7 +189,7 @@ const CONTENT: Record<Language, AboutContent> = {
     title: 'Presentación del servicio',
     introParagraphs: [
       'Esta aplicación apoya el cálculo del Structural Summary de Rorschach según Exner (CS) y la búsqueda de documentos de referencia. El cálculo y la búsqueda pueden usarse sin crear cuenta.',
-      'Las funciones de IA usan una sesión BYOK, no una cuenta de usuario. Cuando se introduce una clave API de OpenAI o Google, la clave se cifra en una cookie HttpOnly de 24 horas y no se guarda en la base de datos del servidor.',
+      'Las funciones de IA usan una sesión BYOK, no una cuenta de usuario. Cuando se introduce una clave API de OpenAI, la clave se cifra en una cookie HttpOnly de 24 horas y no se guarda en la base de datos del servidor.',
       'La base de datos del servidor se usa solo para apoyar la recuperación de documentos públicos de referencia (RAG). No se usa como base de datos de cuentas, claves API ni historial de chat.',
       'El asistente de IA es una herramienta de apoyo para revisión y aprendizaje. No sustituye el juicio clínico profesional, el diagnóstico formal ni la responsabilidad final de la persona usuaria.',
     ],

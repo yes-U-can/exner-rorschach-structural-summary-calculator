@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
 import { OpenAI } from 'openai';
-import { GoogleGenerativeAI } from '@google/generative-ai';
 import { randomUUID } from 'crypto';
 import {
   buildSystemPrompt,
@@ -54,7 +53,7 @@ type SafetyAssessment = {
 };
 
 function getWorkflowMaxOutputTokens(mode: ChatRequestMode, modelMaxOutputTokens: number) {
-  const workflowCap = mode === 'coding_assist' ? 650 : 950;
+  const workflowCap = mode === 'coding_assist' ? 1800 : 950;
   return Math.min(modelMaxOutputTokens, workflowCap);
 }
 
@@ -312,43 +311,6 @@ function classifyProviderError(error: unknown): {
   };
 }
 
-async function callGoogle(
-  apiKey: string,
-  modelId: string,
-  maxOutputTokens: number,
-  messages: { role: string; content: string }[],
-) {
-  const genAI = new GoogleGenerativeAI(apiKey);
-  const model = genAI.getGenerativeModel({
-    model: modelId,
-    generationConfig: { maxOutputTokens },
-  });
-
-  const googleMessages: { role: string; parts: { text: string }[] }[] = [];
-  for (const msg of messages) {
-    const role = msg.role === 'assistant' ? 'model' : 'user';
-    const last = googleMessages[googleMessages.length - 1];
-    if (last && last.role === role) {
-      last.parts[0].text += '\n\n' + msg.content;
-    } else {
-      googleMessages.push({ role, parts: [{ text: msg.content }] });
-    }
-  }
-
-  const lastMessage = googleMessages.pop();
-  const chat = model.startChat({ history: googleMessages });
-  const result = await chat.sendMessageStream(lastMessage?.parts || []);
-
-  return new ReadableStream({
-    async start(controller) {
-      for await (const chunk of result.stream) {
-        controller.enqueue(new TextEncoder().encode(chunk.text()));
-      }
-      controller.close();
-    },
-  });
-}
-
 export async function POST(req: Request) {
   const requestId = randomUUID();
 
@@ -558,11 +520,7 @@ export async function POST(req: Request) {
 
     let finalMessages: { role: string; content: string }[];
     if (fullSystemPrompt) {
-      if (provider === 'openai') {
-        finalMessages = [{ role: 'system', content: fullSystemPrompt }, ...formattedMessages];
-      } else {
-        finalMessages = [{ role: 'user', content: fullSystemPrompt }, ...formattedMessages];
-      }
+      finalMessages = [{ role: 'system', content: fullSystemPrompt }, ...formattedMessages];
     } else {
       finalMessages = formattedMessages;
     }
@@ -594,18 +552,12 @@ export async function POST(req: Request) {
     let stream: ReadableStream;
     const maxOutputTokens = getWorkflowMaxOutputTokens(workflowMode, selectedModel.maxOutputTokens);
     try {
-      if (provider === 'openai') {
-        stream = await callOpenAI(
-          apiKey,
-          selectedModel.id,
-          maxOutputTokens,
-          finalMessages as { role: 'system' | 'user' | 'assistant'; content: string }[],
-        );
-      } else if (provider === 'google') {
-        stream = await callGoogle(apiKey, selectedModel.id, maxOutputTokens, finalMessages);
-      } else {
-        return new NextResponse('Provider is not supported.', { status: 400 });
-      }
+      stream = await callOpenAI(
+        apiKey,
+        selectedModel.id,
+        maxOutputTokens,
+        finalMessages as { role: 'system' | 'user' | 'assistant'; content: string }[],
+      );
     } catch (providerError) {
       const providerFailure = classifyProviderError(providerError);
       await finalizeStreamResult('provider_init_failed');

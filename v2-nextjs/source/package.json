@@ -1,12 +1,11 @@
 {
   "name": "rorschach-calculator-v2",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "private": true,
   "scripts": {
     "docs:generate-corpus": "node scripts/generate-reference-corpus.mjs && node scripts/generate-reference-quality-report.mjs && node scripts/generate-reference-release-snapshot.mjs",
     "docs:audit-authoring": "node scripts/audit-reference-authoring.mjs",
     "docs:generate-embeddings:openai": "node scripts/generate-reference-embeddings.mjs openai",
-    "docs:generate-embeddings:google": "node scripts/generate-reference-embeddings.mjs google",
     "docs:generate-vector-release-snapshot": "node scripts/generate-reference-vector-release-snapshot.mjs",
     "docs:qa-corpus": "node scripts/generate-reference-quality-report.mjs && node scripts/generate-reference-release-snapshot.mjs",
     "docs:assert-runtime-ready": "node scripts/assert-reference-runtime-ready.mjs",
@@ -40,7 +39,6 @@
     "postcss": "8.5.12"
   },
   "dependencies": {
-    "@google/generative-ai": "^0.24.1",
     "@headlessui/react": "^2.2.9",
     "@heroicons/react": "^2.2.0",
     "@prisma/client": "^7.8.0",

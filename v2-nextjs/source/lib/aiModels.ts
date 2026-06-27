@@ -1,4 +1,4 @@
-export type Provider = 'openai' | 'google';
+export type Provider = 'openai';
 
 export type ModelQualityLevel = 'basic' | 'standard' | 'advanced';
 export type ModelPriceLevel = 'low' | 'medium' | 'high';
@@ -22,7 +22,6 @@ export type AIModelConfig = {
 
 export const DEFAULT_PROVIDER_MODEL_IDS: Record<Provider, string> = {
   openai: 'gpt-5.5',
-  google: 'gemini-2.5-pro',
 };
 
 const MODEL_CATALOG: AIModelConfig[] = [
@@ -39,21 +38,6 @@ const MODEL_CATALOG: AIModelConfig[] = [
     inputUsdPer1M: 5,
     outputUsdPer1M: 30,
     maxOutputTokens: 128000,
-    recommended: true,
-  },
-  {
-    id: DEFAULT_PROVIDER_MODEL_IDS.google,
-    provider: 'google',
-    label: 'Gemini 2.5 Pro',
-    description: 'Stable Gemini model for deep reasoning, coding, and long-context work.',
-    descriptionKo: '깊은 추론, 부호화 보조, 긴 문맥 처리에 맞춘 안정적인 Gemini 모델입니다.',
-    contextWindowTokens: 1_048_576,
-    qualityLevel: 'advanced',
-    priceLevel: 'high',
-    speedLevel: 'deep',
-    inputUsdPer1M: 1.25,
-    outputUsdPer1M: 10,
-    maxOutputTokens: 4096,
     recommended: true,
   },
 ];

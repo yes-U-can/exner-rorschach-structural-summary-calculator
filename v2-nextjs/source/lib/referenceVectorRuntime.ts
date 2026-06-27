@@ -1,7 +1,7 @@
 import vectorSnapshotArtifact from '@/generated/reference-corpus/vector-release-snapshot.json';
 import type { Language } from '@/types';
 
-export type VectorProvider = 'openai' | 'google';
+export type VectorProvider = 'openai';
 
 export type ReferenceVectorLocaleSnapshot = {
   locale: Language;
@@ -48,9 +48,24 @@ export type ReferenceVectorProviderOverview = {
 };
 
 const vectorSnapshot = vectorSnapshotArtifact as ReferenceVectorReleaseSnapshot;
+const SUPPORTED_VECTOR_PROVIDERS: VectorProvider[] = ['openai'];
 
 export function getReferenceVectorReleaseSnapshot(): ReferenceVectorReleaseSnapshot {
-  return vectorSnapshot;
+  return {
+    ...vectorSnapshot,
+    providers: SUPPORTED_VECTOR_PROVIDERS,
+    totals: {
+      ...vectorSnapshot.totals,
+      readyLocalesByProvider: {
+        openai: vectorSnapshot.totals.readyLocalesByProvider.openai,
+      },
+      allProvidersReady:
+        vectorSnapshot.totals.readyLocalesByProvider.openai === vectorSnapshot.totals.localeCount,
+    },
+    providerSnapshots: {
+      openai: vectorSnapshot.providerSnapshots.openai,
+    },
+  };
 }
 
 export function getReferenceVectorProviderSnapshot(
@@ -85,7 +100,7 @@ export function getReferenceVectorProviderOverview(
 }
 
 export function getReferenceVectorProviderOverviews(): ReferenceVectorProviderOverview[] {
-  return vectorSnapshot.providers.map((provider) => getReferenceVectorProviderOverview(provider));
+  return SUPPORTED_VECTOR_PROVIDERS.map((provider) => getReferenceVectorProviderOverview(provider));
 }
 
 export function getReferenceVectorLocaleSnapshot(
@@ -107,11 +122,9 @@ export function getReferenceVectorOverview() {
     generatedAt: vectorSnapshot.generatedAt,
     localeCount: vectorSnapshot.totals.localeCount,
     readyOpenAiLocales: vectorSnapshot.totals.readyLocalesByProvider.openai,
-    readyGoogleLocales: vectorSnapshot.totals.readyLocalesByProvider.google,
-    allProvidersReady: vectorSnapshot.totals.allProvidersReady,
+    allProvidersReady:
+      vectorSnapshot.totals.readyLocalesByProvider.openai === vectorSnapshot.totals.localeCount,
     openaiModel: vectorSnapshot.providerSnapshots.openai.embeddingModel,
-    googleModel: vectorSnapshot.providerSnapshots.google.embeddingModel,
     openaiLatestRefreshedAt: vectorSnapshot.providerSnapshots.openai.latestRefreshedAt,
-    googleLatestRefreshedAt: vectorSnapshot.providerSnapshots.google.latestRefreshedAt,
   };
 }

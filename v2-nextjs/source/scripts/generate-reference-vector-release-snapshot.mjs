@@ -13,7 +13,7 @@ const ROOT = process.cwd();
 const GENERATED_ROOT = path.join(ROOT, 'generated', 'reference-corpus');
 const CHUNKS_PATH = path.join(GENERATED_ROOT, 'chunks.json');
 const OUTPUT_PATH = path.join(GENERATED_ROOT, 'vector-release-snapshot.json');
-const PROVIDERS = ['openai', 'google'];
+const PROVIDERS = ['openai'];
 
 async function readJson(filePath) {
   return JSON.parse(await fs.readFile(filePath, 'utf8'));

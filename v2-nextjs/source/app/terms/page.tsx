@@ -44,7 +44,7 @@ const CONTENT: Record<Language, TermsContent> = {
       {
         heading: '서비스 범위',
         paragraphs: [
-          '구조요약 계산과 참조 문서 검색은 별도의 계정 없이 사용할 수 있습니다. AI 기능인 코딩 도우미와 해석 도우미는 사용자가 OpenAI 또는 Google API 키를 이번 세션에 입력한 경우에만 사용할 수 있습니다.',
+          '구조요약 계산과 참조 문서 검색은 별도의 계정 없이 사용할 수 있습니다. AI 기능인 코딩 도우미와 해석 도우미는 사용자가 OpenAI API 키를 이번 세션에 입력한 경우에만 사용할 수 있습니다.',
           '이 서비스는 로샤 검사 구조요약 계산과 학습, 검토를 돕기 위한 도구입니다. 검사 실시, 공식 진단, 치료 결정, 법적·행정적 판단을 대신하는 서비스가 아닙니다.',
         ],
       },
@@ -86,8 +86,8 @@ const CONTENT: Record<Language, TermsContent> = {
       {
         heading: 'Service scope',
         paragraphs: [
-          'Structural Summary calculation and reference-document search can be used without an account. The interpretation helper and coding helper are available only after the user enters an OpenAI or Google API key.',
-          'AI features run only through the OpenAI or Google API key entered by the user; the service does not sell a separate AI subscription or usage account.',
+          'Structural Summary calculation and reference-document search can be used without an account. The interpretation helper and coding helper are available only after the user enters an OpenAI API key.',
+          'AI features run only through the OpenAI API key entered by the user; the service does not sell a separate AI subscription or usage account.',
         ],
       },
       {
@@ -127,8 +127,8 @@ const CONTENT: Record<Language, TermsContent> = {
       {
         heading: 'サービス範囲',
         paragraphs: [
-          '構造要約の計算と参照文書検索はアカウントなしで利用できます。解釈ヘルパーとコーディングヘルパーは、OpenAIまたはGoogleのAPIキーを入力した場合のみ利用できます。',
-          'AI機能は利用者が入力したOpenAIまたはGoogleのAPIキーでのみ動作し、別途のAI利用権や決済アカウントは提供しません。',
+          '構造要約の計算と参照文書検索はアカウントなしで利用できます。解釈ヘルパーとコーディングヘルパーは、OpenAIのAPIキーを入力した場合のみ利用できます。',
+          'AI機能は利用者が入力したOpenAIのAPIキーでのみ動作し、別途のAI利用権や決済アカウントは提供しません。',
         ],
       },
       {
@@ -168,8 +168,8 @@ const CONTENT: Record<Language, TermsContent> = {
       {
         heading: 'Alcance del servicio',
         paragraphs: [
-          'El cálculo del Structural Summary y la búsqueda de documentos de referencia pueden usarse sin cuenta. El asistente de interpretación y el asistente de codificación están disponibles solo después de introducir una clave API de OpenAI o Google.',
-          'Las funciones de IA funcionan únicamente con la clave API de OpenAI o Google introducida por la persona usuaria; el servicio no vende una suscripción de IA ni una cuenta de uso separada.',
+          'El cálculo del Structural Summary y la búsqueda de documentos de referencia pueden usarse sin cuenta. El asistente de interpretación y el asistente de codificación están disponibles solo después de introducir una clave API de OpenAI.',
+          'Las funciones de IA funcionan únicamente con la clave API de OpenAI introducida por la persona usuaria; el servicio no vende una suscripción de IA ni una cuenta de uso separada.',
         ],
       },
       {

@@ -1,7 +1,7 @@
 {
   "app": {
     "title": "Computing Program for Rorschach Structural Summary",
-    "version": "v2.1.0",
+    "version": "v2.1.1",
     "provider": "Provided by Seoul Institute of Clinical Psychology"
   },
   "nav": {
@@ -11,7 +11,7 @@
     "logout": "End AI session",
     "loginRequired": "API key required",
     "aiAssistant": "Coding helper",
-    "aiGuide": "Enter an OpenAI or Google API key to use the AI assistant for 24 hours.",
+    "aiGuide": "Enter an OpenAI API key to use the AI assistant for 24 hours.",
     "chatSession": "Interpretation helper",
     "home": "Go to workspace home",
     "referenceDocuments": "Reference Documents",
@@ -52,7 +52,7 @@
     },
     "ai": {
       "title": "Preparation Step: Please download the CSV file by clicking the green buttons on the previous screen.",
-      "message": "Start an AI session with an OpenAI or Google API key to use AI features.",
+      "message": "Start an AI session with an OpenAI API key to use AI features.",
       "open": "Open in New Window",
       "cancel": "Return to Results"
     },
@@ -298,7 +298,7 @@
     },
     "aiInterpretLogin": {
       "title": "API key required",
-      "message": "Start an AI session with an OpenAI or Google API key to use the AI assistant."
+      "message": "Start an AI session with an OpenAI API key to use the AI assistant."
     },
     "aiInterpretApiKey": {
       "title": "API key setup required",
@@ -354,21 +354,19 @@
     "apiKeys": {
       "title": "AI session API key",
       "openai": "OpenAI API Key",
-      "google": "Google API Key",
       "placeholder": "Enter {provider} API key",
       "openaiPlaceholder": "Enter an OpenAI API key starting with sk-...",
-      "googlePlaceholder": "Enter a Google API key starting with AIza...",
       "saveButton": "Connect for session",
       "setupRequired": "API key required",
       "deleteButton": "Delete",
       "saved": "Connected",
       "notSaved": "Not connected",
       "storedKey": "Session key",
-      "exclusiveTitle": "Connect one AI provider",
-      "exclusiveDescription": "Connect either OpenAI or Google for this session. A new key replaces the previous session key.",
-      "exclusiveNotice": "Connect either OpenAI or Google.",
+      "exclusiveTitle": "Connect OpenAI",
+      "exclusiveDescription": "Connect an OpenAI API key for this session. A new key replaces the previous session key.",
+      "exclusiveNotice": "Connect an OpenAI API key.",
       "loadedModel": "Auto-selected model",
-      "modelPolicy": "The app automatically uses the newest available model that has been out for at least one month.",
+      "modelPolicy": "The app automatically uses the newest available model\nthat has been out for at least one month.",
       "activeProvider": "Active",
       "currentProviderHelp": "The interpretation assistant and coding assistant currently use {provider}.",
       "optionalProviderHelp": "Enter a {provider} key only if you want to use it.",
@@ -378,19 +376,19 @@
       "replacedToast": "{provider} API key is connected for this session.",
       "connectedProvider": "{provider} connected",
       "noProviderConnected": "No key connected",
-      "emptyProviderHelp": "Connect one provider only.",
+      "emptyProviderHelp": "Connect an OpenAI API key.",
       "inputLabel": "{provider} key",
       "showKey": "Show API key",
       "hideKey": "Hide API key",
       "notConnected": "Not connected",
       "sessionKey": "Session key",
-      "sessionDescription": "The API key you enter is not stored in the server database. It is encrypted in a 24-hour HttpOnly cookie. Use only one provider key: OpenAI or Google.",
+      "sessionDescription": "The API key you enter is not stored in the server database. It is encrypted in a 24-hour HttpOnly cookie. Use an OpenAI API key for this session.",
       "promptTitle": "Start an AI session",
-      "promptDescription": "The key is not stored in our server database. It is encrypted in an HttpOnly cookie for 24 hours and deleted when you end the AI session.",
+      "promptDescription": "The key is not stored in our server database.\nIt is encrypted in an HttpOnly cookie for 24 hours,\nand deleted when you end the AI session.",
       "promptLater": "Later",
       "connectForSession": "Start AI session",
       "clearSessionKey": "End AI session",
-      "providerFormatError": "The selected tab does not match the API key format. OpenAI keys must start with sk-..., and Google keys must start with AIza...."
+      "providerFormatError": "Enter an OpenAI API key that starts with sk-."
     }
   },
   "chat": {
@@ -412,9 +410,6 @@
     "invalidApiKey": "Please check the API key you entered. It may be invalid or expired.",
     "modelUnavailable": "This API key cannot access the selected AI model. Check model access in your provider account.",
     "providerRejected": "The AI provider rejected the request. Check your API key, billing status, and model access."
-  },
-  "auth": {
-    "googleContinue": "Start with API key"
   },
   "errors": {
     "title": "Error",

@@ -8,7 +8,7 @@
 
 ## 현재 공개된 항목
 
-- [Next.js] 버전 2 최신 릴리즈: [v2-nextjs/releases/v2.1.0](./v2-nextjs/releases/v2.1.0/)
+- [Next.js] 버전 2 최신 릴리즈: [v2-nextjs/releases/v2.1.1](./v2-nextjs/releases/v2.1.1/)
 - [Next.js] 버전 2 릴리즈 기록: [v2-nextjs/releases](./v2-nextjs/releases/)
 - [Next.js] 버전 2 공개 소스코드: [v2-nextjs/source](./v2-nextjs/source/)
 - [Google Apps Script] 버전 1 릴리즈 기록: [v1-gas/releases](./v1-gas/releases/)
@@ -17,6 +17,7 @@
 
 ## [Next.js] 버전 2 릴리즈 기록
 
+- **[2026-06-28] v2.1.1 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.1.1/) [소스코드](./v2-nextjs/source/)
 - **[2026-06-22] v2.1.0 (마이너 패치)** [패치노트](./v2-nextjs/releases/v2.1.0/) [소스코드](./v2-nextjs/source/)
 - **[2026-06-11] v2.0.3 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.0.3/) [소스코드](./v2-nextjs/source/)
 - **[2026-05-21] v2.0.2 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.0.2/) [소스코드](./v2-nextjs/source/)

@@ -35,7 +35,7 @@ type Message = {
   content: string;
 };
 
-type Provider = 'openai' | 'google';
+type Provider = 'openai';
 type ModelOption = {
   id: string;
   provider: Provider;

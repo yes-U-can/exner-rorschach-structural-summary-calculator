@@ -5,7 +5,6 @@ import path from 'node:path';
 import { randomUUID } from 'node:crypto';
 
 import OpenAI from 'openai';
-import { GoogleGenerativeAI, TaskType } from '@google/generative-ai';
 import pg from 'pg';
 
 import { loadProjectEnv } from './load-project-env.mjs';
@@ -14,7 +13,7 @@ const { Pool } = pg;
 
 const ROOT = process.cwd();
 const CHUNKS_PATH = path.join(ROOT, 'generated', 'reference-corpus', 'chunks.json');
-const PROVIDERS = ['openai', 'google'];
+const PROVIDERS = ['openai'];
 
 function chunkArray(items, size) {
   const batchSize = Math.max(1, Math.floor(size));
@@ -45,11 +44,7 @@ function resolveApiKey(provider) {
     );
   }
 
-  return (
-    process.env.REFERENCE_EMBEDDING_GOOGLE_API_KEY ??
-    process.env.GOOGLE_API_KEY ??
-    null
-  );
+  return null;
 }
 
 function buildEmbeddingText(chunk) {
@@ -69,7 +64,7 @@ function getBatchSize(provider) {
   const raw =
     provider === 'openai'
       ? process.env.REFERENCE_EMBEDDING_BATCH_SIZE_OPENAI ?? '64'
-      : process.env.REFERENCE_EMBEDDING_BATCH_SIZE_GOOGLE ?? '16';
+      : '64';
   const parsed = Number(raw);
   return Number.isFinite(parsed) && parsed > 0 ? Math.floor(parsed) : 16;
 }
@@ -94,19 +89,7 @@ async function embedChunkBatch(provider, apiKey, chunks) {
     };
   }
 
-  const modelName = process.env.REFERENCE_EMBEDDING_MODEL_GOOGLE ?? 'gemini-embedding-001';
-  const client = new GoogleGenerativeAI(apiKey);
-  const model = client.getGenerativeModel({ model: modelName });
-  const response = await model.batchEmbedContents({
-    requests: texts.map((text) => ({
-      content: { role: 'user', parts: [{ text }] },
-      taskType: TaskType.RETRIEVAL_DOCUMENT,
-    })),
-  });
-  return {
-    embeddingModel: modelName,
-    vectors: (response.embeddings ?? []).map((entry) => normalizeEmbedding(entry.values ?? [])),
-  };
+  throw new Error(`Unsupported embedding provider: ${provider}`);
 }
 
 async function readChunks(targetLocales) {
@@ -203,7 +186,7 @@ async function main() {
     .filter(Boolean);
 
   if (!provider || !PROVIDERS.includes(provider)) {
-    throw new Error('Usage: node scripts/generate-reference-embeddings.mjs <openai|google> [locale ...]');
+    throw new Error('Usage: node scripts/generate-reference-embeddings.mjs openai [locale ...]');
   }
 
   const apiKey = resolveApiKey(provider);

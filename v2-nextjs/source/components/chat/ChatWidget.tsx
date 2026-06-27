@@ -28,7 +28,7 @@ import {
 } from '@/lib/byokSessionClient';
 import { isByokSessionMissingError, readChatApiErrorPayload } from '@/lib/chatApiErrors';
 
-type Provider = 'openai' | 'google';
+type Provider = 'openai';
 type ModelOption = {
   id: string;
   provider: Provider;
@@ -60,22 +60,6 @@ type ChatWidgetProps = {
   onClose: () => void;
   workflow?: CodingAssistWorkflow | null;
 };
-
-function buildContextScope(context: CodingAssistContext | null) {
-  if (!context) return 'no-context';
-  const focusScope = context.focusRowIndex === null ? 'sheet' : context.focusRowIndex;
-  const source = [
-    focusScope,
-    context.card,
-    context.responseMemo,
-    context.selectedRowIndices.join(','),
-  ].join('|');
-  let hash = 0;
-  for (let index = 0; index < source.length; index += 1) {
-    hash = Math.imul(31, hash) + source.charCodeAt(index);
-  }
-  return `row-${focusScope}-${Math.abs(hash).toString(36)}`;
-}
 
 export default function ChatWidget({
   isOpen,
@@ -110,9 +94,9 @@ export default function ChatWidget({
     () => buildEphemeralChatStorageKey({
       userId: 'browser',
       mode: 'coding_assist',
-      scope: buildContextScope(currentWorkflow.context),
+      scope: 'coding-assist-session',
     }),
-    [currentWorkflow.context],
+    [],
   );
 
   const updateAutoScrollPreference = useCallback(() => {
@@ -240,6 +224,7 @@ export default function ChatWidget({
 
   useEffect(() => {
     if (!isOpen) return;
+    if (loadedStorageKey === storageKey) return;
 
     const starter: Message = {
       id: Date.now(),
@@ -253,7 +238,7 @@ export default function ChatWidget({
     const storedMessages = readEphemeralChatMessages<Message>(storageKey);
     setMessages(storedMessages.length > 0 ? storedMessages : currentWorkflow.context ? [starter] : []);
     setLoadedStorageKey(storageKey);
-  }, [currentWorkflow, isOpen, storageKey]);
+  }, [currentWorkflow.context, currentWorkflow.starterMessage, isOpen, loadedStorageKey, storageKey]);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -262,7 +247,10 @@ export default function ChatWidget({
   }, [isOpen, loadedStorageKey, messages, storageKey]);
 
   useEffect(() => {
-    const handleClear = () => setMessages([]);
+    const handleClear = () => {
+      setLoadedStorageKey(null);
+      setMessages([]);
+    };
     window.addEventListener(EPHEMERAL_CHAT_CLEAR_EVENT, handleClear);
     return () => window.removeEventListener(EPHEMERAL_CHAT_CLEAR_EVENT, handleClear);
   }, []);

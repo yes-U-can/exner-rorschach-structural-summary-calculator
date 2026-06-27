@@ -38,7 +38,7 @@ export default function HeaderAuthControls({
   }
 
   if (status === 'authenticated') {
-    const providerLabel = byokStatus.provider === 'google' ? 'Google' : 'OpenAI';
+    const providerLabel = 'OpenAI';
     return (
       <div className="ui-header-control-row">
         <div className="ui-header-session-chip">

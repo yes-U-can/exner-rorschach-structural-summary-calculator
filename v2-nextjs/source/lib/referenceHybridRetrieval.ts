@@ -16,7 +16,7 @@ import { embedReferenceQuery } from '@/lib/referenceEmbeddings';
 import { isReferenceVectorRuntimeReady } from '@/lib/referenceVectorRuntime';
 import { searchReferenceChunkEmbeddings } from '@/lib/referenceVectorStore';
 
-type HybridProvider = Extract<Provider, 'openai' | 'google'>;
+type HybridProvider = Extract<Provider, 'openai'>;
 export type HybridRetrievalMode = 'lexical' | 'hybrid';
 
 export type RetrievalTraceEntry = {

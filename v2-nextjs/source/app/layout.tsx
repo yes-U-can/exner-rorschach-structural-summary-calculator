@@ -122,19 +122,31 @@ export default async function RootLayout({
   return (
     <html lang="ko" suppressHydrationWarning>
       <head>
-        <Script id="theme-init" strategy="beforeInteractive" nonce={nonce}>
-          {`try{var t=localStorage.getItem('sicp-theme');var d=t==='dark';document.documentElement.classList.toggle('dark',d);document.documentElement.dataset.theme=d?'dark':'light';}catch(e){document.documentElement.dataset.theme='light';}`}
-        </Script>
+        <script
+          id="theme-init"
+          nonce={nonce}
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{
+            __html:
+              "try{var t=localStorage.getItem('sicp-theme');var d=t==='dark';document.documentElement.classList.toggle('dark',d);document.documentElement.dataset.theme=d?'dark':'light';}catch(e){document.documentElement.dataset.theme='light';}",
+          }}
+        />
         <script
           nonce={nonce}
           type="application/ld+json"
+          suppressHydrationWarning
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
         {gaId && gaId !== 'G-XXXXXXXXXX' && (
           <>
             {cookieYesScriptUrl ? (
               <>
-                <Script id="google-consent-default" strategy="beforeInteractive" nonce={nonce}>
+                <Script
+                  id="google-consent-default"
+                  strategy="beforeInteractive"
+                  nonce={nonce}
+                  suppressHydrationWarning
+                >
                   {`
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
@@ -146,15 +158,22 @@ export default async function RootLayout({
                     });
                   `}
                 </Script>
-                <Script id="cookieyes" src={cookieYesScriptUrl} strategy="beforeInteractive" nonce={nonce} />
+                <Script
+                  id="cookieyes"
+                  src={cookieYesScriptUrl}
+                  strategy="beforeInteractive"
+                  nonce={nonce}
+                  suppressHydrationWarning
+                />
               </>
             ) : null}
             <Script
               src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
               strategy="afterInteractive"
               nonce={nonce}
+              suppressHydrationWarning
             />
-            <Script id="google-analytics" strategy="afterInteractive" nonce={nonce}>
+            <Script id="google-analytics" strategy="afterInteractive" nonce={nonce} suppressHydrationWarning>
               {`
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}

@@ -1,7 +1,7 @@
 {
   "app": {
     "title": "Computing Program for Rorschach Structural Summary",
-    "version": "v2.1.0",
+    "version": "v2.1.1",
     "provider": "Fornecido pelo Instituto de Psicologia Clínica de Seul"
   },
   "nav": {
@@ -11,7 +11,7 @@
     "logout": "Encerrar sessao de IA",
     "loginRequired": "API key necessaria",
     "aiAssistant": "Assistente de codificação",
-    "aiGuide": "Insira uma API key da OpenAI ou do Google para usar o assistente de IA por 24 horas.",
+    "aiGuide": "Insira uma API key da OpenAI para usar o assistente de IA por 24 horas.",
     "chatSession": "Assistente de interpretação",
     "home": "Ir para o início",
     "referenceDocuments": "Documentos de Referencia",
@@ -52,7 +52,7 @@
     },
     "ai": {
       "title": "Etapa de preparação: Baixe o arquivo CSV clicando nos botões verdes na tela anterior.",
-      "message": "Para usar os recursos de IA, inicie uma sessao com uma API key da OpenAI ou do Google.",
+      "message": "Para usar os recursos de IA, inicie uma sessao com uma API key da OpenAI.",
       "open": "Abrir em Nova Janela",
       "cancel": "Voltar para Resultados"
     },
@@ -298,7 +298,7 @@
     },
     "aiInterpretLogin": {
       "title": "API key necessaria",
-      "message": "Para usar o assistente de IA, inicie uma sessao com uma API key da OpenAI ou do Google."
+      "message": "Para usar o assistente de IA, inicie uma sessao com uma API key da OpenAI."
     },
     "aiInterpretApiKey": {
       "title": "Configuração da API key necessária",
@@ -354,21 +354,19 @@
     "apiKeys": {
       "title": "API key da sessao de IA",
       "openai": "Chave de API da OpenAI",
-      "google": "Chave de API do Google",
       "placeholder": "Insira a chave API da {provider}",
       "openaiPlaceholder": "Insira uma API key da OpenAI que comece com sk-...",
-      "googlePlaceholder": "Insira uma API key do Google que comece com AIza...",
       "saveButton": "Conectar sessao",
       "setupRequired": "Chave API necessaria",
       "deleteButton": "Excluir",
       "saved": "Conectada",
       "notSaved": "Nao conectada",
       "storedKey": "Chave da sessao",
-      "exclusiveTitle": "Conecte um provedor de IA",
-      "exclusiveDescription": "Conecte OpenAI ou Google para esta sessao. Uma nova chave substitui a chave anterior da sessao.",
-      "exclusiveNotice": "Conecte OpenAI ou Google.",
+      "exclusiveTitle": "Conecte a OpenAI",
+      "exclusiveDescription": "Conecte uma API key da OpenAI para esta sessao. Uma nova chave substitui a chave anterior da sessao.",
+      "exclusiveNotice": "Conecte uma API key da OpenAI.",
       "loadedModel": "Modelo automatico",
-      "modelPolicy": "O app usa automaticamente o modelo mais recente disponivel que tenha pelo menos um mes de lancamento.",
+      "modelPolicy": "O app usa automaticamente o modelo mais recente disponivel\nque tenha pelo menos um mes de lancamento.",
       "activeProvider": "Ativo",
       "currentProviderHelp": "O assistente de interpretacao e o assistente de codificacao usam {provider}.",
       "optionalProviderHelp": "Insira uma chave da {provider} somente se quiser usa-la.",
@@ -378,19 +376,19 @@
       "replacedToast": "A chave API da {provider} esta conectada para esta sessao.",
       "connectedProvider": "{provider} conectado",
       "noProviderConnected": "Nenhuma chave conectada",
-      "emptyProviderHelp": "Conecte somente um provedor.",
+      "emptyProviderHelp": "Conecte uma API key da OpenAI.",
       "inputLabel": "Chave da {provider}",
       "showKey": "Mostrar chave API",
       "hideKey": "Ocultar chave API",
       "notConnected": "Nao conectada",
       "sessionKey": "Chave desta sessao",
-      "sessionDescription": "A API key inserida nao e salva no banco de dados do servidor. Ela e criptografada em um cookie HttpOnly de 24 horas. Use apenas uma chave de provedor: OpenAI ou Google.",
+      "sessionDescription": "A API key inserida nao e salva no banco de dados do servidor. Ela e criptografada em um cookie HttpOnly de 24 horas. Use uma API key da OpenAI para esta sessao.",
       "promptTitle": "Iniciar sessao de IA",
-      "promptDescription": "A chave nao e salva no banco de dados do servidor. Ela e criptografada em um cookie HttpOnly por 24 horas e excluida ao encerrar a sessao de IA.",
+      "promptDescription": "A chave nao e salva no banco de dados do servidor.\nEla e criptografada em um cookie HttpOnly por 24 horas,\ne excluida ao encerrar a sessao de IA.",
       "promptLater": "Mais tarde",
       "connectForSession": "Iniciar sessao de IA",
       "clearSessionKey": "Encerrar sessao de IA",
-      "providerFormatError": "A aba selecionada nao corresponde ao formato da chave API. Chaves da OpenAI devem comecar com sk-..., e chaves do Google com AIza...."
+      "providerFormatError": "Insira uma API key da OpenAI que comece com sk-."
     }
   },
   "chat": {
@@ -412,9 +410,6 @@
     "invalidApiKey": "Verifique a API key informada. Ela pode estar inválida ou expirada.",
     "modelUnavailable": "Esta chave de API não pode acessar o modelo de IA selecionado. Verifique o acesso ao modelo na conta do provedor.",
     "providerRejected": "O provedor de IA rejeitou a solicitação. Verifique a chave de API, o status de cobrança e o acesso ao modelo."
-  },
-  "auth": {
-    "googleContinue": "Start with API key"
   },
   "errors": {
     "title": "Erro",

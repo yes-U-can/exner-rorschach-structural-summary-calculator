@@ -6,14 +6,14 @@ import path from 'node:path';
 import { loadProjectEnv } from './load-project-env.mjs';
 
 const ROOT = process.cwd();
-const VALID_PROVIDERS = ['openai', 'google'];
+const VALID_PROVIDERS = ['openai'];
 
 function printHelp() {
   console.log(`Usage: node scripts/promote-reference-vector-runtime.mjs [options] [locale...]
 
 Options:
   --skip-migrate           Skip "prisma migrate deploy"
-  --provider=<name[,..]>   Run only the selected provider(s): openai, google
+  --provider=<name[,..]>   Run only the selected provider(s): openai
   --require-full-gate      Fail unless every provider and locale is vector-ready
   --help                   Show this help message
 

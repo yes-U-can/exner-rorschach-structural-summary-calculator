@@ -7,7 +7,7 @@ const ROOT = process.cwd();
 const GENERATED_ROOT = path.join(ROOT, 'generated', 'reference-corpus');
 const LEXICAL_RELEASE_PATH = path.join(GENERATED_ROOT, 'release-snapshot.json');
 const VECTOR_RELEASE_PATH = path.join(GENERATED_ROOT, 'vector-release-snapshot.json');
-const PROVIDERS = ['openai', 'google'];
+const PROVIDERS = ['openai'];
 
 function readJson(filePath) {
   if (!fs.existsSync(filePath)) {
@@ -31,9 +31,12 @@ function main() {
   assert(Array.isArray(vectorRelease.providers), 'Vector release snapshot is missing provider data.');
   assert(
     PROVIDERS.every((provider) => vectorRelease.providers.includes(provider)),
-    'Vector release snapshot must include openai and google providers.',
+    'Vector release snapshot must include the openai provider.',
   );
-  assert(vectorRelease.totals?.allProvidersReady === true, 'Not all vector providers are ready.');
+  assert(
+    PROVIDERS.every((provider) => vectorRelease.totals?.readyLocalesByProvider?.[provider] === lexicalRelease.locales.length),
+    'Not all vector providers are ready.',
+  );
 
   const rows = [];
 

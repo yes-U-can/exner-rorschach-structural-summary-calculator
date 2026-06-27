@@ -2,7 +2,7 @@
 
 이 폴더는 로샤 구조요약 계산 도우미 v2의 공개 전시용 Next.js 자료입니다.
 
-- 최신 패치노트: [releases/v2.1.0](./releases/v2.1.0/)
+- 최신 패치노트: [releases/v2.1.1](./releases/v2.1.1/)
 - 최초 v2 릴리즈 패치노트: [releases/v2.0.0](./releases/v2.0.0/)
 - 공개 소스코드: [source](./source/)
 
@@ -21,4 +21,4 @@ cp .env.example .env.local
 npm run build
 ```
 
-실제 AI 기능을 사용하려면 사용자가 본인의 OpenAI 또는 Google API 키를 웹앱의 BYOK 세션에 입력해야 합니다. 서버 DB에 사용자 API 키를 저장하는 구조가 아닙니다.
+실제 AI 기능을 사용하려면 사용자가 본인의 OpenAI API 키를 웹앱의 BYOK 세션에 입력해야 합니다. 서버 DB에 사용자 API 키를 저장하는 구조가 아닙니다.

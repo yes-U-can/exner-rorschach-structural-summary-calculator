@@ -14,7 +14,7 @@ Next.js-based web application for Exner structural summary scoring, documentatio
 
 - Scoring input UI (desktop table + mobile card flow)
 - Structural summary calculation and result views
-- AI chat support using a user-provided OpenAI or Google API key
+- AI chat support using a user-provided OpenAI API key
 - Reference-document search backed by public RAG corpus embeddings
 - Manifest-only PWA install support without service worker or offline caching
 - Privacy policy index and subpages (`/privacy/...`)

@@ -177,6 +177,7 @@ export default function InputTable({
   const dragPointerOffsetYRef = useRef(0);
   const pointerYRef = useRef(0);
   const rafIdRef = useRef<number | null>(null);
+  const responsePopupBackdropPointerStartedRef = useRef(false);
   const cardOrderMap = useMemo(
     () => new Map<string, number>(OPTIONS.CARDS.map((card, idx) => [card, idx])),
     []
@@ -570,7 +571,18 @@ export default function InputTable({
       {editingResponseIndex !== null && portalRoot && createPortal(
         <div
           className="fixed inset-0 z-[9999] flex items-center justify-center bg-[var(--surface-overlay)]"
-          onClick={(e) => { if (e.target === e.currentTarget) closeResponsePopup(); }}
+          onPointerDown={(event) => {
+            responsePopupBackdropPointerStartedRef.current = event.target === event.currentTarget;
+          }}
+          onPointerUp={(event) => {
+            if (responsePopupBackdropPointerStartedRef.current && event.target === event.currentTarget) {
+              closeResponsePopup();
+            }
+            responsePopupBackdropPointerStartedRef.current = false;
+          }}
+          onPointerCancel={() => {
+            responsePopupBackdropPointerStartedRef.current = false;
+          }}
         >
           <div className="mx-4 w-full max-w-sm rounded-2xl border border-[var(--border-subtle)] bg-[var(--surface-base)] p-6 shadow-2xl">
             <div className="flex items-center justify-between mb-4">
