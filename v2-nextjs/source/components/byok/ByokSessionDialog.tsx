@@ -117,40 +117,41 @@ export default function ByokSessionDialog() {
         </div>
 
         <form onSubmit={handleSubmit} className="mt-5 space-y-4">
-          <div className="rounded-2xl bg-[var(--surface-muted)] p-1">
-            <div className="rounded-xl bg-[var(--surface-base)] px-3 py-2 text-sm font-semibold text-[var(--brand-700)] shadow-sm">
-              {PROVIDER_NAME} {defaultModel.label}
-            </div>
-          </div>
-
           <label htmlFor="byok-session-api-key" className="sr-only">
             {t('aiSession.apiKeys.inputLabel', { provider: PROVIDER_NAME })}
           </label>
-          <div className="ui-api-key-input-wrap">
-            <div className="ui-api-key-icon">
-              <KeyIcon className="h-5 w-5" aria-hidden="true" />
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div className="shrink-0 rounded-2xl bg-[var(--surface-muted)] p-1 sm:w-44">
+              <div className="rounded-xl bg-[var(--surface-base)] px-3 py-2 text-sm font-semibold text-[var(--brand-700)] shadow-sm">
+                {PROVIDER_NAME} {defaultModel.label}
+              </div>
             </div>
-            <input
-              id="byok-session-api-key"
-              type={showKey ? 'text' : 'password'}
-              className="ui-api-key-input"
-              value={apiKey}
-              onChange={(event) => setApiKey(event.target.value)}
-              placeholder={apiKeyPlaceholder}
-              autoComplete="off"
-            />
-            <button
-              type="button"
-              className="ui-api-key-reveal"
-              onClick={() => setShowKey((prev) => !prev)}
-              aria-label={showKey ? t('aiSession.apiKeys.hideKey') : t('aiSession.apiKeys.showKey')}
-            >
-              {showKey ? (
-                <EyeSlashIcon className="h-5 w-5" aria-hidden="true" />
-              ) : (
-                <EyeIcon className="h-5 w-5" aria-hidden="true" />
-              )}
-            </button>
+            <div className="ui-api-key-input-wrap min-w-0 flex-1">
+              <div className="ui-api-key-icon">
+                <KeyIcon className="h-5 w-5" aria-hidden="true" />
+              </div>
+              <input
+                id="byok-session-api-key"
+                type={showKey ? 'text' : 'password'}
+                className="ui-api-key-input"
+                value={apiKey}
+                onChange={(event) => setApiKey(event.target.value)}
+                placeholder={apiKeyPlaceholder}
+                autoComplete="off"
+              />
+              <button
+                type="button"
+                className="ui-api-key-reveal"
+                onClick={() => setShowKey((prev) => !prev)}
+                aria-label={showKey ? t('aiSession.apiKeys.hideKey') : t('aiSession.apiKeys.showKey')}
+              >
+                {showKey ? (
+                  <EyeSlashIcon className="h-5 w-5" aria-hidden="true" />
+                ) : (
+                  <EyeIcon className="h-5 w-5" aria-hidden="true" />
+                )}
+              </button>
+            </div>
           </div>
           {hasFormatError && (
             <p className="text-xs leading-5 text-[var(--danger-text)]">

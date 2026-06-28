@@ -21,28 +21,108 @@ function tokenize(text: string): string[] {
   return matches ?? [];
 }
 
+const LOW_SIGNAL_CODING_TOKENS = new Set([
+  'a',
+  'an',
+  'and',
+  'are',
+  'as',
+  'but',
+  'coding',
+  'does',
+  'for',
+  'input',
+  'is',
+  'it',
+  'memo',
+  'not',
+  'of',
+  'one',
+  'response',
+  'said',
+  'says',
+  'scoring',
+  'the',
+  'this',
+  'to',
+  'with',
+]);
+
+const CARD_ROMAN_TOKENS = new Set(['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix', 'x']);
+
+function routeSegments(route: string): string[] {
+  return route.toLowerCase().split(/[\/_-]+/u).filter(Boolean);
+}
+
+function scoreExactMetadataMatch(token: string, chunk: CodingRuleChunk): number {
+  const segments = routeSegments(chunk.canonicalRoute);
+  const leafSegment = segments.at(-1);
+  const isCardRoute = chunk.canonicalRoute.toLowerCase().startsWith('scoring-input/card/');
+
+  if (isCardRoute) {
+    return token === leafSegment ? 4 : 2;
+  }
+
+  if (leafSegment === token) {
+    return token.length <= 1 ? 42 : token.length <= 2 ? 32 : 54;
+  }
+
+  if (token.length <= 1) {
+    return 12;
+  }
+
+  if (segments.includes(token)) {
+    return token.length <= 2 ? 22 : 34;
+  }
+
+  return token.length <= 2 ? 14 : 24;
+}
+
 function scoreChunk(queryTokens: Set<string>, chunk: CodingRuleChunk): number {
-  const haystack = `${chunk.title}
-${chunk.text}
-${chunk.categoryTags.join(' ')}`;
-  const tokens = new Set(tokenize(haystack));
+  const titleTokens = new Set(tokenize(chunk.title));
+  const routeTokens = new Set(routeSegments(chunk.canonicalRoute));
+  const tagTokens = new Set(tokenize(chunk.categoryTags.join(' ')));
+  const textTokens = new Set(tokenize(chunk.text));
+  const hasExplicitCardIntent = queryTokens.has('card') || queryTokens.has('cards');
+  const isCardRoute = chunk.canonicalRoute.toLowerCase().startsWith('scoring-input/card/');
   let score = 0;
+
   queryTokens.forEach((token) => {
-    if (tokens.has(token)) score += 1;
+    if (LOW_SIGNAL_CODING_TOKENS.has(token)) {
+      return;
+    }
+    if (CARD_ROMAN_TOKENS.has(token) && queryTokens.has('card') && !isCardRoute) {
+      return;
+    }
+
+    const metadataMatch = routeTokens.has(token) || tagTokens.has(token) || titleTokens.has(token);
+
+    if (metadataMatch) {
+      score += scoreExactMetadataMatch(token, chunk);
+    }
+
+    if (textTokens.has(token)) {
+      score += token.length >= 4 ? 3 : 1;
+    }
   });
+
+  if (isCardRoute && !hasExplicitCardIntent) {
+    score -= 18;
+  }
+
   return score;
 }
 
 export function buildCodingAssistQuery(context: CodingAssistContext): string {
   const selectedRows = context.sheetRows.filter((row) => context.selectedRowIndices.includes(row.rowIndex));
   const supportingRows = context.sheetRows.filter((row) => row.rowIndex !== context.focusRowIndex);
-  const focusLabel = `${context.card} ${context.responseMemo}`.trim();
+  const focusLabel = `Card-${context.card} ${context.responseMemo}`.trim();
   const selectedSummary = selectedRows
-    .map((row) => `${row.card} ${row.responseMemo}`.trim())
+    .map((row) => `Card-${row.card} ${row.responseMemo}`.trim())
     .join(' ');
   const sheetSummary = supportingRows
     .slice(0, 8)
-    .map((row) => `${row.card} ${row.responseMemo}`.trim())
+    .map((row) => `Card-${row.card} ${row.responseMemo}`.trim())
     .join(' ');
 
   return [
@@ -56,12 +136,13 @@ export function buildCodingAssistQuery(context: CodingAssistContext): string {
           context.existingCodes.dq,
           context.existingCodes.fq,
           context.existingCodes.pair,
+          context.existingCodes.popular ? 'Popular P' : '',
           context.existingCodes.z,
           ...context.existingCodes.determinants,
           ...context.existingCodes.contents,
           ...context.existingCodes.specialScores,
         ]),
-    'location dq determinants fq contents special score coding response popular z pair',
+    'scoring input response coding',
   ].join(' ');
 }
 

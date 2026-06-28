@@ -1,6 +1,6 @@
 {
   "name": "rorschach-calculator-v2",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "private": true,
   "scripts": {
     "docs:generate-corpus": "node scripts/generate-reference-corpus.mjs && node scripts/generate-reference-quality-report.mjs && node scripts/generate-reference-release-snapshot.mjs",
@@ -20,6 +20,9 @@
     "docs:evaluate-rag:en": "npm run docs:generate-corpus && node scripts/run-reference-eval.mjs en",
     "docs:evaluate-rag:ja": "npm run docs:generate-corpus && node scripts/run-reference-eval.mjs ja",
     "docs:evaluate-rag:pt": "npm run docs:generate-corpus && node scripts/run-reference-eval.mjs pt",
+    "ai:evaluate-contracts": "vitest run __tests__/aiHarness.test.ts __tests__/aiPromptContracts.test.ts __tests__/aiEvalFixtures.test.ts __tests__/aiEvalContracts.test.ts __tests__/aiRetrievalContracts.test.ts",
+    "ai:evaluate-live:openai": "vitest run __tests__/aiLiveEval.openai.test.ts --reporter=verbose",
+    "ai:evaluate-live:batch": "node scripts/run-openai-live-eval-batch.mjs",
     "i18n:audit": "node scripts/audit-i18n-copy.mjs",
     "dev": "npm run docs:generate-corpus && prisma generate && next dev",
     "build": "npm run i18n:audit && npm run docs:generate-corpus && npm run docs:assert-runtime-ready && prisma generate && next build",

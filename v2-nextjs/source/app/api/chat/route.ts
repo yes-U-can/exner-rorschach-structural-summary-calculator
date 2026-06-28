@@ -1,5 +1,4 @@
 import { NextResponse } from 'next/server';
-import { OpenAI } from 'openai';
 import { randomUUID } from 'crypto';
 import {
   buildSystemPrompt,
@@ -35,6 +34,17 @@ import {
   DEFAULT_INTERPRETATION_GUARDRAIL_PROMPT,
 } from '@/lib/interpretationGuardrails';
 import { validateStructuralSummaryCsv } from '@/lib/structuralSummaryCsv';
+import {
+  applyAiHarnessHeaders,
+  appendAiResponsePolicyPrompt,
+  buildAiRunMetadata,
+  createOpenAITextStream,
+  getAiMaxOutputTokens,
+  getAiPromptProfile,
+  type AiModelMessage,
+  type OpenAITextStreamCompletion,
+  type OpenAITextStreamResult,
+} from '@/lib/ai/harness';
 
 type NormalizedMessage = {
   role: 'ai' | 'user';
@@ -51,11 +61,16 @@ type SafetyAssessment = {
   interventionReason: string | null;
   safeResponse: string | null;
 };
-
-function getWorkflowMaxOutputTokens(mode: ChatRequestMode, modelMaxOutputTokens: number) {
-  const workflowCap = mode === 'coding_assist' ? 1800 : 950;
-  return Math.min(modelMaxOutputTokens, workflowCap);
-}
+type ChatStreamStatus =
+  | 'completed'
+  | 'partial_incomplete'
+  | 'incomplete'
+  | 'partial_failed'
+  | 'failed'
+  | 'partial_aborted'
+  | 'aborted'
+  | 'provider_init_failed'
+  | 'provider_unknown';
 
 function getStructuralSummaryCsvFromWorkflowContext(input: unknown) {
   if (!input || typeof input !== 'object') return '';
@@ -195,56 +210,6 @@ function detectSafetyAssessment(text: string, actorRole: 'user' | 'admin'): Safe
   };
 }
 
-async function callOpenAI(
-  apiKey: string,
-  model: string,
-  maxOutputTokens: number,
-  messages: { role: 'system' | 'user' | 'assistant'; content: string }[],
-) {
-  const openai = new OpenAI({ apiKey });
-
-  const instructions = messages
-    .filter((message) => message.role === 'system')
-    .map((message) => message.content)
-    .join('\n\n')
-    .trim();
-  const input = messages
-    .filter((message) => message.role !== 'system')
-    .map((message) => ({
-      role: message.role === 'assistant' ? 'assistant' as const : 'user' as const,
-      content: message.content,
-    }));
-
-  const stream = await openai.responses.create({
-    model,
-    ...(instructions ? { instructions } : {}),
-    input,
-    max_output_tokens: maxOutputTokens,
-    store: false,
-    stream: true,
-  });
-
-  return new ReadableStream({
-    async start(controller) {
-      const encoder = new TextEncoder();
-      for await (const event of stream) {
-        if (event.type === 'response.output_text.delta') {
-          controller.enqueue(encoder.encode(event.delta));
-          continue;
-        }
-        if (event.type === 'error') {
-          throw new Error(event.message);
-        }
-        if (event.type === 'response.failed') {
-          const message = event.response.error?.message || 'OpenAI response failed.';
-          throw new Error(message);
-        }
-      }
-      controller.close();
-    },
-  });
-}
-
 function classifyProviderError(error: unknown): {
   code: string;
   publicMessage: string;
@@ -311,6 +276,23 @@ function classifyProviderError(error: unknown): {
   };
 }
 
+function getTerminalStreamStatus(
+  completion: OpenAITextStreamCompletion,
+  responseLength: number,
+): ChatStreamStatus {
+  if (completion.status === 'completed') return 'completed';
+  if (completion.status === 'incomplete') {
+    return responseLength > 0 ? 'partial_incomplete' : 'incomplete';
+  }
+  if (completion.status === 'failed') {
+    return responseLength > 0 ? 'partial_failed' : 'failed';
+  }
+  if (completion.status === 'aborted') {
+    return responseLength > 0 ? 'partial_aborted' : 'aborted';
+  }
+  return 'provider_unknown';
+}
+
 export async function POST(req: Request) {
   const requestId = randomUUID();
 
@@ -369,6 +351,7 @@ export async function POST(req: Request) {
     }
 
     const workflowMode = normalizeChatWorkflowMode(body.mode);
+    const promptProfile = getAiPromptProfile(workflowMode);
     const workflowLocale = normalizeWorkflowLocale(body.lang);
     const codingAssistContext =
       workflowMode === 'coding_assist' ? normalizeCodingAssistContext(body.workflowContext) : null;
@@ -418,10 +401,11 @@ export async function POST(req: Request) {
       responseHeaders.set('X-Chat-Model-Id', selectedModel.id);
       responseHeaders.set('X-Chat-Workflow-Mode', workflowMode);
       responseHeaders.set('X-Chat-Safety-Intervention', 'true');
+      applyAiHarnessHeaders(responseHeaders, promptProfile);
       return new Response(safety.safeResponse, { headers: responseHeaders });
     }
 
-    const formattedMessages = normalizedMessages.map((m) => ({
+    const formattedMessages: AiModelMessage[] = normalizedMessages.map((m) => ({
       role: m.role === 'ai' ? 'assistant' : 'user',
       content: m.content,
     }));
@@ -517,29 +501,38 @@ export async function POST(req: Request) {
         ruleChunks,
       });
     }
+    fullSystemPrompt = appendAiResponsePolicyPrompt(fullSystemPrompt, promptProfile);
 
-    let finalMessages: { role: string; content: string }[];
+    let finalMessages: AiModelMessage[];
     if (fullSystemPrompt) {
       finalMessages = [{ role: 'system', content: fullSystemPrompt }, ...formattedMessages];
     } else {
-      finalMessages = formattedMessages;
+      finalMessages = formattedMessages as AiModelMessage[];
     }
 
     let aiResponseContent = '';
     let streamFinalized = false;
+    let latestProviderCompletion: OpenAITextStreamCompletion | null = null;
+    const maxOutputTokens = getAiMaxOutputTokens(promptProfile, selectedModel.maxOutputTokens);
 
     const finalizeStreamResult = async (
-      streamStatus: 'completed' | 'partial_failed' | 'failed' | 'partial_aborted' | 'aborted' | 'provider_init_failed',
+      streamStatus: ChatStreamStatus,
+      completion: OpenAITextStreamCompletion | null = latestProviderCompletion,
     ) => {
       if (streamFinalized) return;
       streamFinalized = true;
 
       if (streamStatus !== 'completed') {
         logApiError('chat_stream_not_completed', requestId, new Error(`Stream status: ${streamStatus}`), {
-          locale: workflowLocale,
-          workflowType: workflowMode,
-          modelId: selectedModel.id,
-          provider,
+          ...buildAiRunMetadata({
+            profile: promptProfile,
+            provider,
+            modelId: selectedModel.id,
+            workflowType: workflowMode,
+            locale: workflowLocale,
+            maxOutputTokens,
+            completion,
+          }),
           responseLength: aiResponseContent.length,
           retrievalMode,
           vectorHitCount,
@@ -549,23 +542,26 @@ export async function POST(req: Request) {
       }
     };
 
-    let stream: ReadableStream;
-    const maxOutputTokens = getWorkflowMaxOutputTokens(workflowMode, selectedModel.maxOutputTokens);
+    let providerResult: OpenAITextStreamResult;
     try {
-      stream = await callOpenAI(
+      providerResult = await createOpenAITextStream({
         apiKey,
-        selectedModel.id,
+        model: selectedModel.id,
         maxOutputTokens,
-        finalMessages as { role: 'system' | 'user' | 'assistant'; content: string }[],
-      );
+        messages: finalMessages,
+      });
     } catch (providerError) {
       const providerFailure = classifyProviderError(providerError);
       await finalizeStreamResult('provider_init_failed');
       logApiError(providerFailure.code, requestId, providerError, {
-        locale: workflowLocale,
-        workflowType: workflowMode,
-        modelId: selectedModel.id,
-        provider,
+        ...buildAiRunMetadata({
+          profile: promptProfile,
+          provider,
+          modelId: selectedModel.id,
+          workflowType: workflowMode,
+          locale: workflowLocale,
+          maxOutputTokens,
+        }),
       });
       return buildSafeApiErrorResponse({
         requestId,
@@ -579,7 +575,7 @@ export async function POST(req: Request) {
     const responseStream = new ReadableStream<Uint8Array>({
       async start(controller) {
         const decoder = new TextDecoder();
-        providerReader = stream.getReader();
+        providerReader = providerResult.stream.getReader();
 
         try {
           while (true) {
@@ -592,13 +588,29 @@ export async function POST(req: Request) {
 
           const tail = decoder.decode();
           if (tail) aiResponseContent += tail;
-          await finalizeStreamResult('completed');
+          latestProviderCompletion = await providerResult.completion;
+          await finalizeStreamResult(
+            getTerminalStreamStatus(latestProviderCompletion, aiResponseContent.length),
+            latestProviderCompletion,
+          );
           controller.close();
         } catch (streamError) {
+          latestProviderCompletion = await providerResult.completion;
           logApiError('chat_stream_failed', requestId, streamError, {
-            modelId: selectedModel.id,
+            ...buildAiRunMetadata({
+              profile: promptProfile,
+              provider,
+              modelId: selectedModel.id,
+              workflowType: workflowMode,
+              locale: workflowLocale,
+              maxOutputTokens,
+              completion: latestProviderCompletion,
+            }),
           });
-          await finalizeStreamResult(aiResponseContent ? 'partial_failed' : 'failed');
+          await finalizeStreamResult(
+            getTerminalStreamStatus(latestProviderCompletion, aiResponseContent.length),
+            latestProviderCompletion,
+          );
           controller.error(streamError);
         } finally {
           providerReader = null;
@@ -610,7 +622,11 @@ export async function POST(req: Request) {
         } catch {
           // The provider stream is already closing; audit finalization below is the important part.
         }
-        await finalizeStreamResult(aiResponseContent ? 'partial_aborted' : 'aborted');
+        latestProviderCompletion = await providerResult.completion;
+        await finalizeStreamResult(
+          getTerminalStreamStatus(latestProviderCompletion, aiResponseContent.length),
+          latestProviderCompletion,
+        );
       },
     });
 
@@ -618,6 +634,7 @@ export async function POST(req: Request) {
     responseHeaders.set('X-Chat-Request-Id', requestId);
     responseHeaders.set('X-Chat-Model-Id', selectedModel.id);
     responseHeaders.set('X-Chat-Workflow-Mode', workflowMode);
+    applyAiHarnessHeaders(responseHeaders, promptProfile);
 
     return new Response(responseStream, { headers: responseHeaders });
   } catch (error) {

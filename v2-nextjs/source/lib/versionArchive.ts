@@ -21,6 +21,18 @@ const v2SourceUrl = `${exhibitionRepoUrl}/tree/main/v2-nextjs/source`;
 
 export const v2NextVersions: VersionArchiveEntry[] = [
   {
+    version: 'v2.1.2',
+    title: 'Version 2.1.2',
+    series: 'v2-nextjs',
+    publishedAt: '2026-06-28',
+    releaseKind: 'bugfix',
+    releaseLabel: '버그 패치',
+    summary:
+      'AI 응답 품질을 안정화하기 위해 OpenAI 전용 하네스, 코딩/해석 도우미별 시스템 프롬프트, HITL 경계, 응답 끊김 감지, retrieval 계약 테스트, live eval 배치와 공개용 평가 리포트를 추가한 패치입니다.',
+    sourceUrl: v2SourceUrl,
+    releaseUrl: v2ReleaseUrl('v2.1.2'),
+  },
+  {
     version: 'v2.1.1',
     title: 'Version 2.1.1',
     series: 'v2-nextjs',
