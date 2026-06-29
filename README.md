@@ -9,6 +9,7 @@
 ## 현재 공개된 항목
 
 - [Next.js] 버전 2 최신 릴리즈: [v2-nextjs/releases/v2.1.2](./v2-nextjs/releases/v2.1.2/)
+- [Next.js] v2.1.2 AI 하네스 케이스 스터디: [docs/case-studies/v2.1.2-ai-harness.md](./docs/case-studies/v2.1.2-ai-harness.md)
 - [Next.js] 버전 2 릴리즈 기록: [v2-nextjs/releases](./v2-nextjs/releases/)
 - [Next.js] 버전 2 공개 소스코드: [v2-nextjs/source](./v2-nextjs/source/)
 - [Google Apps Script] 버전 1 릴리즈 기록: [v1-gas/releases](./v1-gas/releases/)

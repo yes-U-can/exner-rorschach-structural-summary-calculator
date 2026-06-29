@@ -23,6 +23,7 @@ v2.1.2는 AI 응답 품질과 릴리즈 검증 체계를 보강한 버그 패치
 - 튜닝 과정에서 발견한 issue-bearing fixture: 27개
 - 저장 로그 기준 비용 추정치: 약 `$1.155188`
 - 평가 리포트: [`source/docs/ai-evals/2026-06-28-v2.1.2-ai-live-eval-report.md`](../../source/docs/ai-evals/2026-06-28-v2.1.2-ai-live-eval-report.md)
+- 공개 케이스 스터디: [`docs/case-studies/v2.1.2-ai-harness.md`](../../../docs/case-studies/v2.1.2-ai-harness.md)
 
 ## 검증
 
