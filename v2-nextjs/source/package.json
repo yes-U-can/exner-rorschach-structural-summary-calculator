@@ -1,6 +1,6 @@
 {
   "name": "rorschach-calculator-v2",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "private": true,
   "scripts": {
     "docs:generate-corpus": "node scripts/generate-reference-corpus.mjs && node scripts/generate-reference-quality-report.mjs && node scripts/generate-reference-release-snapshot.mjs",
