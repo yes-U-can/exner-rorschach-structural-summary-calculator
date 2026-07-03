@@ -21,6 +21,18 @@ const v2SourceUrl = `${exhibitionRepoUrl}/tree/main/v2-nextjs/source`;
 
 export const v2NextVersions: VersionArchiveEntry[] = [
   {
+    version: 'v2.1.7',
+    title: 'Version 2.1.7',
+    series: 'v2-nextjs',
+    publishedAt: '2026-07-04',
+    releaseKind: 'bugfix',
+    releaseLabel: '버그 패치',
+    summary:
+      'v2.1.x AI 품질 작업을 마감하며 공개 릴리즈 노트, README, 버전 아카이브, AI eval 증거 문서가 따라야 할 문서 운영 원칙을 명문화한 거버넌스 패치입니다.',
+    sourceUrl: v2SourceUrl,
+    releaseUrl: v2ReleaseUrl('v2.1.7'),
+  },
+  {
     version: 'v2.1.6',
     title: 'Version 2.1.6',
     series: 'v2-nextjs',

@@ -66,6 +66,8 @@ Required logging fields per AI response flow:
    - static contracts: `npm run ai:evaluate-contracts`
    - saved eval artifact audit: `npm run ai:evaluate-artifacts`
    - human rubric review for release-candidate answer samples when clinical usefulness is being claimed
+5. Public showcase documentation must follow `docs/ops/PUBLIC_RELEASE_DOCUMENTATION.md`.
+6. Public release evidence must summarize process and metadata, not raw prompts, raw model answers, private assessment payloads, API keys, or local runtime logs.
 
 ## AI Collaboration Contract
 

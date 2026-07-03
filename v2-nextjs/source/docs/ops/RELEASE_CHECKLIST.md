@@ -42,7 +42,18 @@ Use this checklist before deploying the BYOK-only RAG build to production.
 4. CSP works without Google login frames and still allows configured analytics/consent scripts.
 5. PWA install support stays manifest-only unless a separate security review approves service worker/offline caching.
 
-## 6) Final Smoke Test
+## 6) Public Archive And Documentation
+
+1. `docs/ops/PUBLIC_RELEASE_DOCUMENTATION.md` is reviewed before writing public-facing release notes.
+2. Public-facing README, CHANGELOG, release notes, and companion summaries follow the language coverage policy.
+3. Korean canonical release notes keep technical identifiers in their original English form.
+4. The English companion overview is updated when repository positioning, latest release, or key evidence links change.
+5. The app version archive entry points to the public `exner-sicp` release note and source mirror.
+6. The public release note states whether the app UI/UX changed.
+7. AI eval evidence used in public documentation contains metadata only, not raw prompts, raw model answers, API keys, or private assessment payloads.
+8. Public source mirror excludes `.env*`, `.vercel/`, `node_modules/`, runtime logs, local caches, private work notes, API keys, and raw model output.
+
+## 7) Final Smoke Test
 
 1. Calculator works without an AI session.
 2. Starting an AI session by entering an OpenAI API key works.

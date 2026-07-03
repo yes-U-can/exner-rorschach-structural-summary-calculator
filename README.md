@@ -8,11 +8,19 @@
 
 ## 문서 언어 기준
 
-이 공개 전시용 아카이브의 기본 설명 언어는 한국어입니다. 명령어, 파일 경로, API 이름, 모델명, 테스트 이름처럼 원문 식별성이 중요한 기술 용어는 영어 표기를 유지합니다. `v2-nextjs/source/` 안의 기술 증거 문서는 실제 개발 산출물을 보존하기 위해 원문 형식을 유지할 수 있습니다.
+이 공개 전시용 아카이브는 문서 목적에 따라 언어 범위를 나눕니다.
+
+- 공개 릴리즈 노트와 CHANGELOG는 한국어를 canonical 기록으로 둡니다.
+- GitHub 방문자가 프로젝트를 빠르게 이해할 수 있도록 [English overview](./README.en.md)를 함께 둡니다.
+- 웹앱 안의 사용자 경험은 한국어, 영어, 일본어, 스페인어, 포르투갈어 5개 언어를 지원합니다.
+- 릴리즈 노트를 5개 언어로 매번 중복 작성하지는 않습니다. 유지보수 중 drift가 생길 수 있기 때문입니다.
+- 명령어, 파일 경로, API 이름, 모델명, 테스트 이름처럼 원문 식별성이 중요한 기술 용어는 영어 표기를 유지합니다.
+- `v2-nextjs/source/` 안의 기술 증거 문서는 실제 개발 산출물을 보존하기 위해 원문 형식을 유지할 수 있습니다.
+- 공개 릴리즈 문서 기준은 [v2-nextjs/source/docs/ops/PUBLIC_RELEASE_DOCUMENTATION.md](./v2-nextjs/source/docs/ops/PUBLIC_RELEASE_DOCUMENTATION.md)에 명시했습니다.
 
 ## 현재 공개된 항목
 
-- [Next.js] 버전 2 최신 릴리즈: [v2-nextjs/releases/v2.1.6](./v2-nextjs/releases/v2.1.6/)
+- [Next.js] 버전 2 최신 릴리즈: [v2-nextjs/releases/v2.1.7](./v2-nextjs/releases/v2.1.7/)
 - [Next.js] v2.1.2 AI 하네스 케이스 스터디: [docs/case-studies/v2.1.2-ai-harness.md](./docs/case-studies/v2.1.2-ai-harness.md)
 - [Next.js] AI 품질 게이트 문서: [v2-nextjs/source/docs/ai-evals/README.md](./v2-nextjs/source/docs/ai-evals/README.md)
 - [Next.js] AI human rubric: [v2-nextjs/source/docs/ai-evals/HUMAN_RUBRIC.md](./v2-nextjs/source/docs/ai-evals/HUMAN_RUBRIC.md)
@@ -24,6 +32,7 @@
 
 ## [Next.js] 버전 2 릴리즈 기록
 
+- **[2026-07-04] v2.1.7 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.1.7/) [소스코드](./v2-nextjs/source/)
 - **[2026-07-04] v2.1.6 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.1.6/) [소스코드](./v2-nextjs/source/)
 - **[2026-07-03] v2.1.5 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.1.5/) [소스코드](./v2-nextjs/source/)
 - **[2026-07-03] v2.1.4 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.1.4/) [소스코드](./v2-nextjs/source/)
