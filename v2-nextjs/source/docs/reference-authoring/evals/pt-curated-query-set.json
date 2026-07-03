@@ -1,0 +1,413 @@
+{
+  "locale": "pt",
+  "version": "2026-03-11",
+  "targetCount": 60,
+  "minimums": {
+    "coding": 24,
+    "interpretation": 24,
+    "graph-navigation": 12
+  },
+  "queries": [
+    {
+      "id": "pt-coding-dq-plus",
+      "bucket": "coding",
+      "query": "Quando uma resposta deve ser codificada como DQ+ e nao como DQo ou DQv/+?",
+      "expectedTopRoute": "scoring-input/dq/+"
+    },
+    {
+      "id": "pt-coding-dq-vplus",
+      "bucket": "coding",
+      "query": "Quando devo codificar v/+?",
+      "expectedTopRoute": "scoring-input/dq/v/+"
+    },
+    {
+      "id": "pt-coding-fq-plus",
+      "bucket": "coding",
+      "query": "O que e FQ+?",
+      "expectedTopRoute": "scoring-input/fq/+"
+    },
+    {
+      "id": "pt-coding-fq-u",
+      "bucket": "coding",
+      "query": "Quando FQu e usado?",
+      "expectedTopRoute": "scoring-input/fq/u"
+    },
+    {
+      "id": "pt-coding-location-w",
+      "bucket": "coding",
+      "query": "O que significa W como codigo de localizacao?",
+      "expectedTopRoute": "scoring-input/location/W"
+    },
+    {
+      "id": "pt-coding-location-s",
+      "bucket": "coding",
+      "query": "Como codifico S como localizacao?",
+      "expectedTopRoute": "scoring-input/location/S"
+    },
+    {
+      "id": "pt-coding-determinant-fm",
+      "bucket": "coding",
+      "query": "Quando FM e codificado como determinante?",
+      "expectedTopRoute": "scoring-input/determinants/FM"
+    },
+    {
+      "id": "pt-coding-determinant-fc",
+      "bucket": "coding",
+      "query": "Quando devo codificar FC?",
+      "expectedTopRoute": "scoring-input/determinants/FC"
+    },
+    {
+      "id": "pt-coding-determinant-t",
+      "bucket": "coding",
+      "query": "O que significa o determinante T?",
+      "expectedTopRoute": "scoring-input/determinants/T"
+    },
+    {
+      "id": "pt-coding-determinant-v",
+      "bucket": "coding",
+      "query": "O que significa o determinante Vista V?",
+      "expectedTopRoute": "scoring-input/determinants/V"
+    },
+    {
+      "id": "pt-coding-determinant-fr",
+      "bucket": "coding",
+      "query": "Quando devo codificar Fr?",
+      "expectedTopRoute": "scoring-input/determinants/Fr"
+    },
+    {
+      "id": "pt-coding-determinant-fd",
+      "bucket": "coding",
+      "query": "Quando o determinante FD e codificado?",
+      "expectedTopRoute": "scoring-input/determinants/FD"
+    },
+    {
+      "id": "pt-coding-ghr",
+      "bucket": "coding",
+      "query": "Quando devo usar GHR?",
+      "expectedTopRoute": "scoring-input/gphr/GHR"
+    },
+    {
+      "id": "pt-coding-phr",
+      "bucket": "coding",
+      "query": "Quando devo usar PHR?",
+      "expectedTopRoute": "scoring-input/gphr/PHR"
+    },
+    {
+      "id": "pt-coding-content-h",
+      "bucket": "coding",
+      "query": "O que conta como conteudo H?",
+      "expectedTopRoute": "scoring-input/contents/H"
+    },
+    {
+      "id": "pt-coding-content-an",
+      "bucket": "coding",
+      "query": "O que e codificado como conteudo An?",
+      "expectedTopRoute": "scoring-input/contents/An"
+    },
+    {
+      "id": "pt-coding-content-xy",
+      "bucket": "coding",
+      "query": "O que e conteudo Xy?",
+      "expectedTopRoute": "scoring-input/contents/Xy"
+    },
+    {
+      "id": "pt-coding-special-cop",
+      "bucket": "coding",
+      "query": "Quando devo codificar COP?",
+      "expectedTopRoute": "scoring-input/special-score/COP"
+    },
+    {
+      "id": "pt-coding-special-mor",
+      "bucket": "coding",
+      "query": "Quando MOR e codificado?",
+      "expectedTopRoute": "scoring-input/special-score/MOR"
+    },
+    {
+      "id": "pt-coding-special-ab",
+      "bucket": "coding",
+      "query": "O que conta como AB nos special scores?",
+      "expectedTopRoute": "scoring-input/special-score/AB"
+    },
+    {
+      "id": "pt-coding-special-contam",
+      "bucket": "coding",
+      "query": "Como CONTAM e codificado?",
+      "expectedTopRoute": "scoring-input/special-score/CONTAM"
+    },
+    {
+      "id": "pt-coding-zw",
+      "bucket": "coding",
+      "query": "O que significa ZW?",
+      "expectedTopRoute": "scoring-input/z/ZW"
+    },
+    {
+      "id": "pt-coding-popular",
+      "bucket": "coding",
+      "query": "O que e uma resposta Popular?",
+      "expectedTopRoute": "scoring-input/popular"
+    },
+    {
+      "id": "pt-coding-card-v",
+      "bucket": "coding",
+      "query": "Que cuidados de codificacao importam no Cartao V?",
+      "expectedTopRoute": "scoring-input/card/V"
+    },
+    {
+      "id": "pt-interpretation-upper-w",
+      "bucket": "interpretation",
+      "query": "Como W e interpretado na upper section?",
+      "expectedTopRoute": "result-interpretation/upper-section/W"
+    },
+    {
+      "id": "pt-interpretation-upper-zd",
+      "bucket": "interpretation",
+      "query": "O que significa Zd na interpretacao?",
+      "expectedTopRoute": "result-interpretation/upper-section/Zd"
+    },
+    {
+      "id": "pt-interpretation-core-lambda",
+      "bucket": "interpretation",
+      "query": "O que Lambda me mostra?",
+      "expectedTopRoute": "result-interpretation/lower-section/core/Lambda"
+    },
+    {
+      "id": "pt-interpretation-core-eb",
+      "bucket": "interpretation",
+      "query": "Como EB deve ser interpretado?",
+      "expectedTopRoute": "result-interpretation/lower-section/core/EB"
+    },
+    {
+      "id": "pt-interpretation-core-adjd",
+      "bucket": "interpretation",
+      "query": "O que significa AdjD?",
+      "expectedTopRoute": "result-interpretation/lower-section/core/AdjD"
+    },
+    {
+      "id": "pt-interpretation-core-fm",
+      "bucket": "interpretation",
+      "query": "O que FM significa na core section?",
+      "expectedTopRoute": "result-interpretation/lower-section/core/FM"
+    },
+    {
+      "id": "pt-interpretation-core-sumv",
+      "bucket": "interpretation",
+      "query": "Como interpreto SumV na core section?",
+      "expectedTopRoute": "result-interpretation/lower-section/core/SumV"
+    },
+    {
+      "id": "pt-interpretation-ideation-ap",
+      "bucket": "interpretation",
+      "query": "Como a razao ideacional a:p e interpretada?",
+      "expectedTopRoute": "result-interpretation/lower-section/ideation/a_p"
+    },
+    {
+      "id": "pt-interpretation-ideation-sum6",
+      "bucket": "interpretation",
+      "query": "Como interpreto Sum6?",
+      "expectedTopRoute": "result-interpretation/lower-section/ideation/Sum6"
+    },
+    {
+      "id": "pt-interpretation-ideation-mminus",
+      "bucket": "interpretation",
+      "query": "O que M- sugere?",
+      "expectedTopRoute": "result-interpretation/lower-section/ideation/M_minus"
+    },
+    {
+      "id": "pt-interpretation-affect-afr",
+      "bucket": "interpretation",
+      "query": "O que significa Afr?",
+      "expectedTopRoute": "result-interpretation/lower-section/affect/Afr"
+    },
+    {
+      "id": "pt-interpretation-affect-fccfc",
+      "bucket": "interpretation",
+      "query": "Como a razao afetiva FC:CF+C deve ser interpretada?",
+      "expectedTopRoute": "result-interpretation/lower-section/affect/FC_CF_C"
+    },
+    {
+      "id": "pt-interpretation-mediation-xa",
+      "bucket": "interpretation",
+      "query": "O que significa XA%?",
+      "expectedTopRoute": "result-interpretation/lower-section/mediation/XA_percent"
+    },
+    {
+      "id": "pt-interpretation-mediation-p",
+      "bucket": "interpretation",
+      "query": "O que significa P em mediation?",
+      "expectedTopRoute": "result-interpretation/lower-section/mediation/P"
+    },
+    {
+      "id": "pt-interpretation-processing-zf",
+      "bucket": "interpretation",
+      "query": "Como a variavel de processamento Zf e interpretada?",
+      "expectedTopRoute": "result-interpretation/lower-section/processing/Zf_proc"
+    },
+    {
+      "id": "pt-interpretation-processing-wm",
+      "bucket": "interpretation",
+      "query": "Como a razao aspiracional W:M e interpretada em processing?",
+      "expectedTopRoute": "result-interpretation/lower-section/processing/W_M"
+    },
+    {
+      "id": "pt-interpretation-interpersonal-cop",
+      "bucket": "interpretation",
+      "query": "O que COP significa na interpretacao interpersonal?",
+      "expectedTopRoute": "result-interpretation/lower-section/interpersonal/COP"
+    },
+    {
+      "id": "pt-interpretation-interpersonal-humancont",
+      "bucket": "interpretation",
+      "query": "Como HumanCont deve ser interpretado no bloco interpersonal?",
+      "expectedTopRoute": "result-interpretation/lower-section/interpersonal/HumanCont"
+    },
+    {
+      "id": "pt-interpretation-interpersonal-iso",
+      "bucket": "interpretation",
+      "query": "O que e o Indice de Isolamento?",
+      "expectedTopRoute": "result-interpretation/lower-section/interpersonal/ISO_Index"
+    },
+    {
+      "id": "pt-interpretation-self-egocentricity",
+      "bucket": "interpretation",
+      "query": "O que significa o indice de egocentricidade 3r+(2)/R?",
+      "expectedTopRoute": "result-interpretation/lower-section/selfPerception/_3r_2_R"
+    },
+    {
+      "id": "pt-interpretation-self-hratio",
+      "bucket": "interpretation",
+      "query": "Como o H ratio deve ser lido?",
+      "expectedTopRoute": "result-interpretation/lower-section/selfPerception/H_ratio"
+    },
+    {
+      "id": "pt-interpretation-special-pti",
+      "bucket": "interpretation",
+      "query": "O que PTI indica?",
+      "expectedTopRoute": "result-interpretation/special-indices/PTI"
+    },
+    {
+      "id": "pt-interpretation-special-depi",
+      "bucket": "interpretation",
+      "query": "O que DEPI indica?",
+      "expectedTopRoute": "result-interpretation/special-indices/DEPI"
+    },
+    {
+      "id": "pt-interpretation-special-cdi",
+      "bucket": "interpretation",
+      "query": "O que CDI sugere?",
+      "expectedTopRoute": "result-interpretation/special-indices/CDI"
+    },
+    {
+      "id": "pt-graph-dqplus-processing",
+      "bucket": "graph-navigation",
+      "query": "Se eu codifico DQ+, qual pagina de interpretacao devo comparar depois?",
+      "expectedTopRoute": "scoring-input/dq/+",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/processing/DQ_plus_proc"
+      ]
+    },
+    {
+      "id": "pt-graph-fm-link",
+      "bucket": "graph-navigation",
+      "query": "Quando eu codifico FM, que paginas de interpretacao devo comparar?",
+      "expectedTopRoute": "scoring-input/determinants/FM",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/core/FM",
+        "result-interpretation/lower-section/core/m"
+      ]
+    },
+    {
+      "id": "pt-graph-location-s-link",
+      "bucket": "graph-navigation",
+      "query": "Depois de codificar localizacao S, o que devo revisar na interpretacao?",
+      "expectedTopRoute": "scoring-input/location/S",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/mediation/S_minus"
+      ]
+    },
+    {
+      "id": "pt-graph-mor-link",
+      "bucket": "graph-navigation",
+      "query": "Como a codificacao MOR se conecta com a interpretacao?",
+      "expectedTopRoute": "scoring-input/special-score/MOR",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/ideation/MOR",
+        "result-interpretation/lower-section/selfPerception/MOR_self"
+      ]
+    },
+    {
+      "id": "pt-graph-humancont-link",
+      "bucket": "graph-navigation",
+      "query": "O que devo comparar com HumanCont, especialmente H ratio, na interpretacao interpersonal?",
+      "expectedTopRoute": "result-interpretation/lower-section/interpersonal/HumanCont",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/selfPerception/H_ratio"
+      ]
+    },
+    {
+      "id": "pt-graph-sumv-link",
+      "bucket": "graph-navigation",
+      "query": "Como o self-perception SumV_self se conecta com o core SumV?",
+      "expectedTopRoute": "result-interpretation/lower-section/selfPerception/SumV_self",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/core/SumV"
+      ]
+    },
+    {
+      "id": "pt-graph-pti-link",
+      "bucket": "graph-navigation",
+      "query": "Que variaveis devo revisar junto com PTI?",
+      "expectedTopRoute": "result-interpretation/special-indices/PTI",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/ideation/WSum6",
+        "result-interpretation/lower-section/mediation/X_minus_percent"
+      ]
+    },
+    {
+      "id": "pt-graph-depi-link",
+      "bucket": "graph-navigation",
+      "query": "Que outras variaveis devo revisar junto com DEPI?",
+      "expectedTopRoute": "result-interpretation/special-indices/DEPI",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/selfPerception/MOR_self",
+        "result-interpretation/lower-section/affect/Afr"
+      ]
+    },
+    {
+      "id": "pt-graph-cop-dual",
+      "bucket": "graph-navigation",
+      "query": "Como COP na interpretacao interpersonal difere da codificacao COP?",
+      "expectedTopRoute": "result-interpretation/lower-section/interpersonal/COP",
+      "expectedIncludedRoutes": [
+        "scoring-input/special-score/COP"
+      ]
+    },
+    {
+      "id": "pt-graph-popular-p-link",
+      "bucket": "graph-navigation",
+      "query": "O que P significa em mediation e como se conecta com respostas Popular?",
+      "expectedTopRoute": "result-interpretation/lower-section/mediation/P",
+      "expectedIncludedRoutes": [
+        "scoring-input/popular"
+      ]
+    },
+    {
+      "id": "pt-graph-hratio-link",
+      "bucket": "graph-navigation",
+      "query": "O que devo comparar com H ratio?",
+      "expectedTopRoute": "result-interpretation/lower-section/selfPerception/H_ratio",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/interpersonal/HumanCont",
+        "result-interpretation/lower-section/interpersonal/PureH"
+      ]
+    },
+    {
+      "id": "pt-graph-ap-link",
+      "bucket": "graph-navigation",
+      "query": "A partir de a:p em ideation, qual pagina relacionada devo comparar para a:p interpersonal?",
+      "expectedTopRoute": "result-interpretation/lower-section/ideation/a_p",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/interpersonal/a_p_inter"
+      ]
+    }
+  ]
+}

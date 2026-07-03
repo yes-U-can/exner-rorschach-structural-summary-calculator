@@ -1,0 +1,553 @@
+{
+  "locale": "es",
+  "version": "2026-03-09-gold-v1",
+  "targetCount": 80,
+  "minimums": {
+    "coding": 32,
+    "interpretation": 32,
+    "graph-navigation": 16
+  },
+  "queries": [
+    {
+      "id": "es-coding-dq-plus",
+      "bucket": "coding",
+      "query": "Como se codifica DQ+?",
+      "expectedTopRoute": "scoring-input/dq/+"
+    },
+    {
+      "id": "es-coding-dq-vplus",
+      "bucket": "coding",
+      "query": "Cuando se codifica v/+?",
+      "expectedTopRoute": "scoring-input/dq/v/+"
+    },
+    {
+      "id": "es-coding-fq-plus",
+      "bucket": "coding",
+      "query": "Que significa calidad formal FQ+?",
+      "expectedTopRoute": "scoring-input/fq/+"
+    },
+    {
+      "id": "es-coding-location-w",
+      "bucket": "coding",
+      "query": "Que significa W como location?",
+      "expectedTopRoute": "scoring-input/location/W"
+    },
+    {
+      "id": "es-coding-location-s",
+      "bucket": "coding",
+      "query": "Como se codifica S en location?",
+      "expectedTopRoute": "scoring-input/location/S"
+    },
+    {
+      "id": "es-coding-determinant-fm",
+      "bucket": "coding",
+      "query": "Cuando se usa FM como determinante?",
+      "expectedTopRoute": "scoring-input/determinants/FM"
+    },
+    {
+      "id": "es-coding-determinant-t",
+      "bucket": "coding",
+      "query": "Que significa T como determinante?",
+      "expectedTopRoute": "scoring-input/determinants/T"
+    },
+    {
+      "id": "es-coding-ghr",
+      "bucket": "coding",
+      "query": "Que es GHR?",
+      "expectedTopRoute": "scoring-input/gphr/GHR"
+    },
+    {
+      "id": "es-coding-cop",
+      "bucket": "coding",
+      "query": "Como se codifica COP?",
+      "expectedTopRoute": "scoring-input/special-score/COP"
+    },
+    {
+      "id": "es-coding-mor",
+      "bucket": "coding",
+      "query": "Como se codifica MOR?",
+      "expectedTopRoute": "scoring-input/special-score/MOR"
+    },
+    {
+      "id": "es-coding-zw",
+      "bucket": "coding",
+      "query": "Que es ZW?",
+      "expectedTopRoute": "scoring-input/z/ZW"
+    },
+    {
+      "id": "es-coding-card-v",
+      "bucket": "coding",
+      "query": "Que se debe notar en Card V?",
+      "expectedTopRoute": "scoring-input/card/V"
+    },
+    {
+      "id": "es-coding-determinant-m",
+      "bucket": "coding",
+      "query": "Cuando se codifica M?",
+      "expectedTopRoute": "scoring-input/determinants/M"
+    },
+    {
+      "id": "es-coding-determinant-lowercase-m",
+      "bucket": "coding",
+      "query": "Cuando se codifica m?",
+      "expectedTopRoute": "scoring-input/determinants/m"
+    },
+    {
+      "id": "es-coding-determinant-fc",
+      "bucket": "coding",
+      "query": "Cuando se usa FC?",
+      "expectedTopRoute": "scoring-input/determinants/FC"
+    },
+    {
+      "id": "es-coding-determinant-cf",
+      "bucket": "coding",
+      "query": "Cuando se usa CF?",
+      "expectedTopRoute": "scoring-input/determinants/CF"
+    },
+    {
+      "id": "es-coding-determinant-c",
+      "bucket": "coding",
+      "query": "Cuando se usa C puro?",
+      "expectedTopRoute": "scoring-input/determinants/C"
+    },
+    {
+      "id": "es-coding-determinant-cn",
+      "bucket": "coding",
+      "query": "Que significa Cn?",
+      "expectedTopRoute": "scoring-input/determinants/Cn"
+    },
+    {
+      "id": "es-coding-determinant-c-prime",
+      "bucket": "coding",
+      "query": "Cuando se usa C'?",
+      "expectedTopRoute": "scoring-input/determinants/C'"
+    },
+    {
+      "id": "es-coding-determinant-fd",
+      "bucket": "coding",
+      "query": "Cuando se codifica FD?",
+      "expectedTopRoute": "scoring-input/determinants/FD"
+    },
+    {
+      "id": "es-coding-determinant-fr",
+      "bucket": "coding",
+      "query": "Cuando se codifica Fr?",
+      "expectedTopRoute": "scoring-input/determinants/Fr"
+    },
+    {
+      "id": "es-coding-determinant-v",
+      "bucket": "coding",
+      "query": "Cuando se usa V como determinante?",
+      "expectedTopRoute": "scoring-input/determinants/V"
+    },
+    {
+      "id": "es-coding-determinant-y",
+      "bucket": "coding",
+      "query": "Cuando se usa Y como determinante?",
+      "expectedTopRoute": "scoring-input/determinants/Y"
+    },
+    {
+      "id": "es-coding-content-h",
+      "bucket": "coding",
+      "query": "Que significa H como content?",
+      "expectedTopRoute": "scoring-input/contents/H"
+    },
+    {
+      "id": "es-coding-content-hd",
+      "bucket": "coding",
+      "query": "Que significa Hd como content?",
+      "expectedTopRoute": "scoring-input/contents/Hd"
+    },
+    {
+      "id": "es-coding-content-a",
+      "bucket": "coding",
+      "query": "Que significa A como content?",
+      "expectedTopRoute": "scoring-input/contents/A"
+    },
+    {
+      "id": "es-coding-content-an",
+      "bucket": "coding",
+      "query": "Que significa An como content?",
+      "expectedTopRoute": "scoring-input/contents/An"
+    },
+    {
+      "id": "es-coding-content-art",
+      "bucket": "coding",
+      "query": "Que significa Art como content?",
+      "expectedTopRoute": "scoring-input/contents/Art"
+    },
+    {
+      "id": "es-coding-content-ay",
+      "bucket": "coding",
+      "query": "Que significa Ay como content?",
+      "expectedTopRoute": "scoring-input/contents/Ay"
+    },
+    {
+      "id": "es-coding-ag",
+      "bucket": "coding",
+      "query": "Cuando se asigna AG?",
+      "expectedTopRoute": "scoring-input/special-score/AG"
+    },
+    {
+      "id": "es-coding-per",
+      "bucket": "coding",
+      "query": "Cuando se asigna PER?",
+      "expectedTopRoute": "scoring-input/special-score/PER"
+    },
+    {
+      "id": "es-coding-cp",
+      "bucket": "coding",
+      "query": "Como se codifica CP?",
+      "expectedTopRoute": "scoring-input/special-score/CP"
+    },
+    {
+      "id": "es-interpretation-zf",
+      "bucket": "interpretation",
+      "query": "Que indica Zf en upper section?",
+      "expectedTopRoute": "result-interpretation/upper-section/Zf"
+    },
+    {
+      "id": "es-interpretation-zd",
+      "bucket": "interpretation",
+      "query": "Que indica Zd en upper section?",
+      "expectedTopRoute": "result-interpretation/upper-section/Zd"
+    },
+    {
+      "id": "es-interpretation-upper-w",
+      "bucket": "interpretation",
+      "query": "Que sugiere W en upper section?",
+      "expectedTopRoute": "result-interpretation/upper-section/W"
+    },
+    {
+      "id": "es-interpretation-upper-dqplus",
+      "bucket": "interpretation",
+      "query": "Que significa DQ+ en upper section?",
+      "expectedTopRoute": "result-interpretation/upper-section/dq_plus"
+    },
+    {
+      "id": "es-interpretation-lambda",
+      "bucket": "interpretation",
+      "query": "Que indica Lambda?",
+      "expectedTopRoute": "result-interpretation/lower-section/core/Lambda"
+    },
+    {
+      "id": "es-interpretation-eb",
+      "bucket": "interpretation",
+      "query": "Que indica EB?",
+      "expectedTopRoute": "result-interpretation/lower-section/core/EB"
+    },
+    {
+      "id": "es-interpretation-d-core",
+      "bucket": "interpretation",
+      "query": "Que indica D en core?",
+      "expectedTopRoute": "result-interpretation/lower-section/core/D"
+    },
+    {
+      "id": "es-interpretation-adjd",
+      "bucket": "interpretation",
+      "query": "Que indica AdjD?",
+      "expectedTopRoute": "result-interpretation/lower-section/core/AdjD"
+    },
+    {
+      "id": "es-interpretation-sumcprime",
+      "bucket": "interpretation",
+      "query": "Que indica SumCprime?",
+      "expectedTopRoute": "result-interpretation/lower-section/core/SumCprime"
+    },
+    {
+      "id": "es-interpretation-sumt",
+      "bucket": "interpretation",
+      "query": "Que indica SumT?",
+      "expectedTopRoute": "result-interpretation/lower-section/core/SumT"
+    },
+    {
+      "id": "es-interpretation-ap",
+      "bucket": "interpretation",
+      "query": "Que indica activo pasivo en ideacion?",
+      "expectedTopRoute": "result-interpretation/lower-section/ideation/a_p"
+    },
+    {
+      "id": "es-interpretation-sum6",
+      "bucket": "interpretation",
+      "query": "Que indica Sum6?",
+      "expectedTopRoute": "result-interpretation/lower-section/ideation/Sum6"
+    },
+    {
+      "id": "es-interpretation-wsum6",
+      "bucket": "interpretation",
+      "query": "Que indica WSum6?",
+      "expectedTopRoute": "result-interpretation/lower-section/ideation/WSum6"
+    },
+    {
+      "id": "es-interpretation-mnone",
+      "bucket": "interpretation",
+      "query": "Que indica Mnone?",
+      "expectedTopRoute": "result-interpretation/lower-section/ideation/Mnone"
+    },
+    {
+      "id": "es-interpretation-fc-cf-c",
+      "bucket": "interpretation",
+      "query": "Que indica form-color ratio?",
+      "expectedTopRoute": "result-interpretation/lower-section/affect/FC_CF_C"
+    },
+    {
+      "id": "es-interpretation-afr",
+      "bucket": "interpretation",
+      "query": "Que indica Afr?",
+      "expectedTopRoute": "result-interpretation/lower-section/affect/Afr"
+    },
+    {
+      "id": "es-interpretation-cp-affect",
+      "bucket": "interpretation",
+      "query": "Que indica CP en affect?",
+      "expectedTopRoute": "result-interpretation/lower-section/affect/CP"
+    },
+    {
+      "id": "es-interpretation-xa",
+      "bucket": "interpretation",
+      "query": "Que indica XA%?",
+      "expectedTopRoute": "result-interpretation/lower-section/mediation/XA_percent"
+    },
+    {
+      "id": "es-interpretation-xminus",
+      "bucket": "interpretation",
+      "query": "Que indica X-%?",
+      "expectedTopRoute": "result-interpretation/lower-section/mediation/X_minus_percent"
+    },
+    {
+      "id": "es-interpretation-xplus",
+      "bucket": "interpretation",
+      "query": "Que indica X+%?",
+      "expectedTopRoute": "result-interpretation/lower-section/mediation/X_plus_percent"
+    },
+    {
+      "id": "es-interpretation-zf-proc",
+      "bucket": "interpretation",
+      "query": "Que indica Zf_proc?",
+      "expectedTopRoute": "result-interpretation/lower-section/processing/Zf_proc"
+    },
+    {
+      "id": "es-interpretation-wm",
+      "bucket": "interpretation",
+      "query": "Que indica Aspirational Ratio?",
+      "expectedTopRoute": "result-interpretation/lower-section/processing/W_M"
+    },
+    {
+      "id": "es-interpretation-dqv-proc",
+      "bucket": "interpretation",
+      "query": "Que indica DQ_v_proc?",
+      "expectedTopRoute": "result-interpretation/lower-section/processing/DQ_v_proc"
+    },
+    {
+      "id": "es-interpretation-interpersonal-cop",
+      "bucket": "interpretation",
+      "query": "Que indica COP en interpersonal?",
+      "expectedTopRoute": "result-interpretation/lower-section/interpersonal/COP"
+    },
+    {
+      "id": "es-interpretation-iso",
+      "bucket": "interpretation",
+      "query": "Que indica ISO Index?",
+      "expectedTopRoute": "result-interpretation/lower-section/interpersonal/ISO_Index"
+    },
+    {
+      "id": "es-interpretation-3r",
+      "bucket": "interpretation",
+      "query": "Que indica 3r+(2)/R?",
+      "expectedTopRoute": "result-interpretation/lower-section/selfPerception/_3r_2_R"
+    },
+    {
+      "id": "es-interpretation-sumv-self",
+      "bucket": "interpretation",
+      "query": "Que indica self perception SumV?",
+      "expectedTopRoute": "result-interpretation/lower-section/selfPerception/SumV_self"
+    },
+    {
+      "id": "es-interpretation-mor-self",
+      "bucket": "interpretation",
+      "query": "Que indica MOR_self?",
+      "expectedTopRoute": "result-interpretation/lower-section/selfPerception/MOR_self"
+    },
+    {
+      "id": "es-interpretation-pti",
+      "bucket": "interpretation",
+      "query": "Que indica PTI?",
+      "expectedTopRoute": "result-interpretation/special-indices/PTI"
+    },
+    {
+      "id": "es-interpretation-depi",
+      "bucket": "interpretation",
+      "query": "Que indica DEPI?",
+      "expectedTopRoute": "result-interpretation/special-indices/DEPI"
+    },
+    {
+      "id": "es-interpretation-cdi",
+      "bucket": "interpretation",
+      "query": "Que indica CDI?",
+      "expectedTopRoute": "result-interpretation/special-indices/CDI"
+    },
+    {
+      "id": "es-interpretation-hvi",
+      "bucket": "interpretation",
+      "query": "Que indica HVI?",
+      "expectedTopRoute": "result-interpretation/special-indices/HVI"
+    },
+    {
+      "id": "es-graph-pti",
+      "bucket": "graph-navigation",
+      "query": "Que variables debo revisar junto con PTI?",
+      "expectedTopRoute": "result-interpretation/special-indices/PTI",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/ideation/WSum6",
+        "result-interpretation/lower-section/mediation/X_minus_percent"
+      ]
+    },
+    {
+      "id": "es-graph-depi",
+      "bucket": "graph-navigation",
+      "query": "Con que variables se interpreta DEPI?",
+      "expectedTopRoute": "result-interpretation/special-indices/DEPI",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/core/SumV",
+        "result-interpretation/lower-section/selfPerception/MOR_self"
+      ]
+    },
+    {
+      "id": "es-graph-cdi",
+      "bucket": "graph-navigation",
+      "query": "Que revisar junto con CDI?",
+      "expectedTopRoute": "result-interpretation/special-indices/CDI",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/interpersonal/Food",
+        "result-interpretation/lower-section/interpersonal/ISO_Index"
+      ]
+    },
+    {
+      "id": "es-graph-scon",
+      "bucket": "graph-navigation",
+      "query": "Que revisar si S-CON esta alto?",
+      "expectedTopRoute": "result-interpretation/special-indices/SCON",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/core/D",
+        "result-interpretation/lower-section/core/AdjD"
+      ]
+    },
+    {
+      "id": "es-graph-hvi",
+      "bucket": "graph-navigation",
+      "query": "Con que variables se cruza HVI?",
+      "expectedTopRoute": "result-interpretation/special-indices/HVI",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/processing/Zf_proc",
+        "result-interpretation/lower-section/selfPerception/H_ratio"
+      ]
+    },
+    {
+      "id": "es-graph-obs",
+      "bucket": "graph-navigation",
+      "query": "Con que variables se cruza OBS?",
+      "expectedTopRoute": "result-interpretation/special-indices/OBS",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/mediation/P",
+        "scoring-input/fq/+"
+      ]
+    },
+    {
+      "id": "es-graph-upper-w",
+      "bucket": "graph-navigation",
+      "query": "Con que paginas se relaciona W del upper section?",
+      "expectedTopRoute": "result-interpretation/upper-section/W",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/processing/W_D_Dd",
+        "result-interpretation/lower-section/processing/W_M"
+      ]
+    },
+    {
+      "id": "es-graph-dq-plus",
+      "bucket": "graph-navigation",
+      "query": "Que relacion hay entre DQ_plus_proc y DQ+ del upper section?",
+      "expectedTopRoute": "result-interpretation/lower-section/processing/DQ_plus_proc",
+      "expectedIncludedRoutes": [
+        "result-interpretation/upper-section/dq_plus"
+      ]
+    },
+    {
+      "id": "es-graph-dq-v",
+      "bucket": "graph-navigation",
+      "query": "Que relacion hay entre DQ_v_proc y DQv del upper section?",
+      "expectedTopRoute": "result-interpretation/lower-section/processing/DQ_v_proc",
+      "expectedIncludedRoutes": [
+        "result-interpretation/upper-section/dq_v"
+      ]
+    },
+    {
+      "id": "es-graph-lambda",
+      "bucket": "graph-navigation",
+      "query": "Que conviene revisar junto con Lambda?",
+      "expectedTopRoute": "result-interpretation/lower-section/core/Lambda",
+      "expectedIncludedRoutes": [
+        "scoring-input/fq",
+        "scoring-input/determinants/F"
+      ]
+    },
+    {
+      "id": "es-graph-sumt",
+      "bucket": "graph-navigation",
+      "query": "Que relacion hay entre interpersonal SumT y core SumT?",
+      "expectedTopRoute": "result-interpretation/lower-section/core/SumT",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/interpersonal/SumT_inter"
+      ]
+    },
+    {
+      "id": "es-graph-upper-s",
+      "bucket": "graph-navigation",
+      "query": "Con que paginas se cruza S del upper section?",
+      "expectedTopRoute": "result-interpretation/upper-section/S",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/affect/S_aff",
+        "result-interpretation/lower-section/mediation/S_minus"
+      ]
+    },
+    {
+      "id": "es-graph-special-overview",
+      "bucket": "graph-navigation",
+      "query": "Que indices incluye Special Indices?",
+      "expectedTopRoute": "result-interpretation/special-indices",
+      "expectedIncludedRoutes": [
+        "result-interpretation/special-indices/PTI",
+        "result-interpretation/special-indices/DEPI"
+      ]
+    },
+    {
+      "id": "es-graph-affect-overview",
+      "bucket": "graph-navigation",
+      "query": "Que variables incluye Affect?",
+      "expectedTopRoute": "result-interpretation/lower-section/affect",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/affect/FC_CF_C",
+        "result-interpretation/lower-section/affect/Afr"
+      ]
+    },
+    {
+      "id": "es-graph-mediation-overview",
+      "bucket": "graph-navigation",
+      "query": "Que variables incluye Mediation?",
+      "expectedTopRoute": "result-interpretation/lower-section/mediation",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/mediation/XA_percent",
+        "result-interpretation/lower-section/mediation/X_minus_percent"
+      ]
+    },
+    {
+      "id": "es-graph-interpersonal-overview",
+      "bucket": "graph-navigation",
+      "query": "Que variables incluye Interpersonal?",
+      "expectedTopRoute": "result-interpretation/lower-section/interpersonal",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/interpersonal/COP",
+        "result-interpretation/lower-section/interpersonal/ISO_Index"
+      ]
+    }
+  ]
+}

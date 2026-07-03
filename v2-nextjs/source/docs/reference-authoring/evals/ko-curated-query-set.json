@@ -1,0 +1,750 @@
+{
+  "locale": "ko",
+  "version": "2026-03-09-gold-v1",
+  "targetCount": 100,
+  "minimums": {
+    "coding": 40,
+    "interpretation": 40,
+    "graph-navigation": 20
+  },
+  "queries": [
+    {
+      "id": "ko-coding-dq-plus",
+      "bucket": "coding",
+      "query": "DQ+는 무엇이야?",
+      "expectedTopRoute": "scoring-input/dq/+",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/processing/DQ_plus_proc"
+      ]
+    },
+    {
+      "id": "ko-coding-dq-vplus",
+      "bucket": "coding",
+      "query": "v/+는 언제 붙여?",
+      "expectedTopRoute": "scoring-input/dq/v/+",
+      "expectedIncludedRoutes": [
+        "scoring-input/dq/+",
+        "scoring-input/dq/v"
+      ]
+    },
+    {
+      "id": "ko-coding-fq-plus",
+      "bucket": "coding",
+      "query": "FQ+는 무슨 뜻이야?",
+      "expectedTopRoute": "scoring-input/fq/+",
+      "expectedIncludedRoutes": [
+        "scoring-input/dq/+"
+      ]
+    },
+    {
+      "id": "ko-coding-location-w",
+      "bucket": "coding",
+      "query": "W location은 뭐야?",
+      "expectedTopRoute": "scoring-input/location/W",
+      "expectedIncludedRoutes": [
+        "result-interpretation/upper-section/W"
+      ]
+    },
+    {
+      "id": "ko-coding-location-s",
+      "bucket": "coding",
+      "query": "S 위치 반응은 어떻게 봐?",
+      "expectedTopRoute": "scoring-input/location/S",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/mediation/S_minus"
+      ]
+    },
+    {
+      "id": "ko-coding-determinant-fm",
+      "bucket": "coding",
+      "query": "FM은 언제 부호화해?",
+      "expectedTopRoute": "scoring-input/determinants/FM",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/core/FM"
+      ]
+    },
+    {
+      "id": "ko-coding-determinant-t",
+      "bucket": "coding",
+      "query": "T determinant는 언제 써?",
+      "expectedTopRoute": "scoring-input/determinants/T",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/core/SumT"
+      ]
+    },
+    {
+      "id": "ko-coding-ghr",
+      "bucket": "coding",
+      "query": "GHR은 뭐야?",
+      "expectedTopRoute": "scoring-input/gphr/GHR",
+      "expectedIncludedRoutes": [
+        "scoring-input/gphr/PHR"
+      ]
+    },
+    {
+      "id": "ko-coding-cop",
+      "bucket": "coding",
+      "query": "COP 특수점수는 언제 부여해?",
+      "expectedTopRoute": "scoring-input/special-score/COP",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/interpersonal/COP"
+      ]
+    },
+    {
+      "id": "ko-coding-mor",
+      "bucket": "coding",
+      "query": "MOR 특수점수는 무엇을 뜻해?",
+      "expectedTopRoute": "scoring-input/special-score/MOR",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/selfPerception/MOR_self"
+      ]
+    },
+    {
+      "id": "ko-coding-zw",
+      "bucket": "coding",
+      "query": "ZW는 뭐야?",
+      "expectedTopRoute": "scoring-input/z/ZW",
+      "expectedIncludedRoutes": [
+        "result-interpretation/upper-section/Zf"
+      ]
+    },
+    {
+      "id": "ko-coding-card-v",
+      "bucket": "coding",
+      "query": "카드 V의 특징은 뭐야?",
+      "expectedTopRoute": "scoring-input/card/V",
+      "expectedIncludedRoutes": [
+        "scoring-input/determinants/V"
+      ]
+    },
+    {
+      "id": "ko-coding-determinant-m",
+      "bucket": "coding",
+      "query": "M은 언제 부호화해?",
+      "expectedTopRoute": "scoring-input/determinants/M"
+    },
+    {
+      "id": "ko-coding-determinant-lowercase-m",
+      "bucket": "coding",
+      "query": "m은 언제 부호화해?",
+      "expectedTopRoute": "scoring-input/determinants/m"
+    },
+    {
+      "id": "ko-coding-determinant-fc",
+      "bucket": "coding",
+      "query": "FC는 언제 부호화해?",
+      "expectedTopRoute": "scoring-input/determinants/FC"
+    },
+    {
+      "id": "ko-coding-determinant-cf",
+      "bucket": "coding",
+      "query": "CF는 언제 부호화해?",
+      "expectedTopRoute": "scoring-input/determinants/CF"
+    },
+    {
+      "id": "ko-coding-determinant-c",
+      "bucket": "coding",
+      "query": "C는 언제 부호화해?",
+      "expectedTopRoute": "scoring-input/determinants/C"
+    },
+    {
+      "id": "ko-coding-determinant-cn",
+      "bucket": "coding",
+      "query": "Cn은 언제 써?",
+      "expectedTopRoute": "scoring-input/determinants/Cn"
+    },
+    {
+      "id": "ko-coding-determinant-fc-prime",
+      "bucket": "coding",
+      "query": "FC'는 언제 부호화해?",
+      "expectedTopRoute": "scoring-input/determinants/FC'"
+    },
+    {
+      "id": "ko-coding-determinant-c-prime-f",
+      "bucket": "coding",
+      "query": "C'F는 언제 부호화해?",
+      "expectedTopRoute": "scoring-input/determinants/C'F"
+    },
+    {
+      "id": "ko-coding-determinant-c-prime",
+      "bucket": "coding",
+      "query": "C'는 언제 부호화해?",
+      "expectedTopRoute": "scoring-input/determinants/C'"
+    },
+    {
+      "id": "ko-coding-determinant-fd",
+      "bucket": "coding",
+      "query": "FD는 언제 부호화해?",
+      "expectedTopRoute": "scoring-input/determinants/FD"
+    },
+    {
+      "id": "ko-coding-determinant-fr",
+      "bucket": "coding",
+      "query": "Fr은 언제 부호화해?",
+      "expectedTopRoute": "scoring-input/determinants/Fr"
+    },
+    {
+      "id": "ko-coding-determinant-rf",
+      "bucket": "coding",
+      "query": "rF는 언제 부호화해?",
+      "expectedTopRoute": "scoring-input/determinants/rF"
+    },
+    {
+      "id": "ko-coding-determinant-v",
+      "bucket": "coding",
+      "query": "V determinant는 언제 써?",
+      "expectedTopRoute": "scoring-input/determinants/V"
+    },
+    {
+      "id": "ko-coding-determinant-y",
+      "bucket": "coding",
+      "query": "Y determinant는 언제 써?",
+      "expectedTopRoute": "scoring-input/determinants/Y"
+    },
+    {
+      "id": "ko-coding-content-h",
+      "bucket": "coding",
+      "query": "H content는 뭐야?",
+      "expectedTopRoute": "scoring-input/contents/H"
+    },
+    {
+      "id": "ko-coding-content-hd",
+      "bucket": "coding",
+      "query": "Hd content는 뭐야?",
+      "expectedTopRoute": "scoring-input/contents/Hd"
+    },
+    {
+      "id": "ko-coding-content-a",
+      "bucket": "coding",
+      "query": "A content는 뭐야?",
+      "expectedTopRoute": "scoring-input/contents/A"
+    },
+    {
+      "id": "ko-coding-content-an",
+      "bucket": "coding",
+      "query": "An content는 뭐야?",
+      "expectedTopRoute": "scoring-input/contents/An"
+    },
+    {
+      "id": "ko-coding-content-art",
+      "bucket": "coding",
+      "query": "Art content는 뭐야?",
+      "expectedTopRoute": "scoring-input/contents/Art"
+    },
+    {
+      "id": "ko-coding-content-ay",
+      "bucket": "coding",
+      "query": "Ay content는 뭐야?",
+      "expectedTopRoute": "scoring-input/contents/Ay"
+    },
+    {
+      "id": "ko-coding-ag",
+      "bucket": "coding",
+      "query": "AG 특수점수는 언제 부여해?",
+      "expectedTopRoute": "scoring-input/special-score/AG"
+    },
+    {
+      "id": "ko-coding-per",
+      "bucket": "coding",
+      "query": "PER 특수점수는 언제 붙여?",
+      "expectedTopRoute": "scoring-input/special-score/PER"
+    },
+    {
+      "id": "ko-coding-cp",
+      "bucket": "coding",
+      "query": "CP 특수점수는 뭐야?",
+      "expectedTopRoute": "scoring-input/special-score/CP"
+    },
+    {
+      "id": "ko-coding-ab",
+      "bucket": "coding",
+      "query": "AB 특수점수는 무엇이야?",
+      "expectedTopRoute": "scoring-input/special-score/AB"
+    },
+    {
+      "id": "ko-coding-psv",
+      "bucket": "coding",
+      "query": "PSV 특수점수는 언제 써?",
+      "expectedTopRoute": "scoring-input/special-score/PSV"
+    },
+    {
+      "id": "ko-coding-dv1",
+      "bucket": "coding",
+      "query": "DV1은 언제 부호화해?",
+      "expectedTopRoute": "scoring-input/special-score/DV1"
+    },
+    {
+      "id": "ko-coding-incom1",
+      "bucket": "coding",
+      "query": "INCOM1은 언제 부호화해?",
+      "expectedTopRoute": "scoring-input/special-score/INCOM1"
+    },
+    {
+      "id": "ko-coding-contam",
+      "bucket": "coding",
+      "query": "CONTAM은 언제 부호화해?",
+      "expectedTopRoute": "scoring-input/special-score/CONTAM"
+    },
+    {
+      "id": "ko-interpretation-lambda",
+      "bucket": "interpretation",
+      "query": "Lambda 해석은 뭐야?",
+      "expectedTopRoute": "result-interpretation/lower-section/core/Lambda",
+      "expectedIncludedRoutes": [
+        "scoring-input/fq",
+        "scoring-input/determinants/F"
+      ]
+    },
+    {
+      "id": "ko-interpretation-eb",
+      "bucket": "interpretation",
+      "query": "EB는 어떻게 해석해?",
+      "expectedTopRoute": "result-interpretation/lower-section/core/EB",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/core/EA",
+        "result-interpretation/lower-section/core/EBPer"
+      ]
+    },
+    {
+      "id": "ko-interpretation-adjd",
+      "bucket": "interpretation",
+      "query": "AdjD가 낮으면 무엇을 봐?",
+      "expectedTopRoute": "result-interpretation/lower-section/core/AdjD",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/core/D",
+        "result-interpretation/lower-section/core/AdjEs"
+      ]
+    },
+    {
+      "id": "ko-interpretation-sumy",
+      "bucket": "interpretation",
+      "query": "SumY가 높으면 어떻게 봐?",
+      "expectedTopRoute": "result-interpretation/lower-section/core/SumY",
+      "expectedIncludedRoutes": [
+        "scoring-input/determinants/Y",
+        "scoring-input/determinants/FY"
+      ]
+    },
+    {
+      "id": "ko-interpretation-xa",
+      "bucket": "interpretation",
+      "query": "XA%는 어떻게 해석해?",
+      "expectedTopRoute": "result-interpretation/lower-section/mediation/XA_percent",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/mediation/WDA_percent",
+        "result-interpretation/lower-section/mediation/X_minus_percent"
+      ]
+    },
+    {
+      "id": "ko-interpretation-afr",
+      "bucket": "interpretation",
+      "query": "Afr은 어떻게 해석해?",
+      "expectedTopRoute": "result-interpretation/lower-section/affect/Afr",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/affect/FC_CF_C"
+      ]
+    },
+    {
+      "id": "ko-interpretation-humancont",
+      "bucket": "interpretation",
+      "query": "Human Cont는 어떻게 봐?",
+      "expectedTopRoute": "result-interpretation/lower-section/interpersonal/HumanCont",
+      "expectedIncludedRoutes": [
+        "scoring-input/contents/H",
+        "result-interpretation/lower-section/interpersonal/PureH"
+      ]
+    },
+    {
+      "id": "ko-interpretation-iso",
+      "bucket": "interpretation",
+      "query": "ISO Index는 뭐야?",
+      "expectedTopRoute": "result-interpretation/lower-section/interpersonal/ISO_Index",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/interpersonal/HumanCont"
+      ]
+    },
+    {
+      "id": "ko-interpretation-pti",
+      "bucket": "interpretation",
+      "query": "PTI는 어떻게 읽어?",
+      "expectedTopRoute": "result-interpretation/special-indices/PTI",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/ideation/WSum6",
+        "result-interpretation/lower-section/mediation/X_minus_percent"
+      ]
+    },
+    {
+      "id": "ko-interpretation-scon",
+      "bucket": "interpretation",
+      "query": "S-CON 지수는 뭘 봐?",
+      "expectedTopRoute": "result-interpretation/special-indices/SCON",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/core/SumV",
+        "result-interpretation/lower-section/core/SumY"
+      ]
+    },
+    {
+      "id": "ko-interpretation-ea",
+      "bucket": "interpretation",
+      "query": "EA는 어떻게 해석해?",
+      "expectedTopRoute": "result-interpretation/lower-section/core/EA"
+    },
+    {
+      "id": "ko-interpretation-ebper",
+      "bucket": "interpretation",
+      "query": "EBPer는 어떻게 읽어?",
+      "expectedTopRoute": "result-interpretation/lower-section/core/EBPer"
+    },
+    {
+      "id": "ko-interpretation-es",
+      "bucket": "interpretation",
+      "query": "es는 어떻게 해석해?",
+      "expectedTopRoute": "result-interpretation/lower-section/core/es"
+    },
+    {
+      "id": "ko-interpretation-r",
+      "bucket": "interpretation",
+      "query": "R은 해석에서 뭘 뜻해?",
+      "expectedTopRoute": "result-interpretation/lower-section/core/R"
+    },
+    {
+      "id": "ko-interpretation-core-fm",
+      "bucket": "interpretation",
+      "query": "해석에서 FM은 뭘 봐?",
+      "expectedTopRoute": "result-interpretation/lower-section/core/FM"
+    },
+    {
+      "id": "ko-interpretation-core-lowercase-m",
+      "bucket": "interpretation",
+      "query": "해석에서 m은 뭘 봐?",
+      "expectedTopRoute": "result-interpretation/lower-section/core/m"
+    },
+    {
+      "id": "ko-interpretation-sumcprime",
+      "bucket": "interpretation",
+      "query": "SumC'는 어떻게 해석해?",
+      "expectedTopRoute": "result-interpretation/lower-section/core/SumCprime"
+    },
+    {
+      "id": "ko-interpretation-sumt",
+      "bucket": "interpretation",
+      "query": "SumT는 어떻게 해석해?",
+      "expectedTopRoute": "result-interpretation/lower-section/core/SumT"
+    },
+    {
+      "id": "ko-interpretation-sumv",
+      "bucket": "interpretation",
+      "query": "SumV는 어떻게 해석해?",
+      "expectedTopRoute": "result-interpretation/lower-section/core/SumV"
+    },
+    {
+      "id": "ko-interpretation-fc-cf-c",
+      "bucket": "interpretation",
+      "query": "form-color ratio는 어떻게 해석해?",
+      "expectedTopRoute": "result-interpretation/lower-section/affect/FC_CF_C"
+    },
+    {
+      "id": "ko-interpretation-purec",
+      "bucket": "interpretation",
+      "query": "Pure C는 어떻게 해석해?",
+      "expectedTopRoute": "result-interpretation/lower-section/affect/PureC"
+    },
+    {
+      "id": "ko-interpretation-sumc-wsumc",
+      "bucket": "interpretation",
+      "query": "SumC / WSumC는 어떻게 봐?",
+      "expectedTopRoute": "result-interpretation/lower-section/affect/SumC_WSumC"
+    },
+    {
+      "id": "ko-interpretation-blends-r",
+      "bucket": "interpretation",
+      "query": "Blends:R은 어떻게 해석해?",
+      "expectedTopRoute": "result-interpretation/lower-section/affect/Blends_R"
+    },
+    {
+      "id": "ko-interpretation-affect-cp",
+      "bucket": "interpretation",
+      "query": "정서 해석에서 CP는 뭘 뜻해?",
+      "expectedTopRoute": "result-interpretation/lower-section/affect/CP"
+    },
+    {
+      "id": "ko-interpretation-wda",
+      "bucket": "interpretation",
+      "query": "WDA%는 어떻게 해석해?",
+      "expectedTopRoute": "result-interpretation/lower-section/mediation/WDA_percent"
+    },
+    {
+      "id": "ko-interpretation-x-minus",
+      "bucket": "interpretation",
+      "query": "X-%는 어떻게 해석해?",
+      "expectedTopRoute": "result-interpretation/lower-section/mediation/X_minus_percent"
+    },
+    {
+      "id": "ko-interpretation-x-plus",
+      "bucket": "interpretation",
+      "query": "X+%는 어떻게 해석해?",
+      "expectedTopRoute": "result-interpretation/lower-section/mediation/X_plus_percent"
+    },
+    {
+      "id": "ko-interpretation-xu",
+      "bucket": "interpretation",
+      "query": "Xu%는 어떻게 해석해?",
+      "expectedTopRoute": "result-interpretation/lower-section/mediation/Xu_percent"
+    },
+    {
+      "id": "ko-interpretation-p",
+      "bucket": "interpretation",
+      "query": "매개 해석에서 P는 뭘 봐?",
+      "expectedTopRoute": "result-interpretation/lower-section/mediation/P"
+    },
+    {
+      "id": "ko-interpretation-zf-proc",
+      "bucket": "interpretation",
+      "query": "processing Zf는 뭘 뜻해?",
+      "expectedTopRoute": "result-interpretation/lower-section/processing/Zf_proc"
+    },
+    {
+      "id": "ko-interpretation-zd-proc",
+      "bucket": "interpretation",
+      "query": "processing Zd는 어떻게 읽어?",
+      "expectedTopRoute": "result-interpretation/lower-section/processing/Zd_proc"
+    },
+    {
+      "id": "ko-interpretation-w-d-dd",
+      "bucket": "interpretation",
+      "query": "processing W:D:Dd 비율은 어떻게 해석해?",
+      "expectedTopRoute": "result-interpretation/lower-section/processing/W_D_Dd"
+    },
+    {
+      "id": "ko-interpretation-w-m",
+      "bucket": "interpretation",
+      "query": "processing W:M 비율은 어떻게 해석해?",
+      "expectedTopRoute": "result-interpretation/lower-section/processing/W_M"
+    },
+    {
+      "id": "ko-interpretation-processing-psv",
+      "bucket": "interpretation",
+      "query": "처리 해석에서 PSV는 뭘 뜻해?",
+      "expectedTopRoute": "result-interpretation/lower-section/processing/PSV"
+    },
+    {
+      "id": "ko-interpretation-sum6",
+      "bucket": "interpretation",
+      "query": "Sum6은 어떻게 해석해?",
+      "expectedTopRoute": "result-interpretation/lower-section/ideation/Sum6"
+    },
+    {
+      "id": "ko-interpretation-wsum6",
+      "bucket": "interpretation",
+      "query": "WSum6은 어떻게 해석해?",
+      "expectedTopRoute": "result-interpretation/lower-section/ideation/WSum6"
+    },
+    {
+      "id": "ko-interpretation-lv2",
+      "bucket": "interpretation",
+      "query": "Lv2는 어떻게 해석해?",
+      "expectedTopRoute": "result-interpretation/lower-section/ideation/Lv2"
+    },
+    {
+      "id": "ko-interpretation-h-ratio",
+      "bucket": "interpretation",
+      "query": "H ratio는 어떻게 해석해?",
+      "expectedTopRoute": "result-interpretation/lower-section/selfPerception/H_ratio"
+    },
+    {
+      "id": "ko-interpretation-mor-self",
+      "bucket": "interpretation",
+      "query": "morbid self-image는 어떻게 해석해?",
+      "expectedTopRoute": "result-interpretation/lower-section/selfPerception/MOR_self"
+    },
+    {
+      "id": "ko-interpretation-self-fd",
+      "bucket": "interpretation",
+      "query": "자기지각 해석에서 FD는 뭘 뜻해?",
+      "expectedTopRoute": "result-interpretation/lower-section/selfPerception/FD"
+    },
+    {
+      "id": "ko-graph-dq-plus",
+      "bucket": "graph-navigation",
+      "query": "DQ+ 채점 문서랑 해석 문서를 같이 보고 싶어.",
+      "expectedTopRoute": "scoring-input/dq/+",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/processing/DQ_plus_proc"
+      ]
+    },
+    {
+      "id": "ko-graph-cop",
+      "bucket": "graph-navigation",
+      "query": "COP 채점이랑 대인관계 해석을 같이 보고 싶어.",
+      "expectedTopRoute": "scoring-input/special-score/COP",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/interpersonal/COP"
+      ]
+    },
+    {
+      "id": "ko-graph-mor",
+      "bucket": "graph-navigation",
+      "query": "MOR 채점하고 자기지각 해석을 연결해서 보고 싶어.",
+      "expectedTopRoute": "scoring-input/special-score/MOR",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/selfPerception/MOR_self"
+      ]
+    },
+    {
+      "id": "ko-graph-s-space",
+      "bucket": "graph-navigation",
+      "query": "S 위치 반응이랑 S-%를 같이 보고 싶어.",
+      "expectedTopRoute": "scoring-input/location/S",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/mediation/S_minus",
+        "result-interpretation/lower-section/affect/S_aff"
+      ]
+    },
+    {
+      "id": "ko-graph-fm",
+      "bucket": "graph-navigation",
+      "query": "FM 채점 문서와 해석 문서를 같이 보여줘.",
+      "expectedTopRoute": "scoring-input/determinants/FM",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/core/FM"
+      ]
+    },
+    {
+      "id": "ko-graph-t",
+      "bucket": "graph-navigation",
+      "query": "T determinant 문서에서 연결된 해석도 같이 보여줘.",
+      "expectedTopRoute": "scoring-input/determinants/T",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/core/SumT"
+      ]
+    },
+    {
+      "id": "ko-graph-v",
+      "bucket": "graph-navigation",
+      "query": "V determinant 문서에서 연결된 해석도 같이 보여줘.",
+      "expectedTopRoute": "scoring-input/determinants/V",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/core/SumV"
+      ]
+    },
+    {
+      "id": "ko-graph-y",
+      "bucket": "graph-navigation",
+      "query": "Y determinant 문서에서 연결된 해석도 같이 보여줘.",
+      "expectedTopRoute": "scoring-input/determinants/Y",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/core/SumY"
+      ]
+    },
+    {
+      "id": "ko-graph-fd-coding",
+      "bucket": "graph-navigation",
+      "query": "FD 채점과 자기지각의 FD 해석을 같이 보고 싶어.",
+      "expectedTopRoute": "scoring-input/determinants/FD",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/selfPerception/FD"
+      ]
+    },
+    {
+      "id": "ko-graph-h",
+      "bucket": "graph-navigation",
+      "query": "H content 문서에서 연결된 해석도 같이 보여줘.",
+      "expectedTopRoute": "scoring-input/contents/H",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/interpersonal/HumanCont",
+        "result-interpretation/lower-section/interpersonal/PureH"
+      ]
+    },
+    {
+      "id": "ko-graph-hd",
+      "bucket": "graph-navigation",
+      "query": "Hd content랑 H ratio 해석을 연결해서 보고 싶어.",
+      "expectedTopRoute": "scoring-input/contents/Hd",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/selfPerception/H_ratio"
+      ]
+    },
+    {
+      "id": "ko-graph-ag",
+      "bucket": "graph-navigation",
+      "query": "AG 채점이랑 대인관계 AG 해석을 같이 보고 싶어.",
+      "expectedTopRoute": "scoring-input/special-score/AG",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/interpersonal/AG"
+      ]
+    },
+    {
+      "id": "ko-graph-per",
+      "bucket": "graph-navigation",
+      "query": "PER 채점과 대인관계 PER 해석을 같이 보고 싶어.",
+      "expectedTopRoute": "scoring-input/special-score/PER",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/interpersonal/PER"
+      ]
+    },
+    {
+      "id": "ko-graph-cp",
+      "bucket": "graph-navigation",
+      "query": "CP 채점과 정서 해석의 CP를 같이 보고 싶어.",
+      "expectedTopRoute": "scoring-input/special-score/CP",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/affect/CP"
+      ]
+    },
+    {
+      "id": "ko-graph-psv",
+      "bucket": "graph-navigation",
+      "query": "PSV 채점과 처리 해석의 PSV를 같이 보고 싶어.",
+      "expectedTopRoute": "scoring-input/special-score/PSV",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/processing/PSV"
+      ]
+    },
+    {
+      "id": "ko-graph-ab",
+      "bucket": "graph-navigation",
+      "query": "AB 채점과 2AB+Art+Ay 해석을 같이 보고 싶어.",
+      "expectedTopRoute": "scoring-input/special-score/AB",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/ideation/_2AB_Art_Ay"
+      ]
+    },
+    {
+      "id": "ko-graph-dv1",
+      "bucket": "graph-navigation",
+      "query": "DV1 채점 문서에서 연결된 해석까지 같이 보여줘.",
+      "expectedTopRoute": "scoring-input/special-score/DV1",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/ideation/Sum6"
+      ]
+    },
+    {
+      "id": "ko-graph-incom1",
+      "bucket": "graph-navigation",
+      "query": "INCOM1 채점 문서에서 연결된 해석까지 같이 보여줘.",
+      "expectedTopRoute": "scoring-input/special-score/INCOM1",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/ideation/WSum6"
+      ]
+    },
+    {
+      "id": "ko-graph-contam",
+      "bucket": "graph-navigation",
+      "query": "CONTAM 채점 문서에서 연결된 해석까지 같이 보여줘.",
+      "expectedTopRoute": "scoring-input/special-score/CONTAM",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/ideation/WSum6"
+      ]
+    },
+    {
+      "id": "ko-graph-eb-to-coding",
+      "bucket": "graph-navigation",
+      "query": "EB 해석을 보면서 M이랑 FC도 같이 확인하고 싶어.",
+      "expectedTopRoute": "result-interpretation/lower-section/core/EB",
+      "expectedIncludedRoutes": [
+        "scoring-input/determinants/M",
+        "scoring-input/determinants/FC"
+      ]
+    }
+  ]
+}

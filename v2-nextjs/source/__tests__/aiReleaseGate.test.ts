@@ -18,10 +18,12 @@ describe('AI release gate runner', () => {
 
     expect(result.status).toBe('planned');
     expect(result.steps.map((step: { id: string }) => step.id)).toEqual([
+      'reference_retrieval',
       'contracts',
       'artifacts',
       'human_records',
       'secret_scan',
+      'dependency_audit',
     ]);
     expect(result.steps.every((step: { status: string }) => step.status === 'planned')).toBe(true);
   });
@@ -91,6 +93,11 @@ describe('AI release gate runner', () => {
     const selected = gate.selectAiReleaseGateSteps(gate.DEFAULT_AI_RELEASE_GATE_STEPS, args.skip);
 
     expect(args.dryRun).toBe(true);
-    expect(selected.map((step: { id: string }) => step.id)).toEqual(['contracts', 'secret_scan']);
+    expect(selected.map((step: { id: string }) => step.id)).toEqual([
+      'reference_retrieval',
+      'contracts',
+      'secret_scan',
+      'dependency_audit',
+    ]);
   });
 });

@@ -42,20 +42,53 @@ const PRIMARY_CODE_TOKEN_STOPWORDS = new Set([
   'an',
   'as',
   'card',
+  'cartao',
   'code',
   'coded',
   'coding',
+  'codificada',
+  'codificado',
+  'codificacao',
+  'codificar',
+  'codifico',
+  'codigo',
+  'como',
+  'comparar',
+  'cuidados',
+  'da',
+  'de',
+  'deve',
+  'difere',
   'does',
   'do',
+  'e',
+  'eu',
   'for',
   'how',
   'i',
   'if',
+  'importam',
+  'indice',
   'is',
+  'localizacao',
   'mean',
+  'na',
+  'nao',
+  'no',
+  'o',
+  'pagina',
+  'paginas',
+  'quando',
+  'que',
   'response',
+  'resposta',
+  'ser',
   'should',
+  'significa',
+  'sugere',
   'the',
+  'um',
+  'uma',
   'what',
   'when',
 ]);
@@ -98,7 +131,9 @@ function isPotentialCodeToken(token: string): boolean {
 
 function findPrimaryCodeToken(rawTokens: string[]): string | null {
   const codingCueIndex = rawTokens.findIndex((token) =>
-    /^(code|coded|coding)$/i.test(token) || /채점|부호화|코딩/u.test(token),
+    /^(code|coded|coding)$/i.test(token) ||
+    /^codific/u.test(token.toLowerCase()) ||
+    /채점|부호화|코딩/u.test(token),
   );
   const candidates = rawTokens.filter(isPotentialCodeToken);
 
@@ -235,6 +270,10 @@ function inferQueryIntent(queryText: string): QueryIntent {
     /붙/u,
     /부여/u,
     /적용/u,
+    /codific/u,
+    /codigo/u,
+    /localizacao/u,
+    /pontua/u,
     /\bcoding\b/i,
     /\bcode\b/i,
     /\blocation\b/i,
@@ -244,6 +283,8 @@ function inferQueryIntent(queryText: string): QueryIntent {
     /\bspecial score\b/i,
     /특수점수/u,
     /\bcard\b/i,
+    /cartao/u,
+    /prancha/u,
     /카드/u,
     /\bcontent\b/i,
     /내용/u,
@@ -252,6 +293,13 @@ function inferQueryIntent(queryText: string): QueryIntent {
   ];
   const interpretationPatterns = [
     /해석/u,
+    /interpretac/u,
+    /interpreta/u,
+    /significa/u,
+    /sugere/u,
+    /indice/u,
+    /ideacao/u,
+    /autopercepc/u,
     /의미/u,
     /설명/u,
     /시사/u,
@@ -272,16 +320,37 @@ function inferQueryIntent(queryText: string): QueryIntent {
     /높/u,
     /낮/u,
   ];
-  const graphPatterns = [/같이/u, /연결/u, /상호참조/u, /문서/u, /링크/u, /보고 싶/u];
+  const graphPatterns = [
+    /같이/u,
+    /연결/u,
+    /상호참조/u,
+    /문서/u,
+    /링크/u,
+    /보고 싶/u,
+    /pagina/u,
+    /comparar/u,
+    /relacionad/u,
+    /ligad/u,
+  ];
 
   const explicitCoding = codingPatterns.some((pattern) => pattern.test(normalized));
   const interpretationSignal = interpretationPatterns.some((pattern) => pattern.test(normalized));
+  const interpretationVersusCoding =
+    /interpretac[\s\S]{0,80}codific/u.test(normalized) &&
+    /difere|diferenca|compar/u.test(normalized);
   const explicitInterpretation =
-    !explicitCoding && interpretationSignal;
+    (!explicitCoding && interpretationSignal) || interpretationVersusCoding;
   const graphIntent = graphPatterns.some((pattern) => pattern.test(normalized));
+  const preferDomain = interpretationVersusCoding
+    ? 'interpretation'
+    : explicitCoding
+      ? 'coding'
+      : explicitInterpretation
+        ? 'interpretation'
+        : 'neutral';
 
   return {
-    preferDomain: explicitCoding ? 'coding' : explicitInterpretation ? 'interpretation' : 'neutral',
+    preferDomain,
     graphIntent,
     explicitCoding,
     explicitInterpretation,
@@ -301,6 +370,9 @@ function scoreScopeHints(queryText: string, routeLower: string): number {
     { pattern: /\bcore\b/i, routeFragment: '/core/' },
     { pattern: /\bspecial score\b/i, routeFragment: '/special-score/' },
     { pattern: /\bcard\b/i, routeFragment: '/card/' },
+    { pattern: /cartao|prancha/i, routeFragment: '/card/' },
+    { pattern: /ideacao/i, routeFragment: '/ideation/' },
+    { pattern: /autopercepcao|egocentricidade|egocentrico/i, routeFragment: '/selfperception/' },
   ];
 
   let score = 0;

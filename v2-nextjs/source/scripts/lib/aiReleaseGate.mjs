@@ -3,6 +3,13 @@ import { relative, resolve } from 'node:path';
 
 export const DEFAULT_AI_RELEASE_GATE_STEPS = [
   {
+    id: 'reference_retrieval',
+    label: 'Curated reference retrieval evals',
+    command: 'npm',
+    args: ['run', 'docs:evaluate-rag:all'],
+    required: true,
+  },
+  {
     id: 'contracts',
     label: 'Static AI harness contracts',
     command: 'npm',
@@ -28,6 +35,13 @@ export const DEFAULT_AI_RELEASE_GATE_STEPS = [
     label: 'Committed secret scan',
     command: 'npm',
     args: ['run', 'security:secrets'],
+    required: true,
+  },
+  {
+    id: 'dependency_audit',
+    label: 'Dependency audit',
+    command: 'npm',
+    args: ['run', 'security:audit'],
     required: true,
   },
 ];

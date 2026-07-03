@@ -21,6 +21,18 @@ const v2SourceUrl = `${exhibitionRepoUrl}/tree/main/v2-nextjs/source`;
 
 export const v2NextVersions: VersionArchiveEntry[] = [
   {
+    version: 'v2.1.6',
+    title: 'Version 2.1.6',
+    series: 'v2-nextjs',
+    publishedAt: '2026-07-03',
+    releaseKind: 'bugfix',
+    releaseLabel: '버그 패치',
+    summary:
+      'AI 지식층 검색 평가를 모든 런타임 언어로 묶고, 포르투갈어 RAG 평가 누락과 다국어 의도 판별 문제를 수정했으며, AI 릴리즈 게이트에 dependency audit과 보안 기준을 포함한 v2.1.x AI 품질 마감 패치입니다.',
+    sourceUrl: v2SourceUrl,
+    releaseUrl: v2ReleaseUrl('v2.1.6'),
+  },
+  {
     version: 'v2.1.5',
     title: 'Version 2.1.5',
     series: 'v2-nextjs',

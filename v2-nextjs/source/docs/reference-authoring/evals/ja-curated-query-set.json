@@ -1,0 +1,413 @@
+{
+  "locale": "ja",
+  "version": "2026-03-10",
+  "targetCount": 60,
+  "minimums": {
+    "coding": 24,
+    "interpretation": 24,
+    "graph-navigation": 12
+  },
+  "queries": [
+    {
+      "id": "ja-coding-dq-plus",
+      "bucket": "coding",
+      "query": "DQ+ の coding rule は何ですか。",
+      "expectedTopRoute": "scoring-input/dq/+"
+    },
+    {
+      "id": "ja-coding-dq-vplus",
+      "bucket": "coding",
+      "query": "v/+ はどんなときに使いますか。",
+      "expectedTopRoute": "scoring-input/dq/v/+"
+    },
+    {
+      "id": "ja-coding-fq-plus",
+      "bucket": "coding",
+      "query": "FQ+ とは何ですか。",
+      "expectedTopRoute": "scoring-input/fq/+"
+    },
+    {
+      "id": "ja-coding-fq-u",
+      "bucket": "coding",
+      "query": "FQu はどんなときに使いますか。",
+      "expectedTopRoute": "scoring-input/fq/u"
+    },
+    {
+      "id": "ja-coding-location-w",
+      "bucket": "coding",
+      "query": "位置コードの W は何を意味しますか。",
+      "expectedTopRoute": "scoring-input/location/W"
+    },
+    {
+      "id": "ja-coding-location-s",
+      "bucket": "coding",
+      "query": "位置コードの S はどう符号化しますか。",
+      "expectedTopRoute": "scoring-input/location/S"
+    },
+    {
+      "id": "ja-coding-determinant-fm",
+      "bucket": "coding",
+      "query": "determinant の FM はどんなときに付けますか。",
+      "expectedTopRoute": "scoring-input/determinants/FM"
+    },
+    {
+      "id": "ja-coding-determinant-fc",
+      "bucket": "coding",
+      "query": "FC はどんなときに符号化しますか。",
+      "expectedTopRoute": "scoring-input/determinants/FC"
+    },
+    {
+      "id": "ja-coding-determinant-t",
+      "bucket": "coding",
+      "query": "determinant の T は何を意味しますか。",
+      "expectedTopRoute": "scoring-input/determinants/T"
+    },
+    {
+      "id": "ja-coding-determinant-v",
+      "bucket": "coding",
+      "query": "vista determinant の V は何ですか。",
+      "expectedTopRoute": "scoring-input/determinants/V"
+    },
+    {
+      "id": "ja-coding-determinant-fr",
+      "bucket": "coding",
+      "query": "Fr はどんなときに付けますか。",
+      "expectedTopRoute": "scoring-input/determinants/Fr"
+    },
+    {
+      "id": "ja-coding-determinant-fd",
+      "bucket": "coding",
+      "query": "determinant の FD はどんなときに使いますか。",
+      "expectedTopRoute": "scoring-input/determinants/FD"
+    },
+    {
+      "id": "ja-coding-ghr",
+      "bucket": "coding",
+      "query": "GHR はどんなときに使いますか。",
+      "expectedTopRoute": "scoring-input/gphr/GHR"
+    },
+    {
+      "id": "ja-coding-phr",
+      "bucket": "coding",
+      "query": "PHR はどんなときに使いますか。",
+      "expectedTopRoute": "scoring-input/gphr/PHR"
+    },
+    {
+      "id": "ja-coding-content-h",
+      "bucket": "coding",
+      "query": "H content に入るのは何ですか。",
+      "expectedTopRoute": "scoring-input/contents/H"
+    },
+    {
+      "id": "ja-coding-content-an",
+      "bucket": "coding",
+      "query": "An content は何を指しますか。",
+      "expectedTopRoute": "scoring-input/contents/An"
+    },
+    {
+      "id": "ja-coding-content-xy",
+      "bucket": "coding",
+      "query": "Xy content とは何ですか。",
+      "expectedTopRoute": "scoring-input/contents/Xy"
+    },
+    {
+      "id": "ja-coding-special-cop",
+      "bucket": "coding",
+      "query": "COP はどんなときに符号化しますか。",
+      "expectedTopRoute": "scoring-input/special-score/COP"
+    },
+    {
+      "id": "ja-coding-special-mor",
+      "bucket": "coding",
+      "query": "MOR はどんなときに付けますか。",
+      "expectedTopRoute": "scoring-input/special-score/MOR"
+    },
+    {
+      "id": "ja-coding-special-ab",
+      "bucket": "coding",
+      "query": "AB special score とは何ですか。",
+      "expectedTopRoute": "scoring-input/special-score/AB"
+    },
+    {
+      "id": "ja-coding-special-contam",
+      "bucket": "coding",
+      "query": "CONTAM はどう符号化しますか。",
+      "expectedTopRoute": "scoring-input/special-score/CONTAM"
+    },
+    {
+      "id": "ja-coding-zw",
+      "bucket": "coding",
+      "query": "ZW は何を意味しますか。",
+      "expectedTopRoute": "scoring-input/z/ZW"
+    },
+    {
+      "id": "ja-coding-popular",
+      "bucket": "coding",
+      "query": "Popular response とは何ですか。",
+      "expectedTopRoute": "scoring-input/popular"
+    },
+    {
+      "id": "ja-coding-card-v",
+      "bucket": "coding",
+      "query": "Card V で注意する coding point は何ですか。",
+      "expectedTopRoute": "scoring-input/card/V"
+    },
+    {
+      "id": "ja-interpretation-upper-w",
+      "bucket": "interpretation",
+      "query": "upper section で W はどう解釈しますか。",
+      "expectedTopRoute": "result-interpretation/upper-section/W"
+    },
+    {
+      "id": "ja-interpretation-upper-zd",
+      "bucket": "interpretation",
+      "query": "解釈で Zd は何を示しますか。",
+      "expectedTopRoute": "result-interpretation/upper-section/Zd"
+    },
+    {
+      "id": "ja-interpretation-core-lambda",
+      "bucket": "interpretation",
+      "query": "Lambda は何を教えてくれますか。",
+      "expectedTopRoute": "result-interpretation/lower-section/core/Lambda"
+    },
+    {
+      "id": "ja-interpretation-core-eb",
+      "bucket": "interpretation",
+      "query": "EB はどう解釈しますか。",
+      "expectedTopRoute": "result-interpretation/lower-section/core/EB"
+    },
+    {
+      "id": "ja-interpretation-core-adjd",
+      "bucket": "interpretation",
+      "query": "AdjD は何を意味しますか。",
+      "expectedTopRoute": "result-interpretation/lower-section/core/AdjD"
+    },
+    {
+      "id": "ja-interpretation-core-fm",
+      "bucket": "interpretation",
+      "query": "core section の FM は何を示しますか。",
+      "expectedTopRoute": "result-interpretation/lower-section/core/FM"
+    },
+    {
+      "id": "ja-interpretation-core-sumv",
+      "bucket": "interpretation",
+      "query": "core の SumV はどう読みますか。",
+      "expectedTopRoute": "result-interpretation/lower-section/core/SumV"
+    },
+    {
+      "id": "ja-interpretation-ideation-ap",
+      "bucket": "interpretation",
+      "query": "a:p ratio は何を示しますか。",
+      "expectedTopRoute": "result-interpretation/lower-section/ideation/a_p"
+    },
+    {
+      "id": "ja-interpretation-ideation-sum6",
+      "bucket": "interpretation",
+      "query": "Sum6 はどう解釈しますか。",
+      "expectedTopRoute": "result-interpretation/lower-section/ideation/Sum6"
+    },
+    {
+      "id": "ja-interpretation-ideation-mminus",
+      "bucket": "interpretation",
+      "query": "M- は何を示唆しますか。",
+      "expectedTopRoute": "result-interpretation/lower-section/ideation/M_minus"
+    },
+    {
+      "id": "ja-interpretation-affect-afr",
+      "bucket": "interpretation",
+      "query": "Afr は何を意味しますか。",
+      "expectedTopRoute": "result-interpretation/lower-section/affect/Afr"
+    },
+    {
+      "id": "ja-interpretation-affect-fccfc",
+      "bucket": "interpretation",
+      "query": "FC:CF+C ratio はどう読みますか。",
+      "expectedTopRoute": "result-interpretation/lower-section/affect/FC_CF_C"
+    },
+    {
+      "id": "ja-interpretation-mediation-xa",
+      "bucket": "interpretation",
+      "query": "XA% は何を意味しますか。",
+      "expectedTopRoute": "result-interpretation/lower-section/mediation/XA_percent"
+    },
+    {
+      "id": "ja-interpretation-mediation-p",
+      "bucket": "interpretation",
+      "query": "mediation の P は何を示しますか。",
+      "expectedTopRoute": "result-interpretation/lower-section/mediation/P"
+    },
+    {
+      "id": "ja-interpretation-processing-zf",
+      "bucket": "interpretation",
+      "query": "processing section Zf interpretation ??????",
+      "expectedTopRoute": "result-interpretation/lower-section/processing/Zf_proc"
+    },
+    {
+      "id": "ja-interpretation-processing-wm",
+      "bucket": "interpretation",
+      "query": "W:M aspirational ratio はどう解釈しますか。",
+      "expectedTopRoute": "result-interpretation/lower-section/processing/W_M"
+    },
+    {
+      "id": "ja-interpretation-interpersonal-cop",
+      "bucket": "interpretation",
+      "query": "interpersonal interpretation の COP は何を意味しますか。",
+      "expectedTopRoute": "result-interpretation/lower-section/interpersonal/COP"
+    },
+    {
+      "id": "ja-interpretation-interpersonal-humancont",
+      "bucket": "interpretation",
+      "query": "interpersonal cluster で HumanCont はどう読みますか。",
+      "expectedTopRoute": "result-interpretation/lower-section/interpersonal/HumanCont"
+    },
+    {
+      "id": "ja-interpretation-interpersonal-iso",
+      "bucket": "interpretation",
+      "query": "Isolation Index とは何ですか。",
+      "expectedTopRoute": "result-interpretation/lower-section/interpersonal/ISO_Index"
+    },
+    {
+      "id": "ja-interpretation-self-egocentricity",
+      "bucket": "interpretation",
+      "query": "自己中心性指数 3r+(2)/R は何を意味しますか。",
+      "expectedTopRoute": "result-interpretation/lower-section/selfPerception/_3r_2_R"
+    },
+    {
+      "id": "ja-interpretation-self-hratio",
+      "bucket": "interpretation",
+      "query": "H ratio はどう読みますか。",
+      "expectedTopRoute": "result-interpretation/lower-section/selfPerception/H_ratio"
+    },
+    {
+      "id": "ja-interpretation-special-pti",
+      "bucket": "interpretation",
+      "query": "PTI は何を示しますか。",
+      "expectedTopRoute": "result-interpretation/special-indices/PTI"
+    },
+    {
+      "id": "ja-interpretation-special-depi",
+      "bucket": "interpretation",
+      "query": "DEPI は何を示しますか。",
+      "expectedTopRoute": "result-interpretation/special-indices/DEPI"
+    },
+    {
+      "id": "ja-interpretation-special-cdi",
+      "bucket": "interpretation",
+      "query": "CDI は何を示唆しますか。",
+      "expectedTopRoute": "result-interpretation/special-indices/CDI"
+    },
+    {
+      "id": "ja-graph-dqplus-processing",
+      "bucket": "graph-navigation",
+      "query": "DQ+ coding page ?????? interpretation page ???????",
+      "expectedTopRoute": "scoring-input/dq/+",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/processing/DQ_plus_proc"
+      ]
+    },
+    {
+      "id": "ja-graph-fm-link",
+      "bucket": "graph-navigation",
+      "query": "FM coding page ?? core FM interpretation page ? m page ??????",
+      "expectedTopRoute": "scoring-input/determinants/FM",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/core/FM",
+        "result-interpretation/lower-section/core/m"
+      ]
+    },
+    {
+      "id": "ja-graph-location-s-link",
+      "bucket": "graph-navigation",
+      "query": "location の S を符号化したら、interpretation では何を見直しますか。",
+      "expectedTopRoute": "scoring-input/location/S",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/mediation/S_minus"
+      ]
+    },
+    {
+      "id": "ja-graph-mor-link",
+      "bucket": "graph-navigation",
+      "query": "MOR coding page ?? ideation MOR interpretation page ? self-perception MOR_self page ??????",
+      "expectedTopRoute": "scoring-input/special-score/MOR",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/ideation/MOR",
+        "result-interpretation/lower-section/selfPerception/MOR_self"
+      ]
+    },
+    {
+      "id": "ja-graph-humancont-link",
+      "bucket": "graph-navigation",
+      "query": "HumanCont を読むとき、特に H ratio とどう結びつけますか。",
+      "expectedTopRoute": "result-interpretation/lower-section/interpersonal/HumanCont",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/selfPerception/H_ratio"
+      ]
+    },
+    {
+      "id": "ja-graph-sumv-link",
+      "bucket": "graph-navigation",
+      "query": "self-perception の SumV_self page は core の SumV とどうつながりますか。",
+      "expectedTopRoute": "result-interpretation/lower-section/selfPerception/SumV_self",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/core/SumV"
+      ]
+    },
+    {
+      "id": "ja-graph-pti-link",
+      "bucket": "graph-navigation",
+      "query": "PTI と一緒に見直すべき変数は何ですか。",
+      "expectedTopRoute": "result-interpretation/special-indices/PTI",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/ideation/WSum6",
+        "result-interpretation/lower-section/mediation/X_minus_percent"
+      ]
+    },
+    {
+      "id": "ja-graph-depi-link",
+      "bucket": "graph-navigation",
+      "query": "DEPI と一緒に見るべき他の変数は何ですか。",
+      "expectedTopRoute": "result-interpretation/special-indices/DEPI",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/selfPerception/MOR_self",
+        "result-interpretation/lower-section/affect/Afr"
+      ]
+    },
+    {
+      "id": "ja-graph-cop-dual",
+      "bucket": "graph-navigation",
+      "query": "interpersonal の COP と coding の COP はどう違いますか。",
+      "expectedTopRoute": "result-interpretation/lower-section/interpersonal/COP",
+      "expectedIncludedRoutes": [
+        "scoring-input/special-score/COP"
+      ]
+    },
+    {
+      "id": "ja-graph-popular-p-link",
+      "bucket": "graph-navigation",
+      "query": "mediation の P は Popular response とどうつながりますか。",
+      "expectedTopRoute": "result-interpretation/lower-section/mediation/P",
+      "expectedIncludedRoutes": [
+        "scoring-input/popular"
+      ]
+    },
+    {
+      "id": "ja-graph-hratio-link",
+      "bucket": "graph-navigation",
+      "query": "H ratio と一緒に見直すべき page は何ですか。",
+      "expectedTopRoute": "result-interpretation/lower-section/selfPerception/H_ratio",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/interpersonal/HumanCont",
+        "result-interpretation/lower-section/interpersonal/PureH"
+      ]
+    },
+    {
+      "id": "ja-graph-ap-link",
+      "bucket": "graph-navigation",
+      "query": "a:p ratio page から、a:p_inter と比べるにはどこを開きますか。",
+      "expectedTopRoute": "result-interpretation/lower-section/ideation/a_p",
+      "expectedIncludedRoutes": [
+        "result-interpretation/lower-section/interpersonal/a_p_inter"
+      ]
+    }
+  ]
+}
