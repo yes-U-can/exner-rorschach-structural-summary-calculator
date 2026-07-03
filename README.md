@@ -20,7 +20,7 @@
 
 ## [Next.js] 버전 2 릴리즈 기록
 
-- **[2026-07-03] v2.1.6 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.1.6/) [소스코드](./v2-nextjs/source/)
+- **[2026-07-04] v2.1.6 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.1.6/) [소스코드](./v2-nextjs/source/)
 - **[2026-07-03] v2.1.5 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.1.5/) [소스코드](./v2-nextjs/source/)
 - **[2026-07-03] v2.1.4 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.1.4/) [소스코드](./v2-nextjs/source/)
 - **[2026-06-29] v2.1.3 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.1.3/) [소스코드](./v2-nextjs/source/)

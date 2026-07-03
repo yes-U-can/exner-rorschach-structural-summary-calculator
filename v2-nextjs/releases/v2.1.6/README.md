@@ -1,6 +1,6 @@
 # Version 2.1.6
 
-Released: 2026-07-03
+Released: 2026-07-04
 
 Type: Bugfix
 

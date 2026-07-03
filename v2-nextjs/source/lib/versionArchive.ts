@@ -24,7 +24,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     version: 'v2.1.6',
     title: 'Version 2.1.6',
     series: 'v2-nextjs',
-    publishedAt: '2026-07-03',
+    publishedAt: '2026-07-04',
     releaseKind: 'bugfix',
     releaseLabel: '버그 패치',
     summary:
