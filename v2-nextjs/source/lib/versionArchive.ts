@@ -21,6 +21,18 @@ const v2SourceUrl = `${exhibitionRepoUrl}/tree/main/v2-nextjs/source`;
 
 export const v2NextVersions: VersionArchiveEntry[] = [
   {
+    version: 'v2.1.5',
+    title: 'Version 2.1.5',
+    series: 'v2-nextjs',
+    publishedAt: '2026-07-03',
+    releaseKind: 'bugfix',
+    releaseLabel: '버그 패치',
+    summary:
+      'AI 릴리즈 준비를 반복 가능하게 만들기 위해 ai:release-gate 명령, privacy-safe gate report, GitHub Actions AI gate wiring을 추가한 품질 강화 패치입니다.',
+    sourceUrl: v2SourceUrl,
+    releaseUrl: v2ReleaseUrl('v2.1.5'),
+  },
+  {
     version: 'v2.1.4',
     title: 'Version 2.1.4',
     series: 'v2-nextjs',

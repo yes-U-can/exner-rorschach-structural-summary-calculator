@@ -5,7 +5,7 @@ import { useTranslation } from '@/hooks/useTranslation';
 
 export default function Footer() {
   const { t, language } = useTranslation();
-  const appVersion = '2.1.4';
+  const appVersion = '2.1.5';
   const versionHref = `/versions?lang=${language}`;
 
   const labels = {

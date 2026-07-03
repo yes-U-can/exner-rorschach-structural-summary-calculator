@@ -18,12 +18,25 @@ Run the static harness and retrieval contract suite:
 npm run ai:evaluate-contracts
 ```
 
+Run the local AI release gate:
+
+```bash
+npm run ai:release-gate
+```
+
+The release gate runs the static harness contracts, saved eval artifact audit, human review record scorer with `--require-pass`, and committed secret scan in one repeatable command. To preview the command plan without executing it:
+
+```bash
+npm run ai:release-gate -- --dry-run
+```
+
 Human review rubric:
 
 - [`HUMAN_RUBRIC.md`](./HUMAN_RUBRIC.md)
 - [`human-rubric-v2.1.x.json`](./human-rubric-v2.1.x.json)
 - [`human-review-records/`](./human-review-records/)
 - [`2026-07-03-v2.1.4-ai-eval-hardening-report.md`](./2026-07-03-v2.1.4-ai-eval-hardening-report.md)
+- [`2026-07-03-v2.1.5-ai-release-gate-report.md`](./2026-07-03-v2.1.5-ai-release-gate-report.md)
 
 Validate saved human review records:
 
