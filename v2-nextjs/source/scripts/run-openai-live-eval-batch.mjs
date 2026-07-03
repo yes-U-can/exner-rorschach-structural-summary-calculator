@@ -2,6 +2,7 @@
 import { spawn } from 'node:child_process';
 import { mkdirSync, writeFileSync, appendFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
+import { loadProjectEnv } from './load-project-env.mjs';
 
 const PRICE_PER_1M_TOKENS = {
   'gpt-4o-mini': { input: 0.15, output: 0.6 },
@@ -14,6 +15,7 @@ function parseArgs(argv) {
     locales: ['ko', 'en'],
     rounds: 1,
     retrieval: 'runtime',
+    suite: 'single',
     output: `docs/ai-evals/live-eval-${new Date().toISOString().replace(/[:.]/g, '-')}.jsonl`,
     budgetUsd: 5,
     ids: '',
@@ -29,6 +31,7 @@ function parseArgs(argv) {
     else if (key === '--locales') args.locales = value.split(',').map((item) => item.trim()).filter(Boolean);
     else if (key === '--rounds') args.rounds = Number.parseInt(value, 10);
     else if (key === '--retrieval') args.retrieval = value;
+    else if (key === '--suite') args.suite = value;
     else if (key === '--output') args.output = value;
     else if (key === '--budget-usd') args.budgetUsd = Number.parseFloat(value);
     else if (key === '--ids') args.ids = value;
@@ -45,6 +48,9 @@ function parseArgs(argv) {
   }
   if (!PRICE_PER_1M_TOKENS[args.model]) {
     throw new Error(`No price table is configured for model: ${args.model}`);
+  }
+  if (!['single', 'multiturn'].includes(args.suite)) {
+    throw new Error('--suite must be either single or multiturn.');
   }
 
   return args;
@@ -109,6 +115,7 @@ function parseEvalEvents(stdout) {
 }
 
 const args = parseArgs(process.argv.slice(2));
+loadProjectEnv(process.cwd());
 
 if (!process.env.OPENAI_API_KEY) {
   throw new Error('OPENAI_API_KEY is required in the environment.');
@@ -125,6 +132,7 @@ writeFileSync(
     locales: args.locales,
     rounds: args.rounds,
     retrieval: args.retrieval,
+    suite: args.suite,
     budgetUsd: args.budgetUsd,
     ids: args.ids || null,
   })}\n`,
@@ -135,6 +143,9 @@ let totalCalls = 0;
 let failedRuns = 0;
 const issueCounts = new Map();
 const npmCommand = process.platform === 'win32' ? 'npm.cmd' : 'npm';
+const evalScript = args.suite === 'multiturn'
+  ? 'ai:evaluate-live:openai:multiturn'
+  : 'ai:evaluate-live:openai';
 
 for (let round = 1; round <= args.rounds; round += 1) {
   for (const locale of args.locales) {
@@ -151,8 +162,8 @@ for (let round = 1; round <= args.rounds; round += 1) {
       ...(args.ids ? { OPENAI_LIVE_EVAL_IDS: args.ids } : {}),
     };
 
-    console.log(`\n[ai-live-eval-batch] model=${args.model} locale=${locale} round=${round}/${args.rounds}`);
-    const result = await runCommand(npmCommand, ['run', 'ai:evaluate-live:openai'], env);
+    console.log(`\n[ai-live-eval-batch] suite=${args.suite} model=${args.model} locale=${locale} round=${round}/${args.rounds}`);
+    const result = await runCommand(npmCommand, ['run', evalScript], env);
     const events = parseEvalEvents(result.stdout);
 
     let runCostUsd = 0;
@@ -203,6 +214,7 @@ const summary = {
   locales: args.locales,
   rounds: args.rounds,
   retrieval: args.retrieval,
+  suite: args.suite,
   totalCalls,
   failedRuns,
   totalCostUsd: Number(totalCostUsd.toFixed(8)),

@@ -19,8 +19,9 @@ They are not enough to judge whether an answer is genuinely useful to a clinicia
 Structured rubric data:
 
 - [`human-rubric-v2.1.x.json`](./human-rubric-v2.1.x.json)
+- [`human-review-records/`](./human-review-records/)
 
-The JSON file is intentionally machine-readable so future scripts can calculate weighted scores from reviewer records.
+The JSON file is intentionally machine-readable so scripts can calculate weighted scores from reviewer records.
 
 ## Review Scale
 
@@ -62,7 +63,14 @@ Examples:
 3. Run `npm run ai:evaluate-artifacts`.
 4. Sample final-pass answers for human review.
 5. Score each answer with the JSON rubric.
-6. Treat low-scoring patterns as prompt, retrieval, or fixture work.
+6. Run `npm run ai:evaluate-human-records`.
+7. Treat low-scoring patterns as prompt, retrieval, or fixture work.
+
+For a release candidate, the stricter gate can require every reviewed record to pass:
+
+```bash
+node scripts/score-ai-human-review-records.mjs --input docs/ai-evals/human-review-records --require-pass
+```
 
 ## What This Adds
 
@@ -73,3 +81,4 @@ The product can now distinguish three quality layers:
 1. Contract quality: the answer follows hard product rules.
 2. Artifact quality: saved eval evidence is safe and reproducible.
 3. Human usefulness: a reviewer can score whether the answer is clear, grounded, and helpful.
+4. Review reproducibility: the scorer can verify that saved review decisions match the rubric math.

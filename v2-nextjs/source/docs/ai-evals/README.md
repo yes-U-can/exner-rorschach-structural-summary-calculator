@@ -22,11 +22,27 @@ Human review rubric:
 
 - [`HUMAN_RUBRIC.md`](./HUMAN_RUBRIC.md)
 - [`human-rubric-v2.1.x.json`](./human-rubric-v2.1.x.json)
+- [`human-review-records/`](./human-review-records/)
+- [`2026-07-03-v2.1.4-ai-eval-hardening-report.md`](./2026-07-03-v2.1.4-ai-eval-hardening-report.md)
+
+Validate saved human review records:
+
+```bash
+npm run ai:evaluate-human-records
+```
 
 Run a live OpenAI batch when an API key is available in the local environment:
 
 ```bash
 npm run ai:evaluate-live:batch -- --model gpt-4o-mini --locales ko,en --rounds 1 --budget-usd 1
+```
+
+The explicit batch runner loads `.env.local` and `.env.production.local` before checking `OPENAI_API_KEY`. The Vitest live suites still skip unless the key is already present in the current process environment, so normal test runs do not accidentally spend API budget.
+
+Run a multi-turn live batch when you want to test follow-up behavior:
+
+```bash
+npm run ai:evaluate-live:batch -- --suite multiturn --model gpt-5.5 --locales en --rounds 1 --budget-usd 5
 ```
 
 Audit the saved JSONL artifacts:
@@ -43,6 +59,14 @@ The artifact audit checks:
 - files named `final-pass` contain zero issue-bearing fixture results and zero failed runs
 - logs do not contain key-shaped secrets
 - logs do not contain raw prompt, raw answer, or raw response fields
+
+Human review record scoring checks:
+
+- every review record has the required rubric fields
+- workflow-specific dimension scores are valid `0` to `4` integers
+- weighted scores match the rubric weights
+- blocking failures force a `fail` decision
+- optional release gates can require every reviewed record to pass
 
 ## Privacy Boundary
 

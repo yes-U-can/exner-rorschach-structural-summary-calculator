@@ -21,6 +21,18 @@ const v2SourceUrl = `${exhibitionRepoUrl}/tree/main/v2-nextjs/source`;
 
 export const v2NextVersions: VersionArchiveEntry[] = [
   {
+    version: 'v2.1.4',
+    title: 'Version 2.1.4',
+    series: 'v2-nextjs',
+    publishedAt: '2026-07-03',
+    releaseKind: 'bugfix',
+    releaseLabel: '버그 패치',
+    summary:
+      'AI 응답 품질 검증을 강화하기 위해 multi-turn eval, human review record scorer, live multi-turn batch entry point, and v2.1.4 eval hardening report를 추가한 버전입니다.',
+    sourceUrl: v2SourceUrl,
+    releaseUrl: v2ReleaseUrl('v2.1.4'),
+  },
+  {
     version: 'v2.1.3',
     title: 'Version 2.1.3',
     series: 'v2-nextjs',
