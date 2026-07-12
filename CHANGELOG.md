@@ -1,6 +1,6 @@
 # CHANGELOG
 
-이 문서는 `exner-sicp` 공개 릴리즈 기록을 최신순으로 정리합니다.
+이 문서는 `exner-rorschach-structural-summary-calculator` 공개 릴리즈 기록을 최신순으로 정리합니다.
 
 ## [Next.js] 버전 2 릴리즈 기록
 

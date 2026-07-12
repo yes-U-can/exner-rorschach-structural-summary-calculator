@@ -14,8 +14,8 @@ This standard exists so release notes, README files, version archive entries, an
 
 This standard applies to:
 
-1. public-facing release notes under `exner-sicp/v2-nextjs/releases/*/README.md`
-2. public showcase navigation files such as `exner-sicp/README.md`, `CHANGELOG.md`, and `v2-nextjs/README.md`
+1. public-facing release notes under `exner-rorschach-structural-summary-calculator/v2-nextjs/releases/*/README.md`
+2. public showcase navigation files such as `exner-rorschach-structural-summary-calculator/README.md`, `CHANGELOG.md`, and `v2-nextjs/README.md`
 3. app version archive entries in `lib/versionArchive.ts`
 4. release evidence summaries that are intended for public showcase use
 

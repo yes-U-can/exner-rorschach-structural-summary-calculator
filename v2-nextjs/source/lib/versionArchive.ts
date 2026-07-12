@@ -14,7 +14,7 @@ export type VersionArchiveEntry = {
   videoUrl?: string | null;
 };
 
-const exhibitionRepoUrl = 'https://github.com/yes-U-can/exner-sicp';
+const exhibitionRepoUrl = 'https://github.com/yes-U-can/exner-rorschach-structural-summary-calculator';
 const v1ArchiveUrl = (version: string) => `${exhibitionRepoUrl}/tree/main/v1-gas/releases/${version}`;
 const v2ReleaseUrl = (version: string) => `${exhibitionRepoUrl}/tree/main/v2-nextjs/releases/${version}`;
 const v2SourceUrl = `${exhibitionRepoUrl}/tree/main/v2-nextjs/source`;

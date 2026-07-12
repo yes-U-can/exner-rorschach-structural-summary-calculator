@@ -48,7 +48,7 @@ Use this checklist before deploying the BYOK-only RAG build to production.
 2. Public-facing README, CHANGELOG, release notes, and companion summaries follow the language coverage policy.
 3. Korean canonical release notes keep technical identifiers in their original English form.
 4. The English companion overview is updated when repository positioning, latest release, or key evidence links change.
-5. The app version archive entry points to the public `exner-sicp` release note and source mirror.
+5. The app version archive entry points to the public `exner-rorschach-structural-summary-calculator` release note and source mirror.
 6. The public release note states whether the app UI/UX changed.
 7. AI eval evidence used in public documentation contains metadata only, not raw prompts, raw model answers, API keys, or private assessment payloads.
 8. Public source mirror excludes `.env*`, `.vercel/`, `node_modules/`, runtime logs, local caches, private work notes, API keys, and raw model output.

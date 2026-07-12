@@ -1,6 +1,6 @@
-# exner-sicp
+# Exner Rorschach Structural Summary Calculator
 
-로샤 구조요약 계산 도우미의 공개 전시 및 릴리즈 아카이브입니다.
+Exner 종합체계 기반 로샤 구조요약 계산기의 공개 소스 및 릴리즈 아카이브입니다. 관련 문서에 근거한 AI 도우미는 선택 기능으로 제공합니다.
 
 이 저장소는 배포된 버전의 패치노트와 소스코드를 공개하기 위한 공간입니다. v1은 Google Apps Script 웹앱으로, v2는 Next.js 웹앱으로 정리했습니다.
 

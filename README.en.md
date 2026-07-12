@@ -1,6 +1,6 @@
-# exner-sicp
+# Exner Rorschach Structural Summary Calculator
 
-Public showcase and release archive for the Rorschach Structural Summary calculator.
+Public source and release archive for a Structural Summary calculator for the Exner Comprehensive System, with an optional reference-grounded AI assistant.
 
 This repository publishes curated release notes and source snapshots for the project. Version 1 was built with Google Apps Script, and version 2 is a Next.js web app.
 
