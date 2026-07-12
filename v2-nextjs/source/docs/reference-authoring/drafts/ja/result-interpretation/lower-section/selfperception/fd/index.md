@@ -16,7 +16,7 @@ relatedRoutes:
   - "scoring-input/determinants/FD"
   - "scoring-input/contents/Fd"
   - "result-interpretation/lower-section/core/SumV"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-selfperception-2026-03-10.md"

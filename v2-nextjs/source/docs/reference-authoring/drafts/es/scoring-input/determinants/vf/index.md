@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/determinants/VF"
 locale: "es"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/determinants/VF"
-displayTitle: "[Codificacion/Determinantes] VF"
+displayTitle: "[Codificación/Determinantes] VF"
 aliases:
   - "VF"
   - "vista-forma"
@@ -17,51 +17,51 @@ relatedRoutes:
   - "scoring-input/determinants/Y"
   - "result-interpretation/lower-section/core/SumV"
   - "result-interpretation/lower-section/selfPerception/SumV_self"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/determinants/vf/index.md"
 ---
 
-# Nombre del documento: [Codificacion/Determinantes] VF
+# Nombre del documento: [Codificación/Determinantes] VF
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - VF
 - vista-forma
 - vista-form
 
-## Definicion central
+## Definición central
 
-`VF` se usa cuando la sensacion de profundidad o relieve domina la respuesta y la forma queda en segundo plano.  
-Todavia existe apoyo formal, pero la cualidad dimensional pesa mas que la estructura del percepto.
+`VF` se usa cuando la sensación de profundidad o relieve domina la respuesta y la forma queda en segundo plano.
+Todavía existe apoyo formal, pero la cualidad dimensional pesa más que la estructura del percepto.
 
-## Condiciones de aplicacion
+## Condiciones de aplicación
 
-- La impresion principal es profundidad, distancia o relieve.
+- La impresión principal es profundidad, distancia o relieve.
 - La forma participa de modo secundario.
 - Si la forma termina organizando la respuesta, debe reconsiderarse [`FV`](ref://scoring-input/determinants/FV).
 - Si casi no hay apoyo formal, puede corresponder [`V`](ref://scoring-input/determinants/V).
 
 ## Precauciones y distinciones
 
-- `VF` no debe confundirse con [`TF`](ref://scoring-input/determinants/TF); uno apunta a dimension y el otro a textura.
-- Si la respuesta depende mas de textura tactil, hay que revisar `TF`.
-- Si la respuesta depende mas de sombreado indefinido, hay que revisar [`Y`](ref://scoring-input/determinants/Y).
-- El uso interpretativo de esta familia reaparece despues en [`SumV`](ref://result-interpretation/lower-section/core/SumV).
+- `VF` no debe confundirse con [`TF`](ref://scoring-input/determinants/TF); uno apunta a dimensión y el otro a textura.
+- Si la respuesta depende más de textura táctil, hay que revisar `TF`.
+- Si la respuesta depende más de sombreado indefinido, hay que revisar [`Y`](ref://scoring-input/determinants/Y).
+- El uso interpretativo de esta familia reaparece después en [`SumV`](ref://result-interpretation/lower-section/core/SumV).
 
 ## Referencias cruzadas
 
-- [[Codificacion/Determinantes] Determinants](ref://scoring-input/determinants)
-- [[Codificacion/Determinantes] FV](ref://scoring-input/determinants/FV)
-- [[Codificacion/Determinantes] V](ref://scoring-input/determinants/V)
-- [[Codificacion/Determinantes] F](ref://scoring-input/determinants/F)
-- [[Codificacion/Determinantes] TF](ref://scoring-input/determinants/TF)
-- [[Codificacion/Determinantes] Y](ref://scoring-input/determinants/Y)
-- [[Interpretacion/Core] SumV](ref://result-interpretation/lower-section/core/SumV)
-- [[Interpretacion/Self Perception] SumV](ref://result-interpretation/lower-section/selfPerception/SumV_self)
+- [[Codificación/Determinantes] Determinants](ref://scoring-input/determinants)
+- [[Codificación/Determinantes] FV](ref://scoring-input/determinants/FV)
+- [[Codificación/Determinantes] V](ref://scoring-input/determinants/V)
+- [[Codificación/Determinantes] F](ref://scoring-input/determinants/F)
+- [[Codificación/Determinantes] TF](ref://scoring-input/determinants/TF)
+- [[Codificación/Determinantes] Y](ref://scoring-input/determinants/Y)
+- [[Interpretación/Core] SumV](ref://result-interpretation/lower-section/core/SumV)
+- [[Interpretación/Self Perception] SumV](ref://result-interpretation/lower-section/selfPerception/SumV_self)
 
 ## Nota de fundamento
 
-- La justificacion detallada y la comparacion de fuentes se conservan en la provenance interna.
-- El cuerpo publico evita citar directamente los titulos de las fuentes.
+- La justificación detallada y la comparación de fuentes se conservan en la provenance interna.
+- El cuerpo público evita citar directamente los títulos de las fuentes.

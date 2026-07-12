@@ -3,10 +3,10 @@ canonicalRoute: "result-interpretation/lower-section/mediation/WDA_percent"
 locale: "pt"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/mediation/WDA_percent"
-displayTitle: "[Interpretacao/Mediacao] WDA%"
+displayTitle: "[Interpretação/Mediação] WDA%"
 aliases:
   - "WDA%"
-  - "forma apropriada em areas comuns"
+  - "forma apropriada em áreas comuns"
 relatedRoutes:
   - "result-interpretation/lower-section/mediation"
   - "result-interpretation/lower-section/mediation/XA_percent"
@@ -15,46 +15,46 @@ relatedRoutes:
   - "scoring-input/location/W"
   - "scoring-input/location/D"
   - "scoring-input/fq"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-mediation-opening-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao/Mediacao] WDA%
+# Nome do documento: [Interpretação/Mediação] WDA%
 
 ## Apelidos e busca
 
 - WDA%
-- forma apropriada em areas comuns
+- forma apropriada em áreas comuns
 
-## Definicao central
+## Definição central
 
-`WDA%` indica a proporcao de respostas apropriadas nas areas `W` e `D`.
-Ele e usado para ver quao estavel a mediacao permanece nas partes mais comuns e mais compartilhaveis da mancha.
+`WDA%` indica a proporção de respostas apropriadas nas áreas `W` e `D`.
+Ele é usado para ver quão estável a mediação permanece nas partes mais comuns e mais compartilháveis da mancha.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- Quando `WDA%` e alto, a percepcao tende a ficar mais estavel nas partes mais comuns do material.
-- Quando cai, mesmo areas relativamente simples podem mostrar mais desencontro perceptivo.
+- Quando `WDA%` é alto, a percepção tende a ficar mais estável nas partes mais comuns do material.
+- Quando cai, mesmo áreas relativamente simples podem mostrar mais desencontro perceptivo.
 - Se `WDA%` permanece melhor que `XA%`, a dificuldade pode estar mais concentrada em respostas complexas ou menos estruturadas.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `WDA%` nao representa o protocolo inteiro; ele resume apenas `W` e `D`.
-- Com poucas respostas `W` e `D`, a razao pode ficar instavel.
-- Valor baixo e um sinal importante, mas nao define sozinho gravidade clinica.
+- `WDA%` não representa o protocolo inteiro; ele resume apenas `W` e `D`.
+- Com poucas respostas `W` e `D`, a razão pode ficar instável.
+- Valor baixo é um sinal importante, mas não define sozinho gravidade clínica.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Mediacao] Mediacao](ref://result-interpretation/lower-section/mediation)
-- [[Interpretacao/Mediacao] XA%](ref://result-interpretation/lower-section/mediation/XA_percent)
-- [[Interpretacao/Mediacao] X+%](ref://result-interpretation/lower-section/mediation/X_plus_percent)
-- [[Interpretacao/Mediacao] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
-- [[Codificacao/Localizacao] W](ref://scoring-input/location/W)
-- [[Codificacao/Localizacao] D](ref://scoring-input/location/D)
-- [[Codificacao/FQ] FQ](ref://scoring-input/fq)
+- [[Interpretação/Mediação] Mediação](ref://result-interpretation/lower-section/mediation)
+- [[Interpretação/Mediação] XA%](ref://result-interpretation/lower-section/mediation/XA_percent)
+- [[Interpretação/Mediação] X+%](ref://result-interpretation/lower-section/mediation/X_plus_percent)
+- [[Interpretação/Mediação] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
+- [[Codificação/Localização] W](ref://scoring-input/location/W)
+- [[Codificação/Localização] D](ref://scoring-input/location/D)
+- [[Codificação/FQ] FQ](ref://scoring-input/fq)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

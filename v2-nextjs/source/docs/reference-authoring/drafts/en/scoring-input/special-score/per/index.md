@@ -12,10 +12,10 @@ relatedRoutes:
   - "scoring-input/special-score"
   - "result-interpretation/lower-section/interpersonal/PER"
   - "result-interpretation/lower-section/mediation/Xu_percent"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/scoring-input/special-score/per/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Special Scores] PER

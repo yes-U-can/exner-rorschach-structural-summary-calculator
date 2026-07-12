@@ -3,11 +3,11 @@ canonicalRoute: "result-interpretation/upper-section/dq_v"
 locale: "es"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/upper-section/dq_v"
-displayTitle: "[Interpretacion/Upper Section] DQv"
+displayTitle: "[Interpretación/Upper Section] DQv"
 aliases:
   - "DQv"
   - "vague responses"
-  - "numero de respuestas vagas"
+  - "número de respuestas vagas"
 relatedRoutes:
   - "result-interpretation/upper-section"
   - "result-interpretation/upper-section/dq_plus"
@@ -15,28 +15,28 @@ relatedRoutes:
   - "result-interpretation/upper-section/dq_vplus"
   - "scoring-input/dq/v"
   - "result-interpretation/lower-section/processing/DQ_v_proc"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/upper-section/dq-v/index.md"
 ---
 
-# Nombre del documento: [Interpretacion/Upper Section] DQv
+# Nombre del documento: [Interpretación/Upper Section] DQv
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - DQv
 - vague responses
-- numero de respuestas vagas
+- número de respuestas vagas
 
-## Definicion central
+## Definición central
 
-`DQv` es la frecuencia de respuestas con organizacion vaga o debilmente estructurada.
-Ayuda a estimar cuantas veces el protocolo produce respuestas poco definidas en su nivel de integracion.
+`DQv` es la frecuencia de respuestas con organización vaga o débilmente estructurada.
+Ayuda a estimar cuántas veces el protocolo produce respuestas poco definidas en su nivel de integración.
 
-## Puntos de interpretacion
+## Puntos de interpretación
 
-- Un `DQv` alto puede sugerir organizacion floja, diferenciacion pobre o respuestas poco elaboradas.
+- Un `DQv` alto puede sugerir organización floja, diferenciación pobre o respuestas poco elaboradas.
 - Si se repite a lo largo del protocolo, conviene pensar en inestabilidad del nivel organizativo.
 - Un `DQv` bajo indica que la vaguedad no domina el registro.
 
@@ -46,10 +46,10 @@ Ayuda a estimar cuantas veces el protocolo produce respuestas poco definidas en 
 - Un `DQv` alto en un protocolo muy breve no debe sobreinterpretarse.
 - La lectura mejora cuando se revisan `FQ`, `Lambda` y `DQ_v_proc`.
 
-## Limites de interpretacion aislada
+## Limites de interpretación aislada
 
-- `DQv` no basta para concluir desorganizacion general.
-- Su significado depende de la distribucion total de `DQ` y del resto del protocolo.
+- `DQv` no basta para concluir desorganización general.
+- Su significado depende de la distribución total de `DQ` y del resto del protocolo.
 
 ## Variables para revisar juntas
 
@@ -61,13 +61,13 @@ Ayuda a estimar cuantas veces el protocolo produce respuestas poco definidas en 
 
 ## Referencias cruzadas
 
-- [[Interpretacion/Upper Section] Upper Section](ref://result-interpretation/upper-section)
-- [[Interpretacion/Upper Section] DQ+](ref://result-interpretation/upper-section/dq_plus)
-- [[Interpretacion/Upper Section] DQo](ref://result-interpretation/upper-section/dq_o)
-- [[Interpretacion/Upper Section] DQv/+](ref://result-interpretation/upper-section/dq_vplus)
-- [[Codificacion/Calidad evolutiva] v](ref://scoring-input/dq/v)
-- [[Interpretacion/Processing] DQv](ref://result-interpretation/lower-section/processing/DQ_v_proc)
+- [[Interpretación/Upper Section] Upper Section](ref://result-interpretation/upper-section)
+- [[Interpretación/Upper Section] DQ+](ref://result-interpretation/upper-section/dq_plus)
+- [[Interpretación/Upper Section] DQo](ref://result-interpretation/upper-section/dq_o)
+- [[Interpretación/Upper Section] DQv/+](ref://result-interpretation/upper-section/dq_vplus)
+- [[Codificación/Calidad evolutiva] v](ref://scoring-input/dq/v)
+- [[Interpretación/Processing] DQv](ref://result-interpretation/lower-section/processing/DQ_v_proc)
 
 ## Nota de fundamento
 
-- La fundamentacion detallada y las comparaciones de fuente se conservan en la provenance interna.
+- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

@@ -3,11 +3,11 @@ canonicalRoute: "result-interpretation/special-indices/SCON"
 locale: "pt"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/special-indices/SCON"
-displayTitle: "[Interpretacao/Indices Especiais] Constelacao Suicida"
+displayTitle: "[Interpretação/Índices Especiais] Constelação Suicida"
 aliases:
   - "S-CON"
   - "Suicide Constellation"
-  - "constelacao suicida"
+  - "constelação suicida"
 relatedRoutes:
   - "result-interpretation/special-indices"
   - "result-interpretation/lower-section/core/D"
@@ -17,44 +17,45 @@ relatedRoutes:
   - "result-interpretation/lower-section/selfPerception/SumV_self"
   - "result-interpretation/lower-section/selfPerception/MOR_self"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-special-indices-family-2026-03-11.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
-# Nome do documento: [Interpretacao/Indices Especiais] Constelacao Suicida
+# Nome do documento: [Interpretação/Índices Especiais] Constelação Suicida
 
 ## Apelidos e busca
 
 - S-CON
 - Suicide Constellation
-- constelacao suicida
+- constelação suicida
 
-## Definicao central
+## Definição central
 
-`S-CON` e uma constelacao atuarial que agrupa sinais associados a maior risco de suicidio.
-Ela nao substitui a avaliacao clinica imediata, mas indica quando esse tema precisa receber alta prioridade.
+`S-CON` é uma constelação atuarial que agrupa sinais associados a maior risco de suicídio.
+Ela não substitui a avaliação clínica imediata, mas indica quando esse tema precisa receber alta prioridade.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- Se `S-CON` atinge o limiar, ideacao suicida, plano, impulsividade, desesperanca e fatores protetivos devem ser revistos imediatamente.
-- A constelacao integra sinais de estresse, autocritica, dor emocional e controle reduzido.
+- Se `S-CON` atinge o limiar, avalie imediatamente ideação suicida, intenção, plano, acesso a meios, tentativas prévias, mudanças recentes e fatores protetivos.
+- A constelação integra sinais de estresse, autocrítica, dor emocional e controle reduzido.
 - Seu peso aumenta quando aparece com `D` baixo, `AdjD` baixo, `SumV`, `SumY`, `MOR_self` e `DEPI`.
-- Funciona como alerta de triagem, e nao como conclusao final.
+- Funciona como alerta de triagem, e não como conclusão final.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- Valor alto nao significa, por si so, acao suicida iminente.
-- Valor baixo nao elimina todo risco.
+- Valor alto não significa, por si só, ação suicida iminente.
+- Valor baixo não elimina todo risco.
+- Como o suicídio tem baixa taxa-base, também podem ocorrer falsos positivos; nenhum resultado substitui a avaliação direta do risco.
 - Protocolos curtos ou muito defensivos podem produzir falso negativo.
 
-## Limites da interpretacao isolada
+## Limites da interpretação isolada
 
-- `S-CON` precisa ser conferido com entrevista, historia recente e julgamento clinico direto.
-- O leitor deve voltar as variaveis que compoem a constelacao.
+- `S-CON` precisa ser conferido com entrevista, história recente e julgamento clínico direto.
+- O leitor deve voltar às variáveis que compõem a constelação.
 
-## Variaveis para revisar em conjunto
+## Variáveis para revisar em conjunto
 
 - `D`
 - `AdjD`
@@ -62,17 +63,17 @@ Ela nao substitui a avaliacao clinica imediata, mas indica quando esse tema prec
 - `SumY`
 - `MOR_self`
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Indices Especiais] Indices Especiais](ref://result-interpretation/special-indices)
-- [[Interpretacao/Core] D](ref://result-interpretation/lower-section/core/D)
-- [[Interpretacao/Core] AdjD](ref://result-interpretation/lower-section/core/AdjD)
-- [[Interpretacao/Core] SumV](ref://result-interpretation/lower-section/core/SumV)
-- [[Interpretacao/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
-- [[Interpretacao/Autopercepcao] SumV](ref://result-interpretation/lower-section/selfPerception/SumV_self)
-- [[Interpretacao/Autopercepcao] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
-- [[Interpretacao/Indices Especiais] DEPI](ref://result-interpretation/special-indices/DEPI)
+- [[Interpretação/Índices Especiais] Índices Especiais](ref://result-interpretation/special-indices)
+- [[Interpretação/Core] D](ref://result-interpretation/lower-section/core/D)
+- [[Interpretação/Core] AdjD](ref://result-interpretation/lower-section/core/AdjD)
+- [[Interpretação/Core] SumV](ref://result-interpretation/lower-section/core/SumV)
+- [[Interpretação/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
+- [[Interpretação/Autopercepção] SumV](ref://result-interpretation/lower-section/selfPerception/SumV_self)
+- [[Interpretação/Autopercepção] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
+- [[Interpretação/Índices Especiais] DEPI](ref://result-interpretation/special-indices/DEPI)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
-import { buildSystemPrompt, selectRelevantKnowledge, type KnowledgeItem } from '@/lib/chatKnowledge';
+import { buildSystemPrompt, type KnowledgeItem } from '@/lib/chatKnowledge';
 import { buildCodingAssistSystemPrompt } from '@/lib/chatPrompts';
-import { DEFAULT_INTERPRETATION_GUARDRAIL_PROMPT } from '@/lib/interpretationGuardrails';
+import { buildInterpretationGuardrailPrompt } from '@/lib/interpretationGuardrails';
 import { DEFAULT_PROVIDER_MODEL_IDS } from '@/lib/aiModels';
 import {
   appendAiResponsePolicyPrompt,
@@ -17,13 +17,18 @@ import {
   type AiMultiTurnEvalFixture,
 } from '@/lib/ai/evalMultiTurnFixtures';
 import type { CodingAssistContext } from '@/types';
-import { selectCodingRuleChunks, type CodingRuleChunk } from '@/lib/codingAssistKnowledge';
+import { type CodingRuleChunk } from '@/lib/codingAssistKnowledge';
+import {
+  getHybridCodingRuleChunks,
+  getHybridInterpretationKnowledge,
+} from '@/lib/referenceHybridRetrieval';
 
 const apiKey = process.env.OPENAI_API_KEY;
 const liveEvalModel = process.env.OPENAI_LIVE_EVAL_MODEL ?? DEFAULT_PROVIDER_MODEL_IDS.openai;
 const liveEvalLocale = process.env.OPENAI_LIVE_EVAL_LOCALE;
 const liveEvalWorkflow = process.env.OPENAI_LIVE_EVAL_WORKFLOW as AiWorkflowMode | undefined;
 const liveEvalRetrievalMode = process.env.OPENAI_LIVE_EVAL_RETRIEVAL ?? 'fixture';
+const shouldPrintDebugOutput = process.env.OPENAI_LIVE_EVAL_DEBUG_OUTPUT === '1';
 const liveEvalMaxOutputTokens = Number.parseInt(process.env.OPENAI_LIVE_EVAL_MAX_OUTPUT_TOKENS ?? '', 10);
 const liveEvalIds = new Set(
   (process.env.OPENAI_LIVE_EVAL_IDS ?? '')
@@ -88,50 +93,89 @@ function getCodingFixtureMaterial(fixture: AiMultiTurnEvalFixture): {
   };
 }
 
-function buildCodingAssistSystemMessage(fixture: AiMultiTurnEvalFixture): AiModelMessage {
+type PreparedSystemMessage = {
+  message: AiModelMessage;
+  retrievalMode: 'fixture' | 'lexical' | 'hybrid';
+  vectorHitCount: number;
+};
+
+function getCodingTurnResponseMemo(fixture: AiMultiTurnEvalFixture, turnIndex: number) {
   const material = getCodingFixtureMaterial(fixture);
-  const context: CodingAssistContext = {
-    rowIndex: 0,
-    focusRowIndex: 0,
-    selectedRowIndices: [0],
+  if (turnIndex === 0) return material.responseMemo;
+  return fixture.id.includes('movement')
+    ? 'Two people dancing.'
+    : 'An animal shape; no contour or form-fit detail is recorded.';
+}
+
+function buildCodingAssistContext(
+  fixture: AiMultiTurnEvalFixture,
+  turnIndex: number,
+): CodingAssistContext {
+  const material = getCodingFixtureMaterial(fixture);
+  const focusRowIndex = Math.min(turnIndex, 1);
+  const sheetRows = [0, 1].map((rowIndex) => ({
+    rowIndex,
     card: material.card,
-    responseMemo: material.responseMemo,
+    responseMemo: getCodingTurnResponseMemo(fixture, rowIndex),
     existingCodes: emptyCodes,
-    sheetRows: [
-      {
-        rowIndex: 0,
-        card: material.card,
-        responseMemo: material.responseMemo,
-        existingCodes: emptyCodes,
-      },
-      {
-        rowIndex: 1,
-        card: material.card,
-        responseMemo: 'A second selected row is present, but it still needs its own response evidence.',
-        existingCodes: emptyCodes,
-      },
-    ],
-  };
-  const profile = getAiPromptProfile(fixture.workflowMode);
-  const ruleChunks =
-    liveEvalRetrievalMode === 'runtime'
-      ? selectCodingRuleChunks(context, fixture.locale, 6)
-      : material.ruleChunks;
+  }));
+  const focusRow = sheetRows[focusRowIndex];
 
   return {
-    role: 'system',
-    content: appendAiResponsePolicyPrompt(
-      buildCodingAssistSystemPrompt({
-        lang: fixture.locale,
-        context,
-        ruleChunks,
-      }),
-      profile,
-    ),
+    rowIndex: focusRowIndex,
+    focusRowIndex,
+    selectedRowIndices: [focusRowIndex],
+    card: focusRow.card,
+    responseMemo: focusRow.responseMemo,
+    existingCodes: focusRow.existingCodes,
+    sheetRows,
   };
 }
 
-function buildInterpretationSystemMessage(fixture: AiMultiTurnEvalFixture): AiModelMessage {
+async function buildCodingAssistSystemMessage(
+  fixture: AiMultiTurnEvalFixture,
+  turnIndex: number,
+): Promise<PreparedSystemMessage> {
+  const material = getCodingFixtureMaterial(fixture);
+  const context = buildCodingAssistContext(fixture, turnIndex);
+  const currentUserMessage = fixture.turns[turnIndex]?.userMessage ?? '';
+  const retrievalContext: CodingAssistContext = {
+    ...context,
+    responseMemo: `${context.responseMemo}\n${currentUserMessage}`.trim(),
+  };
+  const profile = getAiPromptProfile(fixture.workflowMode);
+  const retrieval = liveEvalRetrievalMode === 'runtime'
+    ? await getHybridCodingRuleChunks({
+        context: retrievalContext,
+        lang: fixture.locale,
+        provider: 'openai',
+        apiKey: apiKey!,
+        limit: 6,
+      })
+    : null;
+  const ruleChunks = retrieval?.items ?? material.ruleChunks;
+
+  return {
+    message: {
+      role: 'system',
+      content: appendAiResponsePolicyPrompt(
+        buildCodingAssistSystemPrompt({
+          lang: fixture.locale,
+          context,
+          ruleChunks,
+        }),
+        profile,
+      ),
+    },
+    retrievalMode: retrieval?.mode ?? 'fixture',
+    vectorHitCount: retrieval?.vectorHitCount ?? 0,
+  };
+}
+
+async function buildInterpretationSystemMessage(
+  fixture: AiMultiTurnEvalFixture,
+  turnIndex: number,
+): Promise<PreparedSystemMessage> {
   const fixtureKnowledge: KnowledgeItem[] = [
     {
       id: 'chunk:clinical-boundary',
@@ -150,29 +194,39 @@ function buildInterpretationSystemMessage(fixture: AiMultiTurnEvalFixture): AiMo
       canonicalRoute: 'result-interpretation/core/evidence-style',
     },
   ];
-  const query = fixture.turns.map((turn) => turn.userMessage).join('\n');
-  const knowledge =
-    liveEvalRetrievalMode === 'runtime'
-      ? selectRelevantKnowledge(query, undefined, fixture.locale).slice(0, 5)
-      : fixtureKnowledge;
+  const query = fixture.turns
+    .slice(0, turnIndex + 1)
+    .map((turn) => turn.userMessage)
+    .join('\n');
+  const retrieval = liveEvalRetrievalMode === 'runtime'
+    ? await getHybridInterpretationKnowledge({
+        query,
+        lang: fixture.locale,
+        provider: 'openai',
+        apiKey: apiKey!,
+        limit: 5,
+      })
+    : null;
+  const knowledge = retrieval?.items ?? fixtureKnowledge;
   const profile = getAiPromptProfile(fixture.workflowMode);
 
   return {
-    role: 'system',
-    content: appendAiResponsePolicyPrompt(
-      buildSystemPrompt(DEFAULT_INTERPRETATION_GUARDRAIL_PROMPT, knowledge),
-      profile,
-    ),
+    message: {
+      role: 'system',
+      content: appendAiResponsePolicyPrompt(
+        buildSystemPrompt(buildInterpretationGuardrailPrompt(fixture.locale), knowledge),
+        profile,
+      ),
+    },
+    retrievalMode: retrieval?.mode ?? 'fixture',
+    vectorHitCount: retrieval?.vectorHitCount ?? 0,
   };
 }
 
-function buildInitialMessages(fixture: AiMultiTurnEvalFixture): AiModelMessage[] {
-  const builders: Record<AiWorkflowMode, (fixture: AiMultiTurnEvalFixture) => AiModelMessage> = {
-    coding_assist: buildCodingAssistSystemMessage,
-    interpretation: buildInterpretationSystemMessage,
-  };
-
-  return [builders[fixture.workflowMode](fixture)];
+function buildTurnSystemMessage(fixture: AiMultiTurnEvalFixture, turnIndex: number) {
+  return fixture.workflowMode === 'coding_assist'
+    ? buildCodingAssistSystemMessage(fixture, turnIndex)
+    : buildInterpretationSystemMessage(fixture, turnIndex);
 }
 
 async function readStream(stream: ReadableStream<Uint8Array>) {
@@ -223,26 +277,30 @@ describe.runIf(apiKey && liveFixtures.length > 0)('OpenAI live AI multi-turn har
     'completes multi-turn fixture $id without losing harness boundaries',
     async (fixture) => {
       const profile = getAiPromptProfile(fixture.workflowMode);
-      const messages = buildInitialMessages(fixture);
+      const conversation: AiModelMessage[] = [];
+      const retrievalEvidence: PreparedSystemMessage[] = [];
       const outputs: string[] = [];
       let outputChars = 0;
       let usage: OpenAITextStreamUsage = {};
       let status: string = 'completed';
       let incompleteReason: string | null = null;
 
-      for (const turn of fixture.turns) {
-        messages.push({ role: 'user', content: turn.userMessage });
+      for (let turnIndex = 0; turnIndex < fixture.turns.length; turnIndex += 1) {
+        const turn = fixture.turns[turnIndex];
+        const prepared = await buildTurnSystemMessage(fixture, turnIndex);
+        retrievalEvidence.push(prepared);
+        const userMessage: AiModelMessage = { role: 'user', content: turn.userMessage };
         const result = await createOpenAITextStream({
           apiKey: apiKey!,
           model: liveEvalModel,
           maxOutputTokens: getLiveEvalMaxOutputTokens(profile.maxOutputTokens),
-          messages,
+          messages: [prepared.message, ...conversation, userMessage],
         });
         const output = await readStream(result.stream);
         const completion = await result.completion;
 
         outputs.push(output);
-        messages.push({ role: 'assistant', content: output });
+        conversation.push(userMessage, { role: 'assistant', content: output });
         outputChars += output.trim().length;
         usage = addUsage(usage, completion.usage);
 
@@ -254,6 +312,17 @@ describe.runIf(apiKey && liveFixtures.length > 0)('OpenAI live AI multi-turn har
 
       const contract = evaluateAiMultiTurnTranscript(fixture, outputs);
       const issueTypes = [...new Set(contract.issues.map((issue) => issue.type))];
+      const retrievalMode: PreparedSystemMessage['retrievalMode'] = retrievalEvidence.every(
+        (evidence) => evidence.retrievalMode === 'hybrid',
+      )
+        ? 'hybrid'
+        : retrievalEvidence.some((evidence) => evidence.retrievalMode === 'lexical')
+          ? 'lexical'
+          : 'fixture';
+      const vectorHitCount = retrievalEvidence.reduce(
+        (sum, evidence) => sum + evidence.vectorHitCount,
+        0,
+      );
 
       console.info(
         JSON.stringify({
@@ -265,11 +334,28 @@ describe.runIf(apiKey && liveFixtures.length > 0)('OpenAI live AI multi-turn har
           issueTypes,
           usage,
           turnCount: fixture.turns.length,
+          retrievalMode,
+          vectorHitCount,
+          retrievalTurnCount: retrievalEvidence.length,
         }),
       );
+      if (shouldPrintDebugOutput) {
+        console.info(
+          JSON.stringify({
+            debugFixtureId: fixture.id,
+            outputPreviews: outputs.map((output) => output.trim().slice(0, 1600)),
+          }),
+        );
+      }
 
       expect(status).toBe('completed');
       expect(outputChars).toBeGreaterThan(160);
+      if (liveEvalRetrievalMode === 'runtime') {
+        for (const evidence of retrievalEvidence) {
+          expect(evidence.retrievalMode).toBe('hybrid');
+          expect(evidence.vectorHitCount).toBeGreaterThan(0);
+        }
+      }
       expect(contract.passed, contract.issues.map((issue) => issue.message).join('; ')).toBe(true);
     },
     120_000,

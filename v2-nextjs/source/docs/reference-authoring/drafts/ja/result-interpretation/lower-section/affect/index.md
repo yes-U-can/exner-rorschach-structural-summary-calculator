@@ -17,7 +17,7 @@ relatedRoutes:
   - "result-interpretation/lower-section/affect/S_aff"
   - "result-interpretation/lower-section/affect/Blends_R"
   - "result-interpretation/lower-section/affect/CP"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-affect-opening-fccfc-2026-03-10.md"

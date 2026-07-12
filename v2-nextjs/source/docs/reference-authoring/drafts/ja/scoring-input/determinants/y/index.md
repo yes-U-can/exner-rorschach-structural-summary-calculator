@@ -13,10 +13,10 @@ relatedRoutes:
   - "scoring-input/determinants/FY"
   - "scoring-input/determinants/YF"
   - "result-interpretation/lower-section/core/SumY"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/ja/scoring-input/determinants/y/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [コーディング/決定因] Y

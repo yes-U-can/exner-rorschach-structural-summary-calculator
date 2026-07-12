@@ -3,7 +3,7 @@ canonicalRoute: "result-interpretation/lower-section/core/AdjEs"
 locale: "pt"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/core/AdjEs"
-displayTitle: "[Interpretacao/Core] AdjEs"
+displayTitle: "[Interpretação/Core] AdjEs"
 aliases:
   - "AdjEs"
   - "Adjusted es"
@@ -18,13 +18,13 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/SumY"
   - "scoring-input/determinants/m"
   - "scoring-input/determinants/Y"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-core-d-family-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao/Core] AdjEs
+# Nome do documento: [Interpretação/Core] AdjEs
 
 ## Apelidos e busca
 
@@ -32,36 +32,36 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-core-d-family-2026
 - Adjusted es
 - es ajustado
 
-## Definicao central
+## Definição central
 
-`AdjEs` e uma forma corrigida de `es`.
+`AdjEs` é uma forma corrigida de `es`.
 Ele estima quanta sobrecarga permanece depois que parte do peso de `m` e `Y` foi ajustada para fora.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- `AdjEs` alto sugere que a sobrecarga nao e apenas momentanea e pode ser mais sustentada.
-- Se `es` esta alto, mas `AdjEs` cai claramente, parte importante da tensao atual pode estar ligada a estresse situacional.
-- `AdjEs` e mais util porque ajuda a calcular e contextualizar `AdjD`.
-- E uma variavel de correcao, nao um rotulo diagnostico por si so.
+- `AdjEs` alto sugere que a sobrecarga não é apenas momentânea e pode ser mais sustentada.
+- Se `es` está alto, mas `AdjEs` cai claramente, parte importante da tensão atual pode estar ligada a estresse situacional.
+- `AdjEs` é mais útil porque ajuda a calcular e contextualizar `AdjD`.
+- E uma variável de correção, não um rótulo diagnóstico por si só.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `AdjEs` nao substitui `es`; os dois precisam ser comparados.
-- Um valor alto nao especifica sozinho a fonte exata do sofrimento.
-- Ainda e necessario verificar se a sobrecarga esta sendo puxada principalmente por `m`, `Y` ou outros componentes.
+- `AdjEs` não substitui `es`; os dois precisam ser comparados.
+- Um valor alto não específica sozinho a fonte exata do sofrimento.
+- Ainda é necessário verificar se a sobrecarga está sendo puxada principalmente por `m`, `Y` ou outros componentes.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Secao Inferior/Core] Core](ref://result-interpretation/lower-section/core)
-- [[Interpretacao/Core] es](ref://result-interpretation/lower-section/core/es)
-- [[Interpretacao/Core] D](ref://result-interpretation/lower-section/core/D)
-- [[Interpretacao/Core] AdjD](ref://result-interpretation/lower-section/core/AdjD)
-- [[Interpretacao/Core] EA](ref://result-interpretation/lower-section/core/EA)
-- [[Interpretacao/Core] m](ref://result-interpretation/lower-section/core/m)
-- [[Interpretacao/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
-- [[Codificacao/Determinantes] m](ref://scoring-input/determinants/m)
-- [[Codificacao/Determinantes] Y](ref://scoring-input/determinants/Y)
+- [[Interpretação/Seção Inferior/Core] Core](ref://result-interpretation/lower-section/core)
+- [[Interpretação/Core] es](ref://result-interpretation/lower-section/core/es)
+- [[Interpretação/Core] D](ref://result-interpretation/lower-section/core/D)
+- [[Interpretação/Core] AdjD](ref://result-interpretation/lower-section/core/AdjD)
+- [[Interpretação/Core] EA](ref://result-interpretation/lower-section/core/EA)
+- [[Interpretação/Core] m](ref://result-interpretation/lower-section/core/m)
+- [[Interpretação/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
+- [[Codificação/Determinantes] m](ref://scoring-input/determinants/m)
+- [[Codificação/Determinantes] Y](ref://scoring-input/determinants/Y)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

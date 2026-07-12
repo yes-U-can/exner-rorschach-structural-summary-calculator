@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import {
   AI_HARNESS_VERSION,
+  OPENAI_GENERATION_MAX_RETRIES,
+  OPENAI_GENERATION_TIMEOUT_MS,
   appendAiResponsePolicyPrompt,
   applyAiHarnessHeaders,
   buildAiResponsePolicyPrompt,
@@ -17,14 +19,19 @@ describe('AI harness profiles', () => {
 
     expect(interpretation).toMatchObject({
       harnessVersion: AI_HARNESS_VERSION,
-      promptProfileId: 'sicp-default-v1',
-      responsePolicyId: 'interpretation-concise-progressive-v1',
+      promptProfileId: 'sicp-default-v4',
+      responsePolicyId: 'interpretation-concise-progressive-v2',
     });
     expect(codingAssist).toMatchObject({
       harnessVersion: AI_HARNESS_VERSION,
-      promptProfileId: 'sicp-coding-assist-v1',
-      responsePolicyId: 'coding-assist-concise-progressive-v1',
+      promptProfileId: 'sicp-coding-assist-v2',
+      responsePolicyId: 'coding-assist-concise-progressive-v2',
     });
+  });
+
+  it('keeps an explicit provider deadline and bounded retry policy', () => {
+    expect(OPENAI_GENERATION_TIMEOUT_MS).toBe(180000);
+    expect(OPENAI_GENERATION_MAX_RETRIES).toBe(1);
   });
 
   it('keeps workflow output caps below the selected model ceiling', () => {
@@ -43,19 +50,21 @@ describe('AI harness profiles', () => {
     applyAiHarnessHeaders(headers, profile);
 
     expect(headers.get('X-Chat-AI-Harness-Version')).toBe(AI_HARNESS_VERSION);
-    expect(headers.get('X-Chat-Prompt-Profile-Id')).toBe('sicp-default-v1');
-    expect(headers.get('X-Chat-Response-Policy-Id')).toBe('interpretation-concise-progressive-v1');
+    expect(headers.get('X-Chat-Prompt-Profile-Id')).toBe('sicp-default-v4');
+    expect(headers.get('X-Chat-Response-Policy-Id')).toBe('interpretation-concise-progressive-v2');
   });
 
   it('builds mode-specific response policy text for complete progressive answers', () => {
     const interpretationPolicy = buildAiResponsePolicyPrompt(getAiPromptProfile('interpretation'));
     const codingPolicy = buildAiResponsePolicyPrompt(getAiPromptProfile('coding_assist'));
 
-    expect(interpretationPolicy).toContain('Policy id: interpretation-concise-progressive-v1');
+    expect(interpretationPolicy).toContain('Policy id: interpretation-concise-progressive-v2');
     expect(interpretationPolicy).toContain('provisional hypothesis');
+    expect(interpretationPolicy).toContain('Never turn assumed, invented, or hypothetical values');
     expect(interpretationPolicy).toContain('Keep diagnostic, treatment, medication, legal, and forensic conclusions out of scope.');
-    expect(codingPolicy).toContain('Policy id: coding-assist-concise-progressive-v1');
+    expect(codingPolicy).toContain('Policy id: coding-assist-concise-progressive-v2');
     expect(codingPolicy).toContain('Candidate codes require clinician confirmation.');
+    expect(codingPolicy).toContain('When the focus row changes');
     expect(codingPolicy).toContain('Finish every section or bullet group you start.');
   });
 
@@ -118,8 +127,8 @@ describe('OpenAI response summaries', () => {
 
     expect(metadata).toEqual({
       aiHarnessVersion: AI_HARNESS_VERSION,
-      promptProfileId: 'sicp-coding-assist-v1',
-      responsePolicyId: 'coding-assist-concise-progressive-v1',
+      promptProfileId: 'sicp-coding-assist-v2',
+      responsePolicyId: 'coding-assist-concise-progressive-v2',
       provider: 'openai',
       modelId: 'gpt-5.5',
       workflowType: 'coding_assist',

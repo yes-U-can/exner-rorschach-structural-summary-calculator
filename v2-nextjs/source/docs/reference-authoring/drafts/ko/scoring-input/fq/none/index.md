@@ -14,7 +14,7 @@ relatedRoutes:
   - "scoring-input/determinants/T"
   - "scoring-input/determinants/V"
   - "scoring-input/determinants/Y"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/fq/none/index.md"

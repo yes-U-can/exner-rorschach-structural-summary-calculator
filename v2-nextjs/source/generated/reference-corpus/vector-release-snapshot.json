@@ -1,8 +1,19 @@
 {
-  "generatedAt": "2026-03-14T14:05:18.605Z",
+  "generatedAt": "2026-07-12T07:34:17.112Z",
   "providers": [
     "openai"
   ],
+  "corpus": {
+    "generatedAt": "2026-07-12T07:27:46.558Z",
+    "fingerprint": "b536f3170d829d8255b2c69580966327b065c20db39de75caa48a2d2d628a4cb",
+    "chunkCounts": {
+      "ko": 1405,
+      "en": 1283,
+      "ja": 1283,
+      "es": 1406,
+      "pt": 1255
+    }
+  },
   "totals": {
     "localeCount": 5,
     "readyLocalesByProvider": {
@@ -15,53 +26,53 @@
       "provider": "openai",
       "embeddingModel": "text-embedding-3-large",
       "dimensions": 3072,
-      "totalEmbeddings": 6597,
-      "latestRefreshedAt": "2026-03-14T04:40:40.741Z",
+      "totalEmbeddings": 6632,
+      "latestRefreshedAt": "2026-07-11T22:34:07.126Z",
       "locales": {
         "ko": {
           "locale": "ko",
-          "chunkCount": 1398,
-          "embeddedChunkCount": 1398,
+          "chunkCount": 1405,
+          "embeddedChunkCount": 1405,
           "dimensions": 3072,
           "staleEmbeddingCount": 0,
           "ready": true,
-          "latestRefreshedAt": "2026-03-14T04:38:57.285Z"
+          "latestRefreshedAt": "2026-07-11T22:31:01.787Z"
         },
         "en": {
           "locale": "en",
-          "chunkCount": 1276,
-          "embeddedChunkCount": 1276,
+          "chunkCount": 1283,
+          "embeddedChunkCount": 1283,
           "dimensions": 3072,
           "staleEmbeddingCount": 0,
           "ready": true,
-          "latestRefreshedAt": "2026-03-14T04:39:22.968Z"
+          "latestRefreshedAt": "2026-07-11T22:31:46.171Z"
         },
         "ja": {
           "locale": "ja",
-          "chunkCount": 1276,
-          "embeddedChunkCount": 1276,
+          "chunkCount": 1283,
+          "embeddedChunkCount": 1283,
           "dimensions": 3072,
           "staleEmbeddingCount": 0,
           "ready": true,
-          "latestRefreshedAt": "2026-03-14T04:40:00.282Z"
+          "latestRefreshedAt": "2026-07-11T22:32:55.360Z"
         },
         "es": {
           "locale": "es",
-          "chunkCount": 1399,
-          "embeddedChunkCount": 1399,
+          "chunkCount": 1406,
+          "embeddedChunkCount": 1406,
           "dimensions": 3072,
           "staleEmbeddingCount": 0,
           "ready": true,
-          "latestRefreshedAt": "2026-03-14T04:40:22.330Z"
+          "latestRefreshedAt": "2026-07-11T22:33:33.921Z"
         },
         "pt": {
           "locale": "pt",
-          "chunkCount": 1248,
-          "embeddedChunkCount": 1248,
+          "chunkCount": 1255,
+          "embeddedChunkCount": 1255,
           "dimensions": 3072,
           "staleEmbeddingCount": 0,
           "ready": true,
-          "latestRefreshedAt": "2026-03-14T04:40:40.741Z"
+          "latestRefreshedAt": "2026-07-11T22:34:07.126Z"
         }
       }
     }

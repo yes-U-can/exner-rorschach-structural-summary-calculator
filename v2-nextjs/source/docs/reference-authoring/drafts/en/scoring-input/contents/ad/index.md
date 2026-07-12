@@ -14,10 +14,10 @@ relatedRoutes:
   - "scoring-input/contents/(Ad)"
   - "scoring-input/contents/Hd"
   - "scoring-input/contents/An"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/scoring-input/contents/ad/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Content] Ad

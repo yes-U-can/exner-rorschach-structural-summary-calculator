@@ -3,11 +3,11 @@ canonicalRoute: "result-interpretation/lower-section/ideation/_2AB_Art_Ay"
 locale: "es"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/ideation/_2AB_Art_Ay"
-displayTitle: "[Interpretacion/Ideacion] 2AB+Art+Ay"
+displayTitle: "[Interpretación/Ideación] 2AB+Art+Ay"
 aliases:
   - "2AB+Art+Ay"
   - "intellectualizing composite"
-  - "compuesto de intelectualizacion"
+  - "compuesto de intelectualización"
 relatedRoutes:
   - "result-interpretation/lower-section/ideation"
   - "scoring-input/special-score/AB"
@@ -15,41 +15,41 @@ relatedRoutes:
   - "scoring-input/contents/Ay"
   - "result-interpretation/lower-section/ideation/MOR"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/ideation/2ab-art-ay/index.md"
 ---
 
-# Nombre del documento: [Interpretacion/Ideacion] 2AB+Art+Ay
+# Nombre del documento: [Interpretación/Ideación] 2AB+Art+Ay
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - 2AB+Art+Ay
 - intellectualizing composite
-- compuesto de intelectualizacion
+- compuesto de intelectualización
 
-## Definicion central
+## Definición central
 
 `2AB+Art+Ay` combina el doble de `AB` con `Art` y `Ay`.
-Se usa para estimar con que frecuencia el pensamiento se aleja de la experiencia directa y se desplaza hacia formulaciones mas abstractas, artificiales o estilizadas.
+Se usa para estimar con que frecuencia el pensamiento se aleja de la experiencia directa y se desplaza hacia formulaciones más abstractas, artificiales o estilizadas.
 
-## Puntos de interpretacion
+## Puntos de interpretación
 
-- Un valor alto puede sugerir tendencia a tomar distancia de la experiencia inmediata mediante abstraccion, estetizacion o formulacion mas intelectualizada.
-- A veces esta elevacion puede reflejar recurso defensivo, pero en otros protocolos puede ser solo un estilo cognitivo mas conceptual.
-- Su sentido cambia segun la calidad del pensamiento general y el resto de los indicadores de ideacion.
-- Conviene revisar si aparece junto con otras senales de empobrecimiento afectivo o de extraneza ideacional.
+- Un valor alto puede sugerir tendencia a tomar distancia de la experiencia inmediata mediante abstracción, estetización o formulación más intelectualizada.
+- A veces esta elevación puede reflejar recurso defensivo, pero en otros protocolos puede ser solo un estilo cognitivo más conceptual.
+- Su sentido cambia según la calidad del pensamiento general y el resto de los indicadores de ideación.
+- Conviene revisar si aparece junto con otras señales de empobrecimiento afectivo o de extrañeza ideacional.
 
 ## Precauciones y distinciones
 
-- Un valor alto no debe confundirse automaticamente con trastorno del pensamiento.
-- `Art` y `Ay` tambien pueden verse influidos por intereses culturales, estilo expresivo o preferencias simbolicas.
-- `AB` es un special score, mientras que `Art` y `Ay` son contenidos; primero hay que verificar bien de donde sale la elevacion.
+- Un valor alto no debe confundirse automáticamente con trastorno del pensamiento.
+- `Art` y `Ay` también pueden verse influidos por intereses culturales, estilo expresivo o preferencias simbólicas.
+- `AB` es un special score, mientras que `Art` y `Ay` son contenidos; primero hay que verificar bien de donde sale la elevación.
 
-## Limites de interpretacion aislada
+## Limites de interpretación aislada
 
-- `2AB+Art+Ay` muestra direccion de distanciamiento o intelectualizacion, pero no explica por si solo su funcion clinica.
+- `2AB+Art+Ay` muestra dirección de distanciamiento o intelectualización, pero no explica por sí solo su función clínica.
 - Debe leerse con `MOR`, `WSum6`, `DEPI` y el resto de la calidad cognitiva.
 
 ## Variables para revisar juntas
@@ -63,13 +63,13 @@ Se usa para estimar con que frecuencia el pensamiento se aleja de la experiencia
 
 ## Referencias cruzadas
 
-- [[Interpretacion/Lower Section/Ideacion] Ideacion](ref://result-interpretation/lower-section/ideation)
-- [[Codificacion/Special Score] AB](ref://scoring-input/special-score/AB)
-- [[Codificacion/Contenidos] Art](ref://scoring-input/contents/Art)
-- [[Codificacion/Contenidos] Ay](ref://scoring-input/contents/Ay)
-- [[Interpretacion/Ideacion] MOR](ref://result-interpretation/lower-section/ideation/MOR)
-- [[Interpretacion/Special Indices] DEPI](ref://result-interpretation/special-indices/DEPI)
+- [[Interpretación/Lower Section/Ideación] Ideación](ref://result-interpretation/lower-section/ideation)
+- [[Codificación/Special Score] AB](ref://scoring-input/special-score/AB)
+- [[Codificación/Contenidos] Art](ref://scoring-input/contents/Art)
+- [[Codificación/Contenidos] Ay](ref://scoring-input/contents/Ay)
+- [[Interpretación/Ideación] MOR](ref://result-interpretation/lower-section/ideation/MOR)
+- [[Interpretación/Special Indices] DEPI](ref://result-interpretation/special-indices/DEPI)
 
 ## Nota de fundamento
 
-- La fundamentacion detallada y las comparaciones de fuente se conservan en la provenance interna.
+- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

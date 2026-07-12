@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/determinants/FC"
 locale: "es"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/determinants/FC"
-displayTitle: "[Codificacion/Determinantes] FC"
+displayTitle: "[Codificación/Determinantes] FC"
 aliases:
   - "FC"
   - "forma-color"
@@ -15,49 +15,49 @@ relatedRoutes:
   - "scoring-input/determinants/Cn"
   - "result-interpretation/lower-section/affect/FC_CF_C"
   - "result-interpretation/lower-section/affect/PureC"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/determinants/fc/index.md"
 ---
 
-# Nombre del documento: [Codificacion/Determinantes] FC
+# Nombre del documento: [Codificación/Determinantes] FC
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - FC
 - forma-color
 - color secundario a la forma
 
-## Definicion central
+## Definición central
 
-`FC` se usa cuando la respuesta se basa principalmente en la forma y el color cromatico queda en segundo plano.  
-El color esta presente, pero el sujeto organiza la respuesta sobre todo por rasgos formales.
+`FC` se usa cuando la respuesta se basa principalmente en la forma y el color cromático queda en segundo plano.
+El color está presente, pero el sujeto organiza la respuesta sobre todo por rasgos formales.
 
-## Condiciones de aplicacion
+## Condiciones de aplicación
 
-- La forma guia la identificacion principal del objeto.
-- El color cromatico participa en la respuesta, pero con importancia secundaria.
-- Si el color parece mas dominante que la forma, hay que reconsiderar [`CF`](ref://scoring-input/determinants/CF).
+- La forma guía la identificación principal del objeto.
+- El color cromático participa en la respuesta, pero con importancia secundaria.
+- Si el color parece más dominante que la forma, hay que reconsiderar [`CF`](ref://scoring-input/determinants/CF).
 - Si no se usa forma de manera real, puede corresponder [`C`](ref://scoring-input/determinants/C).
 
 ## Precauciones y distinciones
 
-- `FC` no significa simplemente que haya color en la lamina; exige que el color participe en una respuesta dominada por la forma.
-- La diferencia clave con `CF` es cual aspecto lleva el peso principal de la respuesta.
-- Algunas respuestas parecen `CF` a primera vista, pero una aclaracion posterior muestra que la forma domina y entonces corresponden `FC`.
-- El uso interpretativo de esta familia se revisa despues en [`FC:CF+C`](ref://result-interpretation/lower-section/affect/FC_CF_C).
+- `FC` no significa simplemente que haya color en la lámina; exige que el color participe en una respuesta dominada por la forma.
+- La diferencia clave con `CF` es cuál aspecto lleva el peso principal de la respuesta.
+- Algunas respuestas parecen `CF` a primera vista, pero una aclaración posterior muestra que la forma domina y entonces corresponden `FC`.
+- El uso interpretativo de esta familia se revisa después en [`FC:CF+C`](ref://result-interpretation/lower-section/affect/FC_CF_C).
 
 ## Referencias cruzadas
 
-- [[Codificacion/Determinantes] Determinants](ref://scoring-input/determinants)
-- [[Codificacion/Determinantes] CF](ref://scoring-input/determinants/CF)
-- [[Codificacion/Determinantes] C](ref://scoring-input/determinants/C)
-- [[Codificacion/Determinantes] Cn](ref://scoring-input/determinants/Cn)
-- [[Interpretacion/Affect] FC:CF+C](ref://result-interpretation/lower-section/affect/FC_CF_C)
-- [[Interpretacion/Affect] Pure C](ref://result-interpretation/lower-section/affect/PureC)
+- [[Codificación/Determinantes] Determinants](ref://scoring-input/determinants)
+- [[Codificación/Determinantes] CF](ref://scoring-input/determinants/CF)
+- [[Codificación/Determinantes] C](ref://scoring-input/determinants/C)
+- [[Codificación/Determinantes] Cn](ref://scoring-input/determinants/Cn)
+- [[Interpretación/Affect] FC:CF+C](ref://result-interpretation/lower-section/affect/FC_CF_C)
+- [[Interpretación/Affect] Pure C](ref://result-interpretation/lower-section/affect/PureC)
 
 ## Nota de fundamento
 
-- La justificacion detallada y la comparacion de fuentes se conservan en la provenance interna.
-- El cuerpo publico evita citar directamente los titulos de las fuentes.
+- La justificación detallada y la comparación de fuentes se conservan en la provenance interna.
+- El cuerpo público evita citar directamente los títulos de las fuentes.

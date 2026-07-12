@@ -23,10 +23,10 @@ relatedRoutes:
   - "scoring-input/determinants/Cn"
   - "result-interpretation/lower-section/core/EB"
   - "result-interpretation/lower-section/core/EA"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/lower-section/affect/fc-cf-c/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Affect] FC:CF+C

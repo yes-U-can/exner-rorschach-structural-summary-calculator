@@ -3,55 +3,55 @@ canonicalRoute: "scoring-input/dq/o"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/dq/o"
-displayTitle: "[Codificacao/Qualidade Desenvolvimental] o"
+displayTitle: "[Codificação/Qualidade Desenvolvimental] o"
 aliases:
   - "o"
   - "DQo"
-  - "qualidade desenvolvimental ordinaria"
+  - "qualidade desenvolvimental ordinária"
 relatedRoutes:
   - "scoring-input/dq/+"
   - "scoring-input/dq/v/+"
   - "scoring-input/dq/v"
   - "result-interpretation/upper-section/dq_o"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-dq-2026-03-10.md"
 ---
 
-# Nome do documento: [Codificacao/Qualidade Desenvolvimental] o
+# Nome do documento: [Codificação/Qualidade Desenvolvimental] o
 
 ## Apelidos e busca
 
 - o
 - DQo
-- qualidade desenvolvimental ordinaria
+- qualidade desenvolvimental ordinária
 
-## Definicao central
+## Definição central
 
-`DQo` e usado quando a resposta nao alcanca sintese significativa, mas o objeto ainda exige demanda formal especifica.
-Ele representa um nivel ordinario, nao sintetizado, de desenvolvimento estrutural.
+`DQo` é usado quando a resposta não alcança síntese significativa, mas o objeto ainda exige demanda formal específica.
+Ele representa um nível ordinário, não sintetizado, de desenvolvimento estrutural.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
-- A resposta nao forma uma sintese organizada de multiplos objetos significativos.
-- O percepto ainda depende de demanda formal especifica.
-- O objeto e estruturado o suficiente para ser mais do que impressao vaga.
-- A resposta permanece em nivel de objeto unico ou nivel nao sintetizado.
+- A resposta não forma uma síntese organizada de múltiplos objetos significativos.
+- O percepto ainda depende de demanda formal específica.
+- O objeto e estruturado o suficiente para ser mais do que impressão vaga.
+- A resposta permanece em nível de objeto único ou nível não sintetizado.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- Se ha sintese significativa e pelo menos um objeto exige demanda formal especifica, use [`DQ+`](ref://scoring-input/dq/%2B).
-- Se ha sintese sem demanda formal especifica, use [`DQv/+`](ref://scoring-input/dq/v/%2B).
-- Se a resposta continua vaga e nao sintetizada, use [`DQv`](ref://scoring-input/dq/v).
+- Se há síntese significativa e pelo menos um objeto exige demanda formal específica, use [`DQ+`](ref://scoring-input/dq/%2B).
+- Se há síntese sem demanda formal específica, use [`DQv/+`](ref://scoring-input/dq/v/%2B).
+- Se a resposta continua vaga e não sintetizada, use [`DQv`](ref://scoring-input/dq/v).
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao/Qualidade Desenvolvimental] +](ref://scoring-input/dq/%2B)
-- [[Codificacao/Qualidade Desenvolvimental] v/+](ref://scoring-input/dq/v/%2B)
-- [[Codificacao/Qualidade Desenvolvimental] v](ref://scoring-input/dq/v)
-- [[Interpretacao/Upper Section] DQo](ref://result-interpretation/upper-section/dq_o)
+- [[Codificação/Qualidade Desenvolvimental] +](ref://scoring-input/dq/%2B)
+- [[Codificação/Qualidade Desenvolvimental] v/+](ref://scoring-input/dq/v/%2B)
+- [[Codificação/Qualidade Desenvolvimental] v](ref://scoring-input/dq/v)
+- [[Interpretação/Upper Section] DQo](ref://result-interpretation/upper-section/dq_o)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

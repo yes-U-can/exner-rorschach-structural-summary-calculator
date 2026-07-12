@@ -13,7 +13,7 @@ relatedRoutes:
   - "scoring-input/special-score/PSV"
   - "result-interpretation/lower-section/processing/Zd_proc"
   - "result-interpretation/lower-section/processing/W_D_Dd"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/processing/psv/index.md"

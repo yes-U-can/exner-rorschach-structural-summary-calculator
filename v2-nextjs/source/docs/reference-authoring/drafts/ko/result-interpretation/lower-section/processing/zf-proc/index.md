@@ -16,7 +16,7 @@ relatedRoutes:
   - "result-interpretation/lower-section/processing/Zd_proc"
   - "result-interpretation/lower-section/processing/W_D_Dd"
   - "scoring-input/z"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/processing/zf-proc/index.md"

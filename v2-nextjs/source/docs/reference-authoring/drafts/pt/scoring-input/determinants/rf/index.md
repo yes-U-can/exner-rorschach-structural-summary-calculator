@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/determinants/rF"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/determinants/rF"
-displayTitle: "[Codificacao/Determinantes] rF"
+displayTitle: "[Codificação/Determinantes] rF"
 aliases:
   - "rF"
   - "reflexo-forma"
@@ -14,13 +14,13 @@ relatedRoutes:
   - "scoring-input/pair"
   - "scoring-input/determinants/F"
   - "result-interpretation/lower-section/selfPerception/Fr_rF"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-determinants-form-reflection-fd-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificacao/Determinantes] rF
+# Nome do documento: [Codificação/Determinantes] rF
 
 ## Apelidos e busca
 
@@ -28,33 +28,33 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-determinants-form-
 - reflexo-forma
 - reflexo dominante
 
-## Definicao central
+## Definição central
 
-`rF` e codificado quando a impressao de reflexo ou imagem espelhada domina a resposta e a forma fica secundaria.
-A simetria continua sendo necessaria, mas a principal enfase cai no proprio efeito reflexivo.
+`rF` é codificado quando a impressão de reflexo ou imagem espelhada domina a resposta e a forma fica secundária.
+A simetria continua sendo necessária, mas a principal ênfase cai no próprio efeito reflexivo.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
 - A pessoa precisa descrever explicitamente reflexo, espelho ou imagem refletida.
-- A impressao reflexiva precisa organizar primeiro a resposta.
-- A forma ainda esta presente, mas com peso secundario.
+- A impressão reflexiva precisa organizar primeiro a resposta.
+- A forma ainda está presente, mas com peso secundário.
 - Se houver apenas dois objetos equivalentes por causa da simetria, sem linguagem de reflexo, reconsidere [`(2)`](ref://scoring-input/pair).
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `rF` nao e o mesmo que [`Fr`](ref://scoring-input/determinants/Fr); em `rF`, a ideia de reflexo carrega mais peso.
-- `rF` tambem nao e o mesmo que [`(2)`](ref://scoring-input/pair); o par exige identidade simetrica, mas nao necessariamente imagem refletida.
+- `rF` não é o mesmo que [`Fr`](ref://scoring-input/determinants/Fr); em `rF`, a ideia de reflexo carrega mais peso.
+- `rF` também não é o mesmo que [`(2)`](ref://scoring-input/pair); o par exige identidade simétrica, mas não necessariamente imagem refletida.
 - Se a forma concreta do objeto estiver mais clara que a qualidade reflexiva, `Fr` pode caber melhor.
-- Reflexo e codificado dentro dos determinantes e nao se combina com o codigo de par.
+- Reflexo é codificado dentro dos determinantes e não se combina com o código de par.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao/Determinantes] Determinantes](ref://scoring-input/determinants)
-- [[Codificacao/Determinantes] Fr](ref://scoring-input/determinants/Fr)
-- [[Codificacao/Pair] (2)](ref://scoring-input/pair)
-- [[Codificacao/Determinantes] F](ref://scoring-input/determinants/F)
-- [[Interpretacao/Self Perception] Fr+rF](ref://result-interpretation/lower-section/selfPerception/Fr_rF)
+- [[Codificação/Determinantes] Determinantes](ref://scoring-input/determinants)
+- [[Codificação/Determinantes] Fr](ref://scoring-input/determinants/Fr)
+- [[Codificação/Pair] (2)](ref://scoring-input/pair)
+- [[Codificação/Determinantes] F](ref://scoring-input/determinants/F)
+- [[Interpretação/Self Perception] Fr+rF](ref://result-interpretation/lower-section/selfPerception/Fr_rF)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

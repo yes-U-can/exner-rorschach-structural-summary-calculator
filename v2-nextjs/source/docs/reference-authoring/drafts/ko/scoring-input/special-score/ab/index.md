@@ -14,7 +14,7 @@ relatedRoutes:
   - "scoring-input/contents/Art"
   - "scoring-input/contents/Ay"
   - "result-interpretation/lower-section/ideation/_2AB_Art_Ay"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/special-score/ab/index.md"

@@ -15,7 +15,7 @@ relatedRoutes:
   - "scoring-input/card"
   - "scoring-input/gphr/GHR"
   - "result-interpretation/lower-section/mediation/P"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/popular/index.md"

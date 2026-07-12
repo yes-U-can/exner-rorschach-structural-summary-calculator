@@ -3,10 +3,10 @@ canonicalRoute: "scoring-input/determinants/Cn"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/determinants/Cn"
-displayTitle: "[Codificacao/Determinantes] Cn"
+displayTitle: "[Codificação/Determinantes] Cn"
 aliases:
   - "Cn"
-  - "nomeacao de cor"
+  - "nomeação de cor"
   - "cor nomeada"
 relatedRoutes:
   - "scoring-input/determinants"
@@ -14,46 +14,46 @@ relatedRoutes:
   - "scoring-input/determinants/CF"
   - "scoring-input/determinants/C"
   - "result-interpretation/lower-section/affect/FC_CF_C"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-determinants-cn-achromatic-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificacao/Determinantes] Cn
+# Nome do documento: [Codificação/Determinantes] Cn
 
 ## Apelidos e busca
 
 - Cn
-- nomeacao de cor
+- nomeação de cor
 - cor nomeada
 
-## Definicao central
+## Definição central
 
-`Cn` e usado quando a pessoa nomeia uma cor, mas nao usa essa cor como determinante real da resposta.
-Por isso `Cn` nao pertence a familia completa `C / CF / FC` como codigo pleno de cor.
+`Cn` é usado quando a pessoa nomeia uma cor, mas não usa essa cor como determinante real da resposta.
+Por isso `Cn` não pertence a família completa `C / CF / FC` como código pleno de cor.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
 - A pessoa menciona explicitamente uma cor.
-- Essa mencao nao sustenta a construcao principal da resposta.
-- O percepto continuaria o mesmo mesmo sem a referencia de cor.
+- Essa menção não sustenta a construção principal da resposta.
+- O percepto continuaria o mesmo mesmo sem a referência de cor.
 - Se a cor realmente participa da resposta, reconsidere [`FC`](ref://scoring-input/determinants/FC), [`CF`](ref://scoring-input/determinants/CF) ou [`C`](ref://scoring-input/determinants/C).
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `Cn` nao e igual a `C`. Em `C`, a cor e determinante real; em `Cn`, a cor apenas e nomeada.
-- Uma mencao casual de cor nao deve ser inflada para `FC` ou `CF` se a resposta nao depender dela.
-- `Cn` nao deve ser contado interpretativamente como se fosse cor cromatica plena.
+- `Cn` não é igual a `C`. Em `C`, a cor é determinante real; em `Cn`, a cor apenas é nomeada.
+- Uma menção casual de cor não deve ser inflada para `FC` ou `CF` se a resposta não depender dela.
+- `Cn` não deve ser contado interpretativamente como se fosse cor cromática plena.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao/Determinantes] Determinantes](ref://scoring-input/determinants)
-- [[Codificacao/Determinantes] FC](ref://scoring-input/determinants/FC)
-- [[Codificacao/Determinantes] CF](ref://scoring-input/determinants/CF)
-- [[Codificacao/Determinantes] C](ref://scoring-input/determinants/C)
-- [[Interpretacao/Affect] FC:CF+C](ref://result-interpretation/lower-section/affect/FC_CF_C)
+- [[Codificação/Determinantes] Determinantes](ref://scoring-input/determinants)
+- [[Codificação/Determinantes] FC](ref://scoring-input/determinants/FC)
+- [[Codificação/Determinantes] CF](ref://scoring-input/determinants/CF)
+- [[Codificação/Determinantes] C](ref://scoring-input/determinants/C)
+- [[Interpretação/Affect] FC:CF+C](ref://result-interpretation/lower-section/affect/FC_CF_C)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

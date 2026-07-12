@@ -14,7 +14,7 @@ relatedRoutes:
   - "result-interpretation/upper-section/D"
   - "scoring-input/location/Dd"
   - "result-interpretation/lower-section/processing/W_D_Dd"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-upper-section-location-dq-2026-03-10.md"

@@ -3,11 +3,11 @@ canonicalRoute: "scoring-input/card/VIII"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/card/VIII"
-displayTitle: "[Codificacao/Cartoes] VIII"
+displayTitle: "[Codificação/Cartões] VIII"
 aliases:
-  - "Cartao VIII"
-  - "cartao VIII"
-  - "cartao 8"
+  - "Cartão VIII"
+  - "cartão VIII"
+  - "cartão 8"
   - "prancha VIII"
 relatedRoutes:
   - "scoring-input/score"
@@ -17,49 +17,49 @@ relatedRoutes:
   - "scoring-input/determinants/CF"
   - "scoring-input/determinants/C"
   - "scoring-input/z"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-card-vi-x-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificacao/Cartoes] VIII
+# Nome do documento: [Codificação/Cartões] VIII
 
 ## Apelidos e busca
 
-- Cartao VIII
-- cartao VIII
-- cartao 8
+- Cartão VIII
+- cartão VIII
+- cartão 8
 - prancha VIII
 
-## Definicao central
+## Definição central
 
-`Cartao VIII` costuma facilitar respostas animais e pode tornar a participacao da cor mais evidente.
-Esta pagina resume esses focos de codificacao.
+`Cartão VIII` costuma facilitar respostas animais e pode tornar a participação da cor mais evidente.
+Esta página resume esses focos de codificação.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
-- Respostas animais e respostas populares ligadas a zonas relativamente claras sao comuns.
-- Se a cor participar da construcao da resposta, revise `FC`, `CF` ou `C`.
-- Se varias areas forem organizadas numa unica resposta, revise tambem `Z`.
-- Quando a resposta continuar basicamente como conteudo animal, revise `A` antes de complicar a codificacao.
+- Respostas animais e respostas populares ligadas a zonas relativamente claras são comuns.
+- Se a cor participar da construção da resposta, revise `FC`, `CF` ou `C`.
+- Se várias áreas forem organizadas numa única resposta, revise também `Z`.
+- Quando a resposta continuar basicamente como conteúdo animal, revise `A` antes de complicar a codificação.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- A cor visivel na prancha nao basta, por si so, para um determinante cromatico.
-- Nem toda resposta animal nesta prancha e `Popular`.
+- A cor visível na prancha não basta, por si só, para um determinante cromático.
+- Nem toda resposta animal nesta prancha é `Popular`.
 - Se a forma ainda dominar, o peso da cor precisa ser avaliado com cuidado.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao] score](ref://scoring-input/score)
-- [[Codificacao/Conteudos] A](ref://scoring-input/contents/A)
-- [[Codificacao/Popular] Popular](ref://scoring-input/popular)
-- [[Codificacao/Determinantes] FC](ref://scoring-input/determinants/FC)
-- [[Codificacao/Determinantes] CF](ref://scoring-input/determinants/CF)
-- [[Codificacao/Determinantes] C](ref://scoring-input/determinants/C)
-- [[Codificacao/Z] Z](ref://scoring-input/z)
+- [[Codificação] score](ref://scoring-input/score)
+- [[Codificação/Conteúdos] A](ref://scoring-input/contents/A)
+- [[Codificação/Popular] Popular](ref://scoring-input/popular)
+- [[Codificação/Determinantes] FC](ref://scoring-input/determinants/FC)
+- [[Codificação/Determinantes] CF](ref://scoring-input/determinants/CF)
+- [[Codificação/Determinantes] C](ref://scoring-input/determinants/C)
+- [[Codificação/Z] Z](ref://scoring-input/z)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

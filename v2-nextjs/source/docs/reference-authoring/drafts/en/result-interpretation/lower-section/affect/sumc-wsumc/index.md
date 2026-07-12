@@ -20,10 +20,10 @@ relatedRoutes:
   - "scoring-input/determinants/CF"
   - "scoring-input/determinants/C"
   - "scoring-input/determinants/Cn"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/lower-section/affect/sumc-wsumc/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Affect] SumC / WSumC

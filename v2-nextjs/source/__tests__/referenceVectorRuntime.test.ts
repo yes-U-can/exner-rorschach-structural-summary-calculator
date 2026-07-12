@@ -5,6 +5,7 @@ import {
   getReferenceVectorProviderOverview,
   getReferenceVectorProviderOverviews,
   getReferenceVectorReleaseSnapshot,
+  isReferenceVectorSnapshotCurrent,
   isReferenceVectorRuntimeReady,
 } from '@/lib/referenceVectorRuntime';
 
@@ -13,6 +14,8 @@ describe('referenceVectorRuntime', () => {
     const snapshot = getReferenceVectorReleaseSnapshot();
 
     expect(snapshot.providers).toEqual(['openai']);
+    expect(snapshot.corpus?.fingerprint).toMatch(/^[a-f0-9]{64}$/);
+    expect(isReferenceVectorSnapshotCurrent()).toBe(true);
   });
 
   it('reports not-ready runtime while embeddings are still missing', () => {
@@ -21,6 +24,7 @@ describe('referenceVectorRuntime', () => {
     expect(overview.readyOpenAiLocales).toBeGreaterThanOrEqual(0);
     expect(overview.readyOpenAiLocales).toBeLessThanOrEqual(overview.localeCount);
     expect(overview.allProvidersReady).toBe(overview.readyOpenAiLocales === overview.localeCount);
+    expect(overview.snapshotCurrent).toBe(isReferenceVectorSnapshotCurrent());
   });
 
   it('returns locale snapshots for OpenAI', () => {
@@ -28,7 +32,9 @@ describe('referenceVectorRuntime', () => {
 
     expect(openAiKo).not.toBeNull();
     expect(openAiKo?.locale).toBe('ko');
-    expect(isReferenceVectorRuntimeReady('openai', 'ko')).toBe(openAiKo?.ready === true);
+    expect(isReferenceVectorRuntimeReady('openai', 'ko')).toBe(
+      isReferenceVectorSnapshotCurrent() && openAiKo?.ready === true,
+    );
   });
 
   it('summarizes provider readiness and pending locales', () => {

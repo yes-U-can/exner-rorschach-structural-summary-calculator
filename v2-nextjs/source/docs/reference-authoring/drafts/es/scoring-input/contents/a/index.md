@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/contents/A"
 locale: "es"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/contents/A"
-displayTitle: "[Codificacion/Contenido] A"
+displayTitle: "[Codificación/Contenido] A"
 aliases:
   - "A"
   - "animal completo"
@@ -14,48 +14,48 @@ relatedRoutes:
   - "scoring-input/contents/Ad"
   - "scoring-input/contents/(Ad)"
   - "scoring-input/popular"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/contents/a/index.md"
 ---
 
-# Nombre del documento: [Codificacion/Contenido] A
+# Nombre del documento: [Codificación/Contenido] A
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - A
 - animal completo
 - whole animal
 
-## Definicion central
+## Definición central
 
 `A` se usa cuando el contenido de la respuesta es un animal completo y realista.
-No corresponde a una parte del animal ni a una criatura fantastica.
+No corresponde a una parte del animal ni a una criatura fantástica.
 
-## Condiciones de aplicacion
+## Condiciones de aplicación
 
 - La figura vista debe organizarse como animal entero.
 - El referente tiene que ser un animal reconocible, no imaginario.
-- Ejemplos tipicos son perro, murcielago, mariposa o pajaro completos.
+- Ejemplos típicos son perro, murciélago, mariposa o pájaro completos.
 - Si solo aparece una parte del animal, primero se considera [`Ad`](ref://scoring-input/contents/Ad).
-- Si el animal entero es fantastico, mitologico o inventado, primero se considera [`(A)`](ref://scoring-input/contents/%28A%29).
+- Si el animal entero es fantástico, mitológico o inventado, primero se considera [`(A)`](ref://scoring-input/contents/%28A%29).
 
 ## Precauciones y distinciones
 
 - `A` y [`(A)`](ref://scoring-input/contents/%28A%29) comparten la idea de animal completo, pero difieren en si el referente es real o imaginario.
-- `A` y [`Ad`](ref://scoring-input/contents/Ad) se separan por la totalidad de la figura, no por su tamano.
-- Un contenido `A` no decide por si solo `Popular`, `FQ` ni el determinante.
+- `A` y [`Ad`](ref://scoring-input/contents/Ad) se separan por la totalidad de la figura, no por su tamaño.
+- Un contenido `A` no decide por sí solo `Popular`, `FQ` ni el determinante.
 
 ## Referencias cruzadas
 
-- [[Codificacion/Contenido] Contents](ref://scoring-input/contents)
-- [[Codificacion/Contenido] (A)](ref://scoring-input/contents/%28A%29)
-- [[Codificacion/Contenido] Ad](ref://scoring-input/contents/Ad)
-- [[Codificacion/Contenido] (Ad)](ref://scoring-input/contents/%28Ad%29)
-- [[Codificacion/Respuesta Popular] Popular](ref://scoring-input/popular)
+- [[Codificación/Contenido] Contents](ref://scoring-input/contents)
+- [[Codificación/Contenido] (A)](ref://scoring-input/contents/%28A%29)
+- [[Codificación/Contenido] Ad](ref://scoring-input/contents/Ad)
+- [[Codificación/Contenido] (Ad)](ref://scoring-input/contents/%28Ad%29)
+- [[Codificación/Respuesta Popular] Popular](ref://scoring-input/popular)
 
 ## Nota de fundamento
 
-- La fundamentacion detallada y la comparacion de fuentes se conservan en la provenance interna.
-- El cuerpo publico evita citar directamente los titulos de las fuentes.
+- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
+- El cuerpo público evita citar directamente los títulos de las fuentes.

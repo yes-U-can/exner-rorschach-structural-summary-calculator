@@ -3,10 +3,10 @@ canonicalRoute: "result-interpretation/lower-section/mediation"
 locale: "pt"
 docKind: "interpretation-overview"
 canonicalTitle: "result-interpretation/lower-section/mediation"
-displayTitle: "[Interpretacao/Secao Inferior/Mediacao] Mediacao"
+displayTitle: "[Interpretação/Seção Inferior/Mediação] Mediação"
 aliases:
-  - "mediacao"
-  - "mediacao cognitiva"
+  - "mediação"
+  - "mediação cognitiva"
 relatedRoutes:
   - "result-interpretation/lower-section"
   - "result-interpretation/lower-section/mediation/XA_percent"
@@ -21,53 +21,53 @@ relatedRoutes:
   - "scoring-input/fq"
   - "scoring-input/popular"
   - "scoring-input/location/S"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-mediation-opening-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao/Secao Inferior/Mediacao] Mediacao
+# Nome do documento: [Interpretação/Seção Inferior/Mediação] Mediação
 
 ## Apelidos e busca
 
-- mediacao
-- mediacao cognitiva
+- mediação
+- mediação cognitiva
 
-## Definicao central
+## Definição central
 
-`Mediacao` reune as variaveis usadas para examinar como a pessoa traduz a mancha em uma percepcao compartilhavel.
-Esta secao foca adequacao, estranheza e o grau em que a percepcao se afasta da realidade consensual.
+`Mediação` reúne as variáveis usadas para examinar como a pessoa traduz a mancha em uma percepção compartilhável.
+Esta seção foca adequação, estranheza e o grau em que a percepção se afasta da realidade consensual.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- `XA%`, `WDA%`, `X+%` e `P` ajudam a estimar proximidade com formas mais convencionais de percepcao.
-- `Xu%` mostra percepcoes menos comuns, mas ainda possiveis.
-- `X-%` e `S-%` ajudam a estimar quanto a mediacao se afasta da realidade compartilhada.
-- Esta familia deve ser lida junto com `Processing` e `Ideation`, nao isoladamente.
+- `XA%`, `WDA%`, `X+%` e `P` ajudam a estimar proximidade com formas mais convencionais de percepção.
+- `Xu%` mostra percepções menos comuns, mas ainda possíveis.
+- `X-%` e `S-%` ajudam a estimar quanto a mediação se afasta da realidade compartilhada.
+- Esta família deve ser lida junto com `Processing` e `Ideation`, não isoladamente.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- Uma variavel sozinha nao resume toda a qualidade perceptiva.
-- Se `R` e baixo, varias razoes ficam menos estaveis.
-- `XA%` e `WDA%` se relacionam, mas nao sao identicos: `WDA%` olha apenas areas mais comuns, enquanto `XA%` cobre a faixa aceitavel mais ampla.
+- Uma variável sozinha não resume toda a qualidade perceptiva.
+- Se `R` é baixo, várias razões ficam menos estáveis.
+- `XA%` e `WDA%` se relacionam, mas não são idênticos: `WDA%` olha apenas áreas mais comuns, enquanto `XA%` cobre a faixa aceitável mais ampla.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Secao Inferior] Secao Inferior](ref://result-interpretation/lower-section)
-- [[Interpretacao/Mediacao] XA%](ref://result-interpretation/lower-section/mediation/XA_percent)
-- [[Interpretacao/Mediacao] WDA%](ref://result-interpretation/lower-section/mediation/WDA_percent)
-- [[Interpretacao/Mediacao] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
-- [[Interpretacao/Mediacao] S-%](ref://result-interpretation/lower-section/mediation/S_minus)
-- [[Interpretacao/Mediacao] P](ref://result-interpretation/lower-section/mediation/P)
-- [[Interpretacao/Mediacao] X+%](ref://result-interpretation/lower-section/mediation/X_plus_percent)
-- [[Interpretacao/Mediacao] Xu%](ref://result-interpretation/lower-section/mediation/Xu_percent)
-- [[Interpretacao/Secao Inferior/Processamento] Processamento](ref://result-interpretation/lower-section/processing)
-- [[Interpretacao/Secao Inferior/Ideacao] Ideacao](ref://result-interpretation/lower-section/ideation)
-- [[Codificacao/FQ] FQ](ref://scoring-input/fq)
-- [[Codificacao/Popular] Popular](ref://scoring-input/popular)
-- [[Codificacao/Localizacao] S](ref://scoring-input/location/S)
+- [[Interpretação/Seção Inferior] Seção Inferior](ref://result-interpretation/lower-section)
+- [[Interpretação/Mediação] XA%](ref://result-interpretation/lower-section/mediation/XA_percent)
+- [[Interpretação/Mediação] WDA%](ref://result-interpretation/lower-section/mediation/WDA_percent)
+- [[Interpretação/Mediação] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
+- [[Interpretação/Mediação] S-%](ref://result-interpretation/lower-section/mediation/S_minus)
+- [[Interpretação/Mediação] P](ref://result-interpretation/lower-section/mediation/P)
+- [[Interpretação/Mediação] X+%](ref://result-interpretation/lower-section/mediation/X_plus_percent)
+- [[Interpretação/Mediação] Xu%](ref://result-interpretation/lower-section/mediation/Xu_percent)
+- [[Interpretação/Seção Inferior/Processamento] Processamento](ref://result-interpretation/lower-section/processing)
+- [[Interpretação/Seção Inferior/Ideação] Ideação](ref://result-interpretation/lower-section/ideation)
+- [[Codificação/FQ] FQ](ref://scoring-input/fq)
+- [[Codificação/Popular] Popular](ref://scoring-input/popular)
+- [[Codificação/Localização] S](ref://scoring-input/location/S)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

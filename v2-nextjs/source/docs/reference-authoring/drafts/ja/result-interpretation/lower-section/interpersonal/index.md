@@ -22,7 +22,7 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/SumT"
   - "result-interpretation/lower-section/ideation/a_p"
   - "result-interpretation/lower-section/selfPerception"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-processing-dqv-interpersonal-opening-2026-03-10.md"

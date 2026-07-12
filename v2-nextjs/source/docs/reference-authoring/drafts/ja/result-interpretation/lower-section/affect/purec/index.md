@@ -17,7 +17,7 @@ relatedRoutes:
   - "scoring-input/determinants/CF"
   - "scoring-input/determinants/FC"
   - "result-interpretation/lower-section/core/EB"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-affect-purec-sumc-afr-2026-03-10.md"

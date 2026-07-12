@@ -3,7 +3,7 @@ canonicalRoute: "result-interpretation/lower-section/core/SumT"
 locale: "pt"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/core/SumT"
-displayTitle: "[Interpretacao/Core] SumT"
+displayTitle: "[Interpretação/Core] SumT"
 aliases:
   - "SumT"
   - "soma de textura"
@@ -16,13 +16,13 @@ relatedRoutes:
   - "scoring-input/determinants/T"
   - "scoring-input/determinants/FT"
   - "scoring-input/determinants/TF"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-core-shading-burdens-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao/Core] SumT
+# Nome do documento: [Interpretação/Core] SumT
 
 ## Apelidos e busca
 
@@ -30,34 +30,34 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-core-shading-burde
 - soma de textura
 - total de textura
 
-## Definicao central
+## Definição central
 
-`SumT` e a soma dos determinantes de textura.
-No `core`, ele costuma indicar quanto a necessidade de proximidade, conforto ou contato protetor esta contribuindo para a carga atual.
+`SumT` é a soma dos determinantes de textura.
+No `core`, ele costuma indicar quanto a necessidade de proximidade, conforto ou contato protetor está contribuindo para a carga atual.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- `SumT` alto pode sugerir que a necessidade de proximidade emocional ou apoio esta ativa como parte da carga atual.
+- `SumT` alto pode sugerir que a necessidade de proximidade emocional ou apoio está ativa como parte da carga atual.
 - `SumT` pertence ao lado sombreado de `eb` e pode elevar `es`.
-- No `core`, ele e lido primeiro como variavel de necessidade ou carga; a forma mais relacional dessa necessidade fica melhor explorada no dominio interpessoal.
-- O significado muda conforme o contexto maior de `eb`, `es` e recursos disponiveis.
+- No `core`, ele é lido primeiro como variável de necessidade ou carga; a forma mais relacional dessa necessidade fica melhor explorada no domínio interpessoal.
+- O significado muda conforme o contexto maior de `eb`, `es` e recursos disponíveis.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `SumT` alto nao significa automaticamente calor relacional nem boa capacidade de apego.
-- `SumT = 0` nao prova ausencia total de necessidade de apego ou proximidade.
-- Convem separar a leitura de carga atual no `core` da leitura de estilo relacional no dominio `interpersonal`.
+- `SumT` alto não significa automaticamente calor relacional nem boa capacidade de apego.
+- `SumT = 0` não prova ausência total de necessidade de apego ou proximidade.
+- Convem separar a leitura de carga atual no `core` da leitura de estilo relacional no domínio `interpersonal`.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Secao Inferior/Core] Core](ref://result-interpretation/lower-section/core)
-- [[Interpretacao/Core] eb](ref://result-interpretation/lower-section/core/eb)
-- [[Interpretacao/Core] es](ref://result-interpretation/lower-section/core/es)
-- [[Interpretacao/Interpessoal] SumT](ref://result-interpretation/lower-section/interpersonal/SumT_inter)
-- [[Codificacao/Determinantes] T](ref://scoring-input/determinants/T)
-- [[Codificacao/Determinantes] FT](ref://scoring-input/determinants/FT)
-- [[Codificacao/Determinantes] TF](ref://scoring-input/determinants/TF)
+- [[Interpretação/Seção Inferior/Core] Core](ref://result-interpretation/lower-section/core)
+- [[Interpretação/Core] eb](ref://result-interpretation/lower-section/core/eb)
+- [[Interpretação/Core] es](ref://result-interpretation/lower-section/core/es)
+- [[Interpretação/Interpessoal] SumT](ref://result-interpretation/lower-section/interpersonal/SumT_inter)
+- [[Codificação/Determinantes] T](ref://scoring-input/determinants/T)
+- [[Codificação/Determinantes] FT](ref://scoring-input/determinants/FT)
+- [[Codificação/Determinantes] TF](ref://scoring-input/determinants/TF)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

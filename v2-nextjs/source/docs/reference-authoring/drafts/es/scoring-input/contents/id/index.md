@@ -3,55 +3,55 @@ canonicalRoute: "scoring-input/contents/Id"
 locale: "es"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/contents/Id"
-displayTitle: "[Codificacion/Contenido] Id"
+displayTitle: "[Codificación/Contenido] Id"
 aliases:
   - "Id"
-  - "contenido idiografico"
+  - "contenido idiográfico"
   - "idiographic content"
 relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/Sc"
   - "scoring-input/contents/Art"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/contents/id/index.md"
 ---
 
-# Nombre del documento: [Codificacion/Contenido] Id
+# Nombre del documento: [Codificación/Contenido] Id
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - Id
-- contenido idiografico
+- contenido idiográfico
 - idiographic content
 
-## Definicion central
+## Definición central
 
-`Id` se usa como salida de ultimo recurso cuando el contenido no encaja de manera razonable en las categorias estandar.
-No es un codigo para "contenido raro" en general, sino para contenido verdaderamente idiografico despues de revisar las demas opciones.
+`Id` se usa como salida de último recurso cuando el contenido no encaja de manera razonable en las categorías estándar.
+No es un código para "contenido raro" en general, sino para contenido verdaderamente idiográfico después de revisar las demás opciones.
 
-## Condiciones de aplicacion
+## Condiciones de aplicación
 
-- Solo se considera `Id` despues de comprobar que la respuesta no cabe mejor en otra categoria de contenido.
-- Cuando se usa, conviene conservar por escrito la formulacion concreta del contenido.
-- Si el contenido raro en realidad es cientifico o tecnico, primero se considera [`Sc`](ref://scoring-input/contents/Sc).
-- Si el contenido raro tiene forma de objeto artistico o simbolico, primero se considera [`Art`](ref://scoring-input/contents/Art).
+- Solo se considera `Id` después de comprobar que la respuesta no cabe mejor en otra categoría de contenido.
+- Cuando se usa, conviene conservar por escrito la formulación concreta del contenido.
+- Si el contenido raro en realidad es científico o técnico, primero se considera [`Sc`](ref://scoring-input/contents/Sc).
+- Si el contenido raro tiene forma de objeto artístico o simbólico, primero se considera [`Art`](ref://scoring-input/contents/Art).
 
 ## Precauciones y distinciones
 
-- Un contenido extrano no pasa automaticamente a `Id`.
-- Un tubo de ensayo, una maquina o un aparato siguen yendo antes a [`Sc`](ref://scoring-input/contents/Sc).
-- Un objeto decorativo o simbolico puede requerir [`Art`](ref://scoring-input/contents/Art) en lugar de `Id`.
-- `Id` debe quedar como excepcion controlada, no como categoria comoda para dudas.
+- Un contenido extraño no pasa automáticamente a `Id`.
+- Un tubo de ensayo, una máquina o un aparato siguen yendo antes a [`Sc`](ref://scoring-input/contents/Sc).
+- Un objeto decorativo o simbólico puede requerir [`Art`](ref://scoring-input/contents/Art) en lugar de `Id`.
+- `Id` debe quedar como excepción controlada, no como categoría cómoda para dudas.
 
 ## Referencias cruzadas
 
-- [[Codificacion/Contenido] Contents](ref://scoring-input/contents)
-- [[Codificacion/Contenido] Sc](ref://scoring-input/contents/Sc)
-- [[Codificacion/Contenido] Art](ref://scoring-input/contents/Art)
+- [[Codificación/Contenido] Contents](ref://scoring-input/contents)
+- [[Codificación/Contenido] Sc](ref://scoring-input/contents/Sc)
+- [[Codificación/Contenido] Art](ref://scoring-input/contents/Art)
 
 ## Nota de fundamento
 
-- La fundamentacion detallada y la comparacion de fuentes se conservan en la provenance interna.
-- El cuerpo publico evita citar directamente los titulos de las fuentes.
+- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
+- El cuerpo público evita citar directamente los títulos de las fuentes.

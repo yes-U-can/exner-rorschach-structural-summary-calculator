@@ -18,7 +18,7 @@ relatedRoutes:
   - "scoring-input/determinants/M"
   - "scoring-input/gphr"
   - "scoring-input/z"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/card/vii/index.md"

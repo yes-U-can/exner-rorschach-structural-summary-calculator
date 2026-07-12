@@ -3,7 +3,7 @@ canonicalRoute: "result-interpretation/lower-section/processing/DQ_v_proc"
 locale: "es"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/processing/DQ_v_proc"
-displayTitle: "[Interpretacion/Procesamiento] DQv"
+displayTitle: "[Interpretación/Procesamiento] DQv"
 aliases:
   - "DQv"
   - "DQ_v_proc"
@@ -16,40 +16,40 @@ relatedRoutes:
   - "result-interpretation/lower-section/processing/DQ_plus_proc"
   - "scoring-input/dq/v"
   - "scoring-input/dq/v/+"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/processing/dq-v-proc/index.md"
 ---
 
-# Nombre del documento: [Interpretacion/Procesamiento] DQv
+# Nombre del documento: [Interpretación/Procesamiento] DQv
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - DQv
 - Vague Developmental Quality
 - calidad evolutiva vaga
 
-## Definicion central
+## Definición central
 
-`DQv` indica cuanta organizacion vaga, simplificada o poco integrada aparece en el procesamiento.
-En interpretacion funciona como una senal de que la calidad organizativa puede desviarse hacia formas menos elaboradas.
+`DQv` indica cuánta organización vaga, simplificada o poco integrada aparece en el procesamiento.
+En interpretación funciona como una señal de que la calidad organizativa puede desviarse hacia formas menos elaboradas.
 
-## Puntos de interpretacion
+## Puntos de interpretación
 
-- Si `DQv` aumenta, el procesamiento puede volverse mas simple, menos integrado o menos preciso.
-- Cuando `DQv` y `DQv/+` pesan mas que `DQ+`, la calidad del procesamiento tiende a verse mas frágil.
-- El valor gana sentido cuando se compara con `Zd`, `PSV` y la distribucion global de `DQ`.
+- Si `DQv` aumenta, el procesamiento puede volverse más simple, menos integrado o menos preciso.
+- Cuando `DQv` y `DQv/+` pesan más que `DQ+`, la calidad del procesamiento tiende a verse más frágil.
+- El valor gana sentido cuando se compara con `Zd`, `PSV` y la distribución global de `DQ`.
 
 ## Precauciones y distinciones
 
 - `DQv` debe leerse junto con `DQv/+`, no como si fueran lo mismo.
-- Un valor alto no describe por si solo la causa del descenso organizativo.
-- Conviene no confundir esta variable con severidad clinica automatica.
+- Un valor alto no describe por sí solo la causa del descenso organizativo.
+- Conviene no confundir esta variable con severidad clínica automática.
 
-## Limites de interpretacion aislada
+## Limites de interpretación aislada
 
-- `DQv` sugiere un punto de falla del procesamiento, pero no explica por si solo todo el estilo cognitivo.
+- `DQv` sugiere un punto de falla del procesamiento, pero no explica por sí solo todo el estilo cognitivo.
 - Conviene leerlo junto con `DQ+`, `PSV`, `X-%` y `WSum6`.
 
 ## Variables para revisar juntas
@@ -62,13 +62,13 @@ En interpretacion funciona como una senal de que la calidad organizativa puede d
 
 ## Referencias cruzadas
 
-- [[Interpretacion/Lower Section/Procesamiento] Procesamiento](ref://result-interpretation/lower-section/processing)
-- [[Interpretacion/Upper Section] DQv](ref://result-interpretation/upper-section/dq_v)
-- [[Interpretacion/Upper Section] DQv/+](ref://result-interpretation/upper-section/dq_vplus)
-- [[Interpretacion/Procesamiento] DQ+](ref://result-interpretation/lower-section/processing/DQ_plus_proc)
-- [[Codificacion/DQ] v](ref://scoring-input/dq/v)
-- [[Codificacion/DQ] v/+](ref://scoring-input/dq/v/%2B)
+- [[Interpretación/Lower Section/Procesamiento] Procesamiento](ref://result-interpretation/lower-section/processing)
+- [[Interpretación/Upper Section] DQv](ref://result-interpretation/upper-section/dq_v)
+- [[Interpretación/Upper Section] DQv/+](ref://result-interpretation/upper-section/dq_vplus)
+- [[Interpretación/Procesamiento] DQ+](ref://result-interpretation/lower-section/processing/DQ_plus_proc)
+- [[Codificación/DQ] v](ref://scoring-input/dq/v)
+- [[Codificación/DQ] v/+](ref://scoring-input/dq/v/%2B)
 
 ## Nota de fundamento
 
-- La fundamentacion detallada y las comparaciones de fuente se conservan en la provenance interna.
+- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

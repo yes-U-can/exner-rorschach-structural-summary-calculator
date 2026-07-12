@@ -15,7 +15,7 @@ relatedRoutes:
   - "scoring-input/contents/Ay"
   - "result-interpretation/lower-section/ideation/MOR"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/ideation/2ab-art-ay/index.md"

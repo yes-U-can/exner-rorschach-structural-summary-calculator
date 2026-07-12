@@ -3,56 +3,56 @@ canonicalRoute: "scoring-input/contents/(Ad)"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/contents/(Ad)"
-displayTitle: "[Codificacao/Conteudo] (Ad)"
+displayTitle: "[Codificação/Conteúdo] (Ad)"
 aliases:
   - "(Ad)"
-  - "detalhe animal imaginario"
-  - "parte de animal fantastico"
+  - "detalhe animal imaginário"
+  - "parte de animal fantástico"
 relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/(A)"
   - "scoring-input/contents/Ad"
   - "scoring-input/contents/An"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-animal-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificacao/Conteudo] (Ad)
+# Nome do documento: [Codificação/Conteúdo] (Ad)
 
 ## Apelidos e busca
 
 - (Ad)
-- detalhe animal imaginario
-- parte de animal fantastico
+- detalhe animal imaginário
+- parte de animal fantástico
 
-## Definicao central
+## Definição central
 
-`(Ad)` e usado quando a resposta descreve uma parte de animal, mas o referente e fantastico, mitico ou claramente inventado.
+`(Ad)` é usado quando a resposta descreve uma parte de animal, mas o referente e fantástico, mítico ou claramente inventado.
 Ele combina parcialidade com fantasia.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
-- A resposta precisa referir-se a uma parte ou detalhe, nao a um animal inteiro.
-- O referente precisa ser imaginario, mitico, cartunesco ou inventado.
-- Se o animal fantastico aparecer inteiro, verifique primeiro [`(A)`](ref://scoring-input/contents/%28A%29).
+- A resposta precisa referir-se a uma parte ou detalhe, não a um animal inteiro.
+- O referente precisa ser imaginário, mítico, cartunesco ou inventado.
+- Se o animal fantástico aparecer inteiro, verifique primeiro [`(A)`](ref://scoring-input/contents/%28A%29).
 - Se o detalhe pertencer a um animal realista, verifique primeiro [`Ad`](ref://scoring-input/contents/Ad).
-- Se a enfase principal for anatomica, verifique primeiro [`An`](ref://scoring-input/contents/An).
+- Se a ênfase principal for anatômica, verifique primeiro [`An`](ref://scoring-input/contents/An).
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
 - `(Ad)` e [`Ad`](ref://scoring-input/contents/Ad) se separam por fantasia versus realidade.
 - `(Ad)` e [`(A)`](ref://scoring-input/contents/%28A%29) se separam por detalhe versus inteiro.
-- A simples estranheza da resposta nao basta; o referente precisa soar como animal parcial e imaginario.
+- A simples estranheza da resposta não basta; o referente precisa soar como animal parcial e imaginário.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao/Conteudo] Contents](ref://scoring-input/contents)
-- [[Codificacao/Conteudo] (A)](ref://scoring-input/contents/%28A%29)
-- [[Codificacao/Conteudo] Ad](ref://scoring-input/contents/Ad)
-- [[Codificacao/Conteudo] An](ref://scoring-input/contents/An)
+- [[Codificação/Conteúdo] Contents](ref://scoring-input/contents)
+- [[Codificação/Conteúdo] (A)](ref://scoring-input/contents/%28A%29)
+- [[Codificação/Conteúdo] Ad](ref://scoring-input/contents/Ad)
+- [[Codificação/Conteúdo] An](ref://scoring-input/contents/An)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

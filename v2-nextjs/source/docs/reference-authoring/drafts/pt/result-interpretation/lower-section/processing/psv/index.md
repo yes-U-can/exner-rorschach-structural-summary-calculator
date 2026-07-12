@@ -3,54 +3,54 @@ canonicalRoute: "result-interpretation/lower-section/processing/PSV"
 locale: "pt"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/processing/PSV"
-displayTitle: "[Interpretacao/Processamento] PSV"
+displayTitle: "[Interpretação/Processamento] PSV"
 aliases:
   - "PSV"
-  - "perseveracao"
+  - "perseveração"
   - "processamento PSV"
 relatedRoutes:
   - "result-interpretation/lower-section/processing"
   - "scoring-input/special-score/PSV"
   - "result-interpretation/lower-section/processing/Zd_proc"
   - "result-interpretation/lower-section/processing/W_D_Dd"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-processing-wm-psv-dq-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao/Processamento] PSV
+# Nome do documento: [Interpretação/Processamento] PSV
 
 ## Apelidos e busca
 
 - PSV
-- perseveracao
+- perseveração
 - processamento PSV
 
-## Definicao central
+## Definição central
 
-`PSV` indica tendencia a repetir a mesma abordagem ou permanecer fixado num padrao anterior durante o processamento.
-Na interpretacao, ele funciona como sinal de rigidez, dificuldade de mudanca de foco ou controle atencional ineficiente.
+`PSV` indica tendência a repetir a mesma abordagem ou permanecer fixado num padrão anterior durante o processamento.
+Na interpretação, ele funciona como sinal de rigidez, dificuldade de mudança de foco ou controle atencional ineficiente.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- Quando `PSV` aparece, vale verificar se o protocolo mostra menor flexibilidade para mudar de estrategia.
-- `PSV` combinado com outros sinais de ineficiencia fortalece a leitura de processamento rigido.
-- Em alguns protocolos, mesmo um unico `PSV` merece atencao porque a variavel foi pensada para marcar perseveracao real.
+- Quando `PSV` aparece, vale verificar se o protocolo mostra menor flexibilidade para mudar de estratégia.
+- `PSV` combinado com outros sinais de ineficiência fortalece a leitura de processamento rígido.
+- Em alguns protocolos, mesmo um único `PSV` merece atenção porque a variável foi pensada para marcar perseveração real.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `PSV` nao e o mesmo que consistencia normal ou preferencia estilistica.
-- O valor precisa ser lido com o contexto do protocolo e com a forma exata da perseveracao codificada.
-- Ele nao deve ser superinterpretado sem revisar `Zd`, `DQ` e outros sinais de organizacao.
+- `PSV` não é o mesmo que consistência normal ou preferência estilística.
+- O valor precisa ser lido com o contexto do protocolo e com a forma exata da perseveração codificada.
+- Ele não deve ser superinterpretado sem revisar `Zd`, `DQ` e outros sinais de organização.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Secao Inferior/Processamento] Processamento](ref://result-interpretation/lower-section/processing)
-- [[Codificacao/Pontuacao Especial] PSV](ref://scoring-input/special-score/PSV)
-- [[Interpretacao/Processamento] Zd](ref://result-interpretation/lower-section/processing/Zd_proc)
-- [[Interpretacao/Processamento] W:D:Dd](ref://result-interpretation/lower-section/processing/W_D_Dd)
+- [[Interpretação/Seção Inferior/Processamento] Processamento](ref://result-interpretation/lower-section/processing)
+- [[Codificação/Pontuação Especial] PSV](ref://scoring-input/special-score/PSV)
+- [[Interpretação/Processamento] Zd](ref://result-interpretation/lower-section/processing/Zd_proc)
+- [[Interpretação/Processamento] W:D:Dd](ref://result-interpretation/lower-section/processing/W_D_Dd)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

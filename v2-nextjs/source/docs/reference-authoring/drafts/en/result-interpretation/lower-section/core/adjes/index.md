@@ -18,10 +18,10 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/SumY"
   - "scoring-input/determinants/m"
   - "scoring-input/determinants/Y"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/lower-section/core/adjes/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Core] AdjEs

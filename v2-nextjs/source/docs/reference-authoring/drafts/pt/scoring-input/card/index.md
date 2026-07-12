@@ -3,12 +3,12 @@ canonicalRoute: "scoring-input/card"
 locale: "pt"
 docKind: "coding-overview"
 canonicalTitle: "scoring-input/card"
-displayTitle: "[Codificacao/Cartoes] Cartao"
+displayTitle: "[Codificação/Cartões] Cartão"
 aliases:
-  - "Cartao"
-  - "cartoes"
+  - "Cartão"
+  - "cartões"
   - "pranchas"
-  - "cartoes de manchas"
+  - "cartões de manchas"
 relatedRoutes:
   - "scoring-input/score"
   - "scoring-input/popular"
@@ -22,55 +22,55 @@ relatedRoutes:
   - "scoring-input/card/VIII"
   - "scoring-input/card/IX"
   - "scoring-input/card/X"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-card-vi-x-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificacao/Cartoes] Cartao
+# Nome do documento: [Codificação/Cartões] Cartão
 
 ## Apelidos e busca
 
-- Cartao
-- cartoes
+- Cartão
+- cartões
 - pranchas
-- cartoes de manchas
+- cartões de manchas
 
-## Definicao central
+## Definição central
 
-`Cartao` e a pagina-guia para os cartoes do Sistema Compreensivo.
-Esta familia nao interpreta o significado simbolico global de cada prancha; ela funciona como apoio de codificacao para lembrar em quais cartoes certos padroes de resposta aparecem com mais facilidade.
+`Cartão` é a página-guia para os cartões do Sistema Compreensivo.
+Esta família não interpreta o significado simbólico global de cada prancha; ela funciona como apoio de codificação para lembrar em quais cartões certos padrões de resposta aparecem com mais facilidade.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
-- As paginas de cartao ajudam a revisar respostas comuns, possibilidades de `Popular`, tendencias de localizacao e determinantes que costumam aparecer com mais facilidade em cada prancha.
-- A codificacao sempre depende da resposta real da pessoa, nao do cartao isoladamente.
-- A mesma resposta pode mudar de codigo se a descricao real nao confirmar aquilo que a prancha costuma facilitar.
-- O esqueleto de rotas e compartilhado entre os idiomas, mas o corpo do texto e as referencias cruzadas podem variar por locale.
+- As páginas de cartão ajudam a revisar respostas comuns, possibilidades de `Popular`, tendências de localização e determinantes que costumam aparecer com mais facilidade em cada prancha.
+- A codificação sempre depende da resposta real da pessoa, não do cartão isoladamente.
+- A mesma resposta pode mudar de código se a descrição real não confirmar aquilo que a prancha costuma facilitar.
+- O esqueleto de rotas é compartilhado entre os idiomas, mas o corpo do texto e as referências cruzadas podem variar por locale.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- As paginas de cartao nao sao paginas de interpretacao simbolica das manchas.
-- Elas devem ser lidas como apoio de codificacao, nao como regras automaticas.
-- O numero do cartao pode lembrar letras usadas em outros codigos, entao o contexto precisa ficar explicito.
-- Por exemplo, `Cartao V` nao e o mesmo que o determinante `V`.
+- As páginas de cartão não são páginas de interpretação simbólica das manchas.
+- Elas devem ser lidas como apoio de codificação, não como regras automáticas.
+- O número do cartão pode lembrar letras usadas em outros códigos, então o contexto precisa ficar explícito.
+- Por exemplo, `Cartão V` não é o mesmo que o determinante `V`.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao] score](ref://scoring-input/score)
-- [[Codificacao/Popular] Popular](ref://scoring-input/popular)
-- [[Codificacao/Cartoes] I](ref://scoring-input/card/I)
-- [[Codificacao/Cartoes] II](ref://scoring-input/card/II)
-- [[Codificacao/Cartoes] III](ref://scoring-input/card/III)
-- [[Codificacao/Cartoes] IV](ref://scoring-input/card/IV)
-- [[Codificacao/Cartoes] V](ref://scoring-input/card/V)
-- [[Codificacao/Cartoes] VI](ref://scoring-input/card/VI)
-- [[Codificacao/Cartoes] VII](ref://scoring-input/card/VII)
-- [[Codificacao/Cartoes] VIII](ref://scoring-input/card/VIII)
-- [[Codificacao/Cartoes] IX](ref://scoring-input/card/IX)
-- [[Codificacao/Cartoes] X](ref://scoring-input/card/X)
+- [[Codificação] score](ref://scoring-input/score)
+- [[Codificação/Popular] Popular](ref://scoring-input/popular)
+- [[Codificação/Cartões] I](ref://scoring-input/card/I)
+- [[Codificação/Cartões] II](ref://scoring-input/card/II)
+- [[Codificação/Cartões] III](ref://scoring-input/card/III)
+- [[Codificação/Cartões] IV](ref://scoring-input/card/IV)
+- [[Codificação/Cartões] V](ref://scoring-input/card/V)
+- [[Codificação/Cartões] VI](ref://scoring-input/card/VI)
+- [[Codificação/Cartões] VII](ref://scoring-input/card/VII)
+- [[Codificação/Cartões] VIII](ref://scoring-input/card/VIII)
+- [[Codificação/Cartões] IX](ref://scoring-input/card/IX)
+- [[Codificação/Cartões] X](ref://scoring-input/card/X)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

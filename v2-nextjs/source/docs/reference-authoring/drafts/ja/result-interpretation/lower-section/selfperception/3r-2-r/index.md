@@ -17,7 +17,7 @@ relatedRoutes:
   - "scoring-input/determinants/Fr"
   - "scoring-input/determinants/rF"
   - "result-interpretation/lower-section/core/R"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-selfperception-2026-03-10.md"

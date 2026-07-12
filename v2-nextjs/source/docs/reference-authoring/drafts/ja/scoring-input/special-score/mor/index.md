@@ -18,7 +18,7 @@ relatedRoutes:
   - "scoring-input/special-score/AG"
   - "result-interpretation/lower-section/ideation/MOR"
   - "result-interpretation/lower-section/selfPerception/MOR_self"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-score-cop-ag-mor-2026-03-10.md"

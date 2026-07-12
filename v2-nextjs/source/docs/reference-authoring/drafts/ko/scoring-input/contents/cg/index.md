@@ -12,7 +12,7 @@ relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/Ay"
   - "scoring-input/contents/Art"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/contents/cg/index.md"

@@ -3,7 +3,7 @@ canonicalRoute: "result-interpretation/lower-section/interpersonal/Food"
 locale: "es"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/interpersonal/Food"
-displayTitle: "[Interpretacion/Interpersonal] Food"
+displayTitle: "[Interpretación/Interpersonal] Food"
 aliases:
   - "Food"
   - "food content"
@@ -15,38 +15,38 @@ relatedRoutes:
   - "scoring-input/contents/Fd"
   - "result-interpretation/lower-section/core/SumT"
   - "result-interpretation/special-indices/CDI"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/interpersonal/food/index.md"
 ---
 
-# Nombre del documento: [Interpretacion/Interpersonal] Food
+# Nombre del documento: [Interpretación/Interpersonal] Food
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - Food
 - food content
 - contenido de comida
 
-## Definicion central
+## Definición central
 
-`Food` muestra cuanto aparecen contenidos de comida cuando se leen desde el plano interpersonal.
-En interpretacion se usa como un indicador complementario de necesidad de cuidado, sostén o dependencia en el vinculo.
+`Food` muestra cuánto aparecen contenidos de comida cuando se leen desde el plano interpersonal.
+En interpretación se usa como un indicador complementario de necesidad de cuidado, sostén o dependencia en el vínculo.
 
-## Puntos de interpretacion
+## Puntos de interpretación
 
-- En adultos, la presencia de `Food` suele invitar a revisar necesidades de apoyo o gratificacion relacional.
-- Si aparece junto con `SumT_inter`, la busqueda de cercania puede verse mas marcada.
+- En adultos, la presencia de `Food` suele invitar a revisar necesidades de apoyo o gratificación relacional.
+- Si aparece junto con `SumT_inter`, la búsqueda de cercanía puede verse más marcada.
 - La variable no habla solo de hambre literal; se usa sobre todo como pista simbólica de necesidad de ser alimentado o cuidado.
 
 ## Precauciones y distinciones
 
 - En protocolos infantiles su frecuencia puede tener otro peso que en adultos.
 - `Food = 1` no basta para concluir dependencia intensa.
-- No debe confundirse el contenido `Fd` con una interpretacion automatica de carencia interpersonal.
+- No debe confundirse el contenido `Fd` con una interpretación automática de carencia interpersonal.
 
-## Limites de interpretacion aislada
+## Limites de interpretación aislada
 
 - `Food` es una variable complementaria.
 - Conviene leerla junto con `SumT_inter`, `COP`, `ISO_Index` y `CDI`.
@@ -61,13 +61,13 @@ En interpretacion se usa como un indicador complementario de necesidad de cuidad
 
 ## Referencias cruzadas
 
-- [[Interpretacion/Lower Section/Interpersonal] Interpersonal](ref://result-interpretation/lower-section/interpersonal)
-- [[Interpretacion/Interpersonal] SumT](ref://result-interpretation/lower-section/interpersonal/SumT_inter)
-- [[Interpretacion/Interpersonal] Isolation Index](ref://result-interpretation/lower-section/interpersonal/ISO_Index)
-- [[Codificacion/Contenido] Fd](ref://scoring-input/contents/Fd)
-- [[Interpretacion/Core] SumT](ref://result-interpretation/lower-section/core/SumT)
-- [[Interpretacion/Special Indices] CDI](ref://result-interpretation/special-indices/CDI)
+- [[Interpretación/Lower Section/Interpersonal] Interpersonal](ref://result-interpretation/lower-section/interpersonal)
+- [[Interpretación/Interpersonal] SumT](ref://result-interpretation/lower-section/interpersonal/SumT_inter)
+- [[Interpretación/Interpersonal] Isolation Index](ref://result-interpretation/lower-section/interpersonal/ISO_Index)
+- [[Codificación/Contenido] Fd](ref://scoring-input/contents/Fd)
+- [[Interpretación/Core] SumT](ref://result-interpretation/lower-section/core/SumT)
+- [[Interpretación/Special Indices] CDI](ref://result-interpretation/special-indices/CDI)
 
 ## Nota de fundamento
 
-- La fundamentacion detallada y las comparaciones de fuente se conservan en la provenance interna.
+- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

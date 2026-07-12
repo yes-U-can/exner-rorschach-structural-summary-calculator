@@ -25,6 +25,7 @@ export type ReferenceDocRecord = {
   aliases: string[];
   relatedRoutes: string[];
   authorityPolicy: string;
+  evidenceTier: string | null;
   status: ReferenceDocStatus;
   runtimeReady: boolean;
   provenanceNote: string;
@@ -40,6 +41,7 @@ export type ReferenceChunkRecord = {
   aliases: string[];
   relatedRoutes: string[];
   authorityPolicy: string;
+  evidenceTier: string | null;
   status: ReferenceDocStatus;
   runtimeReady: boolean;
 };
@@ -52,6 +54,7 @@ type RouteDocsArtifact = {
 
 type ChunksArtifact = {
   generatedAt: string;
+  corpusFingerprint: string;
   locales: Language[];
   chunksByLocale: Record<Language, ReferenceChunkRecord[]>;
 };

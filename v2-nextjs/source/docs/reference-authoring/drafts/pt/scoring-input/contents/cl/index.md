@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/contents/Cl"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/contents/Cl"
-displayTitle: "[Codificacao/Conteudo] Cl"
+displayTitle: "[Codificação/Conteúdo] Cl"
 aliases:
   - "Cl"
   - "nuvem"
@@ -12,13 +12,13 @@ relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/Na"
   - "scoring-input/contents/Fi"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-completion-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificacao/Conteudo] Cl
+# Nome do documento: [Codificação/Conteúdo] Cl
 
 ## Apelidos e busca
 
@@ -26,30 +26,30 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-completio
 - nuvem
 - cloud
 
-## Definicao central
+## Definição central
 
-`Cl` e usado quando o conteudo principal e uma nuvem.
-Ele codifica a propria nuvem, nao qualquer forma difusa da cena.
+`Cl` é usado quando o conteúdo principal é uma nuvem.
+Ele codifica a própria nuvem, não qualquer forma difusa da cena.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
-- Use quando a pessoa nomeia nuvem, camada de nuvens ou formacao organizada como nuvem.
-- A nuvem precisa ser o conteudo principal, nao apenas fundo vago.
+- Use quando a pessoa nomeia nuvem, camada de nuvens ou formação organizada como nuvem.
+- A nuvem precisa ser o conteúdo principal, não apenas fundo vago.
 - Se a resposta parecer melhor como neblina, vapor ou ambiente natural amplo, revise primeiro [`Na`](ref://scoring-input/contents/Na).
-- Se a forma for vista como fumaca ou fogo, revise primeiro [`Fi`](ref://scoring-input/contents/Fi).
+- Se a forma for vista como fumaça ou fogo, revise primeiro [`Fi`](ref://scoring-input/contents/Fi).
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `Cl` e [`Na`](ref://scoring-input/contents/Na) separam nuvem de natureza geral ou nevoa.
-- `Cl` e [`Fi`](ref://scoring-input/contents/Fi) podem parecer proximos visualmente, mas `Fi` exige fogo ou fumaca.
-- Nao basta algo parecer difuso; a resposta precisa organiza-lo como nuvem.
+- `Cl` e [`Na`](ref://scoring-input/contents/Na) separam nuvem de natureza geral ou névoa.
+- `Cl` e [`Fi`](ref://scoring-input/contents/Fi) podem parecer próximos visualmente, mas `Fi` exige fogo ou fumaça.
+- Não basta algo parecer difuso; a resposta precisa organizá-lo como nuvem.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao/Conteudo] Contents](ref://scoring-input/contents)
-- [[Codificacao/Conteudo] Na](ref://scoring-input/contents/Na)
-- [[Codificacao/Conteudo] Fi](ref://scoring-input/contents/Fi)
+- [[Codificação/Conteúdo] Contents](ref://scoring-input/contents)
+- [[Codificação/Conteúdo] Na](ref://scoring-input/contents/Na)
+- [[Codificação/Conteúdo] Fi](ref://scoring-input/contents/Fi)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

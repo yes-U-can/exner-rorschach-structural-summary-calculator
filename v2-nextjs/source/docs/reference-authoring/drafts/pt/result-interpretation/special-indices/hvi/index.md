@@ -3,11 +3,11 @@ canonicalRoute: "result-interpretation/special-indices/HVI"
 locale: "pt"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/special-indices/HVI"
-displayTitle: "[Interpretacao/Indices Especiais] Indice de Hipervigilancia"
+displayTitle: "[Interpretação/Índices Especiais] Índice de Hipervigilância"
 aliases:
   - "HVI"
   - "Hypervigilance Index"
-  - "indice de hipervigilancia"
+  - "índice de hipervigilância"
 relatedRoutes:
   - "result-interpretation/special-indices"
   - "result-interpretation/lower-section/interpersonal/SumT_inter"
@@ -16,44 +16,44 @@ relatedRoutes:
   - "result-interpretation/lower-section/affect/S_aff"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-special-indices-family-2026-03-11.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
-# Nome do documento: [Interpretacao/Indices Especiais] Indice de Hipervigilancia
+# Nome do documento: [Interpretação/Índices Especiais] Índice de Hipervigilância
 
 ## Apelidos e busca
 
 - HVI
 - Hypervigilance Index
-- indice de hipervigilancia
+- índice de hipervigilância
 
-## Definicao central
+## Definição central
 
-`HVI` e uma constelacao que procura um estilo de alerta defensivo, distancia e vigilancia exagerada diante do ambiente.
-Quando fica positiva, sugere que a pessoa pode colocar controle e protecao a frente da confianca.
+`HVI` é uma combinação sim/não de variáveis proposta para representar alerta defensivo e distância interpessoal.
+O apoio empírico para interpretá-la como hipervigilância ou desconfiança é fraco e inconsistente; um resultado positivo permanece hipótese de baixa confiança.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- Se `HVI` e positivo, o estilo interpessoal pode ser cauteloso, desconfiado ou muito sintonizado com ameaca.
-- O padrao costuma ser lido mais como disposicao defensiva do que como diagnostico paranoide automatico.
-- A constelacao ganha sentido quando aparece com `SumT_inter`, `Zf`, `Zd`, `S_aff`, `H_ratio` e `HumanCont`.
-- Perigo real ou experiencias recentes de ameaca tambem podem influenciar o padrao.
+- Se `HVI` é positivo, verifique primeiro se perigo real, trauma, reserva cultural ou vigilância observada sustentam a hipótese de forma independente.
+- O padrão costuma ser lido mais como disposição defensiva do que como diagnóstico paranoide automático.
+- A constelação ganha sentido quando aparece com `SumT_inter`, `Zf`, `Zd`, `S_aff`, `H_ratio` e `HumanCont`.
+- Perigo real ou experiências recentes de ameaça também podem influenciar o padrão.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `HVI` e decisao sim/nao; sua ausencia nao exclui vigilancia elevada.
-- Fatores culturais e situacionais podem influenciar reserva, distancia e cautela.
-- A regra primaria `T = 0` e as condicoes secundarias precisam ser lidas em conjunto.
+- A decisão sim/não não confirma vigilância quando positiva, e sua ausência também não exclui vigilância elevada.
+- Fatores culturais e situacionais podem influenciar reserva, distância e cautela.
+- A regra primária `T = 0` e as condições secundárias precisam ser lidas em conjunto.
 
-## Limites da interpretacao isolada
+## Limites da interpretação isolada
 
-- `HVI` mostra um padrao de alerta e defesa, e nao sua causa por si so.
-- Deve ser revisto junto com `S`, `Zf`, `Zd`, `H_ratio` e variaveis interpessoais.
+- `HVI` mostra um padrão de alerta e defesa, e não sua causa por si só.
+- Deve ser revisto junto com `S`, `Zf`, `Zd`, `H_ratio` e variáveis interpessoais.
 
-## Variaveis para revisar em conjunto
+## Variáveis para revisar em conjunto
 
 - `SumT_inter`
 - `Zf_proc`
@@ -61,16 +61,16 @@ Quando fica positiva, sugere que a pessoa pode colocar controle e protecao a fre
 - `S_aff`
 - `H_ratio`
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Indices Especiais] Indices Especiais](ref://result-interpretation/special-indices)
-- [[Interpretacao/Interpessoal] SumT](ref://result-interpretation/lower-section/interpersonal/SumT_inter)
-- [[Interpretacao/Processing] Zf](ref://result-interpretation/lower-section/processing/Zf_proc)
-- [[Interpretacao/Processing] Zd](ref://result-interpretation/lower-section/processing/Zd_proc)
-- [[Interpretacao/Afeto] S](ref://result-interpretation/lower-section/affect/S_aff)
-- [[Interpretacao/Autopercepcao] H Ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
-- [[Interpretacao/Interpessoal] Conteudo Humano](ref://result-interpretation/lower-section/interpersonal/HumanCont)
+- [[Interpretação/Índices Especiais] Índices Especiais](ref://result-interpretation/special-indices)
+- [[Interpretação/Interpessoal] SumT](ref://result-interpretation/lower-section/interpersonal/SumT_inter)
+- [[Interpretação/Processing] Zf](ref://result-interpretation/lower-section/processing/Zf_proc)
+- [[Interpretação/Processing] Zd](ref://result-interpretation/lower-section/processing/Zd_proc)
+- [[Interpretação/Afeto] S](ref://result-interpretation/lower-section/affect/S_aff)
+- [[Interpretação/Autopercepção] H Ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
+- [[Interpretação/Interpessoal] Conteúdo Humano](ref://result-interpretation/lower-section/interpersonal/HumanCont)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

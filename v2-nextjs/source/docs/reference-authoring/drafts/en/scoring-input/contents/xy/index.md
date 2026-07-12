@@ -12,10 +12,10 @@ relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/An"
   - "result-interpretation/lower-section/selfPerception/An_Xy"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/scoring-input/contents/xy/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Content] Xy

@@ -3,11 +3,11 @@ canonicalRoute: "result-interpretation/lower-section/affect/FC_CF_C"
 locale: "pt"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/affect/FC_CF_C"
-displayTitle: "[Interpretacao/Afeto] FC:CF+C"
+displayTitle: "[Interpretação/Afeto] FC:CF+C"
 aliases:
   - "FC:CF+C"
-  - "razao FC:CF+C"
-  - "razao forma-cor"
+  - "razão FC:CF+C"
+  - "razão forma-cor"
 relatedRoutes:
   - "result-interpretation/lower-section/affect"
   - "result-interpretation/lower-section/affect/PureC"
@@ -19,52 +19,52 @@ relatedRoutes:
   - "scoring-input/determinants/Cn"
   - "result-interpretation/lower-section/core/EB"
   - "result-interpretation/lower-section/core/EA"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-affect-opening-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao/Afeto] FC:CF+C
+# Nome do documento: [Interpretação/Afeto] FC:CF+C
 
 ## Apelidos e busca
 
 - FC:CF+C
-- razao FC:CF+C
-- razao forma-cor
+- razão FC:CF+C
+- razão forma-cor
 
-## Definicao central
+## Definição central
 
-`FC:CF+C` expressa como forma e cor cromatica se combinam nas respostas com cor.
-Na interpretacao, ajuda a estimar se a emocao esta mais formalmente modulada ou mais descarregada de modo direto.
+`FC:CF+C` expressa como forma e cor cromática se combinam nas respostas com cor.
+Na interpretação, ajuda a estimar se a emoção está mais formalmente modulada ou mais descarregada de modo direto.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- Quando `FC` predomina, a expressao afetiva costuma estar mais controlada e mais moldada pela forma.
+- Quando `FC` predomina, a expressão afetiva costuma estar mais controlada e mais moldada pela forma.
 - Quando `CF+C` predomina, o sentimento pode ser expresso de modo mais imediato, direto ou menos modulado.
-- Um padrao mais equilibrado sugere mistura entre controle e expressao direta.
-- Esta razao fala mais sobre estilo de expressao emocional do que sobre quantidade total de emocao.
+- Um padrão mais equilibrado sugere mistura entre controle e expressão direta.
+- Esta razão fala mais sobre estilo de expressão emocional do que sobre quantidade total de emoção.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- Com poucas respostas de cor, a razao fica menos estavel.
-- Lado `CF+C` mais forte nao deve ser tratado, sozinho, como prova de patologia ou acting out impulsivo.
-- `Pure C` pode mostrar descarga afetiva mais direta que nao fica totalmente captada por esta razao.
-- O nome da rota e `FC_CF_C`, mas a leitura interpretativa considera a posicao de `Cn` no contexto afetivo mais amplo.
+- Com poucas respostas de cor, a razão fica menos estável.
+- Lado `CF+C` mais forte não deve ser tratado, sozinho, como prova de patologia ou acting out impulsivo.
+- `Pure C` pode mostrar descarga afetiva mais direta que não fica totalmente captada por esta razão.
+- O nome da rota é `FC_CF_C`, mas a leitura interpretativa considera a posição de `Cn` no contexto afetivo mais amplo.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Secao Inferior/Afeto] Afeto](ref://result-interpretation/lower-section/affect)
-- [[Interpretacao/Afeto] Pure C](ref://result-interpretation/lower-section/affect/PureC)
-- [[Interpretacao/Afeto] SumC / WSumC](ref://result-interpretation/lower-section/affect/SumC_WSumC)
-- [[Interpretacao/Afeto] Afr](ref://result-interpretation/lower-section/affect/Afr)
-- [[Codificacao/Determinantes] FC](ref://scoring-input/determinants/FC)
-- [[Codificacao/Determinantes] CF](ref://scoring-input/determinants/CF)
-- [[Codificacao/Determinantes] C](ref://scoring-input/determinants/C)
-- [[Codificacao/Determinantes] Cn](ref://scoring-input/determinants/Cn)
-- [[Interpretacao/Core] EB](ref://result-interpretation/lower-section/core/EB)
-- [[Interpretacao/Core] EA](ref://result-interpretation/lower-section/core/EA)
+- [[Interpretação/Seção Inferior/Afeto] Afeto](ref://result-interpretation/lower-section/affect)
+- [[Interpretação/Afeto] Pure C](ref://result-interpretation/lower-section/affect/PureC)
+- [[Interpretação/Afeto] SumC / WSumC](ref://result-interpretation/lower-section/affect/SumC_WSumC)
+- [[Interpretação/Afeto] Afr](ref://result-interpretation/lower-section/affect/Afr)
+- [[Codificação/Determinantes] FC](ref://scoring-input/determinants/FC)
+- [[Codificação/Determinantes] CF](ref://scoring-input/determinants/CF)
+- [[Codificação/Determinantes] C](ref://scoring-input/determinants/C)
+- [[Codificação/Determinantes] Cn](ref://scoring-input/determinants/Cn)
+- [[Interpretação/Core] EB](ref://result-interpretation/lower-section/core/EB)
+- [[Interpretação/Core] EA](ref://result-interpretation/lower-section/core/EA)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

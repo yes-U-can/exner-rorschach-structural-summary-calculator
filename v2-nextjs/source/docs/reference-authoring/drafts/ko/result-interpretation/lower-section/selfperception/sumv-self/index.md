@@ -18,7 +18,7 @@ relatedRoutes:
   - "scoring-input/determinants/FV"
   - "scoring-input/determinants/VF"
   - "result-interpretation/lower-section/core/AdjD"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/selfperception/sumv-self/index.md"

@@ -3,7 +3,7 @@ canonicalRoute: "result-interpretation/lower-section/ideation/M_minus"
 locale: "es"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/ideation/M_minus"
-displayTitle: "[Interpretacion/Ideacion] M-"
+displayTitle: "[Interpretación/Ideación] M-"
 aliases:
   - "M-"
   - "minus human movement"
@@ -18,40 +18,40 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/Mnone"
   - "scoring-input/determinants/M"
   - "result-interpretation/special-indices/PTI"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/ideation/m-minus/index.md"
 ---
 
-# Nombre del documento: [Interpretacion/Ideacion] M-
+# Nombre del documento: [Interpretación/Ideación] M-
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - M-
 - minus human movement
 - movimiento humano minus
 
-## Definicion central
+## Definición central
 
 `M-` indica respuestas de movimiento humano en las que la calidad formal es minus.
-En interpretacion, se usa como senal de imaginacion humana mal ajustada, distorsionada o poco anclada en la realidad compartida.
+En interpretación, se usa como señal de imaginación humana mal ajustada, distorsionada o poco anclada en la realidad compartida.
 
-## Puntos de interpretacion
+## Puntos de interpretación
 
 - Si aparece `M-`, las representaciones humanas pueden mostrar pensamiento menos preciso o menos realista.
-- Si se acumula junto con `Lv2` o `WSum6`, aumenta la preocupacion por desorganizacion ideacional.
-- Puede senalar fantasia humana extrana, lectura distorsionada de otras personas o elaboracion mental poco integrada.
+- Si se acumula junto con `Lv2` o `WSum6`, aumenta la preocupación por desorganización ideacional.
+- Puede señalar fantasía humana extraña, lectura distorsionada de otras personas o elaboración mental poco integrada.
 
 ## Precauciones y distinciones
 
-- No toda respuesta `M` poco habitual es `M-`; primero hay que confirmar que la codificacion de `M` y la calidad formal sean correctas.
+- No toda respuesta `M` poco habitual es `M-`; primero hay que confirmar que la codificación de `M` y la calidad formal sean correctas.
 - Un solo `M-` no basta para definir un trastorno del pensamiento.
-- Su peso cambia mucho segun se combine con `Mnone`, `PTI`, mediacion y procesamiento.
+- Su peso cambia mucho según se combine con `Mnone`, `PTI`, mediación y procesamiento.
 
-## Limites de interpretacion aislada
+## Limites de interpretación aislada
 
-- `M-` es una senal clinicamente importante, pero no explica por si solo el origen del problema.
+- `M-` es una señal clínicamente importante, pero no explica por sí solo el origen del problema.
 - Debe integrarse con la cantidad total de `M`, con `a:p`, `Ma:Mp` y con el resto de los indicadores de pensamiento.
 
 ## Variables para revisar juntas
@@ -64,16 +64,16 @@ En interpretacion, se usa como senal de imaginacion humana mal ajustada, distors
 
 ## Referencias cruzadas
 
-- [[Interpretacion/Lower Section/Ideacion] Ideacion](ref://result-interpretation/lower-section/ideation)
-- [[Interpretacion/Ideacion] a:p](ref://result-interpretation/lower-section/ideation/a_p)
-- [[Interpretacion/Ideacion] Ma:Mp](ref://result-interpretation/lower-section/ideation/Ma_Mp)
-- [[Interpretacion/Ideacion] Sum6](ref://result-interpretation/lower-section/ideation/Sum6)
-- [[Interpretacion/Ideacion] Lv2](ref://result-interpretation/lower-section/ideation/Lv2)
-- [[Interpretacion/Ideacion] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
-- [[Interpretacion/Ideacion] Mnone](ref://result-interpretation/lower-section/ideation/Mnone)
-- [[Codificacion/Determinantes] M](ref://scoring-input/determinants/M)
-- [[Interpretacion/Special Indices] PTI](ref://result-interpretation/special-indices/PTI)
+- [[Interpretación/Lower Section/Ideación] Ideación](ref://result-interpretation/lower-section/ideation)
+- [[Interpretación/Ideación] a:p](ref://result-interpretation/lower-section/ideation/a_p)
+- [[Interpretación/Ideación] Ma:Mp](ref://result-interpretation/lower-section/ideation/Ma_Mp)
+- [[Interpretación/Ideación] Sum6](ref://result-interpretation/lower-section/ideation/Sum6)
+- [[Interpretación/Ideación] Lv2](ref://result-interpretation/lower-section/ideation/Lv2)
+- [[Interpretación/Ideación] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
+- [[Interpretación/Ideación] Mnone](ref://result-interpretation/lower-section/ideation/Mnone)
+- [[Codificación/Determinantes] M](ref://scoring-input/determinants/M)
+- [[Interpretación/Special Indices] PTI](ref://result-interpretation/special-indices/PTI)
 
 ## Nota de fundamento
 
-- La fundamentacion detallada y las comparaciones de fuente se conservan en la provenance interna.
+- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

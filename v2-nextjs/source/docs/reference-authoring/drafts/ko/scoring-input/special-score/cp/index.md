@@ -15,7 +15,7 @@ relatedRoutes:
   - "scoring-input/determinants/YF"
   - "scoring-input/determinants/Y"
   - "result-interpretation/lower-section/affect/CP"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/special-score/cp/index.md"

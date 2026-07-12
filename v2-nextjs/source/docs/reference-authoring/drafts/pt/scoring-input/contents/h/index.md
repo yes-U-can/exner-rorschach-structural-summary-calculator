@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/contents/H"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/contents/H"
-displayTitle: "[Codificacao/Conteudo] H"
+displayTitle: "[Codificação/Conteúdo] H"
 aliases:
   - "H"
   - "humano"
@@ -16,13 +16,13 @@ relatedRoutes:
   - "scoring-input/gphr/PHR"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
   - "result-interpretation/lower-section/interpersonal/PureH"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-human-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificacao/Conteudo] H
+# Nome do documento: [Codificação/Conteúdo] H
 
 ## Apelidos e busca
 
@@ -30,34 +30,34 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-human-202
 - humano
 - figura humana inteira
 
-## Definicao central
+## Definição central
 
-`H` e codificado quando o percepto e uma figura humana inteira e realista.
-A resposta aponta para uma pessoa inteira, nao para parte do corpo e nao para figura mitica ou fantastica.
+`H` é codificado quando o percepto é uma figura humana inteira e realista.
+A resposta aponta para uma pessoa inteira, não para parte do corpo e não para figura mítica ou fantástica.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
 - O objeto principal precisa ser uma figura humana inteira.
-- A figura deve ser apresentada como realisticamente humana, nao fantastica nem mitologica.
-- Se so uma parte do corpo for descrita, reconsidere [`Hd`](ref://scoring-input/contents/Hd).
+- A figura deve ser apresentada como realisticamente humana, não fantástica nem mitológica.
+- Se só uma parte do corpo for descrita, reconsidere [`Hd`](ref://scoring-input/contents/Hd).
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `H` nao e o mesmo que [`(H)`](ref://scoring-input/contents/%28H%29); `(H)` fica reservado para figuras humanas inteiras ficcionais ou miticas.
-- `H` nao e o mesmo que [`Hd`](ref://scoring-input/contents/Hd); `Hd` e usado para detalhe humano incompleto.
-- `H` nao e o mesmo que [`Hx`](ref://scoring-input/contents/Hx); `Hx` codifica experiencia humana, nao pessoa.
-- Conteudo humano sozinho nao resolve [`GHR`](ref://scoring-input/gphr/GHR) ou [`PHR`](ref://scoring-input/gphr/PHR).
+- `H` não é o mesmo que [`(H)`](ref://scoring-input/contents/%28H%29); `(H)` fica reservado para figuras humanas inteiras ficcionais ou míticas.
+- `H` não é o mesmo que [`Hd`](ref://scoring-input/contents/Hd); `Hd` é usado para detalhe humano incompleto.
+- `H` não é o mesmo que [`Hx`](ref://scoring-input/contents/Hx); `Hx` codifica experiência humana, não pessoa.
+- Conteúdo humano sozinho não resolve [`GHR`](ref://scoring-input/gphr/GHR) ou [`PHR`](ref://scoring-input/gphr/PHR).
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao/Conteudo] Contents](ref://scoring-input/contents)
-- [[Codificacao/Conteudo] (H)](ref://scoring-input/contents/%28H%29)
-- [[Codificacao/Conteudo] Hd](ref://scoring-input/contents/Hd)
-- [[Codificacao/GHR-PHR] GHR](ref://scoring-input/gphr/GHR)
-- [[Codificacao/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
-- [[Interpretacao/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
-- [[Interpretacao/Interpersonal] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)
+- [[Codificação/Conteúdo] Contents](ref://scoring-input/contents)
+- [[Codificação/Conteúdo] (H)](ref://scoring-input/contents/%28H%29)
+- [[Codificação/Conteúdo] Hd](ref://scoring-input/contents/Hd)
+- [[Codificação/GHR-PHR] GHR](ref://scoring-input/gphr/GHR)
+- [[Codificação/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
+- [[Interpretação/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
+- [[Interpretação/Interpersonal] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

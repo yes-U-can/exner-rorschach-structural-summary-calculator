@@ -3,7 +3,7 @@ canonicalRoute: "result-interpretation/lower-section/processing/DQ_plus_proc"
 locale: "pt"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/processing/DQ_plus_proc"
-displayTitle: "[Interpretacao/Processamento] DQ+"
+displayTitle: "[Interpretação/Processamento] DQ+"
 aliases:
   - "DQ+"
   - "qualidade desenvolvimental plus"
@@ -14,13 +14,13 @@ relatedRoutes:
   - "result-interpretation/lower-section/processing/DQ_v_proc"
   - "scoring-input/dq/+"
   - "scoring-input/dq/v/+"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-processing-wm-psv-dq-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao/Processamento] DQ+
+# Nome do documento: [Interpretação/Processamento] DQ+
 
 ## Apelidos e busca
 
@@ -28,31 +28,31 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-processing-wm-psv-
 - qualidade desenvolvimental plus
 - processamento DQ+
 
-## Definicao central
+## Definição central
 
-`DQ+` indica quanta organizacao integrada e sofisticada aparece no processamento.
-Na interpretacao, ele e usado como sinal de capacidade para estruturar perceptos de modo complexo e articulado.
+`DQ+` indica quanta organização integrada e sofisticada aparece no processamento.
+Na interpretação, ele é usado como sinal de capacidade para estruturar perceptos de modo complexo e articulado.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- Quando `DQ+` esta adequadamente presente, costuma existir melhor capacidade para organizar material complexo de forma integrada.
-- Quando `DQ+` se mantem e `DQv` nao pesa demais, o processamento tende a parecer mais elaborado.
-- O valor ganha sentido quando comparado com `Zd`, `PSV` e a distribuicao geral de qualidade desenvolvimental.
+- Quando `DQ+` está adequadamente presente, costuma existir melhor capacidade para organizar material complexo de forma integrada.
+- Quando `DQ+` se mantém e `DQv` não pesa demais, o processamento tende a parecer mais elaborado.
+- O valor ganha sentido quando comparado com `Zd`, `PSV` e a distribuição geral de qualidade desenvolvimental.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `DQ+` alto nao significa automaticamente excelente adaptacao.
-- Se `DQ+` e alto, mas `DQv` tambem e alto, a organizacao ainda pode ser irregular.
-- `DQ+` nao deve ser confundido com `v/+`; pertencem a mesma familia de codificacao, mas cumprem papeis interpretativos diferentes.
+- `DQ+` alto não significa automaticamente excelente adaptação.
+- Se `DQ+` é alto, mas `DQv` também é alto, a organização ainda pode ser irregular.
+- `DQ+` não deve ser confundido com `v/+`; pertencem a mesma família de codificação, mas cumprem papéis interpretativos diferentes.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Secao Inferior/Processamento] Processamento](ref://result-interpretation/lower-section/processing)
-- [[Interpretacao/Secao Superior] DQ+](ref://result-interpretation/upper-section/dq_plus)
-- [[Interpretacao/Processamento] DQv](ref://result-interpretation/lower-section/processing/DQ_v_proc)
-- [[Codificacao/DQ] +](ref://scoring-input/dq/%2B)
-- [[Codificacao/DQ] v/+](ref://scoring-input/dq/v/%2B)
+- [[Interpretação/Seção Inferior/Processamento] Processamento](ref://result-interpretation/lower-section/processing)
+- [[Interpretação/Seção Superior] DQ+](ref://result-interpretation/upper-section/dq_plus)
+- [[Interpretação/Processamento] DQv](ref://result-interpretation/lower-section/processing/DQ_v_proc)
+- [[Codificação/DQ] +](ref://scoring-input/dq/%2B)
+- [[Codificação/DQ] v/+](ref://scoring-input/dq/v/%2B)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

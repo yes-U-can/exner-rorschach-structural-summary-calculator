@@ -17,7 +17,7 @@ relatedRoutes:
   - "scoring-input/contents/(H)"
   - "scoring-input/determinants/M"
   - "scoring-input/fq"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/card/ix/index.md"

@@ -3,53 +3,53 @@ canonicalRoute: "scoring-input/contents/Ex"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/contents/Ex"
-displayTitle: "[Codificacao/Conteudo] Ex"
+displayTitle: "[Codificação/Conteúdo] Ex"
 aliases:
   - "Ex"
-  - "explosao"
+  - "explosão"
   - "evento"
 relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/Fi"
   - "scoring-input/contents/Sc"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-completion-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificacao/Conteudo] Ex
+# Nome do documento: [Codificação/Conteúdo] Ex
 
 ## Apelidos e busca
 
 - Ex
-- explosao
+- explosão
 - evento
 
-## Definicao central
+## Definição central
 
-`Ex` e usado quando o conteudo e organizado como explosao, impacto, erupcao ou outro evento dinamico.
-O foco recai no acontecimento, nao apenas no objeto parado.
+`Ex` é usado quando o conteúdo é organizado como explosão, impacto, erupção ou outro evento dinâmico.
+O foco recai no acontecimento, não apenas no objeto parado.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
-- Use para explosao, detonacao, colisao, erupcao ou outro evento claramente nomeado.
-- O codigo pede leitura de evento ou ocorrencia, nao apenas fonte de calor ou maquina.
-- Se a resposta apontar para fogo ou fumaca como objeto, revise primeiro [`Fi`](ref://scoring-input/contents/Fi).
-- Se a resposta se organizar como aparelho, arma ou maquina, revise primeiro [`Sc`](ref://scoring-input/contents/Sc).
+- Use para explosão, detonação, colisão, erupção ou outro evento claramente nomeado.
+- O código pede leitura de evento ou ocorrência, não apenas fonte de calor ou máquina.
+- Se a resposta apontar para fogo ou fumaça como objeto, revise primeiro [`Fi`](ref://scoring-input/contents/Fi).
+- Se a resposta se organizar como aparelho, arma ou máquina, revise primeiro [`Sc`](ref://scoring-input/contents/Sc).
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `Ex` nao e sinonimo automatico de fogo.
-- `Ex` e [`Fi`](ref://scoring-input/contents/Fi) separam evento explosivo de fogo/fumaca como conteudo.
-- `Ex` e [`Sc`](ref://scoring-input/contents/Sc) separam acontecimento de dispositivo tecnico.
+- `Ex` não é sinônimo automático de fogo.
+- `Ex` e [`Fi`](ref://scoring-input/contents/Fi) separam evento explosivo de fogo/fumaça como conteúdo.
+- `Ex` e [`Sc`](ref://scoring-input/contents/Sc) separam acontecimento de dispositivo técnico.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao/Conteudo] Contents](ref://scoring-input/contents)
-- [[Codificacao/Conteudo] Fi](ref://scoring-input/contents/Fi)
-- [[Codificacao/Conteudo] Sc](ref://scoring-input/contents/Sc)
+- [[Codificação/Conteúdo] Contents](ref://scoring-input/contents)
+- [[Codificação/Conteúdo] Fi](ref://scoring-input/contents/Fi)
+- [[Codificação/Conteúdo] Sc](ref://scoring-input/contents/Sc)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

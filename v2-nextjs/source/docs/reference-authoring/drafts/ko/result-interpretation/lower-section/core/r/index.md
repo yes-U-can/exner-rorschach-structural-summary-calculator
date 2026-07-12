@@ -14,7 +14,7 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/EA"
   - "result-interpretation/lower-section/core/EB"
   - "scoring-input/score"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/core/r/index.md"

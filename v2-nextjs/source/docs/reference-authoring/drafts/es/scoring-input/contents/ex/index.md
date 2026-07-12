@@ -3,51 +3,51 @@ canonicalRoute: "scoring-input/contents/Ex"
 locale: "es"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/contents/Ex"
-displayTitle: "[Codificacion/Contenido] Ex"
+displayTitle: "[Codificación/Contenido] Ex"
 aliases:
   - "Ex"
-  - "explosion"
+  - "explosión"
   - "estallido"
 relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/Fi"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/contents/ex/index.md"
 ---
 
-# Nombre del documento: [Codificacion/Contenido] Ex
+# Nombre del documento: [Codificación/Contenido] Ex
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - Ex
-- explosion
+- explosión
 - estallido
 
-## Definicion central
+## Definición central
 
-`Ex` se usa cuando el contenido principal es explosion o escena explosiva.
+`Ex` se usa cuando el contenido principal es explosión o escena explosiva.
 Lo central es el evento de estallido, no solo el humo o el brillo.
 
-## Condiciones de aplicacion
+## Condiciones de aplicación
 
-- Se aplica a explosion, estallido, detonacion o escena de estallido claramente nombrada.
-- Puede incluir chispas o restos, siempre que el sujeto mantenga la idea de explosion.
-- Si el foco principal es fuego o humo y no explosion, primero se considera [`Fi`](ref://scoring-input/contents/Fi).
+- Se aplica a explosión, estallido, detonación o escena de estallido claramente nombrada.
+- Puede incluir chispas o restos, siempre que el sujeto mantenga la idea de explosión.
+- Si el foco principal es fuego o humo y no explosión, primero se considera [`Fi`](ref://scoring-input/contents/Fi).
 
 ## Precauciones y distinciones
 
 - `Ex` y [`Fi`](ref://scoring-input/contents/Fi) pueden coexistir visualmente, pero no son equivalentes.
 - `Ex` exige escena explosiva; `Fi` exige fuego o humo como contenido principal.
-- No se usa `Ex` por mera sensacion de energia o movimiento.
+- No se usa `Ex` por mera sensación de energía o movimiento.
 
 ## Referencias cruzadas
 
-- [[Codificacion/Contenido] Contents](ref://scoring-input/contents)
-- [[Codificacion/Contenido] Fi](ref://scoring-input/contents/Fi)
+- [[Codificación/Contenido] Contents](ref://scoring-input/contents)
+- [[Codificación/Contenido] Fi](ref://scoring-input/contents/Fi)
 
 ## Nota de fundamento
 
-- La fundamentacion detallada y la comparacion de fuentes se conservan en la provenance interna.
-- El cuerpo publico evita citar directamente los titulos de las fuentes.
+- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
+- El cuerpo público evita citar directamente los títulos de las fuentes.

@@ -3,11 +3,11 @@ canonicalRoute: "scoring-input/contents/Ls"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/contents/Ls"
-displayTitle: "[Codificacao/Conteudo] Ls"
+displayTitle: "[Codificação/Conteúdo] Ls"
 aliases:
   - "Ls"
   - "paisagem"
-  - "cenario natural"
+  - "cenário natural"
   - "landscape"
 relatedRoutes:
   - "scoring-input/contents"
@@ -15,47 +15,47 @@ relatedRoutes:
   - "scoring-input/contents/Bt"
   - "scoring-input/contents/Ge"
   - "result-interpretation/lower-section/interpersonal/ISO_Index"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-completion-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificacao/Conteudo] Ls
+# Nome do documento: [Codificação/Conteúdo] Ls
 
 ## Apelidos e busca
 
 - Ls
 - paisagem
-- cenario natural
+- cenário natural
 - landscape
 
-## Definicao central
+## Definição central
 
-`Ls` e usado quando a resposta organiza a mancha como paisagem, vista ou cenario natural amplo.
-O foco principal e a configuracao de ambiente, nao apenas um objeto isolado da natureza.
+`Ls` é usado quando a resposta organiza a mancha como paisagem, vista ou cenário natural amplo.
+O foco principal é a configuração de ambiente, não apenas um objeto isolado da natureza.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
 - Use quando a pessoa diz paisagem, montanhas, horizonte, vale, campo ou cena ambiental extensa.
-- O codigo cabe quando varios elementos formam uma cena unificada de ambiente.
-- Se a resposta nomeia apenas vegetacao ou elemento natural isolado, revise primeiro [`Na`](ref://scoring-input/contents/Na) ou [`Bt`](ref://scoring-input/contents/Bt).
-- Se a forma e lida como mapa ou contorno geografico, revise primeiro [`Ge`](ref://scoring-input/contents/Ge).
+- O código cabe quando vários elementos formam uma cena unificada de ambiente.
+- Se a resposta nomeia apenas vegetação ou elemento natural isolado, revise primeiro [`Na`](ref://scoring-input/contents/Na) ou [`Bt`](ref://scoring-input/contents/Bt).
+- Se a forma é lida como mapa ou contorno geográfico, revise primeiro [`Ge`](ref://scoring-input/contents/Ge).
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `Ls` se diferencia de [`Na`](ref://scoring-input/contents/Na) porque exige cena ou paisagem, nao apenas natureza em geral.
-- `Ls` se diferencia de [`Bt`](ref://scoring-input/contents/Bt) porque nao precisa focar em elemento botanico especifico.
-- Em algumas leituras esse conteudo conversa com variaveis de isolamento, como [`Indice de Isolamento`](ref://result-interpretation/lower-section/interpersonal/ISO_Index), mas isso e etapa posterior.
+- `Ls` se diferencia de [`Na`](ref://scoring-input/contents/Na) porque exige cena ou paisagem, não apenas natureza em geral.
+- `Ls` se diferencia de [`Bt`](ref://scoring-input/contents/Bt) porque não precisa focar em elemento botânico específico.
+- Em algumas leituras esse conteúdo conversa com variáveis de isolamento, como [`Índice de Isolamento`](ref://result-interpretation/lower-section/interpersonal/ISO_Index), mas isso e etapa posterior.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao/Conteudo] Contents](ref://scoring-input/contents)
-- [[Codificacao/Conteudo] Na](ref://scoring-input/contents/Na)
-- [[Codificacao/Conteudo] Bt](ref://scoring-input/contents/Bt)
-- [[Codificacao/Conteudo] Ge](ref://scoring-input/contents/Ge)
-- [[Interpretacao/Interpersonal] Indice de Isolamento](ref://result-interpretation/lower-section/interpersonal/ISO_Index)
+- [[Codificação/Conteúdo] Contents](ref://scoring-input/contents)
+- [[Codificação/Conteúdo] Na](ref://scoring-input/contents/Na)
+- [[Codificação/Conteúdo] Bt](ref://scoring-input/contents/Bt)
+- [[Codificação/Conteúdo] Ge](ref://scoring-input/contents/Ge)
+- [[Interpretação/Interpersonal] Índice de Isolamento](ref://result-interpretation/lower-section/interpersonal/ISO_Index)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

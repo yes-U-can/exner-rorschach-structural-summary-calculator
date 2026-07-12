@@ -19,7 +19,7 @@ relatedRoutes:
   - "scoring-input/contents/Ad"
   - "scoring-input/popular"
   - "scoring-input/special-score/MOR"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/card/vi/index.md"

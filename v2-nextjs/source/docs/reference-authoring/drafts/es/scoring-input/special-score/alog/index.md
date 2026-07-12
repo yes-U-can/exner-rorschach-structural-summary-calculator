@@ -3,61 +3,61 @@ canonicalRoute: "scoring-input/special-score/ALOG"
 locale: "es"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/special-score/ALOG"
-displayTitle: "[Codificacion/Puntuaciones especiales] ALOG"
+displayTitle: "[Codificación/Puntuaciones especiales] ALOG"
 aliases:
   - "ALOG"
   - "inappropriate logic"
-  - "logica inapropiada"
-  - "logica impropia"
+  - "lógica inapropiada"
+  - "lógica impropia"
 relatedRoutes:
   - "scoring-input/special-score"
   - "scoring-input/special-score/DV1"
   - "scoring-input/special-score/DR1"
   - "result-interpretation/lower-section/ideation/Sum6"
   - "result-interpretation/lower-section/ideation/WSum6"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/special-score/alog/index.md"
 ---
 
-# Nombre del documento: [Codificacion/Puntuaciones especiales] ALOG
+# Nombre del documento: [Codificación/Puntuaciones especiales] ALOG
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - ALOG
 - inappropriate logic
-- logica inapropiada
-- logica impropia
+- lógica inapropiada
+- lógica impropia
 
-## Definicion central
+## Definición central
 
-`ALOG` se usa cuando la persona apoya su respuesta con una logica impropia o claramente insuficiente.
-El foco esta en una inferencia injustificada, no en una palabra rara ni en una mezcla perceptiva.
+`ALOG` se usa cuando la persona apoya su respuesta con una lógica impropia o claramente insuficiente.
+El foco está en una inferencia injustificada, no en una palabra rara ni en una mezcla perceptiva.
 
-## Condiciones de aplicacion
+## Condiciones de aplicación
 
-- Usa `ALOG` cuando la explicacion o justificacion del response muestra un salto logico inapropiado.
-- La conclusion presentada debe sonar poco valida incluso dentro del propio marco de la respuesta.
-- El problema esta en la logica usada para sostener la idea, no solo en la forma verbal.
-- `ALOG` aporta a `Sum6` y despues puede influir en `WSum6`.
+- Usa `ALOG` cuando la explicación o justificación del response muestra un salto lógico inapropiado.
+- La conclusión presentada debe sonar poco valida incluso dentro del propio marco de la respuesta.
+- El problema está en la lógica usada para sostener la idea, no solo en la forma verbal.
+- `ALOG` aporta a `Sum6` y después puede influir en `WSum6`.
 
 ## Precauciones y distinciones
 
-- No asignas `ALOG` solo por estilo raro, tono dramatizado o respuesta dificil de seguir.
-- Si la rareza principal esta en una palabra o expresion desviada, compara primero con `DV1`.
-- Si la desviacion afecta la organizacion global del response, compara tambien con `DR1`.
-- Las respuestas inducidas por preguntas de seguimiento no deben convertirse automaticamente en `ALOG`.
+- No asignas `ALOG` solo por estilo raro, tono dramatizado o respuesta difícil de seguir.
+- Si la rareza principal está en una palabra o expresión desviada, compara primero con `DV1`.
+- Si la desviación afecta la organización global del response, compara también con `DR1`.
+- Las respuestas inducidas por preguntas de seguimiento no deben convertirse automáticamente en `ALOG`.
 
 ## Referencias cruzadas
 
-- [[Codificacion/Puntuaciones especiales] Special Scores](ref://scoring-input/special-score)
-- [[Codificacion/Puntuaciones especiales] DV1](ref://scoring-input/special-score/DV1)
-- [[Codificacion/Puntuaciones especiales] DR1](ref://scoring-input/special-score/DR1)
-- [[Interpretacion/Ideation] Sum6](ref://result-interpretation/lower-section/ideation/Sum6)
-- [[Interpretacion/Ideation] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
+- [[Codificación/Puntuaciones especiales] Special Scores](ref://scoring-input/special-score)
+- [[Codificación/Puntuaciones especiales] DV1](ref://scoring-input/special-score/DV1)
+- [[Codificación/Puntuaciones especiales] DR1](ref://scoring-input/special-score/DR1)
+- [[Interpretación/Ideation] Sum6](ref://result-interpretation/lower-section/ideation/Sum6)
+- [[Interpretación/Ideation] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
 
 ## Nota de fundamento
 
-- La fundamentacion detallada y la comparacion de fuentes se conservan en la provenance interna.
-- El cuerpo publico evita citar directamente los titulos de las fuentes.
+- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
+- El cuerpo público evita citar directamente los títulos de las fuentes.

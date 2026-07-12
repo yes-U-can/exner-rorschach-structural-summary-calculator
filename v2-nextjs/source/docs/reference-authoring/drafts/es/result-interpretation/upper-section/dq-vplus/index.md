@@ -3,11 +3,11 @@ canonicalRoute: "result-interpretation/upper-section/dq_vplus"
 locale: "es"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/upper-section/dq_vplus"
-displayTitle: "[Interpretacion/Upper Section] DQv/+"
+displayTitle: "[Interpretación/Upper Section] DQv/+"
 aliases:
   - "DQv/+"
   - "vague synthesized responses"
-  - "numero de respuestas DQv/+"
+  - "número de respuestas DQv/+"
 relatedRoutes:
   - "result-interpretation/upper-section"
   - "result-interpretation/upper-section/dq_plus"
@@ -16,41 +16,41 @@ relatedRoutes:
   - "scoring-input/dq/v/+"
   - "result-interpretation/lower-section/processing/DQ_plus_proc"
   - "result-interpretation/lower-section/processing/DQ_v_proc"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/upper-section/dq-vplus/index.md"
 ---
 
-# Nombre del documento: [Interpretacion/Upper Section] DQv/+
+# Nombre del documento: [Interpretación/Upper Section] DQv/+
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - DQv/+
 - vague synthesized responses
-- numero de respuestas DQv/+
+- número de respuestas DQv/+
 
-## Definicion central
+## Definición central
 
-`DQv/+` es la frecuencia de respuestas con intento de sintesis, pero apoyadas en una organizacion vaga.
-Se interpreta como una senal mixta: hay esfuerzo integrativo, aunque la base estructural no es del todo firme.
+`DQv/+` es la frecuencia de respuestas con intento de síntesis, pero apoyadas en una organización vaga.
+Se interpreta como una señal mixta: hay esfuerzo integrativo, aunque la base estructural no es del todo firme.
 
-## Puntos de interpretacion
+## Puntos de interpretación
 
-- `DQv/+` contiene mas intento organizativo que `DQv`.
+- `DQv/+` contiene más intento organizativo que `DQv`.
 - Al mismo tiempo, la base perceptiva sigue siendo menos clara que en `DQ+`.
-- Una pequena cantidad puede aparecer como subproducto de intentos complejos no del todo estabilizados.
+- Una pequeña cantidad puede aparecer como subproducto de intentos complejos no del todo estabilizados.
 
 ## Precauciones y distinciones
 
-- Si `DQv/+` aumenta junto con `DQv`, el peso se inclina mas hacia organizacion imprecisa que hacia integracion eficaz.
-- Si `DQv/+` aparece con buena calidad formal y sin exceso de vaguedad, puede reflejar ensayo de complejidad mas que desorganizacion.
+- Si `DQv/+` aumenta junto con `DQv`, el peso se inclina más hacia organización imprecisa que hacia integración eficaz.
+- Si `DQv/+` aparece con buena calidad formal y sin exceso de vaguedad, puede reflejar ensayo de complejidad más que desorganización.
 - No se confunde con `DQ+`.
 
-## Limites de interpretacion aislada
+## Limites de interpretación aislada
 
 - Su significado depende del equilibrio entre `DQ+`, `DQo` y `DQv`.
-- Conviene revisar tambien el procesamiento general del protocolo.
+- Conviene revisar también el procesamiento general del protocolo.
 
 ## Variables para revisar juntas
 
@@ -62,14 +62,14 @@ Se interpreta como una senal mixta: hay esfuerzo integrativo, aunque la base est
 
 ## Referencias cruzadas
 
-- [[Interpretacion/Upper Section] Upper Section](ref://result-interpretation/upper-section)
-- [[Interpretacion/Upper Section] DQ+](ref://result-interpretation/upper-section/dq_plus)
-- [[Interpretacion/Upper Section] DQo](ref://result-interpretation/upper-section/dq_o)
-- [[Interpretacion/Upper Section] DQv](ref://result-interpretation/upper-section/dq_v)
-- [[Codificacion/Calidad evolutiva] v/+](ref://scoring-input/dq/v/%2B)
-- [[Interpretacion/Processing] DQ+](ref://result-interpretation/lower-section/processing/DQ_plus_proc)
-- [[Interpretacion/Processing] DQv](ref://result-interpretation/lower-section/processing/DQ_v_proc)
+- [[Interpretación/Upper Section] Upper Section](ref://result-interpretation/upper-section)
+- [[Interpretación/Upper Section] DQ+](ref://result-interpretation/upper-section/dq_plus)
+- [[Interpretación/Upper Section] DQo](ref://result-interpretation/upper-section/dq_o)
+- [[Interpretación/Upper Section] DQv](ref://result-interpretation/upper-section/dq_v)
+- [[Codificación/Calidad evolutiva] v/+](ref://scoring-input/dq/v/%2B)
+- [[Interpretación/Processing] DQ+](ref://result-interpretation/lower-section/processing/DQ_plus_proc)
+- [[Interpretación/Processing] DQv](ref://result-interpretation/lower-section/processing/DQ_v_proc)
 
 ## Nota de fundamento
 
-- La fundamentacion detallada y las comparaciones de fuente se conservan en la provenance interna.
+- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

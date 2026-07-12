@@ -16,10 +16,10 @@ relatedRoutes:
   - "result-interpretation/lower-section/selfPerception/MOR_self"
   - "result-interpretation/lower-section/affect/Afr"
   - "result-interpretation/special-indices/CDI"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/special-indices/depi/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 # Document Name: [Interpretation/Special Indices] DEPI
 ## Aliases / Search Terms
@@ -31,9 +31,9 @@ provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretat
 `DEPI` is a composite index that summarizes how many signs in the protocol point toward depressive features.
 It integrates variables from affect, burden, negative self-image, and emotional withdrawal.
 ## Interpretation Points
-- If `DEPI` is positive, discouragement, hopelessness, guilt, and loss of energy should be reviewed more closely.
+- If `DEPI` is positive, assess depressive symptoms more closely without assuming that discouragement, hopelessness, guilt, or loss of energy is present from the index alone.
 - The index gains meaning when it appears together with `SumV`, `SumY`, `MOR_self`, and altered `Afr`.
-- It may suggest a probable depressive pattern, but it does not by itself define a major depressive episode.
+- Its empirical support is limited, so it sets an assessment priority rather than establishing a probable depressive pattern or episode.
 - If `CDI` is also positive, vulnerability may be mixed with a stronger sense of helplessness.
 ## Cautions / Distinctions
 - A positive `DEPI` is not automatically a formal diagnosis.

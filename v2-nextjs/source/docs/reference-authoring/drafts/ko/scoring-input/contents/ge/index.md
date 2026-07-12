@@ -12,7 +12,7 @@ aliases:
 relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/Ls"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/contents/ge/index.md"

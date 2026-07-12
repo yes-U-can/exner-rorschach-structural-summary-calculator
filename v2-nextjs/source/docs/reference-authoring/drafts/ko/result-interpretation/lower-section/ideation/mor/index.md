@@ -14,7 +14,7 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/_2AB_Art_Ay"
   - "result-interpretation/lower-section/selfPerception/MOR_self"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/ideation/mor/index.md"

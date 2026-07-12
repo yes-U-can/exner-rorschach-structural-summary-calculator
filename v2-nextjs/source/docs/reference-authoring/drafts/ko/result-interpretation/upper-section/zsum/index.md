@@ -14,7 +14,7 @@ relatedRoutes:
   - "result-interpretation/upper-section/ZEst"
   - "result-interpretation/upper-section/Zd"
   - "scoring-input/z"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/upper-section/zsum/index.md"

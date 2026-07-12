@@ -25,10 +25,10 @@ relatedRoutes:
   - "scoring-input/z"
   - "scoring-input/location"
   - "scoring-input/dq"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/upper-section/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Upper Section] Upper Section

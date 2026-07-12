@@ -3,13 +3,13 @@ canonicalRoute: "scoring-input/card/X"
 locale: "es"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/card/X"
-displayTitle: "[Codificacion/Tarjetas] X"
+displayTitle: "[Codificación/Tarjetas] X"
 aliases:
   - "Card X"
   - "card X"
   - "card 10"
   - "tarjeta X"
-  - "lamina X"
+  - "lámina X"
 relatedRoutes:
   - "scoring-input/score"
   - "scoring-input/popular"
@@ -18,51 +18,51 @@ relatedRoutes:
   - "scoring-input/determinants/CF"
   - "scoring-input/determinants/C"
   - "scoring-input/fq/-"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/card/x/index.md"
 ---
 
-# Nombre del documento: [Codificacion/Tarjetas] X
+# Nombre del documento: [Codificación/Tarjetas] X
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - Card X
 - card X
 - card 10
 - tarjeta X
-- lamina X
+- lámina X
 
-## Definicion central
+## Definición central
 
-`Tarjeta X` combina muchas zonas y muchos colores, por lo que suele exigir una buena delimitacion de la respuesta.
-La pagina resume los focos de codificacion mas utiles para esa complejidad.
+`Tarjeta X` combina muchas zonas y muchos colores, por lo que suele exigir una buena delimitación de la respuesta.
+La página resume los focos de codificación más útiles para esa complejidad.
 
-## Condiciones de aplicacion
+## Condiciones de aplicación
 
-- Conviene revisar `Popular` cuando aparece una respuesta tipica claramente organizada.
-- Si el color participa en la percepcion, revisa `FC`, `CF` o `C`.
-- Si la respuesta se apoya en multiples fragmentos y la forma se vuelve dudosa, conviene revisar `FQ-`.
+- Conviene revisar `Popular` cuando aparece una respuesta típica claramente organizada.
+- Si el color participa en la percepción, revisa `FC`, `CF` o `C`.
+- Si la respuesta se apoya en múltiples fragmentos y la forma se vuelve dudosa, conviene revisar `FQ-`.
 - El hecho de que la tarjeta sea compleja no sustituye la necesidad de describir bien la respuesta concreta.
 
 ## Precauciones y distinciones
 
-- Mucho color no significa automaticamente un determinante cromatico.
-- Mucha complejidad visual no significa automaticamente un special score.
-- La codificacion debe seguir la respuesta real, no la complejidad aparente de la lamina.
+- Mucho color no significa automáticamente un determinante cromático.
+- Mucha complejidad visual no significa automáticamente un special score.
+- La codificación debe seguir la respuesta real, no la complejidad aparente de la lámina.
 
 ## Referencias cruzadas
 
-- [[Codificacion] score](ref://scoring-input/score)
-- [[Codificacion/Popular] Popular](ref://scoring-input/popular)
-- [[Codificacion/Contenido] A](ref://scoring-input/contents/A)
-- [[Codificacion/Determinantes] FC](ref://scoring-input/determinants/FC)
-- [[Codificacion/Determinantes] CF](ref://scoring-input/determinants/CF)
-- [[Codificacion/Determinantes] C](ref://scoring-input/determinants/C)
-- [[Codificacion/FQ] -](ref://scoring-input/fq/-)
+- [[Codificación] score](ref://scoring-input/score)
+- [[Codificación/Popular] Popular](ref://scoring-input/popular)
+- [[Codificación/Contenido] A](ref://scoring-input/contents/A)
+- [[Codificación/Determinantes] FC](ref://scoring-input/determinants/FC)
+- [[Codificación/Determinantes] CF](ref://scoring-input/determinants/CF)
+- [[Codificación/Determinantes] C](ref://scoring-input/determinants/C)
+- [[Codificación/FQ] -](ref://scoring-input/fq/-)
 
 ## Nota de fundamento
 
-- La fundamentacion detallada y la comparacion de fuentes se conservan en la provenance interna.
-- El cuerpo publico evita citar directamente los titulos de las fuentes.
+- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
+- El cuerpo público evita citar directamente los títulos de las fuentes.

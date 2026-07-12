@@ -18,10 +18,10 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/SumY"
   - "result-interpretation/lower-section/core/Lambda"
   - "result-interpretation/special-indices/CDI"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/lower-section/core/adjd/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Core] AdjD

@@ -15,7 +15,7 @@ relatedRoutes:
   - "result-interpretation/lower-section/affect/S_aff"
   - "scoring-input/location/S"
   - "result-interpretation/special-indices/HVI"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/mediation/s-minus/index.md"

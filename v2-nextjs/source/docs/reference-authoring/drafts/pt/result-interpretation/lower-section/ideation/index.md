@@ -3,11 +3,11 @@ canonicalRoute: "result-interpretation/lower-section/ideation"
 locale: "pt"
 docKind: "interpretation-overview"
 canonicalTitle: "result-interpretation/lower-section/ideation"
-displayTitle: "[Interpretacao/Secao Inferior/Ideacao] Ideacao"
+displayTitle: "[Interpretação/Seção Inferior/Ideação] Ideação"
 aliases:
-  - "ideacao"
+  - "ideação"
   - "pensamento"
-  - "secao de ideacao"
+  - "seção de ideação"
 relatedRoutes:
   - "result-interpretation/lower-section"
   - "result-interpretation/lower-section/ideation/a_p"
@@ -19,50 +19,50 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/WSum6"
   - "result-interpretation/lower-section/ideation/M_minus"
   - "result-interpretation/lower-section/ideation/Mnone"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-ideation-opening-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao/Secao Inferior/Ideacao] Ideacao
+# Nome do documento: [Interpretação/Seção Inferior/Ideação] Ideação
 
 ## Apelidos e busca
 
-- ideacao
+- ideação
 - pensamento
-- secao de ideacao
+- seção de ideação
 
-## Definicao central
+## Definição central
 
-`Ideacao` reune variaveis que descrevem a qualidade, a direcao e o estilo do pensamento no protocolo.
-Ela ajuda a separar preferencia de atividade mental, grau de abstracao e sinais de estranheza ideativa.
+`Ideação` reúne variáveis que descrevem a qualidade, a direção e o estilo do pensamento no protocolo.
+Ela ajuda a separar preferência de atividade mental, grau de abstração e sinais de estranheza ideativa.
 
 ## Interpretation Points
 
-- Aqui entram proporcoes de movimento ativo e passivo, compostos de intelectualizacao e os indicadores ligados a `Sum6`.
-- Algumas variaveis descrevem estilo cognitivo; outras servem mais como sinais de risco de pensamento menos convencional.
-- O sentido clinico depende da leitura conjunta com `M`, `M-`, `WSum6`, `DEPI` e outros dominios do resumo estrutural.
+- Aqui entram proporções de movimento ativo e passivo, compostos de intelectualização e os indicadores ligados a `Sum6`.
+- Algumas variáveis descrevem estilo cognitivo; outras servem mais como sinais de risco de pensamento menos convencional.
+- O sentido clínico depende da leitura conjunta com `M`, `M-`, `WSum6`, `DEPI` e outros domínios do resumo estrutural.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- Nenhuma variavel de `ideacao` deve ser lida sozinha como diagnostico.
-- Razoes e compostos ficam menos estaveis quando o numero de respostas relevantes e muito pequeno.
-- E importante separar estilo ideativo, defesa por distanciamento e desorganizacao do pensamento.
+- Nenhuma variável de `ideação` deve ser lida sozinha como diagnóstico.
+- Razões e compostos ficam menos estáveis quando o número de respostas relevantes é muito pequeno.
+- É importante separar estilo ideativo, defesa por distanciamento e desorganização do pensamento.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Secao Inferior] Lower Section](ref://result-interpretation/lower-section)
-- [[Interpretacao/Ideacao] a:p](ref://result-interpretation/lower-section/ideation/a_p)
-- [[Interpretacao/Ideacao] Ma:Mp](ref://result-interpretation/lower-section/ideation/Ma_Mp)
-- [[Interpretacao/Ideacao] 2AB+Art+Ay](ref://result-interpretation/lower-section/ideation/_2AB_Art_Ay)
-- [[Interpretacao/Ideacao] MOR](ref://result-interpretation/lower-section/ideation/MOR)
-- [[Interpretacao/Ideacao] Sum6](ref://result-interpretation/lower-section/ideation/Sum6)
-- [[Interpretacao/Ideacao] Lv2](ref://result-interpretation/lower-section/ideation/Lv2)
-- [[Interpretacao/Ideacao] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
-- [[Interpretacao/Ideacao] M-](ref://result-interpretation/lower-section/ideation/M_minus)
-- [[Interpretacao/Ideacao] Mnone](ref://result-interpretation/lower-section/ideation/Mnone)
+- [[Interpretação/Seção Inferior] Lower Section](ref://result-interpretation/lower-section)
+- [[Interpretação/Ideação] a:p](ref://result-interpretation/lower-section/ideation/a_p)
+- [[Interpretação/Ideação] Ma:Mp](ref://result-interpretation/lower-section/ideation/Ma_Mp)
+- [[Interpretação/Ideação] 2AB+Art+Ay](ref://result-interpretation/lower-section/ideation/_2AB_Art_Ay)
+- [[Interpretação/Ideação] MOR](ref://result-interpretation/lower-section/ideation/MOR)
+- [[Interpretação/Ideação] Sum6](ref://result-interpretation/lower-section/ideation/Sum6)
+- [[Interpretação/Ideação] Lv2](ref://result-interpretation/lower-section/ideation/Lv2)
+- [[Interpretação/Ideação] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
+- [[Interpretação/Ideação] M-](ref://result-interpretation/lower-section/ideation/M_minus)
+- [[Interpretação/Ideação] Mnone](ref://result-interpretation/lower-section/ideation/Mnone)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

@@ -3,12 +3,12 @@ canonicalRoute: "result-interpretation/lower-section/interpersonal/HumanCont"
 locale: "pt"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/interpersonal/HumanCont"
-displayTitle: "[Interpretacao/Interpessoal] Conteudo Humano"
+displayTitle: "[Interpretação/Interpessoal] Conteúdo Humano"
 aliases:
   - "HumanCont"
   - "Human Content"
-  - "conteudo humano"
-  - "total de conteudo humano"
+  - "conteúdo humano"
+  - "total de conteúdo humano"
 relatedRoutes:
   - "result-interpretation/lower-section/interpersonal"
   - "result-interpretation/lower-section/interpersonal/PureH"
@@ -20,52 +20,52 @@ relatedRoutes:
   - "scoring-input/gphr/GHR"
   - "scoring-input/gphr/PHR"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-interpersonal-closing-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao/Interpessoal] Conteudo Humano
+# Nome do documento: [Interpretação/Interpessoal] Conteúdo Humano
 
 ## Apelidos e busca
 
 - HumanCont
 - Human Content
-- conteudo humano
-- total de conteudo humano
+- conteúdo humano
+- total de conteúdo humano
 
-## Definicao central
+## Definição central
 
-`HumanCont` resume quanto conteudo humano aparece no protocolo quando `H + (H) + Hd + (Hd)` sao somados.
+`HumanCont` resume quanto conteúdo humano aparece no protocolo quando `H + (H) + Hd + (Hd)` são somados.
 No plano interpessoal, ele ajuda a estimar quanto peso pessoas e temas humanos recebem no mundo relacional da pessoa.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- Se `HumanCont` e alto, costuma existir maior atencao a pessoas, cenas humanas ou trocas interpessoais.
-- Se e baixo, pode haver menor interesse por material humano, maior distancia relacional ou foco em objetos e aspectos impessoais.
-- A variavel mostra quantidade de representacao humana, e nao sua qualidade.
-- Para decidir se essas representacoes sao mais integradas ou mais distorcidas, vale revisar `PureH`, `GHR` e `PHR`.
+- Se `HumanCont` é alto, costuma existir maior atenção a pessoas, cenas humanas ou trocas interpessoais.
+- Se o valor é baixo, pode haver menor interesse por material humano, maior distância relacional ou foco em objetos e aspectos impessoais.
+- A variável mostra quantidade de representação humana, e não sua qualidade.
+- Para decidir se essas representações são mais integradas ou mais distorcidas, vale revisar `PureH`, `GHR` e `PHR`.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `HumanCont` nao inclui `Hx`.
-- Valor alto nao significa automaticamente relacoes saudaveis ou empaticas.
-- Valor baixo sozinho nao basta para concluir isolamento cronico.
+- `HumanCont` não inclui `Hx`.
+- Valor alto não significa automaticamente relações saudáveis ou empáticas.
+- Valor baixo sozinho não basta para concluir isolamento crônico.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Secao Inferior/Interpessoal] Interpessoal](ref://result-interpretation/lower-section/interpersonal)
-- [[Interpretacao/Interpessoal] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)
-- [[Codificacao/Conteudo] H](ref://scoring-input/contents/H)
-- [[Codificacao/Conteudo] (H)](ref://scoring-input/contents/%28H%29)
-- [[Codificacao/Conteudo] Hd](ref://scoring-input/contents/Hd)
-- [[Codificacao/Conteudo] (Hd)](ref://scoring-input/contents/%28Hd%29)
-- [[Codificacao/Conteudo] Hx](ref://scoring-input/contents/Hx)
-- [[Codificacao/GHR-PHR] GHR](ref://scoring-input/gphr/GHR)
-- [[Codificacao/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
-- [[Interpretacao/Autopercepcao] H Ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
+- [[Interpretação/Seção Inferior/Interpessoal] Interpessoal](ref://result-interpretation/lower-section/interpersonal)
+- [[Interpretação/Interpessoal] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)
+- [[Codificação/Conteúdo] H](ref://scoring-input/contents/H)
+- [[Codificação/Conteúdo] (H)](ref://scoring-input/contents/%28H%29)
+- [[Codificação/Conteúdo] Hd](ref://scoring-input/contents/Hd)
+- [[Codificação/Conteúdo] (Hd)](ref://scoring-input/contents/%28Hd%29)
+- [[Codificação/Conteúdo] Hx](ref://scoring-input/contents/Hx)
+- [[Codificação/GHR-PHR] GHR](ref://scoring-input/gphr/GHR)
+- [[Codificação/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
+- [[Interpretação/Autopercepção] H Ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

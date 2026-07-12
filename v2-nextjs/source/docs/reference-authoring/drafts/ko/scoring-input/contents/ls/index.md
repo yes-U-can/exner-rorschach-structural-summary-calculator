@@ -13,7 +13,7 @@ relatedRoutes:
   - "scoring-input/contents/Na"
   - "scoring-input/contents/Bt"
   - "scoring-input/contents/Ge"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/contents/ls/index.md"

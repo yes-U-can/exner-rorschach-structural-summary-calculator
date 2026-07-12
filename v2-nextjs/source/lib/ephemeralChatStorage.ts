@@ -1,4 +1,5 @@
 import type { ChatMessageMetadata } from '@/types';
+import { normalizeEphemeralChatContext } from '@/lib/chatEphemeralContext';
 
 export const EPHEMERAL_CHAT_CLEAR_EVENT = 'rorschach:ephemeral-ai-chat-clear';
 
@@ -77,14 +78,15 @@ export function clearAllEphemeralChatStorage() {
 }
 
 export function toEphemeralChatContext(messages: StoredEphemeralChatMessage[]) {
-  return messages
+  const contextMessages = messages
     .filter((message) => !message.uiOnly)
     .filter((message) => message.role === 'user' || message.role === 'ai')
     .filter((message) => message.content.trim())
-    .slice(-12)
     .map((message) => ({
       role: message.role,
       content: message.content,
     }));
-}
 
+  const result = normalizeEphemeralChatContext(contextMessages);
+  return result.ok ? result.messages : [];
+}

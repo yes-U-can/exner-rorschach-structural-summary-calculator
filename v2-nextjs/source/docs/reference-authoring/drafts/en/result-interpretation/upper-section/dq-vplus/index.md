@@ -16,10 +16,10 @@ relatedRoutes:
   - "scoring-input/dq/v/+"
   - "result-interpretation/lower-section/processing/DQ_plus_proc"
   - "result-interpretation/lower-section/processing/DQ_v_proc"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/upper-section/dq-vplus/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Upper Section] DQv/+

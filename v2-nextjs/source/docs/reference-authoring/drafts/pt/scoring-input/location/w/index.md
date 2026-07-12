@@ -3,54 +3,54 @@ canonicalRoute: "scoring-input/location/W"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/location/W"
-displayTitle: "[Codificacao/Localizacao] W"
+displayTitle: "[Codificação/Localização] W"
 aliases:
   - "W"
   - "mancha inteira"
-  - "localizacao global"
+  - "localização global"
 relatedRoutes:
   - "scoring-input/location/WS"
   - "scoring-input/location/D"
   - "scoring-input/location/Dd"
   - "result-interpretation/upper-section/W"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-location-2026-03-10.md"
 ---
 
-# Nome do documento: [Codificacao/Localizacao] W
+# Nome do documento: [Codificação/Localização] W
 
 ## Apelidos e busca
 
 - W
 - mancha inteira
-- localizacao global
+- localização global
 
-## Definicao central
+## Definição central
 
-`W` e usado quando a resposta utiliza a mancha inteira.
-Nao basta a resposta soar global; a mancha toda precisa realmente entrar no percepto.
+`W` é usado quando a resposta utiliza a mancha inteira.
+Não basta a resposta soar global; a mancha toda precisa realmente entrar no percepto.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
 - A resposta inclui todas as partes da mancha.
-- Nenhuma area relevante da mancha fica de fora na construcao do objeto.
-- A localizacao e confirmada no inquerito ou na folha de localizacao.
+- Nenhuma área relevante da mancha fica de fora na construção do objeto.
+- A localização é confirmada no inquérito ou na folha de localização.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- Uma resposta comumente dada para a mancha inteira nao recebe `W` se a pessoa deixa de fora areas importantes.
-- Se a mancha inteira e usada junto com espaco branco, codifique [`WS`](ref://scoring-input/location/WS).
-- `W` nao significa, por si so, boa organizacao ou boa qualidade formal.
+- Uma resposta comumente dadá para a mancha inteira não recebe `W` se a pessoa deixa de fora áreas importantes.
+- Se a mancha inteira é usada junto com espaço branco, codifique [`WS`](ref://scoring-input/location/WS).
+- `W` não significa, por si só, boa organização ou boa qualidade formal.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao/Localizacao] WS](ref://scoring-input/location/WS)
-- [[Codificacao/Localizacao] D](ref://scoring-input/location/D)
-- [[Codificacao/Localizacao] Dd](ref://scoring-input/location/Dd)
-- [[Interpretacao/Upper Section] W](ref://result-interpretation/upper-section/W)
+- [[Codificação/Localização] WS](ref://scoring-input/location/WS)
+- [[Codificação/Localização] D](ref://scoring-input/location/D)
+- [[Codificação/Localização] Dd](ref://scoring-input/location/Dd)
+- [[Interpretação/Upper Section] W](ref://result-interpretation/upper-section/W)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

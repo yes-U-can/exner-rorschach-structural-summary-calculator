@@ -14,10 +14,10 @@ relatedRoutes:
   - "result-interpretation/upper-section/ZEst"
   - "result-interpretation/upper-section/Zd"
   - "scoring-input/z"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/upper-section/zsum/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Upper Section] ZSum

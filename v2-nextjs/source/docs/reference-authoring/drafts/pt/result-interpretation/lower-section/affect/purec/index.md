@@ -3,7 +3,7 @@ canonicalRoute: "result-interpretation/lower-section/affect/PureC"
 locale: "pt"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/affect/PureC"
-displayTitle: "[Interpretacao/Afeto] Pure C"
+displayTitle: "[Interpretação/Afeto] Pure C"
 aliases:
   - "Pure C"
   - "cor pura"
@@ -16,47 +16,47 @@ relatedRoutes:
   - "scoring-input/determinants/CF"
   - "scoring-input/determinants/FC"
   - "result-interpretation/lower-section/core/EB"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-affect-opening-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao/Afeto] Pure C
+# Nome do documento: [Interpretação/Afeto] Pure C
 
 ## Apelidos e busca
 
 - Pure C
 - cor pura
 
-## Definicao central
+## Definição central
 
-`Pure C` e a frequencia de respostas de cor sem apoio formal.
-Na interpretacao, funciona como sinal de expressao afetiva mais direta e menos moldada por estrutura ou controle formal.
+`Pure C` é a frequência de respostas de cor sem apoio formal.
+Na interpretação, funciona como sinal de expressão afetiva mais direta e menos moldada por estrutura ou controle formal.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- Quando `Pure C` aparece, pode haver momentos em que o sentimento e expresso de forma mais imediata.
-- Repeticao de `Pure C` sugere que o afeto pode ultrapassar a organizacao formal da resposta.
-- Em protocolos de adultos, mesmo pequena quantidade merece atencao, porque a frequencia de base costuma ser baixa.
+- Quando `Pure C` aparece, pode haver momentos em que o sentimento é expresso de forma mais imediata.
+- Repetição de `Pure C` sugere que o afeto pode ultrapassar a organização formal da resposta.
+- Em protocolos de adultos, mesmo pequena quantidade merece atenção, porque a frequência de base costuma ser baixa.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `Pure C` sozinho nao equivale a impulsividade patologica.
+- `Pure C` sozinho não equivale a impulsividade patológica.
 - Ele deve ser diferenciado de `CF`, `FC` e `CP`.
-- Se houve poucas oportunidades de respostas cromaticas, ausencia de `Pure C` nao significa ausencia de afeto.
+- Se houve poucas oportunidades de respostas cromáticas, ausência de `Pure C` não significa ausência de afeto.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Secao Inferior/Afeto] Afeto](ref://result-interpretation/lower-section/affect)
-- [[Interpretacao/Afeto] FC:CF+C](ref://result-interpretation/lower-section/affect/FC_CF_C)
-- [[Interpretacao/Afeto] SumC / WSumC](ref://result-interpretation/lower-section/affect/SumC_WSumC)
-- [[Interpretacao/Afeto] CP](ref://result-interpretation/lower-section/affect/CP)
-- [[Codificacao/Determinantes] C](ref://scoring-input/determinants/C)
-- [[Codificacao/Determinantes] CF](ref://scoring-input/determinants/CF)
-- [[Codificacao/Determinantes] FC](ref://scoring-input/determinants/FC)
-- [[Interpretacao/Core] EB](ref://result-interpretation/lower-section/core/EB)
+- [[Interpretação/Seção Inferior/Afeto] Afeto](ref://result-interpretation/lower-section/affect)
+- [[Interpretação/Afeto] FC:CF+C](ref://result-interpretation/lower-section/affect/FC_CF_C)
+- [[Interpretação/Afeto] SumC / WSumC](ref://result-interpretation/lower-section/affect/SumC_WSumC)
+- [[Interpretação/Afeto] CP](ref://result-interpretation/lower-section/affect/CP)
+- [[Codificação/Determinantes] C](ref://scoring-input/determinants/C)
+- [[Codificação/Determinantes] CF](ref://scoring-input/determinants/CF)
+- [[Codificação/Determinantes] FC](ref://scoring-input/determinants/FC)
+- [[Interpretação/Core] EB](ref://result-interpretation/lower-section/core/EB)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

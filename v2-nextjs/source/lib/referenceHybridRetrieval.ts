@@ -389,6 +389,7 @@ export async function getHybridInterpretationKnowledge(params: {
   provider: HybridProvider;
   apiKey: string;
   limit?: number;
+  signal?: AbortSignal;
 }): Promise<HybridKnowledgeResult> {
   const limit = params.limit ?? 8;
   const lexicalItems = selectRelevantKnowledge(params.query, undefined, params.lang).slice(0, limit);
@@ -408,6 +409,7 @@ export async function getHybridInterpretationKnowledge(params: {
       provider: params.provider,
       apiKey: params.apiKey,
       text: params.query,
+      signal: params.signal,
     });
     vectorHits = await searchReferenceChunkEmbeddings({
       locale: params.lang,
@@ -416,6 +418,7 @@ export async function getHybridInterpretationKnowledge(params: {
       limit: Math.max(limit * 2, 10),
     });
   } catch (error) {
+    if (params.signal?.aborted) throw error;
     console.warn('[reference-hybrid-retrieval] Falling back to lexical interpretation retrieval.', error);
     return {
       items: lexicalItems,
@@ -448,6 +451,7 @@ export async function getHybridCodingRuleChunks(params: {
   provider: HybridProvider;
   apiKey: string;
   limit?: number;
+  signal?: AbortSignal;
 }): Promise<HybridCodingResult> {
   const limit = params.limit ?? 6;
   const query = buildCodingAssistQuery(params.context);
@@ -468,6 +472,7 @@ export async function getHybridCodingRuleChunks(params: {
       provider: params.provider,
       apiKey: params.apiKey,
       text: query,
+      signal: params.signal,
     });
     vectorHits = await searchReferenceChunkEmbeddings({
       locale: params.lang,
@@ -477,6 +482,7 @@ export async function getHybridCodingRuleChunks(params: {
       routePrefix: 'scoring-input/',
     });
   } catch (error) {
+    if (params.signal?.aborted) throw error;
     console.warn('[reference-hybrid-retrieval] Falling back to lexical coding retrieval.', error);
     return {
       items: lexicalItems,

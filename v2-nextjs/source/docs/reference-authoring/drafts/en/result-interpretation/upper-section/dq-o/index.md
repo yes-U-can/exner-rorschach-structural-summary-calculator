@@ -14,10 +14,10 @@ relatedRoutes:
   - "result-interpretation/upper-section/dq_vplus"
   - "result-interpretation/upper-section/dq_v"
   - "scoring-input/dq/o"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/upper-section/dq-o/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Upper Section] DQo

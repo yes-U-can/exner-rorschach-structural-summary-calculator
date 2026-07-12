@@ -14,10 +14,10 @@ relatedRoutes:
   - "scoring-input/determinants/TF"
   - "result-interpretation/lower-section/core/SumT"
   - "result-interpretation/lower-section/interpersonal/SumT_inter"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/ja/scoring-input/determinants/t/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [コーディング/決定因] T

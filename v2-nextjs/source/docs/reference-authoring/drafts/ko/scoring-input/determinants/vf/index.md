@@ -17,7 +17,7 @@ relatedRoutes:
   - "scoring-input/determinants/Y"
   - "result-interpretation/lower-section/core/SumV"
   - "result-interpretation/lower-section/selfPerception/SumV_self"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/determinants/vf/index.md"

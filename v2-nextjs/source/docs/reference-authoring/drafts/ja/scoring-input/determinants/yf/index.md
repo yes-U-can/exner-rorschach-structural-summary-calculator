@@ -16,10 +16,10 @@ relatedRoutes:
   - "scoring-input/determinants/FV"
   - "scoring-input/determinants/FT"
   - "result-interpretation/lower-section/core/SumY"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/ja/scoring-input/determinants/yf/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [コーディング/決定因] YF

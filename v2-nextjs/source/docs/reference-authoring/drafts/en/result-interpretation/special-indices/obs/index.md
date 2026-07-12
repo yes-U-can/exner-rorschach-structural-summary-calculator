@@ -16,10 +16,10 @@ relatedRoutes:
   - "result-interpretation/lower-section/mediation/P"
   - "scoring-input/fq/+"
   - "scoring-input/popular"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/special-indices/obs/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 # Document Name: [Interpretation/Special Indices] Obsessive Style Index
 ## Aliases / Search Terms
@@ -28,15 +28,15 @@ provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretat
 - obsessive style index
 
 ## Core Definition
-`OBS` is a constellation that summarizes a tendency toward excessive precision, control, meticulousness, and rigid checking.
-It is used to detect an obsessive style of organization rather than a formal diagnosis.
+`OBS` is a yes/no combination of variables related to precision, detail focus, and organization.
+Construct-validity evidence is insufficient for using it to infer obsessive personality features or impairment.
 ## Interpretation Points
-- If `OBS` is positive, there may be overcontrol, extreme attention to detail, and a strong need for exactness.
+- A positive result first means that the operational variable combination was met; verify overcontrol, perfectionism, and rigidity independently in interview and behavior.
 - That style can improve order and precision, but it can also make processing more rigid.
 - The constellation gains weight when `Zf`, `Zd`, `Dd`, `P`, and `FQ+` cluster together.
 - The index points to stylistic direction, not to obsessive-compulsive disorder by itself.
 ## Cautions / Distinctions
-- `OBS` is yes/no and does not measure fine degree.
+- `OBS` is yes/no, does not measure degree, and does not by itself establish the proposed style.
 - It should not be confused with a diagnosis of OCD.
 - Technical or cultural contexts that reward control can increase this style without pathology.
 ## Limits of Isolated Interpretation

@@ -3,12 +3,12 @@ canonicalRoute: "result-interpretation/lower-section/core/EB"
 locale: "pt"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/core/EB"
-displayTitle: "[Interpretacao/Core] EB"
+displayTitle: "[Interpretação/Core] EB"
 aliases:
   - "EB"
   - "Erlebnistypus"
-  - "balanco experiencial"
-  - "equilibrio experiencial"
+  - "balanço experiencial"
+  - "equilíbrio experiencial"
 relatedRoutes:
   - "result-interpretation/lower-section/core"
   - "result-interpretation/lower-section/core/EA"
@@ -21,53 +21,53 @@ relatedRoutes:
   - "scoring-input/determinants/FC"
   - "scoring-input/determinants/CF"
   - "scoring-input/determinants/C"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-core-eb-family-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao/Core] EB
+# Nome do documento: [Interpretação/Core] EB
 
 ## Apelidos e busca
 
 - EB
 - Erlebnistypus
-- balanco experiencial
-- equilibrio experiencial
+- balanço experiencial
+- equilíbrio experiencial
 
-## Definicao central
+## Definição central
 
-`EB` e a razao `M : WSumC`.
-Ela mostra se a pessoa tende a apoiar-se mais em elaboracao ideativa e reflexiva ou mais em modulacao afetiva e resposta emocional ao lidar com problemas.
+`EB` é a razão `M : WSumC`.
+Ela mostra se a pessoa tende a apoiar-se mais em elaboração ideativa e reflexiva ou mais em modulação afetiva e resposta emocional ao lidar com problemas.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
 - Quando `M` predomina, o estilo costuma ser descrito como mais `introversivo`.
 - Quando `WSumC` predomina, o estilo costuma ser descrito como mais `extratensivo`.
-- Se ha direcao clara, mas nao extrema, pode haver estilo preferencial com alguma flexibilidade.
-- Se nao ha direcao clara, o estilo costuma ser descrito como `ambitente`, sugerindo menos consistencia no rumo do coping.
+- Se há direção clara, mas não extrema, pode haver estilo preferencial com alguma flexibilidade.
+- Se não há direção clara, o estilo costuma ser descrito como `ambitente`, sugerindo menos consistência no rumo do coping.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- Direcao marcada nao equivale automaticamente a saude ou patologia.
-- Se a diferenca for muito grande, `EBPer` tambem deve ser verificado.
-- Em protocolos curtos, com `Lambda` alto ou `EA` baixo, `EB` pode parecer mais rigido ou mais vazio do que realmente e.
+- Direção marcada não equivale automaticamente a saúde ou patologia.
+- Se a diferença for muito grande, `EBPer` também deve ser verificado.
+- Em protocolos curtos, com `Lambda` alto ou `EA` baixo, `EB` pode parecer mais rígido ou mais vazio do que realmente é.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Secao Inferior/Core] Core](ref://result-interpretation/lower-section/core)
-- [[Interpretacao/Core] EA](ref://result-interpretation/lower-section/core/EA)
-- [[Interpretacao/Core] EBPer](ref://result-interpretation/lower-section/core/EBPer)
-- [[Interpretacao/Core] eb](ref://result-interpretation/lower-section/core/eb)
-- [[Interpretacao/Core] es](ref://result-interpretation/lower-section/core/es)
-- [[Interpretacao/Core] D](ref://result-interpretation/lower-section/core/D)
-- [[Interpretacao/Core] Lambda](ref://result-interpretation/lower-section/core/Lambda)
-- [[Codificacao/Determinantes] M](ref://scoring-input/determinants/M)
-- [[Codificacao/Determinantes] FC](ref://scoring-input/determinants/FC)
-- [[Codificacao/Determinantes] CF](ref://scoring-input/determinants/CF)
-- [[Codificacao/Determinantes] C](ref://scoring-input/determinants/C)
+- [[Interpretação/Seção Inferior/Core] Core](ref://result-interpretation/lower-section/core)
+- [[Interpretação/Core] EA](ref://result-interpretation/lower-section/core/EA)
+- [[Interpretação/Core] EBPer](ref://result-interpretation/lower-section/core/EBPer)
+- [[Interpretação/Core] eb](ref://result-interpretation/lower-section/core/eb)
+- [[Interpretação/Core] es](ref://result-interpretation/lower-section/core/es)
+- [[Interpretação/Core] D](ref://result-interpretation/lower-section/core/D)
+- [[Interpretação/Core] Lambda](ref://result-interpretation/lower-section/core/Lambda)
+- [[Codificação/Determinantes] M](ref://scoring-input/determinants/M)
+- [[Codificação/Determinantes] FC](ref://scoring-input/determinants/FC)
+- [[Codificação/Determinantes] CF](ref://scoring-input/determinants/CF)
+- [[Codificação/Determinantes] C](ref://scoring-input/determinants/C)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

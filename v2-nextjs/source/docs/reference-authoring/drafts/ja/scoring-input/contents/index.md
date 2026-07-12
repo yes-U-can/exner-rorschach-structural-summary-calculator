@@ -44,7 +44,7 @@ relatedRoutes:
   - "result-interpretation/lower-section/interpersonal/Food"
   - "result-interpretation/lower-section/selfPerception/An_Xy"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-contents-ls-na-sc-sx-xy-id-2026-03-10.md"

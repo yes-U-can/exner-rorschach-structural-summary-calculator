@@ -25,10 +25,10 @@ relatedRoutes:
   - "result-interpretation/upper-section/ZEst"
   - "result-interpretation/upper-section/Zd"
   - "result-interpretation/lower-section/processing/Zd_proc"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/ja/scoring-input/z/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [コーディング/Z] Z

@@ -3,7 +3,7 @@ canonicalRoute: "result-interpretation/upper-section/W"
 locale: "pt"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/upper-section/W"
-displayTitle: "[Interpretacao/Secao Superior] W"
+displayTitle: "[Interpretação/Seção Superior] W"
 aliases:
   - "W"
   - "respostas globais"
@@ -15,13 +15,13 @@ relatedRoutes:
   - "scoring-input/location/W"
   - "result-interpretation/lower-section/processing/W_D_Dd"
   - "result-interpretation/lower-section/processing/W_M"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-upper-section-family-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao/Secao Superior] W
+# Nome do documento: [Interpretação/Seção Superior] W
 
 ## Apelidos e busca
 
@@ -29,32 +29,32 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-upper-section-fami
 - respostas globais
 - respostas de mancha inteira
 
-## Definicao central
+## Definição central
 
-`W` e a frequencia de respostas dadas a mancha inteira.
-Na interpretacao, mostra quanto a pessoa tenta abarcar o campo do estimulo como um todo e se esse foco amplo parece util ou nao.
+`W` é a frequência de respostas dadas à mancha inteira.
+Na interpretação, mostra quanto a pessoa tenta abarcar o campo do estímulo como um todo e se esse foco amplo parece útil ou não.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
 - Um `W` adequado pode acompanhar a capacidade de considerar contexto mais amplo.
-- Um `W` alto pode sugerir tendencia a comecar pelo todo ou a trabalhar em unidades maiores.
-- Um `W` baixo pode sugerir maior enfase nos detalhes do que na configuracao total.
+- Um `W` alto pode sugerir tendência a começar pelo todo ou a trabalhar em unidades maiores.
+- Um `W` baixo pode sugerir maior ênfase nos detalhes do que na configuração total.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `W` alto nao significa automaticamente sintese eficiente; `DQ`, `FQ`, `W:M` e `Zd` continuam importando.
-- `W` baixo nao equivale, por si so, a estreiteza; pode coexistir com um estilo pratico e orientado a detalhes.
-- Se `W` estiver alto ao mesmo tempo que `Dd` tambem estiver alto, a varredura ampla pode coexistir com dispersao.
+- `W` alto não significa automaticamente síntese eficiente; `DQ`, `FQ`, `W:M` e `Zd` continuam importando.
+- `W` baixo não equivale, por si só, a estreiteza; pode coexistir com um estilo prático e orientado a detalhes.
+- Se `W` estiver alto ao mesmo tempo que `Dd` também estiver alto, a varredura ampla pode coexistir com dispersão.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Secao Superior] Secao Superior](ref://result-interpretation/upper-section)
-- [[Interpretacao/Secao Superior] D](ref://result-interpretation/upper-section/D)
-- [[Interpretacao/Secao Superior] Dd](ref://result-interpretation/upper-section/Dd)
-- [[Codificacao/Localizacao] W](ref://scoring-input/location/W)
-- [[Interpretacao/Processing] W:D:Dd](ref://result-interpretation/lower-section/processing/W_D_Dd)
-- [[Interpretacao/Processing] W:M](ref://result-interpretation/lower-section/processing/W_M)
+- [[Interpretação/Seção Superior] Seção Superior](ref://result-interpretation/upper-section)
+- [[Interpretação/Seção Superior] D](ref://result-interpretation/upper-section/D)
+- [[Interpretação/Seção Superior] Dd](ref://result-interpretation/upper-section/Dd)
+- [[Codificação/Localização] W](ref://scoring-input/location/W)
+- [[Interpretação/Processing] W:D:Dd](ref://result-interpretation/lower-section/processing/W_D_Dd)
+- [[Interpretação/Processing] W:M](ref://result-interpretation/lower-section/processing/W_M)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

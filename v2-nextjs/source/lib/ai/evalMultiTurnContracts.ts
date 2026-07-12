@@ -36,7 +36,10 @@ export function evaluateAiMultiTurnTranscript(
   }
 
   fixture.turns.forEach((turn, index) => {
-    const result = evaluateAiHarnessOutput(turn, outputs[index] ?? '');
+    const result = evaluateAiHarnessOutput(
+      { ...turn, locale: fixture.locale },
+      outputs[index] ?? '',
+    );
 
     for (const issue of result.issues) {
       issues.push({

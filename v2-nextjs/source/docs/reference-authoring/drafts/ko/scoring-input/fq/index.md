@@ -16,7 +16,7 @@ relatedRoutes:
   - "scoring-input/fq/-"
   - "scoring-input/fq/none"
   - "scoring-input/dq"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/fq/index.md"

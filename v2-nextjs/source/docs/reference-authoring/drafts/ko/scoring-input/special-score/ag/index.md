@@ -17,7 +17,7 @@ relatedRoutes:
   - "scoring-input/gphr/PHR"
   - "result-interpretation/lower-section/interpersonal/AG"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/special-score/ag/index.md"

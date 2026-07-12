@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/determinants/CF"
 locale: "es"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/determinants/CF"
-displayTitle: "[Codificacion/Determinantes] CF"
+displayTitle: "[Codificación/Determinantes] CF"
 aliases:
   - "CF"
   - "color-forma"
@@ -15,49 +15,49 @@ relatedRoutes:
   - "scoring-input/determinants/Cn"
   - "result-interpretation/lower-section/affect/FC_CF_C"
   - "result-interpretation/lower-section/affect/PureC"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/determinants/cf/index.md"
 ---
 
-# Nombre del documento: [Codificacion/Determinantes] CF
+# Nombre del documento: [Codificación/Determinantes] CF
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - CF
 - color-forma
 - color dominante
 
-## Definicion central
+## Definición central
 
-`CF` se usa cuando el color cromatico domina la respuesta y la forma queda en segundo plano.  
-Todavia hay cierto uso de forma, pero es secundario frente al peso del color.
+`CF` se usa cuando el color cromático domina la respuesta y la forma queda en segundo plano.
+Todavía hay cierto uso de forma, pero es secundario frente al peso del color.
 
-## Condiciones de aplicacion
+## Condiciones de aplicación
 
 - El sujeto enfatiza el color como base principal de lo que ve.
 - La forma aparece, pero con importancia menor que el color.
 - Si la forma termina siendo el eje principal, corresponde [`FC`](ref://scoring-input/determinants/FC).
-- Si la forma practicamente no participa, hay que reconsiderar [`C`](ref://scoring-input/determinants/C).
+- Si la forma prácticamente no participa, hay que reconsiderar [`C`](ref://scoring-input/determinants/C).
 
 ## Precauciones y distinciones
 
-- `CF` no se decide solo por mencionar primero un color; importa el enfasis global de la respuesta.
-- Algunas respuestas necesitan una aclaracion adicional de encuesta para resolver la duda entre `CF` y `FC`.
+- `CF` no se decide solo por mencionar primero un color; importa el énfasis global de la respuesta.
+- Algunas respuestas necesitan una aclaración adicional de encuesta para resolver la duda entre `CF` y `FC`.
 - Objetos poco definidos suelen ir hacia `CF`, pero esa no es una regla absoluta.
-- El uso interpretativo de esta familia se revisa despues en [`FC:CF+C`](ref://result-interpretation/lower-section/affect/FC_CF_C).
+- El uso interpretativo de esta familia se revisa después en [`FC:CF+C`](ref://result-interpretation/lower-section/affect/FC_CF_C).
 
 ## Referencias cruzadas
 
-- [[Codificacion/Determinantes] Determinants](ref://scoring-input/determinants)
-- [[Codificacion/Determinantes] FC](ref://scoring-input/determinants/FC)
-- [[Codificacion/Determinantes] C](ref://scoring-input/determinants/C)
-- [[Codificacion/Determinantes] Cn](ref://scoring-input/determinants/Cn)
-- [[Interpretacion/Affect] FC:CF+C](ref://result-interpretation/lower-section/affect/FC_CF_C)
-- [[Interpretacion/Affect] Pure C](ref://result-interpretation/lower-section/affect/PureC)
+- [[Codificación/Determinantes] Determinants](ref://scoring-input/determinants)
+- [[Codificación/Determinantes] FC](ref://scoring-input/determinants/FC)
+- [[Codificación/Determinantes] C](ref://scoring-input/determinants/C)
+- [[Codificación/Determinantes] Cn](ref://scoring-input/determinants/Cn)
+- [[Interpretación/Affect] FC:CF+C](ref://result-interpretation/lower-section/affect/FC_CF_C)
+- [[Interpretación/Affect] Pure C](ref://result-interpretation/lower-section/affect/PureC)
 
 ## Nota de fundamento
 
-- La justificacion detallada y la comparacion de fuentes se conservan en la provenance interna.
-- El cuerpo publico evita citar directamente los titulos de las fuentes.
+- La justificación detallada y la comparación de fuentes se conservan en la provenance interna.
+- El cuerpo público evita citar directamente los títulos de las fuentes.

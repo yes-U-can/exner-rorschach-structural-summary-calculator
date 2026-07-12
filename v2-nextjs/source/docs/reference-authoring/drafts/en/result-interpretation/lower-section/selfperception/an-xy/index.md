@@ -14,10 +14,10 @@ relatedRoutes:
   - "scoring-input/contents/An"
   - "scoring-input/contents/Xy"
   - "result-interpretation/special-indices/HVI"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/lower-section/selfperception/an-xy/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 # Document Name: [Interpretation/Self Perception] An + Xy
 ## Aliases / Search Terms

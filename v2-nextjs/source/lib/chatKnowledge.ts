@@ -93,6 +93,9 @@ const PRIMARY_CODE_TOKEN_STOPWORDS = new Set([
   'when',
 ]);
 
+const LATIN_DIACRITIC_CHARACTER = /[\u00c0-\u024f\u1e00-\u1eff]/g;
+const COMBINING_DIACRITIC_MARK = /[\u0300-\u036f]/g;
+
 export type KnowledgeItem = {
   id?: string;
   title: string;
@@ -107,17 +110,23 @@ export type KnowledgeItem = {
   docLevel?: DocLevel;
 };
 
+function foldLatinDiacritics(text: string): string {
+  return text.replace(LATIN_DIACRITIC_CHARACTER, (character) =>
+    character.normalize('NFD').replace(COMBINING_DIACRITIC_MARK, ''),
+  );
+}
+
 function tokenize(text: string): string[] {
-  const matches = text.toLowerCase().match(/[\p{L}\p{N}%+/'_:-]+/gu);
+  const matches = foldLatinDiacritics(text).toLowerCase().match(/[\p{L}\p{N}%+/'_:-]+/gu);
   return matches ?? [];
 }
 
 function tokenizePreserveCase(text: string): string[] {
-  return text.match(/[\p{L}\p{N}%+/'_:-]+/gu) ?? [];
+  return foldLatinDiacritics(text).match(/[\p{L}\p{N}%+/'_:-]+/gu) ?? [];
 }
 
 function normalizeCompact(text: string): string {
-  return text.replace(/[^\p{L}\p{N}%+]+/gu, '').toLowerCase();
+  return foldLatinDiacritics(text).replace(/[^\p{L}\p{N}%+]+/gu, '').toLowerCase();
 }
 
 function isPotentialCodeToken(token: string): boolean {
@@ -259,7 +268,7 @@ function resolveKnowledgeMeta(item: KnowledgeItem, lang: Language): ResolvedKnow
 }
 
 function inferQueryIntent(queryText: string): QueryIntent {
-  const normalized = queryText.toLowerCase();
+  const normalized = foldLatinDiacritics(queryText).toLowerCase();
 
   const codingPatterns = [
     /채점/u,
@@ -359,6 +368,7 @@ function inferQueryIntent(queryText: string): QueryIntent {
 }
 
 function scoreScopeHints(queryText: string, routeLower: string): number {
+  const normalizedQuery = foldLatinDiacritics(queryText);
   const scopedPatterns = [
     { pattern: /\bprocessing\b/i, routeFragment: '/processing/' },
     { pattern: /\binterpersonal\b/i, routeFragment: '/interpersonal/' },
@@ -378,7 +388,10 @@ function scoreScopeHints(queryText: string, routeLower: string): number {
   let score = 0;
 
   for (const scopedPattern of scopedPatterns) {
-    if (scopedPattern.pattern.test(queryText) && routeLower.includes(scopedPattern.routeFragment)) {
+    if (
+      scopedPattern.pattern.test(normalizedQuery) &&
+      routeLower.includes(scopedPattern.routeFragment)
+    ) {
       score += 40;
     }
   }
@@ -452,10 +465,10 @@ function scoreKnowledgeItem(
   intent: QueryIntent,
   lang: Language,
 ): number {
-  const normalizedQuery = queryText.trim().toLowerCase();
+  const normalizedQuery = foldLatinDiacritics(queryText).trim().toLowerCase();
   const aliasText = item.aliases?.join('\n') ?? '';
   const routeText = item.canonicalRoute ? item.canonicalRoute.replace(/[/_-]+/g, ' ') : '';
-  const aliasesLower = item.aliases?.map((alias) => alias.toLowerCase()) ?? [];
+  const aliasesLower = item.aliases?.map((alias) => foldLatinDiacritics(alias).toLowerCase()) ?? [];
   const routeLower = item.canonicalRoute?.toLowerCase() ?? '';
   const routeSegments = routeLower.split('/').filter(Boolean);
   const rawAliases = item.aliases ?? [];
@@ -537,7 +550,7 @@ function scoreKnowledgeItem(
   }
 
   if (normalizedQuery) {
-    const titleLower = item.title.toLowerCase();
+    const titleLower = foldLatinDiacritics(item.title).toLowerCase();
 
     if (titleLower === normalizedQuery) score += 36;
     if (titleLower.includes(normalizedQuery)) score += 12;

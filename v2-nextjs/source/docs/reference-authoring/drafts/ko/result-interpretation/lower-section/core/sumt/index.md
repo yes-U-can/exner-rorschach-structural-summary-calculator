@@ -16,7 +16,7 @@ relatedRoutes:
   - "scoring-input/determinants/T"
   - "scoring-input/determinants/FT"
   - "scoring-input/determinants/TF"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/core/sumt/index.md"

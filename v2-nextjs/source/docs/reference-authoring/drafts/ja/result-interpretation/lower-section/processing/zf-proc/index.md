@@ -19,7 +19,7 @@ relatedRoutes:
   - "result-interpretation/lower-section/processing/Zd_proc"
   - "result-interpretation/lower-section/processing/W_D_Dd"
   - "scoring-input/z"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-processing-zf-zd-wddd-2026-03-10.md"

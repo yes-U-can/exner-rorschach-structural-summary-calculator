@@ -14,10 +14,10 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/_2AB_Art_Ay"
   - "result-interpretation/lower-section/selfPerception/MOR_self"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/lower-section/ideation/mor/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Ideation] MOR

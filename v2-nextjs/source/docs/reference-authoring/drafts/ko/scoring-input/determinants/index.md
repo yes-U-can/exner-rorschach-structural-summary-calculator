@@ -47,7 +47,7 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/FM"
   - "result-interpretation/lower-section/core/m"
   - "result-interpretation/lower-section/ideation/M_minus"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/determinants/index.md"

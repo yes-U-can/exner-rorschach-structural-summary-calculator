@@ -18,7 +18,7 @@ relatedRoutes:
   - "scoring-input/special-score/FABCOM2"
   - "scoring-input/special-score/CONTAM"
   - "result-interpretation/lower-section/ideation/M_minus"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/ideation/lv2/index.md"

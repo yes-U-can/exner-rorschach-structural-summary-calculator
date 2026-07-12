@@ -12,10 +12,10 @@ relatedRoutes:
   - "scoring-input/fq/u"
   - "scoring-input/fq/o"
   - "result-interpretation/lower-section/mediation/X_minus_percent"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/scoring-input/fq/minus/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Form Quality] -

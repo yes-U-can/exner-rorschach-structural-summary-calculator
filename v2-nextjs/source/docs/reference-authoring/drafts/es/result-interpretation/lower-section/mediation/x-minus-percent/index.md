@@ -3,7 +3,7 @@ canonicalRoute: "result-interpretation/lower-section/mediation/X_minus_percent"
 locale: "es"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/mediation/X_minus_percent"
-displayTitle: "[Interpretacion/Mediacion] X-%"
+displayTitle: "[Interpretación/Mediación] X-%"
 aliases:
   - "X-%"
   - "Distorted Form"
@@ -16,38 +16,38 @@ relatedRoutes:
   - "scoring-input/fq/minus"
   - "result-interpretation/lower-section/ideation/WSum6"
   - "result-interpretation/special-indices/PTI"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/mediation/x-minus-percent/index.md"
 ---
 
-# Nombre del documento: [Interpretacion/Mediacion] X-%
+# Nombre del documento: [Interpretación/Mediación] X-%
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - X-%
 - Distorted Form
 - porcentaje de forma distorsionada
 
-## Definicion central
+## Definición central
 
-`X-%` indica la proporcion de respuestas con uso formal claramente distorsionado.
-En mediacion, funciona como una senal central de alejamiento perceptivo respecto de la realidad compartida.
+`X-%` indica la proporción de respuestas con uso formal claramente distorsionado.
+En mediación, funciona como una señal central de alejamiento perceptivo respecto de la realidad compartida.
 
-## Puntos de interpretacion
+## Puntos de interpretación
 
 - Si `X-%` sube, aumenta la frecuencia de lecturas perceptivas que no encajan bien con la mancha.
-- Si `Xu%` tambien es alto, puede haber mezcla de rareza tolerable y distorsion real.
-- Si `X-%` es alto junto con `WSum6` o `PTI`, la preocupacion clinica aumenta.
+- Si `Xu%` también es alto, puede haber mezcla de rareza tolerable y distorsión real.
+- Si `X-%` es alto junto con `WSum6` o `PTI`, la preocupación clínica aumenta.
 
 ## Precauciones y distinciones
 
-- `X-%` no es lo mismo que `Xu%`; `Xu%` sigue siendo una lectura poco comun pero todavia posible.
-- Debe mirarse junto con el numero total de respuestas y con la distribucion de `FQ-`.
-- Un valor alto orienta, pero no explica por si solo el origen de la distorsion.
+- `X-%` no es lo mismo que `Xu%`; `Xu%` sigue siendo una lectura poco común pero todavía posible.
+- Debe mirarse junto con el número total de respuestas y con la distribución de `FQ-`.
+- Un valor alto orienta, pero no explica por sí solo el origen de la distorsión.
 
-## Limites de interpretacion aislada
+## Limites de interpretación aislada
 
 - `X-%` muestra desajuste perceptivo, pero no basta para decidir si el problema es primariamente perceptivo, ideacional o emocional.
 - Conviene leerlo junto con `S-%`, `Xu%`, `WSum6` y `PTI`.
@@ -62,14 +62,14 @@ En mediacion, funciona como una senal central de alejamiento perceptivo respecto
 
 ## Referencias cruzadas
 
-- [[Interpretacion/Lower Section/Mediacion] Mediacion](ref://result-interpretation/lower-section/mediation)
-- [[Interpretacion/Mediacion] S-%](ref://result-interpretation/lower-section/mediation/S_minus)
-- [[Interpretacion/Mediacion] X+%](ref://result-interpretation/lower-section/mediation/X_plus_percent)
-- [[Interpretacion/Mediacion] Xu%](ref://result-interpretation/lower-section/mediation/Xu_percent)
-- [[Codificacion/FQ] -](ref://scoring-input/fq/-)
-- [[Interpretacion/Ideacion] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
-- [[Interpretacion/Special Indices] PTI](ref://result-interpretation/special-indices/PTI)
+- [[Interpretación/Lower Section/Mediación] Mediación](ref://result-interpretation/lower-section/mediation)
+- [[Interpretación/Mediación] S-%](ref://result-interpretation/lower-section/mediation/S_minus)
+- [[Interpretación/Mediación] X+%](ref://result-interpretation/lower-section/mediation/X_plus_percent)
+- [[Interpretación/Mediación] Xu%](ref://result-interpretation/lower-section/mediation/Xu_percent)
+- [[Codificación/FQ] -](ref://scoring-input/fq/-)
+- [[Interpretación/Ideación] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
+- [[Interpretación/Special Indices] PTI](ref://result-interpretation/special-indices/PTI)
 
 ## Nota de fundamento
 
-- La fundamentacion detallada y las comparaciones de fuente se conservan en la provenance interna.
+- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

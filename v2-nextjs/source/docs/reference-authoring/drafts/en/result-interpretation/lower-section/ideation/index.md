@@ -19,10 +19,10 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/WSum6"
   - "result-interpretation/lower-section/ideation/M_minus"
   - "result-interpretation/lower-section/ideation/Mnone"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/lower-section/ideation/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Lower Section/Ideation] Ideation

@@ -27,6 +27,7 @@ import {
   type ByokSessionStatus,
 } from '@/lib/byokSessionClient';
 import { isByokSessionMissingError, readChatApiErrorPayload } from '@/lib/chatApiErrors';
+import { CHAT_STREAM_PROTOCOL, consumeChatEventStream } from '@/lib/chatStreamProtocol';
 import { validateStructuralSummaryCsv } from '@/lib/structuralSummaryCsv';
 
 type Message = {
@@ -300,7 +301,10 @@ function ChatPageClient() {
         const response = await fetch('/api/chat', {
           method: 'POST',
           credentials: 'include',
-          headers: { 'Content-Type': 'application/json' },
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Chat-Stream-Protocol': CHAT_STREAM_PROTOCOL,
+          },
           body: JSON.stringify({
             message: userMessageContent,
             contextMessages: toEphemeralChatContext(streamingMessages),
@@ -327,8 +331,6 @@ function ChatPageClient() {
           throw new Error(chatUi.serverFallbackError);
         }
 
-        const reader = response.body.getReader();
-        const decoder = new TextDecoder();
         let aiResponseText = '';
         const aiMessageId = Date.now() + 1;
 
@@ -337,39 +339,33 @@ function ChatPageClient() {
           { id: aiMessageId, role: 'ai', content: '' },
         ]);
 
+        const updateAiMessage = (content: string) => {
+          setStreamingMessages((prev) =>
+            prev.map((message) =>
+              message.id === aiMessageId ? { ...message, content } : message,
+            ),
+          );
+        };
+
         try {
-          while (true) {
-            const { done, value } = await reader.read();
-            if (done) break;
+          const terminalEvent = await consumeChatEventStream(response.body, (delta) => {
+            aiResponseText += delta;
+            updateAiMessage(aiResponseText);
+          });
 
-            aiResponseText += decoder.decode(value, { stream: true });
-            setStreamingMessages((prev) =>
-              prev.map((message) =>
-                message.id === aiMessageId ? { ...message, content: aiResponseText } : message,
-              ),
-            );
-          }
-
-          const tail = decoder.decode();
-          if (tail) {
-            aiResponseText += tail;
-            setStreamingMessages((prev) =>
-              prev.map((message) =>
-                message.id === aiMessageId ? { ...message, content: aiResponseText } : message,
-              ),
-            );
+          if (terminalEvent.type !== 'complete') {
+            const notice = terminalEvent.type === 'error'
+              ? getFriendlyErrorMessage(terminalEvent.message)
+              : chatUi.streamInterrupted;
+            aiResponseText = aiResponseText ? `${aiResponseText}\n\n${notice}` : notice;
+            updateAiMessage(aiResponseText);
           }
         } catch (streamError) {
           console.error('Stream interrupted:', streamError);
-          if (aiResponseText) {
-            setStreamingMessages((prev) =>
-              prev.map((message) =>
-                message.id === aiMessageId
-                  ? { ...message, content: `${aiResponseText}\n\n${chatUi.streamInterrupted}` }
-                  : message,
-              ),
-            );
-          }
+          aiResponseText = aiResponseText
+            ? `${aiResponseText}\n\n${chatUi.streamInterrupted}`
+            : chatUi.streamInterrupted;
+          updateAiMessage(aiResponseText);
         }
 
       } catch (error) {

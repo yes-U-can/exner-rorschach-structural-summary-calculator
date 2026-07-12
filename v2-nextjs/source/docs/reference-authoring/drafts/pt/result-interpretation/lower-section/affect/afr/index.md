@@ -3,10 +3,10 @@ canonicalRoute: "result-interpretation/lower-section/affect/Afr"
 locale: "pt"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/affect/Afr"
-displayTitle: "[Interpretacao/Afeto] Afr"
+displayTitle: "[Interpretação/Afeto] Afr"
 aliases:
   - "Afr"
-  - "razao afetiva"
+  - "razão afetiva"
 relatedRoutes:
   - "result-interpretation/lower-section/affect"
   - "result-interpretation/lower-section/affect/FC_CF_C"
@@ -17,49 +17,49 @@ relatedRoutes:
   - "scoring-input/card/VIII"
   - "scoring-input/card/IX"
   - "scoring-input/card/X"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-affect-opening-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao/Afeto] Afr
+# Nome do documento: [Interpretação/Afeto] Afr
 
 ## Apelidos e busca
 
 - Afr
-- razao afetiva
+- razão afetiva
 
-## Definicao central
+## Definição central
 
-`Afr` compara as respostas dadas aos cartoes VIII, IX e X com as respostas dadas aos cartoes I ate VII.
-Na interpretacao, ajuda a estimar quao prontamente a pessoa se aproxima ou se afasta de estimulos com tom afetivo ou cromatico mais forte.
+`Afr` compara as respostas dadas aos cartões VIII, IX e X com as respostas dadas aos cartões I até VII.
+Na interpretação, ajuda a estimar quão prontamente a pessoa se aproxima ou se afasta de estímulos com tom afetivo ou cromático mais forte.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- Quando `Afr` esta baixo, pode haver menor prontidao para se aproximar de situacoes emocionalmente carregadas.
-- Quando `Afr` esta alto, pode haver maior abertura a estimulos afetivamente salientes.
-- O significado melhora quando e lido com `EB`, `Lambda` e o estilo geral de expressao afetiva.
+- Quando `Afr` está baixo, pode haver menor prontidão para se aproximar de situações emocionalmente carregadas.
+- Quando `Afr` está alto, pode haver maior abertura a estímulos afetivamente salientes.
+- O significado melhora quando é lido com `EB`, `Lambda` e o estilo geral de expressão afetiva.
 - Sob estresse recente, `Afr` pode cair temporariamente.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- Se o total de respostas for baixo, a razao pode oscilar demais.
-- `Afr` alto nao significa, sozinho, funcionamento afetivo saudavel, e `Afr` baixo nao equivale automaticamente a evitacao patologica.
-- Diferencas de produtividade cartao a cartao tambem devem ser verificadas antes de conclusoes fortes.
+- Se o total de respostas for baixo, a razão pode oscilar demais.
+- `Afr` alto não significa, sozinho, funcionamento afetivo saudável, e `Afr` baixo não equivale automaticamente a evitação patológica.
+- Diferenças de produtividade cartão a cartão também devem ser verificadas antes de conclusões fortes.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Secao Inferior/Afeto] Afeto](ref://result-interpretation/lower-section/affect)
-- [[Interpretacao/Afeto] FC:CF+C](ref://result-interpretation/lower-section/affect/FC_CF_C)
-- [[Interpretacao/Afeto] Blends:R](ref://result-interpretation/lower-section/affect/Blends_R)
-- [[Interpretacao/Core] Lambda](ref://result-interpretation/lower-section/core/Lambda)
-- [[Interpretacao/Indices Especiais] DEPI](ref://result-interpretation/special-indices/DEPI)
-- [[Interpretacao/Indices Especiais] CDI](ref://result-interpretation/special-indices/CDI)
-- [[Codificacao/Cartao] VIII](ref://scoring-input/card/VIII)
-- [[Codificacao/Cartao] IX](ref://scoring-input/card/IX)
-- [[Codificacao/Cartao] X](ref://scoring-input/card/X)
+- [[Interpretação/Seção Inferior/Afeto] Afeto](ref://result-interpretation/lower-section/affect)
+- [[Interpretação/Afeto] FC:CF+C](ref://result-interpretation/lower-section/affect/FC_CF_C)
+- [[Interpretação/Afeto] Blends:R](ref://result-interpretation/lower-section/affect/Blends_R)
+- [[Interpretação/Core] Lambda](ref://result-interpretation/lower-section/core/Lambda)
+- [[Interpretação/Índices Especiais] DEPI](ref://result-interpretation/special-indices/DEPI)
+- [[Interpretação/Índices Especiais] CDI](ref://result-interpretation/special-indices/CDI)
+- [[Codificação/Cartão] VIII](ref://scoring-input/card/VIII)
+- [[Codificação/Cartão] IX](ref://scoring-input/card/IX)
+- [[Codificação/Cartão] X](ref://scoring-input/card/X)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

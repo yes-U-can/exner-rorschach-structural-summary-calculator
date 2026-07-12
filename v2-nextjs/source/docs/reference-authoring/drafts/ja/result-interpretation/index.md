@@ -14,7 +14,7 @@ relatedRoutes:
   - "result-interpretation/lower-section"
   - "result-interpretation/special-indices"
   - "scoring-input"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-result-interpretation-overview-2026-03-10.md"

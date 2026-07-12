@@ -15,10 +15,10 @@ relatedRoutes:
   - "scoring-input/fq/minus"
   - "result-interpretation/lower-section/ideation/WSum6"
   - "result-interpretation/special-indices/PTI"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/lower-section/mediation/x-minus-percent/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Mediation] X-%

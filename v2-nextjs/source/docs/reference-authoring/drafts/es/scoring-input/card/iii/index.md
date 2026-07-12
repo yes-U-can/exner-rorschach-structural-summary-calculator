@@ -3,13 +3,13 @@ canonicalRoute: "scoring-input/card/III"
 locale: "es"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/card/III"
-displayTitle: "[Codificacion/Tarjetas] III"
+displayTitle: "[Codificación/Tarjetas] III"
 aliases:
   - "Card III"
   - "card III"
   - "card 3"
   - "tarjeta III"
-  - "lamina III"
+  - "lámina III"
 relatedRoutes:
   - "scoring-input/score"
   - "scoring-input/determinants/M"
@@ -18,51 +18,51 @@ relatedRoutes:
   - "scoring-input/special-score/COP"
   - "scoring-input/special-score/AG"
   - "scoring-input/popular"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/card/iii/index.md"
 ---
 
-# Nombre del documento: [Codificacion/Tarjetas] III
+# Nombre del documento: [Codificación/Tarjetas] III
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - Card III
 - card III
 - card 3
 - tarjeta III
-- lamina III
+- lámina III
 
-## Definicion central
+## Definición central
 
-`Tarjeta III` facilita con frecuencia respuestas humanas y escenas de interaccion.
-La pagina funciona como recordatorio de codificacion para contenido humano, movimiento y calidad relacional.
+`Tarjeta III` facilita con frecuencia respuestas humanas y escenas de interacción.
+La página funciona como recordatorio de codificación para contenido humano, movimiento y calidad relacional.
 
-## Condiciones de aplicacion
+## Condiciones de aplicación
 
-- Son comunes respuestas con dos personas, dos figuras humanas o figuras en relacion.
+- Son comunes respuestas con dos personas, dos figuras humanas o figuras en relación.
 - Si el movimiento humano es claro, revisa `M`.
-- Si la respuesta expresa cooperacion o agresion entre figuras en movimiento, revisa `COP` y `AG`.
-- Dado que el contenido humano aparece con frecuencia, tambien conviene revisar `H` y la decision `GHR / PHR`.
+- Si la respuesta expresa cooperación o agresión entre figuras en movimiento, revisa `COP` y `AG`.
+- Dado que el contenido humano aparece con frecuencia, también conviene revisar `H` y la decisión `GHR / PHR`.
 
 ## Precauciones y distinciones
 
 - La mera presencia de dos figuras no basta para `COP` o `AG`.
-- Que una respuesta parezca social no significa automaticamente que haya movimiento humano.
-- Si la escena se organiza como dos objetos separados sin una accion definida, no agregas codigos relacionales especiales solo por intuicion.
+- Que una respuesta parezca social no significa automáticamente que haya movimiento humano.
+- Si la escena se organiza como dos objetos separados sin una acción definida, no agregas códigos relacionales especiales solo por intuición.
 
 ## Referencias cruzadas
 
-- [[Codificacion] score](ref://scoring-input/score)
-- [[Codificacion/Determinantes] M](ref://scoring-input/determinants/M)
-- [[Codificacion/Contenido] H](ref://scoring-input/contents/H)
-- [[Codificacion/GHR-PHR] GHR/PHR](ref://scoring-input/gphr)
-- [[Codificacion/Puntuaciones especiales] COP](ref://scoring-input/special-score/COP)
-- [[Codificacion/Puntuaciones especiales] AG](ref://scoring-input/special-score/AG)
-- [[Codificacion/Popular] Popular](ref://scoring-input/popular)
+- [[Codificación] score](ref://scoring-input/score)
+- [[Codificación/Determinantes] M](ref://scoring-input/determinants/M)
+- [[Codificación/Contenido] H](ref://scoring-input/contents/H)
+- [[Codificación/GHR-PHR] GHR/PHR](ref://scoring-input/gphr)
+- [[Codificación/Puntuaciones especiales] COP](ref://scoring-input/special-score/COP)
+- [[Codificación/Puntuaciones especiales] AG](ref://scoring-input/special-score/AG)
+- [[Codificación/Popular] Popular](ref://scoring-input/popular)
 
 ## Nota de fundamento
 
-- La fundamentacion detallada y la comparacion de fuentes se conservan en la provenance interna.
-- El cuerpo publico evita citar directamente los titulos de las fuentes.
+- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
+- El cuerpo público evita citar directamente los títulos de las fuentes.

@@ -17,10 +17,10 @@ relatedRoutes:
   - "scoring-input/determinants/CF"
   - "scoring-input/determinants/C"
   - "scoring-input/fq/-"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/scoring-input/card/x/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Cards] X

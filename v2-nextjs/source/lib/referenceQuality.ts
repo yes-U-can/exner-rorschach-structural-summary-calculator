@@ -25,6 +25,14 @@ export type ReferenceLocaleQuality = {
     }>;
     pass: boolean;
   };
+  specialIndexEvidence: {
+    errors: Array<{
+      canonicalRoute: string;
+      expectedTier: string;
+      actualTier: string | null;
+    }>;
+    pass: boolean;
+  };
   querySet: {
     filePath: string | null;
     targetCount: number;

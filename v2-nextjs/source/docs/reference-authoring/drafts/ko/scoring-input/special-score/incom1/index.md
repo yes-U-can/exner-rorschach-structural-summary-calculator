@@ -16,7 +16,7 @@ relatedRoutes:
   - "scoring-input/special-score/CONTAM"
   - "result-interpretation/lower-section/ideation/Sum6"
   - "result-interpretation/lower-section/ideation/WSum6"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/special-score/incom1/index.md"

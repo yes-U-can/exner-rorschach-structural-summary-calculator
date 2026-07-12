@@ -21,10 +21,10 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/MOR"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
   - "result-interpretation/lower-section/interpersonal/PureH"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/lower-section/selfperception/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Lower Section/Self Perception] Self Perception

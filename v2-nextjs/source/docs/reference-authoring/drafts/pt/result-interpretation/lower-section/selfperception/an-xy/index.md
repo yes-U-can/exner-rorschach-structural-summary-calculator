@@ -3,55 +3,55 @@ canonicalRoute: "result-interpretation/lower-section/selfPerception/An_Xy"
 locale: "pt"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/selfPerception/An_Xy"
-displayTitle: "[Interpretacao/Autopercepcao] An + Xy"
+displayTitle: "[Interpretação/Autopercepção] An + Xy"
 aliases:
   - "An+Xy"
   - "anatomia mais raio-x"
-  - "preocupacao corporal"
+  - "preocupação corporal"
 relatedRoutes:
   - "result-interpretation/lower-section/selfPerception"
   - "result-interpretation/lower-section/selfPerception/MOR_self"
   - "scoring-input/contents/An"
   - "scoring-input/contents/Xy"
   - "result-interpretation/special-indices/HVI"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-selfperception-family-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao/Autopercepcao] An + Xy
+# Nome do documento: [Interpretação/Autopercepção] An + Xy
 
 ## Apelidos e busca
 
 - An+Xy
 - anatomia mais raio-x
-- preocupacao corporal
+- preocupação corporal
 
-## Definicao central
+## Definição central
 
-`An+Xy` combina conteudo de anatomia e conteudo de raio-x.
-Em `Autopercepcao`, funciona como pista de preocupacao com o corpo, seu funcionamento ou sua vulnerabilidade.
+`An+Xy` combina conteúdo de anatomia e conteúdo de raio-x.
+Em `Autopercepção`, funciona como pista de preocupação com o corpo, seu funcionamento ou sua vulnerabilidade.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- Se o total e alto, pode haver maior foco em orgaos, dano corporal, doenca ou fragilidade fisica.
-- A variavel pode aparecer em preocupacao somatica, ansiedade corporal ou estresse recente ligado a saude.
-- Se se combina com `MOR_self`, a imagem corporal pode parecer mais danificada, fraca ou ameacadora.
+- Se o total é alto, pode haver maior foco em órgãos, dano corporal, doença ou fragilidade física.
+- A variável pode aparecer em preocupação somática, ansiedade corporal ou estresse recente ligado a saúde.
+- Se se combina com `MOR_self`, a imagem corporal pode parecer mais danificada, fraca ou ameaçadora.
 - O sentido depende de o corpo aparecer de forma realista, temida ou simbolicamente carregada.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- Formacao medica, doenca real ou tratamento recente podem elevar esta variavel sem significado psicopatologico especial.
+- Formação médica, doença real ou tratamento recente podem elevar esta variável sem significado psicopatológico especial.
 - `Xy` nem sempre carrega exatamente o mesmo significado que `An` em cada resposta, por isso o contexto continua importante.
-- Valor baixo nao exclui toda preocupacao corporal.
+- Valor baixo não exclui toda preocupação corporal.
 
-## Limites da interpretacao isolada
+## Limites da interpretação isolada
 
-- A variavel aponta para foco corporal, mas nao decide sozinha se esse foco e hipocondriaco, traumatico ou situacional.
+- A variável aponta para foco corporal, mas não decide sozinha se esse foco é hipocondríaco, traumático ou situacional.
 - Deve ser lida com `MOR_self`, `SumV_self` e `HVI`.
 
-## Variaveis para revisar em conjunto
+## Variáveis para revisar em conjunto
 
 - `MOR_self`
 - `An`
@@ -59,14 +59,14 @@ Em `Autopercepcao`, funciona como pista de preocupacao com o corpo, seu funciona
 - `HVI`
 - `SumV_self`
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Autopercepcao] Autopercepcao](ref://result-interpretation/lower-section/selfPerception)
-- [[Interpretacao/Autopercepcao] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
-- [[Codificacao/Conteudo] An](ref://scoring-input/contents/An)
-- [[Codificacao/Conteudo] Xy](ref://scoring-input/contents/Xy)
-- [[Interpretacao/Indices Especiais] HVI](ref://result-interpretation/special-indices/HVI)
+- [[Interpretação/Autopercepção] Autopercepção](ref://result-interpretation/lower-section/selfPerception)
+- [[Interpretação/Autopercepção] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
+- [[Codificação/Conteúdo] An](ref://scoring-input/contents/An)
+- [[Codificação/Conteúdo] Xy](ref://scoring-input/contents/Xy)
+- [[Interpretação/Índices Especiais] HVI](ref://result-interpretation/special-indices/HVI)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

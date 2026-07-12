@@ -21,7 +21,7 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/MOR"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
   - "result-interpretation/lower-section/interpersonal/PureH"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/selfperception/index.md"

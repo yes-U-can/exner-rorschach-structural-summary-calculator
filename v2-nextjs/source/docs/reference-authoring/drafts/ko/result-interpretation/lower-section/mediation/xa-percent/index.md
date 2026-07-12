@@ -16,7 +16,7 @@ relatedRoutes:
   - "result-interpretation/lower-section/mediation/X_minus_percent"
   - "scoring-input/fq"
   - "scoring-input/popular"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/mediation/xa-percent/index.md"

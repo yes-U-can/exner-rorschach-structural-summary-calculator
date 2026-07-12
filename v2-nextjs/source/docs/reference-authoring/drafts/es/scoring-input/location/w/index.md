@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/location/W"
 locale: "es"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/location/W"
-displayTitle: "[Codificacion/Localizacion] W"
+displayTitle: "[Codificación/Localización] W"
 aliases:
   - "W"
   - "respuesta global"
@@ -13,43 +13,43 @@ relatedRoutes:
   - "scoring-input/location/D"
   - "scoring-input/location/Dd"
   - "result-interpretation/upper-section/W"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/location/w/index.md"
 ---
 
-# Nombre del documento: [Codificacion/Localizacion] W
+# Nombre del documento: [Codificación/Localización] W
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - W
 - respuesta global
 - mancha entera
 
-## Definicion central
+## Definición central
 
-`W` se usa cuando la respuesta emplea toda la mancha.  
+`W` se usa cuando la respuesta emplea toda la mancha.
 No basta con que la respuesta suene global; el sujeto debe usar realmente la mancha entera.
 
-## Condiciones de aplicacion
+## Condiciones de aplicación
 
 - La respuesta incluye todas las partes de la mancha.
 - No se excluyen fragmentos relevantes de la figura al construir el objeto.
-- La localizacion queda confirmada en la encuesta o en la hoja de localizacion.
+- La localización queda confirmada en la encuesta o en la hoja de localización.
 
 ## Precauciones y distinciones
 
-- Una respuesta comunmente dada a toda la mancha no recibe `W` si el sujeto deja fuera partes del blot.
+- Una respuesta comúnmente dada a toda la mancha no recibe `W` si el sujeto deja fuera partes del blot.
 - Si toda la mancha se usa junto con espacio blanco, corresponde [`WS`](ref://scoring-input/location/WS).
-- `W` no implica por si mismo buena organizacion ni buena forma.
+- `W` no implica por sí mismo buena organización ni buena forma.
 
 ## Referencias cruzadas
 
-- [[Codificacion/Localizacion] WS](ref://scoring-input/location/WS)
-- [[Codificacion/Localizacion] D](ref://scoring-input/location/D)
-- [[Codificacion/Localizacion] Dd](ref://scoring-input/location/Dd)
-- [[Interpretacion/Upper Section] W](ref://result-interpretation/upper-section/W)
+- [[Codificación/Localización] WS](ref://scoring-input/location/WS)
+- [[Codificación/Localización] D](ref://scoring-input/location/D)
+- [[Codificación/Localización] Dd](ref://scoring-input/location/Dd)
+- [[Interpretación/Upper Section] W](ref://result-interpretation/upper-section/W)
 
 ## Nota de fundamento
 

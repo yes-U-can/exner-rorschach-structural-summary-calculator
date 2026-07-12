@@ -3,12 +3,12 @@ canonicalRoute: "scoring-input/gphr"
 locale: "pt"
 docKind: "coding-overview"
 canonicalTitle: "scoring-input/gphr"
-displayTitle: "[Codificacao/GHR-PHR] GHR/PHR"
+displayTitle: "[Codificação/GHR-PHR] GHR/PHR"
 aliases:
   - "GHR/PHR"
-  - "representacao humana"
-  - "boa representacao humana"
-  - "ma representacao humana"
+  - "representação humana"
+  - "boa representação humana"
+  - "ma representação humana"
 relatedRoutes:
   - "scoring-input/gphr/GHR"
   - "scoring-input/gphr/PHR"
@@ -21,54 +21,54 @@ relatedRoutes:
   - "result-interpretation/lower-section/interpersonal/HumanCont"
   - "result-interpretation/lower-section/interpersonal/PureH"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-gphr-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificacao/GHR-PHR] GHR/PHR
+# Nome do documento: [Codificação/GHR-PHR] GHR/PHR
 
 ## Apelidos e busca
 
 - GHR/PHR
-- representacao humana
-- boa representacao humana
-- ma representacao humana
+- representação humana
+- boa representação humana
+- ma representação humana
 
-## Definicao central
+## Definição central
 
-`GHR` e `PHR` sao codigos especiais usados para qualificar a qualidade de uma resposta representacional humana.
-Eles nao sao escolhidos por impressao clinica geral, mas por uma sequencia de decisao apoiada em codigos que ja foram atribuidos.
+`GHR` e `PHR` são códigos especiais usados para qualificar a qualidade de uma resposta representacional humana.
+Eles não são escolhidos por impressão clínica geral, mas por uma sequência de decisão apoiada em códigos que já foram atribuídos.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
-- Primeiro confirme que a resposta entra no dominio de representacao humana.
-- Isso pode acontecer por conteudo humano, determinante `M` ou uma resposta `FM` com [`COP`](ref://scoring-input/special-score/COP) ou [`AG`](ref://scoring-input/special-score/AG).
-- Depois siga a sequencia de decisao para definir se a resposta termina em [`GHR`](ref://scoring-input/gphr/GHR) ou [`PHR`](ref://scoring-input/gphr/PHR).
-- A decisao final depende de qualidade formal, escores cognitivos especiais, `AG`, `MOR`, `An`, `Hd`, popularidade e outros sinais ja codificados.
+- Primeiro confirme que a resposta entra no domínio de representação humana.
+- Isso pode acontecer por conteúdo humano, determinante `M` ou uma resposta `FM` com [`COP`](ref://scoring-input/special-score/COP) ou [`AG`](ref://scoring-input/special-score/AG).
+- Depois siga a sequência de decisão para definir se a resposta termina em [`GHR`](ref://scoring-input/gphr/GHR) ou [`PHR`](ref://scoring-input/gphr/PHR).
+- A decisão final depende de qualidade formal, escores cognitivos especiais, `AG`, `MOR`, `An`, `Hd`, popularidade e outros sinais já codificados.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `GHR` e `PHR` nao sao atribuidos juntos; a resposta termina em um ou no outro.
-- Conteudo humano sozinho nao basta para fechar a decisao.
-- `GHR` nao significa "pessoa boa" e `PHR` nao significa "pessoa ruim"; sao classificacoes do sistema para representacao humana.
-- Essas decisoes alimentam variaveis posteriores como [`HumanCont`](ref://result-interpretation/lower-section/interpersonal/HumanCont), [`PureH`](ref://result-interpretation/lower-section/interpersonal/PureH) e [`H ratio`](ref://result-interpretation/lower-section/selfPerception/H_ratio).
+- `GHR` e `PHR` não são atribuídos juntos; a resposta termina em um ou no outro.
+- Conteúdo humano sozinho não basta para fechar a decisão.
+- `GHR` não significa "pessoa boa" e `PHR` não significa "pessoa ruim"; são classificações do sistema para representação humana.
+- Essas decisões alimentam variáveis posteriores como [`HumanCont`](ref://result-interpretation/lower-section/interpersonal/HumanCont), [`PureH`](ref://result-interpretation/lower-section/interpersonal/PureH) e [`H ratio`](ref://result-interpretation/lower-section/selfPerception/H_ratio).
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao/GHR-PHR] GHR](ref://scoring-input/gphr/GHR)
-- [[Codificacao/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
-- [[Codificacao/Conteudo] H](ref://scoring-input/contents/H)
-- [[Codificacao/Conteudo] Hd](ref://scoring-input/contents/Hd)
-- [[Codificacao/Determinantes] M](ref://scoring-input/determinants/M)
-- [[Codificacao/Escore Especial] COP](ref://scoring-input/special-score/COP)
-- [[Codificacao/Escore Especial] AG](ref://scoring-input/special-score/AG)
-- [[Codificacao/Escore Especial] MOR](ref://scoring-input/special-score/MOR)
-- [[Interpretacao/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
-- [[Interpretacao/Interpersonal] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)
-- [[Interpretacao/Autopercepcao] H ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
+- [[Codificação/GHR-PHR] GHR](ref://scoring-input/gphr/GHR)
+- [[Codificação/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
+- [[Codificação/Conteúdo] H](ref://scoring-input/contents/H)
+- [[Codificação/Conteúdo] Hd](ref://scoring-input/contents/Hd)
+- [[Codificação/Determinantes] M](ref://scoring-input/determinants/M)
+- [[Codificação/Escore Especial] COP](ref://scoring-input/special-score/COP)
+- [[Codificação/Escore Especial] AG](ref://scoring-input/special-score/AG)
+- [[Codificação/Escore Especial] MOR](ref://scoring-input/special-score/MOR)
+- [[Interpretação/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
+- [[Interpretação/Interpersonal] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)
+- [[Interpretação/Autopercepção] H ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

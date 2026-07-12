@@ -3,11 +3,11 @@ canonicalRoute: "result-interpretation/upper-section/dq_plus"
 locale: "pt"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/upper-section/dq_plus"
-displayTitle: "[Interpretacao/Secao Superior] DQ+"
+displayTitle: "[Interpretação/Seção Superior] DQ+"
 aliases:
   - "DQ+"
   - "respostas sintetizadas"
-  - "numero de respostas DQ+"
+  - "número de respostas DQ+"
 relatedRoutes:
   - "result-interpretation/upper-section"
   - "result-interpretation/upper-section/dq_o"
@@ -15,46 +15,46 @@ relatedRoutes:
   - "result-interpretation/upper-section/dq_v"
   - "scoring-input/dq/+"
   - "result-interpretation/lower-section/processing/DQ_plus_proc"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-upper-section-family-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao/Secao Superior] DQ+
+# Nome do documento: [Interpretação/Seção Superior] DQ+
 
 ## Apelidos e busca
 
 - DQ+
 - respostas sintetizadas
-- numero de respostas DQ+
+- número de respostas DQ+
 
-## Definicao central
+## Definição central
 
-`DQ+` e a frequencia de respostas com qualidade evolutiva bem integrada.
-Na interpretacao, indica com que frequencia aparecem organizacoes complexas e bem articuladas no protocolo.
+`DQ+` é a frequência de respostas com qualidade evolutiva bem integrada.
+Na interpretação, indica com que frequência aparecem organizações complexas e bem articuladas no protocolo.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- A presenca de `DQ+` sugere capacidade de integrar partes do estimulo em configuracoes mais complexas.
-- `DQ+` relativamente alto pode refletir maior complexidade organizadora disponivel no protocolo.
-- `DQ+` baixo pode indicar predominio de respostas mais simples ou menos tentativas de integracao.
+- A presença de `DQ+` sugere capacidade de integrar partes do estímulo em configurações mais complexas.
+- `DQ+` relativamente alto pode refletir maior complexidade organizadora disponível no protocolo.
+- `DQ+` baixo pode indicar predomínio de respostas mais simples ou menos tentativas de integração.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `DQ+` alto nao deve ser interpretado automaticamente como capacidade cognitiva superior.
-- Se `DQ+` estiver alto mas `FQ` ou `Zd` estiverem fracos, a complexidade pode nao ser eficiente.
-- `DQ+` baixo tambem pode aparecer em protocolos breves ou muito defensivos.
+- `DQ+` alto não deve ser interpretado automaticamente como capacidade cognitiva superior.
+- Se `DQ+` estiver alto mas `FQ` ou `Zd` estiverem fracos, a complexidade pode não ser eficiente.
+- `DQ+` baixo também pode aparecer em protocolos breves ou muito defensivos.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Secao Superior] Secao Superior](ref://result-interpretation/upper-section)
-- [[Interpretacao/Secao Superior] DQo](ref://result-interpretation/upper-section/dq_o)
-- [[Interpretacao/Secao Superior] DQv/+](ref://result-interpretation/upper-section/dq_vplus)
-- [[Interpretacao/Secao Superior] DQv](ref://result-interpretation/upper-section/dq_v)
-- [[Codificacao/DQ] +](ref://scoring-input/dq/%2B)
-- [[Interpretacao/Processing] DQ+](ref://result-interpretation/lower-section/processing/DQ_plus_proc)
+- [[Interpretação/Seção Superior] Seção Superior](ref://result-interpretation/upper-section)
+- [[Interpretação/Seção Superior] DQo](ref://result-interpretation/upper-section/dq_o)
+- [[Interpretação/Seção Superior] DQv/+](ref://result-interpretation/upper-section/dq_vplus)
+- [[Interpretação/Seção Superior] DQv](ref://result-interpretation/upper-section/dq_v)
+- [[Codificação/DQ] +](ref://scoring-input/dq/%2B)
+- [[Interpretação/Processing] DQ+](ref://result-interpretation/lower-section/processing/DQ_plus_proc)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

@@ -15,7 +15,7 @@ relatedRoutes:
   - "scoring-input/location/DdS"
   - "result-interpretation/upper-section/W"
   - "result-interpretation/upper-section/S"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/location/ws/index.md"

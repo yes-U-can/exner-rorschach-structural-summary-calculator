@@ -25,14 +25,20 @@ import { parseJsonWithSizeLimit, REQUEST_BODY_SIZE_POLICIES } from '@/lib/reques
 import { normalizeEphemeralChatContext } from '@/lib/chatEphemeralContext';
 import { readByokSessionFromRequest } from '@/lib/byokSession';
 import { BYOK_SESSION_MISSING_CODE } from '@/lib/chatApiErrors';
+import { detectChatSafetyAssessment } from '@/lib/chatSafety';
+import { classifyChatProviderError } from '@/lib/chatProviderErrors';
+import {
+  CHAT_STREAM_CONTENT_TYPE,
+  CHAT_STREAM_PROTOCOL,
+  encodeChatStreamEvent,
+  type ChatStreamTerminalEvent,
+} from '@/lib/chatStreamProtocol';
 import {
   getHybridCodingRuleChunks,
   getHybridInterpretationKnowledge,
   type RetrievalTraceEntry,
 } from '@/lib/referenceHybridRetrieval';
-import {
-  DEFAULT_INTERPRETATION_GUARDRAIL_PROMPT,
-} from '@/lib/interpretationGuardrails';
+import { buildInterpretationGuardrailPrompt } from '@/lib/interpretationGuardrails';
 import { validateStructuralSummaryCsv } from '@/lib/structuralSummaryCsv';
 import {
   applyAiHarnessHeaders,
@@ -41,6 +47,7 @@ import {
   createOpenAITextStream,
   getAiMaxOutputTokens,
   getAiPromptProfile,
+  OPENAI_GENERATION_TIMEOUT_MS,
   type AiModelMessage,
   type OpenAITextStreamCompletion,
   type OpenAITextStreamResult,
@@ -51,16 +58,6 @@ type NormalizedMessage = {
   content: string;
 };
 type ChatRequestMode = 'interpretation' | 'coding_assist';
-type RiskFlagLevel = 'none' | 'medium' | 'high';
-type RiskFlagType = 'crisis' | 'diagnostic_attempt' | null;
-type SafetyAssessment = {
-  level: RiskFlagLevel;
-  type: RiskFlagType;
-  interventionTriggered: boolean;
-  interventionType: string | null;
-  interventionReason: string | null;
-  safeResponse: string | null;
-};
 type ChatStreamStatus =
   | 'completed'
   | 'partial_incomplete'
@@ -111,171 +108,6 @@ function normalizeIncomingMessage(input: unknown): NormalizedMessage | null {
   return { role: 'user', content };
 }
 
-function detectSafetyAssessment(text: string, actorRole: 'user' | 'admin'): SafetyAssessment {
-  const normalized = text.toLowerCase();
-  const crisisSignals = [
-    'suicide',
-    'kill myself',
-    'self-harm',
-    'self harm',
-    'want to die',
-    'end my life',
-    '자살',
-    '죽고 싶',
-    '죽고싶',
-    '자해',
-    '나를 해치',
-    '스스로 해치',
-    '목숨을 끊',
-    '극단적 선택',
-    '死にたい',
-    '自殺',
-    '自傷',
-    '消えたい',
-    '命を絶ち',
-    'suicidio',
-    'suicidarme',
-    'suicid',
-    'quitarme la vida',
-    'matarme',
-    'hacerme daño',
-    'quiero morir',
-    'suicídio',
-    'suicidar',
-    'me matar',
-    'tirar minha vida',
-    'me machucar',
-    'quero morrer',
-  ];
-  const diagnosticAttemptSignals = [
-    'diagnose me',
-    'what disorder',
-    'which disorder',
-    'am i depressed',
-    '진단해',
-    '진단 내려',
-    '무슨 장애',
-    '무슨 병',
-    '우울증인가',
-    '우울증이야',
-    '성격장애',
-    '診断して',
-    '何の障害',
-    'どんな障害',
-    'うつ病ですか',
-    'diagnostícame',
-    'qué trastorno',
-    'estoy deprimido',
-    'depresión',
-    'me diagnostique',
-    'que transtorno',
-    'estou deprimido',
-    'depressão',
-  ];
-
-  const hasCrisisSignal = crisisSignals.some((signal) => normalized.includes(signal));
-  if (hasCrisisSignal) {
-    return {
-      level: 'high',
-      type: 'crisis',
-      interventionTriggered: true,
-      interventionType: 'crisis_block',
-      interventionReason: 'Possible immediate self-harm or suicide risk signal.',
-      safeResponse:
-        'I cannot provide crisis intervention. If you may be in immediate danger, please contact local emergency services now. In South Korea, call 1577-0199 for mental health crisis support.',
-    };
-  }
-
-  if (actorRole === 'user') {
-    const hasDiagnosticSignal = diagnosticAttemptSignals.some((signal) => normalized.includes(signal));
-    if (hasDiagnosticSignal) {
-      return {
-        level: 'medium',
-        type: 'diagnostic_attempt',
-        interventionTriggered: false,
-        interventionType: null,
-        interventionReason: null,
-        safeResponse: null,
-      };
-    }
-  }
-
-  return {
-    level: 'none',
-    type: null,
-    interventionTriggered: false,
-    interventionType: null,
-    interventionReason: null,
-    safeResponse: null,
-  };
-}
-
-function classifyProviderError(error: unknown): {
-  code: string;
-  publicMessage: string;
-  status: number;
-} {
-  const candidate = error as {
-    status?: number;
-    code?: string;
-    type?: string;
-    message?: string;
-    error?: { code?: string; type?: string; message?: string };
-  };
-  const status = Number(candidate?.status ?? 0);
-  const code = String(candidate?.code ?? candidate?.error?.code ?? '').toLowerCase();
-  const type = String(candidate?.type ?? candidate?.error?.type ?? '').toLowerCase();
-  const message = String(candidate?.message ?? candidate?.error?.message ?? '').toLowerCase();
-  const haystack = [code, type, message].join(' ');
-
-  if (status === 401 || haystack.includes('invalid_api_key') || haystack.includes('api key')) {
-    return {
-      code: 'chat_provider_invalid_api_key',
-      publicMessage: 'The API key was rejected by the AI provider.',
-      status: 401,
-    };
-  }
-
-  if (
-    status === 402 ||
-    status === 429 ||
-    haystack.includes('insufficient_quota') ||
-    haystack.includes('quota') ||
-    haystack.includes('billing') ||
-    haystack.includes('payment')
-  ) {
-    return {
-      code: 'chat_provider_quota_or_billing',
-      publicMessage: 'The AI provider reported a billing, quota, or rate-limit problem.',
-      status: 402,
-    };
-  }
-
-  if (
-    status === 404 ||
-    haystack.includes('model_not_found') ||
-    (haystack.includes('model') && (
-      haystack.includes('does not exist') ||
-      haystack.includes('not found') ||
-      haystack.includes('not available') ||
-      haystack.includes('not supported') ||
-      haystack.includes('access')
-    ))
-  ) {
-    return {
-      code: 'chat_provider_model_unavailable',
-      publicMessage: 'The selected AI model is not available for this API key.',
-      status: 502,
-    };
-  }
-
-  return {
-    code: 'chat_provider_request_failed',
-    publicMessage: 'AI provider rejected the request. Check your API key access or model availability.',
-    status: 502,
-  };
-}
-
 function getTerminalStreamStatus(
   completion: OpenAITextStreamCompletion,
   responseLength: number,
@@ -293,8 +125,67 @@ function getTerminalStreamStatus(
   return 'provider_unknown';
 }
 
+function buildChatStreamTerminalEvent(
+  completion: OpenAITextStreamCompletion,
+): ChatStreamTerminalEvent {
+  if (completion.status === 'completed') {
+    return { type: 'complete' };
+  }
+  if (completion.status === 'incomplete' || completion.status === 'aborted') {
+    return {
+      type: 'incomplete',
+      reason:
+        completion.incompleteReason ??
+        (completion.status === 'aborted' ? 'aborted' : 'provider_incomplete'),
+    };
+  }
+
+  const failure = classifyChatProviderError({
+    code: completion.errorCode,
+    message: completion.errorMessage,
+  });
+  return {
+    type: 'error',
+    code: failure.code,
+    message: failure.publicMessage,
+  };
+}
+
+function applyChatStreamResponseHeaders(headers: Headers, structuredStreamRequested: boolean) {
+  if (structuredStreamRequested) {
+    headers.set('X-Chat-Stream-Protocol', CHAT_STREAM_PROTOCOL);
+    headers.set('Content-Type', CHAT_STREAM_CONTENT_TYPE);
+  } else {
+    headers.set('Content-Type', 'text/plain; charset=utf-8');
+  }
+  headers.set('Cache-Control', 'no-cache, no-transform');
+  headers.set('X-Accel-Buffering', 'no');
+}
+
+function buildImmediateChatResponse(args: {
+  content: string;
+  headers: Headers;
+  structuredStreamRequested: boolean;
+}) {
+  applyChatStreamResponseHeaders(args.headers, args.structuredStreamRequested);
+  if (!args.structuredStreamRequested) {
+    return new Response(args.content, { headers: args.headers });
+  }
+
+  const stream = new ReadableStream<Uint8Array>({
+    start(controller) {
+      controller.enqueue(encodeChatStreamEvent({ type: 'delta', text: args.content }));
+      controller.enqueue(encodeChatStreamEvent({ type: 'complete' }));
+      controller.close();
+    },
+  });
+  return new Response(stream, { headers: args.headers });
+}
+
 export async function POST(req: Request) {
   const requestId = randomUUID();
+  const structuredStreamRequested =
+    req.headers.get('X-Chat-Stream-Protocol') === CHAT_STREAM_PROTOCOL;
 
   try {
     const byokSession = readByokSessionFromRequest(req);
@@ -353,6 +244,36 @@ export async function POST(req: Request) {
     const workflowMode = normalizeChatWorkflowMode(body.mode);
     const promptProfile = getAiPromptProfile(workflowMode);
     const workflowLocale = normalizeWorkflowLocale(body.lang);
+    const provider = byokSession.provider;
+    const apiKey = byokSession.apiKey;
+    const selectedModel = getDefaultModelForProvider(provider);
+    const safety = detectChatSafetyAssessment({
+      text: userMessage.content,
+      locale: workflowLocale,
+      actorRole: 'user',
+    });
+
+    if (safety.interventionTriggered && safety.safeResponse) {
+      logApiError('chat_safety_intervention', requestId, new Error('Safety intervention triggered.'), {
+        locale: workflowLocale,
+        workflowType: workflowMode,
+        riskFlagLevel: safety.level,
+        riskFlagType: safety.type,
+      });
+
+      const responseHeaders = new Headers();
+      responseHeaders.set('X-Chat-Request-Id', requestId);
+      responseHeaders.set('X-Chat-Model-Id', selectedModel.id);
+      responseHeaders.set('X-Chat-Workflow-Mode', workflowMode);
+      responseHeaders.set('X-Chat-Safety-Intervention', 'true');
+      applyAiHarnessHeaders(responseHeaders, promptProfile);
+      return buildImmediateChatResponse({
+        content: safety.safeResponse,
+        headers: responseHeaders,
+        structuredStreamRequested,
+      });
+    }
+
     const codingAssistContext =
       workflowMode === 'coding_assist' ? normalizeCodingAssistContext(body.workflowContext) : null;
     if (workflowMode === 'coding_assist' && !codingAssistContext) {
@@ -375,35 +296,16 @@ export async function POST(req: Request) {
       );
     }
 
-    const provider = byokSession.provider;
-    const apiKey = byokSession.apiKey;
-    const selectedModel = getDefaultModelForProvider(provider);
-
-    const safety = detectSafetyAssessment(userMessage.content, 'user');
-
     const normalizedMessages: NormalizedMessage[] = [...contextResult.messages, userMessage];
+    const providerSignal = AbortSignal.any([
+      req.signal,
+      AbortSignal.timeout(OPENAI_GENERATION_TIMEOUT_MS),
+    ]);
     const retrievalQuery = buildChatRetrievalQuery({
       mode: workflowMode,
       messages: normalizedMessages,
       maxUserMessages: workflowMode === 'interpretation' ? 3 : 4,
     });
-
-    if (safety.interventionTriggered && safety.safeResponse) {
-      logApiError('chat_safety_intervention', requestId, new Error('Safety intervention triggered.'), {
-        locale: workflowLocale,
-        workflowType: workflowMode,
-        riskFlagLevel: safety.level,
-        riskFlagType: safety.type,
-      });
-
-      const responseHeaders = new Headers();
-      responseHeaders.set('X-Chat-Request-Id', requestId);
-      responseHeaders.set('X-Chat-Model-Id', selectedModel.id);
-      responseHeaders.set('X-Chat-Workflow-Mode', workflowMode);
-      responseHeaders.set('X-Chat-Safety-Intervention', 'true');
-      applyAiHarnessHeaders(responseHeaders, promptProfile);
-      return new Response(safety.safeResponse, { headers: responseHeaders });
-    }
 
     const formattedMessages: AiModelMessage[] = normalizedMessages.map((m) => ({
       role: m.role === 'ai' ? 'assistant' : 'user',
@@ -423,6 +325,7 @@ export async function POST(req: Request) {
         lang: workflowLocale,
         provider,
         apiKey,
+        signal: providerSignal,
       });
       const primaryKnowledge = hybridKnowledge.items;
       retrievalMode = hybridKnowledge.mode;
@@ -462,7 +365,9 @@ export async function POST(req: Request) {
           ].join('\n')
         : '';
       fullSystemPrompt = buildSystemPrompt(
-        [DEFAULT_INTERPRETATION_GUARDRAIL_PROMPT, structuralSummaryContext].filter(Boolean).join('\n\n'),
+        [buildInterpretationGuardrailPrompt(workflowLocale), structuralSummaryContext]
+          .filter(Boolean)
+          .join('\n\n'),
         selectedKnowledge,
       );
     } else if (codingAssistContext) {
@@ -475,6 +380,7 @@ export async function POST(req: Request) {
         lang: workflowLocale,
         provider,
         apiKey,
+        signal: providerSignal,
       });
       const primaryRuleChunks =
         codingKnowledge.items.length > 0
@@ -549,9 +455,10 @@ export async function POST(req: Request) {
         model: selectedModel.id,
         maxOutputTokens,
         messages: finalMessages,
+        signal: providerSignal,
       });
     } catch (providerError) {
-      const providerFailure = classifyProviderError(providerError);
+      const providerFailure = classifyChatProviderError(providerError);
       await finalizeStreamResult('provider_init_failed');
       logApiError(providerFailure.code, requestId, providerError, {
         ...buildAiRunMetadata({
@@ -575,6 +482,7 @@ export async function POST(req: Request) {
     const responseStream = new ReadableStream<Uint8Array>({
       async start(controller) {
         const decoder = new TextDecoder();
+        const encoder = new TextEncoder();
         providerReader = providerResult.stream.getReader();
 
         try {
@@ -582,20 +490,39 @@ export async function POST(req: Request) {
             const { done, value } = await providerReader.read();
             if (done) break;
             if (!value) continue;
-            aiResponseContent += decoder.decode(value, { stream: true });
-            controller.enqueue(value);
+            const delta = decoder.decode(value, { stream: true });
+            if (!delta) continue;
+            aiResponseContent += delta;
+            controller.enqueue(
+              structuredStreamRequested
+                ? encodeChatStreamEvent({ type: 'delta', text: delta })
+                : encoder.encode(delta),
+            );
           }
 
           const tail = decoder.decode();
-          if (tail) aiResponseContent += tail;
+          if (tail) {
+            aiResponseContent += tail;
+            controller.enqueue(
+              structuredStreamRequested
+                ? encodeChatStreamEvent({ type: 'delta', text: tail })
+                : encoder.encode(tail),
+            );
+          }
           latestProviderCompletion = await providerResult.completion;
           await finalizeStreamResult(
             getTerminalStreamStatus(latestProviderCompletion, aiResponseContent.length),
             latestProviderCompletion,
           );
+          if (structuredStreamRequested) {
+            controller.enqueue(
+              encodeChatStreamEvent(buildChatStreamTerminalEvent(latestProviderCompletion)),
+            );
+          }
           controller.close();
         } catch (streamError) {
           latestProviderCompletion = await providerResult.completion;
+          const providerFailure = classifyChatProviderError(streamError);
           logApiError('chat_stream_failed', requestId, streamError, {
             ...buildAiRunMetadata({
               profile: promptProfile,
@@ -611,7 +538,22 @@ export async function POST(req: Request) {
             getTerminalStreamStatus(latestProviderCompletion, aiResponseContent.length),
             latestProviderCompletion,
           );
-          controller.error(streamError);
+          try {
+            if (!structuredStreamRequested) {
+              controller.error(streamError);
+              return;
+            }
+            controller.enqueue(
+              encodeChatStreamEvent({
+                type: 'error',
+                code: providerFailure.code,
+                message: providerFailure.publicMessage,
+              }),
+            );
+            controller.close();
+          } catch {
+            controller.error(streamError);
+          }
         } finally {
           providerReader = null;
         }
@@ -634,6 +576,7 @@ export async function POST(req: Request) {
     responseHeaders.set('X-Chat-Request-Id', requestId);
     responseHeaders.set('X-Chat-Model-Id', selectedModel.id);
     responseHeaders.set('X-Chat-Workflow-Mode', workflowMode);
+    applyChatStreamResponseHeaders(responseHeaders, structuredStreamRequested);
     applyAiHarnessHeaders(responseHeaders, promptProfile);
 
     return new Response(responseStream, { headers: responseHeaders });

@@ -26,6 +26,7 @@ for (const locale of locales) {
   run(`evaluate RAG (${locale})`, ['run', `docs:evaluate-rag:${locale}`]);
 }
 
+run('assert current-corpus vector runtime', ['run', 'docs:assert-vector-runtime-ready']);
 run('unit and integration tests', ['test']);
 run('production build', ['run', 'build']);
 

@@ -3,7 +3,7 @@ canonicalRoute: "result-interpretation/lower-section/core/FM"
 locale: "pt"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/core/FM"
-displayTitle: "[Interpretacao/Core] FM"
+displayTitle: "[Interpretação/Core] FM"
 aliases:
   - "FM"
   - "movimento animal total"
@@ -16,13 +16,13 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/AdjD"
   - "result-interpretation/lower-section/core/m"
   - "scoring-input/determinants/FM"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-core-burden-qualities-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao/Core] FM
+# Nome do documento: [Interpretação/Core] FM
 
 ## Apelidos e busca
 
@@ -30,34 +30,34 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-core-burden-qualit
 - movimento animal total
 - total de movimento animal
 
-## Definicao central
+## Definição central
 
-`FM` e o total de respostas de movimento animal.
-No `core`, ele costuma funcionar como componente do lado esquerdo de `eb`, refletindo tensao de necessidade, pressao para descarga e demanda motivacional ainda pouco elaborada.
+`FM` é o total de respostas de movimento animal.
+No `core`, ele costuma funcionar como componente do lado esquerdo de `eb`, refletindo tensão de necessidade, pressão para descarga e demanda motivacional ainda pouco elaborada.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- `FM` moderado pode sugerir que necessidades e pressao interna estao presentes e empurram a conduta.
-- `FM` alto pode sugerir maior pressao de necessidades insatisfeitas, impulsos ou exigencias de descarga.
+- `FM` moderado pode sugerir que necessidades e pressão interna estão presentes e empurram a conduta.
+- `FM` alto pode sugerir maior pressão de necessidades insatisfeitas, impulsos ou exigências de descarga.
 - `FM` entra em `eb` e, junto com `m`, pode elevar `es`.
 - O significado fica mais claro quando comparado com `m`, `D` e `AdjD`.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `FM` alto, sozinho, nao prova desorganizacao aberta do controle de impulsos.
-- `FM` nao deve ser confundido com `M`; aqui ele aponta para pressao mais basica e menos integrada do que elaboracao ideacional madura.
-- O peso clinico muda conforme o equilibrio com `m`, `es`, `D` e `AdjD`.
+- `FM` alto, sozinho, não prova desorganização aberta do controle de impulsos.
+- `FM` não deve ser confundido com `M`; aqui ele aponta para pressão mais básica e menos integrada do que elaboração ideacional madura.
+- O peso clínico muda conforme o equilíbrio com `m`, `es`, `D` e `AdjD`.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Secao Inferior/Core] Core](ref://result-interpretation/lower-section/core)
-- [[Interpretacao/Core] eb](ref://result-interpretation/lower-section/core/eb)
-- [[Interpretacao/Core] es](ref://result-interpretation/lower-section/core/es)
-- [[Interpretacao/Core] D](ref://result-interpretation/lower-section/core/D)
-- [[Interpretacao/Core] AdjD](ref://result-interpretation/lower-section/core/AdjD)
-- [[Interpretacao/Core] m](ref://result-interpretation/lower-section/core/m)
-- [[Codificacao/Determinantes] FM](ref://scoring-input/determinants/FM)
+- [[Interpretação/Seção Inferior/Core] Core](ref://result-interpretation/lower-section/core)
+- [[Interpretação/Core] eb](ref://result-interpretation/lower-section/core/eb)
+- [[Interpretação/Core] es](ref://result-interpretation/lower-section/core/es)
+- [[Interpretação/Core] D](ref://result-interpretation/lower-section/core/D)
+- [[Interpretação/Core] AdjD](ref://result-interpretation/lower-section/core/AdjD)
+- [[Interpretação/Core] m](ref://result-interpretation/lower-section/core/m)
+- [[Codificação/Determinantes] FM](ref://scoring-input/determinants/FM)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

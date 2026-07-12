@@ -18,7 +18,7 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/SumY"
   - "scoring-input/determinants/m"
   - "scoring-input/determinants/Y"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/core/adjes/index.md"

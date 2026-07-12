@@ -3,11 +3,11 @@ canonicalRoute: "scoring-input/card/V"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/card/V"
-displayTitle: "[Codificacao/Cartoes] V"
+displayTitle: "[Codificação/Cartões] V"
 aliases:
-  - "Cartao V"
-  - "cartao V"
-  - "cartao 5"
+  - "Cartão V"
+  - "cartão V"
+  - "cartão 5"
   - "prancha V"
 relatedRoutes:
   - "scoring-input/score"
@@ -17,49 +17,49 @@ relatedRoutes:
   - "scoring-input/popular"
   - "scoring-input/card/I"
   - "scoring-input/determinants/V"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-card-i-v-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificacao/Cartoes] V
+# Nome do documento: [Codificação/Cartões] V
 
 ## Apelidos e busca
 
-- Cartao V
-- cartao V
-- cartao 5
+- Cartão V
+- cartão V
+- cartão 5
 - prancha V
 
-## Definicao central
+## Definição central
 
-`Cartao V` costuma facilitar respostas formais relativamente claras e respostas globais populares.
-Esta pagina resume pontos de codificacao especialmente uteis nessa prancha.
+`Cartão V` costuma facilitar respostas formais relativamente claras e respostas globais populares.
+Esta página resume pontos de codificação especialmente úteis nessa prancha.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
-- Respostas `W` sao comuns.
-- A forma relativamente clara da mancha torna util revisar `F` e `FQ`.
+- Respostas `W` são comuns.
+- A forma relativamente clara da mancha torna útil revisar `F` e `FQ`.
 - Muitas respostas populares nessa prancha incluem morcego ou borboleta.
-- Se a resposta usar a mancha inteira com boa organizacao, revise `Popular` junto com a decisao formal.
+- Se a resposta usar a mancha inteira com boa organização, revise `Popular` junto com a decisão formal.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `Cartao V` nao e a mesma coisa que o determinante `V` de Vista.
-- Embora `Cartao I` e `Cartao V` compartilhem algumas respostas tipicas, eles nao devem ser fundidos como se fossem a mesma prancha.
-- Nao acrescente determinante so porque a pessoa diz que a mancha parece escura ou simetrica.
+- `Cartão V` não é a mesma coisa que o determinante `V` de Vista.
+- Embora `Cartão I` e `Cartão V` compartilhem algumas respostas típicas, eles não devem ser fundidos como se fossem a mesma prancha.
+- Não acrescente determinante só porque a pessoa diz que a mancha parece escura ou simétrica.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao] score](ref://scoring-input/score)
-- [[Codificacao/Localizacao] W](ref://scoring-input/location/W)
-- [[Codificacao/Determinantes] F](ref://scoring-input/determinants/F)
-- [[Codificacao/FQ] FQ](ref://scoring-input/fq)
-- [[Codificacao/Popular] Popular](ref://scoring-input/popular)
-- [[Codificacao/Cartoes] I](ref://scoring-input/card/I)
-- [[Codificacao/Determinantes] V](ref://scoring-input/determinants/V)
+- [[Codificação] score](ref://scoring-input/score)
+- [[Codificação/Localização] W](ref://scoring-input/location/W)
+- [[Codificação/Determinantes] F](ref://scoring-input/determinants/F)
+- [[Codificação/FQ] FQ](ref://scoring-input/fq)
+- [[Codificação/Popular] Popular](ref://scoring-input/popular)
+- [[Codificação/Cartões] I](ref://scoring-input/card/I)
+- [[Codificação/Determinantes] V](ref://scoring-input/determinants/V)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

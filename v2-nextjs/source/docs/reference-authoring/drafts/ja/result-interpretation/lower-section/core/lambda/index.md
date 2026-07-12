@@ -18,7 +18,7 @@ relatedRoutes:
   - "result-interpretation/lower-section/processing/W_M"
   - "scoring-input/fq"
   - "scoring-input/determinants/F"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-lower-section-core-opening-2026-03-10.md"

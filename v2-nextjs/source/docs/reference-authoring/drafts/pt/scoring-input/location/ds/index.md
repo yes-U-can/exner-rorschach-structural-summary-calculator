@@ -3,49 +3,49 @@ canonicalRoute: "scoring-input/location/DS"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/location/DS"
-displayTitle: "[Codificacao/Localizacao] DS"
+displayTitle: "[Codificação/Localização] DS"
 aliases:
   - "DS"
-  - "detalhe comum com espaco branco"
+  - "detalhe comum com espaço branco"
 relatedRoutes:
   - "scoring-input/location/D"
   - "scoring-input/location/S"
   - "scoring-input/location/DdS"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-location-2026-03-10.md"
 ---
 
-# Nome do documento: [Codificacao/Localizacao] DS
+# Nome do documento: [Codificação/Localização] DS
 
 ## Apelidos e busca
 
 - DS
-- detalhe comum com espaco branco
+- detalhe comum com espaço branco
 
-## Definicao central
+## Definição central
 
-`DS` e usado quando a resposta depende de um detalhe comum e o espaco branco tambem participa de modo significativo.
-E `D` modificado por `S`.
+`DS` é usado quando a resposta depende de um detalhe comum e o espaço branco também participa de modo significativo.
+É `D` modificado por `S`.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
 - O percepto se baseia em um detalhe comum.
-- O espaco branco faz parte ativa da resposta.
-- A combinacao e confirmada no inquerito.
+- O espaço branco faz parte ativa da resposta.
+- A combinação é confirmada no inquérito.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- Se o espaco branco nao tem funcao real, use [`D`](ref://scoring-input/location/D), nao `DS`.
-- Se a area principal e um detalhe incomum com espaco branco, use [`DdS`](ref://scoring-input/location/DdS).
+- Se o espaço branco não tem função real, use [`D`](ref://scoring-input/location/D), não `DS`.
+- Se a área principal é um detalhe incomum com espaço branco, use [`DdS`](ref://scoring-input/location/DdS).
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao/Localizacao] D](ref://scoring-input/location/D)
-- [[Codificacao/Localizacao] S](ref://scoring-input/location/S)
-- [[Codificacao/Localizacao] DdS](ref://scoring-input/location/DdS)
+- [[Codificação/Localização] D](ref://scoring-input/location/D)
+- [[Codificação/Localização] S](ref://scoring-input/location/S)
+- [[Codificação/Localização] DdS](ref://scoring-input/location/DdS)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

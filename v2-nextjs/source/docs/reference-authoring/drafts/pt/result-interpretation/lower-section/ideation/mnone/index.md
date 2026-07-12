@@ -3,7 +3,7 @@ canonicalRoute: "result-interpretation/lower-section/ideation/Mnone"
 locale: "pt"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/ideation/Mnone"
-displayTitle: "[Interpretacao/Ideacao] Mnone"
+displayTitle: "[Interpretação/Ideação] Mnone"
 aliases:
   - "Mnone"
   - "movimento humano sem forma"
@@ -14,13 +14,13 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/M_minus"
   - "scoring-input/determinants/M"
   - "result-interpretation/special-indices/SCON"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-ideation-wsum6-mminus-mnone-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao/Ideacao] Mnone
+# Nome do documento: [Interpretação/Ideação] Mnone
 
 ## Apelidos e busca
 
@@ -28,31 +28,31 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-ideation-wsum6-mmi
 - movimento humano sem forma
 - movimento humano sem apoio formal suficiente
 
-## Definicao central
+## Definição central
 
-`Mnone` indica respostas de movimento humano sem forma suficiente para sustentar uma interpretacao regular de `M`.
-Na interpretacao, ele sugere fantasia humana presente, mas fracamente estruturada.
+`Mnone` indica respostas de movimento humano sem forma suficiente para sustentar uma interpretação regular de `M`.
+Na interpretação, ele sugere fantasia humana presente, mas fracamente estruturada.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- Quando `Mnone` aparece, as representacoes humanas podem ser vagas, pouco organizadas ou so frouxamente ancoradas na forma.
-- Ele pode sugerir imaginacao humana presente, mas nao claramente estruturada o bastante para ter o mesmo peso de um `M` bem formado.
-- Se aparece junto de `M-`, `WSum6` ou `SCON`, a preocupacao com vulnerabilidade ideativa aumenta.
+- Quando `Mnone` aparece, as representações humanas podem ser vagas, pouco organizadas ou só frouxamente ancoradas na forma.
+- Ele pode sugerir imaginação humana presente, mas não claramente estruturada o bastante para ter o mesmo peso de um `M` bem formado.
+- Se aparece junto de `M-`, `WSum6` ou `SCON`, a preocupação com vulnerabilidade ideativa aumenta.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `Mnone` nao e o mesmo que `M-`; em `Mnone` falta forma suficiente, enquanto `M-` tem qualidade formal menos.
-- Uma unica ocorrencia de `Mnone` nao deve ser tratada como prova de disturbio ideativo maior.
-- O codigo `M` precisa ser confirmado primeiro para evitar classificacao incorreta.
+- `Mnone` não é o mesmo que `M-`; em `Mnone` falta forma suficiente, enquanto `M-` tem qualidade formal menos.
+- Uma única ocorrência de `Mnone` não deve ser tratada como prova de distúrbio ideativo maior.
+- O código `M` precisa ser confirmado primeiro para evitar classificação incorreta.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Secao Inferior/Ideacao] Ideacao](ref://result-interpretation/lower-section/ideation)
-- [[Interpretacao/Ideacao] Ma:Mp](ref://result-interpretation/lower-section/ideation/Ma_Mp)
-- [[Interpretacao/Ideacao] M-](ref://result-interpretation/lower-section/ideation/M_minus)
-- [[Codificacao/Determinantes] M](ref://scoring-input/determinants/M)
-- [[Interpretacao/Indices Especiais] SCON](ref://result-interpretation/special-indices/SCON)
+- [[Interpretação/Seção Inferior/Ideação] Ideação](ref://result-interpretation/lower-section/ideation)
+- [[Interpretação/Ideação] Ma:Mp](ref://result-interpretation/lower-section/ideation/Ma_Mp)
+- [[Interpretação/Ideação] M-](ref://result-interpretation/lower-section/ideation/M_minus)
+- [[Codificação/Determinantes] M](ref://scoring-input/determinants/M)
+- [[Interpretação/Índices Especiais] SCON](ref://result-interpretation/special-indices/SCON)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

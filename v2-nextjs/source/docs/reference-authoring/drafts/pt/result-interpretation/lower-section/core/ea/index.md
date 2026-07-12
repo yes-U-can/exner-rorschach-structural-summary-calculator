@@ -3,11 +3,11 @@ canonicalRoute: "result-interpretation/lower-section/core/EA"
 locale: "pt"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/core/EA"
-displayTitle: "[Interpretacao/Core] EA"
+displayTitle: "[Interpretação/Core] EA"
 aliases:
   - "EA"
   - "Experience Actual"
-  - "recursos disponiveis"
+  - "recursos disponíveis"
 relatedRoutes:
   - "result-interpretation/lower-section/core"
   - "result-interpretation/lower-section/core/R"
@@ -22,54 +22,54 @@ relatedRoutes:
   - "scoring-input/determinants/FC"
   - "scoring-input/determinants/CF"
   - "scoring-input/determinants/C"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-core-eb-family-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao/Core] EA
+# Nome do documento: [Interpretação/Core] EA
 
 ## Apelidos e busca
 
 - EA
 - Experience Actual
-- recursos disponiveis
+- recursos disponíveis
 
-## Definicao central
+## Definição central
 
-`EA` e o indice de recursos disponiveis derivado dos componentes de `EB`.
-Ele indica quanta capacidade efetiva a pessoa tem para lidar com demandas comuns e modular a experiencia atual.
+`EA` é o índice de recursos disponíveis derivado dos componentes de `EB`.
+Ele indica quanta capacidade efetiva a pessoa tem para lidar com demandas comuns e modular a experiência atual.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- `EA` adequado sugere recursos basicos suficientes para demandas do cotidiano.
-- `EA` baixo pode indicar recursos limitados para regular tensao e responder a exigencias.
-- `EA` suficiente nao garante adaptacao por si so; ele precisa ser comparado com a sobrecarga representada por `es`.
-- `EA` e uma das bases principais para ler `D` e `AdjD`.
+- `EA` adequado sugere recursos básicos suficientes para demandas do cotidiano.
+- `EA` baixo pode indicar recursos limitados para regular tensão e responder a exigências.
+- `EA` suficiente não garante adaptação por si só; ele precisa ser comparado com a sobrecarga representada por `es`.
+- `EA` é uma das bases principais para ler `D` e `AdjD`.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- Se `EA` parece suficiente, mas `EBPer` e muito rigido ou `es` esta muito alto, o funcionamento ainda pode ser instavel.
-- Em protocolos curtos ou com `Lambda` alto, o numero pode simplificar demais o quadro real.
-- `EA` fala de recursos potencialmente disponiveis, nao do uso perfeito desses recursos em toda situacao.
+- Se `EA` parece suficiente, mas `EBPer` é muito rígido ou `es` está muito alto, o funcionamento ainda pode ser instável.
+- Em protocolos curtos ou com `Lambda` alto, o número pode simplificar demais o quadro real.
+- `EA` fala de recursos potencialmente disponíveis, não do uso perfeito desses recursos em toda situação.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Secao Inferior/Core] Core](ref://result-interpretation/lower-section/core)
-- [[Interpretacao/Core] R](ref://result-interpretation/lower-section/core/R)
-- [[Interpretacao/Core] Lambda](ref://result-interpretation/lower-section/core/Lambda)
-- [[Interpretacao/Core] EB](ref://result-interpretation/lower-section/core/EB)
-- [[Interpretacao/Core] EBPer](ref://result-interpretation/lower-section/core/EBPer)
-- [[Interpretacao/Core] eb](ref://result-interpretation/lower-section/core/eb)
-- [[Interpretacao/Core] es](ref://result-interpretation/lower-section/core/es)
-- [[Interpretacao/Core] D](ref://result-interpretation/lower-section/core/D)
-- [[Interpretacao/Core] AdjD](ref://result-interpretation/lower-section/core/AdjD)
-- [[Codificacao/Determinantes] M](ref://scoring-input/determinants/M)
-- [[Codificacao/Determinantes] FC](ref://scoring-input/determinants/FC)
-- [[Codificacao/Determinantes] CF](ref://scoring-input/determinants/CF)
-- [[Codificacao/Determinantes] C](ref://scoring-input/determinants/C)
+- [[Interpretação/Seção Inferior/Core] Core](ref://result-interpretation/lower-section/core)
+- [[Interpretação/Core] R](ref://result-interpretation/lower-section/core/R)
+- [[Interpretação/Core] Lambda](ref://result-interpretation/lower-section/core/Lambda)
+- [[Interpretação/Core] EB](ref://result-interpretation/lower-section/core/EB)
+- [[Interpretação/Core] EBPer](ref://result-interpretation/lower-section/core/EBPer)
+- [[Interpretação/Core] eb](ref://result-interpretation/lower-section/core/eb)
+- [[Interpretação/Core] es](ref://result-interpretation/lower-section/core/es)
+- [[Interpretação/Core] D](ref://result-interpretation/lower-section/core/D)
+- [[Interpretação/Core] AdjD](ref://result-interpretation/lower-section/core/AdjD)
+- [[Codificação/Determinantes] M](ref://scoring-input/determinants/M)
+- [[Codificação/Determinantes] FC](ref://scoring-input/determinants/FC)
+- [[Codificação/Determinantes] CF](ref://scoring-input/determinants/CF)
+- [[Codificação/Determinantes] C](ref://scoring-input/determinants/C)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

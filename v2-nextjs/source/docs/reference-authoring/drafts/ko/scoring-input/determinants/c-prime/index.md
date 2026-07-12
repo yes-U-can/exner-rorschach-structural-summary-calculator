@@ -16,7 +16,7 @@ relatedRoutes:
   - "scoring-input/determinants/V"
   - "scoring-input/determinants/Y"
   - "result-interpretation/lower-section/core/SumCprime"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/determinants/c-prime/index.md"

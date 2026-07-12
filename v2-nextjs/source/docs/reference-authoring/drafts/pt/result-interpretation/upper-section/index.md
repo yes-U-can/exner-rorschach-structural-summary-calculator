@@ -3,11 +3,11 @@ canonicalRoute: "result-interpretation/upper-section"
 locale: "pt"
 docKind: "interpretation-overview"
 canonicalTitle: "result-interpretation/upper-section"
-displayTitle: "[Interpretacao/Secao Superior] Secao Superior"
+displayTitle: "[Interpretação/Seção Superior] Seção Superior"
 aliases:
   - "upper-section"
-  - "secao superior"
-  - "secao superior do sumario estrutural"
+  - "seção superior"
+  - "seção superior do sumário estrutural"
 relatedRoutes:
   - "result-interpretation"
   - "result-interpretation/upper-section/Zf"
@@ -25,58 +25,58 @@ relatedRoutes:
   - "scoring-input/z"
   - "scoring-input/location"
   - "scoring-input/dq"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-upper-section-family-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao/Secao Superior] Secao Superior
+# Nome do documento: [Interpretação/Seção Superior] Seção Superior
 
 ## Apelidos e busca
 
 - upper-section
-- secao superior
-- secao superior do sumario estrutural
+- seção superior
+- seção superior do sumário estrutural
 
-## Definicao central
+## Definição central
 
-`Upper Section` e a parte do sumario estrutural em que `Zf`, `ZSum`, `ZEst`, `Zd`, `W`, `D`, `Dd`, `S` e a distribuicao de `DQ` sao revisados primeiro.
-Ela funciona como uma triagem inicial de como a pessoa organiza o campo do estimulo, onde a atencao se concentra e quao bem estruturadas as respostas costumam estar.
+`Upper Section` é a parte do sumário estrutural em que `Zf`, `ZSum`, `ZEst`, `Zd`, `W`, `D`, `Dd`, `S` e a distribuição de `DQ` são revisados primeiro.
+Ela funciona como uma triagem inicial de como a pessoa organiza o campo do estímulo, onde a atenção se concentra e quão bem estruturadas as respostas costumam estar.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- A familia `Z` ajuda a estimar frequencia, energia e eficiencia do esforco de organizacao.
-- `W`, `D`, `Dd` e `S` mostram se a atencao se dirige a totalidades, detalhes comuns, detalhes incomuns ou espaco branco.
-- A distribuicao de `DQ` resume o nivel geral de integracao ou organizacao formal das respostas.
+- A família `Z` ajuda a estimar frequência, energia e eficiência do esforço de organização.
+- `W`, `D`, `Dd` e `S` mostram se a atenção se dirige a totalidades, detalhes comuns, detalhes incomuns ou espaço branco.
+- A distribuição de `DQ` resume o nível geral de integração ou organização formal das respostas.
 - Este bloco costuma se ligar, em seguida, a `processing` e `mediation`.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `Zf` ou `ZSum` sozinhos nao bastam; `Zd` geralmente tambem importa.
-- Uma contagem alta de `W` nao significa automaticamente varredura ampla eficiente.
-- Contagens altas de `Dd` ou `S` nao devem ser lidas como patologia por si so.
-- `DQ+` baixo tambem pode aparecer em protocolos breves ou muito defensivos.
+- `Zf` ou `ZSum` sozinhos não bastam; `Zd` geralmente também importa.
+- Uma contagem alta de `W` não significa automaticamente varredura ampla eficiente.
+- Contagens altas de `Dd` ou `S` não devem ser lidas como patologia por si só.
+- `DQ+` baixo também pode aparecer em protocolos breves ou muito defensivos.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao] result-interpretation](ref://result-interpretation)
-- [[Interpretacao/Secao Superior] Zf](ref://result-interpretation/upper-section/Zf)
-- [[Interpretacao/Secao Superior] ZSum](ref://result-interpretation/upper-section/ZSum)
-- [[Interpretacao/Secao Superior] ZEst](ref://result-interpretation/upper-section/ZEst)
-- [[Interpretacao/Secao Superior] Zd](ref://result-interpretation/upper-section/Zd)
-- [[Interpretacao/Secao Superior] W](ref://result-interpretation/upper-section/W)
-- [[Interpretacao/Secao Superior] D](ref://result-interpretation/upper-section/D)
-- [[Interpretacao/Secao Superior] Dd](ref://result-interpretation/upper-section/Dd)
-- [[Interpretacao/Secao Superior] S](ref://result-interpretation/upper-section/S)
-- [[Interpretacao/Secao Superior] DQ+](ref://result-interpretation/upper-section/dq_plus)
-- [[Interpretacao/Secao Superior] DQo](ref://result-interpretation/upper-section/dq_o)
-- [[Interpretacao/Secao Superior] DQv/+](ref://result-interpretation/upper-section/dq_vplus)
-- [[Interpretacao/Secao Superior] DQv](ref://result-interpretation/upper-section/dq_v)
-- [[Codificacao/Z] Z](ref://scoring-input/z)
-- [[Codificacao/Localizacao] Location](ref://scoring-input/location)
-- [[Codificacao/DQ] DQ](ref://scoring-input/dq)
+- [[Interpretação] result-interpretation](ref://result-interpretation)
+- [[Interpretação/Seção Superior] Zf](ref://result-interpretation/upper-section/Zf)
+- [[Interpretação/Seção Superior] ZSum](ref://result-interpretation/upper-section/ZSum)
+- [[Interpretação/Seção Superior] ZEst](ref://result-interpretation/upper-section/ZEst)
+- [[Interpretação/Seção Superior] Zd](ref://result-interpretation/upper-section/Zd)
+- [[Interpretação/Seção Superior] W](ref://result-interpretation/upper-section/W)
+- [[Interpretação/Seção Superior] D](ref://result-interpretation/upper-section/D)
+- [[Interpretação/Seção Superior] Dd](ref://result-interpretation/upper-section/Dd)
+- [[Interpretação/Seção Superior] S](ref://result-interpretation/upper-section/S)
+- [[Interpretação/Seção Superior] DQ+](ref://result-interpretation/upper-section/dq_plus)
+- [[Interpretação/Seção Superior] DQo](ref://result-interpretation/upper-section/dq_o)
+- [[Interpretação/Seção Superior] DQv/+](ref://result-interpretation/upper-section/dq_vplus)
+- [[Interpretação/Seção Superior] DQv](ref://result-interpretation/upper-section/dq_v)
+- [[Codificação/Z] Z](ref://scoring-input/z)
+- [[Codificação/Localização] Location](ref://scoring-input/location)
+- [[Codificação/DQ] DQ](ref://scoring-input/dq)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

@@ -1,226 +1,96 @@
 # Reference Authoring Workspace
 
-이 폴더는 로샤 검사 웹앱의 `참조 문서 원본`을 준비하고 검증하는 작업 공간입니다.
+이 디렉터리는 웹앱이 검색하는 내장 참조 코퍼스를 작성하고 검수하는 내부 작업 공간입니다.
 
-쉽게 말하면:
+## 디렉터리 구조
 
-- 원문 자료는 `incoming/`에 둡니다.
-- 실제 참조 문서 초안은 `drafts/`에 둡니다.
-- 출처 메모, 배치 기록, QA 기록은 `notes/`에 둡니다.
+- `incoming/`: 비공개 원자료와 추출 텍스트를 두는 로컬 전용 공간입니다. Git과 공개 릴리스에 포함하지 않습니다.
+- `drafts/`: 실제 코퍼스 원고입니다. `ko`, `en`, `ja`, `es`, `pt`가 같은 route 구조를 공유합니다.
+- `notes/`: 내부 provenance, 배치 기록, QA 기록입니다. 공개 미러에 포함하지 않습니다.
+- `runtime-promotion.json`: locale별 런타임 승격 상태를 관리합니다.
 
-이 작업 공간의 목표는 `5개 언어가 같은 문서 구조를 공유하면서`, 언어권마다 다른 본문과 상호참조를 가진 `위키형 reference corpus`를 만드는 것입니다.
+각 언어는 동일한 203개 route를 가지며, 본문과 상호 참조만 locale에 맞게 작성합니다.
 
-## 폴더 역할
+## 코퍼스 원칙
 
-### `incoming/`
+1. 채점 문서와 해석 문서를 분리합니다.
+2. 한 문서는 하나의 canonical route만 책임집니다.
+3. 내부 링크는 `ref://...` 형식을 사용합니다.
+4. 해석은 진단이 아니라 가설로 서술하고, 관련 변수와 대안 설명을 함께 제시합니다.
+5. 고위험 주제는 지수 결과와 별개로 직접 평가해야 할 항목을 명시합니다.
+6. 특수지수는 동일한 신뢰도로 취급하지 않고 중앙 evidence policy를 적용합니다.
+7. 원자료의 제목, 파일명, 입수 경로는 런타임·UI·공개 저장소에 노출하지 않습니다.
 
-- 논문, 책, PDF, TXT, OCR 결과 같은 원문 자료를 넣는 곳입니다.
-- 원문은 가능한 한 수정하지 않고 그대로 둡니다.
+## Frontmatter 계약
 
-### `drafts/`
+모든 `drafts/**/index.md`는 다음 필드를 가져야 합니다.
 
-- 실제 참조 문서 초안을 저장하는 곳입니다.
-- 현재는 locale과 route 기준으로 관리합니다.
+- `canonicalRoute`
+- `locale`
+- `docKind`
+- `canonicalTitle`
+- `displayTitle`
+- `aliases`
+- `relatedRoutes`
+- `authorityPolicy: "curated-internal-reference"`
+- `status`
+- `runtimeReady`
+- `provenanceNote`
 
-예시:
+`provenanceNote`는 저장소 안에 실제로 존재하는 내부 메모를 가리켜야 합니다. 공통 검수만 필요한 문서는 `notes/corpus-review-ledger.md`를 사용할 수 있습니다.
 
-- `drafts/ko/scoring-input/dq/plus/index.md`
-- `drafts/es/result-interpretation/lower-section/core/lambda/index.md`
+## 생성 흐름
 
-### `notes/`
+원고는 다음 순서로 런타임 산출물이 됩니다.
 
-- 출처 우선순위 메모
-- 배치 작업 로그
-- 용어 충돌 메모
-- QA 체크리스트
-- 릴리스 검증 플레이북
+1. `docs/reference-authoring/drafts/...` 원고 작성
+2. `npm run docs:audit-authoring`으로 문자·언어·metadata 검사
+3. `npm run docs:generate-corpus`로 route 문서와 검색 chunk 생성
+4. locale별 retrieval eval 실행
+5. embedding 재생성과 vector fingerprint 확인
+6. 전체 테스트와 production build
 
-## Shared-180 구조
+주요 산출물:
 
-이 프로젝트는 `5개 언어가 같은 route skeleton`을 공유합니다.
-
-- entry route: `180개`
-- category route: `23개`
-- locale: `ko`, `en`, `ja`, `es`, `pt`
-
-즉, 언어마다 페이지 개수와 route 구조는 같고, 아래 두 가지만 달라질 수 있습니다.
-
-- 본문
-- relatedRoutes
-
-## 권위 기준
-
-- 공통 최상위 기준: `Exner`
-- 한국어: `Exner + 한국어 가이드라인`
-- 스페인어: `Exner + 스페인어 manual`
-- 영어/일본어/포르투갈어: `Exner base`
-
-## 작성 원칙
-
-- 채점 문서와 해석 문서를 분리합니다.
-- 같은 기호라도 뜻이 다르면 문서를 분리합니다.
-- 문서는 짧고 구조적으로 씁니다.
-- 본문 안에서는 `ref://...` 형식의 인라인 위키 링크를 사용합니다.
-- 자세한 출처 메모는 공개 본문보다 `notes/`에 두는 것을 기본으로 합니다.
-
-## 런타임 구조
-
-원본 markdown을 바로 앱이 읽는 구조가 아니라, 아래 순서로 흘러갑니다.
-
-1. `docs/reference-authoring/drafts/...` 에서 원본 초안 작성
-2. `npm run docs:generate-corpus` 로 generated artifact 생성
-3. 앱은 `generated/reference-corpus/...` 를 읽음
-
-중요 파일:
-
+- `generated/reference-corpus/route-docs.json`
+- `generated/reference-corpus/chunks.json`
 - `generated/reference-corpus/manifest.json`
 - `generated/reference-corpus/qa-report.json`
-- `docs/reference-authoring/runtime-promotion.json`
+- `generated/reference-corpus/release-snapshot.json`
 
 ## 자주 쓰는 명령
 
-### corpus 생성
-
 ```powershell
+npm run docs:audit-authoring
 npm run docs:generate-corpus
-```
-
-### locale별 retrieval 평가
-
-```powershell
-npm run docs:evaluate-rag:ko
-npm run docs:evaluate-rag:es
-npm run docs:evaluate-rag:en
-npm run docs:evaluate-rag:ja
-npm run docs:evaluate-rag:pt
-```
-
-### 릴리스 전 전체 검증
-
-```powershell
+npm run docs:evaluate-rag:all
 npm run docs:verify-release
-```
-
-이 명령은 아래 순서로 고정되어 있습니다.
-
-1. corpus 재생성
-2. 5개 locale retrieval eval
-3. 전체 테스트
-4. 프로덕션 빌드
-
-### 현재 릴리스 상태 요약 보기
-
-```powershell
 npm run ops:release-status
+npm run ops:vector-status
 ```
 
-이 명령은 `manifest.json`과 `qa-report.json`을 읽어서 locale별 준비 상태를 한눈에 보여줍니다.
-
-### 현재 배포 컨텍스트 요약 보기
+문서가 바뀌면 기존 embedding은 stale 상태가 됩니다. 이때 원고를 되돌리는 것이 아니라 현재 corpus로 embedding과 vector release snapshot을 다시 생성해야 합니다.
 
 ```powershell
-npm run ops:deploy-context
+npm run docs:generate-embeddings:openai
+npm run docs:generate-vector-release-snapshot
 ```
 
-이 명령은 아래를 한 번에 보여줍니다.
+## 상태의 의미
 
-- 현재 branch
-- origin remote
-- 작업트리 dirty 상태
-- 연결된 Vercel project 정보
-- locale별 runtime source 상태
-- 다음 배포 순서
+- `draft`: 런타임에 사용할 수 있는 작성본이지만 독립적인 임상 검수 완료를 뜻하지 않습니다.
+- `reviewed`: 정해진 검수 절차를 통과한 문서입니다.
+- `locked`: 내용과 운영 계약이 고정된 문서입니다.
 
-## 배포 후 스모크 체크
+상태를 근거 없이 올리지 않습니다. 자동 철자 교정이나 retrieval 통과만으로 `reviewed`가 되지는 않습니다.
 
-배포된 URL이 있으면 아래처럼 점검합니다.
+## 공개 경계
 
-```powershell
-$env:SMOKE_BASE_URL="https://your-deployed-url"
-npm run ops:smoke-reference
-npm run ops:smoke-admin
-```
+공개 미러에는 실행 가능한 앱, 공개 문서, 생성된 런타임 코퍼스만 포함합니다. 다음 항목은 제외합니다.
 
-`SMOKE_BASE_URL`을 주지 않아도, 배포 환경에 `VERCEL_URL`이 있으면 그 값을 자동으로 사용합니다.
+- `docs/reference-authoring/incoming/`
+- `docs/reference-authoring/notes/`
+- 비공개 작업 로그와 handoff 문서
+- 환경 변수, API 키, 로컬 데이터베이스, 로그
 
-`ops:smoke-reference`는:
-
-- `/ref` 로케일별 로딩
-- 대표 문서 상세 페이지 로딩
-- `/transparency`의 runtime source 표시
-
-를 확인합니다.
-
-`ops:smoke-admin`은:
-
-- `/admin`
-- `/admin/rag`
-- `/admin/audit`
-- `/admin/store`
-- `/admin/credits`
-
-가 5xx 없이 응답하는지 확인합니다.
-
-## publish 스크립트
-
-기본 publish:
-
-```powershell
-.\scripts\publish.ps1 -Message "chore: publish sync"
-```
-
-이 스크립트는 기본적으로 먼저 `npm run docs:verify-release`를 돌린 뒤, 통과한 경우에만 sync/push를 진행합니다.
-
-즉, 특별한 이유가 없다면 `-SkipVerify`는 쓰지 않는 것이 원칙입니다.
-
-### publish mirror 위치가 다를 때
-
-```powershell
-.\scripts\publish.ps1 -PublishRoot "D:\my-publish-repo" -Message "chore: publish sync"
-```
-
-### mirror 없이 현재 git repo에서 직접 publish할 때
-
-```powershell
-.\scripts\publish.ps1 -UseCurrentRepo -Message "chore: publish sync"
-```
-
-이 모드에서는 현재 git repo 안에서 `v2-nextjs` 경로만 stage/commit 하도록 설계되어 있습니다.
-
-### 안전한 dry-run
-
-```powershell
-npm run ops:publish:direct-dry-run
-npm run ops:publish:mirror-dry-run
-```
-
-dry-run은 실제 commit/push 없이 publish 범위만 보여줍니다.
-
-### publish 직후 smoke까지 한 번에 돌리고 싶을 때
-
-```powershell
-.\scripts\publish.ps1 -UseCurrentRepo -Message "chore: publish sync" -SmokeBaseUrl "https://your-deployed-url"
-```
-
-cron 보호가 있는 admin health도 같이 보려면:
-
-```powershell
-.\scripts\publish.ps1 -UseCurrentRepo -Message "chore: publish sync" -SmokeBaseUrl "https://your-deployed-url" -SmokeCronSecret "your-secret"
-```
-
-이 옵션을 주면 push 후 자동으로 `ops:smoke-release`를 실행합니다.
-
-## 기록 원칙
-
-작업은 배치 단위로 기록합니다.
-
-- 무엇을 읽었는지
-- 무엇을 정리했는지
-- 무엇이 아직 불확실한지
-- 다음 배치에서 무엇을 할지
-
-이 기록은 모두 `notes/`에 남깁니다.
-
-## 초보자용 한 줄 정리
-
-`incoming`은 원문, `drafts`는 문서 초안, `notes`는 작업 기록이라고 기억하면 됩니다.
+공개 산출물은 코퍼스가 내부적으로 큐레이션되고 검수된다는 사실만 설명합니다. 특정 원자료와 코퍼스 사이의 작성 관계를 공개적으로 주장하지 않습니다.

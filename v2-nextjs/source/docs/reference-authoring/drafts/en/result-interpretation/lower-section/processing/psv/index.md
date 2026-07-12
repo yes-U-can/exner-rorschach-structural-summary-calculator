@@ -13,10 +13,10 @@ relatedRoutes:
   - "scoring-input/special-score/PSV"
   - "result-interpretation/lower-section/processing/Zd_proc"
   - "result-interpretation/lower-section/processing/W_D_Dd"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/lower-section/processing/psv/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Processing] PSV

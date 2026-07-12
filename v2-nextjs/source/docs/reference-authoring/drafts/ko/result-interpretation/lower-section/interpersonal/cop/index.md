@@ -17,7 +17,7 @@ relatedRoutes:
   - "scoring-input/gphr/GHR"
   - "scoring-input/gphr/PHR"
   - "result-interpretation/lower-section/interpersonal/ISO_Index"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/interpersonal/cop/index.md"

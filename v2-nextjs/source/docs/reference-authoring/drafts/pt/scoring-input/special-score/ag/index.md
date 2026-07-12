@@ -3,11 +3,11 @@ canonicalRoute: "scoring-input/special-score/AG"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/special-score/AG"
-displayTitle: "[Codificacao/Escores Especiais] AG"
+displayTitle: "[Codificação/Escores Especiais] AG"
 aliases:
   - "AG"
   - "movimento agressivo"
-  - "acao agressiva"
+  - "ação agressiva"
 relatedRoutes:
   - "scoring-input/special-score"
   - "scoring-input/special-score/COP"
@@ -17,49 +17,49 @@ relatedRoutes:
   - "scoring-input/gphr/PHR"
   - "result-interpretation/lower-section/interpersonal/AG"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-special-score-opening-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificacao/Escores Especiais] AG
+# Nome do documento: [Codificação/Escores Especiais] AG
 
 ## Apelidos e busca
 
 - AG
 - movimento agressivo
-- acao agressiva
+- ação agressiva
 
-## Definicao central
+## Definição central
 
-`AG` e usado quando uma resposta com movimento mostra acao claramente agressiva.
-O que importa e agressao como ato em curso, nao apenas uma qualidade hostil vaga do objeto.
+`AG` é usado quando uma resposta com movimento mostra ação claramente agressiva.
+O que importa e agressão como ato em curso, não apenas uma qualidade hostil vaga do objeto.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
 - A resposta precisa incluir movimento, em geral [`M`](ref://scoring-input/determinants/M), [`FM`](ref://scoring-input/determinants/FM) ou [`m`](ref://scoring-input/determinants/m).
-- A acao precisa ser observavelmente agressiva: atacar, rasgar, empurrar com violencia, morder, ferir ou golpear.
-- O codigo e usado para agressao como movimento, nao so para dano ja ocorrido.
-- Se a acao agressiva for executada em conjunto por mais de uma figura, `AG` pode coexistir com [`COP`](ref://scoring-input/special-score/COP).
+- A ação precisa ser observavelmente agressiva: atacar, rasgar, empurrar com violência, morder, ferir ou golpear.
+- O código é usado para agressão como movimento, não só para dano já ocorrido.
+- Se a ação agressiva for executada em conjunto por mais de uma figura, `AG` pode coexistir com [`COP`](ref://scoring-input/special-score/COP).
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- Um adjetivo hostil sem acao clara nao justifica `AG`.
-- Se o foco principal for que o objeto ja esta quebrado, morto ou deteriorado, reconsidere primeiro [`MOR`](ref://scoring-input/special-score/MOR).
-- `AG` nao decide automaticamente [`PHR`](ref://scoring-input/gphr/PHR); essa decisao exige etapa adicional.
+- Um adjetivo hostil sem ação clara não justifica `AG`.
+- Se o foco principal for que o objeto já está quebrado, morto ou deteriorado, reconsidere primeiro [`MOR`](ref://scoring-input/special-score/MOR).
+- `AG` não decide automaticamente [`PHR`](ref://scoring-input/gphr/PHR); essa decisão exige etapa adicional.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao/Escores Especiais] Special Scores](ref://scoring-input/special-score)
-- [[Codificacao/Escores Especiais] COP](ref://scoring-input/special-score/COP)
-- [[Codificacao/Determinantes] M](ref://scoring-input/determinants/M)
-- [[Codificacao/Determinantes] FM](ref://scoring-input/determinants/FM)
-- [[Codificacao/Determinantes] m](ref://scoring-input/determinants/m)
-- [[Codificacao/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
-- [[Interpretacao/Interpersonal] AG](ref://result-interpretation/lower-section/interpersonal/AG)
-- [[Interpretacao/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
+- [[Codificação/Escores Especiais] Special Scores](ref://scoring-input/special-score)
+- [[Codificação/Escores Especiais] COP](ref://scoring-input/special-score/COP)
+- [[Codificação/Determinantes] M](ref://scoring-input/determinants/M)
+- [[Codificação/Determinantes] FM](ref://scoring-input/determinants/FM)
+- [[Codificação/Determinantes] m](ref://scoring-input/determinants/m)
+- [[Codificação/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
+- [[Interpretação/Interpersonal] AG](ref://result-interpretation/lower-section/interpersonal/AG)
+- [[Interpretação/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

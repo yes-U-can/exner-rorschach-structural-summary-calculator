@@ -16,10 +16,10 @@ relatedRoutes:
   - "scoring-input/determinants/V"
   - "scoring-input/determinants/Y"
   - "result-interpretation/lower-section/core/SumCprime"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/ja/scoring-input/determinants/c-prime/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [コーディング/決定因] C'

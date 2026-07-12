@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/determinants/FY"
 locale: "es"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/determinants/FY"
-displayTitle: "[Codificacion/Determinantes] FY"
+displayTitle: "[Codificación/Determinantes] FY"
 aliases:
   - "FY"
   - "forma-sombreado"
@@ -16,50 +16,50 @@ relatedRoutes:
   - "scoring-input/determinants/FV"
   - "scoring-input/determinants/FT"
   - "result-interpretation/lower-section/core/SumY"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/determinants/fy/index.md"
 ---
 
-# Nombre del documento: [Codificacion/Determinantes] FY
+# Nombre del documento: [Codificación/Determinantes] FY
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - FY
 - forma-sombreado
 - form-shading
 
-## Definicion central
+## Definición central
 
-`FY` se usa cuando la forma organiza la respuesta y el sombreado difuso queda en segundo plano.  
-La impresion de sombra, nubosidad o indeterminacion esta presente, pero la respuesta sigue apoyandose primero en la forma.
+`FY` se usa cuando la forma organiza la respuesta y el sombreado difuso queda en segundo plano.
+La impresión de sombra, nubosidad o indeterminación está presente, pero la respuesta sigue apoyándose primero en la forma.
 
-## Condiciones de aplicacion
+## Condiciones de aplicación
 
 - La forma identifica el objeto principal.
-- El sujeto agrega despues una cualidad de sombreado difuso.
+- El sujeto agrega después una cualidad de sombreado difuso.
 - Esa cualidad debe aparecer realmente en la respuesta o en la encuesta.
-- Si el sombreado domina mas que la forma, hay que reconsiderar [`YF`](ref://scoring-input/determinants/YF).
+- Si el sombreado domina más que la forma, hay que reconsiderar [`YF`](ref://scoring-input/determinants/YF).
 
 ## Precauciones y distinciones
 
 - `FY` no equivale a [`FV`](ref://scoring-input/determinants/FV); uno apunta a sombreado difuso y el otro a profundidad.
 - `FY` tampoco equivale a [`FT`](ref://scoring-input/determinants/FT); uno apunta a sombreado y el otro a textura.
 - Si la forma no organiza realmente la respuesta, puede corresponder [`Y`](ref://scoring-input/determinants/Y).
-- El uso interpretativo de esta familia reaparece despues en [`SumY`](ref://result-interpretation/lower-section/core/SumY).
+- El uso interpretativo de esta familia reaparece después en [`SumY`](ref://result-interpretation/lower-section/core/SumY).
 
 ## Referencias cruzadas
 
-- [[Codificacion/Determinantes] Determinants](ref://scoring-input/determinants)
-- [[Codificacion/Determinantes] YF](ref://scoring-input/determinants/YF)
-- [[Codificacion/Determinantes] Y](ref://scoring-input/determinants/Y)
-- [[Codificacion/Determinantes] F](ref://scoring-input/determinants/F)
-- [[Codificacion/Determinantes] FV](ref://scoring-input/determinants/FV)
-- [[Codificacion/Determinantes] FT](ref://scoring-input/determinants/FT)
-- [[Interpretacion/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
+- [[Codificación/Determinantes] Determinants](ref://scoring-input/determinants)
+- [[Codificación/Determinantes] YF](ref://scoring-input/determinants/YF)
+- [[Codificación/Determinantes] Y](ref://scoring-input/determinants/Y)
+- [[Codificación/Determinantes] F](ref://scoring-input/determinants/F)
+- [[Codificación/Determinantes] FV](ref://scoring-input/determinants/FV)
+- [[Codificación/Determinantes] FT](ref://scoring-input/determinants/FT)
+- [[Interpretación/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
 
 ## Nota de fundamento
 
-- La justificacion detallada y la comparacion de fuentes se conservan en la provenance interna.
-- El cuerpo publico evita citar directamente los titulos de las fuentes.
+- La justificación detallada y la comparación de fuentes se conservan en la provenance interna.
+- El cuerpo público evita citar directamente los títulos de las fuentes.

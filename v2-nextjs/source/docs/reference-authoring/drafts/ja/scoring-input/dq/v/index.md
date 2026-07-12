@@ -13,10 +13,10 @@ relatedRoutes:
   - "scoring-input/dq/v/+"
   - "scoring-input/dq/o"
   - "result-interpretation/upper-section/dq_v"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/ja/scoring-input/dq/v/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [採点/発達水準] v

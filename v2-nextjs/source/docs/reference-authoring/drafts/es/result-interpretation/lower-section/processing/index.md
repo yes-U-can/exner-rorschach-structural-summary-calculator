@@ -3,11 +3,11 @@ canonicalRoute: "result-interpretation/lower-section/processing"
 locale: "es"
 docKind: "interpretation-overview"
 canonicalTitle: "result-interpretation/lower-section/processing"
-displayTitle: "[Interpretacion/Lower Section/Procesamiento] Procesamiento"
+displayTitle: "[Interpretación/Lower Section/Procesamiento] Procesamiento"
 aliases:
   - "processing"
   - "procesamiento"
-  - "procesamiento de informacion"
+  - "procesamiento de información"
 relatedRoutes:
   - "result-interpretation/lower-section"
   - "result-interpretation/lower-section/processing/Zf_proc"
@@ -21,42 +21,42 @@ relatedRoutes:
   - "result-interpretation/upper-section/Zd"
   - "result-interpretation/lower-section/mediation"
   - "result-interpretation/lower-section/ideation"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/processing/index.md"
 ---
 
-# Nombre del documento: [Interpretacion/Lower Section/Procesamiento] Procesamiento
+# Nombre del documento: [Interpretación/Lower Section/Procesamiento] Procesamiento
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - processing
 - procesamiento
-- procesamiento de informacion
+- procesamiento de información
 
-## Definicion central
+## Definición central
 
 `Procesamiento` agrupa las variables que describen como la persona explora, organiza y recorta el campo perceptivo.
 En esta zona se leen juntas `Zf`, `Zd`, `W:D:Dd`, `W:M`, `PSV`, `DQ+` y `DQv`.
 
-## Puntos de interpretacion
+## Puntos de interpretación
 
-- Este grupo ayuda a ver cuanto material se examina, cuanta complejidad se toma y con que flexibilidad se organiza.
+- Este grupo ayuda a ver cuánto material se examina, cuánta complejidad se toma y con que flexibilidad se organiza.
 - `Zf` y `Zd` orientan sobre amplitud y eficiencia del escaneo.
-- `W:D:Dd` y `W:M` muestran estilo de recorte y nivel de organizacion.
-- `PSV`, `DQ+` y `DQv` agregan informacion sobre repeticion, calidad organizativa y simplificacion.
+- `W:D:Dd` y `W:M` muestran estilo de recorte y nivel de organización.
+- `PSV`, `DQ+` y `DQv` agregan información sobre repetición, calidad organizativa y simplificación.
 
 ## Precauciones y distinciones
 
-- Procesamiento no es lo mismo que mediacion. Una persona puede escanear mucho y aun asi interpretar de manera poco ajustada.
-- Procesamiento tampoco equivale a ideacion. El recorte perceptivo y la elaboracion conceptual son niveles distintos.
+- Procesamiento no es lo mismo que mediación. Una persona puede escanear mucho y aun así interpretar de manera poco ajustada.
+- Procesamiento tampoco equivale a ideación. El recorte perceptivo y la elaboración conceptual son niveles distintos.
 - Con protocolos cortos, varias proporciones del grupo pueden perder estabilidad.
 
-## Limites de interpretacion aislada
+## Limites de interpretación aislada
 
 - Este conjunto no debe leerse por separado del resto del protocolo.
-- Conviene integrarlo con `Mediacion`, `Ideacion`, `Lambda`, `FQ` y `Special Scores`.
+- Conviene integrarlo con `Mediación`, `Ideación`, `Lambda`, `FQ` y `Special Scores`.
 
 ## Variables para revisar juntas
 
@@ -70,19 +70,19 @@ En esta zona se leen juntas `Zf`, `Zd`, `W:D:Dd`, `W:M`, `PSV`, `DQ+` y `DQv`.
 
 ## Referencias cruzadas
 
-- [[Interpretacion/Lower Section] Lower Section](ref://result-interpretation/lower-section)
-- [[Interpretacion/Processing] Zf](ref://result-interpretation/lower-section/processing/Zf_proc)
-- [[Interpretacion/Processing] Zd](ref://result-interpretation/lower-section/processing/Zd_proc)
-- [[Interpretacion/Processing] W:D:Dd](ref://result-interpretation/lower-section/processing/W_D_Dd)
-- [[Interpretacion/Processing] W:M](ref://result-interpretation/lower-section/processing/W_M)
-- [[Interpretacion/Processing] PSV](ref://result-interpretation/lower-section/processing/PSV)
-- [[Interpretacion/Processing] DQ+](ref://result-interpretation/lower-section/processing/DQ_plus_proc)
-- [[Interpretacion/Processing] DQv](ref://result-interpretation/lower-section/processing/DQ_v_proc)
-- [[Interpretacion/Upper Section] Zf](ref://result-interpretation/upper-section/Zf)
-- [[Interpretacion/Upper Section] Zd](ref://result-interpretation/upper-section/Zd)
-- [[Interpretacion/Lower Section/Mediacion] Mediacion](ref://result-interpretation/lower-section/mediation)
-- [[Interpretacion/Lower Section/Ideacion] Ideacion](ref://result-interpretation/lower-section/ideation)
+- [[Interpretación/Lower Section] Lower Section](ref://result-interpretation/lower-section)
+- [[Interpretación/Processing] Zf](ref://result-interpretation/lower-section/processing/Zf_proc)
+- [[Interpretación/Processing] Zd](ref://result-interpretation/lower-section/processing/Zd_proc)
+- [[Interpretación/Processing] W:D:Dd](ref://result-interpretation/lower-section/processing/W_D_Dd)
+- [[Interpretación/Processing] W:M](ref://result-interpretation/lower-section/processing/W_M)
+- [[Interpretación/Processing] PSV](ref://result-interpretation/lower-section/processing/PSV)
+- [[Interpretación/Processing] DQ+](ref://result-interpretation/lower-section/processing/DQ_plus_proc)
+- [[Interpretación/Processing] DQv](ref://result-interpretation/lower-section/processing/DQ_v_proc)
+- [[Interpretación/Upper Section] Zf](ref://result-interpretation/upper-section/Zf)
+- [[Interpretación/Upper Section] Zd](ref://result-interpretation/upper-section/Zd)
+- [[Interpretación/Lower Section/Mediación] Mediación](ref://result-interpretation/lower-section/mediation)
+- [[Interpretación/Lower Section/Ideación] Ideación](ref://result-interpretation/lower-section/ideation)
 
 ## Nota de fundamento
 
-- La fundamentacion detallada y las comparaciones de fuente se conservan en la provenance interna.
+- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

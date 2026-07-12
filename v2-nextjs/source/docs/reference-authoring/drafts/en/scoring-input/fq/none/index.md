@@ -12,10 +12,10 @@ relatedRoutes:
   - "scoring-input/fq"
   - "scoring-input/determinants/M"
   - "scoring-input/special-score/AB"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/scoring-input/fq/none/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Form Quality] none

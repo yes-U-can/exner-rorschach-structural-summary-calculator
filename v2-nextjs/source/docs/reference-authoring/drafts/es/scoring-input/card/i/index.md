@@ -3,13 +3,13 @@ canonicalRoute: "scoring-input/card/I"
 locale: "es"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/card/I"
-displayTitle: "[Codificacion/Tarjetas] I"
+displayTitle: "[Codificación/Tarjetas] I"
 aliases:
   - "Card I"
   - "card I"
   - "card 1"
   - "tarjeta I"
-  - "lamina I"
+  - "lámina I"
 relatedRoutes:
   - "scoring-input/score"
   - "scoring-input/location/W"
@@ -17,50 +17,50 @@ relatedRoutes:
   - "scoring-input/contents/A"
   - "scoring-input/popular"
   - "scoring-input/card/V"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/card/i/index.md"
 ---
 
-# Nombre del documento: [Codificacion/Tarjetas] I
+# Nombre del documento: [Codificación/Tarjetas] I
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - Card I
 - card I
 - card 1
 - tarjeta I
-- lamina I
+- lámina I
 
-## Definicion central
+## Definición central
 
-`Tarjeta I` es la primera lamina del protocolo.
-En esta pagina se resume que tipo de respuestas suelen aparecer con frecuencia al empezar la codificacion, no una interpretacion simbolica de la tarjeta.
+`Tarjeta I` es la primera lámina del protocolo.
+En esta página se resume qué tipo de respuestas suelen aparecer con frecuencia al empezar la codificación, no una interpretación simbólica de la tarjeta.
 
-## Condiciones de aplicacion
+## Condiciones de aplicación
 
 - En `Tarjeta I` son frecuentes las respuestas globales `W`.
-- Son comunes respuestas de forma simple como murcielago, mariposa u otras figuras animales amplias.
-- Cuando la respuesta usa toda la mancha y mantiene organizacion clara, conviene revisar `F`, `FQ` y `Popular`.
-- Si la persona solo toma una pequena parte de la mancha, la tarjeta no autoriza por si misma un `Popular`.
+- Son comunes respuestas de forma simple como murciélago, mariposa u otras figuras animales amplias.
+- Cuando la respuesta usa toda la mancha y mantiene organización clara, conviene revisar `F`, `FQ` y `Popular`.
+- Si la persona solo toma una pequeña parte de la mancha, la tarjeta no autoriza por sí misma un `Popular`.
 
 ## Precauciones y distinciones
 
 - No codificas `Popular` solo porque la respuesta suene familiar; debe corresponder al criterio formal de la tarjeta.
-- `Tarjeta I` y `Tarjeta V` comparten respuestas tipo murcielago o mariposa, pero no se tratan como la misma lamina.
-- La mencion verbal de color oscuro no basta para agregar un determinante adicional.
+- `Tarjeta I` y `Tarjeta V` comparten respuestas tipo murciélago o mariposa, pero no se tratan como la misma lámina.
+- La mención verbal de color oscuro no basta para agregar un determinante adicional.
 
 ## Referencias cruzadas
 
-- [[Codificacion] score](ref://scoring-input/score)
-- [[Codificacion/Localizacion] W](ref://scoring-input/location/W)
-- [[Codificacion/Determinantes] F](ref://scoring-input/determinants/F)
-- [[Codificacion/Contenido] A](ref://scoring-input/contents/A)
-- [[Codificacion/Popular] Popular](ref://scoring-input/popular)
-- [[Codificacion/Tarjetas] V](ref://scoring-input/card/V)
+- [[Codificación] score](ref://scoring-input/score)
+- [[Codificación/Localización] W](ref://scoring-input/location/W)
+- [[Codificación/Determinantes] F](ref://scoring-input/determinants/F)
+- [[Codificación/Contenido] A](ref://scoring-input/contents/A)
+- [[Codificación/Popular] Popular](ref://scoring-input/popular)
+- [[Codificación/Tarjetas] V](ref://scoring-input/card/V)
 
 ## Nota de fundamento
 
-- La fundamentacion detallada y la comparacion de fuentes se conservan en la provenance interna.
-- El cuerpo publico evita citar directamente los titulos de las fuentes.
+- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
+- El cuerpo público evita citar directamente los títulos de las fuentes.

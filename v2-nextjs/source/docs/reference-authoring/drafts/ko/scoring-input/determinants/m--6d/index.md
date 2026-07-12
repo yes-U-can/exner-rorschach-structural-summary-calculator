@@ -14,7 +14,7 @@ relatedRoutes:
   - "scoring-input/special-score/COP"
   - "scoring-input/special-score/AG"
   - "result-interpretation/lower-section/core/m"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/determinants/m--6d/index.md"

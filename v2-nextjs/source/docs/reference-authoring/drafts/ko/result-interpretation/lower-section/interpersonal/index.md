@@ -22,7 +22,7 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/SumT"
   - "result-interpretation/lower-section/ideation/a_p"
   - "result-interpretation/lower-section/selfPerception"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/interpersonal/index.md"

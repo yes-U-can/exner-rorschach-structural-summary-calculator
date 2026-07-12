@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-25T16:31:16.632Z",
+  "generatedAt": "2026-07-12T06:21:13.064Z",
   "locales": [
     "ko",
     "en",
@@ -22,6 +22,10 @@
       },
       "publicBodySourceTitles": {
         "hits": [],
+        "pass": true
+      },
+      "specialIndexEvidence": {
+        "errors": [],
         "pass": true
       },
       "querySet": {
@@ -65,6 +69,10 @@
         "hits": [],
         "pass": true
       },
+      "specialIndexEvidence": {
+        "errors": [],
+        "pass": true
+      },
       "querySet": {
         "filePath": "docs/reference-authoring/evals/en-curated-query-set.json",
         "targetCount": 60,
@@ -104,6 +112,10 @@
       },
       "publicBodySourceTitles": {
         "hits": [],
+        "pass": true
+      },
+      "specialIndexEvidence": {
+        "errors": [],
         "pass": true
       },
       "querySet": {
@@ -147,6 +159,10 @@
         "hits": [],
         "pass": true
       },
+      "specialIndexEvidence": {
+        "errors": [],
+        "pass": true
+      },
       "querySet": {
         "filePath": "docs/reference-authoring/evals/es-curated-query-set.json",
         "targetCount": 80,
@@ -186,6 +202,10 @@
       },
       "publicBodySourceTitles": {
         "hits": [],
+        "pass": true
+      },
+      "specialIndexEvidence": {
+        "errors": [],
         "pass": true
       },
       "querySet": {

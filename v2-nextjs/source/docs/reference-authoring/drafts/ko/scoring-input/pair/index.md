@@ -14,7 +14,7 @@ relatedRoutes:
   - "scoring-input/determinants/Fr"
   - "scoring-input/determinants/rF"
   - "result-interpretation/lower-section/selfPerception/_3r_2_R"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/pair/index.md"

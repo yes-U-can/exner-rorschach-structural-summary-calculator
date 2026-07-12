@@ -15,10 +15,10 @@ relatedRoutes:
   - "scoring-input/location/W"
   - "scoring-input/location/D"
   - "scoring-input/fq"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/lower-section/mediation/wda-percent/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Mediation] WDA%

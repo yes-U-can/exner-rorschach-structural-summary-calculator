@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/contents/Hx"
 locale: "es"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/contents/Hx"
-displayTitle: "[Codificacion/Contenido] Hx"
+displayTitle: "[Codificación/Contenido] Hx"
 aliases:
   - "Hx"
   - "experiencia humana"
@@ -14,48 +14,48 @@ relatedRoutes:
   - "scoring-input/special-score/AB"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/contents/hx/index.md"
 ---
 
-# Nombre del documento: [Codificacion/Contenido] Hx
+# Nombre del documento: [Codificación/Contenido] Hx
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - Hx
 - experiencia humana
 - human experience
 
-## Definicion central
+## Definición central
 
-`Hx` se usa cuando la respuesta codifica una emocion, sensacion o experiencia humana, no una figura humana como tal.  
-El foco esta en la vivencia humana atribuida con claridad.
+`Hx` se usa cuando la respuesta codifica una emoción, sensación o experiencia humana, no una figura humana como tal.
+El foco está en la vivencia humana atribuida con claridad.
 
-## Condiciones de aplicacion
+## Condiciones de aplicación
 
-- El sujeto debe atribuir de manera clara una emocion, un estado interno o una experiencia sensorial humana.
-- Esa atribucion debe ser inequivoca, no solo insinuada.
+- El sujeto debe atribuir de manera clara una emoción, un estado interno o una experiencia sensorial humana.
+- Esa atribución debe ser inequívoca, no solo insinuada.
 - `Hx` puede aparecer como contenido secundario cuando una figura expresa una experiencia humana clara.
-- En respuestas `M` sin forma que expresan directamente una experiencia humana, tambien conviene revisar [`AB`](ref://scoring-input/special-score/AB).
+- En respuestas `M` sin forma que expresan directamente una experiencia humana, también conviene revisar [`AB`](ref://scoring-input/special-score/AB).
 
 ## Precauciones y distinciones
 
-- `Hx` no es igual a [`H`](ref://scoring-input/contents/H) ni a [`Hd`](ref://scoring-input/contents/Hd); esos codigos describen figuras, no experiencias.
-- Frases vagas como "parece enojado" o "como cansado" no siempre bastan; la atribucion debe quedar realmente clara.
-- `Hx` puede ser contenido primario o secundario segun la respuesta, pero no debe usarse por simple impresion clinica del examinador.
-- Cuando la respuesta expresa una representacion simbolica de experiencia humana, revisar tambien [`AB`](ref://scoring-input/special-score/AB).
+- `Hx` no es igual a [`H`](ref://scoring-input/contents/H) ni a [`Hd`](ref://scoring-input/contents/Hd); esos códigos describen figuras, no experiencias.
+- Frases vagas como "parece enojado" o "como cansado" no siempre bastan; la atribución debe quedar realmente clara.
+- `Hx` puede ser contenido primario o secundario según la respuesta, pero no debe usarse por simple impresión clínica del examinador.
+- Cuando la respuesta expresa una representación simbólica de experiencia humana, revisar también [`AB`](ref://scoring-input/special-score/AB).
 
 ## Referencias cruzadas
 
-- [[Codificacion/Contenido] Contents](ref://scoring-input/contents)
-- [[Codificacion/Contenido] H](ref://scoring-input/contents/H)
-- [[Codificacion/Codigo especial] AB](ref://scoring-input/special-score/AB)
-- [[Interpretacion/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
-- [[Interpretacion/Self Perception] H ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
+- [[Codificación/Contenido] Contents](ref://scoring-input/contents)
+- [[Codificación/Contenido] H](ref://scoring-input/contents/H)
+- [[Codificación/Código especial] AB](ref://scoring-input/special-score/AB)
+- [[Interpretación/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
+- [[Interpretación/Self Perception] H ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
 
 ## Nota de fundamento
 
-- La justificacion detallada y la comparacion de fuentes se conservan en la provenance interna.
-- El cuerpo publico evita citar directamente los titulos de las fuentes.
+- La justificación detallada y la comparación de fuentes se conservan en la provenance interna.
+- El cuerpo público evita citar directamente los títulos de las fuentes.

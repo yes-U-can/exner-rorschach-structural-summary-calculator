@@ -16,7 +16,7 @@ relatedRoutes:
   - "scoring-input/fq/-"
   - "result-interpretation/lower-section/ideation/WSum6"
   - "result-interpretation/special-indices/PTI"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-mediation-xminus-sminus-p-2026-03-10.md"

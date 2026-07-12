@@ -27,6 +27,7 @@ import {
   type ByokSessionStatus,
 } from '@/lib/byokSessionClient';
 import { isByokSessionMissingError, readChatApiErrorPayload } from '@/lib/chatApiErrors';
+import { CHAT_STREAM_PROTOCOL, consumeChatEventStream } from '@/lib/chatStreamProtocol';
 
 type Provider = 'openai';
 type ModelOption = {
@@ -315,7 +316,10 @@ export default function ChatWidget({
       const response = await fetch('/api/chat', {
         method: 'POST',
         credentials: 'include',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Chat-Stream-Protocol': CHAT_STREAM_PROTOCOL,
+        },
         body: JSON.stringify({
           message: messageText,
           contextMessages: toEphemeralChatContext(messages),
@@ -341,31 +345,30 @@ export default function ChatWidget({
 
       const aiMessageId = Date.now() + 1;
       setMessages((prev) => [...prev, { id: aiMessageId, role: 'ai', content: '' }]);
-      const reader = response.body.getReader();
-      const decoder = new TextDecoder();
       let aiResponseText = '';
+      const updateAiMessage = (content: string) => {
+        setMessages((prev) => prev.map((message) => (
+          message.id === aiMessageId ? { ...message, content } : message
+        )));
+      };
 
       try {
-        while (true) {
-          const { done, value } = await reader.read();
-          if (done) break;
-          aiResponseText += decoder.decode(value, { stream: true });
-          setMessages((prev) => prev.map((message) => (
-            message.id === aiMessageId ? { ...message, content: aiResponseText } : message
-          )));
-        }
-        const tail = decoder.decode();
-        if (tail) {
-          aiResponseText += tail;
-          setMessages((prev) => prev.map((message) => (
-            message.id === aiMessageId ? { ...message, content: aiResponseText } : message
-          )));
+        const terminalEvent = await consumeChatEventStream(response.body, (delta) => {
+          aiResponseText += delta;
+          updateAiMessage(aiResponseText);
+        });
+        if (terminalEvent.type !== 'complete') {
+          const notice = terminalEvent.type === 'error'
+            ? getFriendlyErrorMessage(terminalEvent.message)
+            : ui.streamInterrupted;
+          aiResponseText = aiResponseText ? `${aiResponseText}\n\n${notice}` : notice;
+          updateAiMessage(aiResponseText);
         }
       } catch {
-        aiResponseText = `${aiResponseText}\n\n${ui.streamInterrupted}`;
-        setMessages((prev) => prev.map((message) => (
-          message.id === aiMessageId ? { ...message, content: aiResponseText } : message
-        )));
+        aiResponseText = aiResponseText
+          ? `${aiResponseText}\n\n${ui.streamInterrupted}`
+          : ui.streamInterrupted;
+        updateAiMessage(aiResponseText);
       }
     } catch (error) {
       const friendly = getFriendlyErrorMessage(error instanceof Error ? error.message : '');

@@ -17,10 +17,10 @@ relatedRoutes:
   - "scoring-input/determinants/Y"
   - "scoring-input/determinants/FY"
   - "scoring-input/determinants/YF"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/lower-section/core/sumy/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Core] SumY

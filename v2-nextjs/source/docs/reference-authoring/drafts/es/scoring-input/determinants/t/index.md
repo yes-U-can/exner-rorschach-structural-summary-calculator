@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/determinants/T"
 locale: "es"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/determinants/T"
-displayTitle: "[Codificacion/Determinantes] T"
+displayTitle: "[Codificación/Determinantes] T"
 aliases:
   - "T"
   - "textura pura"
@@ -17,51 +17,51 @@ relatedRoutes:
   - "scoring-input/determinants/Y"
   - "result-interpretation/lower-section/core/SumT"
   - "result-interpretation/lower-section/interpersonal/SumT_inter"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/determinants/t/index.md"
 ---
 
-# Nombre del documento: [Codificacion/Determinantes] T
+# Nombre del documento: [Codificación/Determinantes] T
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - T
 - textura pura
 - pure texture
 
-## Definicion central
+## Definición central
 
-`T` se usa cuando la respuesta depende de textura sin apoyo formal suficiente.  
-La impresion tactil o de superficie es el determinante central y la forma no organiza realmente el percepto.
+`T` se usa cuando la respuesta depende de textura sin apoyo formal suficiente.
+La impresión táctil o de superficie es el determinante central y la forma no organiza realmente el percepto.
 
-## Condiciones de aplicacion
+## Condiciones de aplicación
 
-- La respuesta nace de una cualidad tactil o de superficie.
+- La respuesta nace de una cualidad táctil o de superficie.
 - No hay forma suficiente para `FT` o `TF`.
 - La textura debe estar expresada claramente por el sujeto.
-- Si la encuesta muestra organizacion formal secundaria, hay que reconsiderar `TF`.
+- Si la encuesta muestra organización formal secundaria, hay que reconsiderar `TF`.
 
 ## Precauciones y distinciones
 
 - `T` no es simplemente una respuesta con palabras sensoriales; hace falta uso real de textura.
-- Si la impresion dominante es relieve o profundidad, hay que revisar [`V`](ref://scoring-input/determinants/V).
-- Si la impresion dominante es vaga o difusa, hay que revisar [`Y`](ref://scoring-input/determinants/Y).
+- Si la impresión dominante es relieve o profundidad, hay que revisar [`V`](ref://scoring-input/determinants/V).
+- Si la impresión dominante es vaga o difusa, hay que revisar [`Y`](ref://scoring-input/determinants/Y).
 - Si la forma organiza el objeto, ya no corresponde `T`.
 
 ## Referencias cruzadas
 
-- [[Codificacion/Determinantes] Determinants](ref://scoring-input/determinants)
-- [[Codificacion/Determinantes] FT](ref://scoring-input/determinants/FT)
-- [[Codificacion/Determinantes] TF](ref://scoring-input/determinants/TF)
-- [[Codificacion/Determinantes] F](ref://scoring-input/determinants/F)
-- [[Codificacion/Determinantes] V](ref://scoring-input/determinants/V)
-- [[Codificacion/Determinantes] Y](ref://scoring-input/determinants/Y)
-- [[Interpretacion/Core] SumT](ref://result-interpretation/lower-section/core/SumT)
-- [[Interpretacion/Interpersonal] SumT](ref://result-interpretation/lower-section/interpersonal/SumT_inter)
+- [[Codificación/Determinantes] Determinants](ref://scoring-input/determinants)
+- [[Codificación/Determinantes] FT](ref://scoring-input/determinants/FT)
+- [[Codificación/Determinantes] TF](ref://scoring-input/determinants/TF)
+- [[Codificación/Determinantes] F](ref://scoring-input/determinants/F)
+- [[Codificación/Determinantes] V](ref://scoring-input/determinants/V)
+- [[Codificación/Determinantes] Y](ref://scoring-input/determinants/Y)
+- [[Interpretación/Core] SumT](ref://result-interpretation/lower-section/core/SumT)
+- [[Interpretación/Interpersonal] SumT](ref://result-interpretation/lower-section/interpersonal/SumT_inter)
 
 ## Nota de fundamento
 
-- La justificacion detallada y la comparacion de fuentes se conservan en la provenance interna.
-- El cuerpo publico evita citar directamente los titulos de las fuentes.
+- La justificación detallada y la comparación de fuentes se conservan en la provenance interna.
+- El cuerpo público evita citar directamente los títulos de las fuentes.

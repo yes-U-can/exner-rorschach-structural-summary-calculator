@@ -19,10 +19,10 @@ relatedRoutes:
   - "scoring-input/determinants/FM"
   - "scoring-input/determinants/m"
   - "result-interpretation/lower-section/interpersonal/a_p_inter"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/lower-section/ideation/a-p/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Ideation] a:p

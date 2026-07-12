@@ -20,10 +20,10 @@ relatedRoutes:
   - "result-interpretation/upper-section/Zd"
   - "result-interpretation/lower-section/mediation"
   - "result-interpretation/lower-section/ideation"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/lower-section/processing/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Lower Section/Processing] Processing

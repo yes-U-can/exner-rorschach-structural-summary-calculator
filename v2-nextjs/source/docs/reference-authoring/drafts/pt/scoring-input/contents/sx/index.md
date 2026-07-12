@@ -3,57 +3,57 @@ canonicalRoute: "scoring-input/contents/Sx"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/contents/Sx"
-displayTitle: "[Codificacao/Conteudo] Sx"
+displayTitle: "[Codificação/Conteúdo] Sx"
 aliases:
   - "Sx"
   - "sexual"
   - "sexo"
-  - "orgao sexual"
+  - "órgão sexual"
 relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/H"
   - "scoring-input/contents/Hd"
   - "scoring-input/contents/An"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-completion-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificacao/Conteudo] Sx
+# Nome do documento: [Codificação/Conteúdo] Sx
 
 ## Apelidos e busca
 
 - Sx
 - sexual
 - sexo
-- orgao sexual
+- órgão sexual
 
-## Definicao central
+## Definição central
 
-`Sx` e usado quando o conteudo principal e sexual ou explicitamente ligado a orgaos sexuais e atividade sexual.
-O codigo depende do referente nomeado, nao apenas de insinuacao vaga.
+`Sx` é usado quando o conteúdo principal é sexual ou explicitamente ligado a órgãos sexuais e atividade sexual.
+O código depende do referente nomeado, não apenas de insinuação vaga.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
-- Use quando a pessoa nomeia genitalia, ato sexual ou conteudo claramente erotico ou sexual.
-- O codigo cabe tanto para figura humana quanto para detalhe corporal, desde que o eixo principal seja sexual.
-- Se a resposta e humana mas sem sexualizacao clara, revise primeiro [`H`](ref://scoring-input/contents/H) ou [`Hd`](ref://scoring-input/contents/Hd).
-- Se o foco e anatomico sem organizacao sexual, revise primeiro [`An`](ref://scoring-input/contents/An).
+- Use quando a pessoa nomeia genitália, ato sexual ou conteúdo claramente erótico ou sexual.
+- O código cabe tanto para figura humana quanto para detalhe corporal, desde que o eixo principal seja sexual.
+- Se a resposta é humana mas sem sexualização clara, revise primeiro [`H`](ref://scoring-input/contents/H) ou [`Hd`](ref://scoring-input/contents/Hd).
+- Se o foco e anatômico sem organização sexual, revise primeiro [`An`](ref://scoring-input/contents/An).
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `Sx` nao deve ser usado apenas porque o examinador percebe ambiguidade sexual leve; a nomeacao precisa ser suficientemente clara.
-- `Sx` e [`An`](ref://scoring-input/contents/An) podem coexistir, mas nao sao equivalentes.
-- `Sx` marca conteudo sexual; `An` marca foco anatomico ou estrutural.
+- `Sx` não deve ser usado apenas porque o examinador percebe ambiguidade sexual leve; a nomeação precisa ser suficientemente clara.
+- `Sx` e [`An`](ref://scoring-input/contents/An) podem coexistir, mas não são equivalentes.
+- `Sx` marca conteúdo sexual; `An` marca foco anatômico ou estrutural.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao/Conteudo] Contents](ref://scoring-input/contents)
-- [[Codificacao/Conteudo] H](ref://scoring-input/contents/H)
-- [[Codificacao/Conteudo] Hd](ref://scoring-input/contents/Hd)
-- [[Codificacao/Conteudo] An](ref://scoring-input/contents/An)
+- [[Codificação/Conteúdo] Contents](ref://scoring-input/contents)
+- [[Codificação/Conteúdo] H](ref://scoring-input/contents/H)
+- [[Codificação/Conteúdo] Hd](ref://scoring-input/contents/Hd)
+- [[Codificação/Conteúdo] An](ref://scoring-input/contents/An)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

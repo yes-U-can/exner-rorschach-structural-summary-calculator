@@ -14,10 +14,10 @@ relatedRoutes:
   - "scoring-input/location/WS"
   - "result-interpretation/upper-section/Dd"
   - "result-interpretation/upper-section/S"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/scoring-input/location/dds/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Location] DdS

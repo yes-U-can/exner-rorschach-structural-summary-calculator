@@ -14,7 +14,7 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/M_minus"
   - "scoring-input/determinants/M"
   - "result-interpretation/special-indices/SCON"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/ideation/mnone/index.md"

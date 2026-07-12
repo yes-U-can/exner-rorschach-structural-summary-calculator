@@ -17,10 +17,10 @@ relatedRoutes:
   - "scoring-input/determinants/Y"
   - "result-interpretation/lower-section/core/SumV"
   - "result-interpretation/lower-section/selfPerception/SumV_self"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/scoring-input/determinants/vf/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Determinants] VF

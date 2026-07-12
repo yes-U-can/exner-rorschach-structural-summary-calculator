@@ -3,7 +3,7 @@ canonicalRoute: "result-interpretation/lower-section/interpersonal/PER"
 locale: "pt"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/interpersonal/PER"
-displayTitle: "[Interpretacao/Interpessoal] PER"
+displayTitle: "[Interpretação/Interpessoal] PER"
 aliases:
   - "PER"
   - "respostas personalizadas"
@@ -15,13 +15,13 @@ relatedRoutes:
   - "scoring-input/special-score/PER"
   - "result-interpretation/lower-section/mediation/Xu_percent"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-interpersonal-closing-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao/Interpessoal] PER
+# Nome do documento: [Interpretação/Interpessoal] PER
 
 ## Apelidos e busca
 
@@ -29,33 +29,33 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-interpersonal-clos
 - respostas personalizadas
 - moldura pessoal
 
-## Definicao central
+## Definição central
 
-`PER` mostra o quanto a pessoa tende a justificar a resposta a partir de criterios pessoais, experiencia pessoal ou ponto de vista privado quando esse estilo e lido no plano interpessoal.
-Na interpretacao, ele sugere o quanto um enquadre autorreferente molda a leitura de outras pessoas e das trocas relacionais.
+`PER` mostra o quanto a pessoa tende a justificar a resposta a partir de critérios pessoais, experiência pessoal ou ponto de vista privado quando esse estilo é lido no plano interpessoal.
+Na interpretação, ele sugere o quanto um enquadre autorreferente molda a leitura de outras pessoas e das trocas relacionais.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- Se `PER` e alto, pode haver maior tendencia a interpretar o mundo interpessoal por referencias pessoais, e nao por pistas compartilhadas.
-- Essa variavel pode acompanhar rigidez, necessidade de autoafirmacao ou maneira muito privada de validar a experiencia.
-- Quando aparece junto com `Xu%` alto, a leitura interpessoal pode ficar ainda mais idiossincratica.
-- Valor baixo apenas mostra que esse vies aparece menos; nao significa automaticamente abertura ou flexibilidade.
+- Se `PER` é alto, pode haver maior tendência a interpretar o mundo interpessoal por referências pessoais, e não por pistas compartilhadas.
+- Essa variável pode acompanhar rigidez, necessidade de autoafirmacao ou maneira muito privada de validar a experiência.
+- Quando aparece junto com `Xu%` alto, a leitura interpessoal pode ficar ainda mais idiossincrática.
+- Valor baixo apenas mostra que esse viés aparece menos; não significa automaticamente abertura ou flexibilidade.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `PER` nao e o mesmo que criatividade e nao equivale sozinho a narcisismo.
-- A variavel nao mede opiniao pessoal simples; ela aponta para a forma como a resposta e sustentada por moldura pessoal.
-- Ela deve ser distinguida do escore de codificacao `PER`, embora os dois estejam relacionados.
+- `PER` não é o mesmo que criatividade e não equivale sozinho a narcisismo.
+- A variável não mede opinião pessoal simples; ela aponta para a forma como a resposta é sustentada por moldura pessoal.
+- Ela deve ser distinguida do escore de codificação `PER`, embora os dois estejam relacionados.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Secao Inferior/Interpessoal] Interpessoal](ref://result-interpretation/lower-section/interpersonal)
-- [[Interpretacao/Interpessoal] Conteudo Humano](ref://result-interpretation/lower-section/interpersonal/HumanCont)
-- [[Interpretacao/Interpessoal] a:p](ref://result-interpretation/lower-section/interpersonal/a_p_inter)
-- [[Codificacao/Pontuacao Especial] PER](ref://scoring-input/special-score/PER)
-- [[Interpretacao/Mediacao] Xu%](ref://result-interpretation/lower-section/mediation/Xu_percent)
-- [[Interpretacao/Autopercepcao] H Ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
+- [[Interpretação/Seção Inferior/Interpessoal] Interpessoal](ref://result-interpretation/lower-section/interpersonal)
+- [[Interpretação/Interpessoal] Conteúdo Humano](ref://result-interpretation/lower-section/interpersonal/HumanCont)
+- [[Interpretação/Interpessoal] a:p](ref://result-interpretation/lower-section/interpersonal/a_p_inter)
+- [[Codificação/Pontuação Especial] PER](ref://scoring-input/special-score/PER)
+- [[Interpretação/Mediação] Xu%](ref://result-interpretation/lower-section/mediation/Xu_percent)
+- [[Interpretação/Autopercepção] H Ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

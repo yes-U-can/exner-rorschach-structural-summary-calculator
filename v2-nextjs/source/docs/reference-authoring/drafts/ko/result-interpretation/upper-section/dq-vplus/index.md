@@ -16,7 +16,7 @@ relatedRoutes:
   - "scoring-input/dq/v/+"
   - "result-interpretation/lower-section/processing/DQ_plus_proc"
   - "result-interpretation/lower-section/processing/DQ_v_proc"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/upper-section/dq-vplus/index.md"

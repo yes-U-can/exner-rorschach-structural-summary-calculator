@@ -3,56 +3,56 @@ canonicalRoute: "result-interpretation/upper-section/dq_o"
 locale: "pt"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/upper-section/dq_o"
-displayTitle: "[Interpretacao/Secao Superior] DQo"
+displayTitle: "[Interpretação/Seção Superior] DQo"
 aliases:
   - "DQo"
-  - "qualidade evolutiva ordinaria"
-  - "numero de respostas DQo"
+  - "qualidade evolutiva ordinária"
+  - "número de respostas DQo"
 relatedRoutes:
   - "result-interpretation/upper-section"
   - "result-interpretation/upper-section/dq_plus"
   - "result-interpretation/upper-section/dq_vplus"
   - "result-interpretation/upper-section/dq_v"
   - "scoring-input/dq/o"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-upper-section-family-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao/Secao Superior] DQo
+# Nome do documento: [Interpretação/Seção Superior] DQo
 
 ## Apelidos e busca
 
 - DQo
-- qualidade evolutiva ordinaria
-- numero de respostas DQo
+- qualidade evolutiva ordinária
+- número de respostas DQo
 
-## Definicao central
+## Definição central
 
-`DQo` e a frequencia de respostas com qualidade evolutiva ordinaria.
-Em muitos protocolos, ele funciona como linha de base para o nivel usual de organizacao.
+`DQo` é a frequência de respostas com qualidade evolutiva ordinária.
+Em muitos protocolos, ele funciona como linha de base para o nível usual de organização.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- Em muitos protocolos, `DQo` forma a parte central da distribuicao de `DQ`.
-- Um `DQo` proporcional pode refletir um nivel comum e estavel de organizacao.
-- Uma predominancia muito forte de `DQo` pode indicar estilo relativamente convencional e nao muito complexo.
+- Em muitos protocolos, `DQo` forma a parte central da distribuição de `DQ`.
+- Um `DQo` proporcional pode refletir um nível comum e estável de organização.
+- Uma predominância muito forte de `DQo` pode indicar estilo relativamente convencional e não muito complexo.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `DQo` alto nao e necessariamente uma fraqueza.
-- Seu significado muda conforme a relacao com `DQ+`, `DQv/+` e `DQv`.
+- `DQo` alto não é necessariamente uma fraqueza.
+- Seu significado muda conforme a relação com `DQ+`, `DQv/+` e `DQv`.
 - Se `DQo` dominar e `DQ+` estiver quase ausente, a complexidade integrativa pode ser limitada.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Secao Superior] Secao Superior](ref://result-interpretation/upper-section)
-- [[Interpretacao/Secao Superior] DQ+](ref://result-interpretation/upper-section/dq_plus)
-- [[Interpretacao/Secao Superior] DQv/+](ref://result-interpretation/upper-section/dq_vplus)
-- [[Interpretacao/Secao Superior] DQv](ref://result-interpretation/upper-section/dq_v)
-- [[Codificacao/DQ] o](ref://scoring-input/dq/o)
+- [[Interpretação/Seção Superior] Seção Superior](ref://result-interpretation/upper-section)
+- [[Interpretação/Seção Superior] DQ+](ref://result-interpretation/upper-section/dq_plus)
+- [[Interpretação/Seção Superior] DQv/+](ref://result-interpretation/upper-section/dq_vplus)
+- [[Interpretação/Seção Superior] DQv](ref://result-interpretation/upper-section/dq_v)
+- [[Codificação/DQ] o](ref://scoring-input/dq/o)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

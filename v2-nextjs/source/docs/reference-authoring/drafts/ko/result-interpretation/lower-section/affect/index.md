@@ -17,7 +17,7 @@ relatedRoutes:
   - "result-interpretation/lower-section/affect/S_aff"
   - "result-interpretation/lower-section/affect/Blends_R"
   - "result-interpretation/lower-section/affect/CP"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/affect/index.md"

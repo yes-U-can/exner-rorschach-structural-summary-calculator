@@ -3,7 +3,7 @@ canonicalRoute: "result-interpretation/lower-section/core/Lambda"
 locale: "pt"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/core/Lambda"
-displayTitle: "[Interpretacao/Core] Lambda"
+displayTitle: "[Interpretação/Core] Lambda"
 aliases:
   - "Lambda"
   - "L"
@@ -17,13 +17,13 @@ relatedRoutes:
   - "result-interpretation/lower-section/processing/W_M"
   - "scoring-input/fq"
   - "scoring-input/determinants/F"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-lower-section-core-opening-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao/Core] Lambda
+# Nome do documento: [Interpretação/Core] Lambda
 
 ## Apelidos e busca
 
@@ -31,34 +31,34 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-lower-section-core
 - L
 - lambda
 
-## Definicao central
+## Definição central
 
-`Lambda` e a razao entre respostas de forma pura e o restante das respostas.
-Na interpretacao, ela e usada como indicador de quanto o protocolo simplifica, economiza ou restringe o processamento.
+`Lambda` é a razão entre respostas de forma pura e o restante das respostas.
+Na interpretação, ela é usada como indicador de quanto o protocolo simplifica, economiza ou restringe o processamento.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- `Lambda` alto costuma marcar estilo mais simples, economico ou defensivo.
-- Em protocolos com extensao suficiente, `Lambda` alto pode acompanhar evitacao, reducao do campo ou manejo simplificado do estimulo.
-- `Lambda` muito baixo pode estar ligado a maior complexidade, mas tambem a sobreinclusao ou abertura excessiva.
+- `Lambda` alto costuma marcar estilo mais simples, econômico ou defensivo.
+- Em protocolos com extensão suficiente, `Lambda` alto pode acompanhar evitação, redução do campo ou manejo simplificado do estímulo.
+- `Lambda` muito baixo pode estar ligado a maior complexidade, mas também a sobreinclusao ou abertura excessiva.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- Se `R` for baixo, `Lambda` alto pode refletir mais reserva do que um estilo estavel.
-- `Lambda` baixo nao e automaticamente qualidade; se os recursos forem fracos, ele pode coexistir com ineficiencia.
+- Se `R` for baixo, `Lambda` alto pode refletir mais reserva do que um estilo estável.
+- `Lambda` baixo não é automaticamente qualidade; se os recursos forem fracos, ele pode coexistir com ineficiência.
 - `Zd`, `W:D:Dd`, `EB`, `EA`, `D` e `AdjD` devem ser lidos junto com ele.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Secao Inferior/Core] Core](ref://result-interpretation/lower-section/core)
-- [[Interpretacao/Core] R](ref://result-interpretation/lower-section/core/R)
-- [[Interpretacao/Core] EA](ref://result-interpretation/lower-section/core/EA)
-- [[Interpretacao/Core] EB](ref://result-interpretation/lower-section/core/EB)
-- [[Interpretacao/Processing] W:D:Dd](ref://result-interpretation/lower-section/processing/W_D_Dd)
-- [[Interpretacao/Processing] W:M](ref://result-interpretation/lower-section/processing/W_M)
-- [[Codificacao/FQ] FQ](ref://scoring-input/fq)
-- [[Codificacao/Determinantes] F](ref://scoring-input/determinants/F)
+- [[Interpretação/Seção Inferior/Core] Core](ref://result-interpretation/lower-section/core)
+- [[Interpretação/Core] R](ref://result-interpretation/lower-section/core/R)
+- [[Interpretação/Core] EA](ref://result-interpretation/lower-section/core/EA)
+- [[Interpretação/Core] EB](ref://result-interpretation/lower-section/core/EB)
+- [[Interpretação/Processing] W:D:Dd](ref://result-interpretation/lower-section/processing/W_D_Dd)
+- [[Interpretação/Processing] W:M](ref://result-interpretation/lower-section/processing/W_M)
+- [[Codificação/FQ] FQ](ref://scoring-input/fq)
+- [[Codificação/Determinantes] F](ref://scoring-input/determinants/F)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

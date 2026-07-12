@@ -17,7 +17,7 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/Sum6"
   - "result-interpretation/lower-section/ideation/Lv2"
   - "result-interpretation/lower-section/ideation/WSum6"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/special-score/incom2/index.md"

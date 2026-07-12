@@ -14,10 +14,10 @@ relatedRoutes:
   - "scoring-input/location/DdS"
   - "result-interpretation/upper-section/S"
   - "result-interpretation/lower-section/mediation/S_minus"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/ja/scoring-input/location/s/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [コーディング/場所] S

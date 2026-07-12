@@ -3,10 +3,10 @@ canonicalRoute: "result-interpretation/lower-section/interpersonal"
 locale: "pt"
 docKind: "interpretation-overview"
 canonicalTitle: "result-interpretation/lower-section/interpersonal"
-displayTitle: "[Interpretacao/Secao Inferior/Interpessoal] Interpessoal"
+displayTitle: "[Interpretação/Seção Inferior/Interpessoal] Interpessoal"
 aliases:
   - "interpessoal"
-  - "relacoes interpessoais"
+  - "relações interpessoais"
   - "estilo relacional"
 relatedRoutes:
   - "result-interpretation/lower-section"
@@ -22,54 +22,54 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/SumT"
   - "result-interpretation/lower-section/ideation/a_p"
   - "result-interpretation/lower-section/selfPerception"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-interpersonal-opening-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao/Secao Inferior/Interpessoal] Interpessoal
+# Nome do documento: [Interpretação/Seção Inferior/Interpessoal] Interpessoal
 
 ## Apelidos e busca
 
 - interpessoal
-- relacoes interpessoais
+- relações interpessoais
 - estilo relacional
 
-## Definicao central
+## Definição central
 
-`Interpessoal` reune as variaveis que ajudam a ler como a pessoa imagina, procura, teme ou organiza o contato com outras pessoas.
-Neste grupo, o foco principal recai sobre `COP`, `AG`, `a:p`, `Food`, `SumT`, conteudo humano e isolamento interpessoal.
+`Interpessoal` reúne as variáveis que ajudam a ler como a pessoa imagina, procura, teme ou organiza o contato com outras pessoas.
+Neste grupo, o foco principal recai sobre `COP`, `AG`, `a:p`, `Food`, `SumT`, conteúdo humano e isolamento interpessoal.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- `COP` e `AG` mostram se as cenas interpessoais sao imaginadas de modo mais cooperativo ou mais conflitivo.
-- `SumT_inter` e `Food` ajudam a estimar necessidades de proximidade, apoio ou dependencia.
-- `HumanCont` e `PureH` mostram quanto peso as representacoes humanas recebem no protocolo.
-- `PER` e `ISO_Index` acrescentam informacao sobre autorreferencia, distancia e isolamento social.
+- `COP` e `AG` mostram se as cenas interpessoais são imaginadas de modo mais cooperativo ou mais conflitivo.
+- `SumT_inter` e `Food` ajudam a estimar necessidades de proximidade, apoio ou dependência.
+- `HumanCont` e `PureH` mostram quanto peso as representações humanas recebem no protocolo.
+- `PER` e `ISO_Index` acrescentam informação sobre autorreferência, distância e isolamento social.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- Nenhuma variavel interpessoal deve ser lida sozinha.
-- Conteudo humano alto nao significa automaticamente relacoes saudaveis.
-- O significado do estilo interpessoal muda conforme `Afecto`, `Mediacao`, `Ideacao` e `Autopercepcao`.
+- Nenhuma variável interpessoal deve ser lida sozinha.
+- Conteúdo humano alto não significa automaticamente relações saudáveis.
+- O significado do estilo interpessoal muda conforme `Afecto`, `Mediação`, `Ideação` e `Autopercepção`.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Secao Inferior] Secao Inferior](ref://result-interpretation/lower-section)
-- [[Interpretacao/Interpessoal] COP](ref://result-interpretation/lower-section/interpersonal/COP)
-- [[Interpretacao/Interpessoal] AG](ref://result-interpretation/lower-section/interpersonal/AG)
-- [[Interpretacao/Interpessoal] a:p](ref://result-interpretation/lower-section/interpersonal/a_p_inter)
-- [[Interpretacao/Interpessoal] Food](ref://result-interpretation/lower-section/interpersonal/Food)
-- [[Interpretacao/Interpessoal] SumT](ref://result-interpretation/lower-section/interpersonal/SumT_inter)
-- [[Interpretacao/Interpessoal] Conteudo Humano](ref://result-interpretation/lower-section/interpersonal/HumanCont)
-- [[Interpretacao/Interpessoal] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)
-- [[Interpretacao/Interpessoal] PER](ref://result-interpretation/lower-section/interpersonal/PER)
-- [[Interpretacao/Interpessoal] Indice de Isolamento](ref://result-interpretation/lower-section/interpersonal/ISO_Index)
-- [[Interpretacao/Core] SumT](ref://result-interpretation/lower-section/core/SumT)
-- [[Interpretacao/Ideacao] a:p](ref://result-interpretation/lower-section/ideation/a_p)
-- [[Interpretacao/Secao Inferior/Autopercepcao] Autopercepcao](ref://result-interpretation/lower-section/selfPerception)
+- [[Interpretação/Seção Inferior] Seção Inferior](ref://result-interpretation/lower-section)
+- [[Interpretação/Interpessoal] COP](ref://result-interpretation/lower-section/interpersonal/COP)
+- [[Interpretação/Interpessoal] AG](ref://result-interpretation/lower-section/interpersonal/AG)
+- [[Interpretação/Interpessoal] a:p](ref://result-interpretation/lower-section/interpersonal/a_p_inter)
+- [[Interpretação/Interpessoal] Food](ref://result-interpretation/lower-section/interpersonal/Food)
+- [[Interpretação/Interpessoal] SumT](ref://result-interpretation/lower-section/interpersonal/SumT_inter)
+- [[Interpretação/Interpessoal] Conteúdo Humano](ref://result-interpretation/lower-section/interpersonal/HumanCont)
+- [[Interpretação/Interpessoal] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)
+- [[Interpretação/Interpessoal] PER](ref://result-interpretation/lower-section/interpersonal/PER)
+- [[Interpretação/Interpessoal] Índice de Isolamento](ref://result-interpretation/lower-section/interpersonal/ISO_Index)
+- [[Interpretação/Core] SumT](ref://result-interpretation/lower-section/core/SumT)
+- [[Interpretação/Ideação] a:p](ref://result-interpretation/lower-section/ideation/a_p)
+- [[Interpretação/Seção Inferior/Autopercepção] Autopercepção](ref://result-interpretation/lower-section/selfPerception)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

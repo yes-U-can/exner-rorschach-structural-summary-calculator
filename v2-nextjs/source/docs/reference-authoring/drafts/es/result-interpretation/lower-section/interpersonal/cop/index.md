@@ -3,7 +3,7 @@ canonicalRoute: "result-interpretation/lower-section/interpersonal/COP"
 locale: "es"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/interpersonal/COP"
-displayTitle: "[Interpretacion/Interpersonal] COP"
+displayTitle: "[Interpretación/Interpersonal] COP"
 aliases:
   - "COP"
   - "cooperative movement"
@@ -17,41 +17,41 @@ relatedRoutes:
   - "scoring-input/gphr/GHR"
   - "scoring-input/gphr/PHR"
   - "result-interpretation/lower-section/interpersonal/ISO_Index"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/interpersonal/cop/index.md"
 ---
 
-# Nombre del documento: [Interpretacion/Interpersonal] COP
+# Nombre del documento: [Interpretación/Interpersonal] COP
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - COP
 - cooperative movement
 - movimiento cooperativo
 
-## Definicion central
+## Definición central
 
 `COP` muestra con que frecuencia el protocolo incluye escenas interpersonales cooperativas o mutuamente ajustadas.
-En interpretacion funciona como una pista de cuanto se imagina el vinculo en terminos de apoyo, coordinacion o reciprocidad.
+En interpretación funciona como una pista de cuánto se imagina el vínculo en términos de apoyo, coordinación o reciprocidad.
 
-## Puntos de interpretacion
+## Puntos de interpretación
 
-- Si `COP` aparece, suele haber mas expectativa de intercambio cooperativo o mas disponibilidad para imaginar relaciones de apoyo.
+- Si `COP` aparece, suele haber más expectativa de intercambio cooperativo o más disponibilidad para imaginar relaciones de apoyo.
 - Si `COP` es muy bajo o no aparece, el protocolo puede inclinarse menos hacia escenas cooperativas.
-- El valor no habla de habilidad social perfecta, sino del tipo de organizacion relacional que se imagina con mas facilidad.
+- El valor no habla de habilidad social perfecta, sino del tipo de organización relacional que se imagina con más facilidad.
 - Compararlo con `AG` ayuda a ver si el tono interpersonal dominante es cooperativo, conflictivo o mixto.
 
 ## Precauciones y distinciones
 
 - `COP` alto no garantiza relaciones reales sanas o estables.
-- Un `COP` bajo no equivale automaticamente a patologia.
+- Un `COP` bajo no equivale automáticamente a patología.
 - `COP` y `AG` pueden coexistir en el mismo protocolo.
 
-## Limites de interpretacion aislada
+## Limites de interpretación aislada
 
-- `COP` solo ofrece una senal sobre la estructura relacional imaginada.
+- `COP` solo ofrece una señal sobre la estructura relacional imaginada.
 - Conviene leerlo junto con `SumT_inter`, `HumanCont`, `ISO_Index` y `GHR/PHR`.
 
 ## Variables para revisar juntas
@@ -64,15 +64,15 @@ En interpretacion funciona como una pista de cuanto se imagina el vinculo en ter
 
 ## Referencias cruzadas
 
-- [[Interpretacion/Lower Section/Interpersonal] Interpersonal](ref://result-interpretation/lower-section/interpersonal)
-- [[Interpretacion/Interpersonal] AG](ref://result-interpretation/lower-section/interpersonal/AG)
-- [[Interpretacion/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
-- [[Interpretacion/Interpersonal] SumT](ref://result-interpretation/lower-section/interpersonal/SumT_inter)
-- [[Codificacion/Special Score] COP](ref://scoring-input/special-score/COP)
-- [[Codificacion/GHR-PHR] GHR](ref://scoring-input/gphr/GHR)
-- [[Codificacion/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
-- [[Interpretacion/Interpersonal] Isolation Index](ref://result-interpretation/lower-section/interpersonal/ISO_Index)
+- [[Interpretación/Lower Section/Interpersonal] Interpersonal](ref://result-interpretation/lower-section/interpersonal)
+- [[Interpretación/Interpersonal] AG](ref://result-interpretation/lower-section/interpersonal/AG)
+- [[Interpretación/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
+- [[Interpretación/Interpersonal] SumT](ref://result-interpretation/lower-section/interpersonal/SumT_inter)
+- [[Codificación/Special Score] COP](ref://scoring-input/special-score/COP)
+- [[Codificación/GHR-PHR] GHR](ref://scoring-input/gphr/GHR)
+- [[Codificación/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
+- [[Interpretación/Interpersonal] Isolation Index](ref://result-interpretation/lower-section/interpersonal/ISO_Index)
 
 ## Nota de fundamento
 
-- La fundamentacion detallada y las comparaciones de fuente se conservan en la provenance interna.
+- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

@@ -12,10 +12,10 @@ relatedRoutes:
   - "scoring-input/determinants/M"
   - "scoring-input/determinants/m"
   - "result-interpretation/lower-section/core/FM"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/scoring-input/determinants/fm/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Determinants] FM

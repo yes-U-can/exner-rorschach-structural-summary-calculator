@@ -16,10 +16,10 @@ relatedRoutes:
   - "scoring-input/location/S"
   - "result-interpretation/lower-section/affect/S_aff"
   - "result-interpretation/lower-section/mediation/S_minus"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/upper-section/s/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Upper Section] S

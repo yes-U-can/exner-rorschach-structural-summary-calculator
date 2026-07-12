@@ -19,10 +19,10 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation"
   - "result-interpretation/lower-section/affect"
   - "result-interpretation/lower-section/interpersonal"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/special-indices/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 # Document Name: [Interpretation/Special Indices] Special Indices
 ## Aliases / Search Terms
@@ -37,9 +37,10 @@ Each index does not replace clinical interpretation; instead it works as an actu
 - `PTI` points to problems in thinking and mediation.
 - `DEPI` organizes an alert around depressive features.
 - `CDI` summarizes vulnerability in coping resources and interpersonal effectiveness.
-- `SCON`, `HVI`, and `OBS` point toward internal risk, hypervigilance, and obsessive style.
+- `SCON` is a high-stakes risk alert. `HVI` and `OBS` organize vigilance- and precision-related variable patterns, but their empirical support is weak or insufficient and they should remain low-confidence hypotheses.
 ## Cautions / Distinctions
 - No special index should be treated as an automatic diagnosis.
+- Evidence strength differs by index; meeting an operational cutoff is not the same as establishing its proposed clinical meaning.
 - Constellations can produce false positives or miss individual cases.
 - It is always necessary to return to the base variables that feed the index.
 ## Limits of Isolated Interpretation

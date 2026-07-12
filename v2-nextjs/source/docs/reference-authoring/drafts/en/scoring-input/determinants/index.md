@@ -51,10 +51,10 @@ relatedRoutes:
   - "result-interpretation/lower-section/interpersonal/SumT_inter"
   - "result-interpretation/lower-section/selfPerception/Fr_rF"
   - "result-interpretation/lower-section/selfPerception/FD"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/scoring-input/determinants/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Determinants] Determinants

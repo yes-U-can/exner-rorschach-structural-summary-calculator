@@ -7,12 +7,31 @@ export type EphemeralChatContextResult =
   | { ok: true; messages: EphemeralChatContextMessage[] }
   | { ok: false; error: string };
 
-const MAX_CONTEXT_MESSAGES = 12;
-const MAX_CONTEXT_MESSAGE_CHARS = 4000;
-const MAX_CONTEXT_TOTAL_CHARS = 16000;
+export const MAX_CONTEXT_MESSAGES = 12;
+export const MAX_CONTEXT_MESSAGE_CHARS = 4000;
+export const MAX_CONTEXT_TOTAL_CHARS = 16000;
+
+const CONTEXT_TRUNCATION_MARKER = '\n[... truncated for conversation context ...]\n';
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null && !Array.isArray(value);
+}
+
+function truncateContextContent(content: string, maxChars: number): string {
+  if (content.length <= maxChars) return content;
+  if (maxChars <= CONTEXT_TRUNCATION_MARKER.length + 2) {
+    return content.slice(-maxChars);
+  }
+
+  const availableChars = maxChars - CONTEXT_TRUNCATION_MARKER.length;
+  const headChars = Math.ceil(availableChars * 0.65);
+  const tailChars = availableChars - headChars;
+
+  return [
+    content.slice(0, headChars).trimEnd(),
+    CONTEXT_TRUNCATION_MARKER,
+    content.slice(-tailChars).trimStart(),
+  ].join('');
 }
 
 export function normalizeEphemeralChatContext(input: unknown): EphemeralChatContextResult {
@@ -25,8 +44,7 @@ export function normalizeEphemeralChatContext(input: unknown): EphemeralChatCont
   }
 
   const recentItems = input.slice(-MAX_CONTEXT_MESSAGES);
-  const messages: EphemeralChatContextMessage[] = [];
-  let totalChars = 0;
+  const normalizedMessages: EphemeralChatContextMessage[] = [];
 
   for (const item of recentItems) {
     if (!isRecord(item)) {
@@ -47,18 +65,22 @@ export function normalizeEphemeralChatContext(input: unknown): EphemeralChatCont
       continue;
     }
 
-    if (content.length > MAX_CONTEXT_MESSAGE_CHARS) {
-      return { ok: false, error: 'A chat context message is too large.' };
-    }
-
-    totalChars += content.length;
-    if (totalChars > MAX_CONTEXT_TOTAL_CHARS) {
-      return { ok: false, error: 'Chat context is too large.' };
-    }
-
-    messages.push({ role, content });
+    normalizedMessages.push({
+      role,
+      content: truncateContextContent(content, MAX_CONTEXT_MESSAGE_CHARS),
+    });
   }
 
-  return { ok: true, messages };
-}
+  const recentMessages: EphemeralChatContextMessage[] = [];
+  let remainingChars = MAX_CONTEXT_TOTAL_CHARS;
 
+  for (let index = normalizedMessages.length - 1; index >= 0 && remainingChars > 0; index -= 1) {
+    const message = normalizedMessages[index];
+    const content = truncateContextContent(message.content, remainingChars);
+    if (!content) continue;
+    recentMessages.push({ ...message, content });
+    remainingChars -= content.length;
+  }
+
+  return { ok: true, messages: recentMessages.reverse() };
+}

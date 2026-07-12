@@ -3,10 +3,10 @@ canonicalRoute: "result-interpretation/lower-section/selfPerception/MOR_self"
 locale: "pt"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/selfPerception/MOR_self"
-displayTitle: "[Interpretacao/Autopercepcao] MOR"
+displayTitle: "[Interpretação/Autopercepção] MOR"
 aliases:
   - "MOR"
-  - "autoimagem morbida"
+  - "autoimagem mórbida"
   - "MOR_self"
   - "autoimagem danificada"
 relatedRoutes:
@@ -16,44 +16,44 @@ relatedRoutes:
   - "result-interpretation/lower-section/selfPerception/An_Xy"
   - "scoring-input/special-score/MOR"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-selfperception-family-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao/Autopercepcao] MOR
+# Nome do documento: [Interpretação/Autopercepção] MOR
 
 ## Apelidos e busca
 
 - MOR
-- autoimagem morbida
+- autoimagem mórbida
 - autoimagem danificada
 
-## Definicao central
+## Definição central
 
-`MOR` em `Autopercepcao` mostra quanto a autoimagem e vivida como danificada, defeituosa, desgastada ou sem valor.
-Onde `MOR` em `Ideacao` descreve um tom geral do pensamento, aqui o foco e quanto desse tom recai sobre a representacao de si.
+`MOR` em `Autopercepção` mostra quanto a autoimagem é vivida como danificada, defeituosa, desgastada ou sem valor.
+Onde `MOR` em `Ideação` descreve um tom geral do pensamento, aqui o foco é quanto desse tom recai sobre a representação de si.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- Se o valor e alto, a pessoa pode se sentir marcada por falha, dano ou defeito pessoal.
-- Se se combina com `SumV_self`, a autoimagem negativa pode vir acompanhada de autocritica intensa.
-- Se `An_Xy` tambem e alto, a imagem corporal pode parecer mais fragil, deteriorada ou ameacadora.
-- Se `MOR` e alto tanto na ideacao quanto na autopercepcao, o tom negativo pode ser amplo e tambem profundamente pessoal.
+- Se o valor é alto, a pessoa pode se sentir marcada por falha, dano ou defeito pessoal.
+- Se se combina com `SumV_self`, a autoimagem negativa pode vir acompanhada de autocrítica intensa.
+- Se `An_Xy` também é alto, a imagem corporal pode parecer mais frágil, deteriorada ou ameaçadora.
+- Se `MOR` é alto tanto na ideação quanto na autopercepção, o tom negativo pode ser amplo e também profundamente pessoal.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `MOR_self` alto nao equivale automaticamente a depressao clinica.
-- Doenca real, trauma fisico ou periodo de perda podem aumentar reativamente a autoimagem danificada.
-- Valor zero nao garante autoimagem saudavel ou estavel.
+- `MOR_self` alto não equivale automaticamente a depressão clínica.
+- Doença real, trauma físico ou período de perda podem aumentar reativamente a autoimagem danificada.
+- Valor zero não garante autoimagem saudável ou estável.
 
-## Limites da interpretacao isolada
+## Limites da interpretação isolada
 
-- `MOR_self` mostra o tom negativo da autoimagem, mas nao explica sozinho como essa experiencia e defendida ou regulada.
+- `MOR_self` mostra o tom negativo da autoimagem, mas não explica sozinho como essa experiência é defendida ou regulada.
 - Deve ser lido com `SumV_self`, `FD`, `Fr+rF` e `DEPI`.
 
-## Variaveis para revisar em conjunto
+## Variáveis para revisar em conjunto
 
 - `ideation MOR`
 - `SumV_self`
@@ -61,15 +61,15 @@ Onde `MOR` em `Ideacao` descreve um tom geral do pensamento, aqui o foco e quant
 - `DEPI`
 - `FD`
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Autopercepcao] Autopercepcao](ref://result-interpretation/lower-section/selfPerception)
-- [[Interpretacao/Ideacao] MOR](ref://result-interpretation/lower-section/ideation/MOR)
-- [[Interpretacao/Autopercepcao] SumV](ref://result-interpretation/lower-section/selfPerception/SumV_self)
-- [[Interpretacao/Autopercepcao] An + Xy](ref://result-interpretation/lower-section/selfPerception/An_Xy)
-- [[Codificacao/Escores Especiais] MOR](ref://scoring-input/special-score/MOR)
-- [[Interpretacao/Indices Especiais] DEPI](ref://result-interpretation/special-indices/DEPI)
+- [[Interpretação/Autopercepção] Autopercepção](ref://result-interpretation/lower-section/selfPerception)
+- [[Interpretação/Ideação] MOR](ref://result-interpretation/lower-section/ideation/MOR)
+- [[Interpretação/Autopercepção] SumV](ref://result-interpretation/lower-section/selfPerception/SumV_self)
+- [[Interpretação/Autopercepção] An + Xy](ref://result-interpretation/lower-section/selfPerception/An_Xy)
+- [[Codificação/Escores Especiais] MOR](ref://scoring-input/special-score/MOR)
+- [[Interpretação/Índices Especiais] DEPI](ref://result-interpretation/special-indices/DEPI)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

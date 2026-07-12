@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/determinants/TF"
 locale: "es"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/determinants/TF"
-displayTitle: "[Codificacion/Determinantes] TF"
+displayTitle: "[Codificación/Determinantes] TF"
 aliases:
   - "TF"
   - "textura-forma"
@@ -17,51 +17,51 @@ relatedRoutes:
   - "scoring-input/determinants/Y"
   - "result-interpretation/lower-section/core/SumT"
   - "result-interpretation/lower-section/interpersonal/SumT_inter"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/determinants/tf/index.md"
 ---
 
-# Nombre del documento: [Codificacion/Determinantes] TF
+# Nombre del documento: [Codificación/Determinantes] TF
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - TF
 - textura-forma
 - texture-form
 
-## Definicion central
+## Definición central
 
-`TF` se usa cuando la textura domina la respuesta y la forma queda en segundo plano.  
-La experiencia tactil o de superficie pesa mas que la estructura formal del percepto.
+`TF` se usa cuando la textura domina la respuesta y la forma queda en segundo plano.
+La experiencia táctil o de superficie pesa más que la estructura formal del percepto.
 
-## Condiciones de aplicacion
+## Condiciones de aplicación
 
-- El sujeto responde primero desde una impresion de textura o tacto.
+- El sujeto responde primero desde una impresión de textura o tacto.
 - La forma participa, pero solo como apoyo secundario.
 - Si la forma lleva el peso principal, debe reconsiderarse [`FT`](ref://scoring-input/determinants/FT).
-- Si casi no hay organizacion formal, puede corresponder [`T`](ref://scoring-input/determinants/T).
+- Si casi no hay organización formal, puede corresponder [`T`](ref://scoring-input/determinants/T).
 
 ## Precauciones y distinciones
 
-- `TF` no se decide por una sola palabra tactil aislada; importa el enfasis global de la respuesta.
-- Si la textura no esta realmente usada, la respuesta no debe inflarse a `TF`.
+- `TF` no se decide por una sola palabra táctil aislada; importa el énfasis global de la respuesta.
+- Si la textura no está realmente usada, la respuesta no debe inflarse a `TF`.
 - Si la experiencia dominante es profundidad o relieve, hay que revisar [`V`](ref://scoring-input/determinants/V).
 - Si la experiencia dominante es sombreado difuso, hay que revisar [`Y`](ref://scoring-input/determinants/Y).
 
 ## Referencias cruzadas
 
-- [[Codificacion/Determinantes] Determinants](ref://scoring-input/determinants)
-- [[Codificacion/Determinantes] FT](ref://scoring-input/determinants/FT)
-- [[Codificacion/Determinantes] T](ref://scoring-input/determinants/T)
-- [[Codificacion/Determinantes] F](ref://scoring-input/determinants/F)
-- [[Codificacion/Determinantes] V](ref://scoring-input/determinants/V)
-- [[Codificacion/Determinantes] Y](ref://scoring-input/determinants/Y)
-- [[Interpretacion/Core] SumT](ref://result-interpretation/lower-section/core/SumT)
-- [[Interpretacion/Interpersonal] SumT](ref://result-interpretation/lower-section/interpersonal/SumT_inter)
+- [[Codificación/Determinantes] Determinants](ref://scoring-input/determinants)
+- [[Codificación/Determinantes] FT](ref://scoring-input/determinants/FT)
+- [[Codificación/Determinantes] T](ref://scoring-input/determinants/T)
+- [[Codificación/Determinantes] F](ref://scoring-input/determinants/F)
+- [[Codificación/Determinantes] V](ref://scoring-input/determinants/V)
+- [[Codificación/Determinantes] Y](ref://scoring-input/determinants/Y)
+- [[Interpretación/Core] SumT](ref://result-interpretation/lower-section/core/SumT)
+- [[Interpretación/Interpersonal] SumT](ref://result-interpretation/lower-section/interpersonal/SumT_inter)
 
 ## Nota de fundamento
 
-- La justificacion detallada y la comparacion de fuentes se conservan en la provenance interna.
-- El cuerpo publico evita citar directamente los titulos de las fuentes.
+- La justificación detallada y la comparación de fuentes se conservan en la provenance interna.
+- El cuerpo público evita citar directamente los títulos de las fuentes.

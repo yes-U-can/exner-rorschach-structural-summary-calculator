@@ -16,7 +16,7 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/EA"
   - "result-interpretation/lower-section/core/EB"
   - "scoring-input/score"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-lower-section-core-opening-2026-03-10.md"

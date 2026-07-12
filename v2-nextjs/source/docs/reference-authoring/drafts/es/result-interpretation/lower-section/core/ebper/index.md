@@ -3,7 +3,7 @@ canonicalRoute: "result-interpretation/lower-section/core/EBPer"
 locale: "es"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/core/EBPer"
-displayTitle: "[Interpretacion/Core] EBPer"
+displayTitle: "[Interpretación/Core] EBPer"
 aliases:
   - "EBPer"
   - "EB Pervasive"
@@ -19,41 +19,41 @@ relatedRoutes:
   - "scoring-input/determinants/FC"
   - "scoring-input/determinants/CF"
   - "scoring-input/determinants/C"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/core/ebper/index.md"
 ---
 
-# Nombre del documento: [Interpretacion/Core] EBPer
+# Nombre del documento: [Interpretación/Core] EBPer
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - EBPer
 - EB Pervasive
 - pervasividad de EB
 
-## Definicion central
+## Definición central
 
-`EBPer` es la proporcion entre el lado mayor y el menor de `EB`.
-Solo se interpreta cuando `EB` tiene una direccion clara, y sirve para estimar cuan fija o dominante es esa preferencia de afrontamiento.
+`EBPer` es la proporción entre el lado mayor y el menor de `EB`.
+Solo se interpreta cuando `EB` tiene una dirección clara, y sirve para estimar cuán fija o dominante es esa preferencia de afrontamiento.
 
-## Puntos de interpretacion
+## Puntos de interpretación
 
 - Un `EBPer` bajo sugiere que el estilo preferente existe pero conserva cierta flexibilidad.
-- Un `EBPer` alto indica que la direccion `introversive` o `extratensive` se vuelve mas rigida o dominante.
+- Un `EBPer` alto indica que la dirección `introversive` o `extratensive` se vuelve más rígida o dominante.
 - En ese caso, la persona puede depender demasiado de un canal preferido y perder plasticidad.
 
 ## Precauciones y distinciones
 
-- `EBPer` no se interpreta si `EB` no tiene direccion clara.
-- Superar el punto de corte no significa por si solo patologia; describe menor flexibilidad.
-- Si `EA` es muy bajo o el protocolo es corto, la proporcion puede parecer mas extrema de lo que realmente es.
+- `EBPer` no se interpreta si `EB` no tiene dirección clara.
+- Superar el punto de corte no significa por sí solo patología; describe menor flexibilidad.
+- Si `EA` es muy bajo o el protocolo es corto, la proporción puede parecer más extrema de lo que realmente es.
 
-## Limites de interpretacion aislada
+## Limites de interpretación aislada
 
-- `EBPer` no decide por si solo fracaso adaptativo.
-- Para saber si la pervasividad es clinicamente relevante, hay que revisar `EA`, `es`, `D` y los componentes concretos de `EB`.
+- `EBPer` no decide por sí solo fracaso adaptativo.
+- Para saber si la pervasividad es clínicamente relevante, hay que revisar `EA`, `es`, `D` y los componentes concretos de `EB`.
 
 ## Variables para revisar juntas
 
@@ -66,17 +66,17 @@ Solo se interpreta cuando `EB` tiene una direccion clara, y sirve para estimar c
 
 ## Referencias cruzadas
 
-- [[Interpretacion/Lower Section/Core] Core](ref://result-interpretation/lower-section/core)
-- [[Interpretacion/Core] EB](ref://result-interpretation/lower-section/core/EB)
-- [[Interpretacion/Core] EA](ref://result-interpretation/lower-section/core/EA)
-- [[Interpretacion/Core] eb](ref://result-interpretation/lower-section/core/eb)
-- [[Interpretacion/Core] es](ref://result-interpretation/lower-section/core/es)
-- [[Interpretacion/Core] D](ref://result-interpretation/lower-section/core/D)
-- [[Codificacion/Determinantes] M](ref://scoring-input/determinants/M)
-- [[Codificacion/Determinantes] FC](ref://scoring-input/determinants/FC)
-- [[Codificacion/Determinantes] CF](ref://scoring-input/determinants/CF)
-- [[Codificacion/Determinantes] C](ref://scoring-input/determinants/C)
+- [[Interpretación/Lower Section/Core] Core](ref://result-interpretation/lower-section/core)
+- [[Interpretación/Core] EB](ref://result-interpretation/lower-section/core/EB)
+- [[Interpretación/Core] EA](ref://result-interpretation/lower-section/core/EA)
+- [[Interpretación/Core] eb](ref://result-interpretation/lower-section/core/eb)
+- [[Interpretación/Core] es](ref://result-interpretation/lower-section/core/es)
+- [[Interpretación/Core] D](ref://result-interpretation/lower-section/core/D)
+- [[Codificación/Determinantes] M](ref://scoring-input/determinants/M)
+- [[Codificación/Determinantes] FC](ref://scoring-input/determinants/FC)
+- [[Codificación/Determinantes] CF](ref://scoring-input/determinants/CF)
+- [[Codificación/Determinantes] C](ref://scoring-input/determinants/C)
 
 ## Nota de fundamento
 
-- La fundamentacion detallada y las comparaciones de fuente se conservan en la provenance interna.
+- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

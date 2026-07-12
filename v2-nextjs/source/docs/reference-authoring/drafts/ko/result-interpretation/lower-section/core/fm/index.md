@@ -16,7 +16,7 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/AdjD"
   - "result-interpretation/lower-section/core/m"
   - "scoring-input/determinants/FM"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/core/fm/index.md"

@@ -3,11 +3,11 @@ canonicalRoute: "scoring-input/card/III"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/card/III"
-displayTitle: "[Codificacao/Cartoes] III"
+displayTitle: "[Codificação/Cartões] III"
 aliases:
-  - "Cartao III"
-  - "cartao III"
-  - "cartao 3"
+  - "Cartão III"
+  - "cartão III"
+  - "cartão 3"
   - "prancha III"
 relatedRoutes:
   - "scoring-input/score"
@@ -17,49 +17,49 @@ relatedRoutes:
   - "scoring-input/special-score/COP"
   - "scoring-input/special-score/AG"
   - "scoring-input/popular"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-card-i-v-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificacao/Cartoes] III
+# Nome do documento: [Codificação/Cartões] III
 
 ## Apelidos e busca
 
-- Cartao III
-- cartao III
-- cartao 3
+- Cartão III
+- cartão III
+- cartão 3
 - prancha III
 
-## Definicao central
+## Definição central
 
-`Cartao III` costuma facilitar respostas humanas e cenas de interacao.
-Esta pagina funciona como lembrete de codificacao para conteudo humano, movimento e qualidade relacional.
+`Cartão III` costuma facilitar respostas humanas e cenas de interação.
+Esta página funciona como lembrete de codificação para conteúdo humano, movimento e qualidade relacional.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
-- Respostas com duas pessoas, duas figuras humanas ou figuras em relacao sao comuns.
+- Respostas com duas pessoas, duas figuras humanas ou figuras em relação são comuns.
 - Se o movimento humano estiver claro, revise `M`.
-- Se a resposta mostrar cooperacao ou agressao entre figuras em movimento, revise `COP` e `AG`.
-- Como o conteudo humano aparece com frequencia aqui, tambem e util revisar `H` e a decisao `GHR / PHR`.
+- Se a resposta mostrar cooperação ou agressão entre figuras em movimento, revise `COP` e `AG`.
+- Como o conteúdo humano aparece com frequência aqui, também é útil revisar `H` e a decisão `GHR / PHR`.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- A simples presenca de duas figuras nao basta para `COP` ou `AG`.
-- Uma resposta que parece social nao significa automaticamente movimento humano.
-- Se a cena estiver organizada como dois objetos separados, sem acao definida, nao acrescente codigos relacionais apenas por intuicao.
+- A simples presença de duas figuras não basta para `COP` ou `AG`.
+- Uma resposta que parece social não significa automaticamente movimento humano.
+- Se a cena estiver organizada como dois objetos separados, sem ação definida, não acrescente códigos relacionais apenas por intuição.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao] score](ref://scoring-input/score)
-- [[Codificacao/Determinantes] M](ref://scoring-input/determinants/M)
-- [[Codificacao/Conteudos] H](ref://scoring-input/contents/H)
-- [[Codificacao/GHR-PHR] GHR/PHR](ref://scoring-input/gphr)
-- [[Codificacao/Scores Especiais] COP](ref://scoring-input/special-score/COP)
-- [[Codificacao/Scores Especiais] AG](ref://scoring-input/special-score/AG)
-- [[Codificacao/Popular] Popular](ref://scoring-input/popular)
+- [[Codificação] score](ref://scoring-input/score)
+- [[Codificação/Determinantes] M](ref://scoring-input/determinants/M)
+- [[Codificação/Conteúdos] H](ref://scoring-input/contents/H)
+- [[Codificação/GHR-PHR] GHR/PHR](ref://scoring-input/gphr)
+- [[Codificação/Scores Especiais] COP](ref://scoring-input/special-score/COP)
+- [[Codificação/Scores Especiais] AG](ref://scoring-input/special-score/AG)
+- [[Codificação/Popular] Popular](ref://scoring-input/popular)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

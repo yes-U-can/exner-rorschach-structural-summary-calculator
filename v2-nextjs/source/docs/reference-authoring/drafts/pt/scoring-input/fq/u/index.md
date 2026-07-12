@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/fq/u"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/fq/u"
-displayTitle: "[Codificacao/Qualidade Formal] u"
+displayTitle: "[Codificação/Qualidade Formal] u"
 aliases:
   - "u"
   - "FQu"
@@ -12,13 +12,13 @@ relatedRoutes:
   - "scoring-input/fq/o"
   - "scoring-input/fq/-"
   - "result-interpretation/lower-section/mediation/Xu_percent"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-fq-2026-03-10.md"
 ---
 
-# Nome do documento: [Codificacao/Qualidade Formal] u
+# Nome do documento: [Codificação/Qualidade Formal] u
 
 ## Apelidos e busca
 
@@ -26,30 +26,30 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-fq-2026-03-10.md"
 - FQu
 - ajuste formal incomum
 
-## Definicao central
+## Definição central
 
-`FQu` e usado quando a resposta e incomum, mas ainda plausivel e sustentavel pela area da mancha.
-E ajuste incomum, nao ajuste distorcido.
+`FQu` é usado quando a resposta é incomum, mas ainda plausível e sustentável pela área da mancha.
+É ajuste incomum, não ajuste distorcido.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
-- A resposta e menos comum do que as respostas de bom ajuste ordinario.
-- O objeto ainda pode ser visto como plausivel sem grande forca.
-- O ajuste permanece sustentavel, mesmo nao sendo a leitura mais imediata.
-- A resposta nao cruza para distorcao clara.
+- A resposta é menos comum do que as respostas de bom ajuste ordinário.
+- O objeto ainda pode ser visto como plausível sem grande força.
+- O ajuste permanece sustentável, mesmo não sendo a leitura mais imediata.
+- A resposta não cruza para distorção clara.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `FQu` nao deve ser usado apenas porque a resposta e criativa. O ajuste ainda precisa ser sustentavel.
-- Se a resposta e ordinaria e claramente bem ajustada, use [`FQo`](ref://scoring-input/fq/o).
-- Se a resposta depende de contornos forcados ou distorcao clara, use [`FQ-`](ref://scoring-input/fq/-).
+- `FQu` não deve ser usado apenas porque a resposta é criativa. O ajuste ainda precisa ser sustentável.
+- Se a resposta e ordinária e claramente bem ajustada, use [`FQo`](ref://scoring-input/fq/o).
+- Se a resposta depende de contornos forçados ou distorção clara, use [`FQ-`](ref://scoring-input/fq/-).
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao/Qualidade Formal] o](ref://scoring-input/fq/o)
-- [[Codificacao/Qualidade Formal] -](ref://scoring-input/fq/-)
-- [[Interpretacao/Mediation] Xu%](ref://result-interpretation/lower-section/mediation/Xu_percent)
+- [[Codificação/Qualidade Formal] o](ref://scoring-input/fq/o)
+- [[Codificação/Qualidade Formal] -](ref://scoring-input/fq/-)
+- [[Interpretação/Mediation] Xu%](ref://result-interpretation/lower-section/mediation/Xu_percent)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

@@ -3,7 +3,7 @@ canonicalRoute: "result-interpretation/special-indices/HVI"
 locale: "ja"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/special-indices/HVI"
-displayTitle: "[Interpretation/Special Indices] Hypervigilance Index"
+displayTitle: "[解釈/特殊指標] HVI"
 aliases:
   - "HVI"
   - "Hypervigilance Index"
@@ -16,44 +16,44 @@ relatedRoutes:
   - "result-interpretation/lower-section/affect/S_aff"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-indices-2026-03-10.md"
 ---
 
-# Document Name: [Interpretation/Special Indices] Hypervigilance Index
+# 文書名: [解釈/特殊指標] HVI
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - HVI
 - Hypervigilance Index
 - 過警戒指数
 
-## Core Definition
+## 中核的定義
 
-`HVI` は、防衛的警戒、距離化、過度の見張りを示す constellation です。  
-陽性なら、信頼より control と protection を優先する対人スタイルを疑います。
+`HVI` は、過度の警戒や対人的な距離化と関連すると提案された変数の操作的な組合せです。
+経験的支持は弱く一貫しないため、陽性だけから警戒心、不信、特定の性格傾向を推論しません。
 
-## Interpretation Points
+## 解釈の要点
 
-- 陽性なら、対人スタイルが cautious、distrustful、threat-tuned になりやすいです。
-- これは automatic paranoid diagnosis ではなく、防衛的 disposition として読むのが基本です。
-- `SumT_inter`、`Zf`、`Zd`、`S`、`H_ratio`、`HumanCont` と一緒に出ると意味が強くなります。
-- 現実の danger や recent threat experience でも pattern は影響を受けます。
+- 陽性は、まず操作的な組合せが満たされたことだけを意味します。
+- 面接や行動観察で警戒行動が独立して確認される場合に限り、低い確信度の仮説として検討します。
+- `SumT_inter`、`Zf`、`Zd`、`S`、`H_ratio`、`HumanCont` は陽性判定の構成要素として確認します。これらの一致だけで指標の臨床的意味が確定するわけではありません。
+- 現実の危険、外傷歴、最近の被害経験、文化的な対人距離などの状況要因を優先して評価します。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
-- `HVI` は yes/no 判定で、 absence は vigilance の低さを保証しません。
-- 文化的要因や situational reserve も影響します。
-- primary `T = 0` rule と secondary condition を一緒に読みます。
+- 陽性でも過警戒や妄想性を確定せず、陰性でも臨床的な警戒心を除外できません。
+- `T = 0` を含む各判定条件は、性格や診断の直接的な証拠ではありません。
+- 文化、職業、状況に応じた慎重さを病理化しないようにします。
 
-## Limits of Isolated Interpretation
+## 単独解釈の限界
 
-- `HVI` は alertness と defense の pattern を示しますが、原因までは単独で決めません。
-- `S`、`Zf`、`Zd`、`H_ratio`、対人変数と一緒に読む必要があります。
+- 指標だけから警戒の有無、原因、持続性を決めることはできません。
+- 構成変数へ戻り、面接、行動観察、生活環境、既往歴と照合します。
 
-## Variables to Review Together
+## 併せて確認する変数
 
 - `SumT_inter`
 - `Zf_proc`
@@ -61,16 +61,16 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-indices-20
 - `S_aff`
 - `H_ratio`
 
-## Cross References
+## 相互参照
 
-- [[Interpretation/Special Indices] Special Indices](ref://result-interpretation/special-indices)
-- [[Interpretation/Interpersonal] SumT](ref://result-interpretation/lower-section/interpersonal/SumT_inter)
-- [[Interpretation/Processing] Zf](ref://result-interpretation/lower-section/processing/Zf_proc)
-- [[Interpretation/Processing] Zd](ref://result-interpretation/lower-section/processing/Zd_proc)
-- [[Interpretation/Affect] S](ref://result-interpretation/lower-section/affect/S_aff)
-- [[Interpretation/Self Perception] H Ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
-- [[Interpretation/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
+- [[解釈/特殊指標] 特殊指標](ref://result-interpretation/special-indices)
+- [[解釈/対人関係] SumT](ref://result-interpretation/lower-section/interpersonal/SumT_inter)
+- [[解釈/処理] Zf](ref://result-interpretation/lower-section/processing/Zf_proc)
+- [[解釈/処理] Zd](ref://result-interpretation/lower-section/processing/Zd_proc)
+- [[解釈/感情] S](ref://result-interpretation/lower-section/affect/S_aff)
+- [[解釈/自己知覚] H比率](ref://result-interpretation/lower-section/selfPerception/H_ratio)
+- [[解釈/対人関係] 人間内容](ref://result-interpretation/lower-section/interpersonal/HumanCont)
 
-## Evidence Note
+## 根拠メモ
 
-- Detailed source comparison is stored in internal provenance notes.
+- 詳細な検討記録は内部の検証ノートで管理します。

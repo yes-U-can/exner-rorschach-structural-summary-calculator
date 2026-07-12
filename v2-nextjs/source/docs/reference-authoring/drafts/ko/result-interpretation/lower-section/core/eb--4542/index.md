@@ -21,7 +21,7 @@ relatedRoutes:
   - "scoring-input/determinants/FC"
   - "scoring-input/determinants/CF"
   - "scoring-input/determinants/C"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/core/eb--4542/index.md"

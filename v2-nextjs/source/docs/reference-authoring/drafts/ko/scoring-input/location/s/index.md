@@ -19,7 +19,7 @@ relatedRoutes:
   - "result-interpretation/upper-section/S"
   - "result-interpretation/lower-section/mediation/S_minus"
   - "result-interpretation/lower-section/affect/S_aff"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/location/s/index.md"

@@ -16,7 +16,7 @@ relatedRoutes:
   - "scoring-input/fq/-"
   - "result-interpretation/lower-section/ideation/WSum6"
   - "result-interpretation/special-indices/PTI"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/mediation/x-minus-percent/index.md"

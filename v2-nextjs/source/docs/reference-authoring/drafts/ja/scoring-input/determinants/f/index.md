@@ -17,7 +17,7 @@ relatedRoutes:
   - "scoring-input/fq/u"
   - "scoring-input/fq/-"
   - "result-interpretation/lower-section/core/Lambda"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-determinants-f-fr-rf-fd-2026-03-10.md"

@@ -14,7 +14,7 @@ relatedRoutes:
   - "scoring-input/contents/An"
   - "scoring-input/contents/Xy"
   - "result-interpretation/special-indices/HVI"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-selfperception-2026-03-10.md"

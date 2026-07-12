@@ -13,10 +13,10 @@ relatedRoutes:
   - "scoring-input/location/DdS"
   - "scoring-input/location/W"
   - "result-interpretation/upper-section/Dd"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/ja/scoring-input/location/dd/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [コーディング/場所] Dd

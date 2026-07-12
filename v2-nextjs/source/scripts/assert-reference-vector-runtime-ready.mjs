@@ -2,11 +2,13 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
+import { buildReferenceCorpusFingerprint } from './lib/referenceCorpusFingerprint.mjs';
 
 const ROOT = process.cwd();
 const GENERATED_ROOT = path.join(ROOT, 'generated', 'reference-corpus');
 const LEXICAL_RELEASE_PATH = path.join(GENERATED_ROOT, 'release-snapshot.json');
 const VECTOR_RELEASE_PATH = path.join(GENERATED_ROOT, 'vector-release-snapshot.json');
+const CHUNKS_PATH = path.join(GENERATED_ROOT, 'chunks.json');
 const PROVIDERS = ['openai'];
 
 function readJson(filePath) {
@@ -26,6 +28,21 @@ function assert(condition, message) {
 function main() {
   const lexicalRelease = readJson(LEXICAL_RELEASE_PATH);
   const vectorRelease = readJson(VECTOR_RELEASE_PATH);
+  const chunksArtifact = readJson(CHUNKS_PATH);
+  const currentCorpusFingerprint = buildReferenceCorpusFingerprint(chunksArtifact);
+
+  assert(
+    chunksArtifact.corpusFingerprint === currentCorpusFingerprint,
+    'Current reference corpus fingerprint is missing or invalid. Regenerate the corpus.',
+  );
+  assert(
+    vectorRelease.corpus?.fingerprint === currentCorpusFingerprint,
+    'Vector release snapshot does not match the current reference corpus. Regenerate embeddings and the vector snapshot.',
+  );
+  assert(
+    vectorRelease.corpus?.generatedAt === chunksArtifact.generatedAt,
+    'Vector release snapshot was generated for a different corpus revision.',
+  );
 
   assert(Array.isArray(lexicalRelease.locales) && lexicalRelease.locales.length > 0, 'Lexical release snapshot has no locales.');
   assert(Array.isArray(vectorRelease.providers), 'Vector release snapshot is missing provider data.');
@@ -33,11 +50,6 @@ function main() {
     PROVIDERS.every((provider) => vectorRelease.providers.includes(provider)),
     'Vector release snapshot must include the openai provider.',
   );
-  assert(
-    PROVIDERS.every((provider) => vectorRelease.totals?.readyLocalesByProvider?.[provider] === lexicalRelease.locales.length),
-    'Not all vector providers are ready.',
-  );
-
   const rows = [];
 
   for (const provider of PROVIDERS) {
@@ -56,16 +68,26 @@ function main() {
         `Stale embeddings remain for ${provider}:${locale}.`,
       );
       assert(localeSnapshot.ready === true, `Vector runtime is not ready for ${provider}:${locale}.`);
+      assert(
+        vectorRelease.corpus?.chunkCounts?.[locale] === localeSnapshot.chunkCount,
+        `Vector snapshot corpus count mismatch for ${provider}:${locale}.`,
+      );
 
       rows.push({
         provider,
         locale,
         embeddings: localeSnapshot.embeddedChunkCount,
         chunks: localeSnapshot.chunkCount,
+        stale: localeSnapshot.staleEmbeddingCount,
         ready: localeSnapshot.ready,
       });
     }
   }
+
+  assert(
+    PROVIDERS.every((provider) => vectorRelease.totals?.readyLocalesByProvider?.[provider] === lexicalRelease.locales.length),
+    'Not all vector providers are ready.',
+  );
 
   console.log('[reference-vector-runtime-ready]');
   console.table(rows);

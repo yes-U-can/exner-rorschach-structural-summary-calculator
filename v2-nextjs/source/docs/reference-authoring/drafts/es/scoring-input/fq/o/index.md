@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/fq/o"
 locale: "es"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/fq/o"
-displayTitle: "[Codificacion/Calidad formal] o"
+displayTitle: "[Codificación/Calidad formal] o"
 aliases:
   - "FQo"
   - "ordinaria"
@@ -13,46 +13,46 @@ relatedRoutes:
   - "scoring-input/fq/u"
   - "scoring-input/fq/-"
   - "scoring-input/dq/o"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/fq/o/index.md"
 ---
 
-# Nombre del documento: [Codificacion/Calidad formal] o
+# Nombre del documento: [Codificación/Calidad formal] o
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - FQo
 - ordinaria
 - ajuste formal ordinario
 
-## Definicion central
+## Definición central
 
-FQo es la respuesta con ajuste formal apropiado y uso comun de la forma.  
-Es la categoria base de buen ajuste cuando no hay elaboracion suficiente para `+`.
+FQo es la respuesta con ajuste formal apropiado y uso común de la forma.
+Es la categoría base de buen ajuste cuando no hay elaboración suficiente para `+`.
 
-## Condiciones de aplicacion
+## Condiciones de aplicación
 
-- El objeto encaja de manera adecuada con el area de la mancha.
-- La respuesta corresponde a una solucion ordinaria segun la tabla o una extrapolacion razonable.
-- No hay articulacion formal excepcional que justifique `+`.
+- El objeto encaja de manera adecuada con el área de la mancha.
+- La respuesta corresponde a una solución ordinaria según la tabla o una extrapolación razonable.
+- No hay articulación formal excepcional que justifique `+`.
 - El ajuste es claramente mejor que una respuesta `u` o `-`.
 
 ## Precauciones y distinciones
 
-- `o` no significa banal; significa ajuste apropiado y comun.
+- `o` no significa banal; significa ajuste apropiado y común.
 - Si la respuesta mantiene buen ajuste pero es poco frecuente, puede corresponder [`FQu`](ref://scoring-input/fq/u).
-- Si el ajuste es bueno y ademas especialmente elaborado, puede corresponder [`FQ+`](ref://scoring-input/fq/%2B).
+- Si el ajuste es bueno y además especialmente elaborado, puede corresponder [`FQ+`](ref://scoring-input/fq/%2B).
 - No confunda `FQo` con [`DQo`](ref://scoring-input/dq/o).
 
 ## Referencias cruzadas
 
-- [[Codificacion/Calidad formal] +](ref://scoring-input/fq/%2B)
-- [[Codificacion/Calidad formal] u](ref://scoring-input/fq/u)
-- [[Codificacion/Calidad formal] -](ref://scoring-input/fq/-)
-- [[Codificacion/Calidad evolutiva] o](ref://scoring-input/dq/o)
+- [[Codificación/Calidad formal] +](ref://scoring-input/fq/%2B)
+- [[Codificación/Calidad formal] u](ref://scoring-input/fq/u)
+- [[Codificación/Calidad formal] -](ref://scoring-input/fq/-)
+- [[Codificación/Calidad evolutiva] o](ref://scoring-input/dq/o)
 
 ## Nota de fundamento
 
-- La provenance interna conserva la comparacion de fuentes y los criterios de extrapolacion.
+- La provenance interna conserva la comparación de fuentes y los criterios de extrapolación.

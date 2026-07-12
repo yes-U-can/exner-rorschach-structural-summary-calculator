@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/gphr/PHR"
 locale: "es"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/gphr/PHR"
-displayTitle: "[Codificacion/GHR-PHR] PHR"
+displayTitle: "[Codificación/GHR-PHR] PHR"
 aliases:
   - "PHR"
   - "poor human representation"
@@ -17,51 +17,51 @@ relatedRoutes:
   - "scoring-input/special-score/MOR"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/gphr/phr/index.md"
 ---
 
-# Nombre del documento: [Codificacion/GHR-PHR] PHR
+# Nombre del documento: [Codificación/GHR-PHR] PHR
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - PHR
 - poor human representation
 - poor human representational response
 
-## Definicion central
+## Definición central
 
-`PHR` marca una respuesta de representacion humana relativamente mas pobre, distorsionada o fragil dentro de la secuencia del sistema.  
-Igual que `GHR`, no se decide por impresion libre, sino siguiendo criterios sucesivos.
+`PHR` marca una respuesta de representación humana relativamente más pobre, distorsionada o frágil dentro de la secuencia del sistema.
+Igual que `GHR`, no se decide por impresión libre, sino siguiendo criterios sucesivos.
 
-## Condiciones de aplicacion
+## Condiciones de aplicación
 
-- La respuesta debe ser primero una respuesta de representacion humana.
-- `PHR` se asigna pronto si hay `FQ-`, `FQ none`, `CONTAM` o cualquier codigo cognitivo de nivel 2.
-- Tambien empujan a `PHR` codigos como `FABCOM`, [`MOR`](ref://scoring-input/special-score/MOR), contenido [`An`](ref://scoring-input/contents/An), [`AG`](ref://scoring-input/special-score/AG), `INCOM`, `DR`, o contenido [`Hd`](ref://scoring-input/contents/Hd) en la parte correspondiente de la secuencia.
-- Si un criterio de `PHR` aparece antes que uno de `GHR`, la decision se cierra en `PHR`.
+- La respuesta debe ser primero una respuesta de representación humana.
+- `PHR` se asigna pronto si hay `FQ-`, `FQ none`, `CONTAM` o cualquier código cognitivo de nivel 2.
+- También empujan a `PHR` códigos como `FABCOM`, [`MOR`](ref://scoring-input/special-score/MOR), contenido [`An`](ref://scoring-input/contents/An), [`AG`](ref://scoring-input/special-score/AG), `INCOM`, `DR`, o contenido [`Hd`](ref://scoring-input/contents/Hd) en la parte correspondiente de la secuencia.
+- Si un criterio de `PHR` aparece antes que uno de `GHR`, la decisión se cierra en `PHR`.
 
 ## Precauciones y distinciones
 
-- `PHR` no significa simplemente "contenido negativo"; es una clasificacion de la respuesta de representacion humana.
-- No toda respuesta con `Hd` se decide al instante; la secuencia completa sigue importando, aunque `Hd` es una senal relevante.
+- `PHR` no significa simplemente "contenido negativo"; es una clasificación de la respuesta de representación humana.
+- No toda respuesta con `Hd` se decide al instante; la secuencia completa sigue importando, aunque `Hd` es una señal relevante.
 - `PHR` y `GHR` no se duplican; la respuesta termina en uno solo.
-- La interpretacion posterior debe apoyarse en el conjunto del protocolo, no en `PHR` aislado.
+- La interpretación posterior debe apoyarse en el conjunto del protocolo, no en `PHR` aislado.
 
 ## Referencias cruzadas
 
-- [[Codificacion/GHR-PHR] GHR/PHR](ref://scoring-input/gphr)
-- [[Codificacion/GHR-PHR] GHR](ref://scoring-input/gphr/GHR)
-- [[Codificacion/Contenido] Hd](ref://scoring-input/contents/Hd)
-- [[Codificacion/Contenido] An](ref://scoring-input/contents/An)
-- [[Codificacion/Codigo especial] AG](ref://scoring-input/special-score/AG)
-- [[Codificacion/Codigo especial] MOR](ref://scoring-input/special-score/MOR)
-- [[Interpretacion/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
-- [[Interpretacion/Self Perception] H ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
+- [[Codificación/GHR-PHR] GHR/PHR](ref://scoring-input/gphr)
+- [[Codificación/GHR-PHR] GHR](ref://scoring-input/gphr/GHR)
+- [[Codificación/Contenido] Hd](ref://scoring-input/contents/Hd)
+- [[Codificación/Contenido] An](ref://scoring-input/contents/An)
+- [[Codificación/Código especial] AG](ref://scoring-input/special-score/AG)
+- [[Codificación/Código especial] MOR](ref://scoring-input/special-score/MOR)
+- [[Interpretación/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
+- [[Interpretación/Self Perception] H ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
 
 ## Nota de fundamento
 
-- La justificacion detallada y la comparacion de fuentes se conservan en la provenance interna.
-- El cuerpo publico evita citar directamente los titulos de las fuentes.
+- La justificación detallada y la comparación de fuentes se conservan en la provenance interna.
+- El cuerpo público evita citar directamente los títulos de las fuentes.

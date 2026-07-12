@@ -16,10 +16,10 @@ relatedRoutes:
   - "scoring-input/determinants/FD"
   - "scoring-input/contents/Fd"
   - "result-interpretation/lower-section/core/SumV"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/lower-section/selfperception/fd/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 # Document Name: [Interpretation/Self Perception] FD
 ## Aliases / Search Terms

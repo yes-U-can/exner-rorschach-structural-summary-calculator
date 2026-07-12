@@ -3,11 +3,11 @@ canonicalRoute: "result-interpretation/lower-section/affect/S_aff"
 locale: "pt"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/affect/S_aff"
-displayTitle: "[Interpretacao/Afeto] S"
+displayTitle: "[Interpretação/Afeto] S"
 aliases:
   - "S"
-  - "espaco branco afetivo"
-  - "afeto com espaco branco"
+  - "espaço branco afetivo"
+  - "afeto com espaço branco"
 relatedRoutes:
   - "result-interpretation/lower-section/affect"
   - "result-interpretation/upper-section/S"
@@ -16,47 +16,47 @@ relatedRoutes:
   - "scoring-input/special-score/AG"
   - "result-interpretation/special-indices/DEPI"
   - "result-interpretation/special-indices/HVI"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-affect-s-blends-cp-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao/Afeto] S
+# Nome do documento: [Interpretação/Afeto] S
 
 ## Apelidos e busca
 
 - S
-- espaco branco afetivo
-- afeto com espaco branco
+- espaço branco afetivo
+- afeto com espaço branco
 
-## Definicao central
+## Definição central
 
-`S` em afeto se refere ao uso de espaco branco com valor interpretativo emocional.
-Costuma ser revisto como possivel sinal de oposicao, autoafirmacao defensiva, tensao ou necessidade de marcar distancia.
+`S` em afeto se refere ao uso de espaço branco com valor interpretativo emocional.
+Costuma ser revisto como possível sinal de oposição, autoafirmacao defensiva, tensão ou necessidade de marcar distância.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- Quando `S` aparece em frequencia mais alta, pode haver tendencia maior a responder por oposicao, negativismo ou afirmacao defensiva de autonomia.
-- Em alguns protocolos tambem pode indicar raiva, pressao interna ou esforco para manter distancia do campo do estimulo.
-- Nem toda resposta com espaco branco significa hostilidade; em parte dos casos ela tambem pode refletir procura perceptiva ou estilo exploratorio.
+- Quando `S` aparece em frequência mais alta, pode haver tendência maior a responder por oposição, negativismo ou afirmação defensiva de autonomia.
+- Em alguns protocolos também pode indicar raiva, pressão interna ou esforço para manter distância do campo do estímulo.
+- Nem toda resposta com espaço branco significa hostilidade; em parte dos casos ela também pode refletir procura perceptiva ou estilo exploratório.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- Nao deve ser confundido com `S` da secao superior nem com `S-%` da mediacao.
-- Um numero pequeno de casos nao basta, sozinho, para definir estilo oposicionista estavel.
-- Vale verificar se o uso de espaco branco aparece junto com `AG`, `CP` ou outros marcadores mais amplos de tensao.
+- Não deve ser confundido com `S` da seção superior nem com `S-%` da mediação.
+- Um número pequeno de casos não basta, sozinho, para definir estilo oposicionista estável.
+- Vale verificar se o uso de espaço branco aparece junto com `AG`, `CP` ou outros marcadores mais amplos de tensão.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Secao Inferior/Afeto] Afeto](ref://result-interpretation/lower-section/affect)
-- [[Interpretacao/Secao Superior] S](ref://result-interpretation/upper-section/S)
-- [[Interpretacao/Mediacao] S-%](ref://result-interpretation/lower-section/mediation/S_minus)
-- [[Codificacao/Localizacao] S](ref://scoring-input/location/S)
-- [[Codificacao/Special Score] AG](ref://scoring-input/special-score/AG)
-- [[Interpretacao/Indices Especiais] DEPI](ref://result-interpretation/special-indices/DEPI)
-- [[Interpretacao/Indices Especiais] HVI](ref://result-interpretation/special-indices/HVI)
+- [[Interpretação/Seção Inferior/Afeto] Afeto](ref://result-interpretation/lower-section/affect)
+- [[Interpretação/Seção Superior] S](ref://result-interpretation/upper-section/S)
+- [[Interpretação/Mediação] S-%](ref://result-interpretation/lower-section/mediation/S_minus)
+- [[Codificação/Localização] S](ref://scoring-input/location/S)
+- [[Codificação/Special Score] AG](ref://scoring-input/special-score/AG)
+- [[Interpretação/Índices Especiais] DEPI](ref://result-interpretation/special-indices/DEPI)
+- [[Interpretação/Índices Especiais] HVI](ref://result-interpretation/special-indices/HVI)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

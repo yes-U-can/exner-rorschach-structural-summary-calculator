@@ -16,7 +16,7 @@ relatedRoutes:
   - "scoring-input/determinants/FV"
   - "scoring-input/determinants/FT"
   - "result-interpretation/lower-section/core/SumY"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/determinants/fy/index.md"

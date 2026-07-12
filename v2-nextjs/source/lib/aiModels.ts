@@ -1,5 +1,8 @@
 export type Provider = 'openai';
 
+export const FIXED_OPENAI_MODEL_ID = 'gpt-5.5' as const;
+export const AI_MODEL_POLICY_ID = 'openai-gpt-5.5-fixed-v1' as const;
+
 export type ModelQualityLevel = 'basic' | 'standard' | 'advanced';
 export type ModelPriceLevel = 'low' | 'medium' | 'high';
 export type ModelSpeedLevel = 'fast' | 'balanced' | 'deep';
@@ -21,7 +24,7 @@ export type AIModelConfig = {
 };
 
 export const DEFAULT_PROVIDER_MODEL_IDS: Record<Provider, string> = {
-  openai: 'gpt-5.5',
+  openai: FIXED_OPENAI_MODEL_ID,
 };
 
 const MODEL_CATALOG: AIModelConfig[] = [

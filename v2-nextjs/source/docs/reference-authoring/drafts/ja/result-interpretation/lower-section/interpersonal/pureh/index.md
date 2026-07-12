@@ -18,7 +18,7 @@ relatedRoutes:
   - "scoring-input/gphr/PHR"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
   - "result-interpretation/special-indices/CDI"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-interpersonal-pureh-per-iso-2026-03-10.md"

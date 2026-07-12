@@ -92,6 +92,8 @@ type OpenAIResponseLike = {
 };
 
 export const AI_HARNESS_VERSION = 'sicp-openai-harness-v1';
+export const OPENAI_GENERATION_TIMEOUT_MS = 3 * 60 * 1000;
+export const OPENAI_GENERATION_MAX_RETRIES = 1;
 
 const PROMPT_PROFILES: Record<AiWorkflowMode, AiPromptProfile> = {
   interpretation: {
@@ -187,6 +189,7 @@ export function buildAiResponsePolicyPrompt(profile: AiPromptProfile): string {
       '- If the user asks a broad "where should I start" question without concrete Structural Summary values, describe the inspection order instead of inventing or implying specific findings.',
       '- For broad first-pass questions, explicitly name the starting point or review order before adding caveats.',
       '- Do not introduce variables, indices, or score names that are absent from both the provided data and the reference context.',
+      '- Never turn assumed, invented, or hypothetical values into a case-specific conclusion or report sentence. Ask for the actual observed values instead, even if the user asks you to "just assume" them.',
       '- Keep diagnostic, treatment, medication, legal, and forensic conclusions out of scope.',
     ].join('\n');
   }
@@ -197,6 +200,7 @@ export function buildAiResponsePolicyPrompt(profile: AiPromptProfile): string {
     '- If the response memo lacks observation detail, ask 1-3 specific follow-up questions before giving a strong coding recommendation.',
     '- When evidence is thin, explicitly mark code ideas as candidates or provisional possibilities instead of final recommendations; use direct words like "candidate" or "provisional" in English when they fit.',
     '- For Popular/P and FQ questions, require the specific percept and form-fit or card-list evidence before recommending a mark.',
+    '- When the focus row changes, explicitly re-evaluate the newly focused row from its own response evidence instead of copying a candidate from the previous row.',
     '- If the user asks you to apply or enter codes, say directly that you cannot edit the sheet automatically and can only suggest candidates for clinician review.',
     '- Do not claim that the app can apply coding changes automatically. Candidate codes require clinician confirmation.',
   ].join('\n');
@@ -293,8 +297,13 @@ export async function createOpenAITextStream(args: {
   model: string;
   maxOutputTokens: number;
   messages: AiModelMessage[];
+  signal?: AbortSignal;
 }): Promise<OpenAITextStreamResult> {
-  const openai = new OpenAI({ apiKey: args.apiKey });
+  const openai = new OpenAI({
+    apiKey: args.apiKey,
+    timeout: OPENAI_GENERATION_TIMEOUT_MS,
+    maxRetries: OPENAI_GENERATION_MAX_RETRIES,
+  });
 
   const instructions = args.messages
     .filter((message) => message.role === 'system')
@@ -308,14 +317,21 @@ export async function createOpenAITextStream(args: {
       content: message.content,
     }));
 
-  const providerStream = await openai.responses.create({
-    model: args.model,
-    ...(instructions ? { instructions } : {}),
-    input,
-    max_output_tokens: args.maxOutputTokens,
-    store: false,
-    stream: true,
-  });
+  const providerStream = await openai.responses.create(
+    {
+      model: args.model,
+      ...(instructions ? { instructions } : {}),
+      input,
+      max_output_tokens: args.maxOutputTokens,
+      store: false,
+      stream: true,
+    },
+    {
+      signal: args.signal,
+      timeout: OPENAI_GENERATION_TIMEOUT_MS,
+      maxRetries: OPENAI_GENERATION_MAX_RETRIES,
+    },
+  );
 
   let settled = false;
   let resolveCompletion: (completion: OpenAITextStreamCompletion) => void = () => {};

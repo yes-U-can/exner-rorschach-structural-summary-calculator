@@ -13,7 +13,7 @@ relatedRoutes:
   - "scoring-input/contents/H"
   - "scoring-input/contents/Hd"
   - "scoring-input/contents/An"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/contents/sx/index.md"

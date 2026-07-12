@@ -14,10 +14,10 @@ relatedRoutes:
   - "scoring-input/location/DS"
   - "scoring-input/location/DdS"
   - "result-interpretation/upper-section/Zf"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/scoring-input/z/zs/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Z] ZS

@@ -3,11 +3,11 @@ canonicalRoute: "result-interpretation/special-indices/PTI"
 locale: "pt"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/special-indices/PTI"
-displayTitle: "[Interpretacao/Indices Especiais] PTI"
+displayTitle: "[Interpretação/Índices Especiais] PTI"
 aliases:
   - "PTI"
   - "Perceptual-Thinking Index"
-  - "indice perceptivo-cognitivo"
+  - "índice perceptivo-cognitivo"
 relatedRoutes:
   - "result-interpretation/special-indices"
   - "result-interpretation/lower-section/ideation/WSum6"
@@ -15,44 +15,44 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/M_minus"
   - "result-interpretation/lower-section/mediation/X_minus_percent"
   - "result-interpretation/lower-section/mediation/XA_percent"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-special-indices-family-2026-03-11.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
-# Nome do documento: [Interpretacao/Indices Especiais] PTI
+# Nome do documento: [Interpretação/Índices Especiais] PTI
 
 ## Apelidos e busca
 
 - PTI
 - Perceptual-Thinking Index
-- indice perceptivo-cognitivo
+- índice perceptivo-cognitivo
 
-## Definicao central
+## Definição central
 
-`PTI` e um indice composto que agrupa sinais de desorganizacao perceptiva e de pensamento.
-Sua funcao e alertar o leitor para revisar possivel distorcao da realidade, frouxidao ideacional ou perda de precisao perceptiva.
+`PTI` é um índice composto que agrupa sinais de desorganização perceptiva e de pensamento.
+Sua função é alertar o leitor para revisar possível distorção da realidade, frouxidão ideacional ou perda de precisão perceptiva.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- Se `PTI` e positivo, `Mediacao` e `Ideacao` devem ser revistas primeiro.
-- O indice costuma ganhar mais sentido quando problemas convergem em `WSum6`, `Lv2`, `M-`, `X-%` e `XA%`.
-- A interpretacao aponta para possivel perturbacao do pensamento, e nao para diagnostico automatico.
-- O peso do indice aumenta quando varias partes diferentes do protocolo apontam na mesma direcao.
+- Se `PTI` é positivo, `Mediação` e `Ideação` devem ser revistas primeiro.
+- O índice costuma ganhar mais sentido quando problemas convergem em `WSum6`, `Lv2`, `M-`, `X-%` e `XA%`.
+- A interpretação aponta para possível perturbação do pensamento, e não para diagnóstico automático.
+- O peso do índice aumenta quando várias partes diferentes do protocolo apontam na mesma direção.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `PTI` positivo nao significa, por si so, psicose.
-- `PTI` negativo nao elimina toda possibilidade de pensamento perturbado.
-- Estresse extremo, intoxicacao, desorganizacao situacional ou protocolo muito curto podem complicar a leitura.
+- `PTI` positivo não significa, por si só, psicose.
+- `PTI` negativo não elimina toda possibilidade de pensamento perturbado.
+- Estresse extremo, intoxicação, desorganização situacional ou protocolo muito curto podem complicar a leitura.
 
-## Limites da interpretacao isolada
+## Limites da interpretação isolada
 
-- `PTI` e um sinal atuarial e exige retorno as variaveis de base.
-- `WSum6`, `Lv2`, `M-`, `X-%` e `XA%` devem ser revistos antes de qualquer conclusao forte.
+- `PTI` é um sinal atuarial e exige retorno às variáveis de base.
+- `WSum6`, `Lv2`, `M-`, `X-%` e `XA%` devem ser revistos antes de qualquer conclusão forte.
 
-## Variaveis para revisar em conjunto
+## Variáveis para revisar em conjunto
 
 - `WSum6`
 - `Lv2`
@@ -60,15 +60,15 @@ Sua funcao e alertar o leitor para revisar possivel distorcao da realidade, frou
 - `X_minus_percent`
 - `XA_percent`
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Indices Especiais] Indices Especiais](ref://result-interpretation/special-indices)
-- [[Interpretacao/Ideacao] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
-- [[Interpretacao/Ideacao] Lv2](ref://result-interpretation/lower-section/ideation/Lv2)
-- [[Interpretacao/Ideacao] M-](ref://result-interpretation/lower-section/ideation/M_minus)
-- [[Interpretacao/Mediacao] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
-- [[Interpretacao/Mediacao] XA%](ref://result-interpretation/lower-section/mediation/XA_percent)
+- [[Interpretação/Índices Especiais] Índices Especiais](ref://result-interpretation/special-indices)
+- [[Interpretação/Ideação] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
+- [[Interpretação/Ideação] Lv2](ref://result-interpretation/lower-section/ideation/Lv2)
+- [[Interpretação/Ideação] M-](ref://result-interpretation/lower-section/ideation/M_minus)
+- [[Interpretação/Mediação] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
+- [[Interpretação/Mediação] XA%](ref://result-interpretation/lower-section/mediation/XA_percent)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

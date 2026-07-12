@@ -3,7 +3,7 @@ canonicalRoute: "result-interpretation/lower-section/core/m"
 locale: "pt"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/core/m"
-displayTitle: "[Interpretacao/Core] m"
+displayTitle: "[Interpretação/Core] m"
 aliases:
   - "m"
   - "movimento inanimado total"
@@ -17,13 +17,13 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/AdjD"
   - "result-interpretation/lower-section/core/FM"
   - "scoring-input/determinants/m"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-core-burden-qualities-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao/Core] m
+# Nome do documento: [Interpretação/Core] m
 
 ## Apelidos e busca
 
@@ -31,35 +31,35 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-core-burden-qualit
 - movimento inanimado total
 - total de movimento inanimado
 
-## Definicao central
+## Definição central
 
-`m` e o total de respostas de movimento inanimado.
-No `core`, ele costuma ser lido como indicador de tensao reativa, sensacao de estar sendo empurrado por forcas externas ou preocupacao situacional dificil de controlar.
+`m` é o total de respostas de movimento inanimado.
+No `core`, ele costuma ser lido como indicador de tensão reativa, sensação de estar sendo empurrado por forças externas ou preocupação situacional difícil de controlar.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- `m = 0` sugere que esse tipo de tensao reativa nao aparece com muita forca no protocolo.
-- `m` alto pode acompanhar pressao, impotencia, preocupacao intrusiva ou carga situacional pesada.
+- `m = 0` sugere que esse tipo de tensão reativa não aparece com muita força no protocolo.
+- `m` alto pode acompanhar pressão, impotência, preocupação intrusiva ou carga situacional pesada.
 - `m` costuma ter tom mais reativo e menos integrado do que `FM`.
 - `m` pesa em `AdjEs` e ajuda a explicar por que `D` pode cair sob estresse recente.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `m` alto nao significa, sozinho, passividade total nem um transtorno especifico.
-- A comparacao entre `D` e `AdjD` e importante para separar tensao situacional de um padrao mais mantido.
-- `m` deve ser lido junto com `Y` e `es`, nao como valor isolado.
+- `m` alto não significa, sozinho, passividade total nem um transtorno específico.
+- A comparação entre `D` e `AdjD` é importante para separar tensão situacional de um padrão mais mantido.
+- `m` deve ser lido junto com `Y` e `es`, não como valor isolado.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Secao Inferior/Core] Core](ref://result-interpretation/lower-section/core)
-- [[Interpretacao/Core] eb](ref://result-interpretation/lower-section/core/eb)
-- [[Interpretacao/Core] es](ref://result-interpretation/lower-section/core/es)
-- [[Interpretacao/Core] D](ref://result-interpretation/lower-section/core/D)
-- [[Interpretacao/Core] AdjEs](ref://result-interpretation/lower-section/core/AdjEs)
-- [[Interpretacao/Core] AdjD](ref://result-interpretation/lower-section/core/AdjD)
-- [[Interpretacao/Core] FM](ref://result-interpretation/lower-section/core/FM)
-- [[Codificacao/Determinantes] m](ref://scoring-input/determinants/m)
+- [[Interpretação/Seção Inferior/Core] Core](ref://result-interpretation/lower-section/core)
+- [[Interpretação/Core] eb](ref://result-interpretation/lower-section/core/eb)
+- [[Interpretação/Core] es](ref://result-interpretation/lower-section/core/es)
+- [[Interpretação/Core] D](ref://result-interpretation/lower-section/core/D)
+- [[Interpretação/Core] AdjEs](ref://result-interpretation/lower-section/core/AdjEs)
+- [[Interpretação/Core] AdjD](ref://result-interpretation/lower-section/core/AdjD)
+- [[Interpretação/Core] FM](ref://result-interpretation/lower-section/core/FM)
+- [[Codificação/Determinantes] m](ref://scoring-input/determinants/m)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

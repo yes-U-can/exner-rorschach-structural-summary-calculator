@@ -18,7 +18,7 @@ relatedRoutes:
   - "scoring-input/gphr/GHR"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
   - "result-interpretation/special-indices/CDI"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/interpersonal/pureh/index.md"

@@ -11,7 +11,7 @@ aliases:
 relatedRoutes:
   - "scoring-input/special-score"
   - "result-interpretation/lower-section/processing/PSV"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-score-ab-psv-per-cp-2026-03-10.md"

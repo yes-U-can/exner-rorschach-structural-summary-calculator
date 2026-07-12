@@ -15,7 +15,7 @@ relatedRoutes:
   - "result-interpretation/upper-section/Zf"
   - "result-interpretation/upper-section/ZSum"
   - "result-interpretation/upper-section/Zd"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/z/zd/index.md"

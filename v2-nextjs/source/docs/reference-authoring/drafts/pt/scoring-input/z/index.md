@@ -3,11 +3,11 @@ canonicalRoute: "scoring-input/z"
 locale: "pt"
 docKind: "coding-overview"
 canonicalTitle: "scoring-input/z"
-displayTitle: "[Codificacao/Z] Z"
+displayTitle: "[Codificação/Z] Z"
 aliases:
   - "Z"
   - "atividade organizacional"
-  - "codificacao Z"
+  - "codificação Z"
 relatedRoutes:
   - "scoring-input/z/ZW"
   - "scoring-input/z/ZA"
@@ -25,59 +25,59 @@ relatedRoutes:
   - "result-interpretation/upper-section/ZEst"
   - "result-interpretation/upper-section/Zd"
   - "result-interpretation/lower-section/processing/Zd_proc"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-z-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificacao/Z] Z
+# Nome do documento: [Codificação/Z] Z
 
 ## Apelidos e busca
 
 - Z
 - atividade organizacional
-- codificacao Z
+- codificação Z
 
-## Definicao central
+## Definição central
 
 `Z` codifica atividade organizacional na resposta.
-Ele so e atribuido quando a resposta usa forma e se encaixa em um dos quatro padroes Z: `ZW`, `ZA`, `ZD` ou `ZS`.
+Ele só é atribuído quando a resposta usa forma e se encaixa em um dos quatro padrões Z: `ZW`, `ZA`, `ZD` ou `ZS`.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
 - A resposta precisa incluir uso de forma.
-- Considere `Z` quando a resposta mostra organizacao entre partes da mancha ou entre a area da mancha e o espaco branco.
-- Se mais de um padrao Z puder valer na mesma resposta, mantenha o tipo com maior valor do cartao.
-- `Wv` nao recebe `Z`.
-- Respostas puramente vagas, sem suporte formal suficiente, nao recebem `Z`.
+- Considere `Z` quando a resposta mostra organização entre partes da mancha ou entre a área da mancha e o espaço branco.
+- Se mais de um padrão Z puder valer na mesma resposta, mantenha o tipo com maior valor do cartão.
+- `Wv` não recebe `Z`.
+- Respostas puramente vagas, sem suporte formal suficiente, não recebem `Z`.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `Z` nao e um codigo de localizacao. Ele usa informacao de [`W`](ref://scoring-input/location/W), [`D`](ref://scoring-input/location/D), [`Dd`](ref://scoring-input/location/Dd) e [`S`](ref://scoring-input/location/S), mas codifica outra coisa.
-- Listar partes da mancha nao basta. Precisa haver integracao ou relacao significativa.
-- Em respostas globais, `ZW` tambem exige DQ compativel.
-- `ZS` exige integracao real de espaco branco, nao apenas area branca visivel dentro da resposta.
+- `Z` não é um código de localização. Ele usa informação de [`W`](ref://scoring-input/location/W), [`D`](ref://scoring-input/location/D), [`Dd`](ref://scoring-input/location/Dd) e [`S`](ref://scoring-input/location/S), mas codifica outra coisa.
+- Listar partes da mancha não basta. Precisa haver integração ou relação significativa.
+- Em respostas globais, `ZW` também exige DQ compatível.
+- `ZS` exige integração real de espaço branco, não apenas área branca visível dentro da resposta.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao/Z] ZW](ref://scoring-input/z/ZW)
-- [[Codificacao/Z] ZA](ref://scoring-input/z/ZA)
-- [[Codificacao/Z] ZD](ref://scoring-input/z/ZD)
-- [[Codificacao/Z] ZS](ref://scoring-input/z/ZS)
-- [[Codificacao/Localizacao] W](ref://scoring-input/location/W)
-- [[Codificacao/Localizacao] D](ref://scoring-input/location/D)
-- [[Codificacao/Localizacao] Dd](ref://scoring-input/location/Dd)
-- [[Codificacao/Localizacao] S](ref://scoring-input/location/S)
-- [[Codificacao/Qualidade Desenvolvimental] +](ref://scoring-input/dq/%2B)
-- [[Codificacao/Qualidade Desenvolvimental] v/+](ref://scoring-input/dq/v/%2B)
-- [[Codificacao/Qualidade Desenvolvimental] o](ref://scoring-input/dq/o)
-- [[Interpretacao/Upper Section] Zf](ref://result-interpretation/upper-section/Zf)
-- [[Interpretacao/Upper Section] ZSum](ref://result-interpretation/upper-section/ZSum)
-- [[Interpretacao/Upper Section] ZEst](ref://result-interpretation/upper-section/ZEst)
-- [[Interpretacao/Upper Section] Zd](ref://result-interpretation/upper-section/Zd)
-- [[Interpretacao/Processing] Zd](ref://result-interpretation/lower-section/processing/Zd_proc)
+- [[Codificação/Z] ZW](ref://scoring-input/z/ZW)
+- [[Codificação/Z] ZA](ref://scoring-input/z/ZA)
+- [[Codificação/Z] ZD](ref://scoring-input/z/ZD)
+- [[Codificação/Z] ZS](ref://scoring-input/z/ZS)
+- [[Codificação/Localização] W](ref://scoring-input/location/W)
+- [[Codificação/Localização] D](ref://scoring-input/location/D)
+- [[Codificação/Localização] Dd](ref://scoring-input/location/Dd)
+- [[Codificação/Localização] S](ref://scoring-input/location/S)
+- [[Codificação/Qualidade Desenvolvimental] +](ref://scoring-input/dq/%2B)
+- [[Codificação/Qualidade Desenvolvimental] v/+](ref://scoring-input/dq/v/%2B)
+- [[Codificação/Qualidade Desenvolvimental] o](ref://scoring-input/dq/o)
+- [[Interpretação/Upper Section] Zf](ref://result-interpretation/upper-section/Zf)
+- [[Interpretação/Upper Section] ZSum](ref://result-interpretation/upper-section/ZSum)
+- [[Interpretação/Upper Section] ZEst](ref://result-interpretation/upper-section/ZEst)
+- [[Interpretação/Upper Section] Zd](ref://result-interpretation/upper-section/Zd)
+- [[Interpretação/Processing] Zd](ref://result-interpretation/lower-section/processing/Zd_proc)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

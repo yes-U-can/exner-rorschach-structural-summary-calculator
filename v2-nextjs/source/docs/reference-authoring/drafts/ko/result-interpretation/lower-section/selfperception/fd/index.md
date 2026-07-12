@@ -16,7 +16,7 @@ relatedRoutes:
   - "scoring-input/determinants/FD"
   - "scoring-input/contents/Fd"
   - "result-interpretation/lower-section/core/SumV"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/selfperception/fd/index.md"

@@ -3,7 +3,7 @@ canonicalRoute: "result-interpretation/special-indices/SCON"
 locale: "ja"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/special-indices/SCON"
-displayTitle: "[Interpretation/Special Indices] Suicide Constellation"
+displayTitle: "[解釈/特殊指標] S-CON"
 aliases:
   - "S-CON"
   - "Suicide Constellation"
@@ -17,44 +17,45 @@ relatedRoutes:
   - "result-interpretation/lower-section/selfPerception/SumV_self"
   - "result-interpretation/lower-section/selfPerception/MOR_self"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-indices-2026-03-10.md"
 ---
 
-# Document Name: [Interpretation/Special Indices] Suicide Constellation
+# 文書名: [解釈/特殊指標] S-CON
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - S-CON
 - Suicide Constellation
 - 自殺連関
 
-## Core Definition
+## 中核的定義
 
-`S-CON` は、自殺リスクの上昇に関連する徴候をまとめた actuarial constellation です。  
-即時の臨床判断の代わりにはなりませんが、このテーマを最優先で確認すべきかを示します。
+`S-CON` は、自殺関連リスクと結びつく複数の徴候をまとめたスクリーニング指標です。
+自殺を予測する道具ではなく、直接的なリスク評価を最優先すべきかを判断する補助信号です。
 
-## Interpretation Points
+## 解釈の要点
 
-- threshold に達したら、自殺念慮、計画、衝動性、hopelessness、protective factor を即時に確認します。
-- stress、自己批判、心理的苦痛、control 低下の徴候をまとめて見ます。
-- 低い `D`、低い `AdjD`、`SumV`、`SumY`、`MOR_self`、`DEPI` と一緒に出ると重みが増します。
-- これは screening alert であり、最終結論ではありません。
+- 得点にかかわらず臨床的な懸念があれば、現在の自殺念慮、意図、計画、手段へのアクセス、過去の試み、最近の変化、保護因子を直接確認します。
+- 陽性は追加の安全評価を急ぐ理由になりますが、自殺行動を確定したり予測したりしません。
+- `D`、`AdjD`、`SumV`、`SumY`、`MOR_self`、`DEPI` などの構成変数を確認します。
+- 面接と安全確保を指標の解釈より優先します。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
-- 高値でも imminent suicidal action をそれだけで意味しません。
-- 低値でもリスクが完全に消えるわけではありません。
-- 短い protocol や極端に defensive な記録では false negative が起こり得ます。
+- 自殺の基礎率が低いため、陽性にも偽陽性が生じ得ます。
+- 陰性でも現在のリスクを除外できません。
+- 反応数が少ない記録では偽陰性の可能性が高まるため、得点だけで安心しません。
+- 必要な安全対応を遅らせる目的で使用してはいけません。
 
-## Limits of Isolated Interpretation
+## 単独解釈の限界
 
-- `S-CON` は interview data、recent history、direct clinical judgment と照合する必要があります。
-- constellation を構成する base variable に戻って確認します。
+- `S-CON` は面接、最近の経過、過去の試み、現在の保護因子と照合する必要があります。
+- 構成変数へ戻り、どの領域の負荷が得点に寄与したか確認します。
 
-## Variables to Review Together
+## 併せて確認する変数
 
 - `D`
 - `AdjD`
@@ -62,17 +63,17 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-indices-20
 - `SumY`
 - `MOR_self`
 
-## Cross References
+## 相互参照
 
-- [[Interpretation/Special Indices] Special Indices](ref://result-interpretation/special-indices)
-- [[Interpretation/Core] D](ref://result-interpretation/lower-section/core/D)
-- [[Interpretation/Core] AdjD](ref://result-interpretation/lower-section/core/AdjD)
-- [[Interpretation/Core] SumV](ref://result-interpretation/lower-section/core/SumV)
-- [[Interpretation/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
-- [[Interpretation/Self Perception] SumV](ref://result-interpretation/lower-section/selfPerception/SumV_self)
-- [[Interpretation/Self Perception] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
-- [[Interpretation/Special Indices] DEPI](ref://result-interpretation/special-indices/DEPI)
+- [[解釈/特殊指標] 特殊指標](ref://result-interpretation/special-indices)
+- [[解釈/中核] D](ref://result-interpretation/lower-section/core/D)
+- [[解釈/中核] AdjD](ref://result-interpretation/lower-section/core/AdjD)
+- [[解釈/中核] SumV](ref://result-interpretation/lower-section/core/SumV)
+- [[解釈/中核] SumY](ref://result-interpretation/lower-section/core/SumY)
+- [[解釈/自己知覚] SumV](ref://result-interpretation/lower-section/selfPerception/SumV_self)
+- [[解釈/自己知覚] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
+- [[解釈/特殊指標] DEPI](ref://result-interpretation/special-indices/DEPI)
 
-## Evidence Note
+## 根拠メモ
 
-- Detailed source comparison is stored in internal provenance notes.
+- 詳細な検討記録は内部の検証ノートで管理します。

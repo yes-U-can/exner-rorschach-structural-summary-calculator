@@ -15,10 +15,10 @@ relatedRoutes:
   - "scoring-input/popular"
   - "scoring-input/card/I"
   - "scoring-input/card/V"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/lower-section/mediation/p/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Mediation] P

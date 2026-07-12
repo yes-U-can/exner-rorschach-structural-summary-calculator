@@ -12,10 +12,10 @@ relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/Na"
   - "scoring-input/contents/Fi"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/scoring-input/contents/cl/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Content] Cl

@@ -17,7 +17,7 @@ relatedRoutes:
   - "scoring-input/determinants/C'"
   - "scoring-input/determinants/FC'"
   - "scoring-input/determinants/C'F"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/core/sumcprime/index.md"

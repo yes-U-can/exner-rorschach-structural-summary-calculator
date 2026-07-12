@@ -14,7 +14,7 @@ relatedRoutes:
   - "scoring-input/determinants/FV"
   - "scoring-input/determinants/V"
   - "result-interpretation/lower-section/selfPerception/FD"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/determinants/fd/index.md"

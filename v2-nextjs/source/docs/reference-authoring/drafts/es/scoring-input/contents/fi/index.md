@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/contents/Fi"
 locale: "es"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/contents/Fi"
-displayTitle: "[Codificacion/Contenido] Fi"
+displayTitle: "[Codificación/Contenido] Fi"
 aliases:
   - "Fi"
   - "fuego"
@@ -13,31 +13,31 @@ relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/Ex"
   - "scoring-input/contents/Cl"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/contents/fi/index.md"
 ---
 
-# Nombre del documento: [Codificacion/Contenido] Fi
+# Nombre del documento: [Codificación/Contenido] Fi
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - Fi
 - fuego
 - humo
 - fire
 
-## Definicion central
+## Definición central
 
 `Fi` se usa cuando el contenido principal es fuego o humo.
 La respuesta tiene que organizar la imagen como llama, incendio, humo o columna de fuego.
 
-## Condiciones de aplicacion
+## Condiciones de aplicación
 
 - Se aplica a llamas, fuego, incendio, humo o columna de humo claramente nombrados.
 - El foco debe estar en fuego o humo mismos.
-- Si la respuesta enfatiza explosion o detonacion, primero se considera [`Ex`](ref://scoring-input/contents/Ex).
+- Si la respuesta enfatiza explosión o detonación, primero se considera [`Ex`](ref://scoring-input/contents/Ex).
 - Si el sujeto describe nubes, primero se considera [`Cl`](ref://scoring-input/contents/Cl).
 
 ## Precauciones y distinciones
@@ -48,11 +48,11 @@ La respuesta tiene que organizar la imagen como llama, incendio, humo o columna 
 
 ## Referencias cruzadas
 
-- [[Codificacion/Contenido] Contents](ref://scoring-input/contents)
-- [[Codificacion/Contenido] Ex](ref://scoring-input/contents/Ex)
-- [[Codificacion/Contenido] Cl](ref://scoring-input/contents/Cl)
+- [[Codificación/Contenido] Contents](ref://scoring-input/contents)
+- [[Codificación/Contenido] Ex](ref://scoring-input/contents/Ex)
+- [[Codificación/Contenido] Cl](ref://scoring-input/contents/Cl)
 
 ## Nota de fundamento
 
-- La fundamentacion detallada y la comparacion de fuentes se conservan en la provenance interna.
-- El cuerpo publico evita citar directamente los titulos de las fuentes.
+- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
+- El cuerpo público evita citar directamente los títulos de las fuentes.

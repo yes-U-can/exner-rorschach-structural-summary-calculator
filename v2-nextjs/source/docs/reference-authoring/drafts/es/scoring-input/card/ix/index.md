@@ -3,13 +3,13 @@ canonicalRoute: "scoring-input/card/IX"
 locale: "es"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/card/IX"
-displayTitle: "[Codificacion/Tarjetas] IX"
+displayTitle: "[Codificación/Tarjetas] IX"
 aliases:
   - "Card IX"
   - "card IX"
   - "card 9"
   - "tarjeta IX"
-  - "lamina IX"
+  - "lámina IX"
 relatedRoutes:
   - "scoring-input/score"
   - "scoring-input/popular"
@@ -17,50 +17,50 @@ relatedRoutes:
   - "scoring-input/contents/(H)"
   - "scoring-input/determinants/M"
   - "scoring-input/fq"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/card/ix/index.md"
 ---
 
-# Nombre del documento: [Codificacion/Tarjetas] IX
+# Nombre del documento: [Codificación/Tarjetas] IX
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - Card IX
 - card IX
 - card 9
 - tarjeta IX
-- lamina IX
+- lámina IX
 
-## Definicion central
+## Definición central
 
-`Tarjeta IX` suele exigir mas organizacion para mantener buena forma.
-La pagina resume que conviene vigilar en contenido humano, movimiento y calidad formal.
+`Tarjeta IX` suele exigir más organización para mantener buena forma.
+La página resume que conviene vigilar en contenido humano, movimiento y calidad formal.
 
-## Condiciones de aplicacion
+## Condiciones de aplicación
 
 - Algunas respuestas de esta tarjeta se acercan a figuras humanas o humanoides; por eso conviene revisar `H` y `(H)`.
-- Si la respuesta incluye accion humana clara, revisa `M`.
+- Si la respuesta incluye acción humana clara, revisa `M`.
 - Como la forma puede resultar menos estable, conviene revisar `FQ` con cuidado.
 - Si aparece una respuesta popular, debe confirmarse por criterio formal y no solo por familiaridad.
 
 ## Precauciones y distinciones
 
-- Que una figura parezca humana no significa automaticamente `H`; puede corresponder mejor `(H)`.
-- La dificultad organizativa de la tarjeta no convierte por si sola la respuesta en mala forma.
-- Esta pagina no interpreta la tarjeta; solo orienta la codificacion.
+- Que una figura parezca humana no significa automáticamente `H`; puede corresponder mejor `(H)`.
+- La dificultad organizativa de la tarjeta no convierte por sí sola la respuesta en mala forma.
+- Esta página no interpreta la tarjeta; solo orienta la codificación.
 
 ## Referencias cruzadas
 
-- [[Codificacion] score](ref://scoring-input/score)
-- [[Codificacion/Popular] Popular](ref://scoring-input/popular)
-- [[Codificacion/Contenido] H](ref://scoring-input/contents/H)
-- [[Codificacion/Contenido] (H)](ref://scoring-input/contents/%28H%29)
-- [[Codificacion/Determinantes] M](ref://scoring-input/determinants/M)
-- [[Codificacion/FQ] FQ](ref://scoring-input/fq)
+- [[Codificación] score](ref://scoring-input/score)
+- [[Codificación/Popular] Popular](ref://scoring-input/popular)
+- [[Codificación/Contenido] H](ref://scoring-input/contents/H)
+- [[Codificación/Contenido] (H)](ref://scoring-input/contents/%28H%29)
+- [[Codificación/Determinantes] M](ref://scoring-input/determinants/M)
+- [[Codificación/FQ] FQ](ref://scoring-input/fq)
 
 ## Nota de fundamento
 
-- La fundamentacion detallada y la comparacion de fuentes se conservan en la provenance interna.
-- El cuerpo publico evita citar directamente los titulos de las fuentes.
+- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
+- El cuerpo público evita citar directamente los títulos de las fuentes.

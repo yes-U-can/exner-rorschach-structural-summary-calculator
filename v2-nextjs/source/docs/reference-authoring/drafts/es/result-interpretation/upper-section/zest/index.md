@@ -3,7 +3,7 @@ canonicalRoute: "result-interpretation/upper-section/ZEst"
 locale: "es"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/upper-section/ZEst"
-displayTitle: "[Interpretacion/Upper Section] ZEst"
+displayTitle: "[Interpretación/Upper Section] ZEst"
 aliases:
   - "ZEst"
   - "estimated Z sum"
@@ -14,40 +14,40 @@ relatedRoutes:
   - "result-interpretation/upper-section/ZSum"
   - "result-interpretation/upper-section/Zd"
   - "scoring-input/z"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/upper-section/zest/index.md"
 ---
 
-# Nombre del documento: [Interpretacion/Upper Section] ZEst
+# Nombre del documento: [Interpretación/Upper Section] ZEst
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - ZEst
 - estimated Z sum
 - suma Z estimada
 
-## Definicion central
+## Definición central
 
-`ZEst` es la estimacion del `ZSum` esperado a partir del valor de `Zf`.
-Se usa como linea de base para calcular `Zd`, mas que como una variable clinica independiente.
+`ZEst` es la estimación del `ZSum` esperado a partir del valor de `Zf`.
+Se usa como línea de base para calcular `Zd`, más que como una variable clínica independiente.
 
-## Puntos de interpretacion
+## Puntos de interpretación
 
 - `ZEst` funciona como valor de referencia.
-- Permite comparar si la organizacion real (`ZSum`) quedo por encima o por debajo de lo esperable.
+- Permite comparar si la organización real (`ZSum`) quedo por encima o por debajo de lo esperable.
 - El foco interpretativo suele ponerse en `Zd`, no en `ZEst` por separado.
 
 ## Precauciones y distinciones
 
-- Un `ZEst` alto suele reflejar simplemente que `Zf` tambien es alto.
-- Conviene evitar frases como "ZEst alto" o "ZEst bajo" si no se explica su funcion comparativa.
+- Un `ZEst` alto suele reflejar simplemente que `Zf` también es alto.
+- Conviene evitar frases como "ZEst alto" o "ZEst bajo" si no se explica su función comparativa.
 
-## Limites de interpretacion aislada
+## Limites de interpretación aislada
 
-- `ZEst` por si solo no describe eficiencia, rigidez ni complejidad.
-- Su utilidad principal esta en servir de base para `Zd`.
+- `ZEst` por sí solo no describe eficiencia, rigidez ni complejidad.
+- Su utilidad principal está en servir de base para `Zd`.
 
 ## Variables para revisar juntas
 
@@ -57,12 +57,12 @@ Se usa como linea de base para calcular `Zd`, mas que como una variable clinica 
 
 ## Referencias cruzadas
 
-- [[Interpretacion/Upper Section] Upper Section](ref://result-interpretation/upper-section)
-- [[Interpretacion/Upper Section] Zf](ref://result-interpretation/upper-section/Zf)
-- [[Interpretacion/Upper Section] ZSum](ref://result-interpretation/upper-section/ZSum)
-- [[Interpretacion/Upper Section] Zd](ref://result-interpretation/upper-section/Zd)
-- [[Codificacion/Z] Z](ref://scoring-input/z)
+- [[Interpretación/Upper Section] Upper Section](ref://result-interpretation/upper-section)
+- [[Interpretación/Upper Section] Zf](ref://result-interpretation/upper-section/Zf)
+- [[Interpretación/Upper Section] ZSum](ref://result-interpretation/upper-section/ZSum)
+- [[Interpretación/Upper Section] Zd](ref://result-interpretation/upper-section/Zd)
+- [[Codificación/Z] Z](ref://scoring-input/z)
 
 ## Nota de fundamento
 
-- La fundamentacion detallada y las comparaciones de fuente se conservan en la provenance interna.
+- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

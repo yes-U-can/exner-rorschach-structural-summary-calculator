@@ -17,10 +17,10 @@ relatedRoutes:
   - "scoring-input/determinants/Fr"
   - "scoring-input/determinants/rF"
   - "result-interpretation/lower-section/core/R"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/lower-section/selfperception/3r-2-r/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Self Perception] Egocentricity Index

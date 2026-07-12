@@ -39,6 +39,7 @@ Human review rubric:
 - [`2026-07-03-v2.1.5-ai-release-gate-report.md`](./2026-07-03-v2.1.5-ai-release-gate-report.md)
 - [`2026-07-03-v2.1.6-ai-quality-closure-report.md`](./2026-07-03-v2.1.6-ai-quality-closure-report.md)
 - [`2026-07-03-v2.1.6-ai-quality-closure-gate.md`](./2026-07-03-v2.1.6-ai-quality-closure-gate.md)
+- [`2026-07-12-corpus-evidence-calibration-report.md`](./2026-07-12-corpus-evidence-calibration-report.md)
 
 Validate saved human review records:
 
@@ -53,6 +54,8 @@ npm run ai:evaluate-live:batch -- --model gpt-4o-mini --locales ko,en --rounds 1
 ```
 
 The explicit batch runner loads `.env.local` and `.env.production.local` before checking `OPENAI_API_KEY`. The Vitest live suites still skip unless the key is already present in the current process environment, so normal test runs do not accidentally spend API budget.
+
+When `--retrieval runtime` is used, the live suites call the same database-backed hybrid retrieval functions as `/api/chat`. They require a current vector snapshot, assert nonzero vector hits, and fail instead of silently accepting lexical fallback. Multi-turn runs rebuild the system prompt and retrieval context on every turn so row selection and conversation history are tested together.
 
 Run a multi-turn live batch when you want to test follow-up behavior:
 
@@ -74,6 +77,8 @@ The artifact audit checks:
 - files named `final-pass` contain zero issue-bearing fixture results and zero failed runs
 - logs do not contain key-shaped secrets
 - logs do not contain raw prompt, raw answer, or raw response fields
+
+The live contracts also check response completion, required safety/HITL signals, and substantial cross-script leakage for the expected locale. Required-signal groups accept bounded synonyms, while forbidden-claim checks reject unsafe positive conclusions. These contracts are regression evidence, not clinical correctness claims.
 
 Human review record scoring checks:
 

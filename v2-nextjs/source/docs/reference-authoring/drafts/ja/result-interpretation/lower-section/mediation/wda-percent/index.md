@@ -16,7 +16,7 @@ relatedRoutes:
   - "scoring-input/location/W"
   - "scoring-input/location/D"
   - "scoring-input/fq"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-mediation-opening-xa-wda-2026-03-10.md"

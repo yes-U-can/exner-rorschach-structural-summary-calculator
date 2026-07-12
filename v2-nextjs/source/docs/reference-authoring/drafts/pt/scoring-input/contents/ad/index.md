@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/contents/Ad"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/contents/Ad"
-displayTitle: "[Codificacao/Conteudo] Ad"
+displayTitle: "[Codificação/Conteúdo] Ad"
 aliases:
   - "Ad"
   - "detalhe animal"
@@ -14,13 +14,13 @@ relatedRoutes:
   - "scoring-input/contents/(Ad)"
   - "scoring-input/contents/Hd"
   - "scoring-input/contents/An"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-animal-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificacao/Conteudo] Ad
+# Nome do documento: [Codificação/Conteúdo] Ad
 
 ## Apelidos e busca
 
@@ -28,34 +28,34 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-animal-20
 - detalhe animal
 - parte de animal
 
-## Definicao central
+## Definição central
 
-`Ad` e usado quando a resposta nomeia uma parte ou detalhe de animal, e nao o animal inteiro.
-Ele cobre cauda, cabeca, asa, garra ou outra caracteristica claramente parcial.
+`Ad` é usado quando a resposta nomeia uma parte ou detalhe de animal, e não o animal inteiro.
+Ele cobre cauda, cabeça, asa, garra ou outra característica claramente parcial.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
-- O foco da resposta precisa estar em uma parte do animal, nao na figura inteira.
-- O detalhe pode ser externo, como cabeca, pata ou asa, desde que continue sendo parcial.
+- O foco da resposta precisa estar em uma parte do animal, não na figura inteira.
+- O detalhe pode ser externo, como cabeça, patã ou asa, desde que continue sendo parcial.
 - Se a figura for um animal inteiro realista, verifique primeiro [`A`](ref://scoring-input/contents/A).
-- Se o detalhe pertencer a um animal fantastico ou imaginario, verifique primeiro [`(Ad)`](ref://scoring-input/contents/%28Ad%29).
-- Se a enfase for anatomica ou estrutural, verifique primeiro [`An`](ref://scoring-input/contents/An).
+- Se o detalhe pertencer a um animal fantástico ou imaginário, verifique primeiro [`(Ad)`](ref://scoring-input/contents/%28Ad%29).
+- Se a ênfase for anatômica ou estrutural, verifique primeiro [`An`](ref://scoring-input/contents/An).
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
 - `Ad` e [`A`](ref://scoring-input/contents/A) se separam por detalhe versus inteiro.
 - `Ad` e [`(Ad)`](ref://scoring-input/contents/%28Ad%29) se separam por realidade versus fantasia.
-- `Ad` e [`Hd`](ref://scoring-input/contents/Hd) sao ambos codigos de detalhe, mas um e animal e o outro humano.
-- Nem todo fragmento biologico e `Ad`; se a ideia for claramente anatomica, [`An`](ref://scoring-input/contents/An) pode ser melhor.
+- `Ad` e [`Hd`](ref://scoring-input/contents/Hd) são ambos códigos de detalhe, mas um é animal e o outro é humano.
+- Nem todo fragmento biológico é `Ad`; se a ideia for claramente anatômica, [`An`](ref://scoring-input/contents/An) pode ser melhor.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao/Conteudo] Contents](ref://scoring-input/contents)
-- [[Codificacao/Conteudo] A](ref://scoring-input/contents/A)
-- [[Codificacao/Conteudo] (Ad)](ref://scoring-input/contents/%28Ad%29)
-- [[Codificacao/Conteudo] Hd](ref://scoring-input/contents/Hd)
-- [[Codificacao/Conteudo] An](ref://scoring-input/contents/An)
+- [[Codificação/Conteúdo] Contents](ref://scoring-input/contents)
+- [[Codificação/Conteúdo] A](ref://scoring-input/contents/A)
+- [[Codificação/Conteúdo] (Ad)](ref://scoring-input/contents/%28Ad%29)
+- [[Codificação/Conteúdo] Hd](ref://scoring-input/contents/Hd)
+- [[Codificação/Conteúdo] An](ref://scoring-input/contents/An)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

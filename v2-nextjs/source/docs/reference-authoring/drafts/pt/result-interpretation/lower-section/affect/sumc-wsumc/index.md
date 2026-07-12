@@ -3,7 +3,7 @@ canonicalRoute: "result-interpretation/lower-section/affect/SumC_WSumC"
 locale: "pt"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/affect/SumC_WSumC"
-displayTitle: "[Interpretacao/Afeto] SumC / WSumC"
+displayTitle: "[Interpretação/Afeto] SumC / WSumC"
 aliases:
   - "SumC"
   - "WSumC"
@@ -20,13 +20,13 @@ relatedRoutes:
   - "scoring-input/determinants/CF"
   - "scoring-input/determinants/C"
   - "scoring-input/determinants/Cn"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-affect-opening-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao/Afeto] SumC / WSumC
+# Nome do documento: [Interpretação/Afeto] SumC / WSumC
 
 ## Apelidos e busca
 
@@ -34,37 +34,37 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-affect-opening-202
 - WSumC
 - soma ponderada de cor
 
-## Definicao central
+## Definição central
 
-`SumC / WSumC` resume a quantidade total de respostas de cor cromatica e seu peso ponderado.
-Na interpretacao, `WSumC` costuma ser mais util porque reflete nao apenas quantas respostas de cor apareceram, mas tambem quanto peso afetivo direto elas carregam.
+`SumC / WSumC` resume a quantidade total de respostas de cor cromática e seu peso ponderado.
+Na interpretação, `WSumC` costuma ser mais útil porque reflete não apenas quantas respostas de cor apareceram, mas também quanto peso afetivo direto elas carregam.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- Quando `WSumC` esta alto, a ativacao afetiva pode ocupar lugar maior na experiencia e nas decisoes.
-- Comparar `SumC` com `WSumC` ajuda a separar quantidade simples de cor do peso clinico mais forte das respostas cromaticas.
-- `WSumC` tambem entra em variaveis centrais como `EB`, entao influencia o equilibrio global do protocolo.
+- Quando `WSumC` está alto, a ativação afetiva pode ocupar lugar maior na experiência e nas decisões.
+- Comparar `SumC` com `WSumC` ajuda a separar quantidade simples de cor do peso clínico mais forte das respostas cromáticas.
+- `WSumC` também entra em variáveis centrais como `EB`, então influência o equilíbrio global do protocolo.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `WSumC` alto nao significa automaticamente expressao afetiva saudavel nem descontrole.
-- `Cn` nao entra em `WSumC`, entao nomeacao de cor nao deve ser misturada com respostas cromaticas verdadeiras.
-- Ele precisa ser separado de `SumCprime`, que se refere a cor acromatica, nao a cor cromatica.
+- `WSumC` alto não significa automaticamente expressão afetiva saudável nem descontrole.
+- `Cn` não entra em `WSumC`, então nomeação de cor não deve ser misturada com respostas cromáticas verdadeiras.
+- Ele precisa ser separado de `SumCprime`, que se refere a cor acromática, não a cor cromática.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Secao Inferior/Afeto] Afeto](ref://result-interpretation/lower-section/affect)
-- [[Interpretacao/Afeto] FC:CF+C](ref://result-interpretation/lower-section/affect/FC_CF_C)
-- [[Interpretacao/Afeto] Pure C](ref://result-interpretation/lower-section/affect/PureC)
-- [[Interpretacao/Core] EB](ref://result-interpretation/lower-section/core/EB)
-- [[Interpretacao/Core] EA](ref://result-interpretation/lower-section/core/EA)
-- [[Interpretacao/Core] EBPer](ref://result-interpretation/lower-section/core/EBPer)
-- [[Interpretacao/Core] SumCprime](ref://result-interpretation/lower-section/core/SumCprime)
-- [[Codificacao/Determinantes] FC](ref://scoring-input/determinants/FC)
-- [[Codificacao/Determinantes] CF](ref://scoring-input/determinants/CF)
-- [[Codificacao/Determinantes] C](ref://scoring-input/determinants/C)
-- [[Codificacao/Determinantes] Cn](ref://scoring-input/determinants/Cn)
+- [[Interpretação/Seção Inferior/Afeto] Afeto](ref://result-interpretation/lower-section/affect)
+- [[Interpretação/Afeto] FC:CF+C](ref://result-interpretation/lower-section/affect/FC_CF_C)
+- [[Interpretação/Afeto] Pure C](ref://result-interpretation/lower-section/affect/PureC)
+- [[Interpretação/Core] EB](ref://result-interpretation/lower-section/core/EB)
+- [[Interpretação/Core] EA](ref://result-interpretation/lower-section/core/EA)
+- [[Interpretação/Core] EBPer](ref://result-interpretation/lower-section/core/EBPer)
+- [[Interpretação/Core] SumCprime](ref://result-interpretation/lower-section/core/SumCprime)
+- [[Codificação/Determinantes] FC](ref://scoring-input/determinants/FC)
+- [[Codificação/Determinantes] CF](ref://scoring-input/determinants/CF)
+- [[Codificação/Determinantes] C](ref://scoring-input/determinants/C)
+- [[Codificação/Determinantes] Cn](ref://scoring-input/determinants/Cn)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

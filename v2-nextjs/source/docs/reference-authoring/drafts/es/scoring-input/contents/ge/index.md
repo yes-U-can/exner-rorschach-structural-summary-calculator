@@ -3,54 +3,54 @@ canonicalRoute: "scoring-input/contents/Ge"
 locale: "es"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/contents/Ge"
-displayTitle: "[Codificacion/Contenido] Ge"
+displayTitle: "[Codificación/Contenido] Ge"
 aliases:
   - "Ge"
-  - "geografia"
+  - "geografía"
   - "mapa"
   - "map"
 relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/Ls"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/contents/ge/index.md"
 ---
 
-# Nombre del documento: [Codificacion/Contenido] Ge
+# Nombre del documento: [Codificación/Contenido] Ge
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - Ge
-- geografia
+- geografía
 - mapa
 - map
 
-## Definicion central
+## Definición central
 
-`Ge` se usa cuando el sujeto organiza la respuesta como mapa, plano geografico o representacion cartografica.
-No se refiere a paisaje real, sino a imagen leida como mapa.
+`Ge` se usa cuando el sujeto organiza la respuesta como mapa, plano geográfico o representación cartográfica.
+No se refiere a paisaje real, sino a imagen leída como mapa.
 
-## Condiciones de aplicacion
+## Condiciones de aplicación
 
-- Se aplica a mapa, atlas, plano geografico o dibujo cartografico de una zona.
-- Puede servir tanto para un mapa general como para uno de una region concreta.
-- El criterio central es la representacion cartografica, no la escena natural en si.
+- Se aplica a mapa, atlas, plano geográfico o dibujo cartográfico de una zona.
+- Puede servir tanto para un mapa general como para uno de una región concreta.
+- El criterio central es la representación cartográfica, no la escena natural en si.
 - Si el sujeto describe paisaje real, montanas o costa como escena, primero se considera [`Ls`](ref://scoring-input/contents/Ls).
 
 ## Precauciones y distinciones
 
 - `Ge` y [`Ls`](ref://scoring-input/contents/Ls) se separan por mapa frente a paisaje.
-- No basta con que la forma parezca irregular o territorial; el sujeto tiene que leerla como mapa o esquema geografico.
-- `Ge` no se usa para decoracion abstracta sin referencia espacial.
+- No basta con que la forma parezca irregular o territorial; el sujeto tiene que leerla como mapa o esquema geográfico.
+- `Ge` no se usa para decoración abstracta sin referencia espacial.
 
 ## Referencias cruzadas
 
-- [[Codificacion/Contenido] Contents](ref://scoring-input/contents)
-- [[Codificacion/Contenido] Ls](ref://scoring-input/contents/Ls)
+- [[Codificación/Contenido] Contents](ref://scoring-input/contents)
+- [[Codificación/Contenido] Ls](ref://scoring-input/contents/Ls)
 
 ## Nota de fundamento
 
-- La fundamentacion detallada y la comparacion de fuentes se conservan en la provenance interna.
-- El cuerpo publico evita citar directamente los titulos de las fuentes.
+- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
+- El cuerpo público evita citar directamente los títulos de las fuentes.

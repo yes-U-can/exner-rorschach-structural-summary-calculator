@@ -23,7 +23,7 @@ relatedRoutes:
   - "scoring-input/special-score/FABCOM2"
   - "scoring-input/special-score/ALOG"
   - "scoring-input/special-score/CONTAM"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/ideation/sum6/index.md"

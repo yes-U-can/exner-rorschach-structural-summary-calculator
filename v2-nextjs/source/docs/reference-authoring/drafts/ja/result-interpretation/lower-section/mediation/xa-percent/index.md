@@ -16,7 +16,7 @@ relatedRoutes:
   - "result-interpretation/lower-section/mediation/X_minus_percent"
   - "scoring-input/fq"
   - "scoring-input/popular"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-mediation-opening-xa-wda-2026-03-10.md"

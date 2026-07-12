@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/dq/v"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/dq/v"
-displayTitle: "[Codificacao/Qualidade Desenvolvimental] v"
+displayTitle: "[Codificação/Qualidade Desenvolvimental] v"
 aliases:
   - "v"
   - "DQv"
@@ -13,13 +13,13 @@ relatedRoutes:
   - "scoring-input/dq/v/+"
   - "scoring-input/dq/o"
   - "result-interpretation/upper-section/dq_v"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-dq-2026-03-10.md"
 ---
 
-# Nome do documento: [Codificacao/Qualidade Desenvolvimental] v
+# Nome do documento: [Codificação/Qualidade Desenvolvimental] v
 
 ## Apelidos e busca
 
@@ -27,31 +27,31 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-dq-2026-03-10.md"
 - DQv
 - qualidade desenvolvimental vaga
 
-## Definicao central
+## Definição central
 
-`DQv` e usado quando a resposta nao mostra sintese significativa e tambem nao exige demanda formal especifica clara.
-E a forma menos estruturada dentro do conjunto DQ.
+`DQv` é usado quando a resposta não mostra síntese significativa e também não exige demanda formal específica clara.
+É a forma menos estruturada dentro do conjunto DQ.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
-- Nao ha sintese significativa entre objetos ou partes.
+- Não há síntese significativa entre objetos ou partes.
 - O percepto permanece relativamente vago.
-- Nao existe demanda formal especifica clara que sustente `o` ou `+`.
-- A resposta fica em nivel mais impressionista ou pouco diferenciado.
+- Não existe demanda formal específica clara que sustente `o` ou `+`.
+- A resposta fica em nível mais impressionista ou pouco diferenciado.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- Se existe sintese, mas sem demanda formal especifica, use [`DQv/+`](ref://scoring-input/dq/v/%2B).
-- Se nao existe sintese, mas o percepto exige demanda formal especifica, use [`DQo`](ref://scoring-input/dq/o).
-- `DQv` nao significa necessariamente ma qualidade formal; essa decisao pertence a [`FQ`](ref://scoring-input/fq).
+- Se existe síntese, mas sem demanda formal específica, use [`DQv/+`](ref://scoring-input/dq/v/%2B).
+- Se não existe síntese, mas o percepto exige demanda formal específica, use [`DQo`](ref://scoring-input/dq/o).
+- `DQv` não significa necessariamente ma qualidade formal; essa decisão pertence a [`FQ`](ref://scoring-input/fq).
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao/Qualidade Desenvolvimental] v/+](ref://scoring-input/dq/v/%2B)
-- [[Codificacao/Qualidade Desenvolvimental] o](ref://scoring-input/dq/o)
-- [[Codificacao/Qualidade Formal] FQ](ref://scoring-input/fq)
-- [[Interpretacao/Upper Section] DQv](ref://result-interpretation/upper-section/dq_v)
+- [[Codificação/Qualidade Desenvolvimental] v/+](ref://scoring-input/dq/v/%2B)
+- [[Codificação/Qualidade Desenvolvimental] o](ref://scoring-input/dq/o)
+- [[Codificação/Qualidade Formal] FQ](ref://scoring-input/fq)
+- [[Interpretação/Upper Section] DQv](ref://result-interpretation/upper-section/dq_v)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

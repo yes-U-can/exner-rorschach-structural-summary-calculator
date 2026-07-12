@@ -15,10 +15,10 @@ relatedRoutes:
   - "scoring-input/special-score/AG"
   - "result-interpretation/special-indices/DEPI"
   - "result-interpretation/special-indices/HVI"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/lower-section/affect/s-aff/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Affect] S

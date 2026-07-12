@@ -3,52 +3,52 @@ canonicalRoute: "result-interpretation/lower-section/core/R"
 locale: "es"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/core/R"
-displayTitle: "[Interpretacion/Core] R"
+displayTitle: "[Interpretación/Core] R"
 aliases:
   - "R"
   - "response total"
-  - "numero total de respuestas"
+  - "número total de respuestas"
 relatedRoutes:
   - "result-interpretation/lower-section/core"
   - "result-interpretation/lower-section/core/Lambda"
   - "result-interpretation/lower-section/core/EA"
   - "result-interpretation/lower-section/core/EB"
   - "scoring-input/score"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/core/r/index.md"
 ---
 
-# Nombre del documento: [Interpretacion/Core] R
+# Nombre del documento: [Interpretación/Core] R
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - R
 - response total
-- numero total de respuestas
+- número total de respuestas
 
-## Definicion central
+## Definición central
 
-`R` es el numero total de respuestas del protocolo.
-En interpretacion funciona primero como indicador de amplitud, productividad y suficiencia del registro.
+`R` es el número total de respuestas del protocolo.
+En interpretación funciona primero como indicador de amplitud, productividad y suficiencia del registro.
 
-## Puntos de interpretacion
+## Puntos de interpretación
 
 - Un `R` muy bajo obliga a leer el protocolo con mucha cautela.
-- Un `R` suficiente da una base mas estable para interpretar el resto del resumen estructural.
-- Un `R` alto no es automaticamente fortaleza; tambien puede acompaqar expansividad o exceso de produccion.
+- Un `R` suficiente da una base más estable para interpretar el resto del resumen estructural.
+- Un `R` alto no es automáticamente fortaleza; también puede acompañar expansividad o exceso de producción.
 
 ## Precauciones y distinciones
 
-- Un `R` bajo puede deberse a defensividad, retraimiento, fatiga, ansiedad situacional o problema en la relacion de prueba.
-- Un `R` alto tampoco implica por si solo riqueza adaptativa.
-- La lectura de `R` cambia segun `Lambda`, `DQ` y el comportamiento de prueba.
+- Un `R` bajo puede deberse a defensividad, retraimiento, fatiga, ansiedad situacional o problema en la relación de prueba.
+- Un `R` alto tampoco implica por sí solo riqueza adaptativa.
+- La lectura de `R` cambia según `Lambda`, `DQ` y el comportamiento de prueba.
 
-## Limites de interpretacion aislada
+## Limites de interpretación aislada
 
 - `R` es sobre todo un indicador de marco.
-- No se usa solo para decidir salud, patologia o capacidad general.
+- No se usa solo para decidir salud, patología o capacidad general.
 
 ## Variables para revisar juntas
 
@@ -60,12 +60,12 @@ En interpretacion funciona primero como indicador de amplitud, productividad y s
 
 ## Referencias cruzadas
 
-- [[Interpretacion/Lower Section/Core] Core](ref://result-interpretation/lower-section/core)
-- [[Interpretacion/Core] Lambda](ref://result-interpretation/lower-section/core/Lambda)
-- [[Interpretacion/Core] EA](ref://result-interpretation/lower-section/core/EA)
-- [[Interpretacion/Core] EB](ref://result-interpretation/lower-section/core/EB)
-- [[Codificacion] score](ref://scoring-input/score)
+- [[Interpretación/Lower Section/Core] Core](ref://result-interpretation/lower-section/core)
+- [[Interpretación/Core] Lambda](ref://result-interpretation/lower-section/core/Lambda)
+- [[Interpretación/Core] EA](ref://result-interpretation/lower-section/core/EA)
+- [[Interpretación/Core] EB](ref://result-interpretation/lower-section/core/EB)
+- [[Codificación] score](ref://scoring-input/score)
 
 ## Nota de fundamento
 
-- La fundamentacion detallada y las comparaciones de fuente se conservan en la provenance interna.
+- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

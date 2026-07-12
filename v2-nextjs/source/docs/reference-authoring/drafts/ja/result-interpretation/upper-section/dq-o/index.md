@@ -14,7 +14,7 @@ relatedRoutes:
   - "result-interpretation/upper-section/dq_vplus"
   - "result-interpretation/upper-section/dq_v"
   - "scoring-input/dq/o"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-upper-section-location-dq-2026-03-10.md"

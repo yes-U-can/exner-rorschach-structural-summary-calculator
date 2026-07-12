@@ -3,10 +3,10 @@ canonicalRoute: "result-interpretation/lower-section/core"
 locale: "pt"
 docKind: "interpretation-overview"
 canonicalTitle: "result-interpretation/lower-section/core"
-displayTitle: "[Interpretacao/Secao Inferior/Core] Core"
+displayTitle: "[Interpretação/Seção Inferior/Core] Core"
 aliases:
   - "core"
-  - "recursos basicos e estresse"
+  - "recursos básicos e estresse"
   - "cluster central"
 relatedRoutes:
   - "result-interpretation/lower-section"
@@ -26,57 +26,57 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/SumT"
   - "result-interpretation/lower-section/core/SumV"
   - "result-interpretation/lower-section/core/SumY"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-lower-section-core-opening-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao/Secao Inferior/Core] Core
+# Nome do documento: [Interpretação/Seção Inferior/Core] Core
 
 ## Apelidos e busca
 
 - core
-- recursos basicos e estresse
+- recursos básicos e estresse
 - cluster central
 
-## Definicao central
+## Definição central
 
-`Core` e o cluster em que os recursos basicos do protocolo, o nivel atual de demanda, o equilibrio de coping e a carga de tensao sao revistos em conjunto.
-E aqui que `R`, `Lambda`, `EB`, `EA`, `eb`, `es`, `D`, `AdjD` e as variaveis de tensao como `m`, `SumCprime`, `SumT`, `SumV` e `SumY` passam a ser lidas como conjunto.
+`Core` é o cluster em que os recursos básicos do protocolo, o nível atual de demanda, o equilíbrio de coping e a carga de tensão são revistos em conjunto.
+É aqui que `R`, `Lambda`, `EB`, `EA`, `eb`, `es`, `D`, `AdjD` e as variáveis de tensão como `m`, `SumCprime`, `SumT`, `SumV` e `SumY` passam a ser lidas como conjunto.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- `R` ajuda a avaliar se o protocolo oferece material suficiente para leitura mais estavel.
-- `Lambda` mostra o grau de simplificacao ou economia no processamento.
-- `EB`, `EA`, `eb`, `es`, `D` e `AdjD` ajudam a estimar recursos, demanda e equilibrio de coping.
-- `FM`, `m`, `SumCprime`, `SumT`, `SumV` e `SumY` qualificam a natureza da tensao e da sobrecarga interna.
+- `R` ajuda a avaliar se o protocolo oferece material suficiente para leitura mais estável.
+- `Lambda` mostra o grau de simplificação ou economia no processamento.
+- `EB`, `EA`, `eb`, `es`, `D` e `AdjD` ajudam a estimar recursos, demanda e equilíbrio de coping.
+- `FM`, `m`, `SumCprime`, `SumT`, `SumV` e `SumY` qualificam a natureza da tensão e da sobrecarga interna.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- Variaveis do `Core` se influenciam mutuamente; um numero isolado pode enganar.
-- Em protocolos curtos ou com `Lambda` muito alto, varios valores deste cluster podem parecer reduzidos ou distorcidos.
+- Variáveis do `Core` se influenciam mutuamente; um número isolado pode enganar.
+- Em protocolos curtos ou com `Lambda` muito alto, vários valores deste cluster podem parecer reduzidos ou distorcidos.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Secao Inferior] Lower Section](ref://result-interpretation/lower-section)
-- [[Interpretacao/Core] R](ref://result-interpretation/lower-section/core/R)
-- [[Interpretacao/Core] Lambda](ref://result-interpretation/lower-section/core/Lambda)
-- [[Interpretacao/Core] EB](ref://result-interpretation/lower-section/core/EB)
-- [[Interpretacao/Core] EA](ref://result-interpretation/lower-section/core/EA)
-- [[Interpretacao/Core] EBPer](ref://result-interpretation/lower-section/core/EBPer)
-- [[Interpretacao/Core] eb](ref://result-interpretation/lower-section/core/eb)
-- [[Interpretacao/Core] es](ref://result-interpretation/lower-section/core/es)
-- [[Interpretacao/Core] D](ref://result-interpretation/lower-section/core/D)
-- [[Interpretacao/Core] AdjD](ref://result-interpretation/lower-section/core/AdjD)
-- [[Interpretacao/Core] AdjEs](ref://result-interpretation/lower-section/core/AdjEs)
-- [[Interpretacao/Core] FM](ref://result-interpretation/lower-section/core/FM)
-- [[Interpretacao/Core] m](ref://result-interpretation/lower-section/core/m)
-- [[Interpretacao/Core] SumCprime](ref://result-interpretation/lower-section/core/SumCprime)
-- [[Interpretacao/Core] SumT](ref://result-interpretation/lower-section/core/SumT)
-- [[Interpretacao/Core] SumV](ref://result-interpretation/lower-section/core/SumV)
-- [[Interpretacao/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
+- [[Interpretação/Seção Inferior] Lower Section](ref://result-interpretation/lower-section)
+- [[Interpretação/Core] R](ref://result-interpretation/lower-section/core/R)
+- [[Interpretação/Core] Lambda](ref://result-interpretation/lower-section/core/Lambda)
+- [[Interpretação/Core] EB](ref://result-interpretation/lower-section/core/EB)
+- [[Interpretação/Core] EA](ref://result-interpretation/lower-section/core/EA)
+- [[Interpretação/Core] EBPer](ref://result-interpretation/lower-section/core/EBPer)
+- [[Interpretação/Core] eb](ref://result-interpretation/lower-section/core/eb)
+- [[Interpretação/Core] es](ref://result-interpretation/lower-section/core/es)
+- [[Interpretação/Core] D](ref://result-interpretation/lower-section/core/D)
+- [[Interpretação/Core] AdjD](ref://result-interpretation/lower-section/core/AdjD)
+- [[Interpretação/Core] AdjEs](ref://result-interpretation/lower-section/core/AdjEs)
+- [[Interpretação/Core] FM](ref://result-interpretation/lower-section/core/FM)
+- [[Interpretação/Core] m](ref://result-interpretation/lower-section/core/m)
+- [[Interpretação/Core] SumCprime](ref://result-interpretation/lower-section/core/SumCprime)
+- [[Interpretação/Core] SumT](ref://result-interpretation/lower-section/core/SumT)
+- [[Interpretação/Core] SumV](ref://result-interpretation/lower-section/core/SumV)
+- [[Interpretação/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

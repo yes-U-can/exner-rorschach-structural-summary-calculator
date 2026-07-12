@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/fq/-"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/fq/-"
-displayTitle: "[Codificacao/Qualidade Formal] -"
+displayTitle: "[Codificação/Qualidade Formal] -"
 aliases:
   - "-"
   - "FQ-"
@@ -12,13 +12,13 @@ relatedRoutes:
   - "scoring-input/fq/o"
   - "scoring-input/fq/u"
   - "result-interpretation/lower-section/mediation/X_minus_percent"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-fq-2026-03-10.md"
 ---
 
-# Nome do documento: [Codificacao/Qualidade Formal] -
+# Nome do documento: [Codificação/Qualidade Formal] -
 
 ## Apelidos e busca
 
@@ -26,31 +26,31 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-fq-2026-03-10.md"
 - FQ-
 - ajuste formal pobre
 
-## Definicao central
+## Definição central
 
-`FQ-` e usado quando o objeto nao se ajusta bem aos contornos da mancha e depende de forca, distorcao ou baixa plausibilidade.
-E um codigo de ajuste ruim, nao de ausencia de FQ.
+`FQ-` é usado quando o objeto não se ajusta bem aos contornos da mancha e depende de força, distorção ou baixa plausibilidade.
+É um código de ajuste ruim, não de ausência de FQ.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
-- A leitura exige forca importante dos contornos.
-- O ajuste parece pouco plausivel ou claramente distorcido.
-- A resposta nao se sustenta como boa leitura formal da area.
-- O problema e de mau ajuste, nao de falta de base formal.
+- A leitura exige força importante dos contornos.
+- O ajuste parece pouco plausível ou claramente distorcido.
+- A resposta não se sustenta como boa leitura formal da área.
+- O problema é de mau ajuste, não de falta de base formal.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- Se a resposta e incomum, mas ainda plausivel, use [`FQu`](ref://scoring-input/fq/u).
-- Se a resposta nao deve receber nenhum codigo de forma, use [`none`](ref://scoring-input/fq/none), nao `-`.
-- `FQ-` costuma se conectar a dificuldades em [`X-%`](ref://result-interpretation/lower-section/mediation/X_minus_percent), mas o codigo deve ser atribuido no nivel de codificacao.
+- Se a resposta é incomum, mas ainda plausível, use [`FQu`](ref://scoring-input/fq/u).
+- Se a resposta não deve receber nenhum código de forma, use [`none`](ref://scoring-input/fq/none), não `-`.
+- `FQ-` costuma se conectar a dificuldades em [`X-%`](ref://result-interpretation/lower-section/mediation/X_minus_percent), mas o código deve ser atribuído no nível de codificação.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao/Qualidade Formal] o](ref://scoring-input/fq/o)
-- [[Codificacao/Qualidade Formal] u](ref://scoring-input/fq/u)
-- [[Codificacao/Qualidade Formal] none](ref://scoring-input/fq/none)
-- [[Interpretacao/Mediation] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
+- [[Codificação/Qualidade Formal] o](ref://scoring-input/fq/o)
+- [[Codificação/Qualidade Formal] u](ref://scoring-input/fq/u)
+- [[Codificação/Qualidade Formal] none](ref://scoring-input/fq/none)
+- [[Interpretação/Mediation] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

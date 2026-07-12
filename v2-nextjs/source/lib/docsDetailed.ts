@@ -1366,31 +1366,31 @@ function wrapScoringDoc(lang: Language, code: string, categoryId: string, core: 
       '[Input Constraints In This App] Apply mutual exclusion, determinant-priority, and auto-rule constraints implemented in calculator logic before final lock.',
       `[Interpretation Relevance] ${relevance}`,
       '[AI Usage Guideline] Use conservative wording: describe coding evidence and probable implications; avoid diagnosis-level conclusions from single codes.',
-      '[Source Reliability] Primary grounding: Exner Comprehensive System coding logic + curated references in docs/ref; confidence: medium-high when inquiry evidence is explicit.',
+      '[Corpus Governance] Runtime knowledge is curated and reviewed internally; confidence depends on explicit inquiry evidence and reliable coding.',
     ],
     ko: [
       '[Input Constraints In This App] 최종 확정 전에 상호배제, 결정인 우선순위, 앱 자동 규칙을 모두 적용합니다.',
       `[Interpretation Relevance] ${relevance}`,
       '[AI Usage Guideline] 보수적 표현을 사용합니다. 단일 코드만으로 진단 수준 결론을 내리지 않습니다.',
-      '[Source Reliability] 근거: Exner 종합체계 코딩 원리 + docs/ref 선별 자료. 탐문 근거가 명확할수록 신뢰도는 중~상입니다.',
+      '[Corpus Governance] 런타임 지식은 내부 검수 절차를 거칩니다. 신뢰도는 명확한 탐문 근거와 채점 신뢰도에 따라 달라집니다.',
     ],
     ja: [
       '[Input Constraints In This App] Apply mutual exclusion, determinant-priority, and auto-rule constraints implemented in calculator logic before final lock.',
       `[Interpretation Relevance] ${relevance}`,
       '[AI Usage Guideline] Use conservative wording: describe coding evidence and probable implications; avoid diagnosis-level conclusions from single codes.',
-      '[Source Reliability] Primary grounding: Exner Comprehensive System coding logic + curated references in docs/ref; confidence: medium-high when inquiry evidence is explicit.',
+      '[Corpus Governance] ランタイム知識は内部で選別・レビューされています。信頼度は、明確な照会根拠と採点の信頼性に左右されます。',
     ],
     es: [
       '[Input Constraints In This App] Aplique exclusion mutua, prioridad jerarquica y reglas automaticas de la app antes del cierre.',
       `[Interpretation Relevance] ${relevance}`,
       '[AI Usage Guideline] Use lenguaje prudente: "puede indicar", "es consistente con"; evite afirmaciones diagnosticas de un solo codigo.',
-      '[Source Reliability] Base principal: reglas de codificacion del Sistema Comprehensivo de Exner + referencias curadas en docs/ref; confianza: media-alta con evidencia explicita.',
+      '[Corpus Governance] El conocimiento operativo se selecciona y revisa internamente; la confianza depende de evidencia explícita y una codificación fiable.',
     ],
     pt: [
       '[Input Constraints In This App] Aplique exclusao mutua, prioridade hierarquica e regras automaticas do app antes do fechamento.',
       `[Interpretation Relevance] ${relevance}`,
       '[AI Usage Guideline] Use linguagem prudente: "pode indicar", "e consistente com"; evite conclusoes diagnosticas por codigo isolado.',
-      '[Source Reliability] Base principal: regras de codificacao do Sistema Compreensivo de Exner + referencias curadas em docs/ref; confianca: media-alta com evidencia explicita.',
+      '[Corpus Governance] O conhecimento operacional é selecionado e revisado internamente; a confiança depende de evidência explícita e codificação confiável.',
     ],
   };
 
@@ -1551,7 +1551,7 @@ function resultEntryText(title: string, base: string, section: string, lang: Lan
       `[Cross-Checks] ${checks[0]} ${checks[1]}`,
       '[Common Misreading Guard] Do not infer traits or diagnosis from a single variable; treat isolated elevations as hypotheses requiring convergence.',
       '[AI Usage Guideline] Preferred wording: "may indicate", "is consistent with", "should be interpreted with". Avoid deterministic claims.',
-      '[Source Reliability] Primary grounding: Exner Structural Summary conventions + curated references in docs/ref; confidence: medium-high when coding reliability is strong.',
+      '[Corpus Governance] Runtime knowledge is curated and reviewed internally; confidence depends on protocol adequacy and coding reliability.',
     ].join('\n\n'),
     ko: [
       `[Concept] ${title} is interpreted in the ${sec} frame of the Structural Summary. ${safeBase}`,
@@ -1559,7 +1559,7 @@ function resultEntryText(title: string, base: string, section: string, lang: Lan
       `[Cross-Variable Rule] Confirm convergence with neighboring variables before concluding.`,
       `[Clinical Caution] This supports structured hypothesis building and does not replace full clinical judgment.`,
       '[AI Usage Guideline] Use conservative wording and avoid deterministic one-variable conclusions.',
-      '[Source Reliability] Primary grounding: Exner Structural Summary conventions + curated references in docs/ref; confidence depends on coding reliability.',
+      '[Corpus Governance] 런타임 지식은 내부 검수 절차를 거칩니다. 신뢰도는 프로토콜의 적절성과 채점 신뢰도에 따라 달라집니다.',
     ].join('\n\n'),
     ja: [
       `[Concept] ${title} is interpreted in the ${sec} frame of the Structural Summary. ${safeBase}`,
@@ -1567,7 +1567,7 @@ function resultEntryText(title: string, base: string, section: string, lang: Lan
       `[Cross-Variable Rule] Confirm convergence with neighboring variables before concluding.`,
       `[Clinical Caution] This supports structured hypothesis building and does not replace full clinical judgment.`,
       '[AI Usage Guideline] Use conservative wording and avoid deterministic one-variable conclusions.',
-      '[Source Reliability] Primary grounding: Exner Structural Summary conventions + curated references in docs/ref; confidence depends on coding reliability.',
+      '[Corpus Governance] ランタイム知識は内部で選別・レビューされています。信頼度は、プロトコルの妥当性と採点の信頼性に左右されます。',
     ].join('\n\n'),
     es: [
       `[Concepto] ${title} se interpreta en el marco de ${sec} del Resumen Estructural. ${safeBase}`,
@@ -1575,7 +1575,7 @@ function resultEntryText(title: string, base: string, section: string, lang: Lan
       `[Regla de Variables Cruzadas] Verifique convergencia con variables vecinas antes de concluir.`,
       `[Cautela Clinica] Es apoyo estructurado y no sustituye el juicio clinico integral.`,
       '[AI Usage Guideline] Use lenguaje prudente: "puede indicar", "es consistente con"; evite afirmaciones deterministas.',
-      '[Source Reliability] Base principal: convenciones del Resumen Estructural de Exner + referencias curadas en docs/ref; confianza segun calidad de codificacion.',
+      '[Corpus Governance] El conocimiento operativo se selecciona y revisa internamente; la confianza depende de la suficiencia del protocolo y una codificación fiable.',
     ].join('\n\n'),
     pt: [
       `[Conceito] ${title} e interpretado no contexto de ${sec} no Resumo Estrutural. ${safeBase}`,
@@ -1583,7 +1583,7 @@ function resultEntryText(title: string, base: string, section: string, lang: Lan
       `[Regra de Variaveis Cruzadas] Confirme convergencia com variaveis vizinhas antes de concluir.`,
       `[Cautela Clinica] E suporte estruturado e nao substitui julgamento clinico integral.`,
       '[AI Usage Guideline] Use linguagem prudente: "pode indicar", "e consistente com"; evite afirmacoes deterministas.',
-      '[Source Reliability] Base principal: convencoes do Resumo Estrutural de Exner + referencias curadas em docs/ref; confianca depende da qualidade da codificacao.',
+      '[Corpus Governance] O conhecimento operacional é selecionado e revisado internamente; a confiança depende da adequação do protocolo e da codificação confiável.',
     ].join('\n\n'),
   };
 

@@ -22,10 +22,10 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/R"
   - "result-interpretation/special-indices/CDI"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/lower-section/interpersonal/iso-index/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Interpersonal] Isolation Index

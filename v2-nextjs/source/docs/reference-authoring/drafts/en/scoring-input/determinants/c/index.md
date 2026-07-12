@@ -13,10 +13,10 @@ relatedRoutes:
   - "scoring-input/determinants/CF"
   - "result-interpretation/lower-section/affect/PureC"
   - "result-interpretation/lower-section/affect/FC_CF_C"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/scoring-input/determinants/c/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Determinants] C

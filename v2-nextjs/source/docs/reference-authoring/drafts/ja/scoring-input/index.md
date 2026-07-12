@@ -23,7 +23,7 @@ relatedRoutes:
   - "scoring-input/z"
   - "scoring-input/gphr"
   - "scoring-input/special-score"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-scoring-input-overview-2026-03-10.md"

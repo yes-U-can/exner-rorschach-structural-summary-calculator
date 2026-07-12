@@ -3,11 +3,11 @@ canonicalRoute: "result-interpretation/lower-section/selfPerception/_3r_2_R"
 locale: "es"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/selfPerception/_3r_2_R"
-displayTitle: "[Interpretacion/Self Perception] Egocentricity Index"
+displayTitle: "[Interpretación/Self Perception] Egocentricity Index"
 aliases:
   - "3r+(2)/R"
   - "Egocentricity Index"
-  - "indice de egocentricidad"
+  - "índice de egocentricidad"
 relatedRoutes:
   - "result-interpretation/lower-section/selfPerception"
   - "result-interpretation/lower-section/selfPerception/Fr_rF"
@@ -17,41 +17,41 @@ relatedRoutes:
   - "scoring-input/determinants/Fr"
   - "scoring-input/determinants/rF"
   - "result-interpretation/lower-section/core/R"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/selfperception/3r-2-r/index.md"
 ---
 
-# Nombre del documento: [Interpretacion/Self Perception] Egocentricity Index
+# Nombre del documento: [Interpretación/Self Perception] Egocentricity Index
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - 3r+(2)/R
 - Egocentricity Index
-- indice de egocentricidad
+- índice de egocentricidad
 
-## Definicion central
+## Definición central
 
-`3r+(2)/R` es un indice de egocentricidad calculado a partir de respuestas de reflejo y pares en proporcion al total de respuestas.
-En interpretacion ayuda a estimar cuanto peso ocupa el yo, el propio valor o la propia importancia dentro del foco perceptivo.
+`3r+(2)/R` es un índice de egocentricidad calculado a partir de respuestas de reflejo y pares en proporción al total de respuestas.
+En interpretación ayuda a estimar cuánto peso ocupa el yo, el propio valor o la propia importancia dentro del foco perceptivo.
 
-## Puntos de interpretacion
+## Puntos de interpretación
 
-- Si el indice es alto, puede haber mayor autofocalizacion, necesidad de autoconfirmacion o sensibilidad al propio valor.
-- Si es muy alto, no solo aumenta el interes por si mismo; tambien puede crecer la necesidad de validarse o proteger la autoestima.
-- Si es bajo, puede haber menor autoafirmacion, menor inversion en la propia importancia o una autovaloracion disminuida.
-- El indice habla de self-concern, no de autoestima sana por si sola.
+- Si el índice es alto, puede haber mayor autofocalización, necesidad de autoconfirmación o sensibilidad al propio valor.
+- Si es muy alto, no solo aumenta el interés por sí mismo; también puede crecer la necesidad de validarse o proteger la autoestima.
+- Si es bajo, puede haber menor autoafirmación, menor inversión en la propia importancia o una autovaloración disminuida.
+- El índice habla de self-concern, no de autoestima sana por sí sola.
 
 ## Precauciones y distinciones
 
-- En adultos suele leerse con cuidado cuando cae por debajo de `.33` o sube por encima de `.44`, pero el indice no decide solo.
-- Si `R` es bajo, el cociente puede verse mas extremo de lo que realmente representa.
-- Un valor alto no equivale automaticamente a narcisismo clinico.
+- En adultos suele leerse con cuidado cuando cae por debajo de `.33` o sube por encima de `.44`, pero el índice no decide solo.
+- Si `R` es bajo, el cociente puede verse más extremo de lo que realmente representa.
+- Un valor alto no equivale automáticamente a narcisismo clínico.
 
-## Limites de interpretacion aislada
+## Limites de interpretación aislada
 
-- Conviene leer este indice junto con `Fr+rF`, `FD`, `SumV`, `MOR` y `H ratio`.
+- Conviene leer este índice junto con `Fr+rF`, `FD`, `SumV`, `MOR` y `H ratio`.
 - Su significado cambia si hay muy pocos pares o muy pocas respuestas totales.
 
 ## Variables para revisar juntas
@@ -64,15 +64,15 @@ En interpretacion ayuda a estimar cuanto peso ocupa el yo, el propio valor o la 
 
 ## Referencias cruzadas
 
-- [[Interpretacion/Lower Section/Self Perception] Self Perception](ref://result-interpretation/lower-section/selfPerception)
-- [[Interpretacion/Self Perception] Fr + rF](ref://result-interpretation/lower-section/selfPerception/Fr_rF)
-- [[Interpretacion/Self Perception] FD](ref://result-interpretation/lower-section/selfPerception/FD)
-- [[Interpretacion/Self Perception] H Ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
-- [[Codificacion/Pair] Pair](ref://scoring-input/pair)
-- [[Codificacion/Determinantes] Fr](ref://scoring-input/determinants/Fr)
-- [[Codificacion/Determinantes] rF](ref://scoring-input/determinants/rF)
-- [[Interpretacion/Core] R](ref://result-interpretation/lower-section/core/R)
+- [[Interpretación/Lower Section/Self Perception] Self Perception](ref://result-interpretation/lower-section/selfPerception)
+- [[Interpretación/Self Perception] Fr + rF](ref://result-interpretation/lower-section/selfPerception/Fr_rF)
+- [[Interpretación/Self Perception] FD](ref://result-interpretation/lower-section/selfPerception/FD)
+- [[Interpretación/Self Perception] H Ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
+- [[Codificación/Pair] Pair](ref://scoring-input/pair)
+- [[Codificación/Determinantes] Fr](ref://scoring-input/determinants/Fr)
+- [[Codificación/Determinantes] rF](ref://scoring-input/determinants/rF)
+- [[Interpretación/Core] R](ref://result-interpretation/lower-section/core/R)
 
 ## Nota de fundamento
 
-- La fundamentacion detallada y las comparaciones de fuente se conservan en la provenance interna.
+- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

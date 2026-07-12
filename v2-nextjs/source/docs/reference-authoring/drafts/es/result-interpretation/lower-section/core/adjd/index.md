@@ -3,7 +3,7 @@ canonicalRoute: "result-interpretation/lower-section/core/AdjD"
 locale: "es"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/core/AdjD"
-displayTitle: "[Interpretacion/Core] AdjD"
+displayTitle: "[Interpretación/Core] AdjD"
 aliases:
   - "AdjD"
   - "Adjusted D"
@@ -18,41 +18,41 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/SumY"
   - "result-interpretation/lower-section/core/Lambda"
   - "result-interpretation/special-indices/CDI"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/core/adjd/index.md"
 ---
 
-# Nombre del documento: [Interpretacion/Core] AdjD
+# Nombre del documento: [Interpretación/Core] AdjD
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - AdjD
 - Adjusted D
 - D ajustado
 
-## Definicion central
+## Definición central
 
 `AdjD` es la diferencia entre `EA` y `AdjEs`.
-Funciona como una estimacion mas estable del margen de control, porque corrige parte del peso de la sobrecarga mas situacional asociada con `m` y `Y`.
+Funciona como una estimación más estable del margen de control, porque corrige parte del peso de la sobrecarga más situacional asociada con `m` y `Y`.
 
-## Puntos de interpretacion
+## Puntos de interpretación
 
-- `AdjD = 0` suele sugerir que, al corregir la carga mas reactiva, recursos y demanda quedan en un equilibrio aproximado.
-- `AdjD < 0` sugiere una sobrecarga mas persistente o menos dependiente solo del contexto inmediato.
+- `AdjD = 0` suele sugerir que, al corregir la carga más reactiva, recursos y demanda quedan en un equilibrio aproximado.
+- `AdjD < 0` sugiere una sobrecarga más persistente o menos dependiente solo del contexto inmediato.
 - Si `D` es claramente peor que `AdjD`, parte del malestar actual puede estar acentuado por factores situacionales.
-- `AdjD` suele ser mas util que `D` para estimar vulnerabilidad de base frente al estres.
+- `AdjD` suele ser más útil que `D` para estimar vulnerabilidad de base frente al estrés.
 
 ## Precauciones y distinciones
 
 - `AdjD` no debe leerse como rasgo fijo inmutable.
-- Un `AdjD` no negativo no elimina la posibilidad de descompensacion en contextos muy exigentes.
-- La diferencia entre `D` y `AdjD` es clinicamente relevante porque ayuda a separar carga actual de carga mas sostenida.
+- Un `AdjD` no negativo no elimina la posibilidad de descompensación en contextos muy exigentes.
+- La diferencia entre `D` y `AdjD` es clínicamente relevante porque ayuda a separar carga actual de carga más sostenida.
 
-## Limites de interpretacion aislada
+## Limites de interpretación aislada
 
-- `AdjD` por si solo no basta para concluir buen pronostico adaptativo.
+- `AdjD` por sí solo no basta para concluir buen pronóstico adaptativo.
 - Debe revisarse junto con `D`, `AdjEs`, `EA`, `es`, `m` y `SumY`.
 
 ## Variables para revisar juntas
@@ -68,16 +68,16 @@ Funciona como una estimacion mas estable del margen de control, porque corrige p
 
 ## Referencias cruzadas
 
-- [[Interpretacion/Lower Section/Core] Core](ref://result-interpretation/lower-section/core)
-- [[Interpretacion/Core] D](ref://result-interpretation/lower-section/core/D)
-- [[Interpretacion/Core] AdjEs](ref://result-interpretation/lower-section/core/AdjEs)
-- [[Interpretacion/Core] EA](ref://result-interpretation/lower-section/core/EA)
-- [[Interpretacion/Core] es](ref://result-interpretation/lower-section/core/es)
-- [[Interpretacion/Core] m](ref://result-interpretation/lower-section/core/m)
-- [[Interpretacion/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
-- [[Interpretacion/Core] Lambda](ref://result-interpretation/lower-section/core/Lambda)
-- [[Interpretacion/Special Indices] CDI](ref://result-interpretation/special-indices/CDI)
+- [[Interpretación/Lower Section/Core] Core](ref://result-interpretation/lower-section/core)
+- [[Interpretación/Core] D](ref://result-interpretation/lower-section/core/D)
+- [[Interpretación/Core] AdjEs](ref://result-interpretation/lower-section/core/AdjEs)
+- [[Interpretación/Core] EA](ref://result-interpretation/lower-section/core/EA)
+- [[Interpretación/Core] es](ref://result-interpretation/lower-section/core/es)
+- [[Interpretación/Core] m](ref://result-interpretation/lower-section/core/m)
+- [[Interpretación/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
+- [[Interpretación/Core] Lambda](ref://result-interpretation/lower-section/core/Lambda)
+- [[Interpretación/Special Indices] CDI](ref://result-interpretation/special-indices/CDI)
 
 ## Nota de fundamento
 
-- La fundamentacion detallada y las comparaciones de fuente se conservan en la provenance interna.
+- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

@@ -18,7 +18,7 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/AdjD"
   - "result-interpretation/lower-section/core/FM"
   - "scoring-input/determinants/m"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-core-burden-qualities-2026-03-10.md"

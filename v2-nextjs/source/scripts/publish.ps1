@@ -3,6 +3,8 @@ param(
   [switch]$DryRun,
   [switch]$SkipVerify,
   [string]$PublishRoot,
+  [string]$PublishTargetRelativePath = "v2-nextjs",
+  [switch]$SyncOnly,
   [switch]$UseCurrentRepo,
   [string]$SmokeBaseUrl,
   [string]$SmokeCronSecret
@@ -76,47 +78,128 @@ function Get-RelativePathCompat {
   return $relativePath
 }
 
+function Remove-PublicMirrorPrivateArtifacts {
+  param(
+    [Parameter(Mandatory = $true)]
+    [string]$Root,
+    [switch]$WhatIf
+  )
+
+  $resolvedRoot = [IO.Path]::GetFullPath($Root).TrimEnd([IO.Path]::DirectorySeparatorChar)
+  $rootPrefix = $resolvedRoot + [IO.Path]::DirectorySeparatorChar
+  $privateDirectories = @(
+    ".vercel",
+    ".npm-cache",
+    ".secrets",
+    ".agents",
+    ".claude",
+    ".cursor",
+    "notes",
+    "docs\ref",
+    "docs\admin",
+    "docs\adr",
+    "docs\chat",
+    "docs\reference-authoring\incoming",
+    "docs\reference-authoring\notes",
+    "prisma\migrations"
+  )
+  $privateFilePatterns = @(
+    ".env",
+    ".env.local",
+    ".env.*.local",
+    "*.db",
+    "*.sqlite",
+    "*.sqlite3",
+    "*.tsbuildinfo",
+    "*.log",
+    "*.txt",
+    "CODEX_TASKS.md",
+    "ROADMAP.md",
+    "AI_Knowledge_Item_Template.md",
+    "AI_SYSTEM_MASTERPLAN.md",
+    "LOCAL_OPEN_SOURCE_SECURITY.md",
+    "EN_Batch*.md",
+    "JA_Batch*.md",
+    "REF_Batch*.md",
+    "HANDOFF*.md",
+    "EN_Detailing_Workflow.md"
+  )
+
+  foreach ($relativePath in $privateDirectories) {
+    $candidate = [IO.Path]::GetFullPath((Join-Path $resolvedRoot $relativePath))
+    if (-not $candidate.StartsWith($rootPrefix, [StringComparison]::OrdinalIgnoreCase)) {
+      throw "Refusing to remove path outside publish root: $candidate"
+    }
+    if (Test-Path -LiteralPath $candidate) {
+      if ($WhatIf) {
+        Write-Host "[dry-run] would remove private mirror directory: $candidate"
+      } else {
+        Remove-Item -LiteralPath $candidate -Recurse -Force
+      }
+    }
+  }
+
+  foreach ($file in Get-ChildItem -LiteralPath $resolvedRoot -File -Recurse -ErrorAction SilentlyContinue) {
+    if (-not ($privateFilePatterns | Where-Object { $file.Name -like $_ })) {
+      continue
+    }
+    $candidate = [IO.Path]::GetFullPath($file.FullName)
+    if (-not $candidate.StartsWith($rootPrefix, [StringComparison]::OrdinalIgnoreCase)) {
+      throw "Refusing to remove file outside publish root: $candidate"
+    }
+    if ($WhatIf) {
+      Write-Host "[dry-run] would remove private mirror file: $candidate"
+    } else {
+      Remove-Item -LiteralPath $candidate -Force
+    }
+  }
+}
+
 $excludeDirs = @(
   ".git",
   ".next",
+  ".vercel",
+  ".npm-cache",
   "node_modules",
   ".secrets",
   ".agents",
   ".claude",
   ".cursor",
-  "docs\\ref"
+  "notes",
+  "docs\ref",
+  "docs\admin",
+  "docs\adr",
+  "docs\chat",
+  "docs\reference-authoring\incoming",
+  "docs\reference-authoring\notes",
+  "prisma\migrations"
 )
 
 $excludeFiles = @(
   ".env",
   ".env.local",
+  ".env.*.local",
   "*.db",
   "*.sqlite",
   "*.sqlite3",
   "*.log",
-  ".cursorrules"
+  "*.tsbuildinfo",
+  "*.txt",
+  ".tmp-*",
+  "*.out",
+  "*.err",
+  ".cursorrules",
+  "CODEX_TASKS.md",
+  "ROADMAP.md",
+  "AI_Knowledge_Item_Template.md",
+  "AI_SYSTEM_MASTERPLAN.md",
+  "LOCAL_OPEN_SOURCE_SECURITY.md",
+  "EN_Batch*.md",
+  "JA_Batch*.md",
+  "REF_Batch*.md",
+  "HANDOFF*.md",
+  "EN_Detailing_Workflow.md"
 )
-
-$args = @(
-  $sourceRoot,
-  $targetRoot,
-  "/MIR",
-  "/R:2",
-  "/W:1",
-  "/NFL",
-  "/NDL",
-  "/NP"
-)
-
-if ($excludeDirs.Count -gt 0) {
-  $args += "/XD"
-  $args += $excludeDirs
-}
-
-if ($excludeFiles.Count -gt 0) {
-  $args += "/XF"
-  $args += $excludeFiles
-}
 
 if (-not $SkipVerify) {
   Write-Host "[verify] running release verification before publish"
@@ -183,10 +266,37 @@ $publishRoot = if ($PublishRoot) {
 } else {
   Join-Path (Resolve-Path "..").Path "repo_publish"
 }
-$targetRoot = Join-Path $publishRoot "v2-nextjs"
+$resolvedPublishRoot = [IO.Path]::GetFullPath($publishRoot).TrimEnd([IO.Path]::DirectorySeparatorChar)
+$publishRootPrefix = $resolvedPublishRoot + [IO.Path]::DirectorySeparatorChar
+$targetRoot = [IO.Path]::GetFullPath((Join-Path $resolvedPublishRoot $PublishTargetRelativePath)).TrimEnd([IO.Path]::DirectorySeparatorChar)
+
+if (-not $targetRoot.StartsWith($publishRootPrefix, [StringComparison]::OrdinalIgnoreCase)) {
+  throw "Refusing to publish outside publish root: $targetRoot"
+}
 
 if (-not (Test-Path $targetRoot)) {
-  throw "Publish target not found: $targetRoot`nHint: pass -PublishRoot <path-to-parent-folder-containing-v2-nextjs> if your publish repo lives elsewhere, or use -UseCurrentRepo to publish from the current git repository."
+  throw "Publish target not found: $targetRoot`nHint: pass -PublishRoot <public-repo-path> and -PublishTargetRelativePath <mirror-path>, or use -UseCurrentRepo to publish from the current git repository."
+}
+
+$args = @(
+  $sourceRoot,
+  $targetRoot,
+  "/MIR",
+  "/R:2",
+  "/W:1",
+  "/NFL",
+  "/NDL",
+  "/NP"
+)
+
+if ($excludeDirs.Count -gt 0) {
+  $args += "/XD"
+  $args += $excludeDirs
+}
+
+if ($excludeFiles.Count -gt 0) {
+  $args += "/XF"
+  $args += $excludeFiles
 }
 
 if ($DryRun) {
@@ -200,11 +310,18 @@ if ($rc -ge 8) {
   throw "robocopy failed with exit code $rc"
 }
 
+Remove-PublicMirrorPrivateArtifacts -Root $targetRoot -WhatIf:$DryRun
+
 if ($DryRun) {
   Write-Host "[dry-run] sync simulation completed."
   if ($SmokeBaseUrl) {
     Write-Host "[dry-run] post-publish smoke target would be $SmokeBaseUrl"
   }
+  exit 0
+}
+
+if ($SyncOnly) {
+  Write-Host "[sync-only] mirror updated without committing or pushing."
   exit 0
 }
 

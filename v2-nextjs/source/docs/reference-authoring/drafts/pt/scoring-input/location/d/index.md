@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/location/D"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/location/D"
-displayTitle: "[Codificacao/Localizacao] D"
+displayTitle: "[Codificação/Localização] D"
 aliases:
   - "D"
   - "detalhe comum"
@@ -13,13 +13,13 @@ relatedRoutes:
   - "scoring-input/location/Dd"
   - "scoring-input/location/W"
   - "result-interpretation/upper-section/D"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-location-2026-03-10.md"
 ---
 
-# Nome do documento: [Codificacao/Localizacao] D
+# Nome do documento: [Codificação/Localização] D
 
 ## Apelidos e busca
 
@@ -27,30 +27,30 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-location-2026-03-1
 - detalhe comum
 - common detail
 
-## Definicao central
+## Definição central
 
-`D` e usado quando a resposta se baseia em um detalhe comumente utilizado da mancha.
-O ponto central e o uso comum da area, nao apenas seu tamanho.
+`D` é usado quando a resposta se baseia em um detalhe comumente utilizado da mancha.
+O ponto central é o uso comum da área, não apenas seu tamanho.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
-- A resposta usa uma area parcial da mancha, e nao a mancha inteira.
-- Essa area e considerada um detalhe comum no sistema.
-- A localizacao e confirmada no inquerito ou na folha de localizacao.
+- A resposta usa uma área parcial da mancha, e não a mancha inteira.
+- Essa área é considerada um detalhe comum no sistema.
+- A localização é confirmada no inquérito ou na folha de localização.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `D` e `Dd` nao se separam apenas por extensao. A diferenca e se a area e comum ou incomum.
-- Se o espaco branco tambem entra de modo significativo, use [`DS`](ref://scoring-input/location/DS).
-- `D` nao significa, por si so, simplicidade ou pobreza interpretativa.
+- `D` e `Dd` não se separam apenas por extensão. A diferença é se a área é comum ou incomum.
+- Se o espaço branco também entra de modo significativo, use [`DS`](ref://scoring-input/location/DS).
+- `D` não significa, por si só, simplicidade ou pobreza interpretativa.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao/Localizacao] DS](ref://scoring-input/location/DS)
-- [[Codificacao/Localizacao] Dd](ref://scoring-input/location/Dd)
-- [[Codificacao/Localizacao] W](ref://scoring-input/location/W)
-- [[Interpretacao/Upper Section] D](ref://result-interpretation/upper-section/D)
+- [[Codificação/Localização] DS](ref://scoring-input/location/DS)
+- [[Codificação/Localização] Dd](ref://scoring-input/location/Dd)
+- [[Codificação/Localização] W](ref://scoring-input/location/W)
+- [[Interpretação/Upper Section] D](ref://result-interpretation/upper-section/D)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

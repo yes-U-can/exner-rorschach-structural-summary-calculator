@@ -18,7 +18,7 @@ relatedRoutes:
   - "result-interpretation/upper-section/D"
   - "result-interpretation/upper-section/Dd"
   - "result-interpretation/upper-section/S"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/location/index.md"

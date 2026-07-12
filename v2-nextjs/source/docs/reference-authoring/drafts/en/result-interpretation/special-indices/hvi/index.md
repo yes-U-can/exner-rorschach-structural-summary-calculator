@@ -16,10 +16,10 @@ relatedRoutes:
   - "result-interpretation/lower-section/affect/S_aff"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/special-indices/hvi/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 # Document Name: [Interpretation/Special Indices] Hypervigilance Index
 ## Aliases / Search Terms
@@ -28,15 +28,15 @@ provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretat
 - hypervigilance index
 
 ## Core Definition
-`HVI` is a constellation that looks for a style of defensive alertness, distance, and exaggerated watchfulness toward the environment.
-When it is positive, it suggests that the person may place control and protection ahead of trust.
+`HVI` is a yes/no combination of variables proposed to reflect defensive alertness and interpersonal distance.
+Empirical support for interpreting it as hypervigilance or distrust is weak and inconsistent, so a positive result remains a low-confidence hypothesis.
 ## Interpretation Points
-- If `HVI` is positive, interpersonal style may be cautious, distrustful, or highly tuned to threat.
+- If `HVI` is positive, first determine whether actual danger, trauma history, cultural guardedness, or independently observed vigilance supports the hypothesis.
 - The pattern is usually read more as defensive disposition than as an automatic paranoid diagnosis.
 - The constellation gains meaning when it appears with `SumT_inter`, `Zf`, `Zd`, `S_aff`, `H_ratio`, and `HumanCont`.
 - Real danger or recent threat experiences can also affect the pattern.
 ## Cautions / Distinctions
-- `HVI` is a yes/no decision; its absence does not rule out elevated vigilance.
+- The yes/no decision does not establish vigilance when positive, and its absence does not rule out elevated vigilance.
 - Cultural and situational factors can influence reserve, distance, and guardedness.
 - The primary `T = 0` rule and the secondary conditions need to be read together.
 ## Limits of Isolated Interpretation

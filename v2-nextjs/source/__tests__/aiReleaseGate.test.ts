@@ -19,6 +19,7 @@ describe('AI release gate runner', () => {
     expect(result.status).toBe('planned');
     expect(result.steps.map((step: { id: string }) => step.id)).toEqual([
       'reference_retrieval',
+      'vector_runtime',
       'contracts',
       'artifacts',
       'human_records',
@@ -95,6 +96,7 @@ describe('AI release gate runner', () => {
     expect(args.dryRun).toBe(true);
     expect(selected.map((step: { id: string }) => step.id)).toEqual([
       'reference_retrieval',
+      'vector_runtime',
       'contracts',
       'secret_scan',
       'dependency_audit',

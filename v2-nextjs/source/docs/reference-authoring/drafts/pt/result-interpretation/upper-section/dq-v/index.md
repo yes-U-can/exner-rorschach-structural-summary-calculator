@@ -3,11 +3,11 @@ canonicalRoute: "result-interpretation/upper-section/dq_v"
 locale: "pt"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/upper-section/dq_v"
-displayTitle: "[Interpretacao/Secao Superior] DQv"
+displayTitle: "[Interpretação/Seção Superior] DQv"
 aliases:
   - "DQv"
   - "respostas vagas"
-  - "numero de respostas vagas"
+  - "número de respostas vagas"
 relatedRoutes:
   - "result-interpretation/upper-section"
   - "result-interpretation/upper-section/dq_plus"
@@ -15,46 +15,46 @@ relatedRoutes:
   - "result-interpretation/upper-section/dq_vplus"
   - "scoring-input/dq/v"
   - "result-interpretation/lower-section/processing/DQ_v_proc"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-upper-section-family-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao/Secao Superior] DQv
+# Nome do documento: [Interpretação/Seção Superior] DQv
 
 ## Apelidos e busca
 
 - DQv
 - respostas vagas
-- numero de respostas vagas
+- número de respostas vagas
 
-## Definicao central
+## Definição central
 
-`DQv` e a frequencia de respostas com organizacao vaga ou fracamente estruturada.
-Ele ajuda a estimar com que frequencia o protocolo produz respostas pouco definidas no nivel da integracao.
+`DQv` é a frequência de respostas com organização vaga ou fracamente estruturada.
+Ele ajuda a estimar com que frequência o protocolo produz respostas pouco definidas no nível da integração.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- `DQv` alto pode sugerir organizacao frouxa, diferenciacao pobre ou respostas fracamente elaboradas.
-- Se aparecer repetidamente ao longo do protocolo, deve-se considerar instabilidade no nivel organizador.
-- `DQv` baixo indica que a vaguidade nao e aspecto dominante do registro.
+- `DQv` alto pode sugerir organização frouxa, diferenciação pobre ou respostas fracamente elaboradas.
+- Se aparecer repetidamente ao longo do protocolo, deve-se considerar instabilidade no nível organizador.
+- `DQv` baixo indica que a vaguidade não é aspecto dominante do registro.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
 - `DQv` deve ser distinguido de `DQv/+`.
-- `DQv` alto num protocolo muito breve nao deve ser superinterpretado.
-- A interpretacao melhora quando ele e revisto junto com `FQ`, `Lambda` e `DQ_v_proc`.
+- `DQv` alto num protocolo muito brevê não deve ser superinterpretado.
+- A interpretação melhora quando ele é revisto junto com `FQ`, `Lambda` e `DQ_v_proc`.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Secao Superior] Secao Superior](ref://result-interpretation/upper-section)
-- [[Interpretacao/Secao Superior] DQ+](ref://result-interpretation/upper-section/dq_plus)
-- [[Interpretacao/Secao Superior] DQo](ref://result-interpretation/upper-section/dq_o)
-- [[Interpretacao/Secao Superior] DQv/+](ref://result-interpretation/upper-section/dq_vplus)
-- [[Codificacao/DQ] v](ref://scoring-input/dq/v)
-- [[Interpretacao/Processing] DQv](ref://result-interpretation/lower-section/processing/DQ_v_proc)
+- [[Interpretação/Seção Superior] Seção Superior](ref://result-interpretation/upper-section)
+- [[Interpretação/Seção Superior] DQ+](ref://result-interpretation/upper-section/dq_plus)
+- [[Interpretação/Seção Superior] DQo](ref://result-interpretation/upper-section/dq_o)
+- [[Interpretação/Seção Superior] DQv/+](ref://result-interpretation/upper-section/dq_vplus)
+- [[Codificação/DQ] v](ref://scoring-input/dq/v)
+- [[Interpretação/Processing] DQv](ref://result-interpretation/lower-section/processing/DQ_v_proc)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

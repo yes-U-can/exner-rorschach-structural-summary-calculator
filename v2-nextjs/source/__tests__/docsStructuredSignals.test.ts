@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 
 import { getAllDocRoutes, resolveDocContent } from '@/lib/referenceDocs';
 
-describe('docs structured signals (English)', () => {
+describe('docs structured signals', () => {
   it('keeps AI-facing structure markers on every entry across key languages', () => {
     const entryRoutes = getAllDocRoutes().filter((item) => item.kind === 'entry');
     const languages = ['en', 'es', 'pt', 'ja'] as const;
@@ -12,8 +12,13 @@ describe('docs structured signals (English)', () => {
       for (const lang of languages) {
         const { description } = resolveDocContent(route, lang);
 
-        if (!description.includes('[Source Reliability]')) {
-          failures.push({ id: route.id, slug: route.slug.join('/'), lang, reason: 'missing_source_reliability' });
+        if (!description.includes('[Corpus Governance]')) {
+          failures.push({
+            id: route.id,
+            slug: route.slug.join('/'),
+            lang,
+            reason: 'missing_corpus_governance',
+          });
         }
 
         if (!description.includes('[AI Usage Guideline]')) {

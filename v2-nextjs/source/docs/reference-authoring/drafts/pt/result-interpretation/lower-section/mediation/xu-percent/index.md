@@ -3,7 +3,7 @@ canonicalRoute: "result-interpretation/lower-section/mediation/Xu_percent"
 locale: "pt"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/mediation/Xu_percent"
-displayTitle: "[Interpretacao/Mediacao] Xu%"
+displayTitle: "[Interpretação/Mediação] Xu%"
 aliases:
   - "Xu%"
   - "forma incomum"
@@ -14,45 +14,45 @@ relatedRoutes:
   - "result-interpretation/lower-section/mediation/X_minus_percent"
   - "result-interpretation/lower-section/mediation/P"
   - "scoring-input/fq/u"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-mediation-xplus-xu-processing-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao/Mediacao] Xu%
+# Nome do documento: [Interpretação/Mediação] Xu%
 
 ## Apelidos e busca
 
 - Xu%
 - forma incomum
 
-## Definicao central
+## Definição central
 
-`Xu%` indica a proporcao de respostas formalmente aceitaveis, mas menos usuais ou menos convencionais.
-Ele marca um estilo de mediacao que ainda pode ser sustentado, embora se afaste mais do consenso.
+`Xu%` indica a proporção de respostas formalmente aceitáveis, mas menos usuais ou menos convencionais.
+Ele marca um estilo de mediação que ainda pode ser sustentado, embora se afaste mais do consenso.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- Quando `Xu%` e alto, pode haver mais traducoes pessoais ou menos convencionais da mancha.
-- Se sobe enquanto `X-%` permanece baixo, a estranheza pode continuar toleravel em vez de claramente distorcida.
-- Se `Xu%` e `X-%` sobem juntos, a percepcao pode ficar menos confiavel.
+- Quando `Xu%` é alto, pode haver mais traduções pessoais ou menos convencionais da mancha.
+- Se sobe enquanto `X-%` permanece baixo, a estranheza pode continuar tolerável em vez de claramente distorcida.
+- Se `Xu%` e `X-%` sobem juntos, a percepção pode ficar menos confiável.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `Xu%` nao e o mesmo que `X-%`; `Xu%` continua aceitavel, enquanto `X-%` indica distorcao mais forte.
-- Valor alto nao deve ser confundido imediatamente com patologia.
-- O significado muda conforme a relacao com `X+%`, `XA%`, `P` e o restante do protocolo.
+- `Xu%` não é o mesmo que `X-%`; `Xu%` continua aceitável, enquanto `X-%` indica distorção mais forte.
+- Valor alto não deve ser confundido imediatamente com patologia.
+- O significado muda conforme a relação com `X+%`, `XA%`, `P` e o restante do protocolo.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Mediacao] Mediacao](ref://result-interpretation/lower-section/mediation)
-- [[Interpretacao/Mediacao] XA%](ref://result-interpretation/lower-section/mediation/XA_percent)
-- [[Interpretacao/Mediacao] X+%](ref://result-interpretation/lower-section/mediation/X_plus_percent)
-- [[Interpretacao/Mediacao] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
-- [[Interpretacao/Mediacao] P](ref://result-interpretation/lower-section/mediation/P)
-- [[Codificacao/FQ] u](ref://scoring-input/fq/u)
+- [[Interpretação/Mediação] Mediação](ref://result-interpretation/lower-section/mediation)
+- [[Interpretação/Mediação] XA%](ref://result-interpretation/lower-section/mediation/XA_percent)
+- [[Interpretação/Mediação] X+%](ref://result-interpretation/lower-section/mediation/X_plus_percent)
+- [[Interpretação/Mediação] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
+- [[Interpretação/Mediação] P](ref://result-interpretation/lower-section/mediation/P)
+- [[Codificação/FQ] u](ref://scoring-input/fq/u)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

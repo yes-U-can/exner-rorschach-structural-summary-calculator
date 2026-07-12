@@ -18,7 +18,7 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/SumY"
   - "result-interpretation/lower-section/core/Lambda"
   - "result-interpretation/special-indices/CDI"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/core/adjd/index.md"

@@ -17,7 +17,7 @@ relatedRoutes:
   - "scoring-input/determinants/C"
   - "scoring-input/z"
   - "scoring-input/popular"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/card/ii/index.md"

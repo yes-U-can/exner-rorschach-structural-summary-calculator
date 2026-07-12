@@ -17,10 +17,10 @@ relatedRoutes:
   - "result-interpretation/lower-section/selfPerception/SumV_self"
   - "result-interpretation/lower-section/selfPerception/MOR_self"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/special-indices/scon/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 # Document Name: [Interpretation/Special Indices] Suicide Constellation
 ## Aliases / Search Terms
@@ -32,13 +32,14 @@ provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretat
 `S-CON` is an actuarial constellation that groups signs associated with greater suicide risk.
 It does not replace immediate clinical assessment, but indicates when the issue needs high priority attention.
 ## Interpretation Points
-- If `S-CON` reaches threshold, suicidal ideation, plan, impulsivity, hopelessness, and protective factors should be reviewed immediately.
+- If `S-CON` reaches threshold, directly assess suicidal ideation, intent, plan, access to means, prior attempts, recent changes, and protective factors immediately.
 - The constellation integrates signs of stress, self-criticism, emotional pain, and reduced control.
 - Its weight increases when it appears with low `D`, low `AdjD`, `SumV`, `SumY`, `MOR_self`, and `DEPI`.
 - It functions as a screening alert, not a final conclusion.
 ## Cautions / Distinctions
 - A high value does not by itself mean imminent suicidal action.
 - A low value does not remove all risk.
+- Because suicide has a low base rate, positive results can also be false positives; neither result replaces direct risk assessment.
 - Short or highly defensive records can produce false negatives.
 ## Limits of Isolated Interpretation
 - `S-CON` must be checked against interview data, recent history, and direct clinical judgment.

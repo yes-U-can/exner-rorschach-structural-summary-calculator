@@ -3,11 +3,11 @@ canonicalRoute: "scoring-input/determinants/F"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/determinants/F"
-displayTitle: "[Codificacao/Determinantes] F"
+displayTitle: "[Codificação/Determinantes] F"
 aliases:
   - "F"
   - "forma pura"
-  - "so forma"
+  - "só forma"
 relatedRoutes:
   - "scoring-input/determinants"
   - "scoring-input/fq"
@@ -16,49 +16,49 @@ relatedRoutes:
   - "scoring-input/fq/u"
   - "scoring-input/fq/-"
   - "result-interpretation/lower-section/core/Lambda"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-determinants-form-reflection-fd-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificacao/Determinantes] F
+# Nome do documento: [Codificação/Determinantes] F
 
 ## Apelidos e busca
 
 - F
 - forma pura
-- so forma
+- só forma
 
-## Definicao central
+## Definição central
 
-`F` e codificado quando a resposta e sustentada apenas pela forma.
-Nao ha uso operativo de movimento, cor, reflexo, textura, vista ou dimensao adicional.
+`F` é codificado quando a resposta é sustentada apenas pela forma.
+Não há uso operativo de movimento, cor, reflexo, textura, vista ou dimensão adicional.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
-- A forma precisa ser a unica base explicita da resposta.
-- No inquerito, a pessoa deve continuar se apoiando em contorno, limite ou configuracao formal.
+- A forma precisa ser a única base explícita da resposta.
+- No inquérito, a pessoa deve continuar se apoiando em contorno, limite ou configuração formal.
 - Se outro determinante real aparecer, `F` sozinho deixa de bastar.
-- A codificacao final precisa seguir o que a pessoa disse, nao inferencia livre do examinador.
+- A codificação final precisa seguir o que a pessoa dissê, não inferência livre do examinador.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `F` nao e o mesmo que [`FQ`](ref://scoring-input/fq); `F` e determinante e `FQ` e qualidade formal.
+- `F` não é o mesmo que [`FQ`](ref://scoring-input/fq); `F` é determinante e `FQ` é qualidade formal.
 - Se a resposta inclui profundidade criada por contorno ou tamanho relativo, revise [`FD`](ref://scoring-input/determinants/FD).
 - Se a resposta acrescenta textura, vista ou sombreamento difuso, revise [`FT`](ref://scoring-input/determinants/FT), [`V`](ref://scoring-input/determinants/V) ou [`Y`](ref://scoring-input/determinants/Y).
-- Uma resposta pode incluir `F` dentro de combinacoes mais complexas, mas isso nao elimina a necessidade de decidir se outro determinante realmente domina.
+- Uma resposta pode incluir `F` dentro de combinações mais complexas, mas isso não elimina a necessidade de decidir se outro determinante realmente domina.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao/Determinantes] Determinantes](ref://scoring-input/determinants)
-- [[Codificacao/Qualidade Formal] FQ](ref://scoring-input/fq)
-- [[Codificacao/Qualidade Formal] +](ref://scoring-input/fq/%2B)
-- [[Codificacao/Qualidade Formal] o](ref://scoring-input/fq/o)
-- [[Codificacao/Qualidade Formal] u](ref://scoring-input/fq/u)
-- [[Codificacao/Qualidade Formal] -](ref://scoring-input/fq/-)
-- [[Interpretacao/Core] Lambda](ref://result-interpretation/lower-section/core/Lambda)
+- [[Codificação/Determinantes] Determinantes](ref://scoring-input/determinants)
+- [[Codificação/Qualidade Formal] FQ](ref://scoring-input/fq)
+- [[Codificação/Qualidade Formal] +](ref://scoring-input/fq/%2B)
+- [[Codificação/Qualidade Formal] o](ref://scoring-input/fq/o)
+- [[Codificação/Qualidade Formal] u](ref://scoring-input/fq/u)
+- [[Codificação/Qualidade Formal] -](ref://scoring-input/fq/-)
+- [[Interpretação/Core] Lambda](ref://result-interpretation/lower-section/core/Lambda)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

@@ -20,7 +20,7 @@ relatedRoutes:
   - "scoring-input/determinants/T"
   - "scoring-input/determinants/FT"
   - "scoring-input/determinants/TF"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-interpersonal-ap-food-sumt-humancont-2026-03-10.md"

@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { SPECIAL_INDEX_EVIDENCE_TIERS } from './lib/specialIndexEvidence.mjs';
 import { writeStableJsonArtifact } from './lib/stableJsonArtifact.mjs';
 
 const ROOT = process.cwd();
@@ -9,17 +10,18 @@ const ROUTE_DOCS_PATH = path.join(GENERATED_ROOT, 'route-docs.json');
 const OUTPUT_PATH = path.join(GENERATED_ROOT, 'qa-report.json');
 const LOCALES = ['ko', 'en', 'ja', 'es', 'pt'];
 
-const SOURCE_TITLE_PATTERNS = [
-  'The Rorschach: A Comprehensive System',
-  'Manual de Codificación del Rorschach',
-  'Principles of Rorschach Interpretation',
-  'Contemporary Rorschach Interpretation',
-  'Psychoanalytic Theory and the Rorschach',
-  'The Handbook of Forensic Rorschach Assessment',
-  'Integrating the Rorschach and the MMPI-2',
-  '로샤 종합체계 부호화 및 해석 한글 가이드라인',
-  'Exner',
+const RUNTIME_PROVENANCE_PATTERNS = [
+  'authorityPolicy=',
+  'docs/reference-authoring/incoming',
 ];
+
+const SPECIAL_INDEX_PREFIX = 'result-interpretation/special-indices';
+const SPECIAL_INDEX_EVIDENCE_ROUTES = Object.fromEntries(
+  Object.entries(SPECIAL_INDEX_EVIDENCE_TIERS).map(([key, tier]) => [
+    key === 'overview' ? SPECIAL_INDEX_PREFIX : `${SPECIAL_INDEX_PREFIX}/${key}`,
+    tier,
+  ]),
+);
 
 async function readJson(filePath) {
   return JSON.parse(await fs.readFile(filePath, 'utf8'));
@@ -52,7 +54,8 @@ async function loadQuerySet(locale) {
 function buildLocaleQuality(locale, docs, querySetEntry) {
   const routeSet = new Set(docs.map((doc) => doc.canonicalRoute));
   const inlineRefErrors = [];
-  const sourceTitleHits = [];
+  const runtimeProvenanceHits = [];
+  const evidencePolicyErrors = [];
   let inlineRefCount = 0;
 
   for (const doc of docs) {
@@ -68,13 +71,31 @@ function buildLocaleQuality(locale, docs, querySetEntry) {
       }
     }
 
-    for (const pattern of SOURCE_TITLE_PATTERNS) {
-      if (doc.bodyMarkdown.includes(pattern)) {
-        sourceTitleHits.push({
+    for (const pattern of RUNTIME_PROVENANCE_PATTERNS) {
+      if (`${doc.bodyMarkdown}\n${doc.bodyText}`.includes(pattern)) {
+        runtimeProvenanceHits.push({
           canonicalRoute: doc.canonicalRoute,
           pattern,
         });
       }
+    }
+
+    if (doc.authorityPolicy !== 'curated-internal-reference') {
+      runtimeProvenanceHits.push({
+        canonicalRoute: doc.canonicalRoute,
+        pattern: `authorityPolicy:${doc.authorityPolicy}`,
+      });
+    }
+  }
+
+  for (const [canonicalRoute, expectedTier] of Object.entries(SPECIAL_INDEX_EVIDENCE_ROUTES)) {
+    const doc = docs.find((candidate) => candidate.canonicalRoute === canonicalRoute);
+    if (!doc || doc.evidenceTier !== expectedTier || !doc.bodyText.includes('[Evidence Strength]')) {
+      evidencePolicyErrors.push({
+        canonicalRoute,
+        expectedTier,
+        actualTier: doc?.evidenceTier ?? null,
+      });
     }
   }
 
@@ -135,7 +156,8 @@ function buildLocaleQuality(locale, docs, querySetEntry) {
   const blockers = [];
   if (!structuralPass) blockers.push('shared-203-skeleton-mismatch');
   if (inlineRefErrors.length) blockers.push('broken-inline-ref-targets');
-  if (sourceTitleHits.length) blockers.push('public-source-title-exposure');
+  if (runtimeProvenanceHits.length) blockers.push('runtime-provenance-exposure');
+  if (evidencePolicyErrors.length) blockers.push('special-index-evidence-policy-mismatch');
   if (!querySet.coveragePass) blockers.push('query-set-coverage-incomplete');
   if (!runtimeFlagPass) blockers.push('runtime-ready-flags-not-promoted');
 
@@ -150,8 +172,12 @@ function buildLocaleQuality(locale, docs, querySetEntry) {
       pass: inlineRefErrors.length === 0,
     },
     publicBodySourceTitles: {
-      hits: sourceTitleHits,
-      pass: sourceTitleHits.length === 0,
+      hits: runtimeProvenanceHits,
+      pass: runtimeProvenanceHits.length === 0,
+    },
+    specialIndexEvidence: {
+      errors: evidencePolicyErrors,
+      pass: evidencePolicyErrors.length === 0,
     },
     querySet,
     runtimeFlags: {

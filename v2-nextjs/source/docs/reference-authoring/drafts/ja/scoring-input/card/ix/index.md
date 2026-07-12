@@ -16,7 +16,7 @@ relatedRoutes:
   - "scoring-input/contents/(H)"
   - "scoring-input/determinants/M"
   - "scoring-input/fq"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-card-vi-x-2026-03-10.md"

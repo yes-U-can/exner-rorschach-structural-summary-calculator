@@ -25,7 +25,7 @@ relatedRoutes:
   - "scoring-input/z"
   - "scoring-input/location"
   - "scoring-input/dq"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-upper-section-overview-2026-03-10.md"

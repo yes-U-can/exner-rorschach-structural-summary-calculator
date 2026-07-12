@@ -20,7 +20,7 @@ relatedRoutes:
   - "scoring-input/contents/Hx"
   - "scoring-input/gphr/GHR"
   - "scoring-input/gphr/PHR"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-selfperception-2026-03-10.md"

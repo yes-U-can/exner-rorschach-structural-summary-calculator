@@ -3,7 +3,7 @@ canonicalRoute: "result-interpretation/lower-section/ideation/Ma_Mp"
 locale: "es"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/ideation/Ma_Mp"
-displayTitle: "[Interpretacion/Ideacion] Ma:Mp"
+displayTitle: "[Interpretación/Ideación] Ma:Mp"
 aliases:
   - "Ma:Mp"
   - "active:passive human movement"
@@ -14,42 +14,42 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/M_minus"
   - "result-interpretation/lower-section/ideation/Mnone"
   - "scoring-input/determinants/M"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/ideation/ma-mp/index.md"
 ---
 
-# Nombre del documento: [Interpretacion/Ideacion] Ma:Mp
+# Nombre del documento: [Interpretación/Ideación] Ma:Mp
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - Ma:Mp
 - active:passive human movement
 - movimiento humano activo:pasivo
 
-## Definicion central
+## Definición central
 
-`Ma:Mp` expresa la proporcion entre movimiento humano activo y pasivo dentro de las respuestas `M`.
-Ayuda a ver si la imaginacion humana tiende a representarse actuando e interviniendo, o esperando, recibiendo o siendo afectada por otros.
+`Ma:Mp` expresa la proporción entre movimiento humano activo y pasivo dentro de las respuestas `M`.
+Ayuda a ver si la imaginación humana tiende a representarse actuando e interviniendo, o esperando, recibiendo o siendo afectada por otros.
 
-## Puntos de interpretacion
+## Puntos de interpretación
 
-- Si `Mp` supera a `Ma`, puede haber mayor frecuencia de representaciones humanas mas pasivas, expectantes o receptivas.
-- Si `Ma` predomina, la ideacion humana puede inclinarse mas hacia iniciativa, intervencion o direccion de la accion.
+- Si `Mp` supera a `Ma`, puede haber mayor frecuencia de representaciones humanas más pasivas, expectantes o receptivas.
+- Si `Ma` predomina, la ideación humana puede inclinarse más hacia iniciativa, intervención o dirección de la acción.
 - Cuando hay equilibrio, las representaciones humanas no se cargan de forma clara hacia un solo polo.
-- El significado es mas util cuando se integra con la calidad de `M`.
+- El significado es más útil cuando se integra con la calidad de `M`.
 
 ## Precauciones y distinciones
 
-- Si el numero de respuestas `M` es muy bajo, la proporcion pierde estabilidad.
-- Un predominio de `Mp` no implica por si solo fragilidad ni un predominio de `Ma` implica ajuste positivo.
-- Para valorar calidad ideacional hay que revisar tambien `M-` y `Mnone`.
+- Si el número de respuestas `M` es muy bajo, la proporción pierde estabilidad.
+- Un predominio de `Mp` no implica por sí solo fragilidad ni un predominio de `Ma` implica ajuste positivo.
+- Para valorar calidad ideacional hay que revisar también `M-` y `Mnone`.
 
-## Limites de interpretacion aislada
+## Limites de interpretación aislada
 
-- `Ma:Mp` describe la direccion del movimiento humano imaginado, pero no basta para valorar por si solo la calidad del pensamiento.
-- Debe leerse con `a:p`, `M-`, `Mnone` y con el contexto general de ideacion.
+- `Ma:Mp` describe la dirección del movimiento humano imaginado, pero no basta para valorar por sí solo la calidad del pensamiento.
+- Debe leerse con `a:p`, `M-`, `Mnone` y con el contexto general de ideación.
 
 ## Variables para revisar juntas
 
@@ -60,12 +60,12 @@ Ayuda a ver si la imaginacion humana tiende a representarse actuando e intervini
 
 ## Referencias cruzadas
 
-- [[Interpretacion/Lower Section/Ideacion] Ideacion](ref://result-interpretation/lower-section/ideation)
-- [[Interpretacion/Ideacion] a:p](ref://result-interpretation/lower-section/ideation/a_p)
-- [[Interpretacion/Ideacion] M-](ref://result-interpretation/lower-section/ideation/M_minus)
-- [[Interpretacion/Ideacion] Mnone](ref://result-interpretation/lower-section/ideation/Mnone)
-- [[Codificacion/Determinantes] M](ref://scoring-input/determinants/M)
+- [[Interpretación/Lower Section/Ideación] Ideación](ref://result-interpretation/lower-section/ideation)
+- [[Interpretación/Ideación] a:p](ref://result-interpretation/lower-section/ideation/a_p)
+- [[Interpretación/Ideación] M-](ref://result-interpretation/lower-section/ideation/M_minus)
+- [[Interpretación/Ideación] Mnone](ref://result-interpretation/lower-section/ideation/Mnone)
+- [[Codificación/Determinantes] M](ref://scoring-input/determinants/M)
 
 ## Nota de fundamento
 
-- La fundamentacion detallada y las comparaciones de fuente se conservan en la provenance interna.
+- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

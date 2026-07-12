@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/z"
 locale: "es"
 docKind: "coding-overview"
 canonicalTitle: "scoring-input/z"
-displayTitle: "[Codificacion/Z] Z"
+displayTitle: "[Codificación/Z] Z"
 aliases:
   - "Z"
   - "actividad organizativa"
@@ -25,60 +25,60 @@ relatedRoutes:
   - "result-interpretation/upper-section/ZEst"
   - "result-interpretation/upper-section/Zd"
   - "result-interpretation/lower-section/processing/Zd_proc"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/z/index.md"
 ---
 
-# Nombre del documento: [Codificacion/Z] Z
+# Nombre del documento: [Codificación/Z] Z
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - Z
 - actividad organizativa
 - organizational activity
 
-## Definicion central
+## Definición central
 
-`Z` registra actividad organizativa en la respuesta.  
+`Z` registra actividad organizativa en la respuesta.
 Solo se asigna cuando la respuesta usa forma y cumple uno de cuatro patrones: `ZW`, `ZA`, `ZD` o `ZS`.
 
-## Condiciones de aplicacion
+## Condiciones de aplicación
 
 - La respuesta debe incluir uso de forma.
-- `Z` se considera cuando la respuesta muestra organizacion entre partes del blot o entre el blot y el espacio blanco.
-- Si se cumplen varios criterios de Z en una misma respuesta, se conserva el tipo que da el valor mas alto para esa lamina.
+- `Z` se considera cuando la respuesta muestra organización entre partes del blot o entre el blot y el espacio blanco.
+- Si se cumplen varios criterios de Z en una misma respuesta, se conserva el tipo que da el valor más alto para esa lámina.
 - `Wv` no recibe `Z`.
 - Respuestas puras sin apoyo formal suficiente no reciben `Z`.
 
 ## Precauciones y distinciones
 
-- `Z` no es un codigo de localizacion. Usa informacion de [`W`](ref://scoring-input/location/W), [`D`](ref://scoring-input/location/D), [`Dd`](ref://scoring-input/location/Dd) y [`S`](ref://scoring-input/location/S), pero registra otra cosa.
-- No basta con enumerar partes del blot. Tiene que haber integracion o relacion significativa.
-- En respuestas globales, `ZW` requiere tambien una DQ compatible.
-- `ZS` exige integracion real del espacio blanco, no solo presencia visual de blanco dentro del area.
+- `Z` no es un código de localización. Usa información de [`W`](ref://scoring-input/location/W), [`D`](ref://scoring-input/location/D), [`Dd`](ref://scoring-input/location/Dd) y [`S`](ref://scoring-input/location/S), pero registra otra cosa.
+- No basta con enumerar partes del blot. Tiene que haber integración o relación significativa.
+- En respuestas globales, `ZW` requiere también una DQ compatible.
+- `ZS` exige integración real del espacio blanco, no solo presencia visual de blanco dentro del área.
 
 ## Referencias cruzadas
 
-- [[Codificacion/Z] ZW](ref://scoring-input/z/ZW)
-- [[Codificacion/Z] ZA](ref://scoring-input/z/ZA)
-- [[Codificacion/Z] ZD](ref://scoring-input/z/ZD)
-- [[Codificacion/Z] ZS](ref://scoring-input/z/ZS)
-- [[Codificacion/Localizacion] W](ref://scoring-input/location/W)
-- [[Codificacion/Localizacion] D](ref://scoring-input/location/D)
-- [[Codificacion/Localizacion] Dd](ref://scoring-input/location/Dd)
-- [[Codificacion/Localizacion] S](ref://scoring-input/location/S)
-- [[Codificacion/Calidad evolutiva] +](ref://scoring-input/dq/%2B)
-- [[Codificacion/Calidad evolutiva] v/+](ref://scoring-input/dq/v/%2B)
-- [[Codificacion/Calidad evolutiva] o](ref://scoring-input/dq/o)
-- [[Interpretacion/Upper Section] Zf](ref://result-interpretation/upper-section/Zf)
-- [[Interpretacion/Upper Section] ZSum](ref://result-interpretation/upper-section/ZSum)
-- [[Interpretacion/Upper Section] ZEst](ref://result-interpretation/upper-section/ZEst)
-- [[Interpretacion/Upper Section] Zd](ref://result-interpretation/upper-section/Zd)
-- [[Interpretacion/Processing] Zd](ref://result-interpretation/lower-section/processing/Zd_proc)
+- [[Codificación/Z] ZW](ref://scoring-input/z/ZW)
+- [[Codificación/Z] ZA](ref://scoring-input/z/ZA)
+- [[Codificación/Z] ZD](ref://scoring-input/z/ZD)
+- [[Codificación/Z] ZS](ref://scoring-input/z/ZS)
+- [[Codificación/Localización] W](ref://scoring-input/location/W)
+- [[Codificación/Localización] D](ref://scoring-input/location/D)
+- [[Codificación/Localización] Dd](ref://scoring-input/location/Dd)
+- [[Codificación/Localización] S](ref://scoring-input/location/S)
+- [[Codificación/Calidad evolutiva] +](ref://scoring-input/dq/%2B)
+- [[Codificación/Calidad evolutiva] v/+](ref://scoring-input/dq/v/%2B)
+- [[Codificación/Calidad evolutiva] o](ref://scoring-input/dq/o)
+- [[Interpretación/Upper Section] Zf](ref://result-interpretation/upper-section/Zf)
+- [[Interpretación/Upper Section] ZSum](ref://result-interpretation/upper-section/ZSum)
+- [[Interpretación/Upper Section] ZEst](ref://result-interpretation/upper-section/ZEst)
+- [[Interpretación/Upper Section] Zd](ref://result-interpretation/upper-section/Zd)
+- [[Interpretación/Processing] Zd](ref://result-interpretation/lower-section/processing/Zd_proc)
 
 ## Nota de fundamento
 
-- La fundamentacion detallada y la comparacion de fuentes se conservan en la nota interna de provenance.
-- El cuerpo publico evita citar directamente los titulos de las fuentes.
+- La fundamentación detallada y la comparación de fuentes se conservan en la nota interna de provenance.
+- El cuerpo público evita citar directamente los títulos de las fuentes.

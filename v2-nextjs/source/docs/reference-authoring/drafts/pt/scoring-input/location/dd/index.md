@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/location/Dd"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/location/Dd"
-displayTitle: "[Codificacao/Localizacao] Dd"
+displayTitle: "[Codificação/Localização] Dd"
 aliases:
   - "Dd"
   - "detalhe incomum"
@@ -13,13 +13,13 @@ relatedRoutes:
   - "scoring-input/location/D"
   - "scoring-input/location/W"
   - "result-interpretation/upper-section/Dd"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-location-2026-03-10.md"
 ---
 
-# Nome do documento: [Codificacao/Localizacao] Dd
+# Nome do documento: [Codificação/Localização] Dd
 
 ## Apelidos e busca
 
@@ -27,29 +27,29 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-location-2026-03-1
 - detalhe incomum
 - unusual detail
 
-## Definicao central
+## Definição central
 
-`Dd` e usado quando a resposta se baseia em um detalhe pouco frequente da mancha.
-O essencial e o uso incomum da area.
+`Dd` é usado quando a resposta se baseia em um detalhe pouco frequente da mancha.
+O essencial é o uso incomum da área.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
-- A resposta usa parte da mancha, mas nao a mancha inteira.
-- A area e considerada detalhe incomum no sistema.
-- A localizacao e confirmada no inquerito ou na folha de localizacao.
+- A resposta usa parte da mancha, mas não a mancha inteira.
+- A área é considerada detalhe incomum no sistema.
+- A localização é confirmada no inquérito ou na folha de localização.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `Dd` nao significa apenas area pequena. O criterio e a incomumidade da area.
-- Se o espaco branco tambem participa, use [`DdS`](ref://scoring-input/location/DdS).
-- `Dd` pode reaparecer depois na frequencia interpretativa da upper section, mas primeiro e uma decisao de codificacao.
+- `Dd` não significa apenas área pequena. O critério é a incomumidade da área.
+- Se o espaço branco também participa, use [`DdS`](ref://scoring-input/location/DdS).
+- `Dd` pode reaparecer depois na frequência interpretativa da upper section, mas primeiro é uma decisão de codificação.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao/Localizacao] DdS](ref://scoring-input/location/DdS)
-- [[Codificacao/Localizacao] D](ref://scoring-input/location/D)
-- [[Interpretacao/Upper Section] Dd](ref://result-interpretation/upper-section/Dd)
+- [[Codificação/Localização] DdS](ref://scoring-input/location/DdS)
+- [[Codificação/Localização] D](ref://scoring-input/location/D)
+- [[Interpretação/Upper Section] Dd](ref://result-interpretation/upper-section/Dd)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

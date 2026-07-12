@@ -19,7 +19,7 @@ relatedRoutes:
   - "scoring-input/contents/Hx"
   - "scoring-input/gphr/GHR"
   - "scoring-input/gphr/PHR"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/selfperception/h-ratio/index.md"

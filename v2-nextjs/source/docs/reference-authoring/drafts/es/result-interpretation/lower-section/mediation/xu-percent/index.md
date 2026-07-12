@@ -3,7 +3,7 @@ canonicalRoute: "result-interpretation/lower-section/mediation/Xu_percent"
 locale: "es"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/mediation/Xu_percent"
-displayTitle: "[Interpretacion/Mediacion] Xu%"
+displayTitle: "[Interpretación/Mediación] Xu%"
 aliases:
   - "Xu%"
   - "Unusual Form"
@@ -15,40 +15,40 @@ relatedRoutes:
   - "result-interpretation/lower-section/mediation/X_minus_percent"
   - "result-interpretation/lower-section/mediation/P"
   - "scoring-input/fq/u"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/mediation/xu-percent/index.md"
 ---
 
-# Nombre del documento: [Interpretacion/Mediacion] Xu%
+# Nombre del documento: [Interpretación/Mediación] Xu%
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - Xu%
 - Unusual Form
 - porcentaje de forma inusual
 
-## Definicion central
+## Definición central
 
-`Xu%` indica la proporcion de respuestas formalmente aceptables pero menos habituales o menos convencionales.
-Senala una mediacion perceptiva que todavia puede sostenerse, aunque se aleja mas del consenso.
+`Xu%` indica la proporción de respuestas formalmente aceptables pero menos habituales o menos convencionales.
+Señala una mediación perceptiva que todavía puede sostenerse, aunque se aleja más del consenso.
 
-## Puntos de interpretacion
+## Puntos de interpretación
 
-- Si `Xu%` es alto, puede haber mas traducciones personales o menos convencionales del estimulo.
+- Si `Xu%` es alto, puede haber más traducciones personales o menos convencionales del estímulo.
 - Si sube mientras `X-%` se mantiene bajo, la rareza puede seguir siendo tolerable y no necesariamente distorsionada.
-- Si `Xu%` y `X-%` suben juntos, aumenta la posibilidad de que la percepcion se vuelva menos confiable.
+- Si `Xu%` y `X-%` suben juntos, aumenta la posibilidad de que la percepción se vuelva menos confiable.
 
 ## Precauciones y distinciones
 
-- `Xu%` no es lo mismo que `X-%`. `Xu%` sigue siendo aceptable; `X-%` indica mayor distorsion.
-- Un `Xu%` alto no debe confundirse de inmediato con patologia.
-- El valor cambia de sentido segun su relacion con `X+%`, `XA%`, `P` y el resto del protocolo.
+- `Xu%` no es lo mismo que `X-%`. `Xu%` sigue siendo aceptable; `X-%` indica mayor distorsión.
+- Un `Xu%` alto no debe confundirse de inmediato con patología.
+- El valor cambia de sentido según su relación con `X+%`, `XA%`, `P` y el resto del protocolo.
 
-## Limites de interpretacion aislada
+## Limites de interpretación aislada
 
-- `Xu%` muestra rareza tolerable, pero no define por si solo si esa rareza es flexible o problematica.
+- `Xu%` muestra rareza tolerable, pero no define por sí solo si esa rareza es flexible o problemática.
 - Conviene leerlo junto con `X+%`, `X-%`, `XA%`, `P` y `FQu`.
 
 ## Variables para revisar juntas
@@ -61,13 +61,13 @@ Senala una mediacion perceptiva que todavia puede sostenerse, aunque se aleja ma
 
 ## Referencias cruzadas
 
-- [[Interpretacion/Lower Section/Mediacion] Mediacion](ref://result-interpretation/lower-section/mediation)
-- [[Interpretacion/Mediacion] XA%](ref://result-interpretation/lower-section/mediation/XA_percent)
-- [[Interpretacion/Mediacion] X+%](ref://result-interpretation/lower-section/mediation/X_plus_percent)
-- [[Interpretacion/Mediacion] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
-- [[Interpretacion/Mediacion] P](ref://result-interpretation/lower-section/mediation/P)
-- [[Codificacion/FQ] u](ref://scoring-input/fq/u)
+- [[Interpretación/Lower Section/Mediación] Mediación](ref://result-interpretation/lower-section/mediation)
+- [[Interpretación/Mediación] XA%](ref://result-interpretation/lower-section/mediation/XA_percent)
+- [[Interpretación/Mediación] X+%](ref://result-interpretation/lower-section/mediation/X_plus_percent)
+- [[Interpretación/Mediación] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
+- [[Interpretación/Mediación] P](ref://result-interpretation/lower-section/mediation/P)
+- [[Codificación/FQ] u](ref://scoring-input/fq/u)
 
 ## Nota de fundamento
 
-- La fundamentacion detallada y las comparaciones de fuente se conservan en la provenance interna.
+- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

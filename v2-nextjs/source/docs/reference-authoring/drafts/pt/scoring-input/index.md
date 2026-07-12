@@ -3,11 +3,11 @@ canonicalRoute: "scoring-input"
 locale: "pt"
 docKind: "coding-overview"
 canonicalTitle: "scoring-input"
-displayTitle: "[Codificacao] scoring-input"
+displayTitle: "[Codificação] scoring-input"
 aliases:
   - "scoring-input"
-  - "entrada de codificacao"
-  - "codificacao"
+  - "entrada de codificação"
+  - "codificação"
   - "entrada de scores"
 relatedRoutes:
   - "scoring-input/score"
@@ -22,58 +22,58 @@ relatedRoutes:
   - "scoring-input/z"
   - "scoring-input/gphr"
   - "scoring-input/special-score"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-scoring-input-overview-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificacao] scoring-input
+# Nome do documento: [Codificação] scoring-input
 
 ## Apelidos e busca
 
 - scoring-input
-- entrada de codificacao
-- codificacao
+- entrada de codificação
+- codificação
 - entrada de scores
 
-## Definicao central
+## Definição central
 
-`scoring-input` nomeia toda a fase em que cada resposta e convertida em codigos do Sistema Compreensivo.
-Esta pagina nao interpreta variaveis do sumario estrutural; ela organiza as familias de codificacao usadas antes de a interpretacao comecar.
+`scoring-input` nomeia toda a fase em que cada resposta e convertida em códigos do Sistema Compreensivo.
+Esta página não interpreta variáveis do sumário estrutural; ela organiza as famílias de codificação usadas antes de a interpretação começar.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
-- A codificacao e feita resposta por resposta, na ordem real do protocolo.
-- Para cada resposta, costuma ser mais seguro verificar `location`, `DQ`, `determinants`, `FQ`, `content` e codigos suplementares numa sequencia consistente.
-- Quando necessario, `Pair`, `Popular`, `Z`, `GHR/PHR` e `Special Scores` tambem sao acrescentados.
-- As decisoes de codificacao devem vir da resposta mais o inquerito relevante, nao de uma impressao clinica global posterior.
-- O objetivo desta fase e registrar cada resposta em simbolos com precisao suficiente para sustentar o sumario estrutural.
+- A codificação e feita resposta por resposta, na ordem real do protocolo.
+- Para cada resposta, costuma ser mais seguro verificar `location`, `DQ`, `determinants`, `FQ`, `content` é códigos suplementares numa sequência consistente.
+- Quando necessário, `Pair`, `Popular`, `Z`, `GHR/PHR` e `Special Scores` também são acrescentados.
+- As decisões de codificação devem vir da resposta mais o inquérito relevante, não de uma impressão clínica global posterior.
+- O objetivo desta fase e registrar cada resposta em símbolos com precisão suficiente para sustentar o sumário estrutural.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- Codificacao nao e a mesma tarefa que interpretacao.
-- Nesta fase, a descricao precisa da resposta importa mais do que um significado clinico amplo.
-- Um cartao ou contexto pode orientar a atencao, mas o codigo final ainda depende das caracteristicas concretas da resposta.
+- Codificação não é a mesma tarefa que interpretação.
+- Nesta fase, a descrição precisa da resposta importa mais do que um significado clínico amplo.
+- Um cartão ou contexto pode orientar a atenção, mas o código final ainda depende das características concretas da resposta.
 - O mesmo sinal pode ter significados diferentes conforme o contexto.
-- Por exemplo, `Cartao V` nao e o determinante `V`.
-- Da mesma forma, `DQ +` nao e `FQ +`.
+- Por exemplo, `Cartão V` não é o determinante `V`.
+- Da mesma forma, `DQ +` não é `FQ +`.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao] score](ref://scoring-input/score)
-- [[Codificacao/Cartoes] Cartao](ref://scoring-input/card)
-- [[Codificacao/Localizacao] Location](ref://scoring-input/location)
-- [[Codificacao/DQ] DQ](ref://scoring-input/dq)
-- [[Codificacao/Determinantes] Determinants](ref://scoring-input/determinants)
-- [[Codificacao/FQ] FQ](ref://scoring-input/fq)
-- [[Codificacao/Pair] Pair](ref://scoring-input/pair)
-- [[Codificacao/Conteudos] Contents](ref://scoring-input/contents)
-- [[Codificacao/Popular] Popular](ref://scoring-input/popular)
-- [[Codificacao/Z] Z](ref://scoring-input/z)
-- [[Codificacao/GHR-PHR] GHR/PHR](ref://scoring-input/gphr)
-- [[Codificacao/Scores Especiais] Special Scores](ref://scoring-input/special-score)
+- [[Codificação] score](ref://scoring-input/score)
+- [[Codificação/Cartões] Cartão](ref://scoring-input/card)
+- [[Codificação/Localização] Location](ref://scoring-input/location)
+- [[Codificação/DQ] DQ](ref://scoring-input/dq)
+- [[Codificação/Determinantes] Determinants](ref://scoring-input/determinants)
+- [[Codificação/FQ] FQ](ref://scoring-input/fq)
+- [[Codificação/Pair] Pair](ref://scoring-input/pair)
+- [[Codificação/Conteúdos] Contents](ref://scoring-input/contents)
+- [[Codificação/Popular] Popular](ref://scoring-input/popular)
+- [[Codificação/Z] Z](ref://scoring-input/z)
+- [[Codificação/GHR-PHR] GHR/PHR](ref://scoring-input/gphr)
+- [[Codificação/Scores Especiais] Special Scores](ref://scoring-input/special-score)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

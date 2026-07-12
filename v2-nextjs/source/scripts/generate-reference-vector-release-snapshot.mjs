@@ -6,6 +6,7 @@ import path from 'node:path';
 import pg from 'pg';
 
 import { loadProjectEnv } from './load-project-env.mjs';
+import { buildReferenceCorpusFingerprint } from './lib/referenceCorpusFingerprint.mjs';
 
 const { Pool } = pg;
 
@@ -86,6 +87,13 @@ async function main() {
   const chunksArtifact = await readJson(CHUNKS_PATH);
   const localeChunkCounts = buildChunkCounts(chunksArtifact);
   const corpusGeneratedAt = chunksArtifact.generatedAt ?? new Date().toISOString();
+  const corpusFingerprint = buildReferenceCorpusFingerprint(chunksArtifact);
+
+  if (chunksArtifact.corpusFingerprint !== corpusFingerprint) {
+    throw new Error(
+      'Reference corpus fingerprint is missing or invalid. Regenerate the corpus before generating the vector snapshot.',
+    );
+  }
 
   const pool = new Pool({ connectionString: readDatabaseUrl });
   try {
@@ -177,6 +185,11 @@ async function main() {
     const snapshot = {
       generatedAt: new Date().toISOString(),
       providers: PROVIDERS,
+      corpus: {
+        generatedAt: corpusGeneratedAt,
+        fingerprint: corpusFingerprint,
+        chunkCounts: localeChunkCounts,
+      },
       totals: {
         localeCount: chunksArtifact.locales.length,
         readyLocalesByProvider,

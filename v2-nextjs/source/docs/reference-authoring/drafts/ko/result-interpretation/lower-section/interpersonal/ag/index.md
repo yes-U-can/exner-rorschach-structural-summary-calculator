@@ -16,7 +16,7 @@ relatedRoutes:
   - "scoring-input/gphr/PHR"
   - "result-interpretation/lower-section/affect/S_aff"
   - "result-interpretation/lower-section/ideation/MOR"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/interpersonal/ag/index.md"

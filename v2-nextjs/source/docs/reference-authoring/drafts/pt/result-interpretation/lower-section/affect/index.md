@@ -3,10 +3,10 @@ canonicalRoute: "result-interpretation/lower-section/affect"
 locale: "pt"
 docKind: "interpretation-overview"
 canonicalTitle: "result-interpretation/lower-section/affect"
-displayTitle: "[Interpretacao/Secao Inferior/Afeto] Afeto"
+displayTitle: "[Interpretação/Seção Inferior/Afeto] Afeto"
 aliases:
   - "afeto"
-  - "emocao"
+  - "emoção"
 relatedRoutes:
   - "result-interpretation/lower-section"
   - "result-interpretation/lower-section/affect/FC_CF_C"
@@ -16,48 +16,48 @@ relatedRoutes:
   - "result-interpretation/lower-section/affect/S_aff"
   - "result-interpretation/lower-section/affect/Blends_R"
   - "result-interpretation/lower-section/affect/CP"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-affect-opening-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao/Secao Inferior/Afeto] Afeto
+# Nome do documento: [Interpretação/Seção Inferior/Afeto] Afeto
 
 ## Apelidos e busca
 
 - afeto
-- emocao
+- emoção
 
-## Definicao central
+## Definição central
 
-`Afeto` reune as variaveis usadas para ler como a emocao e vivida, modulada e expressa no protocolo.
-Esta secao costuma ser revisada por meio de `FC:CF+C`, `Pure C`, `SumC / WSumC`, `Afr`, `S`, `Blends:R` e `CP`.
+`Afeto` reúne as variáveis usadas para ler como a emoção é vivida, modulada e expressa no protocolo.
+Esta seção costuma ser revisada por meio de `FC:CF+C`, `Pure C`, `SumC / WSumC`, `Afr`, `S`, `Blends:R` e `CP`.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- `FC:CF+C` ajuda a estimar se o sentimento esta mais modulado pela forma ou mais descarregado de modo direto.
-- `Pure C`, `SumC / WSumC` e `CP` ajudam a mostrar intensidade e estilo da expressao afetiva.
-- `Afr` ajuda a estimar se a pessoa tende a se aproximar ou se afastar de estimulos com carga emocional.
-- `S` e `Blends:R` acrescentam informacao sobre oposicao, complexidade e estados afetivos mistos.
+- `FC:CF+C` ajuda a estimar se o sentimento está mais modulado pela forma ou mais descarregado de modo direto.
+- `Pure C`, `SumC / WSumC` e `CP` ajudam a mostrar intensidade e estilo da expressão afetiva.
+- `Afr` ajuda a estimar se a pessoa tende a se aproximar ou se afastar de estímulos com carga emocional.
+- `S` e `Blends:R` acrescentam informação sobre oposição, complexidade e estados afetivos mistos.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- Variaveis de afeto nao devem ser lidas separadas de `Core`, `Mediacao` e do tamanho total do protocolo.
-- Pequena elevacao em uma variavel, isoladamente, nao prova descontrole afetivo.
-- Com `R` baixo, varias razoes afetivas ficam menos estaveis.
+- Variáveis de afeto não devem ser lidas separadas de `Core`, `Mediação` e do tamanho total do protocolo.
+- Pequena elevação em uma variável, isoladamente, não prova descontrole afetivo.
+- Com `R` baixo, várias razões afetivas ficam menos estáveis.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Secao Inferior] Secao Inferior](ref://result-interpretation/lower-section)
-- [[Interpretacao/Afeto] FC:CF+C](ref://result-interpretation/lower-section/affect/FC_CF_C)
-- [[Interpretacao/Afeto] Pure C](ref://result-interpretation/lower-section/affect/PureC)
-- [[Interpretacao/Afeto] SumC / WSumC](ref://result-interpretation/lower-section/affect/SumC_WSumC)
-- [[Interpretacao/Afeto] Afr](ref://result-interpretation/lower-section/affect/Afr)
-- [[Interpretacao/Afeto] S](ref://result-interpretation/lower-section/affect/S_aff)
-- [[Interpretacao/Afeto] Blends:R](ref://result-interpretation/lower-section/affect/Blends_R)
-- [[Interpretacao/Afeto] CP](ref://result-interpretation/lower-section/affect/CP)
+- [[Interpretação/Seção Inferior] Seção Inferior](ref://result-interpretation/lower-section)
+- [[Interpretação/Afeto] FC:CF+C](ref://result-interpretation/lower-section/affect/FC_CF_C)
+- [[Interpretação/Afeto] Pure C](ref://result-interpretation/lower-section/affect/PureC)
+- [[Interpretação/Afeto] SumC / WSumC](ref://result-interpretation/lower-section/affect/SumC_WSumC)
+- [[Interpretação/Afeto] Afr](ref://result-interpretation/lower-section/affect/Afr)
+- [[Interpretação/Afeto] S](ref://result-interpretation/lower-section/affect/S_aff)
+- [[Interpretação/Afeto] Blends:R](ref://result-interpretation/lower-section/affect/Blends_R)
+- [[Interpretação/Afeto] CP](ref://result-interpretation/lower-section/affect/CP)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

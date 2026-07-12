@@ -3,11 +3,11 @@ canonicalRoute: "result-interpretation/lower-section/selfPerception"
 locale: "pt"
 docKind: "interpretation-overview"
 canonicalTitle: "result-interpretation/lower-section/selfPerception"
-displayTitle: "[Interpretacao/Secao Inferior/Autopercepcao] Autopercepcao"
+displayTitle: "[Interpretação/Seção Inferior/Autopercepção] Autopercepção"
 aliases:
-  - "autopercepcao"
+  - "autopercepção"
   - "autoimagem"
-  - "autoavaliacao"
+  - "autoavaliação"
 relatedRoutes:
   - "result-interpretation/lower-section"
   - "result-interpretation/lower-section/selfPerception/_3r_2_R"
@@ -21,44 +21,44 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/MOR"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
   - "result-interpretation/lower-section/interpersonal/PureH"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-selfperception-family-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao/Secao Inferior/Autopercepcao] Autopercepcao
+# Nome do documento: [Interpretação/Seção Inferior/Autopercepção] Autopercepção
 
 ## Apelidos e busca
 
-- autopercepcao
+- autopercepção
 - autoimagem
-- autoavaliacao
+- autoavaliação
 
-## Definicao central
+## Definição central
 
-`Autopercepcao` reune as variaveis usadas para ler como a pessoa ve a si mesma, quanto valor atribui ao proprio eu, quanto auto-observacao aparece e qual tom assume a autoimagem.
-Neste grupo, os principais pontos de revisao sao `3r+(2)/R`, `Fr+rF`, `SumV`, `FD`, `An+Xy`, `MOR` e `H Ratio`.
+`Autopercepção` reúne as variáveis usadas para ler como a pessoa vê a si mesma, quanto valor atribui ao próprio eu, quanto auto-observação aparece e qual tom assume a autoimagem.
+Neste grupo, os principais pontos de revisão são `3r+(2)/R`, `Fr+rF`, `SumV`, `FD`, `An+Xy`, `MOR` e `H Ratio`.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
 - `3r+(2)/R` ajuda a estimar quanto peso o self ocupa no protocolo.
-- `Fr+rF` ajuda a mostrar se a autoimagem precisa de brilho especial, confirmacao ou engrandecimento.
-- `SumV` e `FD` ajudam a diferenciar autocritica, auto-observacao e preocupacao com limitacoes pessoais.
-- `An+Xy`, `MOR` e `H Ratio` ajudam a mostrar se a autoimagem e vivida como fragil, danificada, parcial ou menos integrada.
+- `Fr+rF` ajuda a mostrar se a autoimagem precisa de brilho especial, confirmação ou engrandecimento.
+- `SumV` e `FD` ajudam a diferenciar autocrítica, auto-observação e preocupação com limitações pessoais.
+- `An+Xy`, `MOR` e `H Ratio` ajudam a mostrar se a autoimagem é vivida como frágil, danificada, parcial ou menos integrada.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- Este grupo nao responde apenas se a pessoa "gosta" ou nao de si mesma.
-- Egocentricidade, auto-observacao, autocritica e vulnerabilidade corporal podem subir por motivos diferentes.
-- Nenhuma variavel desta familia deve ser lida separada do contexto interpessoal e afetivo.
+- Este grupo não responde apenas se a pessoa "gosta" ou não de si mesma.
+- Egocentricidade, auto-observação, autocrítica e vulnerabilidade corporal podem subir por motivos diferentes.
+- Nenhuma variável desta família deve ser lida separada do contexto interpessoal e afetivo.
 
-## Limites da interpretacao isolada
+## Limites da interpretação isolada
 
-- A autoimagem muda com afeto, estresse e historia recente.
-- `Autopercepcao` deve ser integrada com `Interpessoal`, `Afeto` e `Core`.
+- A autoimagem muda com afeto, estresse e história recente.
+- `Autopercepção` deve ser integrada com `Interpessoal`, `Afeto` e `Core`.
 
-## Variaveis para revisar em conjunto
+## Variáveis para revisar em conjunto
 
 - `3r+(2)/R`
 - `Fr+rF`
@@ -66,21 +66,21 @@ Neste grupo, os principais pontos de revisao sao `3r+(2)/R`, `Fr+rF`, `SumV`, `F
 - `FD`
 - `H_ratio`
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Secao Inferior] Secao Inferior](ref://result-interpretation/lower-section)
-- [[Interpretacao/Autopercepcao] Indice Egocentrico](ref://result-interpretation/lower-section/selfPerception/_3r_2_R)
-- [[Interpretacao/Autopercepcao] Fr + rF](ref://result-interpretation/lower-section/selfPerception/Fr_rF)
-- [[Interpretacao/Autopercepcao] SumV](ref://result-interpretation/lower-section/selfPerception/SumV_self)
-- [[Interpretacao/Autopercepcao] FD](ref://result-interpretation/lower-section/selfPerception/FD)
-- [[Interpretacao/Autopercepcao] An + Xy](ref://result-interpretation/lower-section/selfPerception/An_Xy)
-- [[Interpretacao/Autopercepcao] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
-- [[Interpretacao/Autopercepcao] H Ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
-- [[Interpretacao/Core] SumV](ref://result-interpretation/lower-section/core/SumV)
-- [[Interpretacao/Ideacao] MOR](ref://result-interpretation/lower-section/ideation/MOR)
-- [[Interpretacao/Interpessoal] Conteudo Humano](ref://result-interpretation/lower-section/interpersonal/HumanCont)
-- [[Interpretacao/Interpessoal] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)
+- [[Interpretação/Seção Inferior] Seção Inferior](ref://result-interpretation/lower-section)
+- [[Interpretação/Autopercepção] Índice Egocêntrico](ref://result-interpretation/lower-section/selfPerception/_3r_2_R)
+- [[Interpretação/Autopercepção] Fr + rF](ref://result-interpretation/lower-section/selfPerception/Fr_rF)
+- [[Interpretação/Autopercepção] SumV](ref://result-interpretation/lower-section/selfPerception/SumV_self)
+- [[Interpretação/Autopercepção] FD](ref://result-interpretation/lower-section/selfPerception/FD)
+- [[Interpretação/Autopercepção] An + Xy](ref://result-interpretation/lower-section/selfPerception/An_Xy)
+- [[Interpretação/Autopercepção] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
+- [[Interpretação/Autopercepção] H Ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
+- [[Interpretação/Core] SumV](ref://result-interpretation/lower-section/core/SumV)
+- [[Interpretação/Ideação] MOR](ref://result-interpretation/lower-section/ideation/MOR)
+- [[Interpretação/Interpessoal] Conteúdo Humano](ref://result-interpretation/lower-section/interpersonal/HumanCont)
+- [[Interpretação/Interpessoal] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

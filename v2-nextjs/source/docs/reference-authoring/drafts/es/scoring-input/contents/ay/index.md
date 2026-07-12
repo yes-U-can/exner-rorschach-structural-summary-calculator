@@ -3,10 +3,10 @@ canonicalRoute: "scoring-input/contents/Ay"
 locale: "es"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/contents/Ay"
-displayTitle: "[Codificacion/Contenido] Ay"
+displayTitle: "[Codificación/Contenido] Ay"
 aliases:
   - "Ay"
-  - "antropologia"
+  - "antropología"
   - "anthropology"
 relatedRoutes:
   - "scoring-input/contents"
@@ -14,47 +14,47 @@ relatedRoutes:
   - "scoring-input/contents/(H)"
   - "scoring-input/contents/A"
   - "scoring-input/contents/Art"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/contents/ay/index.md"
 ---
 
-# Nombre del documento: [Codificacion/Contenido] Ay
+# Nombre del documento: [Codificación/Contenido] Ay
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - Ay
-- antropologia
+- antropología
 - anthropology
 
-## Definicion central
+## Definición central
 
-`Ay` se usa cuando la respuesta incluye una referencia historica, etnica, cultural o antropologica especifica.
+`Ay` se usa cuando la respuesta incluye una referencia histórica, étnica, cultural o antropológica específica.
 No basta con ver una persona u objeto; debe aparecer un marco cultural reconocible.
 
-## Condiciones de aplicacion
+## Condiciones de aplicación
 
-- Se aplica a figuras, ropas, armas, simbolos o escenas ligadas a una cultura, epoca o civilizacion.
+- Se aplica a figuras, ropas, armas, símbolos o escenas ligadas a una cultura, época o civilización.
 - Puede combinarse con [`H`](ref://scoring-input/contents/H), [`(H)`](ref://scoring-input/contents/%28H%29) o [`A`](ref://scoring-input/contents/A) si el referente principal sigue siendo persona o animal.
-- El criterio central es la marca historica o cultural, no la mera apariencia estetica.
-- Si la respuesta suena mas a obra artistica o pieza decorativa que a referencia cultural, primero se considera [`Art`](ref://scoring-input/contents/Art).
+- El criterio central es la marca histórica o cultural, no la mera apariencia estética.
+- Si la respuesta suena más a obra artística o pieza decorativa que a referencia cultural, primero se considera [`Art`](ref://scoring-input/contents/Art).
 
 ## Precauciones y distinciones
 
-- `Ay` y [`Art`](ref://scoring-input/contents/Art) pueden parecer cercanos, pero `Ay` se apoya en contexto cultural o historico.
-- No se usa `Ay` solo porque el sujeto diga algo exotico; hace falta una referencia cultural identificable.
-- `Ay` suele actuar como contenido adicional y no como unico eje descriptivo.
+- `Ay` y [`Art`](ref://scoring-input/contents/Art) pueden parecer cercanos, pero `Ay` se apoya en contexto cultural o histórico.
+- No se usa `Ay` solo porque el sujeto diga algo exótico; hace falta una referencia cultural identificable.
+- `Ay` suele actuar como contenido adicional y no como único eje descriptivo.
 
 ## Referencias cruzadas
 
-- [[Codificacion/Contenido] Contents](ref://scoring-input/contents)
-- [[Codificacion/Contenido] H](ref://scoring-input/contents/H)
-- [[Codificacion/Contenido] (H)](ref://scoring-input/contents/%28H%29)
-- [[Codificacion/Contenido] A](ref://scoring-input/contents/A)
-- [[Codificacion/Contenido] Art](ref://scoring-input/contents/Art)
+- [[Codificación/Contenido] Contents](ref://scoring-input/contents)
+- [[Codificación/Contenido] H](ref://scoring-input/contents/H)
+- [[Codificación/Contenido] (H)](ref://scoring-input/contents/%28H%29)
+- [[Codificación/Contenido] A](ref://scoring-input/contents/A)
+- [[Codificación/Contenido] Art](ref://scoring-input/contents/Art)
 
 ## Nota de fundamento
 
-- La fundamentacion detallada y la comparacion de fuentes se conservan en la provenance interna.
-- El cuerpo publico evita citar directamente los titulos de las fuentes.
+- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
+- El cuerpo público evita citar directamente los títulos de las fuentes.

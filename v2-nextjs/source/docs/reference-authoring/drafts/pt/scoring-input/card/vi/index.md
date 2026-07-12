@@ -3,11 +3,11 @@ canonicalRoute: "scoring-input/card/VI"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/card/VI"
-displayTitle: "[Codificacao/Cartoes] VI"
+displayTitle: "[Codificação/Cartões] VI"
 aliases:
-  - "Cartao VI"
-  - "cartao VI"
-  - "cartao 6"
+  - "Cartão VI"
+  - "cartão VI"
+  - "cartão 6"
   - "prancha VI"
 relatedRoutes:
   - "scoring-input/score"
@@ -18,51 +18,51 @@ relatedRoutes:
   - "scoring-input/contents/Ad"
   - "scoring-input/popular"
   - "scoring-input/special-score/MOR"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-card-vi-x-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificacao/Cartoes] VI
+# Nome do documento: [Codificação/Cartões] VI
 
 ## Apelidos e busca
 
-- Cartao VI
-- cartao VI
-- cartao 6
+- Cartão VI
+- cartão VI
+- cartão 6
 - prancha VI
 
-## Definicao central
+## Definição central
 
-`Cartao VI` costuma facilitar respostas ligadas a pele, textura e forma.
-Esta pagina resume o que vale a pena revisar na codificacao quando essas respostas aparecem.
+`Cartão VI` costuma facilitar respostas ligadas a pele, textura e forma.
+Esta página resume o que vale a pena revisar na codificação quando essas respostas aparecem.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
-- Respostas como pele de animal, couro ou tapete de pele sao comuns.
+- Respostas como pele de animal, couro ou tapete de pele são comuns.
 - Se a resposta usar toque ou qualidade textural, revise `T`, `TF` ou `FT`, conforme o peso da forma.
-- Se a silhueta ou a forma dominar sem experiencia tatil genuina, revise `F`.
-- Quando o conteudo for animal parcial, revise `Ad`.
-- Se houver atribuicao de dano, rigidez ou deterioracao a pele ou superficie, revise tambem `MOR`.
+- Se a silhueta ou a forma dominar sem experiência tátil genuína, revise `F`.
+- Quando o conteúdo for animal parcial, revise `Ad`.
+- Se houver atribuição de dano, rigidez ou deterioração a pele ou superfície, revise também `MOR`.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- Mencionar pele nao implica automaticamente um determinante de textura.
-- Se a qualidade tatil nao participar de fato do percepto, nao acrescente `T`.
-- `Popular` ainda precisa ser confirmado por criterio formal, mesmo quando a prancha facilita certas respostas tipicas.
+- Mencionar pele não implica automaticamente um determinante de textura.
+- Se a qualidade tátil não participar de fato do percepto, não acrescente `T`.
+- `Popular` ainda precisa ser confirmado por critério formal, mesmo quando a prancha facilita certas respostas típicas.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao] score](ref://scoring-input/score)
-- [[Codificacao/Determinantes] F](ref://scoring-input/determinants/F)
-- [[Codificacao/Determinantes] T](ref://scoring-input/determinants/T)
-- [[Codificacao/Determinantes] TF](ref://scoring-input/determinants/TF)
-- [[Codificacao/Determinantes] FT](ref://scoring-input/determinants/FT)
-- [[Codificacao/Conteudos] Ad](ref://scoring-input/contents/Ad)
-- [[Codificacao/Popular] Popular](ref://scoring-input/popular)
-- [[Codificacao/Scores Especiais] MOR](ref://scoring-input/special-score/MOR)
+- [[Codificação] score](ref://scoring-input/score)
+- [[Codificação/Determinantes] F](ref://scoring-input/determinants/F)
+- [[Codificação/Determinantes] T](ref://scoring-input/determinants/T)
+- [[Codificação/Determinantes] TF](ref://scoring-input/determinants/TF)
+- [[Codificação/Determinantes] FT](ref://scoring-input/determinants/FT)
+- [[Codificação/Conteúdos] Ad](ref://scoring-input/contents/Ad)
+- [[Codificação/Popular] Popular](ref://scoring-input/popular)
+- [[Codificação/Scores Especiais] MOR](ref://scoring-input/special-score/MOR)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

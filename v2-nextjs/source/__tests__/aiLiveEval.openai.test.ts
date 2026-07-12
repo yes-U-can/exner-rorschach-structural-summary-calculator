@@ -1,18 +1,23 @@
 import { describe, expect, it } from 'vitest';
-import { buildSystemPrompt, selectRelevantKnowledge, type KnowledgeItem } from '@/lib/chatKnowledge';
+import { buildSystemPrompt, type KnowledgeItem } from '@/lib/chatKnowledge';
 import { buildCodingAssistSystemPrompt } from '@/lib/chatPrompts';
-import { DEFAULT_INTERPRETATION_GUARDRAIL_PROMPT } from '@/lib/interpretationGuardrails';
+import { buildInterpretationGuardrailPrompt } from '@/lib/interpretationGuardrails';
 import { DEFAULT_PROVIDER_MODEL_IDS } from '@/lib/aiModels';
 import {
   appendAiResponsePolicyPrompt,
   createOpenAITextStream,
   getAiPromptProfile,
+  type AiModelMessage,
   type AiWorkflowMode,
 } from '@/lib/ai/harness';
 import { evaluateAiHarnessOutput } from '@/lib/ai/evalContracts';
 import { getAiHarnessEvalFixtures, type AiHarnessEvalFixture } from '@/lib/ai/evalFixtures';
 import type { CodingAssistContext } from '@/types';
-import { selectCodingRuleChunks, type CodingRuleChunk } from '@/lib/codingAssistKnowledge';
+import { type CodingRuleChunk } from '@/lib/codingAssistKnowledge';
+import {
+  getHybridCodingRuleChunks,
+  getHybridInterpretationKnowledge,
+} from '@/lib/referenceHybridRetrieval';
 
 const apiKey = process.env.OPENAI_API_KEY;
 const liveEvalModel = process.env.OPENAI_LIVE_EVAL_MODEL ?? DEFAULT_PROVIDER_MODEL_IDS.openai;
@@ -138,7 +143,13 @@ function getCodingFixtureMaterial(fixture: AiHarnessEvalFixture): {
   };
 }
 
-function buildCodingAssistMessages(fixture: AiHarnessEvalFixture) {
+type PreparedMessages = {
+  messages: AiModelMessage[];
+  retrievalMode: 'fixture' | 'lexical' | 'hybrid';
+  vectorHitCount: number;
+};
+
+async function buildCodingAssistMessages(fixture: AiHarnessEvalFixture): Promise<PreparedMessages> {
   const material = getCodingFixtureMaterial(fixture);
   const context: CodingAssistContext = {
     rowIndex: 0,
@@ -157,28 +168,38 @@ function buildCodingAssistMessages(fixture: AiHarnessEvalFixture) {
     ],
   };
   const profile = getAiPromptProfile(fixture.workflowMode);
-  const ruleChunks =
-    liveEvalRetrievalMode === 'runtime'
-      ? selectCodingRuleChunks(context, fixture.locale, 6)
-      : material.ruleChunks;
+  const retrieval = liveEvalRetrievalMode === 'runtime'
+    ? await getHybridCodingRuleChunks({
+        context,
+        lang: fixture.locale,
+        provider: 'openai',
+        apiKey: apiKey!,
+        limit: 6,
+      })
+    : null;
+  const ruleChunks = retrieval?.items ?? material.ruleChunks;
 
-  return [
-    {
-      role: 'system' as const,
-      content: appendAiResponsePolicyPrompt(
-        buildCodingAssistSystemPrompt({
-          lang: fixture.locale,
-          context,
-          ruleChunks,
-        }),
-        profile,
-      ),
-    },
-    { role: 'user' as const, content: fixture.userMessage },
-  ];
+  return {
+    messages: [
+      {
+        role: 'system',
+        content: appendAiResponsePolicyPrompt(
+          buildCodingAssistSystemPrompt({
+            lang: fixture.locale,
+            context,
+            ruleChunks,
+          }),
+          profile,
+        ),
+      },
+      { role: 'user', content: fixture.userMessage },
+    ],
+    retrievalMode: retrieval?.mode ?? 'fixture',
+    vectorHitCount: retrieval?.vectorHitCount ?? 0,
+  };
 }
 
-function buildInterpretationMessages(fixture: AiHarnessEvalFixture) {
+async function buildInterpretationMessages(fixture: AiHarnessEvalFixture): Promise<PreparedMessages> {
   const fixtureKnowledge: KnowledgeItem[] = [
     {
       id: 'chunk:clinical-boundary',
@@ -197,31 +218,38 @@ function buildInterpretationMessages(fixture: AiHarnessEvalFixture) {
       canonicalRoute: 'result-interpretation/core/evidence-style',
     },
   ];
-  const knowledge =
-    liveEvalRetrievalMode === 'runtime'
-      ? selectRelevantKnowledge(fixture.userMessage, undefined, fixture.locale).slice(0, 5)
-      : fixtureKnowledge;
+  const retrieval = liveEvalRetrievalMode === 'runtime'
+    ? await getHybridInterpretationKnowledge({
+        query: fixture.userMessage,
+        lang: fixture.locale,
+        provider: 'openai',
+        apiKey: apiKey!,
+        limit: 5,
+      })
+    : null;
+  const knowledge = retrieval?.items ?? fixtureKnowledge;
   const profile = getAiPromptProfile(fixture.workflowMode);
 
-  return [
-    {
-      role: 'system' as const,
-      content: appendAiResponsePolicyPrompt(
-        buildSystemPrompt(DEFAULT_INTERPRETATION_GUARDRAIL_PROMPT, knowledge),
-        profile,
-      ),
-    },
-    { role: 'user' as const, content: fixture.userMessage },
-  ];
+  return {
+    messages: [
+      {
+        role: 'system',
+        content: appendAiResponsePolicyPrompt(
+          buildSystemPrompt(buildInterpretationGuardrailPrompt(fixture.locale), knowledge),
+          profile,
+        ),
+      },
+      { role: 'user', content: fixture.userMessage },
+    ],
+    retrievalMode: retrieval?.mode ?? 'fixture',
+    vectorHitCount: retrieval?.vectorHitCount ?? 0,
+  };
 }
 
 function buildMessages(fixture: AiHarnessEvalFixture) {
-  const builders: Record<AiWorkflowMode, (fixture: AiHarnessEvalFixture) => ReturnType<typeof buildCodingAssistMessages>> = {
-    coding_assist: buildCodingAssistMessages,
-    interpretation: buildInterpretationMessages,
-  };
-
-  return builders[fixture.workflowMode](fixture);
+  return fixture.workflowMode === 'coding_assist'
+    ? buildCodingAssistMessages(fixture)
+    : buildInterpretationMessages(fixture);
 }
 
 async function readStream(stream: ReadableStream<Uint8Array>) {
@@ -264,11 +292,12 @@ describe.runIf(apiKey && liveFixtures.length > 0)('OpenAI live AI harness eval',
     'completes fixture $id without leaking raw content into metadata',
     async (fixture) => {
       const profile = getAiPromptProfile(fixture.workflowMode);
+      const prepared = await buildMessages(fixture);
       const result = await createOpenAITextStream({
         apiKey: apiKey!,
         model: liveEvalModel,
         maxOutputTokens: getLiveEvalMaxOutputTokens(profile.maxOutputTokens),
-        messages: buildMessages(fixture),
+        messages: prepared.messages,
       });
 
       const output = await readStream(result.stream);
@@ -284,6 +313,8 @@ describe.runIf(apiKey && liveFixtures.length > 0)('OpenAI live AI harness eval',
           outputChars: output.trim().length,
           issueTypes: contract.issues.map((issue) => issue.type),
           usage: completion.usage ?? null,
+          retrievalMode: prepared.retrievalMode,
+          vectorHitCount: prepared.vectorHitCount,
         }),
       );
       if (shouldPrintDebugOutput) {
@@ -297,6 +328,10 @@ describe.runIf(apiKey && liveFixtures.length > 0)('OpenAI live AI harness eval',
 
       expect(completion.status).toBe('completed');
       expect(output.trim().length).toBeGreaterThan(80);
+      if (liveEvalRetrievalMode === 'runtime') {
+        expect(prepared.retrievalMode).toBe('hybrid');
+        expect(prepared.vectorHitCount).toBeGreaterThan(0);
+      }
       expect(contract.passed, contract.issues.map((issue) => issue.message).join('; ')).toBe(true);
     },
     60_000,

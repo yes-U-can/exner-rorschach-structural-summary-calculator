@@ -3,10 +3,10 @@ canonicalRoute: "scoring-input/special-score/CP"
 locale: "es"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/special-score/CP"
-displayTitle: "[Codificacion/Puntuaciones especiales] CP"
+displayTitle: "[Codificación/Puntuaciones especiales] CP"
 aliases:
   - "CP"
-  - "proyeccion cromatica"
+  - "proyección cromática"
   - "color projection"
 relatedRoutes:
   - "scoring-input/special-score"
@@ -15,48 +15,48 @@ relatedRoutes:
   - "scoring-input/determinants/YF"
   - "scoring-input/determinants/Y"
   - "result-interpretation/lower-section/affect/CP"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/special-score/cp/index.md"
 ---
 
-# Nombre del documento: [Codificacion/Puntuaciones especiales] CP
+# Nombre del documento: [Codificación/Puntuaciones especiales] CP
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - CP
-- proyeccion cromatica
+- proyección cromática
 - color projection
 
-## Definicion central
+## Definición central
 
-`CP` se usa cuando el sujeto percibe color cromatico en una zona acromatica de la lamina.
-La idea central es que el color no esta en la mancha, pero el sujeto lo atribuye a esa zona.
+`CP` se usa cuando el sujeto percibe color cromático en una zona acromática de la lámina.
+La idea central es que el color no está en la mancha, pero el sujeto lo atribuye a esa zona.
 
-## Condiciones de aplicacion
+## Condiciones de aplicación
 
-- Se considera cuando una parte acromatica es descrita como roja, azul, verde u otro color cromatico.
-- El codigo se agrega como puntuacion especial y no como determinante cromatico normal.
-- Antes de asignarlo conviene descartar desliz verbal o confusion visual.
-- En muchos casos se revisa junto con [`FY`](ref://scoring-input/determinants/FY), [`YF`](ref://scoring-input/determinants/Y) o [`Y`](ref://scoring-input/determinants/Y), y se conecta despues con [`CP`](ref://result-interpretation/lower-section/affect/CP).
+- Se considera cuando una parte acromática es descrita como roja, azul, verde u otro color cromático.
+- El código se agrega como puntuación especial y no como determinante cromático normal.
+- Antes de asignarlo conviene descartar desliz verbal o confusión visual.
+- En muchos casos se revisa junto con [`FY`](ref://scoring-input/determinants/FY), [`YF`](ref://scoring-input/determinants/Y) o [`Y`](ref://scoring-input/determinants/Y), y se conecta después con [`CP`](ref://result-interpretation/lower-section/affect/CP).
 
 ## Precauciones y distinciones
 
-- Si el color realmente pertenece al area cromatica de la mancha, no se usa `CP`; primero se consideran determinantes como [`FC`](ref://scoring-input/determinants/FC).
-- `CP` no se combina con `FC`, `CF` o `C` como si hubiera color cromatico real en esa misma zona.
-- La decision depende de color proyectado en area acromatica, no de preferencia general por temas de color.
+- Si el color realmente pertenece al área cromática de la mancha, no se usa `CP`; primero se consideran determinantes como [`FC`](ref://scoring-input/determinants/FC).
+- `CP` no se combina con `FC`, `CF` o `C` como si hubiera color cromático real en esa misma zona.
+- La decisión depende de color proyectado en área acromática, no de preferencia general por temas de color.
 
 ## Referencias cruzadas
 
-- [[Codificacion/Puntuaciones especiales] Special Scores](ref://scoring-input/special-score)
-- [[Codificacion/Determinante] FC](ref://scoring-input/determinants/FC)
-- [[Codificacion/Determinante] FY](ref://scoring-input/determinants/FY)
-- [[Codificacion/Determinante] YF](ref://scoring-input/determinants/YF)
-- [[Codificacion/Determinante] Y](ref://scoring-input/determinants/Y)
-- [[Interpretacion/Affect] CP](ref://result-interpretation/lower-section/affect/CP)
+- [[Codificación/Puntuaciones especiales] Special Scores](ref://scoring-input/special-score)
+- [[Codificación/Determinante] FC](ref://scoring-input/determinants/FC)
+- [[Codificación/Determinante] FY](ref://scoring-input/determinants/FY)
+- [[Codificación/Determinante] YF](ref://scoring-input/determinants/YF)
+- [[Codificación/Determinante] Y](ref://scoring-input/determinants/Y)
+- [[Interpretación/Affect] CP](ref://result-interpretation/lower-section/affect/CP)
 
 ## Nota de fundamento
 
-- La fundamentacion detallada y la comparacion de fuentes se conservan en la provenance interna.
-- El cuerpo publico evita citar directamente los titulos de las fuentes.
+- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
+- El cuerpo público evita citar directamente los títulos de las fuentes.

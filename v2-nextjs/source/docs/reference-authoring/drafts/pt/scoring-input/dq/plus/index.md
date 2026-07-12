@@ -3,58 +3,58 @@ canonicalRoute: "scoring-input/dq/+"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/dq/+"
-displayTitle: "[Codificacao/Qualidade Desenvolvimental] +"
+displayTitle: "[Codificação/Qualidade Desenvolvimental] +"
 aliases:
   - "+"
   - "DQ+"
-  - "codificacao DQ+"
-  - "sintese organizada"
+  - "codificação DQ+"
+  - "síntese organizada"
 relatedRoutes:
   - "scoring-input/dq/v/+"
   - "scoring-input/dq/o"
   - "scoring-input/dq/v"
   - "scoring-input/fq/+"
   - "result-interpretation/lower-section/processing/DQ_plus_proc"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-dq-2026-03-10.md"
 ---
 
-# Nome do documento: [Codificacao/Qualidade Desenvolvimental] +
+# Nome do documento: [Codificação/Qualidade Desenvolvimental] +
 
 ## Apelidos e busca
 
 - +
 - DQ+
-- sintese organizada
+- síntese organizada
 
-## Definicao central
+## Definição central
 
-`DQ+` e usado quando a resposta sintetiza dois ou mais objetos separados mas relacionados de modo significativo, e pelo menos um deles exige demanda formal especifica.
-A chave nao e apenas haver mais de um objeto, mas haver um todo organizado.
+`DQ+` é usado quando a resposta sintetiza dois ou mais objetos separados mas relacionados de modo significativo, e pelo menos um deles exige demanda formal específica.
+A chave não é apenas haver mais de um objeto, mas haver um todo organizado.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
-- Ha mais de um objeto ou parte distinta na resposta.
-- Os objetos estao relacionados de modo significativo.
-- Pelo menos um objeto envolvido exige demanda formal especifica.
-- A sintese parece organizada, e nao apenas listada lado a lado.
+- Há mais de um objeto ou parte distinta na resposta.
+- Os objetos estão relacionados de modo significativo.
+- Pelo menos um objeto envolvido exige demanda formal específica.
+- A síntese parece organizada, e não apenas listada lado a lado.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- Dois objetos apenas espelhados, sem integracao significativa, em geral nao justificam `DQ+`; isso tende a se aproximar de [`DQo`](ref://scoring-input/dq/o).
-- Se existe sintese, mas nenhum objeto exige demanda formal especifica, use [`DQv/+`](ref://scoring-input/dq/v/%2B).
-- `DQ+` nao e o mesmo que [`FQ+`](ref://scoring-input/fq/%2B). `DQ+` trata de organizacao; `FQ+` trata de qualidade formal.
+- Dois objetos apenas espelhados, sem integração significativa, em geral não justificam `DQ+`; isso tende a se aproximar de [`DQo`](ref://scoring-input/dq/o).
+- Se existe síntese, mas nenhum objeto exige demanda formal específica, use [`DQv/+`](ref://scoring-input/dq/v/%2B).
+- `DQ+` não é o mesmo que [`FQ+`](ref://scoring-input/fq/%2B). `DQ+` trata de organização; `FQ+` trata de qualidade formal.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao/Qualidade Desenvolvimental] DQ](ref://scoring-input/dq)
-- [[Codificacao/Qualidade Desenvolvimental] v/+](ref://scoring-input/dq/v/%2B)
-- [[Codificacao/Qualidade Desenvolvimental] o](ref://scoring-input/dq/o)
-- [[Codificacao/Qualidade Formal] +](ref://scoring-input/fq/%2B)
-- [[Interpretacao/Processing] DQ+](ref://result-interpretation/lower-section/processing/DQ_plus_proc)
+- [[Codificação/Qualidade Desenvolvimental] DQ](ref://scoring-input/dq)
+- [[Codificação/Qualidade Desenvolvimental] v/+](ref://scoring-input/dq/v/%2B)
+- [[Codificação/Qualidade Desenvolvimental] o](ref://scoring-input/dq/o)
+- [[Codificação/Qualidade Formal] +](ref://scoring-input/fq/%2B)
+- [[Interpretação/Processing] DQ+](ref://result-interpretation/lower-section/processing/DQ_plus_proc)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

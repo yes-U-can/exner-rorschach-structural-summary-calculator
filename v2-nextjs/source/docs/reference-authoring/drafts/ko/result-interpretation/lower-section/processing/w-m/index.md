@@ -16,7 +16,7 @@ relatedRoutes:
   - "result-interpretation/upper-section/W"
   - "scoring-input/determinants/M"
   - "result-interpretation/lower-section/ideation/Ma_Mp"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/processing/w-m/index.md"

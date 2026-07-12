@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/special-score/COP"
 locale: "es"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/special-score/COP"
-displayTitle: "[Codificacion/Puntuaciones especiales] COP"
+displayTitle: "[Codificación/Puntuaciones especiales] COP"
 aliases:
   - "COP"
   - "cooperative movement"
@@ -17,51 +17,51 @@ relatedRoutes:
   - "scoring-input/gphr/GHR"
   - "result-interpretation/lower-section/interpersonal/COP"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/special-score/cop/index.md"
 ---
 
-# Nombre del documento: [Codificacion/Puntuaciones especiales] COP
+# Nombre del documento: [Codificación/Puntuaciones especiales] COP
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - COP
 - cooperative movement
 - movimiento cooperativo
 
-## Definicion central
+## Definición central
 
-`COP` se usa cuando en una respuesta con movimiento dos o mas objetos interactuan de manera cooperativa o mutuamente ayudadora.
-La idea central es una accion conjunta positiva o coordinada.
+`COP` se usa cuando en una respuesta con movimiento dos o más objetos interactúan de manera cooperativa o mutuamente ayudadora.
+La idea central es una acción conjunta positiva o coordinada.
 
-## Condiciones de aplicacion
+## Condiciones de aplicación
 
 - La respuesta debe incluir movimiento, normalmente [`M`](ref://scoring-input/determinants/M), [`FM`](ref://scoring-input/determinants/FM) o [`m`](ref://scoring-input/determinants/m).
-- Deben aparecer al menos dos objetos o figuras en interaccion.
-- La interaccion tiene que ser cooperativa, compartida o ayudadora de forma clara.
-- Ejemplos tipicos son cargar juntos, empujar juntos, ayudar, sostener o realizar una accion coordinada.
-- Si la misma accion conjunta es agresiva, `COP` puede coexistir con [`AG`](ref://scoring-input/special-score/AG).
+- Deben aparecer al menos dos objetos o figuras en interacción.
+- La interacción tiene que ser cooperativa, compartida o ayudadora de forma clara.
+- Ejemplos típicos son cargar juntos, empujar juntos, ayudar, sostener o realizar una acción coordinada.
+- Si la misma acción conjunta es agresiva, `COP` puede coexistir con [`AG`](ref://scoring-input/special-score/AG).
 
 ## Precauciones y distinciones
 
-- No basta con que dos figuras esten una al lado de la otra.
-- Mirarse, hablar o estar juntas sin cooperacion clara no alcanza para `COP`.
-- `COP` no decide por si solo [`GHR`](ref://scoring-input/gphr/GHR), aunque puede relacionarse con respuestas humanas de mejor calidad.
+- No basta con que dos figuras estén una al lado de la otra.
+- Mirarse, hablar o estar juntas sin cooperación clara no alcanza para `COP`.
+- `COP` no decide por sí solo [`GHR`](ref://scoring-input/gphr/GHR), aunque puede relacionarse con respuestas humanas de mejor calidad.
 
 ## Referencias cruzadas
 
-- [[Codificacion/Puntuaciones especiales] Special Scores](ref://scoring-input/special-score)
-- [[Codificacion/Puntuaciones especiales] AG](ref://scoring-input/special-score/AG)
-- [[Codificacion/Determinante] M](ref://scoring-input/determinants/M)
-- [[Codificacion/Determinante] FM](ref://scoring-input/determinants/FM)
-- [[Codificacion/Determinante] m](ref://scoring-input/determinants/m)
-- [[Codificacion/GHR-PHR] GHR](ref://scoring-input/gphr/GHR)
-- [[Interpretacion/Interpersonal] COP](ref://result-interpretation/lower-section/interpersonal/COP)
-- [[Interpretacion/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
+- [[Codificación/Puntuaciones especiales] Special Scores](ref://scoring-input/special-score)
+- [[Codificación/Puntuaciones especiales] AG](ref://scoring-input/special-score/AG)
+- [[Codificación/Determinante] M](ref://scoring-input/determinants/M)
+- [[Codificación/Determinante] FM](ref://scoring-input/determinants/FM)
+- [[Codificación/Determinante] m](ref://scoring-input/determinants/m)
+- [[Codificación/GHR-PHR] GHR](ref://scoring-input/gphr/GHR)
+- [[Interpretación/Interpersonal] COP](ref://result-interpretation/lower-section/interpersonal/COP)
+- [[Interpretación/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
 
 ## Nota de fundamento
 
-- La fundamentacion detallada y la comparacion de fuentes se conservan en la provenance interna.
-- El cuerpo publico evita citar directamente los titulos de las fuentes.
+- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
+- El cuerpo público evita citar directamente los títulos de las fuentes.

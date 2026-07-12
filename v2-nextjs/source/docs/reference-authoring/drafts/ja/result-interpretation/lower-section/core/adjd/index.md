@@ -19,7 +19,7 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/SumY"
   - "result-interpretation/lower-section/core/Lambda"
   - "result-interpretation/special-indices/CDI"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-core-d-family-2026-03-10.md"

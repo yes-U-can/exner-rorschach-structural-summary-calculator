@@ -3,11 +3,11 @@ canonicalRoute: "result-interpretation/special-indices/DEPI"
 locale: "es"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/special-indices/DEPI"
-displayTitle: "[Interpretacion/Special Indices] DEPI"
+displayTitle: "[Interpretación/Special Indices] DEPI"
 aliases:
   - "DEPI"
   - "Depression Index"
-  - "indice de depresion"
+  - "índice de depresión"
 relatedRoutes:
   - "result-interpretation/special-indices"
   - "result-interpretation/lower-section/affect"
@@ -16,41 +16,41 @@ relatedRoutes:
   - "result-interpretation/lower-section/selfPerception/MOR_self"
   - "result-interpretation/lower-section/affect/Afr"
   - "result-interpretation/special-indices/CDI"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/special-indices/depi/index.md"
 ---
 
-# Nombre del documento: [Interpretacion/Special Indices] DEPI
+# Nombre del documento: [Interpretación/Special Indices] DEPI
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - DEPI
 - Depression Index
-- indice de depresion
+- índice de depresión
 
-## Definicion central
+## Definición central
 
-`DEPI` es un indice compuesto que resume cuantas senales del protocolo apuntan hacia rasgos depresivos.
+`DEPI` es un índice compuesto que resume cuántas señales del protocolo apuntan hacia rasgos depresivos.
 Integra variables de afecto, carga de malestar, autoimagen negativa y retirada emocional.
 
-## Puntos de interpretacion
+## Puntos de interpretación
 
-- Si `DEPI` se activa, conviene revisar con mas detalle temas de abatimiento, desaliento, culpa y perdida de energia.
-- El indice gana sentido cuando coincide con `SumV`, `SumY`, `MOR_self` y `Afr` alterado.
-- Puede mostrar un patron depresivo probable, pero no define por si solo un episodio depresivo mayor.
-- Si tambien se activa `CDI`, puede haber mas sensacion de impotencia y menos recursos de afrontamiento.
+- Si `DEPI` se activa, evalúe síntomas depresivos con más detalle sin asumir que abatimiento, culpa o pérdida de energía están presentes por el índice solo.
+- El índice gana sentido cuando coincide con `SumV`, `SumY`, `MOR_self` y `Afr` alterado.
+- Su respaldo empírico es limitado, de modo que fija una prioridad de evaluación y no establece un patrón depresivo probable ni un episodio.
+- Si también se activa `CDI`, puede haber más sensación de impotencia y menos recursos de afrontamiento.
 
 ## Precauciones y distinciones
 
-- `DEPI` positivo no equivale automaticamente a un diagnostico formal.
-- `DEPI` negativo no excluye depresion.
-- El contexto vital, el duelo y el estres reciente pueden influir en la constelacion.
+- `DEPI` positivo no equivale automáticamente a un diagnóstico formal.
+- `DEPI` negativo no excluye depresión.
+- El contexto vital, el duelo y el estrés reciente pueden influir en la constelación.
 
-## Limites de interpretacion aislada
+## Limites de interpretación aislada
 
-- Hay que volver a las variables de base antes de fijar una conclusion clinica.
+- Hay que volver a las variables de base antes de fijar una conclusión clínica.
 - Conviene integrarlo con `Affect`, `SumV`, `SumY`, `MOR_self` y `CDI`.
 
 ## Variables para revisar juntas
@@ -63,14 +63,14 @@ Integra variables de afecto, carga de malestar, autoimagen negativa y retirada e
 
 ## Referencias cruzadas
 
-- [[Interpretacion/Special Indices] Special Indices](ref://result-interpretation/special-indices)
-- [[Interpretacion/Lower Section/Affect] Affect](ref://result-interpretation/lower-section/affect)
-- [[Interpretacion/Core] SumV](ref://result-interpretation/lower-section/core/SumV)
-- [[Interpretacion/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
-- [[Interpretacion/Self Perception] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
-- [[Interpretacion/Affect] Afr](ref://result-interpretation/lower-section/affect/Afr)
-- [[Interpretacion/Special Indices] CDI](ref://result-interpretation/special-indices/CDI)
+- [[Interpretación/Special Indices] Special Indices](ref://result-interpretation/special-indices)
+- [[Interpretación/Lower Section/Affect] Affect](ref://result-interpretation/lower-section/affect)
+- [[Interpretación/Core] SumV](ref://result-interpretation/lower-section/core/SumV)
+- [[Interpretación/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
+- [[Interpretación/Self Perception] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
+- [[Interpretación/Affect] Afr](ref://result-interpretation/lower-section/affect/Afr)
+- [[Interpretación/Special Indices] CDI](ref://result-interpretation/special-indices/CDI)
 
 ## Nota de fundamento
 
-- La fundamentacion detallada y las comparaciones de fuente se conservan en la provenance interna.
+- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

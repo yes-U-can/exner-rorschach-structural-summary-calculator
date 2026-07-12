@@ -14,7 +14,7 @@ relatedRoutes:
   - "result-interpretation/lower-section"
   - "result-interpretation/special-indices"
   - "scoring-input"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/index.md"

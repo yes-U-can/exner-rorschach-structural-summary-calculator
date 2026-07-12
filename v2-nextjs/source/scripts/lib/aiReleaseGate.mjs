@@ -10,6 +10,13 @@ export const DEFAULT_AI_RELEASE_GATE_STEPS = [
     required: true,
   },
   {
+    id: 'vector_runtime',
+    label: 'Current-corpus vector runtime readiness',
+    command: 'npm',
+    args: ['run', 'docs:assert-vector-runtime-ready'],
+    required: true,
+  },
+  {
     id: 'contracts',
     label: 'Static AI harness contracts',
     command: 'npm',

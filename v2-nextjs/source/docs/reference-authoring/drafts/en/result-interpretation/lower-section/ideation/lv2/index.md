@@ -18,10 +18,10 @@ relatedRoutes:
   - "scoring-input/special-score/DR2"
   - "scoring-input/special-score/FABCOM2"
   - "scoring-input/special-score/CONTAM"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/lower-section/ideation/lv2/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Ideation] Lv2

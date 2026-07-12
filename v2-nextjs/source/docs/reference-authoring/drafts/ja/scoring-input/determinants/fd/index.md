@@ -14,7 +14,7 @@ relatedRoutes:
   - "scoring-input/determinants/FV"
   - "scoring-input/determinants/V"
   - "result-interpretation/lower-section/selfPerception/FD"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-determinants-f-fr-rf-fd-2026-03-10.md"

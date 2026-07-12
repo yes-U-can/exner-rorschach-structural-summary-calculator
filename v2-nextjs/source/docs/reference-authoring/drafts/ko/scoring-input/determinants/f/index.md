@@ -16,7 +16,7 @@ relatedRoutes:
   - "scoring-input/fq/u"
   - "scoring-input/fq/-"
   - "result-interpretation/lower-section/core/Lambda"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/determinants/f/index.md"

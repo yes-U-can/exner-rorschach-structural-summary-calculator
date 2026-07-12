@@ -12,7 +12,7 @@ relatedRoutes:
   - "scoring-input/fq/u"
   - "scoring-input/fq/o"
   - "scoring-input/fq/none"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/fq/minus/index.md"

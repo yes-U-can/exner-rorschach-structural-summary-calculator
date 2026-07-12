@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/determinants/Y"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/determinants/Y"
-displayTitle: "[Codificacao/Determinantes] Y"
+displayTitle: "[Codificação/Determinantes] Y"
 aliases:
   - "Y"
   - "sombreamento difuso puro"
@@ -12,42 +12,42 @@ relatedRoutes:
   - "scoring-input/determinants/FY"
   - "scoring-input/determinants/YF"
   - "result-interpretation/lower-section/core/SumY"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-determinants-shading-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificacao/Determinantes] Y
+# Nome do documento: [Codificação/Determinantes] Y
 
 ## Apelidos e busca
 
 - Y
 - sombreamento difuso puro
 
-## Definicao central
+## Definição central
 
-`Y` e usado quando o sombreamento difuso funciona como qualidade principal sem apoio formal real.
+`Y` é usado quando o sombreamento difuso funciona como qualidade principal sem apoio formal real.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
-- A experiencia de nebulosidade, sombra ou incerteza difusa precisa carregar a resposta.
+- A experiência de nebulosidade, sombra ou incerteza difusa precisa carregar a resposta.
 - O apoio formal deve estar ausente ou muito fraco.
-- Se ainda houver forma secundaria clara, reconsidere [`YF`](ref://scoring-input/determinants/YF).
+- Se ainda houver forma secundária clara, reconsidere [`YF`](ref://scoring-input/determinants/YF).
 - Se a forma dominar mais, reconsidere [`FY`](ref://scoring-input/determinants/FY).
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `Y` nao e qualquer area cinza ou escura; a qualidade difusa precisa fazer a resposta parecer daquele jeito.
-- O uso interpretativo dessa familia aparece depois em [`SumY`](ref://result-interpretation/lower-section/core/SumY).
+- `Y` não é qualquer área cinza ou escura; a qualidade difusa precisa fazer a resposta parecer daquele jeito.
+- O uso interpretativo dessa família aparece depois em [`SumY`](ref://result-interpretation/lower-section/core/SumY).
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao/Determinantes] Determinantes](ref://scoring-input/determinants)
-- [[Codificacao/Determinantes] FY](ref://scoring-input/determinants/FY)
-- [[Codificacao/Determinantes] YF](ref://scoring-input/determinants/YF)
-- [[Interpretacao/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
+- [[Codificação/Determinantes] Determinantes](ref://scoring-input/determinants)
+- [[Codificação/Determinantes] FY](ref://scoring-input/determinants/FY)
+- [[Codificação/Determinantes] YF](ref://scoring-input/determinants/YF)
+- [[Interpretação/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

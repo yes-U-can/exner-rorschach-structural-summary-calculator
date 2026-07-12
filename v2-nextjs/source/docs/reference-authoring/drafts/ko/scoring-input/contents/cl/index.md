@@ -12,7 +12,7 @@ relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/Na"
   - "scoring-input/contents/Fi"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/contents/cl/index.md"

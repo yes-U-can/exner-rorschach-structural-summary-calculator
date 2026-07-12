@@ -15,7 +15,7 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/M_minus"
   - "result-interpretation/lower-section/ideation/Mnone"
   - "scoring-input/determinants/M"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-ideation-opening-2026-03-10.md"

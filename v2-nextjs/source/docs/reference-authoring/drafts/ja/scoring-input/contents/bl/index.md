@@ -13,7 +13,7 @@ relatedRoutes:
   - "scoring-input/contents/An"
   - "scoring-input/contents/H"
   - "scoring-input/contents/A"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-contents-art-ay-bl-bt-2026-03-10.md"

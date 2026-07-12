@@ -27,7 +27,7 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/SumT"
   - "result-interpretation/lower-section/core/SumV"
   - "result-interpretation/lower-section/core/SumY"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-lower-section-core-opening-2026-03-10.md"

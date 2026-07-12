@@ -14,7 +14,7 @@ relatedRoutes:
   - "scoring-input/contents/An"
   - "scoring-input/contents/Xy"
   - "result-interpretation/special-indices/HVI"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/selfperception/an-xy/index.md"

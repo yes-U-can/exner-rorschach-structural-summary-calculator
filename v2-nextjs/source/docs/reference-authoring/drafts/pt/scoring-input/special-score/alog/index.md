@@ -3,58 +3,58 @@ canonicalRoute: "scoring-input/special-score/ALOG"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/special-score/ALOG"
-displayTitle: "[Codificacao/Escores Especiais] ALOG"
+displayTitle: "[Codificação/Escores Especiais] ALOG"
 aliases:
   - "ALOG"
-  - "logica inadequada"
-  - "logica falha"
+  - "lógica inadequada"
+  - "lógica falha"
 relatedRoutes:
   - "scoring-input/special-score"
   - "scoring-input/special-score/DV1"
   - "scoring-input/special-score/DR1"
   - "result-interpretation/lower-section/ideation/Sum6"
   - "result-interpretation/lower-section/ideation/WSum6"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-special-score-incom-fabcom-contam-alog-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificacao/Escores Especiais] ALOG
+# Nome do documento: [Codificação/Escores Especiais] ALOG
 
 ## Apelidos e busca
 
 - ALOG
-- logica inadequada
-- logica falha
+- lógica inadequada
+- lógica falha
 
-## Definicao central
+## Definição central
 
-`ALOG` e usado quando a pessoa sustenta a resposta com logica impropria ou claramente insuficiente.
-O foco esta numa inferencia injustificada, e nao numa palavra estranha ou numa mistura perceptiva.
+`ALOG` é usado quando a pessoa sustenta a resposta com lógica imprópria ou claramente insuficiente.
+O foco esta numa inferência injustificada, e não numa palavra estranha ou numa mistura perceptiva.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
-- Use `ALOG` quando a explicacao ou justificativa da resposta mostrar salto logico inadequado.
-- A conclusao proposta deve soar mal sustentada mesmo dentro do proprio raciocinio da pessoa.
-- O problema esta na logica usada para apoiar a ideia, e nao apenas na forma verbal.
+- Use `ALOG` quando a explicação ou justificativa da resposta mostrar salto lógico inadequado.
+- A conclusão proposta deve soar mal sustentada mesmo dentro do próprio raciocínio da pessoa.
+- O problema está na lógica usada para apoiar a ideia, e não apenas na forma verbal.
 - `ALOG` entra em `Sum6` e pode depois influenciar `WSum6`.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- Nao atribua `ALOG` apenas por estilo incomum, tom dramatizado ou resposta dificil de seguir.
+- Não atribua `ALOG` apenas por estilo incomum, tom dramatizado ou resposta difícil de seguir.
 - Se a principal estranheza estiver numa palavra ou frase desviante, compare primeiro com `DV1`.
-- Se o desvio atingir a organizacao global da resposta, compare tambem com `DR1`.
-- Respostas induzidas por perguntas de seguimento nao devem ser transformadas automaticamente em `ALOG`.
+- Se o desvio atingir a organização global da resposta, compare também com `DR1`.
+- Respostas induzidas por perguntas de seguimento não devem ser transformadas automaticamente em `ALOG`.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao/Escores Especiais] Special Scores](ref://scoring-input/special-score)
-- [[Codificacao/Escores Especiais] DV1](ref://scoring-input/special-score/DV1)
-- [[Codificacao/Escores Especiais] DR1](ref://scoring-input/special-score/DR1)
-- [[Interpretacao/Ideation] Sum6](ref://result-interpretation/lower-section/ideation/Sum6)
-- [[Interpretacao/Ideation] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
+- [[Codificação/Escores Especiais] Special Scores](ref://scoring-input/special-score)
+- [[Codificação/Escores Especiais] DV1](ref://scoring-input/special-score/DV1)
+- [[Codificação/Escores Especiais] DR1](ref://scoring-input/special-score/DR1)
+- [[Interpretação/Ideation] Sum6](ref://result-interpretation/lower-section/ideation/Sum6)
+- [[Interpretação/Ideation] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

@@ -16,10 +16,10 @@ relatedRoutes:
   - "scoring-input/determinants/CF"
   - "scoring-input/determinants/FC"
   - "result-interpretation/lower-section/core/EB"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/lower-section/affect/purec/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Affect] Pure C

@@ -3,11 +3,11 @@ canonicalRoute: "scoring-input/fq"
 locale: "pt"
 docKind: "coding-overview"
 canonicalTitle: "scoring-input/fq"
-displayTitle: "[Codificacao/Qualidade Formal] FQ"
+displayTitle: "[Codificação/Qualidade Formal] FQ"
 aliases:
   - "FQ"
   - "Qualidade Formal"
-  - "codificacao FQ"
+  - "codificação FQ"
 relatedRoutes:
   - "scoring-input/fq/+"
   - "scoring-input/fq/o"
@@ -15,13 +15,13 @@ relatedRoutes:
   - "scoring-input/fq/-"
   - "scoring-input/fq/none"
   - "scoring-input/dq"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-fq-2026-03-10.md"
 ---
 
-# Nome do documento: [Codificacao/Qualidade Formal] FQ
+# Nome do documento: [Codificação/Qualidade Formal] FQ
 
 ## Apelidos e busca
 
@@ -29,35 +29,35 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-fq-2026-03-10.md"
 - Qualidade Formal
 - `+`, `o`, `u`, `-`, `none`
 
-## Definicao central
+## Definição central
 
-Qualidade Formal (`FQ`) codifica quao bem o objeto descrito se ajusta aos contornos da mancha.
-Ela trata do ajuste formal, nao do nivel de organizacao da resposta.
+Qualidade Formal (`FQ`) codifica quão bem o objeto descrito se ajusta aos contornos da mancha.
+Ela trata do ajuste formal, não do nível de organização da resposta.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
-- Coloque o simbolo FQ no fim do bloco de determinantes.
-- Use o conjunto de cinco codigos: `+`, `o`, `u`, `-`, `none`.
-- Baseie a decisao primeiro na tabela de qualidade formal e, quando preciso, em extrapolacao e julgamento de ajuste.
-- Pergunte se o objeto pode ser visto de modo rapido e plausivel sem forcar os contornos da mancha.
-- Use [`none`](ref://scoring-input/fq/none) apenas quando nenhum codigo FQ deva ser atribuido.
+- Coloque o símbolo FQ no fim do bloco de determinantes.
+- Use o conjunto de cinco códigos: `+`, `o`, `u`, `-`, `none`.
+- Baseie a decisão primeiro na tabela de qualidade formal e, quando preciso, em extrapolação e julgamento de ajuste.
+- Pergunte se o objeto pode ser visto de modo rápido e plausível sem forçar os contornos da mancha.
+- Use [`none`](ref://scoring-input/fq/none) apenas quando nenhum código FQ deva ser atribuído.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `FQ` nao e o mesmo que [`DQ`](ref://scoring-input/dq). `DQ` trata da organizacao; `FQ` trata do ajuste formal.
-- `FQ+` e incomum. Uma resposta nao vira `+` apenas por soar rica ou inteligente.
-- A distincao mais delicada fora da tabela costuma ser entre [`u`](ref://scoring-input/fq/u) e [`-`](ref://scoring-input/fq/-).
-- `none` nao significa mau ajuste. Significa que nenhum codigo FQ deve ser dado.
+- `FQ` não é o mesmo que [`DQ`](ref://scoring-input/dq). `DQ` trata da organização; `FQ` trata do ajuste formal.
+- `FQ+` é incomum. Uma resposta não vira `+` apenas por soar rica ou inteligente.
+- A distinção mais delicada fora da tabela costuma ser entre [`u`](ref://scoring-input/fq/u) e [`-`](ref://scoring-input/fq/-).
+- `none` não significa mau ajuste. Significa que nenhum código FQ deve ser dado.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao/Qualidade Formal] +](ref://scoring-input/fq/%2B)
-- [[Codificacao/Qualidade Formal] o](ref://scoring-input/fq/o)
-- [[Codificacao/Qualidade Formal] u](ref://scoring-input/fq/u)
-- [[Codificacao/Qualidade Formal] -](ref://scoring-input/fq/-)
-- [[Codificacao/Qualidade Formal] none](ref://scoring-input/fq/none)
-- [[Codificacao/Qualidade Desenvolvimental] DQ](ref://scoring-input/dq)
+- [[Codificação/Qualidade Formal] +](ref://scoring-input/fq/%2B)
+- [[Codificação/Qualidade Formal] o](ref://scoring-input/fq/o)
+- [[Codificação/Qualidade Formal] u](ref://scoring-input/fq/u)
+- [[Codificação/Qualidade Formal] -](ref://scoring-input/fq/-)
+- [[Codificação/Qualidade Formal] none](ref://scoring-input/fq/none)
+- [[Codificação/Qualidade Desenvolvimental] DQ](ref://scoring-input/dq)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

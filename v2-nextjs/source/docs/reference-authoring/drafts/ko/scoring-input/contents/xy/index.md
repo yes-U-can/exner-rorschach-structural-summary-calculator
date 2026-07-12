@@ -12,7 +12,7 @@ relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/An"
   - "result-interpretation/lower-section/selfPerception/An_Xy"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/contents/xy/index.md"

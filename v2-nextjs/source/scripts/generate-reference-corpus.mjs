@@ -5,6 +5,8 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import remarkGfm from 'remark-gfm';
 import stripMarkdown from 'strip-markdown';
+import { buildReferenceCorpusFingerprint } from './lib/referenceCorpusFingerprint.mjs';
+import { getSpecialIndexEvidence } from './lib/specialIndexEvidence.mjs';
 import { writeStableJsonArtifact } from './lib/stableJsonArtifact.mjs';
 
 const ROOT = process.cwd();
@@ -447,7 +449,7 @@ function splitSections(markdown) {
   };
 }
 
-function summarizeDoc({ title, aliases, sections, authorityPolicy, status, runtimeReady, docKind, relatedRoutes }) {
+function summarizeDoc({ title, aliases, sections, status, runtimeReady, docKind, relatedRoutes }) {
   const lines = [`[Title] ${title}`];
   if (aliases.length) lines.push(`[Aliases] ${aliases.join(', ')}`);
 
@@ -457,9 +459,7 @@ function summarizeDoc({ title, aliases, sections, authorityPolicy, status, runti
     lines.push(`[${section.normalizedHeading}] ${section.text}`);
   }
 
-  lines.push(
-    `[Source Reliability] authorityPolicy=${authorityPolicy}; status=${status}; locale-specific source priority is enforced in provenance review.`,
-  );
+  lines.push(`[Corpus Governance] status=${status}; runtime knowledge is curated and reviewed internally.`);
   lines.push(
     runtimeReady
       ? '[AI Usage Guideline] This locale document is runtime-ready and may be used as built-in reference knowledge.'
@@ -544,6 +544,23 @@ async function collectLocaleDocs(locale, promotionConfig) {
             sectionIndex,
           }));
         }
+        const specialIndexEvidence = getSpecialIndexEvidence(canonicalRoute, locale);
+        if (specialIndexEvidence) {
+          sanitizedSections.push({
+            heading: specialIndexEvidence.heading,
+            normalizedHeading: 'Evidence Strength',
+            markdown: [
+              `- Evidence tier: \`${specialIndexEvidence.tier}\``,
+              `- ${specialIndexEvidence.summary}`,
+              `- ${specialIndexEvidence.guardrail}`,
+            ].join('\n'),
+            text: [
+              `Evidence tier: ${specialIndexEvidence.tier}`,
+              specialIndexEvidence.summary,
+              specialIndexEvidence.guardrail,
+            ].join('\n'),
+          });
+        }
         const bodyMarkdown = [
           `# ${sanitizedTitle}`,
           ...sanitizedSections.flatMap((section) => [
@@ -557,7 +574,6 @@ async function collectLocaleDocs(locale, promotionConfig) {
           title: sanitizedTitle,
           aliases,
           sections: sanitizedSections,
-          authorityPolicy: String(parsed.data.authorityPolicy ?? ''),
           status,
           runtimeReady,
           docKind: kind,
@@ -580,6 +596,7 @@ async function collectLocaleDocs(locale, promotionConfig) {
           aliases,
           relatedRoutes,
           authorityPolicy: String(parsed.data.authorityPolicy ?? ''),
+          evidenceTier: specialIndexEvidence?.tier ?? null,
           status,
           runtimeReady,
           provenanceNote: String(parsed.data.provenanceNote ?? ''),
@@ -590,6 +607,9 @@ async function collectLocaleDocs(locale, promotionConfig) {
           const chunkText = [
             `[Title] ${sanitizedTitle}`,
             `[${section.normalizedHeading}] ${section.text}`,
+            specialIndexEvidence
+              ? `[Evidence Guardrail] tier=${specialIndexEvidence.tier}; ${specialIndexEvidence.summary} ${specialIndexEvidence.guardrail}`
+              : null,
           ]
             .filter(Boolean)
             .join('\n');
@@ -606,6 +626,7 @@ async function collectLocaleDocs(locale, promotionConfig) {
             aliases,
             relatedRoutes,
             authorityPolicy: String(parsed.data.authorityPolicy ?? ''),
+            evidenceTier: specialIndexEvidence?.tier ?? null,
             status,
             runtimeReady,
           });
@@ -674,10 +695,14 @@ async function main() {
     locales: LOCALES,
     docsByLocale: routeDocsByLocale,
   };
-  const chunksArtifact = {
-    generatedAt: new Date().toISOString(),
+  const chunksArtifactContent = {
     locales: LOCALES,
     chunksByLocale,
+  };
+  const chunksArtifact = {
+    generatedAt: new Date().toISOString(),
+    corpusFingerprint: buildReferenceCorpusFingerprint(chunksArtifactContent),
+    ...chunksArtifactContent,
   };
   const manifestArtifact = buildManifest(routeDocsByLocale, promotionConfig);
 

@@ -1,4 +1,5 @@
 import vectorSnapshotArtifact from '@/generated/reference-corpus/vector-release-snapshot.json';
+import chunksArtifact from '@/generated/reference-corpus/chunks.json';
 import type { Language } from '@/types';
 
 export type VectorProvider = 'openai';
@@ -25,6 +26,11 @@ export type ReferenceVectorProviderSnapshot = {
 export type ReferenceVectorReleaseSnapshot = {
   generatedAt: string | null;
   providers: VectorProvider[];
+  corpus?: {
+    generatedAt: string;
+    fingerprint: string;
+    chunkCounts: Partial<Record<Language, number>>;
+  };
   totals: {
     localeCount: number;
     readyLocalesByProvider: Record<VectorProvider, number>;
@@ -48,19 +54,36 @@ export type ReferenceVectorProviderOverview = {
 };
 
 const vectorSnapshot = vectorSnapshotArtifact as ReferenceVectorReleaseSnapshot;
+const currentChunks = chunksArtifact as {
+  generatedAt: string;
+  corpusFingerprint?: string;
+};
 const SUPPORTED_VECTOR_PROVIDERS: VectorProvider[] = ['openai'];
 
+export function isReferenceVectorSnapshotCurrent(): boolean {
+  return Boolean(
+    currentChunks.corpusFingerprint &&
+      vectorSnapshot.corpus?.fingerprint === currentChunks.corpusFingerprint &&
+      vectorSnapshot.corpus?.generatedAt === currentChunks.generatedAt,
+  );
+}
+
 export function getReferenceVectorReleaseSnapshot(): ReferenceVectorReleaseSnapshot {
+  const snapshotCurrent = isReferenceVectorSnapshotCurrent();
+  const readyOpenAiLocales = snapshotCurrent
+    ? vectorSnapshot.totals.readyLocalesByProvider.openai
+    : 0;
+
   return {
     ...vectorSnapshot,
     providers: SUPPORTED_VECTOR_PROVIDERS,
     totals: {
       ...vectorSnapshot.totals,
       readyLocalesByProvider: {
-        openai: vectorSnapshot.totals.readyLocalesByProvider.openai,
+        openai: readyOpenAiLocales,
       },
       allProvidersReady:
-        vectorSnapshot.totals.readyLocalesByProvider.openai === vectorSnapshot.totals.localeCount,
+        readyOpenAiLocales === vectorSnapshot.totals.localeCount,
     },
     providerSnapshots: {
       openai: vectorSnapshot.providerSnapshots.openai,
@@ -78,11 +101,19 @@ export function getReferenceVectorProviderOverview(
   provider: VectorProvider,
 ): ReferenceVectorProviderOverview {
   const providerSnapshot = getReferenceVectorProviderSnapshot(provider);
+  const snapshotCurrent = isReferenceVectorSnapshotCurrent();
   const locales = Object.values(providerSnapshot.locales).filter(
     (locale): locale is ReferenceVectorLocaleSnapshot => Boolean(locale),
   );
-  const pendingLocales = locales.filter((locale) => !locale.ready).map((locale) => locale.locale);
-  const staleEmbeddingCount = locales.reduce((sum, locale) => sum + locale.staleEmbeddingCount, 0);
+  const pendingLocales = locales
+    .filter((locale) => !snapshotCurrent || !locale.ready)
+    .map((locale) => locale.locale);
+  const readyLocaleCount = snapshotCurrent
+    ? locales.filter((locale) => locale.ready).length
+    : 0;
+  const staleEmbeddingCount = snapshotCurrent
+    ? locales.reduce((sum, locale) => sum + locale.staleEmbeddingCount, 0)
+    : providerSnapshot.totalEmbeddings;
 
   return {
     provider,
@@ -91,7 +122,7 @@ export function getReferenceVectorProviderOverview(
     totalEmbeddings: providerSnapshot.totalEmbeddings,
     latestRefreshedAt: providerSnapshot.latestRefreshedAt,
     localeCount: locales.length,
-    readyLocaleCount: locales.filter((locale) => locale.ready).length,
+    readyLocaleCount,
     pendingLocaleCount: pendingLocales.length,
     staleEmbeddingCount,
     pendingLocales,
@@ -114,16 +145,25 @@ export function isReferenceVectorRuntimeReady(
   provider: VectorProvider,
   locale: Language,
 ): boolean {
-  return getReferenceVectorLocaleSnapshot(provider, locale)?.ready === true;
+  return (
+    isReferenceVectorSnapshotCurrent() &&
+    getReferenceVectorLocaleSnapshot(provider, locale)?.ready === true
+  );
 }
 
 export function getReferenceVectorOverview() {
+  const snapshotCurrent = isReferenceVectorSnapshotCurrent();
+  const readyOpenAiLocales = snapshotCurrent
+    ? vectorSnapshot.totals.readyLocalesByProvider.openai
+    : 0;
+
   return {
     generatedAt: vectorSnapshot.generatedAt,
+    snapshotCurrent,
     localeCount: vectorSnapshot.totals.localeCount,
-    readyOpenAiLocales: vectorSnapshot.totals.readyLocalesByProvider.openai,
+    readyOpenAiLocales,
     allProvidersReady:
-      vectorSnapshot.totals.readyLocalesByProvider.openai === vectorSnapshot.totals.localeCount,
+      readyOpenAiLocales === vectorSnapshot.totals.localeCount,
     openaiModel: vectorSnapshot.providerSnapshots.openai.embeddingModel,
     openaiLatestRefreshedAt: vectorSnapshot.providerSnapshots.openai.latestRefreshedAt,
   };

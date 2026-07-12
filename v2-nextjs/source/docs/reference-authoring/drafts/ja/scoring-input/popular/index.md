@@ -14,10 +14,10 @@ relatedRoutes:
   - "scoring-input/card"
   - "scoring-input/gphr/GHR"
   - "result-interpretation/lower-section/mediation/P"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/ja/scoring-input/popular/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [コーディング/Popular] Popular

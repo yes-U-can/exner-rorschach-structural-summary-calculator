@@ -1,8 +1,13 @@
 import fs from "node:fs";
 import path from "node:path";
 
+import matter from "gray-matter";
+
 const root = process.cwd();
 const authoringDir = path.join(root, "docs", "reference-authoring");
+const draftsDir = path.join(authoringDir, "drafts");
+const notesDir = path.join(authoringDir, "notes");
+const locales = new Set(["ko", "en", "ja", "es", "pt"]);
 const runtimeFiles = [
   path.join(root, "generated", "reference-corpus", "route-docs.json"),
   path.join(root, "generated", "reference-corpus", "chunks.json"),
@@ -24,7 +29,7 @@ const suspicionRules = [
   },
   {
     label: "utf8-latin1-smart-punct",
-    regex: /\u00E2[^\s]{0,8}/gu,
+    regex: /\u00E2(?:\u0080|\u20AC)[^\s]{0,8}/gu,
   },
   {
     label: "ocr-sminus-5-percent",
@@ -64,21 +69,47 @@ const suspicionRules = [
   },
 ];
 
-const ignoredFindings = [
-  {
-    file: path.join("docs", "reference-authoring", "incoming", "Exner.txt"),
-    label: "manual-review-dot-digit-letter-l",
-    line: 41565,
-    match: ".2L",
-    reason: "Known OCR noise block outside drafts/runtime corpus inputs; keep visible but non-blocking until source page is reviewed.",
-  },
-];
+const localeRules = {
+  es: [
+    {
+      label: "es-missing-required-diacritic",
+      regex: /\b(?:Interpretacion|interpretacion|Codificacion|codificacion|Localizacion|localizacion|Definicion|definicion|comparacion|aplicacion|indice|lamina|pagina|numero|estimulo|diagnostico|publico|mas)\b/gu,
+    },
+    {
+      label: "es-known-ocr-token",
+      regex: /\b(?:acompaqar|seqlar|engaqar)\b|menc ion/gu,
+    },
+    {
+      label: "es-unaccented-negative-copula",
+      regex: /\bno esta\b/giu,
+    },
+  ],
+  pt: [
+    {
+      label: "pt-missing-required-diacritic",
+      regex: /\b(?:Interpretacao|interpretacao|Codificacao|codificacao|Localizacao|localizacao|Definicao|definicao|nao|sao|Temã)\b/gu,
+    },
+    {
+      label: "pt-unaccented-common-grammar",
+      regex: /\b(?:não e|por si so|so e)\b/giu,
+    },
+    {
+      label: "pt-unaccented-definition-copula",
+      regex: /^`[^`\n]+` e (?!`)/gmu,
+    },
+  ],
+};
+
+const ignoredFindings = [];
 
 function walkFiles(dirPath) {
   const files = [];
   for (const entry of fs.readdirSync(dirPath, { withFileTypes: true })) {
     const fullPath = path.join(dirPath, entry.name);
     if (entry.isDirectory()) {
+      if (path.relative(authoringDir, fullPath).split(path.sep)[0] === "incoming") {
+        continue;
+      }
       files.push(...walkFiles(fullPath));
       continue;
     }
@@ -121,7 +152,11 @@ function scanFile(filePath, runtimeText) {
   const sourceText = fs.readFileSync(filePath, "utf8");
   const findings = [];
 
-  for (const rule of suspicionRules) {
+  const relativePath = path.relative(draftsDir, filePath);
+  const locale = relativePath && !relativePath.startsWith("..") ? relativePath.split(path.sep)[0] : null;
+  const rules = [...suspicionRules, ...(localeRules[locale] ?? [])];
+
+  for (const rule of rules) {
     const regex = new RegExp(rule.regex);
     for (const match of sourceText.matchAll(regex)) {
       const matchedText = match[0];
@@ -137,6 +172,83 @@ function scanFile(filePath, runtimeText) {
         excerpt: getExcerpt(sourceText, index, matchedText.length),
       });
     }
+  }
+
+  return findings;
+}
+
+function createMetadataFinding(filePath, label, match, excerpt) {
+  return {
+    file: path.relative(root, filePath),
+    label,
+    line: 1,
+    match,
+    runtimeHits: 0,
+    excerpt,
+  };
+}
+
+function scanDraftMetadata(filePath) {
+  const sourceText = fs.readFileSync(filePath, "utf8");
+  const parsed = matter(sourceText);
+  const findings = [];
+  const relativePath = path.relative(draftsDir, filePath);
+  const localeFromPath = relativePath.split(path.sep)[0];
+  const authorityPolicy = String(parsed.data.authorityPolicy ?? "");
+  const locale = String(parsed.data.locale ?? "");
+  const provenanceNote = String(parsed.data.provenanceNote ?? "");
+  const canonicalRoute = String(parsed.data.canonicalRoute ?? "");
+  const canonicalTitle = String(parsed.data.canonicalTitle ?? "");
+  const relatedRoutes = Array.isArray(parsed.data.relatedRoutes) ? parsed.data.relatedRoutes.map(String) : [];
+
+  if (authorityPolicy !== "curated-internal-reference") {
+    findings.push(
+      createMetadataFinding(
+        filePath,
+        "invalid-authority-policy",
+        authorityPolicy,
+        "authorityPolicy must use the generic curated-internal-reference policy.",
+      ),
+    );
+  }
+
+  if (locale !== localeFromPath) {
+    findings.push(
+      createMetadataFinding(
+        filePath,
+        "locale-path-mismatch",
+        locale,
+        `frontmatter locale does not match path locale ${localeFromPath}.`,
+      ),
+    );
+  }
+
+  const nonAsciiRoute = [canonicalRoute, canonicalTitle, ...relatedRoutes].find((route) => /[^\x00-\x7F]/u.test(route));
+  const inlineRefWithNonAscii = [...parsed.content.matchAll(/ref:\/\/([^\s)]+)/gu)]
+    .map((match) => match[1])
+    .find((route) => /[^\x00-\x7F]/u.test(route));
+  if (!canonicalRoute || !canonicalTitle || nonAsciiRoute || inlineRefWithNonAscii) {
+    findings.push(
+      createMetadataFinding(
+        filePath,
+        "non-ascii-canonical-route",
+        nonAsciiRoute ?? inlineRefWithNonAscii ?? canonicalRoute,
+        "canonicalRoute, canonicalTitle, relatedRoutes, and ref:// targets must keep stable ASCII identifiers.",
+      ),
+    );
+  }
+
+  const provenancePath = path.resolve(root, provenanceNote);
+  const isInsideNotes = provenancePath === notesDir || provenancePath.startsWith(`${notesDir}${path.sep}`);
+  if (!provenanceNote || !isInsideNotes || !fs.existsSync(provenancePath)) {
+    findings.push(
+      createMetadataFinding(
+        filePath,
+        "invalid-provenance-note",
+        provenanceNote,
+        "provenanceNote must resolve to an existing file under docs/reference-authoring/notes.",
+      ),
+    );
   }
 
   return findings;
@@ -160,12 +272,18 @@ try {
   const runtimeText = loadRuntimeText();
   const files = walkFiles(authoringDir);
   const findings = files.flatMap((filePath) => scanFile(filePath, runtimeText));
+  const draftFiles = walkFiles(draftsDir).filter((filePath) => {
+    if (path.extname(filePath).toLowerCase() !== ".md") return false;
+    const locale = path.relative(draftsDir, filePath).split(path.sep)[0];
+    return locales.has(locale);
+  });
+  findings.push(...draftFiles.flatMap((filePath) => scanDraftMetadata(filePath)));
   const blockingFindings = findings.filter((finding) => !isIgnoredFinding(finding));
   const nonBlockingFindings = findings.filter((finding) => isIgnoredFinding(finding));
 
   console.log("[reference-authoring-audit]");
   if (findings.length === 0) {
-    console.log("No suspicious mojibake patterns found in docs/reference-authoring.");
+    console.log("No suspicious text or metadata findings found in docs/reference-authoring.");
     process.exit(0);
   }
 
@@ -202,7 +320,7 @@ try {
   }
 
   if (blockingFindings.length > 0) {
-    console.error(`Found ${blockingFindings.length} blocking suspicious authoring-source string(s).`);
+    console.error(`Found ${blockingFindings.length} blocking authoring finding(s).`);
     process.exitCode = 1;
   } else {
     console.log("Only known non-blocking authoring-source findings remain.");

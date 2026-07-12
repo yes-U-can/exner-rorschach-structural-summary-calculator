@@ -18,7 +18,7 @@ relatedRoutes:
   - "scoring-input/determinants/FY"
   - "scoring-input/determinants/YF"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/affect/cp/index.md"

@@ -3,55 +3,55 @@ canonicalRoute: "scoring-input/contents/Id"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/contents/Id"
-displayTitle: "[Codificacao/Conteudo] Id"
+displayTitle: "[Codificação/Conteúdo] Id"
 aliases:
   - "Id"
-  - "idiossincratico"
-  - "conteudo singular"
-  - "idiografico"
+  - "idiossincrático"
+  - "conteúdo singular"
+  - "idiográfico"
 relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/Sc"
   - "scoring-input/contents/Art"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-completion-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificacao/Conteudo] Id
+# Nome do documento: [Codificação/Conteúdo] Id
 
 ## Apelidos e busca
 
 - Id
-- idiossincratico
-- conteudo singular
-- idiografico
+- idiossincrático
+- conteúdo singular
+- idiográfico
 
-## Definicao central
+## Definição central
 
-`Id` e usado quando a resposta nomeia conteudo singular, muito particular ou dificil de encaixar numa categoria de conteudo padrao.
-Ele nao deve virar categoria de conveniencia para qualquer resposta estranha.
+`Id` é usado quando a resposta nomeia conteúdo singular, muito particular ou difícil de encaixar numa categoria de conteúdo padrão.
+Ele não deve virar categoria de conveniência para qualquer resposta estranha.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
-- Use quando o referente e descrito de modo bastante especifico e nao encontra melhor encaixe em conteudos convencionais.
-- O codigo pede julgamento cuidadoso; antes de usar `Id`, revise outras classes de conteudo mais estaveis.
-- Se a resposta pode ser entendida como objeto cientifico ou tecnico, revise primeiro [`Sc`](ref://scoring-input/contents/Sc).
-- Se a resposta pode ser compreendida como objeto artistico ou decorativo, revise primeiro [`Art`](ref://scoring-input/contents/Art).
+- Use quando o referente e descrito de modo bastante específico e não encontra melhor encaixe em conteúdos convencionais.
+- O código pede julgamento cuidadoso; antes de usar `Id`, revise outras classes de conteúdo mais estáveis.
+- Se a resposta pode ser entendida como objeto científico ou técnico, revise primeiro [`Sc`](ref://scoring-input/contents/Sc).
+- Se a resposta pode ser compreendida como objeto artístico ou decorativo, revise primeiro [`Art`](ref://scoring-input/contents/Art).
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `Id` nao significa apenas "esquisito". Ele exige especificidade idiossincratica real.
-- `Id` deve ser usado depois de excluir conteudos mais padronizados.
-- Se houver duvida razoavel entre `Id` e outra categoria mais clara, a categoria mais clara costuma ter prioridade.
+- `Id` não significa apenas "esquisito". Ele exige especificidade idiossincrática real.
+- `Id` deve ser usado depois de excluir conteúdos mais padronizados.
+- Se houver dúvida razoável entre `Id` e outra categoria mais clara, a categoria mais clara costuma ter prioridade.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao/Conteudo] Contents](ref://scoring-input/contents)
-- [[Codificacao/Conteudo] Sc](ref://scoring-input/contents/Sc)
-- [[Codificacao/Conteudo] Art](ref://scoring-input/contents/Art)
+- [[Codificação/Conteúdo] Contents](ref://scoring-input/contents)
+- [[Codificação/Conteúdo] Sc](ref://scoring-input/contents/Sc)
+- [[Codificação/Conteúdo] Art](ref://scoring-input/contents/Art)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

@@ -93,4 +93,72 @@ describe('chat knowledge retrieval', () => {
     expect(selected).toHaveLength(1);
     expect(selected[0]?.retrievalKind).toBe('runtime-route-summary');
   });
+
+  it('treats omitted Portuguese diacritics as equivalent while preserving route scope', () => {
+    const builtInKnowledge: KnowledgeItem[] = [
+      {
+        id: 'route:scoring-input/card/V',
+        title: '[Codificação/Cartões] V',
+        content: 'Cuidados de codificação no Cartão V.',
+        source: 'builtin',
+        locale: 'pt',
+        aliases: ['Cartão V', 'cartão 5', 'prancha V'],
+        canonicalRoute: 'scoring-input/card/V',
+        relatedRoutes: [],
+        retrievalKind: 'runtime-route-summary',
+      },
+      {
+        id: 'route:scoring-input/determinants/V',
+        title: '[Codificação/Determinantes] V',
+        content: 'O determinante V descreve vista pura.',
+        source: 'builtin',
+        locale: 'pt',
+        aliases: ['V', 'vista pura'],
+        canonicalRoute: 'scoring-input/determinants/V',
+        relatedRoutes: [],
+        retrievalKind: 'runtime-route-summary',
+      },
+    ];
+
+    const selected = selectRelevantKnowledge(
+      'Que cuidados de codificacao importam no Cartao V?',
+      builtInKnowledge,
+      'pt',
+    );
+
+    expect(selected[0]?.canonicalRoute).toBe('scoring-input/card/V');
+  });
+
+  it('retrieves an accented Portuguese alias from an unaccented query', () => {
+    const builtInKnowledge: KnowledgeItem[] = [
+      {
+        id: 'route:result-interpretation/lower-section/interpersonal/ISO_Index',
+        title: '[Interpretação/Interpessoal] Índice de Isolamento',
+        content: 'O índice de isolamento organiza uma hipótese interpessoal.',
+        source: 'builtin',
+        locale: 'pt',
+        aliases: ['Índice de Isolamento', 'ISO Index'],
+        canonicalRoute: 'result-interpretation/lower-section/interpersonal/ISO_Index',
+        relatedRoutes: [],
+        retrievalKind: 'runtime-route-summary',
+      },
+      {
+        id: 'route:scoring-input/dq/o',
+        title: '[Codificação/Qualidade Desenvolvimental] o',
+        content: 'Uma resposta de nível ordinário.',
+        source: 'builtin',
+        locale: 'pt',
+        aliases: ['o', 'DQo'],
+        canonicalRoute: 'scoring-input/dq/o',
+        relatedRoutes: [],
+        retrievalKind: 'runtime-route-summary',
+      },
+    ];
+
+    const selected = selectRelevantKnowledge('O que e o Indice de Isolamento?', builtInKnowledge, 'pt');
+
+    expect(selected[0]?.canonicalRoute).toBe(
+      'result-interpretation/lower-section/interpersonal/ISO_Index',
+    );
+  });
 });

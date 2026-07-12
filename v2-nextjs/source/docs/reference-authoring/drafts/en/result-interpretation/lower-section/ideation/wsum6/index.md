@@ -14,10 +14,10 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/Lv2"
   - "result-interpretation/lower-section/ideation/M_minus"
   - "result-interpretation/special-indices/PTI"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/lower-section/ideation/wsum6/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Ideation] WSum6

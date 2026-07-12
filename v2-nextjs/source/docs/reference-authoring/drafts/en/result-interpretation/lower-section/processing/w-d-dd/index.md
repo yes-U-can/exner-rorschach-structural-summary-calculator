@@ -17,10 +17,10 @@ relatedRoutes:
   - "scoring-input/location/W"
   - "scoring-input/location/D"
   - "scoring-input/location/Dd"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/lower-section/processing/w-d-dd/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Processing] W:D:Dd

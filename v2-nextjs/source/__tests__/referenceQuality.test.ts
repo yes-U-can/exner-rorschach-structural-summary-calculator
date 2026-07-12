@@ -9,6 +9,7 @@ describe('reference corpus quality report', () => {
     expect(quality.structural.pass).toBe(true);
     expect(quality.inlineRefs.pass).toBe(true);
     expect(quality.publicBodySourceTitles.pass).toBe(true);
+    expect(quality.specialIndexEvidence.pass).toBe(true);
   });
 
   it('marks KO as promotion-ready after runtime flags are promoted', () => {

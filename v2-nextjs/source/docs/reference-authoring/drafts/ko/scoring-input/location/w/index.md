@@ -13,7 +13,7 @@ relatedRoutes:
   - "scoring-input/location/D"
   - "scoring-input/location/Dd"
   - "result-interpretation/upper-section/W"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/location/w/index.md"

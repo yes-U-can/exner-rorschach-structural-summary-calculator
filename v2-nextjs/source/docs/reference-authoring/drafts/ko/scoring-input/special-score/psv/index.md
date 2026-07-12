@@ -11,7 +11,7 @@ aliases:
 relatedRoutes:
   - "scoring-input/special-score"
   - "result-interpretation/lower-section/processing/PSV"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/special-score/psv/index.md"

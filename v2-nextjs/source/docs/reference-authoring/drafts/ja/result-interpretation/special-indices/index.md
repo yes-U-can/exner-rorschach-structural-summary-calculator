@@ -3,7 +3,7 @@ canonicalRoute: "result-interpretation/special-indices"
 locale: "ja"
 docKind: "interpretation-overview"
 canonicalTitle: "result-interpretation/special-indices"
-displayTitle: "[Interpretation/Special Indices] Special Indices"
+displayTitle: "[解釈/特殊指標] 特殊指標"
 aliases:
   - "special indices"
   - "constellations"
@@ -19,44 +19,45 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation"
   - "result-interpretation/lower-section/affect"
   - "result-interpretation/lower-section/interpersonal"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-indices-2026-03-10.md"
 ---
 
-# Document Name: [Interpretation/Special Indices] Special Indices
+# 文書名: [解釈/特殊指標] 特殊指標
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - special indices
 - constellations
 - 複合指標
 
-## Core Definition
+## 中核的定義
 
-`Special Indices` は、複数の protocol variable を組み合わせて作られる composite constellation です。  
-個々の指標は診断そのものではなく、どの領域を優先して見直すべきかを示す actuarial screen として使います。
+`Special Indices` は、複数の構成変数を組み合わせた操作的なスクリーニング指標です。
+個々の指標は診断ではなく、どの領域を追加確認すべきかを整理するために用います。
 
-## Interpretation Points
+## 解釈の要点
 
-- `PTI` は思考と mediation の乱れを警告します。
-- `DEPI` は depressive feature に関する警告を整理します。
-- `CDI` は coping resource と interpersonal effectiveness の弱さをまとめます。
-- `SCON`、`HVI`、`OBS` は、自殺リスク、過警戒、強迫的スタイルの方向を示します。
+- `PTI` は知覚・思考の乱れに関するパターンを確認します。
+- `S-CON` は自殺関連リスクの直接評価を優先すべきか判断する補助信号です。
+- `DEPI` と `CDI` は経験的支持が限定的であり、陽性は追加評価の対象を示すにとどまります。
+- `HVI` の支持は弱く一貫せず、`OBS` は提案された構成概念を推論する根拠が不十分です。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
-- どの index も自動診断として扱いません。
-- false positive や false negative は起こり得ます。
-- 必ず、その index を構成する base variable に戻って確認します。
+- どの指標も自動診断として扱いません。
+- 根拠の強さは指標ごとに異なります。操作的基準を満たすことと、提案された臨床的意味が確認されることは別です。
+- 偽陽性と偽陰性の両方が起こり得ます。
+- 必ず各指標の構成変数、面接、行動観察、既往歴に戻って確認します。
 
-## Limits of Isolated Interpretation
+## 単独解釈の限界
 
-- これらは screening shortcut であり、領域別解釈の代わりにはなりません。
-- `Ideation`、`Affect`、`Interpersonal`、`Self Perception` と統合して読みます。
+- 特殊指標は領域別解釈の代わりにはなりません。
+- 観念、感情、対人関係、自己知覚などの関連領域と統合して読みます。
 
-## Variables to Review Together
+## 併せて確認する指標
 
 - `PTI`
 - `DEPI`
@@ -64,19 +65,19 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-indices-20
 - `SCON`
 - `HVI`
 
-## Cross References
+## 相互参照
 
-- [[Interpretation] result-interpretation](ref://result-interpretation)
-- [[Interpretation/Special Indices] PTI](ref://result-interpretation/special-indices/PTI)
-- [[Interpretation/Special Indices] DEPI](ref://result-interpretation/special-indices/DEPI)
-- [[Interpretation/Special Indices] CDI](ref://result-interpretation/special-indices/CDI)
-- [[Interpretation/Special Indices] Suicide Constellation](ref://result-interpretation/special-indices/SCON)
-- [[Interpretation/Special Indices] Hypervigilance Index](ref://result-interpretation/special-indices/HVI)
-- [[Interpretation/Special Indices] Obsessive Style Index](ref://result-interpretation/special-indices/OBS)
-- [[Interpretation/Lower Section/Ideation] Ideation](ref://result-interpretation/lower-section/ideation)
-- [[Interpretation/Lower Section/Affect] Affect](ref://result-interpretation/lower-section/affect)
-- [[Interpretation/Lower Section/Interpersonal] Interpersonal](ref://result-interpretation/lower-section/interpersonal)
+- [[解釈] 結果解釈](ref://result-interpretation)
+- [[解釈/特殊指標] PTI](ref://result-interpretation/special-indices/PTI)
+- [[解釈/特殊指標] DEPI](ref://result-interpretation/special-indices/DEPI)
+- [[解釈/特殊指標] CDI](ref://result-interpretation/special-indices/CDI)
+- [[解釈/特殊指標] S-CON](ref://result-interpretation/special-indices/SCON)
+- [[解釈/特殊指標] HVI](ref://result-interpretation/special-indices/HVI)
+- [[解釈/特殊指標] OBS](ref://result-interpretation/special-indices/OBS)
+- [[解釈/下位セクション/観念] 観念](ref://result-interpretation/lower-section/ideation)
+- [[解釈/下位セクション/感情] 感情](ref://result-interpretation/lower-section/affect)
+- [[解釈/下位セクション/対人関係] 対人関係](ref://result-interpretation/lower-section/interpersonal)
 
-## Evidence Note
+## 根拠メモ
 
-- Detailed source comparison is stored in internal provenance notes.
+- 詳細な検討記録は内部の検証ノートで管理します。

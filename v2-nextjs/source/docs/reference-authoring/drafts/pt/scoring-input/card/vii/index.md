@@ -3,11 +3,11 @@ canonicalRoute: "scoring-input/card/VII"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/card/VII"
-displayTitle: "[Codificacao/Cartoes] VII"
+displayTitle: "[Codificação/Cartões] VII"
 aliases:
-  - "Cartao VII"
-  - "cartao VII"
-  - "cartao 7"
+  - "Cartão VII"
+  - "cartão VII"
+  - "cartão 7"
   - "prancha VII"
 relatedRoutes:
   - "scoring-input/score"
@@ -17,50 +17,50 @@ relatedRoutes:
   - "scoring-input/determinants/M"
   - "scoring-input/gphr"
   - "scoring-input/z"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-card-vi-x-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificacao/Cartoes] VII
+# Nome do documento: [Codificação/Cartões] VII
 
 ## Apelidos e busca
 
-- Cartao VII
-- cartao VII
-- cartao 7
+- Cartão VII
+- cartão VII
+- cartão 7
 - prancha VII
 
-## Definicao central
+## Definição central
 
-`Cartao VII` costuma facilitar cabecas, rostos e figuras humanas parciais.
-Esta pagina resume o que vale a pena revisar em conteudo humano, organizacao e movimento.
+`Cartão VII` costuma facilitar cabeças, rostos e figuras humanas parciais.
+Esta página resume o que vale a pena revisar em conteúdo humano, organização e movimento.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
-- Respostas de rosto, cabeca ou outras figuras humanas parciais sao comuns.
+- Respostas de rosto, cabeça ou outras figuras humanas parciais são comuns.
 - Se a resposta for parcial, revise `Hd` antes de `H`.
-- Se a cena mostrar acao humana clara, revise `M`.
-- Quando a organizacao entre figuras ou zonas se tornar importante, tambem pode ser util revisar `Z`.
-- O conteudo humano pode levar voce a revisar `GHR / PHR`.
+- Se a cena mostrar ação humana clara, revise `M`.
+- Quando a organização entre figuras ou zonas se tornar importante, também pode ser útil revisar `Z`.
+- O conteúdo humano pode levar você a revisar `GHR / PHR`.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- Uma resposta que parece humana nao significa automaticamente conteudo humano completo `H`.
-- Dois perfis ou dois rostos nao criam, por si so, um codigo relacional.
-- Esta pagina continua sendo uma nota de codificacao, nao uma interpretacao simbolica da prancha.
+- Uma resposta que parece humana não significa automaticamente conteúdo humano completo `H`.
+- Dois perfis ou dois rostos não criam, por si só, um código relacional.
+- Esta página continua sendo uma nota de codificação, não uma interpretação simbólica da prancha.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao] score](ref://scoring-input/score)
-- [[Codificacao/Conteudos] Hd](ref://scoring-input/contents/Hd)
-- [[Codificacao/Conteudos] H](ref://scoring-input/contents/H)
-- [[Codificacao/Popular] Popular](ref://scoring-input/popular)
-- [[Codificacao/Determinantes] M](ref://scoring-input/determinants/M)
-- [[Codificacao/GHR-PHR] GHR/PHR](ref://scoring-input/gphr)
-- [[Codificacao/Z] Z](ref://scoring-input/z)
+- [[Codificação] score](ref://scoring-input/score)
+- [[Codificação/Conteúdos] Hd](ref://scoring-input/contents/Hd)
+- [[Codificação/Conteúdos] H](ref://scoring-input/contents/H)
+- [[Codificação/Popular] Popular](ref://scoring-input/popular)
+- [[Codificação/Determinantes] M](ref://scoring-input/determinants/M)
+- [[Codificação/GHR-PHR] GHR/PHR](ref://scoring-input/gphr)
+- [[Codificação/Z] Z](ref://scoring-input/z)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

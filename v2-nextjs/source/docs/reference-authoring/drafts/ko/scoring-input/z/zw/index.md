@@ -16,7 +16,7 @@ relatedRoutes:
   - "scoring-input/dq/o"
   - "result-interpretation/upper-section/Zf"
   - "result-interpretation/upper-section/ZSum"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/z/zw/index.md"

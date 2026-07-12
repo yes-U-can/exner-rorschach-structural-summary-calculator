@@ -13,10 +13,10 @@ relatedRoutes:
   - "scoring-input/dq/v/+"
   - "scoring-input/dq/v"
   - "result-interpretation/upper-section/dq_o"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/scoring-input/dq/o/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Developmental Quality] o

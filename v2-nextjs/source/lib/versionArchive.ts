@@ -21,6 +21,18 @@ const v2SourceUrl = `${exhibitionRepoUrl}/tree/main/v2-nextjs/source`;
 
 export const v2NextVersions: VersionArchiveEntry[] = [
   {
+    version: 'v2.1.8',
+    title: 'Version 2.1.8',
+    series: 'v2-nextjs',
+    publishedAt: '2026-07-12',
+    releaseKind: 'bugfix',
+    releaseLabel: '버그 패치',
+    summary:
+      '다섯 언어 AI 지식층의 근거 수준을 재정렬하고 전체 벡터 임베딩을 갱신했으며, GPT-5.5 단일·멀티턴 실전 평가와 공개 미러 보안 경계를 강화한 v2.1.x AI 품질 마감 패치입니다.',
+    sourceUrl: v2SourceUrl,
+    releaseUrl: v2ReleaseUrl('v2.1.8'),
+  },
+  {
     version: 'v2.1.7',
     title: 'Version 2.1.7',
     series: 'v2-nextjs',

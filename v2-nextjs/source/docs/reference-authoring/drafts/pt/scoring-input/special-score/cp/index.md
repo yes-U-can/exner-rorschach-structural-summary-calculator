@@ -3,11 +3,11 @@ canonicalRoute: "scoring-input/special-score/CP"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/special-score/CP"
-displayTitle: "[Codificacao/Escores Especiais] CP"
+displayTitle: "[Codificação/Escores Especiais] CP"
 aliases:
   - "CP"
-  - "projecao de cor"
-  - "projecao cromatica"
+  - "projeção de cor"
+  - "projeção cromática"
 relatedRoutes:
   - "scoring-input/special-score"
   - "scoring-input/determinants/FC"
@@ -15,47 +15,47 @@ relatedRoutes:
   - "scoring-input/determinants/YF"
   - "scoring-input/determinants/Y"
   - "result-interpretation/lower-section/affect/CP"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-special-score-ab-psv-per-cp-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificacao/Escores Especiais] CP
+# Nome do documento: [Codificação/Escores Especiais] CP
 
 ## Apelidos e busca
 
 - CP
-- projecao de cor
-- projecao cromatica
+- projeção de cor
+- projeção cromática
 
-## Definicao central
+## Definição central
 
-`CP` e usado quando a pessoa percebe cor cromatica em uma area acromatica da mancha.
-A ideia central e que a cor nao esta realmente presente naquela area, mas a pessoa a atribui ali.
+`CP` é usado quando a pessoa percebe cor cromática em uma área acromática da mancha.
+A ideia central é que a cor não está realmente presente naquela área, mas a pessoa a atribui ali.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
-- Considere-o quando area acromatica e descrita como vermelha, azul, verde ou outra cor cromatica.
-- Ele e acrescentado como escore especial, e nao como determinante cromatico normal.
-- Antes de atribui-lo, descarte lapso verbal ou confusao visual simples.
+- Considere-o quando área acromática e descrita como vermelha, azul, verde ou outra cor cromática.
+- Ele é acrescentado como escore especial, e não como determinante cromático normal.
+- Antes de atribui-lo, descarte lapso verbal ou confusão visual simples.
 - Em muitos casos ele deve ser revisto junto com [`FY`](ref://scoring-input/determinants/FY), [`YF`](ref://scoring-input/determinants/YF), [`Y`](ref://scoring-input/determinants/Y) e depois se liga a [`CP`](ref://result-interpretation/lower-section/affect/CP).
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- Se a cor realmente pertence a uma area cromatica da mancha, nao use `CP`; considere primeiro determinantes como [`FC`](ref://scoring-input/determinants/FC).
-- `CP` nao deve ser misturado com `FC`, `CF` ou `C` como se cor cromatica real estivesse presente naquela mesma area.
-- A decisao depende de cor projetada em area acromatica, e nao de preferencia geral por temas de cor.
+- Se a cor realmente pertence a uma área cromática da mancha, não use `CP`; considere primeiro determinantes como [`FC`](ref://scoring-input/determinants/FC).
+- `CP` não deve ser misturado com `FC`, `CF` ou `C` como se cor cromática real estivesse presente naquela mesma área.
+- A decisão depende de cor projetada em área acromática, e não de preferência geral por temas de cor.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao/Escores Especiais] Special Scores](ref://scoring-input/special-score)
-- [[Codificacao/Determinantes] FC](ref://scoring-input/determinants/FC)
-- [[Codificacao/Determinantes] FY](ref://scoring-input/determinants/FY)
-- [[Codificacao/Determinantes] YF](ref://scoring-input/determinants/YF)
-- [[Codificacao/Determinantes] Y](ref://scoring-input/determinants/Y)
-- [[Interpretacao/Affect] CP](ref://result-interpretation/lower-section/affect/CP)
+- [[Codificação/Escores Especiais] Special Scores](ref://scoring-input/special-score)
+- [[Codificação/Determinantes] FC](ref://scoring-input/determinants/FC)
+- [[Codificação/Determinantes] FY](ref://scoring-input/determinants/FY)
+- [[Codificação/Determinantes] YF](ref://scoring-input/determinants/YF)
+- [[Codificação/Determinantes] Y](ref://scoring-input/determinants/Y)
+- [[Interpretação/Affect] CP](ref://result-interpretation/lower-section/affect/CP)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

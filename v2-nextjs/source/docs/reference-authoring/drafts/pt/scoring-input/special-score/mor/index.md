@@ -3,57 +3,57 @@ canonicalRoute: "scoring-input/special-score/MOR"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/special-score/MOR"
-displayTitle: "[Codificacao/Escores Especiais] MOR"
+displayTitle: "[Codificação/Escores Especiais] MOR"
 aliases:
   - "MOR"
-  - "conteudo morbido"
-  - "conteudo danificado"
+  - "conteúdo mórbido"
+  - "conteúdo danificado"
 relatedRoutes:
   - "scoring-input/special-score"
   - "scoring-input/gphr/PHR"
   - "scoring-input/special-score/AG"
   - "result-interpretation/lower-section/ideation/MOR"
   - "result-interpretation/lower-section/selfPerception/MOR_self"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-special-score-opening-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificacao/Escores Especiais] MOR
+# Nome do documento: [Codificação/Escores Especiais] MOR
 
 ## Apelidos e busca
 
 - MOR
-- conteudo morbido
-- conteudo danificado
+- conteúdo mórbido
+- conteúdo danificado
 
-## Definicao central
+## Definição central
 
-`MOR` e usado quando o objeto aparece morto, quebrado, arruinado, ferido, deteriorado ou marcado por qualidade claramente morbida.
-O codigo aponta para dano, degradacao ou tonalidade patologica atribuida diretamente ao conteudo.
+`MOR` é usado quando o objeto aparece morto, quebrado, arruinado, ferido, deteriorado ou marcado por qualidade claramente mórbida.
+O código aponta para dano, degradação ou tonalidade patológica atribuída diretamente ao conteúdo.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
-- Use quando a pessoa descreve algo morto, destruido, ferido, podre, quebrado, esmagado ou claramente arruinado.
-- Ele tambem se aplica quando a resposta atribui qualidade diretamente morbida ou patologica ao objeto.
-- `MOR` e acrescentado como escore especial e nao substitui conteudo nem determinante principal.
-- Pode coexistir com outros codigos se a resposta mostrar tanto conteudo especifico quanto tonalidade morbida.
+- Use quando a pessoa descreve algo morto, destruído, ferido, podre, quebrado, esmagado ou claramente arruinado.
+- Ele também se aplica quando a resposta atribui qualidade diretamente mórbida ou patológica ao objeto.
+- `MOR` é acrescentado como escore especial e não substitui conteúdo nem determinante principal.
+- Pode coexistir com outros códigos se a resposta mostrar tanto conteúdo específico quanto tonalidade mórbida.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- Conteudo feio, estranho ou desagradavel por si so nao basta para `MOR`.
-- Se a acao principal for atacar ou ferir em movimento, reconsidere primeiro [`AG`](ref://scoring-input/special-score/AG); se o foco for estado danificado, reconsidere `MOR`.
-- Em respostas humanas, `MOR` pode ligar-se depois a [`PHR`](ref://scoring-input/gphr/PHR), mas nao o determina automaticamente.
+- Conteúdo feio, estranho ou desagradável por si só não basta para `MOR`.
+- Se a ação principal for atacar ou ferir em movimento, reconsidere primeiro [`AG`](ref://scoring-input/special-score/AG); se o foco for estado danificado, reconsidere `MOR`.
+- Em respostas humanas, `MOR` pode ligar-se depois a [`PHR`](ref://scoring-input/gphr/PHR), mas não o determina automaticamente.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao/Escores Especiais] Special Scores](ref://scoring-input/special-score)
-- [[Codificacao/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
-- [[Codificacao/Escores Especiais] AG](ref://scoring-input/special-score/AG)
-- [[Interpretacao/Ideation] MOR](ref://result-interpretation/lower-section/ideation/MOR)
-- [[Interpretacao/Autopercepcao] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
+- [[Codificação/Escores Especiais] Special Scores](ref://scoring-input/special-score)
+- [[Codificação/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
+- [[Codificação/Escores Especiais] AG](ref://scoring-input/special-score/AG)
+- [[Interpretação/Ideation] MOR](ref://result-interpretation/lower-section/ideation/MOR)
+- [[Interpretação/Autopercepção] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

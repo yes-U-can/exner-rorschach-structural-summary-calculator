@@ -3,11 +3,11 @@ canonicalRoute: "result-interpretation/special-indices"
 locale: "pt"
 docKind: "interpretation-overview"
 canonicalTitle: "result-interpretation/special-indices"
-displayTitle: "[Interpretacao/Indices Especiais] Indices Especiais"
+displayTitle: "[Interpretação/Índices Especiais] Índices Especiais"
 aliases:
-  - "indices especiais"
-  - "constelacoes"
-  - "indices compostos"
+  - "índices especiais"
+  - "constelações"
+  - "índices compostos"
 relatedRoutes:
   - "result-interpretation"
   - "result-interpretation/special-indices/PTI"
@@ -19,44 +19,45 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation"
   - "result-interpretation/lower-section/affect"
   - "result-interpretation/lower-section/interpersonal"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-special-indices-family-2026-03-11.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
-# Nome do documento: [Interpretacao/Indices Especiais] Indices Especiais
+# Nome do documento: [Interpretação/Índices Especiais] Índices Especiais
 
 ## Apelidos e busca
 
-- indices especiais
-- constelacoes
-- indices compostos
+- índices especiais
+- constelações
+- índices compostos
 
-## Definicao central
+## Definição central
 
-`Indices Especiais` reune constelacoes compostas por multiplas variaveis do protocolo.
-Cada indice nao substitui a interpretacao clinica; ele funciona como triagem atuarial para decidir quais areas exigem revisao prioritaria.
+`Índices Especiais` reúne constelações compostas por múltiplas variáveis do protocolo.
+Cada índice não substitui a interpretação clínica; ele funciona como triagem atuarial para decidir quais áreas exigem revisão prioritária.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- `PTI` aponta para problemas de pensamento e mediacao.
+- `PTI` aponta para problemas de pensamento e mediação.
 - `DEPI` organiza um alerta em torno de sinais depressivos.
-- `CDI` resume vulnerabilidade em recursos de coping e eficacia interpessoal.
-- `SCON`, `HVI` e `OBS` apontam para risco interno, hipervigilancia e estilo obsessivo.
+- `CDI` resume vulnerabilidade em recursos de coping e eficácia interpessoal.
+- `SCON` é um alerta de alto risco. `HVI` e `OBS` organizam padrões relacionados a vigilância e precisão, mas seu apoio empírico é fraco ou insuficiente e devem permanecer hipóteses de baixa confiança.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- Nenhum indice especial deve ser tratado como diagnostico automatico.
-- Constelacoes podem produzir falso positivo ou deixar casos individuais passarem.
-- Sempre e necessario voltar as variaveis de base que alimentam o indice.
+- Nenhum índice especial deve ser tratado como diagnóstico automático.
+- A força da evidência varia entre índices; cumprir um critério operacional não confirma sozinho seu significado clínico proposto.
+- Constelações podem produzir falso positivo ou deixar casos individuais passarem.
+- Sempre é necessário voltar às variáveis de base que alimentam o índice.
 
-## Limites da interpretacao isolada
+## Limites da interpretação isolada
 
-- Estes indices sao atalhos de triagem, e nao substitutos da leitura por dominios.
-- Devem ser reconsiderados a luz de `Ideacao`, `Afeto`, `Interpessoal` e `Autopercepcao`.
+- Estes índices são atalhos de triagem, e não substitutos da leitura por domínios.
+- Devem ser reconsiderados à luz de `Ideação`, `Afeto`, `Interpessoal` e `Autopercepção`.
 
-## Variaveis para revisar em conjunto
+## Variáveis para revisar em conjunto
 
 - `PTI`
 - `DEPI`
@@ -64,19 +65,19 @@ Cada indice nao substitui a interpretacao clinica; ele funciona como triagem atu
 - `SCON`
 - `HVI`
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao] result-interpretation](ref://result-interpretation)
-- [[Interpretacao/Indices Especiais] PTI](ref://result-interpretation/special-indices/PTI)
-- [[Interpretacao/Indices Especiais] DEPI](ref://result-interpretation/special-indices/DEPI)
-- [[Interpretacao/Indices Especiais] CDI](ref://result-interpretation/special-indices/CDI)
-- [[Interpretacao/Indices Especiais] Constelacao Suicida](ref://result-interpretation/special-indices/SCON)
-- [[Interpretacao/Indices Especiais] Indice de Hipervigilancia](ref://result-interpretation/special-indices/HVI)
-- [[Interpretacao/Indices Especiais] Indice de Estilo Obsessivo](ref://result-interpretation/special-indices/OBS)
-- [[Interpretacao/Secao Inferior/Ideacao] Ideacao](ref://result-interpretation/lower-section/ideation)
-- [[Interpretacao/Secao Inferior/Afeto] Afeto](ref://result-interpretation/lower-section/affect)
-- [[Interpretacao/Secao Inferior/Interpessoal] Interpessoal](ref://result-interpretation/lower-section/interpersonal)
+- [[Interpretação] result-interpretation](ref://result-interpretation)
+- [[Interpretação/Índices Especiais] PTI](ref://result-interpretation/special-indices/PTI)
+- [[Interpretação/Índices Especiais] DEPI](ref://result-interpretation/special-indices/DEPI)
+- [[Interpretação/Índices Especiais] CDI](ref://result-interpretation/special-indices/CDI)
+- [[Interpretação/Índices Especiais] Constelação Suicida](ref://result-interpretation/special-indices/SCON)
+- [[Interpretação/Índices Especiais] Índice de Hipervigilância](ref://result-interpretation/special-indices/HVI)
+- [[Interpretação/Índices Especiais] Índice de Estilo Obsessivo](ref://result-interpretation/special-indices/OBS)
+- [[Interpretação/Seção Inferior/Ideação] Ideação](ref://result-interpretation/lower-section/ideation)
+- [[Interpretação/Seção Inferior/Afeto] Afeto](ref://result-interpretation/lower-section/affect)
+- [[Interpretação/Seção Inferior/Interpessoal] Interpessoal](ref://result-interpretation/lower-section/interpersonal)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

@@ -3,52 +3,52 @@ canonicalRoute: "scoring-input/location/WS"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/location/WS"
-displayTitle: "[Codificacao/Localizacao] WS"
+displayTitle: "[Codificação/Localização] WS"
 aliases:
   - "WS"
-  - "mancha inteira com espaco branco"
+  - "mancha inteira com espaço branco"
 relatedRoutes:
   - "scoring-input/location/W"
   - "scoring-input/location/S"
   - "scoring-input/location/DS"
   - "scoring-input/location/DdS"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-location-2026-03-10.md"
 ---
 
-# Nome do documento: [Codificacao/Localizacao] WS
+# Nome do documento: [Codificação/Localização] WS
 
 ## Apelidos e busca
 
 - WS
-- mancha inteira com espaco branco
+- mancha inteira com espaço branco
 
-## Definicao central
+## Definição central
 
-`WS` e usado quando a resposta emprega a mancha inteira e tambem integra o espaco branco de modo significativo.
-E `W` modificado por `S`, nao um codigo separado de outra logica.
+`WS` é usado quando a resposta emprega a mancha inteira e também integra o espaço branco de modo significativo.
+É `W` modificado por `S`, não um código separado de outra lógica.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
 - A resposta usa a mancha inteira.
-- O espaco branco participa ativamente do percepto.
-- A localizacao completa e confirmada no inquerito.
+- O espaço branco participa ativamente do percepto.
+- A localização completa é confirmada no inquérito.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- Nao use `WS` apenas porque o fundo foi mencionado. O espaco branco precisa ter funcao real.
-- Se a mancha inteira e usada sem espaco branco significativo, use [`W`](ref://scoring-input/location/W).
-- `WS` continua sendo uma decisao de localizacao, nao uma interpretacao por si so.
+- Não use `WS` apenas porque o fundo foi mencionado. O espaço branco precisa ter função real.
+- Se a mancha inteira é usada sem espaço branco significativo, use [`W`](ref://scoring-input/location/W).
+- `WS` continua sendo uma decisão de localização, não uma interpretação por si só.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao/Localizacao] W](ref://scoring-input/location/W)
-- [[Codificacao/Localizacao] S](ref://scoring-input/location/S)
-- [[Codificacao/Localizacao] DS](ref://scoring-input/location/DS)
-- [[Codificacao/Localizacao] DdS](ref://scoring-input/location/DdS)
+- [[Codificação/Localização] W](ref://scoring-input/location/W)
+- [[Codificação/Localização] S](ref://scoring-input/location/S)
+- [[Codificação/Localização] DS](ref://scoring-input/location/DS)
+- [[Codificação/Localização] DdS](ref://scoring-input/location/DdS)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

@@ -3,56 +3,56 @@ canonicalRoute: "scoring-input/contents/(A)"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/contents/(A)"
-displayTitle: "[Codificacao/Conteudo] (A)"
+displayTitle: "[Codificação/Conteúdo] (A)"
 aliases:
   - "(A)"
-  - "animal imaginario"
-  - "animal fantastico inteiro"
+  - "animal imaginário"
+  - "animal fantástico inteiro"
 relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/A"
   - "scoring-input/contents/Ad"
   - "scoring-input/contents/(Ad)"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-animal-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificacao/Conteudo] (A)
+# Nome do documento: [Codificação/Conteúdo] (A)
 
 ## Apelidos e busca
 
 - (A)
-- animal imaginario
-- animal fantastico inteiro
+- animal imaginário
+- animal fantástico inteiro
 
-## Definicao central
+## Definição central
 
-`(A)` e usado quando o conteudo e um animal inteiro, mas fantastico, mitico ou claramente inventado.
-A forma continua sendo de animal inteiro, mesmo que o referente nao exista na realidade comum.
+`(A)` é usado quando o conteúdo é um animal inteiro, mas fantástico, mítico ou claramente inventado.
+A forma continua sendo de animal inteiro, mesmo que o referente não exista na realidade comum.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
-- A resposta precisa descrever um animal inteiro, nao apenas uma parte.
-- O carater fantastico pode vir de mito, conto, desenho, ficcao ou invencao da propria pessoa.
-- Exemplos tipicos sao dragao, unicornio ou monstro com forma animal inteira.
+- A resposta precisa descrever um animal inteiro, não apenas uma parte.
+- O caráter fantástico pode vir de mito, conto, desenho, ficção ou invenção da própria pessoa.
+- Exemplos típicos são dragão, unicórnio ou monstro com forma animal inteira.
 - Se o referente for um animal inteiro realista, verifique primeiro [`A`](ref://scoring-input/contents/A).
-- Se a resposta descreve so parte de um animal fantastico, verifique primeiro [`(Ad)`](ref://scoring-input/contents/%28Ad%29).
+- Se a resposta descreve só parte de um animal fantástico, verifique primeiro [`(Ad)`](ref://scoring-input/contents/%28Ad%29).
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `(A)` e [`A`](ref://scoring-input/contents/A) se separam por fantasia versus realidade, nao por completude.
+- `(A)` e [`A`](ref://scoring-input/contents/A) se separam por fantasia versus realidade, não por completude.
 - `(A)` e [`(Ad)`](ref://scoring-input/contents/%28Ad%29) se separam por inteiro versus detalhe.
-- O conteudo nao substitui decisoes posteriores sobre determinante, `FQ` ou `Popular`.
+- O conteúdo não substitui decisões posteriores sobre determinante, `FQ` ou `Popular`.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao/Conteudo] Contents](ref://scoring-input/contents)
-- [[Codificacao/Conteudo] A](ref://scoring-input/contents/A)
-- [[Codificacao/Conteudo] Ad](ref://scoring-input/contents/Ad)
-- [[Codificacao/Conteudo] (Ad)](ref://scoring-input/contents/%28Ad%29)
+- [[Codificação/Conteúdo] Contents](ref://scoring-input/contents)
+- [[Codificação/Conteúdo] A](ref://scoring-input/contents/A)
+- [[Codificação/Conteúdo] Ad](ref://scoring-input/contents/Ad)
+- [[Codificação/Conteúdo] (Ad)](ref://scoring-input/contents/%28Ad%29)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

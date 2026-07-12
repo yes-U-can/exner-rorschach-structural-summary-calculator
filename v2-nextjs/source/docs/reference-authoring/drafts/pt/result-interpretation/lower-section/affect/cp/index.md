@@ -3,11 +3,11 @@ canonicalRoute: "result-interpretation/lower-section/affect/CP"
 locale: "pt"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/affect/CP"
-displayTitle: "[Interpretacao/Afeto] CP"
+displayTitle: "[Interpretação/Afeto] CP"
 aliases:
   - "CP"
   - "color projection"
-  - "projecao de cor"
+  - "projeção de cor"
 relatedRoutes:
   - "result-interpretation/lower-section/affect"
   - "result-interpretation/lower-section/affect/PureC"
@@ -18,49 +18,49 @@ relatedRoutes:
   - "scoring-input/determinants/FY"
   - "scoring-input/determinants/YF"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-affect-s-blends-cp-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao/Afeto] CP
+# Nome do documento: [Interpretação/Afeto] CP
 
 ## Apelidos e busca
 
 - CP
 - color projection
-- projecao de cor
+- projeção de cor
 
-## Definicao central
+## Definição central
 
-`CP` em afeto e usado para ler atribuicao de cor ou tom emocional a um campo que normalmente nao o conteria.
-Ele e revisto como sinal de que o afeto esta se impondo a percepcao de maneira pouco usual.
+`CP` em afeto é usado para ler atribuição de cor ou tom emocional a um campo que normalmente não o conteria.
+Ele é revisto como sinal de que o afeto está se impondo à percepção de maneira pouco usual.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- Quando `CP` aparece, pode haver tendencia a carregar contextos mais neutros com emocao.
-- Por ser raro, mesmo um unico caso merece atencao clinica.
-- Em geral vale verificar se ele aparece junto com determinantes de sombreamento ou outros marcadores de tensao.
+- Quando `CP` aparece, pode haver tendência a carregar contextos mais neutros com emoção.
+- Por ser raro, mesmo um único caso merece atenção clínica.
+- Em geral vale verificar se ele aparece junto com determinantes de sombreamento ou outros marcadores de tensão.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `CP` nao e o mesmo que `Pure C`, `CF` ou `C`.
-- A codificacao do special score deve ser confirmada antes da interpretacao.
-- A raridade aumenta o peso clinico, mas nao basta, sozinha, para uma conclusao ampla.
+- `CP` não é o mesmo que `Pure C`, `CF` ou `C`.
+- A codificação do special score deve ser confirmada antes da interpretação.
+- A raridade aumenta o peso clínico, mas não basta, sozinha, para uma conclusão ampla.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Secao Inferior/Afeto] Afeto](ref://result-interpretation/lower-section/affect)
-- [[Interpretacao/Afeto] Pure C](ref://result-interpretation/lower-section/affect/PureC)
-- [[Interpretacao/Afeto] S](ref://result-interpretation/lower-section/affect/S_aff)
-- [[Interpretacao/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
-- [[Codificacao/Special Score] CP](ref://scoring-input/special-score/CP)
-- [[Codificacao/Determinantes] Y](ref://scoring-input/determinants/Y)
-- [[Codificacao/Determinantes] FY](ref://scoring-input/determinants/FY)
-- [[Codificacao/Determinantes] YF](ref://scoring-input/determinants/YF)
-- [[Interpretacao/Indices Especiais] DEPI](ref://result-interpretation/special-indices/DEPI)
+- [[Interpretação/Seção Inferior/Afeto] Afeto](ref://result-interpretation/lower-section/affect)
+- [[Interpretação/Afeto] Pure C](ref://result-interpretation/lower-section/affect/PureC)
+- [[Interpretação/Afeto] S](ref://result-interpretation/lower-section/affect/S_aff)
+- [[Interpretação/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
+- [[Codificação/Special Score] CP](ref://scoring-input/special-score/CP)
+- [[Codificação/Determinantes] Y](ref://scoring-input/determinants/Y)
+- [[Codificação/Determinantes] FY](ref://scoring-input/determinants/FY)
+- [[Codificação/Determinantes] YF](ref://scoring-input/determinants/YF)
+- [[Interpretação/Índices Especiais] DEPI](ref://result-interpretation/special-indices/DEPI)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

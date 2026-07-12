@@ -15,7 +15,7 @@ relatedRoutes:
   - "scoring-input/special-score/AG"
   - "result-interpretation/lower-section/ideation/MOR"
   - "result-interpretation/lower-section/selfPerception/MOR_self"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/special-score/mor/index.md"

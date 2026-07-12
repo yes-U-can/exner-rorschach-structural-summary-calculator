@@ -16,10 +16,10 @@ relatedRoutes:
   - "scoring-input/determinants/V"
   - "scoring-input/determinants/FV"
   - "scoring-input/determinants/VF"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/lower-section/core/sumv/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Core] SumV

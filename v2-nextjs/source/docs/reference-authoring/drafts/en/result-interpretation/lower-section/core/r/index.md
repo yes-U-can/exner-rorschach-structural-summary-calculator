@@ -14,10 +14,10 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/EA"
   - "result-interpretation/lower-section/core/EB"
   - "scoring-input/score"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/lower-section/core/r/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Core] R

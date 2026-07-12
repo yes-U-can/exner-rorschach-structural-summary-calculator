@@ -16,7 +16,7 @@ relatedRoutes:
   - "scoring-input/contents/Art"
   - "scoring-input/contents/Ay"
   - "result-interpretation/lower-section/ideation/_2AB_Art_Ay"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-score-ab-psv-per-cp-2026-03-10.md"

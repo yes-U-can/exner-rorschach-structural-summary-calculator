@@ -14,7 +14,7 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/M_minus"
   - "scoring-input/determinants/M"
   - "result-interpretation/special-indices/SCON"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-ideation-mnone-2026-03-10.md"

@@ -3,11 +3,11 @@ canonicalRoute: "scoring-input/card/I"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/card/I"
-displayTitle: "[Codificacao/Cartoes] I"
+displayTitle: "[Codificação/Cartões] I"
 aliases:
-  - "Cartao I"
-  - "cartao I"
-  - "cartao 1"
+  - "Cartão I"
+  - "cartão I"
+  - "cartão 1"
   - "prancha I"
 relatedRoutes:
   - "scoring-input/score"
@@ -16,48 +16,48 @@ relatedRoutes:
   - "scoring-input/contents/A"
   - "scoring-input/popular"
   - "scoring-input/card/V"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-card-i-v-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificacao/Cartoes] I
+# Nome do documento: [Codificação/Cartões] I
 
 ## Apelidos e busca
 
-- Cartao I
-- cartao I
-- cartao 1
+- Cartão I
+- cartão I
+- cartão 1
 - prancha I
 
-## Definicao central
+## Definição central
 
-`Cartao I` e a primeira prancha do protocolo.
-Esta pagina resume os tipos de resposta que costumam aparecer quando a codificacao comeca; ela nao e uma interpretacao simbolica do cartao.
+`Cartão I` é a primeira prancha do protocolo.
+Esta página resume os tipos de resposta que costumam aparecer quando a codificação começa; ela não é uma interpretação simbólica do cartão.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
-- Respostas globais `W` sao comuns no `Cartao I`.
+- Respostas globais `W` são comuns no `Cartão I`.
 - Respostas formais simples, como morcego, borboleta ou outras figuras animais amplas, costumam aparecer.
-- Quando a resposta usa a mancha inteira com organizacao clara, revise `F`, `FQ` e `Popular`.
-- Se a pessoa usa apenas uma parte pequena da mancha, o cartao por si so nao justifica `Popular`.
+- Quando a resposta usa a mancha inteira com organização clara, revise `F`, `FQ` e `Popular`.
+- Se a pessoa usa apenas uma parte pequena da mancha, o cartão por si só não justifica `Popular`.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- Nao codifique `Popular` apenas porque a resposta parece familiar; ela precisa cumprir o padrao formal daquela prancha.
-- `Cartao I` e `Cartao V` compartilham respostas do tipo morcego ou borboleta, mas nao devem ser tratados como a mesma prancha.
-- Mencionar verbalmente que a mancha e escura nao basta para acrescentar outro determinante.
+- Não codifique `Popular` apenas porque a resposta parece familiar; ela precisa cumprir o padrão formal daquela prancha.
+- `Cartão I` e `Cartão V` compartilham respostas do tipo morcego ou borboleta, mas não devem ser tratados como a mesma prancha.
+- Mencionar verbalmente que a mancha é escura não basta para acrescentar outro determinante.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao] score](ref://scoring-input/score)
-- [[Codificacao/Localizacao] W](ref://scoring-input/location/W)
-- [[Codificacao/Determinantes] F](ref://scoring-input/determinants/F)
-- [[Codificacao/Conteudos] A](ref://scoring-input/contents/A)
-- [[Codificacao/Popular] Popular](ref://scoring-input/popular)
-- [[Codificacao/Cartoes] V](ref://scoring-input/card/V)
+- [[Codificação] score](ref://scoring-input/score)
+- [[Codificação/Localização] W](ref://scoring-input/location/W)
+- [[Codificação/Determinantes] F](ref://scoring-input/determinants/F)
+- [[Codificação/Conteúdos] A](ref://scoring-input/contents/A)
+- [[Codificação/Popular] Popular](ref://scoring-input/popular)
+- [[Codificação/Cartões] V](ref://scoring-input/card/V)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

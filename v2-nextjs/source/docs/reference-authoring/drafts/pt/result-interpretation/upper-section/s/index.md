@@ -3,11 +3,11 @@ canonicalRoute: "result-interpretation/upper-section/S"
 locale: "pt"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/upper-section/S"
-displayTitle: "[Interpretacao/Secao Superior] S"
+displayTitle: "[Interpretação/Seção Superior] S"
 aliases:
   - "S"
-  - "respostas de espaco branco"
-  - "espaco branco"
+  - "respostas de espaço branco"
+  - "espaço branco"
 relatedRoutes:
   - "result-interpretation/upper-section"
   - "result-interpretation/upper-section/W"
@@ -16,47 +16,47 @@ relatedRoutes:
   - "scoring-input/location/S"
   - "result-interpretation/lower-section/affect/S_aff"
   - "result-interpretation/lower-section/mediation/S_minus"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-upper-section-family-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao/Secao Superior] S
+# Nome do documento: [Interpretação/Seção Superior] S
 
 ## Apelidos e busca
 
 - S
-- respostas de espaco branco
-- espaco branco
+- respostas de espaço branco
+- espaço branco
 
-## Definicao central
+## Definição central
 
-`S` e a frequencia de respostas que usam o espaco branco como localizacao principal.
-Dentro de `Upper Section`, ele e lido como pista de foco invertido, oposicao ou exploracao nao convencional do campo.
+`S` é a frequência de respostas que usam o espaço branco como localização principal.
+Dentro de `Upper Section`, ele é lido como pista de foco invertido, oposição ou exploração não convencional do campo.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- Algum `S` pode acompanhar foco independente ou exploracao critica do estimulo.
-- `S` alto pode sugerir oposicao, inconformismo ou tendencia a olhar onde outros nao olham.
-- `S` baixo apenas indica que o espaco branco nao foi um recurso importante no protocolo.
+- Algum `S` pode acompanhar foco independente ou exploração crítica do estímulo.
+- `S` alto pode sugerir oposição, inconformismo ou tendência a olhar onde outros não olham.
+- `S` baixo apenas indica que o espaço branco não foi um recurso importante no protocolo.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `S` alto nao deve ser reduzido imediatamente a rebeldia.
-- Se `S` subir junto com `S-%`, `X-%`, `AG` ou `PER`, o significado pode pender mais para conflito ou ineficiencia.
-- Se aparecer com boa mediacao e bom controle formal, tambem pode refletir flexibilidade ou originalidade.
+- `S` alto não deve ser reduzido imediatamente a rebeldia.
+- Se `S` subir junto com `S-%`, `X-%`, `AG` ou `PER`, o significado pode pender mais para conflito ou ineficiência.
+- Se aparecer com boa mediação e bom controle formal, também pode refletir flexibilidade ou originalidade.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Secao Superior] Secao Superior](ref://result-interpretation/upper-section)
-- [[Interpretacao/Secao Superior] W](ref://result-interpretation/upper-section/W)
-- [[Interpretacao/Secao Superior] D](ref://result-interpretation/upper-section/D)
-- [[Interpretacao/Secao Superior] Dd](ref://result-interpretation/upper-section/Dd)
-- [[Codificacao/Localizacao] S](ref://scoring-input/location/S)
-- [[Interpretacao/Affect] S](ref://result-interpretation/lower-section/affect/S_aff)
-- [[Interpretacao/Mediation] S-%](ref://result-interpretation/lower-section/mediation/S_minus)
+- [[Interpretação/Seção Superior] Seção Superior](ref://result-interpretation/upper-section)
+- [[Interpretação/Seção Superior] W](ref://result-interpretation/upper-section/W)
+- [[Interpretação/Seção Superior] D](ref://result-interpretation/upper-section/D)
+- [[Interpretação/Seção Superior] Dd](ref://result-interpretation/upper-section/Dd)
+- [[Codificação/Localização] S](ref://scoring-input/location/S)
+- [[Interpretação/Affect] S](ref://result-interpretation/lower-section/affect/S_aff)
+- [[Interpretação/Mediation] S-%](ref://result-interpretation/lower-section/mediation/S_minus)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

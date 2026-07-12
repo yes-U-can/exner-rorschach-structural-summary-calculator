@@ -15,7 +15,7 @@ relatedRoutes:
   - "result-interpretation/lower-section/selfPerception/An_Xy"
   - "scoring-input/special-score/MOR"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-selfperception-2026-03-10.md"

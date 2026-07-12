@@ -3,10 +3,10 @@ canonicalRoute: "scoring-input/score"
 locale: "es"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/score"
-displayTitle: "[Codificacion] score"
+displayTitle: "[Codificación] score"
 aliases:
   - "score"
-  - "codificacion"
+  - "codificación"
   - "registro de respuestas"
   - "codificar respuesta"
 relatedRoutes:
@@ -21,55 +21,55 @@ relatedRoutes:
   - "scoring-input/z"
   - "scoring-input/gphr"
   - "scoring-input/special-score"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/score/index.md"
 ---
 
-# Nombre del documento: [Codificacion] score
+# Nombre del documento: [Codificación] score
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - score
-- codificacion
+- codificación
 - registro de respuestas
 - codificar respuesta
 
-## Definicion central
+## Definición central
 
-`score` no significa asignar una puntuacion numerica inmediata.  
-En el Sistema Comprehensivo, significa convertir cada respuesta del Rorschach en una combinacion precisa de codigos.
+`score` no significa asignar una puntuación numérica inmediata.
+En el Sistema Comprehensivo, significa convertir cada respuesta del Rorschach en una combinación precisa de códigos.
 
-## Condiciones de aplicacion
+## Condiciones de aplicación
 
 - Cada respuesta se codifica en el orden en que aparece dentro del protocolo.
-- La codificacion debe fijar localizacion, calidad evolutiva, determinantes, calidad formal, contenidos y codigos adicionales cuando correspondan.
-- La encuesta debe aclarar la respuesta lo suficiente para que la codificacion represente lo que el sujeto vio realmente.
-- La precision del sumario estructural depende de que cada respuesta haya sido codificada con consistencia.
+- La codificación debe fijar localización, calidad evolutiva, determinantes, calidad formal, contenidos y códigos adicionales cuando correspondan.
+- La encuesta debe aclarar la respuesta lo suficiente para que la codificación represente lo que el sujeto vio realmente.
+- La precisión del sumario estructural depende de que cada respuesta haya sido codificada con consistencia.
 
 ## Precauciones y distinciones
 
-- `score` no es una escala numerica separada del protocolo; es el proceso completo de codificacion de la respuesta.
-- No debe adivinarse un codigo solo porque parezca probable. Si la encuesta no lo sostiene, no se asigna.
-- La codificacion y la interpretacion son etapas distintas. Primero se codifica la respuesta; despues se interpretan los resultados del protocolo.
-- Los componentes de la codificacion se deciden por rutas distintas, como [`Location`](ref://scoring-input/location), [`DQ`](ref://scoring-input/dq), [`Determinants`](ref://scoring-input/determinants), [`FQ`](ref://scoring-input/fq) y [`Contents`](ref://scoring-input/contents).
+- `score` no es una escala numérica separada del protocolo; es el proceso completo de codificación de la respuesta.
+- No debe adivinarse un código solo porque parezca probable. Si la encuesta no lo sostiene, no se asigna.
+- La codificación y la interpretación son etapas distintas. Primero se codifica la respuesta; después se interpretan los resultados del protocolo.
+- Los componentes de la codificación se deciden por rutas distintas, como [`Location`](ref://scoring-input/location), [`DQ`](ref://scoring-input/dq), [`Determinants`](ref://scoring-input/determinants), [`FQ`](ref://scoring-input/fq) y [`Contents`](ref://scoring-input/contents).
 
 ## Referencias cruzadas
 
-- [[Codificacion] scoring-input](ref://scoring-input)
-- [[Codificacion/Localizacion] Location](ref://scoring-input/location)
-- [[Codificacion/Calidad evolutiva] DQ](ref://scoring-input/dq)
-- [[Codificacion/Determinantes] Determinants](ref://scoring-input/determinants)
-- [[Codificacion/Calidad formal] FQ](ref://scoring-input/fq)
-- [[Codificacion/Contenidos] Contents](ref://scoring-input/contents)
-- [[Codificacion/Pareja] Pair](ref://scoring-input/pair)
-- [[Codificacion/Popular] Popular](ref://scoring-input/popular)
-- [[Codificacion/Z] Z](ref://scoring-input/z)
-- [[Codificacion/GHR-PHR] GHR/PHR](ref://scoring-input/gphr)
-- [[Codificacion/Codigos especiales] Special Scores](ref://scoring-input/special-score)
+- [[Codificación] scoring-input](ref://scoring-input)
+- [[Codificación/Localización] Location](ref://scoring-input/location)
+- [[Codificación/Calidad evolutiva] DQ](ref://scoring-input/dq)
+- [[Codificación/Determinantes] Determinants](ref://scoring-input/determinants)
+- [[Codificación/Calidad formal] FQ](ref://scoring-input/fq)
+- [[Codificación/Contenidos] Contents](ref://scoring-input/contents)
+- [[Codificación/Pareja] Pair](ref://scoring-input/pair)
+- [[Codificación/Popular] Popular](ref://scoring-input/popular)
+- [[Codificación/Z] Z](ref://scoring-input/z)
+- [[Codificación/GHR-PHR] GHR/PHR](ref://scoring-input/gphr)
+- [[Codificación/Códigos especiales] Special Scores](ref://scoring-input/special-score)
 
 ## Nota de fundamento
 
-- La justificacion detallada y la comparacion de fuentes se conservan en la provenance interna.
-- El cuerpo publico evita citar directamente los titulos de las fuentes.
+- La justificación detallada y la comparación de fuentes se conservan en la provenance interna.
+- El cuerpo público evita citar directamente los títulos de las fuentes.

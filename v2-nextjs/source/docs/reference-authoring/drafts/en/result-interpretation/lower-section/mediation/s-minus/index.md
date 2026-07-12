@@ -14,10 +14,10 @@ relatedRoutes:
   - "result-interpretation/lower-section/affect/S_aff"
   - "scoring-input/location/S"
   - "result-interpretation/special-indices/HVI"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/en/result-interpretation/lower-section/mediation/s-minus/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Mediation] S-%

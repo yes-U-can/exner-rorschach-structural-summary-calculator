@@ -3,52 +3,52 @@ canonicalRoute: "scoring-input/fq/none"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/fq/none"
-displayTitle: "[Codificacao/Qualidade Formal] none"
+displayTitle: "[Codificação/Qualidade Formal] none"
 aliases:
   - "none"
   - "FQnone"
-  - "sem codigo FQ"
+  - "sem código FQ"
 relatedRoutes:
   - "scoring-input/fq"
   - "scoring-input/determinants/M"
   - "scoring-input/special-score/AB"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-fq-2026-03-10.md"
 ---
 
-# Nome do documento: [Codificacao/Qualidade Formal] none
+# Nome do documento: [Codificação/Qualidade Formal] none
 
 ## Apelidos e busca
 
 - none
 - FQnone
-- sem codigo FQ
+- sem código FQ
 
-## Definicao central
+## Definição central
 
-`none` e usado quando a resposta nao recebe codigo de qualidade formal.
-Isso significa que a forma nao esta disponivel como base codificavel para julgar ajuste formal.
+`none` é usado quando a resposta não recebe código de qualidade formal.
+Isso significa que a forma não está disponível como base codificável para julgar ajuste formal.
 
-## Condicoes de aplicacao
+## Condições de aplicação
 
-- A resposta nao oferece base formal utilizavel para atribuir `+`, `o`, `u` ou `-`.
-- O codigo separa essas respostas das que realmente recebem um FQ especifico.
-- Use com cautela e apenas quando a qualidade formal realmente nao deve ser codificada.
+- A resposta não oferece base formal utilizável para atribuir `+`, `o`, `u` ou `-`.
+- O código separa essas respostas das que realmente recebem um FQ específico.
+- Use com cautela e apenas quando a qualidade formal realmente não deve ser codificada.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- `none` nao e o mesmo que [`FQ-`](ref://scoring-input/fq/-). `-` significa ajuste ruim; `none` significa que nenhum FQ se aplica.
-- Nao transforme resposta de ajuste ruim em `none` apenas porque e dificil.
-- Confira os determinantes envolvidos antes de decidir que nao existe FQ codificavel.
+- `none` não é o mesmo que [`FQ-`](ref://scoring-input/fq/-). `-` significa ajuste ruim; `none` significa que nenhum FQ se aplica.
+- Não transforme resposta de ajuste ruim em `none` apenas porque e difícil.
+- Confira os determinantes envolvidos antes de decidir que não existe FQ codificável.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Codificacao/Qualidade Formal] FQ](ref://scoring-input/fq)
-- [[Codificacao/Determinantes] M](ref://scoring-input/determinants/M)
-- [[Codificacao/Scores Especiais] AB](ref://scoring-input/special-score/AB)
+- [[Codificação/Qualidade Formal] FQ](ref://scoring-input/fq)
+- [[Codificação/Determinantes] M](ref://scoring-input/determinants/M)
+- [[Codificação/Scores Especiais] AB](ref://scoring-input/special-score/AB)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

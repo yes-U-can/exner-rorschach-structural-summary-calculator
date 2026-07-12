@@ -15,10 +15,10 @@ relatedRoutes:
   - "scoring-input/special-score/COP"
   - "scoring-input/special-score/AG"
   - "result-interpretation/lower-section/ideation/M_minus"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
-provenanceNote: "docs/reference-authoring/notes/provenance/ja/scoring-input/determinants/m--4d/index.md"
+provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [コーディング/決定因] M

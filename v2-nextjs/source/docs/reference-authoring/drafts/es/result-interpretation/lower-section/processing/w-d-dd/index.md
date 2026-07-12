@@ -3,12 +3,12 @@ canonicalRoute: "result-interpretation/lower-section/processing/W_D_Dd"
 locale: "es"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/processing/W_D_Dd"
-displayTitle: "[Interpretacion/Procesamiento] W:D:Dd"
+displayTitle: "[Interpretación/Procesamiento] W:D:Dd"
 aliases:
   - "W:D:Dd"
   - "processing W:D:Dd"
   - "Economy Index"
-  - "indice de economia"
+  - "índice de economía"
 relatedRoutes:
   - "result-interpretation/lower-section/processing"
   - "result-interpretation/upper-section/W"
@@ -18,40 +18,40 @@ relatedRoutes:
   - "scoring-input/location/W"
   - "scoring-input/location/D"
   - "scoring-input/location/Dd"
-authorityPolicy: "exner+es-manual"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/processing/w-d-dd/index.md"
 ---
 
-# Nombre del documento: [Interpretacion/Procesamiento] W:D:Dd
+# Nombre del documento: [Interpretación/Procesamiento] W:D:Dd
 
-## Alias y busqueda
+## Alias y búsqueda
 
 - W:D:Dd
 - processing W:D:Dd
 - Economy Index
-- indice de economia
+- índice de economía
 
-## Definicion central
+## Definición central
 
-`W:D:Dd` muestra la proporcion entre respuestas de campo total, detalle comun y detalle inusual.
-En procesamiento se usa para ver si la persona tiende a abarcar el conjunto, a centrarse en lo comun o a irse hacia detalles pequenos.
+`W:D:Dd` muestra la proporción entre respuestas de campo total, detalle común y detalle inusual.
+En procesamiento se usa para ver si la persona tiende a abarcar el conjunto, a centrarse en lo común o a irse hacia detalles pequeños.
 
-## Puntos de interpretacion
+## Puntos de interpretación
 
-- Un predominio de `W` sugiere mas interes por el conjunto o por configuraciones amplias.
-- Un peso mayor de `D` suele verse como un estilo mas practico y economico.
-- Un aumento de `Dd` puede indicar atencion mas fina, mas particular o mas dispersa hacia detalles pequenos.
-- Leerlo con `W:M` ayuda a comparar alcance perceptivo y nivel de organizacion ideacional.
+- Un predominio de `W` sugiere más interés por el conjunto o por configuraciones amplias.
+- Un peso mayor de `D` suele verse como un estilo más práctico y económico.
+- Un aumento de `Dd` puede indicar atención más fina, más particular o más dispersa hacia detalles pequeños.
+- Leerlo con `W:M` ayuda a comparar alcance perceptivo y nivel de organización ideacional.
 
 ## Precauciones y distinciones
 
-- Ninguna distribucion es patologica por si sola.
-- El valor depende tambien del total de respuestas y del estilo general del protocolo.
-- Un `Dd` alto no debe confundirse automaticamente con obsesividad o deterioro.
+- Ninguna distribución es patológica por sí sola.
+- El valor depende también del total de respuestas y del estilo general del protocolo.
+- Un `Dd` alto no debe confundirse automáticamente con obsesividad o deterioro.
 
-## Limites de interpretacion aislada
+## Limites de interpretación aislada
 
 - `W:D:Dd` muestra la forma de recortar el campo, no toda la calidad del procesamiento.
 - Conviene leerlo junto con `Zd`, `W:M`, las distribuciones `DQ` y las codificaciones de `Location`.
@@ -66,15 +66,15 @@ En procesamiento se usa para ver si la persona tiende a abarcar el conjunto, a c
 
 ## Referencias cruzadas
 
-- [[Interpretacion/Lower Section/Procesamiento] Procesamiento](ref://result-interpretation/lower-section/processing)
-- [[Interpretacion/Upper Section] W](ref://result-interpretation/upper-section/W)
-- [[Interpretacion/Upper Section] D](ref://result-interpretation/upper-section/D)
-- [[Interpretacion/Upper Section] Dd](ref://result-interpretation/upper-section/Dd)
-- [[Interpretacion/Procesamiento] W:M](ref://result-interpretation/lower-section/processing/W_M)
-- [[Codificacion/Location] W](ref://scoring-input/location/W)
-- [[Codificacion/Location] D](ref://scoring-input/location/D)
-- [[Codificacion/Location] Dd](ref://scoring-input/location/Dd)
+- [[Interpretación/Lower Section/Procesamiento] Procesamiento](ref://result-interpretation/lower-section/processing)
+- [[Interpretación/Upper Section] W](ref://result-interpretation/upper-section/W)
+- [[Interpretación/Upper Section] D](ref://result-interpretation/upper-section/D)
+- [[Interpretación/Upper Section] Dd](ref://result-interpretation/upper-section/Dd)
+- [[Interpretación/Procesamiento] W:M](ref://result-interpretation/lower-section/processing/W_M)
+- [[Codificación/Location] W](ref://scoring-input/location/W)
+- [[Codificación/Location] D](ref://scoring-input/location/D)
+- [[Codificación/Location] Dd](ref://scoring-input/location/Dd)
 
 ## Nota de fundamento
 
-- La fundamentacion detallada y las comparaciones de fuente se conservan en la provenance interna.
+- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

@@ -3,58 +3,58 @@ canonicalRoute: "result-interpretation"
 locale: "pt"
 docKind: "interpretation-overview"
 canonicalTitle: "result-interpretation"
-displayTitle: "[Interpretacao] result-interpretation"
+displayTitle: "[Interpretação] result-interpretation"
 aliases:
   - "result-interpretation"
-  - "interpretacao"
-  - "interpretacao do sumario estrutural"
-  - "interpretacao de resultados"
+  - "interpretação"
+  - "interpretação do sumário estrutural"
+  - "interpretação de resultados"
 relatedRoutes:
   - "result-interpretation/upper-section"
   - "result-interpretation/lower-section"
   - "result-interpretation/special-indices"
   - "scoring-input"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-result-interpretation-overview-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao] result-interpretation
+# Nome do documento: [Interpretação] result-interpretation
 
 ## Apelidos e busca
 
 - result-interpretation
-- interpretacao
-- interpretacao do sumario estrutural
-- interpretacao de resultados
+- interpretação
+- interpretação do sumário estrutural
+- interpretação de resultados
 
-## Definicao central
+## Definição central
 
-`result-interpretation` e o dominio que pega o sumario estrutural concluido e organiza seu significado clinico.
-Ele nao explica como codificar uma resposta isolada; ele explica como ler, em conjunto, variaveis ja calculadas.
+`result-interpretation` é o domínio que pega o sumário estrutural concluído e organiza seu significado clínico.
+Ele não explica como codificar uma resposta isolada; ele explica como ler, em conjunto, variáveis já calculadas.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- A interpretacao depende primeiro de uma codificacao estavel.
-- O caminho habitual de leitura se organiza por `upper section`, `lower section` e `special indices`.
-- Uma variavel isolada raramente basta; a leitura mais segura depende de padroes e combinacoes.
-- Quando necessario, a interpretacao estrutural deve ser conferida com a sequencia das respostas e com o conteudo.
-- As versoes por locale permanecem separadas porque a enfase clinica e a estrutura de hiperlinks podem mudar conforme a lingua e a cultura.
+- A interpretação depende primeiro de uma codificação estável.
+- O caminho habitual de leitura se organiza por `upper section`, `lower section` e `special índices`.
+- Uma variável isolada raramente basta; a leitura mais segura depende de padrões e combinações.
+- Quando necessário, a interpretação estrutural deve ser conferida com a sequência das respostas e com o conteúdo.
+- As versões por locale permanecem separadas porque a ênfase clínica e a estrutura de hiperlinks podem mudar conforme a língua e a cultura.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- Este dominio precisa permanecer separado dos documentos de `scoring-input`.
-- Um escore alto ou baixo nao equivale automaticamente a um diagnostico.
-- Questao de encaminhamento, extensao do protocolo e contexto cultural continuam importando na leitura do perfil.
+- Este domínio precisa permanecer separado dos documentos de `scoring-input`.
+- Um escore alto ou baixo não equivale automaticamente a um diagnóstico.
+- Questão de encaminhamento, extensão do protocolo e contexto cultural continuam importando na leitura do perfil.
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Secao Superior] Upper Section](ref://result-interpretation/upper-section)
-- [[Interpretacao/Secao Inferior] Lower Section](ref://result-interpretation/lower-section)
-- [[Interpretacao/Indices Especiais] Special Indices](ref://result-interpretation/special-indices)
-- [[Codificacao] scoring-input](ref://scoring-input)
+- [[Interpretação/Seção Superior] Upper Section](ref://result-interpretation/upper-section)
+- [[Interpretação/Seção Inferior] Lower Section](ref://result-interpretation/lower-section)
+- [[Interpretação/Índices Especiais] Special Índices](ref://result-interpretation/special-indices)
+- [[Codificação] scoring-input](ref://scoring-input)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

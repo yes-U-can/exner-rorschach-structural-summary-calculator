@@ -15,7 +15,7 @@ relatedRoutes:
   - "result-interpretation/lower-section/mediation/X_minus_percent"
   - "result-interpretation/lower-section/mediation/P"
   - "scoring-input/fq/u"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-mediation-xplus-xu-processing-2026-03-10.md"

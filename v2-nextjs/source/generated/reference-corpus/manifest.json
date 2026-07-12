@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-25T16:31:16.418Z",
+  "generatedAt": "2026-07-12T06:21:11.719Z",
   "locales": [
     "ko",
     "en",
@@ -21,7 +21,7 @@
       },
       "activeRuntimeSource": "reference-corpus",
       "authorityPolicies": [
-        "exner+ko-guide"
+        "curated-internal-reference"
       ],
       "promotionEnabled": true,
       "promotedAt": "2026-03-09",
@@ -40,7 +40,7 @@
       },
       "activeRuntimeSource": "reference-corpus",
       "authorityPolicies": [
-        "exner-base"
+        "curated-internal-reference"
       ],
       "promotionEnabled": true,
       "promotedAt": "2026-03-10",
@@ -59,7 +59,7 @@
       },
       "activeRuntimeSource": "reference-corpus",
       "authorityPolicies": [
-        "exner-base"
+        "curated-internal-reference"
       ],
       "promotionEnabled": true,
       "promotedAt": "2026-03-10",
@@ -78,7 +78,7 @@
       },
       "activeRuntimeSource": "reference-corpus",
       "authorityPolicies": [
-        "exner+es-manual"
+        "curated-internal-reference"
       ],
       "promotionEnabled": true,
       "promotedAt": "2026-03-09",
@@ -97,7 +97,7 @@
       },
       "activeRuntimeSource": "reference-corpus",
       "authorityPolicies": [
-        "exner-base"
+        "curated-internal-reference"
       ],
       "promotionEnabled": true,
       "promotedAt": "2026-03-11",

@@ -3,7 +3,7 @@ canonicalRoute: "result-interpretation/lower-section/selfPerception/Fr_rF"
 locale: "pt"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/selfPerception/Fr_rF"
-displayTitle: "[Interpretacao/Autopercepcao] Fr + rF"
+displayTitle: "[Interpretação/Autopercepção] Fr + rF"
 aliases:
   - "Fr+rF"
   - "respostas de reflexo"
@@ -16,13 +16,13 @@ relatedRoutes:
   - "scoring-input/determinants/Fr"
   - "scoring-input/determinants/rF"
   - "scoring-input/pair"
-authorityPolicy: "exner-base"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-selfperception-family-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretacao/Autopercepcao] Fr + rF
+# Nome do documento: [Interpretação/Autopercepção] Fr + rF
 
 ## Apelidos e busca
 
@@ -30,30 +30,30 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-selfperception-fam
 - respostas de reflexo
 - autovalorizacao por reflexo
 
-## Definicao central
+## Definição central
 
 `Fr+rF` mostra quantas respostas de reflexo aparecem no protocolo.
-Em `Autopercepcao`, ajuda a ler se a autoimagem precisa de brilho especial, confirmacao ou engrandecimento do proprio valor.
+Em `Autopercepção`, ajuda a ler se a autoimagem precisa de brilho especial, confirmação ou engrandecimento do próprio valor.
 
-## Pontos de interpretacao
+## Pontos de interpretação
 
-- Se `Fr+rF > 0`, vale revisar aumento da importancia pessoal ou necessidade de reforcar a autoimagem.
-- A variavel pode se relacionar mais a necessidade de reafirmacao do que a confianca tranquila.
-- Se o indice egocentrico tambem esta elevado, o foco em si ganha ainda mais peso.
-- Se aparece junto com `SumV`, pode haver mistura instavel de autoengrandecimento e autocritica.
+- Se `Fr+rF > 0`, vale revisar aumento da importância pessoal ou necessidade de reforçar a autoimagem.
+- A variável pode se relacionar mais a necessidade de reafirmação do que a confiança tranquila.
+- Se o índice egocêntrico também está elevado, o foco em si ganha ainda mais peso.
+- Se aparece junto com `SumV`, pode haver mistura instável de autoengrandecimento e autocrítica.
 
-## Cuidados e diferenciacao
+## Cuidados e diferenciação
 
-- Em adultos, respostas de reflexo nao sao comuns, entao mesmo uma instancia merece revisao.
-- Ainda assim, uma unica resposta de reflexo nao define todo o estilo de personalidade.
-- A ausencia de reflexo nao prova ausencia de sensibilidade narcisica ou necessidade de validacao.
+- Em adultos, respostas de reflexo não são comuns, então mesmo uma instância merece revisão.
+- Ainda assim, uma única resposta de reflexo não define todo o estilo de personalidade.
+- A ausência de reflexo não prova ausência de sensibilidade narcisica ou necessidade de validação.
 
-## Limites da interpretacao isolada
+## Limites da interpretação isolada
 
 - Deve ser integrado com `3r+(2)/R`, `SumV`, `FD` e `MOR`.
-- A variavel indica uma direcao da autoimagem, e nao sua estabilidade total.
+- A variável indica uma direção da autoimagem, e não sua estabilidade total.
 
-## Variaveis para revisar em conjunto
+## Variáveis para revisar em conjunto
 
 - `3r+(2)/R`
 - `SumV_self`
@@ -61,16 +61,16 @@ Em `Autopercepcao`, ajuda a ler se a autoimagem precisa de brilho especial, conf
 - `Fr`
 - `rF`
 
-## Referencias cruzadas
+## Referências cruzadas
 
-- [[Interpretacao/Autopercepcao] Autopercepcao](ref://result-interpretation/lower-section/selfPerception)
-- [[Interpretacao/Autopercepcao] Indice Egocentrico](ref://result-interpretation/lower-section/selfPerception/_3r_2_R)
-- [[Interpretacao/Autopercepcao] SumV](ref://result-interpretation/lower-section/selfPerception/SumV_self)
-- [[Interpretacao/Autopercepcao] FD](ref://result-interpretation/lower-section/selfPerception/FD)
-- [[Codificacao/Determinantes] Fr](ref://scoring-input/determinants/Fr)
-- [[Codificacao/Determinantes] rF](ref://scoring-input/determinants/rF)
-- [[Codificacao/Par] Pair](ref://scoring-input/pair)
+- [[Interpretação/Autopercepção] Autopercepção](ref://result-interpretation/lower-section/selfPerception)
+- [[Interpretação/Autopercepção] Índice Egocêntrico](ref://result-interpretation/lower-section/selfPerception/_3r_2_R)
+- [[Interpretação/Autopercepção] SumV](ref://result-interpretation/lower-section/selfPerception/SumV_self)
+- [[Interpretação/Autopercepção] FD](ref://result-interpretation/lower-section/selfPerception/FD)
+- [[Codificação/Determinantes] Fr](ref://scoring-input/determinants/Fr)
+- [[Codificação/Determinantes] rF](ref://scoring-input/determinants/rF)
+- [[Codificação/Par] Pair](ref://scoring-input/pair)
 
 ## Nota de base
 
-- A comparacao detalhada de fontes ficou separada na nota interna de provenance.
+- A comparação detalhada de fontes ficou separada na nota interna de provenance.

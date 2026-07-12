@@ -15,7 +15,7 @@ relatedRoutes:
   - "scoring-input/contents/Fd"
   - "result-interpretation/lower-section/core/SumT"
   - "result-interpretation/special-indices/CDI"
-authorityPolicy: "exner+ko-guide"
+authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/interpersonal/food/index.md"
