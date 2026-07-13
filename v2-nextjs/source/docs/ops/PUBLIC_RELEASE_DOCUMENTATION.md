@@ -2,7 +2,7 @@
 
 Status: Active
 Owner: Product + Engineering
-Last Updated: 2026-07-04
+Last Updated: 2026-07-13
 
 ## Purpose
 
@@ -81,6 +81,16 @@ Every public-facing release record must answer these questions:
 6. What secrets, raw prompts, raw model answers, private payloads, and local runtime files were excluded?
 
 For AI-related releases, also state whether the release changed runtime assistant behavior, evaluation harnesses, or only documentation/governance.
+
+## Version-Line Closure Wording
+
+Release documents must distinguish between closing a specific engineering scope and ending an entire version line.
+
+1. Do not call a patch the "last" or "final" patch of a version line unless the version line has been explicitly frozen as a release decision.
+2. Prefer scope-specific wording such as "closes the initial harness scope", "completes the corpus recalibration batch", or "records the final pass of this eval run".
+3. `final-pass` may describe a particular eval artifact or release candidate. It must not imply that no later corrective release can exist.
+4. If later user testing or an independent audit justifies more work in the same version line, add a dated retrospective scope note to the earlier record instead of silently deleting the old claim.
+5. A retrospective note must identify what the earlier release actually completed and why the later release became necessary. Historical metrics and verification results remain unchanged unless separately corrected with evidence.
 
 ## Public Archive Update Checklist
 

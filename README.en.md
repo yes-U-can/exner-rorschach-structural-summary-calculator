@@ -26,6 +26,18 @@ The detailed public release documentation standard is kept at [`v2-nextjs/source
 - v2.1.10 independent audit closure report: [`v2-nextjs/source/docs/ai-evals/2026-07-13-v2.1.10-final-independent-audit-closure-report.md`](./v2-nextjs/source/docs/ai-evals/2026-07-13-v2.1.10-final-independent-audit-closure-report.md)
 - v1 GAS archive: [`v1-gas/releases`](./v1-gas/releases/)
 
+## v2.1.x AI Quality Sequence
+
+The AI-related v2.1.x patches were not repeated claims that the same work was finished. User testing and independent audits exposed new, bounded scopes in sequence:
+
+- **v2.1.2-v2.1.6:** OpenAI-only harness, prompts, streaming contracts, evals, and release-gate foundation
+- **v2.1.7:** public README, CHANGELOG, release-evidence, and language-policy governance
+- **v2.1.8:** five-locale corpus and OpenAI vector evidence calibration
+- **v2.1.9:** independently audited hybrid retrieval, multilingual search, and OpenAI-only data boundaries
+- **v2.1.10:** confirmed follow-up retrieval and migration-replay defect fixes
+
+Earlier release notes that described the whole version line as closed now include dated retrospective scope notes. Their historical implementation and verification results remain unchanged.
+
 ## v2.1.10
 
 v2.1.10 closes four follow-up defects confirmed after the v2.1.9 independent audit, without changing the app UI/UX. It aligns lexical fallback items with their trace, preserves Rorschach codes attached to Japanese text, constrains broad interpretation queries to interpretation routes, and makes the full Prisma migration history replayable on a fresh pgvector/PostgreSQL database.

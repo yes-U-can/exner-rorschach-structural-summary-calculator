@@ -31,6 +31,18 @@ Exner 종합체계 기반 로샤 구조요약 계산기의 공개 소스 및 릴
 - 최신 v1 실행본: [v1.4.1 배포링크](https://script.google.com/macros/s/AKfycbxMCx13pkrSzFs8f2qXfmxy2LRhkBpZTItFTIfEOoOi-zwurbysnKGfDIYtAeEdQP99/exec)
 - 최신 v1 소스코드: [v1-gas/current](./v1-gas/current/)
 
+## v2.1.x AI 품질 개선 흐름
+
+v2.1.x의 AI 관련 패치는 하나의 “마지막 패치”를 반복한 것이 아니라, 실제 사용과 독립 감사에서 새로 확인된 범위를 순서대로 닫은 과정입니다.
+
+- **v2.1.2-v2.1.6:** OpenAI 전용 하네스, 시스템 프롬프트, 스트리밍 계약, eval, release gate 기반 공사
+- **v2.1.7:** 공개 README·CHANGELOG·릴리즈 증거의 문서 거버넌스 확립
+- **v2.1.8:** 다섯 언어 코퍼스와 OpenAI 벡터 임베딩의 evidence calibration
+- **v2.1.9:** 독립 감사에 따른 hybrid retrieval, 다국어 검색, OpenAI-only 데이터 경계 강화
+- **v2.1.10:** v2.1.9 후속 감사에서 재현된 검색·migration 결함 수정
+
+과거 패치노트에서 버전 라인 전체를 “마감”한다고 표현한 부분은 날짜가 명시된 후속 기록으로 범위를 바로잡았습니다. 당시 구현과 검증 결과는 그대로 보존합니다.
+
 ## [Next.js] 버전 2 릴리즈 기록
 
 - **[2026-07-13] v2.1.10 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.1.10/) [소스코드](./v2-nextjs/source/)
