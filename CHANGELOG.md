@@ -6,6 +6,7 @@
 
 | Date | Version | Type | Patch Note | Source |
 | --- | --- | --- | --- | --- |
+| 2026-07-13 | v2.1.9 | 버그 패치 | [패치노트](./v2-nextjs/releases/v2.1.9/) | [소스코드](./v2-nextjs/source/) |
 | 2026-07-12 | v2.1.8 | 버그 패치 | [패치노트](./v2-nextjs/releases/v2.1.8/) | [소스코드](./v2-nextjs/source/) |
 | 2026-07-04 | v2.1.7 | 버그 패치 | [패치노트](./v2-nextjs/releases/v2.1.7/) | [소스코드](./v2-nextjs/source/) |
 | 2026-07-04 | v2.1.6 | 버그 패치 | [패치노트](./v2-nextjs/releases/v2.1.6/) | [소스코드](./v2-nextjs/source/) |

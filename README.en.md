@@ -19,17 +19,18 @@ The detailed public release documentation standard is kept at [`v2-nextjs/source
 
 ## Current Archive
 
-- Latest v2 release note: [`v2-nextjs/releases/v2.1.8`](./v2-nextjs/releases/v2.1.8/)
+- Latest v2 release note: [`v2-nextjs/releases/v2.1.9`](./v2-nextjs/releases/v2.1.9/)
 - v2 public source snapshot: [`v2-nextjs/source`](./v2-nextjs/source/)
 - AI quality gate docs: [`v2-nextjs/source/docs/ai-evals/README.md`](./v2-nextjs/source/docs/ai-evals/README.md)
 - AI human rubric: [`v2-nextjs/source/docs/ai-evals/HUMAN_RUBRIC.md`](./v2-nextjs/source/docs/ai-evals/HUMAN_RUBRIC.md)
+- v2.1.9 RAG hardening report: [`v2-nextjs/source/docs/ai-evals/2026-07-13-v2.1.9-rag-retrieval-hardening-report.md`](./v2-nextjs/source/docs/ai-evals/2026-07-13-v2.1.9-rag-retrieval-hardening-report.md)
 - v1 GAS archive: [`v1-gas/releases`](./v1-gas/releases/)
 
-## v2.1.8
+## v2.1.9
 
-v2.1.8 is the final AI quality hardening patch in the v2.1.x series. It does not change the app UI/UX.
+v2.1.9 hardens the five-locale RAG retrieval path without changing the app UI/UX. It replaces direct lexical/vector score addition with weighted Reciprocal Rank Fusion, improves low-signal and multilingual token handling, minimizes coding-assistant embedding queries, adds a production-like `/api/chat` live eval, and makes legacy provider residue release-blocking.
 
-The release calibrates the five-locale knowledge corpus to explicit evidence tiers, refreshes all vector embeddings, strengthens retrieval and evaluation contracts, and records successful GPT-5.5 single-turn and multi-turn live evaluations. The public technical report contains reproducible aggregate evidence without raw prompts, raw answers, API keys, private assessment data, or private source provenance.
+The review workflow records **Claude Fable 5** as the independent audit and correction reviewer, and **GPT-5.6 Sol / Codex** as the local reproduction, implementation, and measurement agent. The report includes both accepted findings and corrected audit mistakes. These roles are engineering-process attribution, not clinical validation or vendor certification.
 
 ## Privacy Boundary
 
