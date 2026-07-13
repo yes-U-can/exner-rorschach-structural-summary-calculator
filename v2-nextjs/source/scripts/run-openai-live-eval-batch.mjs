@@ -3,6 +3,7 @@ import { spawn } from 'node:child_process';
 import { mkdirSync, writeFileSync, appendFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { loadProjectEnv } from './load-project-env.mjs';
+import { getSourceMetadata } from './lib/sourceMetadata.mjs';
 
 const PRICE_PER_1M_TOKENS = {
   'gpt-4o-mini': { input: 0.15, output: 0.6 },
@@ -117,11 +118,14 @@ function parseEvalEvents(stdout) {
 const args = parseArgs(process.argv.slice(2));
 loadProjectEnv(process.cwd());
 
-if (!process.env.OPENAI_API_KEY) {
+const apiKey = process.env.OPENAI_API_KEY?.trim();
+
+if (!apiKey) {
   throw new Error('OPENAI_API_KEY is required in the environment.');
 }
 
 const outputPath = resolve(args.output);
+const source = getSourceMetadata(process.cwd());
 mkdirSync(dirname(outputPath), { recursive: true });
 writeFileSync(
   outputPath,
@@ -135,6 +139,7 @@ writeFileSync(
     suite: args.suite,
     budgetUsd: args.budgetUsd,
     ids: args.ids || null,
+    source,
   })}\n`,
 );
 
@@ -155,6 +160,7 @@ for (let round = 1; round <= args.rounds; round += 1) {
 
     const env = {
       ...process.env,
+      OPENAI_API_KEY: apiKey,
       OPENAI_LIVE_EVAL_MODEL: args.model,
       OPENAI_LIVE_EVAL_RETRIEVAL: args.retrieval,
       OPENAI_LIVE_EVAL_LOCALE: locale,
@@ -184,6 +190,7 @@ for (let round = 1; round <= args.rounds; round += 1) {
           model: args.model,
           retrieval: args.retrieval,
           costUsd: Number(eventCostUsd.toFixed(8)),
+          source,
           ...event,
         })}\n`,
       );
@@ -197,6 +204,7 @@ for (let round = 1; round <= args.rounds; round += 1) {
       fixtureCount: events.length,
       runCostUsd: Number(runCostUsd.toFixed(8)),
       totalCostUsd: Number(totalCostUsd.toFixed(8)),
+      source,
     };
     appendFileSync(outputPath, `${JSON.stringify(runRecord)}\n`);
     console.log(`[ai-live-eval-batch] runCost=$${runCostUsd.toFixed(4)} totalCost=$${totalCostUsd.toFixed(4)}`);
@@ -219,6 +227,7 @@ const summary = {
   failedRuns,
   totalCostUsd: Number(totalCostUsd.toFixed(8)),
   issueCounts: Object.fromEntries([...issueCounts.entries()].sort()),
+  source,
 };
 appendFileSync(outputPath, `${JSON.stringify(summary)}\n`);
 console.log(`\n[ai-live-eval-batch] summary ${JSON.stringify(summary, null, 2)}`);

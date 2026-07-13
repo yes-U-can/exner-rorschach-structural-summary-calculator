@@ -1,6 +1,6 @@
 {
   "name": "rorschach-calculator-v2",
-  "version": "2.1.9",
+  "version": "2.1.10",
   "private": true,
   "scripts": {
     "docs:generate-corpus": "node scripts/generate-reference-corpus.mjs && node scripts/generate-reference-quality-report.mjs && node scripts/generate-reference-release-snapshot.mjs",
@@ -26,6 +26,7 @@
     "ai:evaluate-artifacts": "node scripts/summarize-ai-eval-artifacts.mjs",
     "ai:evaluate-human-records": "node scripts/score-ai-human-review-records.mjs",
     "ai:release-gate": "node scripts/run-ai-release-gate.mjs",
+    "db:verify-fresh-replay": "node scripts/verify-prisma-fresh-replay.mjs",
     "ai:evaluate-live:openai": "vitest run __tests__/aiLiveEval.openai.test.ts --reporter=verbose",
     "ai:evaluate-live:openai:multiturn": "vitest run __tests__/aiLiveMultiTurn.openai.test.ts --reporter=verbose",
     "ai:evaluate-live:openai:route": "node scripts/run-openai-route-eval.mjs",

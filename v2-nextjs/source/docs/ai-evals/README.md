@@ -41,6 +41,7 @@ Human review rubric:
 - [`2026-07-03-v2.1.6-ai-quality-closure-gate.md`](./2026-07-03-v2.1.6-ai-quality-closure-gate.md)
 - [`2026-07-12-corpus-evidence-calibration-report.md`](./2026-07-12-corpus-evidence-calibration-report.md)
 - [`2026-07-13-v2.1.9-rag-retrieval-hardening-report.md`](./2026-07-13-v2.1.9-rag-retrieval-hardening-report.md)
+- [`2026-07-13-v2.1.10-final-independent-audit-closure-report.md`](./2026-07-13-v2.1.10-final-independent-audit-closure-report.md)
 
 Run the five-locale hybrid retrieval development challenge with real OpenAI query embeddings and the runtime vector database:
 
@@ -75,10 +76,10 @@ npm run ai:evaluate-live:batch -- --suite multiturn --model gpt-5.5 --locales en
 Run the explicit production-like `/api/chat` path with a synthetic validated Structural Summary CSV, real BYOK cookie handling, runtime hybrid RAG, GPT-5.5 streaming, and HITL contracts:
 
 ```bash
-npm run ai:evaluate-live:openai:route
+npm run ai:evaluate-live:openai:route -- --output docs/ai-evals/route-eval.jsonl
 ```
 
-The route eval keeps the model output in process memory only. It prints aggregate status and contract metadata, not the raw response.
+The route eval keeps model output in process memory only and writes a sanitized JSONL artifact containing aggregate status, contract metadata, app version, source commit, and dirty-tree state. It does not persist the raw response.
 
 Audit the saved JSONL artifacts:
 

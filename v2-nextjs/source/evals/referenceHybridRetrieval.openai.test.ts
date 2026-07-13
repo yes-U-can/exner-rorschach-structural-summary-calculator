@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import { execFileSync } from 'node:child_process';
 import path from 'node:path';
 
 import { describe, expect, it } from 'vitest';
@@ -74,7 +75,20 @@ function round(value: number, digits = 4): number {
   return Number(value.toFixed(digits));
 }
 
-const apiKey = process.env.OPENAI_API_KEY;
+function getSourceMetadata() {
+  const packageJson = JSON.parse(fs.readFileSync(path.resolve('package.json'), 'utf8')) as {
+    version?: string;
+  };
+  const gitCommit = execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim();
+  const gitDirty =
+    execFileSync('git', ['status', '--porcelain', '--untracked-files=no'], {
+      encoding: 'utf8',
+    }).trim().length > 0;
+
+  return { appVersion: packageJson.version ?? null, gitCommit, gitDirty };
+}
+
+const apiKey = process.env.OPENAI_API_KEY?.trim() || undefined;
 const challengeSet = loadChallengeSet();
 const shouldRun = process.env.REFERENCE_HYBRID_EVAL === '1' && Boolean(apiKey);
 const shouldEnforce = process.env.REFERENCE_HYBRID_EVAL_ENFORCE === '1';
@@ -160,6 +174,7 @@ describe.runIf(shouldRun)('OpenAI hybrid reference retrieval challenge', () => {
       generationModelCalls: 0,
       embeddingQueryCalls: results.length,
       fixtureCount: results.length,
+      source: getSourceMetadata(),
       metrics: {
         broadHitAt1: round(broadHitAt1),
         broadHitAt8: round(broadHitAt8),

@@ -1,13 +1,39 @@
-import { describe, expect, it } from 'vitest';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import type { KnowledgeItem } from '@/lib/chatKnowledge';
 import type { CodingRuleChunk } from '@/lib/codingAssistKnowledge';
 import {
+  getHybridInterpretationKnowledge,
   rankMergedCodingChunks,
   rankMergedKnowledge,
   rankMergedKnowledgeDetailed,
 } from '@/lib/referenceHybridRetrieval';
 
+const retrievalMocks = vi.hoisted(() => ({
+  runtimeReady: vi.fn(() => false),
+  embedQuery: vi.fn(),
+  searchVectors: vi.fn(),
+}));
+
+vi.mock('@/lib/referenceVectorRuntime', () => ({
+  isReferenceVectorRuntimeReady: retrievalMocks.runtimeReady,
+}));
+
+vi.mock('@/lib/referenceEmbeddings', () => ({
+  embedReferenceQuery: retrievalMocks.embedQuery,
+}));
+
+vi.mock('@/lib/referenceVectorStore', () => ({
+  searchReferenceChunkEmbeddings: retrievalMocks.searchVectors,
+}));
+
 describe('referenceHybridRetrieval', () => {
+  beforeEach(() => {
+    retrievalMocks.runtimeReady.mockReset();
+    retrievalMocks.runtimeReady.mockReturnValue(false);
+    retrievalMocks.embedQuery.mockReset();
+    retrievalMocks.searchVectors.mockReset();
+  });
+
   it('keeps exact route-oriented interpretation hits above broad vector matches', () => {
     const exactRoute: KnowledgeItem = {
       id: 'route:scoring-input/dq/+',
@@ -191,6 +217,30 @@ describe('referenceHybridRetrieval', () => {
     expect(ranked.trace[0]?.sourceKinds).toEqual(['lexical', 'vector']);
   });
 
+  it('merges keyless lexical and vector copies with a stable content key', () => {
+    const nearby: KnowledgeItem = {
+      title: 'Nearby item',
+      content: 'Nearby content.',
+      source: 'builtin',
+    };
+    const shared: KnowledgeItem = {
+      title: 'Shared item',
+      content: 'The same item arrived from both retrieval paths.',
+      source: 'builtin',
+    };
+
+    const ranked = rankMergedKnowledgeDetailed(
+      'shared item',
+      [nearby, shared],
+      [{ item: shared, similarity: 0.88 }],
+      4,
+    );
+    const sharedTrace = ranked.trace.find((entry) => entry.title === shared.title);
+
+    expect(ranked.items.filter((item) => item.title === shared.title)).toHaveLength(1);
+    expect(sharedTrace?.sourceKinds).toEqual(['lexical', 'vector']);
+  });
+
   it('preserves the broad interpretation anchor through fusion', () => {
     const overview: KnowledgeItem = {
       id: 'route:result-interpretation',
@@ -240,6 +290,47 @@ describe('referenceHybridRetrieval', () => {
     expect(ranked.items.some((item) => item.canonicalRoute?.startsWith('scoring-input'))).toBe(
       false,
     );
+  });
+
+  it('keeps lexical fallback items and trace aligned for broad questions', async () => {
+    const result = await getHybridInterpretationKnowledge({
+      query: 'How should I approach the results as a whole?',
+      lang: 'en',
+      provider: 'openai',
+      apiKey: 'unused-in-lexical-fallback',
+      limit: 8,
+    });
+
+    expect(result.mode).toBe('lexical');
+    expect(result.vectorHitCount).toBe(0);
+    expect(result.items.map((item) => item.canonicalRoute ?? item.id)).toEqual(
+      result.trace.map((entry) => entry.canonicalRoute ?? entry.id),
+    );
+    expect(
+      result.items.every(
+        (item) =>
+          item.canonicalRoute === 'result-interpretation' ||
+          item.canonicalRoute?.startsWith('result-interpretation/'),
+      ),
+    ).toBe(true);
+  });
+
+  it('reports lexical mode when the vector runtime returns no usable hits', async () => {
+    retrievalMocks.runtimeReady.mockReturnValue(true);
+    retrievalMocks.embedQuery.mockResolvedValue({ vector: [0.1], model: 'test', dimensions: 1 });
+    retrievalMocks.searchVectors.mockResolvedValue([]);
+
+    const result = await getHybridInterpretationKnowledge({
+      query: 'How should Lambda be interpreted?',
+      lang: 'en',
+      provider: 'openai',
+      apiKey: 'test-key',
+      limit: 4,
+    });
+
+    expect(result.mode).toBe('lexical');
+    expect(result.vectorHitCount).toBe(0);
+    expect(result.items.length).toBeGreaterThan(0);
   });
 
   it('keeps coding retrieval biased toward explicit scoring chunks', () => {

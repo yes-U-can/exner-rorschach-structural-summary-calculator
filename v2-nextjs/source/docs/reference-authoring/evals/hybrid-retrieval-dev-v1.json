@@ -20,6 +20,14 @@
       "forbiddenTopRoutePrefixes": ["scoring-input/"]
     },
     {
+      "id": "broad-ko-results-as-a-whole",
+      "locale": "ko",
+      "bucket": "broad",
+      "query": "결과 요약을 전체적으로 어떻게 살펴봐야 하나요?",
+      "requiredRoutes": ["result-interpretation"],
+      "forbiddenTopRoutePrefixes": ["scoring-input/"]
+    },
+    {
       "id": "broad-en-where-start",
       "locale": "en",
       "bucket": "broad",
@@ -32,6 +40,14 @@
       "locale": "en",
       "bucket": "broad",
       "query": "I need a first-pass view of the whole record. What should I inspect first?",
+      "requiredRoutes": ["result-interpretation"],
+      "forbiddenTopRoutePrefixes": ["scoring-input/"]
+    },
+    {
+      "id": "broad-en-results-as-a-whole",
+      "locale": "en",
+      "bucket": "broad",
+      "query": "How should I approach the results as a whole?",
       "requiredRoutes": ["result-interpretation"],
       "forbiddenTopRoutePrefixes": ["scoring-input/"]
     },
@@ -52,6 +68,14 @@
       "forbiddenTopRoutePrefixes": ["scoring-input/"]
     },
     {
+      "id": "broad-ja-results-as-a-whole",
+      "locale": "ja",
+      "bucket": "broad",
+      "query": "結果を全体としてどのように見ればよいですか。",
+      "requiredRoutes": ["result-interpretation"],
+      "forbiddenTopRoutePrefixes": ["scoring-input/"]
+    },
+    {
       "id": "broad-es-where-start",
       "locale": "es",
       "bucket": "broad",
@@ -68,6 +92,14 @@
       "forbiddenTopRoutePrefixes": ["scoring-input/"]
     },
     {
+      "id": "broad-es-results-as-a-whole",
+      "locale": "es",
+      "bucket": "broad",
+      "query": "¿Cómo debo abordar los resultados en conjunto?",
+      "requiredRoutes": ["result-interpretation"],
+      "forbiddenTopRoutePrefixes": ["scoring-input/"]
+    },
+    {
       "id": "broad-pt-where-start",
       "locale": "pt",
       "bucket": "broad",
@@ -80,6 +112,14 @@
       "locale": "pt",
       "bucket": "broad",
       "query": "A partir de uma visão geral, como leio o protocolo completo?",
+      "requiredRoutes": ["result-interpretation"],
+      "forbiddenTopRoutePrefixes": ["scoring-input/"]
+    },
+    {
+      "id": "broad-pt-results-as-a-whole",
+      "locale": "pt",
+      "bucket": "broad",
+      "query": "Como devo analisar os resultados como um todo?",
       "requiredRoutes": ["result-interpretation"],
       "forbiddenTopRoutePrefixes": ["scoring-input/"]
     },

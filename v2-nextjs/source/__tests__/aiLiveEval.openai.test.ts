@@ -19,7 +19,7 @@ import {
   getHybridInterpretationKnowledge,
 } from '@/lib/referenceHybridRetrieval';
 
-const apiKey = process.env.OPENAI_API_KEY;
+const apiKey = process.env.OPENAI_API_KEY?.trim() || undefined;
 const liveEvalModel = process.env.OPENAI_LIVE_EVAL_MODEL ?? DEFAULT_PROVIDER_MODEL_IDS.openai;
 const liveEvalLocale = process.env.OPENAI_LIVE_EVAL_LOCALE;
 const liveEvalWorkflow = process.env.OPENAI_LIVE_EVAL_WORKFLOW as AiWorkflowMode | undefined;

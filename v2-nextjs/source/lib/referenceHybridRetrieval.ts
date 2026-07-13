@@ -3,6 +3,7 @@ import { type Provider } from '@/lib/aiModels';
 import {
   type KnowledgeItem,
   getBuiltInKnowledge,
+  isBroadInterpretationQuery,
   selectRelevantKnowledge,
 } from '@/lib/chatKnowledge';
 import {
@@ -165,6 +166,10 @@ function isInterpretationKnowledgeItem(item: KnowledgeItem): boolean {
   );
 }
 
+function getKnowledgeMergeKey(item: KnowledgeItem): string {
+  return item.canonicalRoute ?? item.id ?? `${item.title}\u0000${item.content}`;
+}
+
 function scoreExactOrPrefixMatch(
   query: string,
   value?: string | null,
@@ -234,8 +239,7 @@ export function rankMergedKnowledgeDetailed(
   limit: number,
 ): { items: KnowledgeItem[]; trace: RetrievalTraceEntry[] } {
   const merged = new Map<string, MergeAccumulator<KnowledgeItem>>();
-  const getKey = (item: KnowledgeItem, index: number) =>
-    item.canonicalRoute ?? item.id ?? `${item.title}:${index}`;
+  const getKey = (item: KnowledgeItem) => getKnowledgeMergeKey(item);
   const deduplicatedLexicalCandidates = deduplicateByKey(lexicalItems, getKey);
   const broadInterpretationAnchor =
     deduplicatedLexicalCandidates[0]?.canonicalRoute === 'result-interpretation';
@@ -252,7 +256,7 @@ export function rankMergedKnowledgeDetailed(
     : preparedVectorCandidates;
 
   lexicalCandidates.forEach((item, index) => {
-    const key = getKey(item, index);
+    const key = getKey(item);
     const overlapScore = scoreQueryOverlap(query, item);
     const rerankBonus =
       scoreKnowledgeRerankBonus(query, item) +
@@ -283,7 +287,7 @@ export function rankMergedKnowledgeDetailed(
   });
 
   vectorCandidates.forEach(({ item, similarity }, index) => {
-    const key = getKey(item, index);
+    const key = getKey(item);
     const existing = merged.get(key);
     const vectorScore = scoreRrfRank(
       index,
@@ -468,15 +472,19 @@ export async function getHybridInterpretationKnowledge(params: {
   signal?: AbortSignal;
 }): Promise<HybridKnowledgeResult> {
   const limit = params.limit ?? 8;
-  const lexicalItems = selectRelevantKnowledge(params.query, undefined, params.lang).slice(0, limit);
-  const broadInterpretationAnchor = lexicalItems[0]?.canonicalRoute === 'result-interpretation';
+  const broadInterpretation = isBroadInterpretationQuery(params.query, params.lang);
+  const selectedLexicalItems = selectRelevantKnowledge(params.query, undefined, params.lang);
+  const lexicalItems = broadInterpretation
+    ? selectedLexicalItems.filter(isInterpretationKnowledgeItem)
+    : selectedLexicalItems;
+  const lexicalOnly = rankMergedKnowledgeDetailed(params.query, lexicalItems, [], limit);
 
   if (!isReferenceVectorRuntimeReady(params.provider, params.lang)) {
     return {
-      items: lexicalItems,
+      items: lexicalOnly.items,
       mode: 'lexical',
       vectorHitCount: 0,
-      trace: rankMergedKnowledgeDetailed(params.query, lexicalItems, [], limit).trace,
+      trace: lexicalOnly.trace,
     };
   }
 
@@ -493,16 +501,16 @@ export async function getHybridInterpretationKnowledge(params: {
       provider: params.provider,
       queryVector: embedding.vector,
       limit: Math.max(limit * 2, 10),
-      routePrefix: broadInterpretationAnchor ? 'result-interpretation' : undefined,
+      routePrefix: broadInterpretation ? 'result-interpretation' : undefined,
     });
   } catch (error) {
     if (params.signal?.aborted) throw error;
     console.warn('[reference-hybrid-retrieval] Falling back to lexical interpretation retrieval.', error);
     return {
-      items: lexicalItems,
+      items: lexicalOnly.items,
       mode: 'lexical',
       vectorHitCount: 0,
-      trace: rankMergedKnowledgeDetailed(params.query, lexicalItems, [], limit).trace,
+      trace: lexicalOnly.trace,
     };
   }
   const runtimeKnowledge = getBuiltInKnowledge(params.lang);
@@ -514,9 +522,9 @@ export async function getHybridInterpretationKnowledge(params: {
       })
       .filter((value): value is { item: KnowledgeItem; similarity: number } => Boolean(value)),
     INTERPRETATION_MERGE_CONFIG,
-    (item, index) => item.canonicalRoute ?? item.id ?? `${item.title}:${index}`,
+    (item) => getKnowledgeMergeKey(item),
   );
-  const vectorItems = broadInterpretationAnchor
+  const vectorItems = broadInterpretation
     ? preparedVectorItems.filter(({ item }) => isInterpretationKnowledgeItem(item))
     : preparedVectorItems;
 
@@ -524,7 +532,7 @@ export async function getHybridInterpretationKnowledge(params: {
 
   return {
     items: ranked.items,
-    mode: 'hybrid',
+    mode: vectorItems.length > 0 ? 'hybrid' : 'lexical',
     vectorHitCount: vectorItems.length,
     trace: ranked.trace,
   };

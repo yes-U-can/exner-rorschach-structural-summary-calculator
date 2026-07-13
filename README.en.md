@@ -19,12 +19,18 @@ The detailed public release documentation standard is kept at [`v2-nextjs/source
 
 ## Current Archive
 
-- Latest v2 release note: [`v2-nextjs/releases/v2.1.9`](./v2-nextjs/releases/v2.1.9/)
+- Latest v2 release note: [`v2-nextjs/releases/v2.1.10`](./v2-nextjs/releases/v2.1.10/)
 - v2 public source snapshot: [`v2-nextjs/source`](./v2-nextjs/source/)
 - AI quality gate docs: [`v2-nextjs/source/docs/ai-evals/README.md`](./v2-nextjs/source/docs/ai-evals/README.md)
 - AI human rubric: [`v2-nextjs/source/docs/ai-evals/HUMAN_RUBRIC.md`](./v2-nextjs/source/docs/ai-evals/HUMAN_RUBRIC.md)
-- v2.1.9 RAG hardening report: [`v2-nextjs/source/docs/ai-evals/2026-07-13-v2.1.9-rag-retrieval-hardening-report.md`](./v2-nextjs/source/docs/ai-evals/2026-07-13-v2.1.9-rag-retrieval-hardening-report.md)
+- v2.1.10 independent audit closure report: [`v2-nextjs/source/docs/ai-evals/2026-07-13-v2.1.10-final-independent-audit-closure-report.md`](./v2-nextjs/source/docs/ai-evals/2026-07-13-v2.1.10-final-independent-audit-closure-report.md)
 - v1 GAS archive: [`v1-gas/releases`](./v1-gas/releases/)
+
+## v2.1.10
+
+v2.1.10 closes four follow-up defects confirmed after the v2.1.9 independent audit, without changing the app UI/UX. It aligns lexical fallback items with their trace, preserves Rorschach codes attached to Japanese text, constrains broad interpretation queries to interpretation routes, and makes the full Prisma migration history replayable on a fresh pgvector/PostgreSQL database.
+
+The review workflow records **Claude Fable 5** as the independent read-only auditor and **GPT-5.6 Sol / Codex** as the local reproduction, implementation, and measurement agent. All four candidates were independently reproduced before they were fixed. The saved public evidence contains aggregate retrieval and route metadata, but no API key, raw prompt, raw model answer, private assessment payload, or database credential.
 
 ## v2.1.9
 

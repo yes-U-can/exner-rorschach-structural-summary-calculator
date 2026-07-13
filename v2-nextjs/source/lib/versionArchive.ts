@@ -21,6 +21,18 @@ const v2SourceUrl = `${exhibitionRepoUrl}/tree/main/v2-nextjs/source`;
 
 export const v2NextVersions: VersionArchiveEntry[] = [
   {
+    version: 'v2.1.10',
+    title: 'Version 2.1.10',
+    series: 'v2-nextjs',
+    publishedAt: '2026-07-13',
+    releaseKind: 'bugfix',
+    releaseLabel: '버그 패치',
+    summary:
+      '최종 독립 감사에서 확인된 일본어 붙여쓰기 기호, broad 해석 오염, lexical fallback 불일치와 fresh DB migration replay 문제를 수정하고 회귀·CI 게이트를 추가한 AI 검색 품질 마감 패치입니다.',
+    sourceUrl: v2SourceUrl,
+    releaseUrl: v2ReleaseUrl('v2.1.10'),
+  },
+  {
     version: 'v2.1.9',
     title: 'Version 2.1.9',
     series: 'v2-nextjs',

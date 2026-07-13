@@ -153,18 +153,30 @@ describe('AI retrieval contracts', () => {
   it.each([
     ['ko', '이 프로토콜의 전체 해석을 어디서부터 시작하면 좋을까요?'],
     ['ko', '첫 단계에서 구조요약의 전반적인 패턴을 어떻게 읽나요?'],
+    ['ko', '결과 요약을 전체적으로 어떻게 살펴봐야 하나요?'],
     ['en', 'Where should I begin interpreting this protocol?'],
     ['en', 'I need a first-pass view of the whole record. What should I inspect first?'],
+    ['en', 'How should I approach the results as a whole?'],
     ['ja', 'このプロトコルはどこから解釈を始めますか。'],
     ['ja', '構造要約の全体像を最初にどう読めばよいですか。'],
+    ['ja', '結果を全体としてどのように見ればよいですか。'],
     ['es', '¿Por dónde debería empezar a interpretar este protocolo?'],
     ['es', 'A primera vista, ¿cómo leo el patrón general del protocolo?'],
+    ['es', '¿Cómo debo abordar los resultados en conjunto?'],
     ['pt', 'Por onde devo começar a interpretar este protocolo?'],
     ['pt', 'A partir de uma visão geral, como leio o protocolo completo?'],
+    ['pt', 'Como devo analisar os resultados como um todo?'],
   ] as const)('anchors broad %s questions at the interpretation overview', (locale, query) => {
     const knowledge = selectRelevantKnowledge(query, undefined, locale);
 
     expect(knowledge[0]?.canonicalRoute).toBe('result-interpretation');
+    expect(
+      knowledge.every(
+        (item) =>
+          item.canonicalRoute === 'result-interpretation' ||
+          item.canonicalRoute?.startsWith('result-interpretation/'),
+      ),
+    ).toBe(true);
   });
 
   it.each([
@@ -180,6 +192,20 @@ describe('AI retrieval contracts', () => {
     const knowledge = selectRelevantKnowledge(query, undefined, 'ja');
 
     expectTopRoutesToContain(routeList(knowledge), expectedRoute, 4);
+  });
+
+  it.each([
+    ['FQ+の基準を教えてください。', 'scoring-input/fq/+'],
+    ['FQ-の基準を教えてください。', 'scoring-input/fq/-'],
+    ['v/+の基準を教えてください。', 'scoring-input/dq/v/+'],
+    [
+      '3r+(2)/Rの意味を教えてください。',
+      'result-interpretation/lower-section/selfPerception/_3r_2_R',
+    ],
+  ] as const)('preserves attached Japanese code symbols for %s', (query, expectedRoute) => {
+    const knowledge = selectRelevantKnowledge(query, undefined, 'ja');
+
+    expect(knowledge[0]?.canonicalRoute).toBe(expectedRoute);
   });
 
   it('strips Korean verb endings before lexical matching', () => {

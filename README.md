@@ -20,8 +20,8 @@ Exner 종합체계 기반 로샤 구조요약 계산기의 공개 소스 및 릴
 
 ## 현재 공개된 항목
 
-- [Next.js] 버전 2 최신 릴리즈: [v2-nextjs/releases/v2.1.9](./v2-nextjs/releases/v2.1.9/)
-- [Next.js] v2.1.9 RAG 검색 강화 보고서: [v2-nextjs/source/docs/ai-evals/2026-07-13-v2.1.9-rag-retrieval-hardening-report.md](./v2-nextjs/source/docs/ai-evals/2026-07-13-v2.1.9-rag-retrieval-hardening-report.md)
+- [Next.js] 버전 2 최신 릴리즈: [v2-nextjs/releases/v2.1.10](./v2-nextjs/releases/v2.1.10/)
+- [Next.js] v2.1.10 최종 독립 감사 후속조치 보고서: [v2-nextjs/source/docs/ai-evals/2026-07-13-v2.1.10-final-independent-audit-closure-report.md](./v2-nextjs/source/docs/ai-evals/2026-07-13-v2.1.10-final-independent-audit-closure-report.md)
 - [Next.js] v2.1.2 AI 하네스 케이스 스터디: [docs/case-studies/v2.1.2-ai-harness.md](./docs/case-studies/v2.1.2-ai-harness.md)
 - [Next.js] AI 품질 게이트 문서: [v2-nextjs/source/docs/ai-evals/README.md](./v2-nextjs/source/docs/ai-evals/README.md)
 - [Next.js] AI human rubric: [v2-nextjs/source/docs/ai-evals/HUMAN_RUBRIC.md](./v2-nextjs/source/docs/ai-evals/HUMAN_RUBRIC.md)
@@ -33,6 +33,7 @@ Exner 종합체계 기반 로샤 구조요약 계산기의 공개 소스 및 릴
 
 ## [Next.js] 버전 2 릴리즈 기록
 
+- **[2026-07-13] v2.1.10 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.1.10/) [소스코드](./v2-nextjs/source/)
 - **[2026-07-13] v2.1.9 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.1.9/) [소스코드](./v2-nextjs/source/)
 - **[2026-07-12] v2.1.8 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.1.8/) [소스코드](./v2-nextjs/source/)
 - **[2026-07-04] v2.1.7 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.1.7/) [소스코드](./v2-nextjs/source/)

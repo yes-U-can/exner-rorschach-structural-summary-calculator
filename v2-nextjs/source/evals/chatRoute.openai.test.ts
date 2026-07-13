@@ -11,7 +11,7 @@ import {
 import { CHAT_STREAM_PROTOCOL, consumeChatEventStream } from '@/lib/chatStreamProtocol';
 import { validateStructuralSummaryCsv } from '@/lib/structuralSummaryCsv';
 
-const apiKey = process.env.OPENAI_API_KEY;
+const apiKey = process.env.OPENAI_API_KEY?.trim() || undefined;
 const shouldRun = process.env.OPENAI_ROUTE_LIVE_EVAL === '1' && Boolean(apiKey);
 const fixture = getAiHarnessEvalFixtures().find(
   (candidate) => candidate.id === 'interpretation-en-low-r-validity',

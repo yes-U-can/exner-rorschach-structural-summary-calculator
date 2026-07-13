@@ -131,6 +131,7 @@ const JAPANESE_KANA = /[\p{Script=Hiragana}\p{Script=Katakana}]/u;
 const JAPANESE_SCRIPT = /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}]/u;
 const WORD_TOKEN_PATTERN = /[\p{L}\p{N}%+/'_:-]+/gu;
 const COMPACT_EXPRESSION_PATTERN = /[\p{L}\p{N}%+/'_():-]+/gu;
+const LATIN_ATTACHED_TOKEN_PATTERN = /[A-Za-z0-9][A-Za-z0-9%+/'_():-]*/g;
 const JAPANESE_WORD_SEGMENTER = new Intl.Segmenter('ja', { granularity: 'word' });
 
 export type KnowledgeItem = {
@@ -160,9 +161,17 @@ function tokenizePreservingInputCase(text: string, lang?: Language): string[] {
   if (lang === 'ja' || JAPANESE_KANA.test(folded)) {
     const expanded = new Set<string>();
 
+    for (const attachedToken of folded.match(LATIN_ATTACHED_TOKEN_PATTERN) ?? []) {
+      expanded.add(attachedToken);
+    }
+
     for (const token of coarseTokens) {
       expanded.add(token);
       if (!JAPANESE_SCRIPT.test(token)) continue;
+
+      for (const attachedToken of token.match(LATIN_ATTACHED_TOKEN_PATTERN) ?? []) {
+        expanded.add(attachedToken);
+      }
 
       for (const segment of JAPANESE_WORD_SEGMENTER.segment(token)) {
         if (!segment.isWordLike) continue;
@@ -491,19 +500,28 @@ function inferQueryIntent(queryText: string, lang: Language): QueryIntent {
     /比較/u,
   ];
   const broadInterpretationPatterns = [
-    /어디서부터|어디부터|무엇부터|뭐부터|첫 단계|처음|먼저|전체 해석|전반적인 패턴|개요/u,
+    /어디서부터|어디부터|무엇부터|뭐부터|첫 단계|처음|먼저|전체 해석|전체적|전반적|종합적|결과\s*요약|전체\s*결과|구조\s*요약|개요/u,
     /\bwhere\s+(?:should|do|can)\s+i\s+(?:begin|start)\b/i,
     /\bfirst[- ]pass\b/i,
     /\bwhole (?:record|protocol)\b/i,
+    /\b(?:results?|record|protocol|profile|summary)\b[\s\S]{0,48}\bas a whole\b/i,
+    /\bbig picture\b/i,
     /\b(?:overview|overall)\b/i,
-    /どこから|何から|始め|最初|全体像|概要/u,
+    /どこから|何から|始め|最初|全体像|全体として|結果全体|プロトコル全体|全般的|総合的|概要/u,
     /\bpor donde\b/i,
     /\bprimera vista\b/i,
     /\bpatron general\b/i,
     /\bvision general\b/i,
+    /\ben conjunto\b/i,
+    /\bde (?:forma|manera) global\b/i,
+    /\bcomo un todo\b/i,
     /\b(?:empez|comenz)/i,
     /\bpor onde\b/i,
     /\bvisao geral\b/i,
+    /\bpanorama geral\b/i,
+    /\bem conjunto\b/i,
+    /\bcomo um todo\b/i,
+    /\bde forma (?:geral|global)\b/i,
     /\bprimeir/i,
     /\bcomec/i,
     /\bprotocolo completo\b/i,
@@ -537,6 +555,13 @@ function inferQueryIntent(queryText: string, lang: Language): QueryIntent {
     interpretationSignal,
     broadInterpretation,
   };
+}
+
+export function isBroadInterpretationQuery(
+  userQuery: string,
+  lang: Language = 'en',
+): boolean {
+  return inferQueryIntent(userQuery, lang).broadInterpretation;
 }
 
 function scoreScopeHints(queryText: string, routeLower: string): number {
@@ -1026,12 +1051,18 @@ export function selectRelevantKnowledge(
     queryIntent,
     lang,
   );
+  const constrainedRankedBuiltin = queryIntent.broadInterpretation
+    ? rankedBuiltin.filter((item) => inferDocDomain(item) === 'interpretation')
+    : rankedBuiltin;
 
-  if (rankedBuiltin.length) return rankedBuiltin;
+  if (constrainedRankedBuiltin.length) return constrainedRankedBuiltin;
 
   const runtimeSummaries = effectiveBuiltIn.filter(
-    (item) => item.retrievalKind === 'runtime-route-summary',
+    (item) =>
+      item.retrievalKind === 'runtime-route-summary' &&
+      (!queryIntent.broadInterpretation || inferDocDomain(item) === 'interpretation'),
   );
+  if (queryIntent.broadInterpretation) return runtimeSummaries.slice(0, 3);
   return runtimeSummaries.length ? runtimeSummaries.slice(0, 3) : effectiveBuiltIn.slice(0, 3);
 }
 

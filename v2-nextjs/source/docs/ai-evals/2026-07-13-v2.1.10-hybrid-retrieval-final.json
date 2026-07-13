@@ -1,0 +1,2915 @@
+{
+  "evalVersion": "hybrid-retrieval-dev-v1",
+  "purpose": "Development challenge set for tuning retrieval. This is not a blind held-out set.",
+  "generatedAt": "2026-07-13T12:41:41.518Z",
+  "embeddingModel": "text-embedding-3-large",
+  "generationModelCalls": 0,
+  "embeddingQueryCalls": 30,
+  "fixtureCount": 30,
+  "source": {
+    "appVersion": "2.1.10",
+    "gitCommit": "f1bd8b82e82efbcef54d53c92571a7d3f1efa342",
+    "gitDirty": false
+  },
+  "metrics": {
+    "broadHitAt1": 1,
+    "broadHitAt8": 1,
+    "namedHitAt4": 1,
+    "relationRequiredRouteCoverageAt8": 1,
+    "broadWorkflowContaminationAt1": 0,
+    "latencyP50Ms": 807,
+    "latencyP95Ms": 2809
+  },
+  "results": [
+    {
+      "fixtureId": "broad-ko-where-start",
+      "locale": "ko",
+      "bucket": "broad",
+      "mode": "hybrid",
+      "vectorHitCount": 1,
+      "latencyMs": 5420,
+      "returnedRoutes": [
+        "result-interpretation",
+        "result-interpretation/upper-section",
+        "result-interpretation/lower-section",
+        "result-interpretation/special-indices"
+      ],
+      "requiredRouteRanks": {
+        "result-interpretation": 1
+      },
+      "topRouteContaminated": false,
+      "trace": [
+        {
+          "canonicalRoute": "result-interpretation",
+          "finalScore": 0.056576,
+          "lexicalRank": 1,
+          "vectorSimilarity": 0.3281,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/upper-section",
+          "finalScore": 0.017742,
+          "lexicalRank": 2,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section",
+          "finalScore": 0.01746,
+          "lexicalRank": 3,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/special-indices",
+          "finalScore": 0.017188,
+          "lexicalRank": 4,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        }
+      ]
+    },
+    {
+      "fixtureId": "broad-ko-first-pass",
+      "locale": "ko",
+      "bucket": "broad",
+      "mode": "hybrid",
+      "vectorHitCount": 4,
+      "latencyMs": 807,
+      "returnedRoutes": [
+        "result-interpretation",
+        "result-interpretation/lower-section",
+        "result-interpretation/upper-section",
+        "result-interpretation/special-indices",
+        "result-interpretation/upper-section/W"
+      ],
+      "requiredRouteRanks": {
+        "result-interpretation": 1
+      },
+      "topRouteContaminated": false,
+      "trace": [
+        {
+          "canonicalRoute": "result-interpretation",
+          "finalScore": 0.056576,
+          "lexicalRank": 1,
+          "vectorSimilarity": 0.5511,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section",
+          "finalScore": 0.036271,
+          "lexicalRank": 2,
+          "vectorSimilarity": 0.4494,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/upper-section",
+          "finalScore": 0.035333,
+          "lexicalRank": 3,
+          "vectorSimilarity": 0.4461,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/special-indices",
+          "finalScore": 0.017188,
+          "lexicalRank": 4,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/upper-section/W",
+          "finalScore": 0.015625,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.3724,
+          "sourceKinds": [
+            "vector"
+          ]
+        }
+      ]
+    },
+    {
+      "fixtureId": "broad-ko-results-as-a-whole",
+      "locale": "ko",
+      "bucket": "broad",
+      "mode": "hybrid",
+      "vectorHitCount": 8,
+      "latencyMs": 747,
+      "returnedRoutes": [
+        "result-interpretation",
+        "result-interpretation/lower-section",
+        "result-interpretation/upper-section",
+        "result-interpretation/special-indices",
+        "result-interpretation/upper-section/ZSum",
+        "result-interpretation/upper-section/W",
+        "result-interpretation/lower-section/selfPerception/SumV_self",
+        "result-interpretation/lower-section/processing"
+      ],
+      "requiredRouteRanks": {
+        "result-interpretation": 1
+      },
+      "topRouteContaminated": false,
+      "trace": [
+        {
+          "canonicalRoute": "result-interpretation",
+          "finalScore": 0.056576,
+          "lexicalRank": 1,
+          "vectorSimilarity": 0.5579,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section",
+          "finalScore": 0.035589,
+          "lexicalRank": 3,
+          "vectorSimilarity": 0.4528,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/upper-section",
+          "finalScore": 0.034667,
+          "lexicalRank": 2,
+          "vectorSimilarity": 0.3947,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/special-indices",
+          "finalScore": 0.017188,
+          "lexicalRank": 4,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/upper-section/ZSum",
+          "finalScore": 0.016023,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.4209,
+          "sourceKinds": [
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/upper-section/W",
+          "finalScore": 0.015625,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.418,
+          "sourceKinds": [
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/selfPerception/SumV_self",
+          "finalScore": 0.015385,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.3993,
+          "sourceKinds": [
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/processing",
+          "finalScore": 0.015152,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.3986,
+          "sourceKinds": [
+            "vector"
+          ]
+        }
+      ]
+    },
+    {
+      "fixtureId": "broad-en-where-start",
+      "locale": "en",
+      "bucket": "broad",
+      "mode": "hybrid",
+      "vectorHitCount": 8,
+      "latencyMs": 2051,
+      "returnedRoutes": [
+        "result-interpretation",
+        "result-interpretation/lower-section",
+        "result-interpretation/upper-section",
+        "result-interpretation/special-indices",
+        "result-interpretation/lower-section/processing",
+        "result-interpretation/lower-section/core",
+        "result-interpretation/lower-section/core/R",
+        "result-interpretation/lower-section/interpersonal/PureH"
+      ],
+      "requiredRouteRanks": {
+        "result-interpretation": 1
+      },
+      "topRouteContaminated": false,
+      "trace": [
+        {
+          "canonicalRoute": "result-interpretation",
+          "finalScore": 0.057026,
+          "lexicalRank": 1,
+          "vectorSimilarity": 0.418,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section",
+          "finalScore": 0.035989,
+          "lexicalRank": 3,
+          "vectorSimilarity": 0.3749,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/upper-section",
+          "finalScore": 0.035527,
+          "lexicalRank": 2,
+          "vectorSimilarity": 0.3351,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/special-indices",
+          "finalScore": 0.017588,
+          "lexicalRank": 4,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/processing",
+          "finalScore": 0.016473,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.3693,
+          "sourceKinds": [
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core",
+          "finalScore": 0.016025,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.3588,
+          "sourceKinds": [
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/R",
+          "finalScore": 0.015752,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.33,
+          "sourceKinds": [
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/interpersonal/PureH",
+          "finalScore": 0.015525,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.3293,
+          "sourceKinds": [
+            "vector"
+          ]
+        }
+      ]
+    },
+    {
+      "fixtureId": "broad-en-first-pass",
+      "locale": "en",
+      "bucket": "broad",
+      "mode": "hybrid",
+      "vectorHitCount": 1,
+      "latencyMs": 878,
+      "returnedRoutes": [
+        "result-interpretation",
+        "result-interpretation/upper-section",
+        "result-interpretation/lower-section/interpersonal/PureH",
+        "result-interpretation/lower-section/interpersonal/SumT_inter",
+        "result-interpretation/upper-section/W",
+        "result-interpretation/upper-section/dq_plus",
+        "result-interpretation/special-indices",
+        "result-interpretation/lower-section"
+      ],
+      "requiredRouteRanks": {
+        "result-interpretation": 1
+      },
+      "topRouteContaminated": false,
+      "trace": [
+        {
+          "canonicalRoute": "result-interpretation",
+          "finalScore": 0.038633,
+          "lexicalRank": 1,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/upper-section",
+          "finalScore": 0.03566,
+          "lexicalRank": 6,
+          "vectorSimilarity": 0.3353,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/interpersonal/PureH",
+          "finalScore": 0.018342,
+          "lexicalRank": 2,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/interpersonal/SumT_inter",
+          "finalScore": 0.01806,
+          "lexicalRank": 3,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/upper-section/W",
+          "finalScore": 0.017788,
+          "lexicalRank": 4,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/upper-section/dq_plus",
+          "finalScore": 0.017223,
+          "lexicalRank": 5,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/special-indices",
+          "finalScore": 0.016726,
+          "lexicalRank": 8,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section",
+          "finalScore": 0.016718,
+          "lexicalRank": 7,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        }
+      ]
+    },
+    {
+      "fixtureId": "broad-en-results-as-a-whole",
+      "locale": "en",
+      "bucket": "broad",
+      "mode": "hybrid",
+      "vectorHitCount": 9,
+      "latencyMs": 637,
+      "returnedRoutes": [
+        "result-interpretation",
+        "result-interpretation/lower-section",
+        "result-interpretation/upper-section",
+        "result-interpretation/upper-section/W",
+        "result-interpretation/lower-section/interpersonal/PureH",
+        "result-interpretation/special-indices",
+        "result-interpretation/lower-section/core/R",
+        "result-interpretation/lower-section/ideation/WSum6"
+      ],
+      "requiredRouteRanks": {
+        "result-interpretation": 1
+      },
+      "topRouteContaminated": false,
+      "trace": [
+        {
+          "canonicalRoute": "result-interpretation",
+          "finalScore": 0.056576,
+          "lexicalRank": 1,
+          "vectorSimilarity": 0.4408,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section",
+          "finalScore": 0.035352,
+          "lexicalRank": 5,
+          "vectorSimilarity": 0.4159,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/upper-section",
+          "finalScore": 0.035263,
+          "lexicalRank": 4,
+          "vectorSimilarity": 0.3673,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/upper-section/W",
+          "finalScore": 0.034716,
+          "lexicalRank": 3,
+          "vectorSimilarity": 0.3602,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/interpersonal/PureH",
+          "finalScore": 0.018292,
+          "lexicalRank": 2,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/special-indices",
+          "finalScore": 0.016967,
+          "lexicalRank": 6,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/R",
+          "finalScore": 0.016173,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.3847,
+          "sourceKinds": [
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/ideation/WSum6",
+          "finalScore": 0.015985,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.3672,
+          "sourceKinds": [
+            "vector"
+          ]
+        }
+      ]
+    },
+    {
+      "fixtureId": "broad-ja-where-start",
+      "locale": "ja",
+      "bucket": "broad",
+      "mode": "hybrid",
+      "vectorHitCount": 10,
+      "latencyMs": 2576,
+      "returnedRoutes": [
+        "result-interpretation",
+        "result-interpretation/upper-section",
+        "result-interpretation/lower-section",
+        "result-interpretation/special-indices",
+        "result-interpretation/lower-section/mediation/P",
+        "result-interpretation/lower-section/processing",
+        "result-interpretation/lower-section/interpersonal/COP",
+        "result-interpretation/lower-section/mediation"
+      ],
+      "requiredRouteRanks": {
+        "result-interpretation": 1
+      },
+      "topRouteContaminated": false,
+      "trace": [
+        {
+          "canonicalRoute": "result-interpretation",
+          "finalScore": 0.055658,
+          "lexicalRank": 1,
+          "vectorSimilarity": 0.3423,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/upper-section",
+          "finalScore": 0.035871,
+          "lexicalRank": 2,
+          "vectorSimilarity": 0.3453,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section",
+          "finalScore": 0.035061,
+          "lexicalRank": 4,
+          "vectorSimilarity": 0.3437,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/special-indices",
+          "finalScore": 0.01746,
+          "lexicalRank": 3,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/mediation/P",
+          "finalScore": 0.016393,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.3772,
+          "sourceKinds": [
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/processing",
+          "finalScore": 0.015385,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.3341,
+          "sourceKinds": [
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/interpersonal/COP",
+          "finalScore": 0.015152,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.332,
+          "sourceKinds": [
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/mediation",
+          "finalScore": 0.014925,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.3308,
+          "sourceKinds": [
+            "vector"
+          ]
+        }
+      ]
+    },
+    {
+      "fixtureId": "broad-ja-first-pass",
+      "locale": "ja",
+      "bucket": "broad",
+      "mode": "hybrid",
+      "vectorHitCount": 5,
+      "latencyMs": 691,
+      "returnedRoutes": [
+        "result-interpretation",
+        "result-interpretation/upper-section",
+        "result-interpretation/lower-section",
+        "result-interpretation/lower-section/processing",
+        "result-interpretation/special-indices",
+        "result-interpretation/lower-section/core",
+        "result-interpretation/lower-section/affect",
+        "result-interpretation/lower-section/mediation"
+      ],
+      "requiredRouteRanks": {
+        "result-interpretation": 1
+      },
+      "topRouteContaminated": false,
+      "trace": [
+        {
+          "canonicalRoute": "result-interpretation",
+          "finalScore": 0.056162,
+          "lexicalRank": 1,
+          "vectorSimilarity": 0.4682,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/upper-section",
+          "finalScore": 0.035854,
+          "lexicalRank": 3,
+          "vectorSimilarity": 0.5031,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section",
+          "finalScore": 0.035615,
+          "lexicalRank": 2,
+          "vectorSimilarity": 0.4494,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/processing",
+          "finalScore": 0.033561,
+          "lexicalRank": 8,
+          "vectorSimilarity": 0.3781,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/special-indices",
+          "finalScore": 0.017188,
+          "lexicalRank": 4,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core",
+          "finalScore": 0.016923,
+          "lexicalRank": 5,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/affect",
+          "finalScore": 0.016667,
+          "lexicalRank": 6,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/mediation",
+          "finalScore": 0.016418,
+          "lexicalRank": 7,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        }
+      ]
+    },
+    {
+      "fixtureId": "broad-ja-results-as-a-whole",
+      "locale": "ja",
+      "bucket": "broad",
+      "mode": "hybrid",
+      "vectorHitCount": 6,
+      "latencyMs": 680,
+      "returnedRoutes": [
+        "result-interpretation",
+        "result-interpretation/upper-section",
+        "result-interpretation/lower-section",
+        "result-interpretation/special-indices",
+        "result-interpretation/upper-section/W",
+        "result-interpretation/lower-section/processing/W_D_Dd",
+        "result-interpretation/lower-section/core/R"
+      ],
+      "requiredRouteRanks": {
+        "result-interpretation": 1
+      },
+      "topRouteContaminated": false,
+      "trace": [
+        {
+          "canonicalRoute": "result-interpretation",
+          "finalScore": 0.056426,
+          "lexicalRank": 1,
+          "vectorSimilarity": 0.4578,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/upper-section",
+          "finalScore": 0.035615,
+          "lexicalRank": 2,
+          "vectorSimilarity": 0.4152,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section",
+          "finalScore": 0.035085,
+          "lexicalRank": 3,
+          "vectorSimilarity": 0.4108,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/special-indices",
+          "finalScore": 0.017188,
+          "lexicalRank": 4,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/upper-section/W",
+          "finalScore": 0.016129,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.4509,
+          "sourceKinds": [
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/processing/W_D_Dd",
+          "finalScore": 0.015385,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.3935,
+          "sourceKinds": [
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/R",
+          "finalScore": 0.015152,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.386,
+          "sourceKinds": [
+            "vector"
+          ]
+        }
+      ]
+    },
+    {
+      "fixtureId": "broad-es-where-start",
+      "locale": "es",
+      "bucket": "broad",
+      "mode": "hybrid",
+      "vectorHitCount": 8,
+      "latencyMs": 2441,
+      "returnedRoutes": [
+        "result-interpretation",
+        "result-interpretation/lower-section",
+        "result-interpretation/upper-section",
+        "result-interpretation/special-indices",
+        "result-interpretation/lower-section/processing",
+        "result-interpretation/lower-section/interpersonal",
+        "result-interpretation/lower-section/core",
+        "result-interpretation/upper-section/dq_vplus"
+      ],
+      "requiredRouteRanks": {
+        "result-interpretation": 1
+      },
+      "topRouteContaminated": false,
+      "trace": [
+        {
+          "canonicalRoute": "result-interpretation",
+          "finalScore": 0.056506,
+          "lexicalRank": 1,
+          "vectorSimilarity": 0.4408,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section",
+          "finalScore": 0.035589,
+          "lexicalRank": 3,
+          "vectorSimilarity": 0.4425,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/upper-section",
+          "finalScore": 0.017742,
+          "lexicalRank": 2,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/special-indices",
+          "finalScore": 0.017588,
+          "lexicalRank": 4,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/processing",
+          "finalScore": 0.016993,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.4756,
+          "sourceKinds": [
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/interpersonal",
+          "finalScore": 0.016025,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.4299,
+          "sourceKinds": [
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core",
+          "finalScore": 0.015785,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.4066,
+          "sourceKinds": [
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/upper-section/dq_vplus",
+          "finalScore": 0.015552,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.4046,
+          "sourceKinds": [
+            "vector"
+          ]
+        }
+      ]
+    },
+    {
+      "fixtureId": "broad-es-first-pass",
+      "locale": "es",
+      "bucket": "broad",
+      "mode": "hybrid",
+      "vectorHitCount": 13,
+      "latencyMs": 680,
+      "returnedRoutes": [
+        "result-interpretation",
+        "result-interpretation/lower-section",
+        "result-interpretation/lower-section/selfPerception/SumV_self",
+        "result-interpretation/special-indices/PTI",
+        "result-interpretation/special-indices",
+        "result-interpretation/lower-section/processing",
+        "result-interpretation/lower-section/core/SumV",
+        "result-interpretation/upper-section"
+      ],
+      "requiredRouteRanks": {
+        "result-interpretation": 1
+      },
+      "topRouteContaminated": false,
+      "trace": [
+        {
+          "canonicalRoute": "result-interpretation",
+          "finalScore": 0.056258,
+          "lexicalRank": 1,
+          "vectorSimilarity": 0.4212,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section",
+          "finalScore": 0.035352,
+          "lexicalRank": 5,
+          "vectorSimilarity": 0.4289,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/selfPerception/SumV_self",
+          "finalScore": 0.018342,
+          "lexicalRank": 2,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/special-indices/PTI",
+          "finalScore": 0.01806,
+          "lexicalRank": 3,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/special-indices",
+          "finalScore": 0.017737,
+          "lexicalRank": 4,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/processing",
+          "finalScore": 0.016993,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.4306,
+          "sourceKinds": [
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/SumV",
+          "finalScore": 0.016968,
+          "lexicalRank": 7,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/upper-section",
+          "finalScore": 0.016967,
+          "lexicalRank": 6,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        }
+      ]
+    },
+    {
+      "fixtureId": "broad-es-results-as-a-whole",
+      "locale": "es",
+      "bucket": "broad",
+      "mode": "hybrid",
+      "vectorHitCount": 8,
+      "latencyMs": 664,
+      "returnedRoutes": [
+        "result-interpretation",
+        "result-interpretation/lower-section",
+        "result-interpretation/upper-section",
+        "result-interpretation/special-indices",
+        "result-interpretation/lower-section/processing",
+        "result-interpretation/lower-section/ideation/WSum6",
+        "result-interpretation/lower-section/core/R",
+        "result-interpretation/lower-section/core"
+      ],
+      "requiredRouteRanks": {
+        "result-interpretation": 1
+      },
+      "topRouteContaminated": false,
+      "trace": [
+        {
+          "canonicalRoute": "result-interpretation",
+          "finalScore": 0.056976,
+          "lexicalRank": 1,
+          "vectorSimilarity": 0.5095,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section",
+          "finalScore": 0.036165,
+          "lexicalRank": 2,
+          "vectorSimilarity": 0.4735,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/upper-section",
+          "finalScore": 0.035739,
+          "lexicalRank": 3,
+          "vectorSimilarity": 0.4743,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/special-indices",
+          "finalScore": 0.017338,
+          "lexicalRank": 4,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/processing",
+          "finalScore": 0.016175,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.4658,
+          "sourceKinds": [
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/ideation/WSum6",
+          "finalScore": 0.015685,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.4652,
+          "sourceKinds": [
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/R",
+          "finalScore": 0.015302,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.452,
+          "sourceKinds": [
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core",
+          "finalScore": 0.015225,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.4465,
+          "sourceKinds": [
+            "vector"
+          ]
+        }
+      ]
+    },
+    {
+      "fixtureId": "broad-pt-where-start",
+      "locale": "pt",
+      "bucket": "broad",
+      "mode": "hybrid",
+      "vectorHitCount": 10,
+      "latencyMs": 1843,
+      "returnedRoutes": [
+        "result-interpretation",
+        "result-interpretation/lower-section",
+        "result-interpretation/lower-section/affect/SumC_WSumC",
+        "result-interpretation/lower-section/ideation/WSum6",
+        "result-interpretation/upper-section/ZSum",
+        "result-interpretation/special-indices",
+        "result-interpretation/upper-section",
+        "result-interpretation/lower-section/processing"
+      ],
+      "requiredRouteRanks": {
+        "result-interpretation": 1
+      },
+      "topRouteContaminated": false,
+      "trace": [
+        {
+          "canonicalRoute": "result-interpretation",
+          "finalScore": 0.056426,
+          "lexicalRank": 1,
+          "vectorSimilarity": 0.4737,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section",
+          "finalScore": 0.034547,
+          "lexicalRank": 7,
+          "vectorSimilarity": 0.461,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/affect/SumC_WSumC",
+          "finalScore": 0.018142,
+          "lexicalRank": 2,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/ideation/WSum6",
+          "finalScore": 0.01786,
+          "lexicalRank": 3,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/upper-section/ZSum",
+          "finalScore": 0.017588,
+          "lexicalRank": 4,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/special-indices",
+          "finalScore": 0.017473,
+          "lexicalRank": 5,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/upper-section",
+          "finalScore": 0.016667,
+          "lexicalRank": 6,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/processing",
+          "finalScore": 0.016473,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.4593,
+          "sourceKinds": [
+            "vector"
+          ]
+        }
+      ]
+    },
+    {
+      "fixtureId": "broad-pt-first-pass",
+      "locale": "pt",
+      "bucket": "broad",
+      "mode": "hybrid",
+      "vectorHitCount": 9,
+      "latencyMs": 642,
+      "returnedRoutes": [
+        "result-interpretation",
+        "result-interpretation/lower-section",
+        "result-interpretation/upper-section",
+        "result-interpretation/lower-section/interpersonal/HumanCont",
+        "result-interpretation/upper-section/ZSum",
+        "result-interpretation/special-indices",
+        "result-interpretation/lower-section/processing",
+        "result-interpretation/lower-section/core/R"
+      ],
+      "requiredRouteRanks": {
+        "result-interpretation": 1
+      },
+      "topRouteContaminated": false,
+      "trace": [
+        {
+          "canonicalRoute": "result-interpretation",
+          "finalScore": 0.056462,
+          "lexicalRank": 1,
+          "vectorSimilarity": 0.4516,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section",
+          "finalScore": 0.036131,
+          "lexicalRank": 4,
+          "vectorSimilarity": 0.4682,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/upper-section",
+          "finalScore": 0.033998,
+          "lexicalRank": 5,
+          "vectorSimilarity": 0.4006,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/interpersonal/HumanCont",
+          "finalScore": 0.018042,
+          "lexicalRank": 2,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/upper-section/ZSum",
+          "finalScore": 0.01761,
+          "lexicalRank": 3,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/special-indices",
+          "finalScore": 0.017217,
+          "lexicalRank": 6,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/processing",
+          "finalScore": 0.016423,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.4481,
+          "sourceKinds": [
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/R",
+          "finalScore": 0.016175,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.4359,
+          "sourceKinds": [
+            "vector"
+          ]
+        }
+      ]
+    },
+    {
+      "fixtureId": "broad-pt-results-as-a-whole",
+      "locale": "pt",
+      "bucket": "broad",
+      "mode": "hybrid",
+      "vectorHitCount": 10,
+      "latencyMs": 881,
+      "returnedRoutes": [
+        "result-interpretation",
+        "result-interpretation/lower-section",
+        "result-interpretation/upper-section",
+        "result-interpretation/special-indices",
+        "result-interpretation/lower-section/core/R",
+        "result-interpretation/special-indices/OBS",
+        "result-interpretation/lower-section/ideation/WSum6",
+        "result-interpretation/lower-section/ideation/Sum6"
+      ],
+      "requiredRouteRanks": {
+        "result-interpretation": 1
+      },
+      "topRouteContaminated": false,
+      "trace": [
+        {
+          "canonicalRoute": "result-interpretation",
+          "finalScore": 0.057026,
+          "lexicalRank": 1,
+          "vectorSimilarity": 0.5216,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section",
+          "finalScore": 0.035727,
+          "lexicalRank": 2,
+          "vectorSimilarity": 0.4764,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/upper-section",
+          "finalScore": 0.01776,
+          "lexicalRank": 3,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/special-indices",
+          "finalScore": 0.017338,
+          "lexicalRank": 4,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/R",
+          "finalScore": 0.016429,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.5011,
+          "sourceKinds": [
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/special-indices/OBS",
+          "finalScore": 0.016225,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.4797,
+          "sourceKinds": [
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/ideation/WSum6",
+          "finalScore": 0.016173,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.4821,
+          "sourceKinds": [
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/ideation/Sum6",
+          "finalScore": 0.015452,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.4763,
+          "sourceKinds": [
+            "vector"
+          ]
+        }
+      ]
+    },
+    {
+      "fixtureId": "named-lambda-ko",
+      "locale": "ko",
+      "bucket": "named-variable",
+      "mode": "hybrid",
+      "vectorHitCount": 5,
+      "latencyMs": 2416,
+      "returnedRoutes": [
+        "result-interpretation/lower-section/core/Lambda",
+        "result-interpretation/lower-section/core/R",
+        "result-interpretation/lower-section/core/EA",
+        "result-interpretation/lower-section/core/EB",
+        "scoring-input/determinants/F",
+        "scoring-input/fq",
+        "result-interpretation/lower-section/processing/W_D_Dd",
+        "result-interpretation/lower-section/processing/W_M"
+      ],
+      "requiredRouteRanks": {
+        "result-interpretation/lower-section/core/Lambda": 1
+      },
+      "topRouteContaminated": false,
+      "trace": [
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/Lambda",
+          "finalScore": 0.036426,
+          "lexicalRank": 1,
+          "vectorSimilarity": 0.6251,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/R",
+          "finalScore": 0.035717,
+          "lexicalRank": 4,
+          "vectorSimilarity": 0.4222,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/EA",
+          "finalScore": 0.034548,
+          "lexicalRank": 5,
+          "vectorSimilarity": 0.3841,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/EB",
+          "finalScore": 0.034051,
+          "lexicalRank": 6,
+          "vectorSimilarity": 0.3778,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "scoring-input/determinants/F",
+          "finalScore": 0.017892,
+          "lexicalRank": 2,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "scoring-input/fq",
+          "finalScore": 0.01746,
+          "lexicalRank": 3,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/processing/W_D_Dd",
+          "finalScore": 0.016418,
+          "lexicalRank": 7,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/processing/W_M",
+          "finalScore": 0.016176,
+          "lexicalRank": 8,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        }
+      ]
+    },
+    {
+      "fixtureId": "named-lambda-en",
+      "locale": "en",
+      "bucket": "named-variable",
+      "mode": "hybrid",
+      "vectorHitCount": 12,
+      "latencyMs": 2159,
+      "returnedRoutes": [
+        "result-interpretation/lower-section/core/Lambda",
+        "result-interpretation/lower-section/core/R",
+        "result-interpretation/lower-section/core/EB",
+        "scoring-input/determinants/F",
+        "scoring-input/fq",
+        "result-interpretation/lower-section/core/EA",
+        "result-interpretation/lower-section/processing/W_M",
+        "result-interpretation/lower-section/processing/W_D_Dd"
+      ],
+      "requiredRouteRanks": {
+        "result-interpretation/lower-section/core/Lambda": 1
+      },
+      "topRouteContaminated": false,
+      "trace": [
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/Lambda",
+          "finalScore": 0.037026,
+          "lexicalRank": 1,
+          "vectorSimilarity": 0.6357,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/R",
+          "finalScore": 0.035917,
+          "lexicalRank": 4,
+          "vectorSimilarity": 0.4718,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/EB",
+          "finalScore": 0.03499,
+          "lexicalRank": 6,
+          "vectorSimilarity": 0.4545,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "scoring-input/determinants/F",
+          "finalScore": 0.018342,
+          "lexicalRank": 2,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "scoring-input/fq",
+          "finalScore": 0.01806,
+          "lexicalRank": 3,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/EA",
+          "finalScore": 0.017523,
+          "lexicalRank": 5,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/processing/W_M",
+          "finalScore": 0.017018,
+          "lexicalRank": 7,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/processing/W_D_Dd",
+          "finalScore": 0.016776,
+          "lexicalRank": 8,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        }
+      ]
+    },
+    {
+      "fixtureId": "named-lambda-ja",
+      "locale": "ja",
+      "bucket": "named-variable",
+      "mode": "hybrid",
+      "vectorHitCount": 9,
+      "latencyMs": 2285,
+      "returnedRoutes": [
+        "result-interpretation/lower-section/core/Lambda",
+        "result-interpretation/lower-section/core/R",
+        "result-interpretation/lower-section/core/EB",
+        "scoring-input/determinants/F",
+        "scoring-input/fq",
+        "result-interpretation/lower-section/core/EA",
+        "result-interpretation/lower-section/processing/W_D_Dd",
+        "result-interpretation/lower-section/processing/W_M"
+      ],
+      "requiredRouteRanks": {
+        "result-interpretation/lower-section/core/Lambda": 1
+      },
+      "topRouteContaminated": false,
+      "trace": [
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/Lambda",
+          "finalScore": 0.039426,
+          "lexicalRank": 1,
+          "vectorSimilarity": 0.6012,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/R",
+          "finalScore": 0.035317,
+          "lexicalRank": 4,
+          "vectorSimilarity": 0.4291,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/EB",
+          "finalScore": 0.033159,
+          "lexicalRank": 6,
+          "vectorSimilarity": 0.3877,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "scoring-input/determinants/F",
+          "finalScore": 0.017742,
+          "lexicalRank": 2,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "scoring-input/fq",
+          "finalScore": 0.01746,
+          "lexicalRank": 3,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/EA",
+          "finalScore": 0.016923,
+          "lexicalRank": 5,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/processing/W_D_Dd",
+          "finalScore": 0.016418,
+          "lexicalRank": 7,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/processing/W_M",
+          "finalScore": 0.016176,
+          "lexicalRank": 8,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        }
+      ]
+    },
+    {
+      "fixtureId": "named-lambda-es",
+      "locale": "es",
+      "bucket": "named-variable",
+      "mode": "hybrid",
+      "vectorHitCount": 6,
+      "latencyMs": 2809,
+      "returnedRoutes": [
+        "result-interpretation/lower-section/core/Lambda",
+        "result-interpretation/lower-section/core/R",
+        "result-interpretation/lower-section/core/EA",
+        "scoring-input/determinants/F",
+        "scoring-input/fq",
+        "result-interpretation/lower-section/core/EB",
+        "result-interpretation/lower-section/processing/W_D_Dd",
+        "result-interpretation/lower-section/processing/W_M"
+      ],
+      "requiredRouteRanks": {
+        "result-interpretation/lower-section/core/Lambda": 1
+      },
+      "topRouteContaminated": false,
+      "trace": [
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/Lambda",
+          "finalScore": 0.037026,
+          "lexicalRank": 1,
+          "vectorSimilarity": 0.6687,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/R",
+          "finalScore": 0.035917,
+          "lexicalRank": 4,
+          "vectorSimilarity": 0.4914,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/EA",
+          "finalScore": 0.035396,
+          "lexicalRank": 5,
+          "vectorSimilarity": 0.4642,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "scoring-input/determinants/F",
+          "finalScore": 0.018192,
+          "lexicalRank": 2,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "scoring-input/fq",
+          "finalScore": 0.01776,
+          "lexicalRank": 3,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/EB",
+          "finalScore": 0.017267,
+          "lexicalRank": 6,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/processing/W_D_Dd",
+          "finalScore": 0.017018,
+          "lexicalRank": 7,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/processing/W_M",
+          "finalScore": 0.016776,
+          "lexicalRank": 8,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        }
+      ]
+    },
+    {
+      "fixtureId": "named-lambda-pt",
+      "locale": "pt",
+      "bucket": "named-variable",
+      "mode": "hybrid",
+      "vectorHitCount": 9,
+      "latencyMs": 2400,
+      "returnedRoutes": [
+        "result-interpretation/lower-section/core/Lambda",
+        "result-interpretation/lower-section/core/R",
+        "result-interpretation/lower-section/core/EA",
+        "result-interpretation/lower-section/core/EB",
+        "scoring-input/determinants/F",
+        "scoring-input/fq",
+        "result-interpretation/lower-section/processing/W_D_Dd",
+        "result-interpretation/lower-section/core"
+      ],
+      "requiredRouteRanks": {
+        "result-interpretation/lower-section/core/Lambda": 1
+      },
+      "topRouteContaminated": false,
+      "trace": [
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/Lambda",
+          "finalScore": 0.037026,
+          "lexicalRank": 1,
+          "vectorSimilarity": 0.6858,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/R",
+          "finalScore": 0.035867,
+          "lexicalRank": 4,
+          "vectorSimilarity": 0.524,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/EA",
+          "finalScore": 0.034458,
+          "lexicalRank": 5,
+          "vectorSimilarity": 0.4788,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/EB",
+          "finalScore": 0.034442,
+          "lexicalRank": 6,
+          "vectorSimilarity": 0.4837,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "scoring-input/determinants/F",
+          "finalScore": 0.017892,
+          "lexicalRank": 2,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "scoring-input/fq",
+          "finalScore": 0.01761,
+          "lexicalRank": 3,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/processing/W_D_Dd",
+          "finalScore": 0.016568,
+          "lexicalRank": 7,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core",
+          "finalScore": 0.016423,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.4844,
+          "sourceKinds": [
+            "vector"
+          ]
+        }
+      ]
+    },
+    {
+      "fixtureId": "named-r-ko",
+      "locale": "ko",
+      "bucket": "named-variable",
+      "mode": "hybrid",
+      "vectorHitCount": 4,
+      "latencyMs": 573,
+      "returnedRoutes": [
+        "result-interpretation/lower-section/core/R",
+        "result-interpretation",
+        "result-interpretation/lower-section/core/EA",
+        "result-interpretation/lower-section/core/Lambda",
+        "result-interpretation/lower-section/core/EB",
+        "result-interpretation/lower-section/core",
+        "result-interpretation/upper-section",
+        "result-interpretation/lower-section/affect/Blends_R"
+      ],
+      "requiredRouteRanks": {
+        "result-interpretation/lower-section/core/R": 1
+      },
+      "topRouteContaminated": false,
+      "trace": [
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/R",
+          "finalScore": 0.039726,
+          "lexicalRank": 1,
+          "vectorSimilarity": 0.552,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation",
+          "finalScore": 0.036421,
+          "lexicalRank": 2,
+          "vectorSimilarity": 0.4846,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/EA",
+          "finalScore": 0.01761,
+          "lexicalRank": 3,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/Lambda",
+          "finalScore": 0.017223,
+          "lexicalRank": 5,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/EB",
+          "finalScore": 0.017188,
+          "lexicalRank": 4,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core",
+          "finalScore": 0.016667,
+          "lexicalRank": 6,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/upper-section",
+          "finalScore": 0.016568,
+          "lexicalRank": 7,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/affect/Blends_R",
+          "finalScore": 0.016023,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.4723,
+          "sourceKinds": [
+            "vector"
+          ]
+        }
+      ]
+    },
+    {
+      "fixtureId": "named-r-en",
+      "locale": "en",
+      "bucket": "named-variable",
+      "mode": "hybrid",
+      "vectorHitCount": 11,
+      "latencyMs": 643,
+      "returnedRoutes": [
+        "result-interpretation/lower-section/core/R",
+        "scoring-input/score",
+        "result-interpretation/lower-section/core/EB",
+        "result-interpretation/lower-section/core/EA",
+        "result-interpretation/lower-section/core/Lambda",
+        "result-interpretation/lower-section/core",
+        "result-interpretation/lower-section/interpersonal/ISO_Index",
+        "result-interpretation/lower-section/selfPerception/_3r_2_R"
+      ],
+      "requiredRouteRanks": {
+        "result-interpretation/lower-section/core/R": 1
+      },
+      "topRouteContaminated": false,
+      "trace": [
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/R",
+          "finalScore": 0.037026,
+          "lexicalRank": 1,
+          "vectorSimilarity": 0.5604,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "scoring-input/score",
+          "finalScore": 0.018342,
+          "lexicalRank": 2,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/EB",
+          "finalScore": 0.01806,
+          "lexicalRank": 3,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/EA",
+          "finalScore": 0.017638,
+          "lexicalRank": 4,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/Lambda",
+          "finalScore": 0.017523,
+          "lexicalRank": 5,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core",
+          "finalScore": 0.017117,
+          "lexicalRank": 6,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/interpersonal/ISO_Index",
+          "finalScore": 0.016729,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.4844,
+          "sourceKinds": [
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/selfPerception/_3r_2_R",
+          "finalScore": 0.016473,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.4733,
+          "sourceKinds": [
+            "vector"
+          ]
+        }
+      ]
+    },
+    {
+      "fixtureId": "named-r-ja",
+      "locale": "ja",
+      "bucket": "named-variable",
+      "mode": "hybrid",
+      "vectorHitCount": 10,
+      "latencyMs": 1260,
+      "returnedRoutes": [
+        "result-interpretation/lower-section/core/R",
+        "result-interpretation/lower-section/core",
+        "scoring-input/score",
+        "result-interpretation/lower-section/core/EA",
+        "result-interpretation/lower-section/core/EB",
+        "result-interpretation/lower-section/core/Lambda",
+        "result-interpretation/lower-section/affect",
+        "result-interpretation/lower-section/interpersonal/ISO_Index"
+      ],
+      "requiredRouteRanks": {
+        "result-interpretation/lower-section/core/R": 1
+      },
+      "topRouteContaminated": false,
+      "trace": [
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/R",
+          "finalScore": 0.039426,
+          "lexicalRank": 1,
+          "vectorSimilarity": 0.576,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core",
+          "finalScore": 0.034051,
+          "lexicalRank": 6,
+          "vectorSimilarity": 0.4623,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "scoring-input/score",
+          "finalScore": 0.017742,
+          "lexicalRank": 2,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/EA",
+          "finalScore": 0.01746,
+          "lexicalRank": 3,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/EB",
+          "finalScore": 0.017188,
+          "lexicalRank": 4,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/Lambda",
+          "finalScore": 0.016923,
+          "lexicalRank": 5,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/affect",
+          "finalScore": 0.016129,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.4837,
+          "sourceKinds": [
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/interpersonal/ISO_Index",
+          "finalScore": 0.015873,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.4812,
+          "sourceKinds": [
+            "vector"
+          ]
+        }
+      ]
+    },
+    {
+      "fixtureId": "named-r-es",
+      "locale": "es",
+      "bucket": "named-variable",
+      "mode": "hybrid",
+      "vectorHitCount": 10,
+      "latencyMs": 629,
+      "returnedRoutes": [
+        "result-interpretation/lower-section/core/R",
+        "result-interpretation/upper-section/S",
+        "result-interpretation/lower-section/core/es",
+        "result-interpretation/special-indices/OBS",
+        "result-interpretation/lower-section/core/SumY",
+        "result-interpretation/lower-section/core/SumT",
+        "result-interpretation/lower-section/core/SumV",
+        "result-interpretation/lower-section/core/eb"
+      ],
+      "requiredRouteRanks": {
+        "result-interpretation/lower-section/core/R": 1
+      },
+      "topRouteContaminated": false,
+      "trace": [
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/R",
+          "finalScore": 0.036435,
+          "lexicalRank": 2,
+          "vectorSimilarity": 0.6147,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/upper-section/S",
+          "finalScore": 0.018752,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.4977,
+          "sourceKinds": [
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/es",
+          "finalScore": 0.018333,
+          "lexicalRank": 1,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/special-indices/OBS",
+          "finalScore": 0.01806,
+          "lexicalRank": 3,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/SumY",
+          "finalScore": 0.017788,
+          "lexicalRank": 4,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/SumT",
+          "finalScore": 0.017523,
+          "lexicalRank": 5,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/SumV",
+          "finalScore": 0.017267,
+          "lexicalRank": 6,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/eb",
+          "finalScore": 0.017018,
+          "lexicalRank": 7,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        }
+      ]
+    },
+    {
+      "fixtureId": "named-r-pt",
+      "locale": "pt",
+      "bucket": "named-variable",
+      "mode": "hybrid",
+      "vectorHitCount": 13,
+      "latencyMs": 611,
+      "returnedRoutes": [
+        "result-interpretation/lower-section/core/R",
+        "result-interpretation/lower-section/mediation/WDA_percent",
+        "result-interpretation/upper-section/S",
+        "result-interpretation",
+        "result-interpretation/special-indices/SCON",
+        "result-interpretation/special-indices/OBS",
+        "result-interpretation/lower-section/core/Lambda",
+        "scoring-input/score"
+      ],
+      "requiredRouteRanks": {
+        "result-interpretation/lower-section/core/R": 1
+      },
+      "topRouteContaminated": false,
+      "trace": [
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/R",
+          "finalScore": 0.037026,
+          "lexicalRank": 1,
+          "vectorSimilarity": 0.6175,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/mediation/WDA_percent",
+          "finalScore": 0.034229,
+          "lexicalRank": 5,
+          "vectorSimilarity": 0.5042,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/upper-section/S",
+          "finalScore": 0.018525,
+          "lexicalRank": null,
+          "vectorSimilarity": 0.5077,
+          "sourceKinds": [
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation",
+          "finalScore": 0.018342,
+          "lexicalRank": 2,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/special-indices/SCON",
+          "finalScore": 0.01806,
+          "lexicalRank": 3,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/special-indices/OBS",
+          "finalScore": 0.017788,
+          "lexicalRank": 4,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/Lambda",
+          "finalScore": 0.017018,
+          "lexicalRank": 7,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "scoring-input/score",
+          "finalScore": 0.016967,
+          "lexicalRank": 6,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        }
+      ]
+    },
+    {
+      "fixtureId": "relation-lambda-eb-ko",
+      "locale": "ko",
+      "bucket": "relation",
+      "mode": "hybrid",
+      "vectorHitCount": 5,
+      "latencyMs": 541,
+      "returnedRoutes": [
+        "result-interpretation/lower-section/core/Lambda",
+        "result-interpretation/lower-section/core/EB",
+        "result-interpretation/lower-section/core/eb",
+        "result-interpretation/lower-section/core/EA",
+        "scoring-input/determinants/F",
+        "scoring-input/fq",
+        "result-interpretation/lower-section/core/R",
+        "result-interpretation/lower-section/processing/W_D_Dd"
+      ],
+      "requiredRouteRanks": {
+        "result-interpretation/lower-section/core/Lambda": 1,
+        "result-interpretation/lower-section/core/EB": 2
+      },
+      "topRouteContaminated": false,
+      "trace": [
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/Lambda",
+          "finalScore": 0.038958,
+          "lexicalRank": 1,
+          "vectorSimilarity": 0.4328,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/EB",
+          "finalScore": 0.036285,
+          "lexicalRank": 2,
+          "vectorSimilarity": 0.5191,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/eb",
+          "finalScore": 0.035633,
+          "lexicalRank": 3,
+          "vectorSimilarity": 0.441,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/EA",
+          "finalScore": 0.034547,
+          "lexicalRank": 7,
+          "vectorSimilarity": 0.4439,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "scoring-input/determinants/F",
+          "finalScore": 0.017188,
+          "lexicalRank": 4,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "scoring-input/fq",
+          "finalScore": 0.016923,
+          "lexicalRank": 5,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/R",
+          "finalScore": 0.016817,
+          "lexicalRank": 6,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/processing/W_D_Dd",
+          "finalScore": 0.016326,
+          "lexicalRank": 8,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        }
+      ]
+    },
+    {
+      "fixtureId": "relation-lambda-eb-en",
+      "locale": "en",
+      "bucket": "relation",
+      "mode": "hybrid",
+      "vectorHitCount": 6,
+      "latencyMs": 577,
+      "returnedRoutes": [
+        "result-interpretation/lower-section/core/Lambda",
+        "result-interpretation/lower-section/core/EB",
+        "result-interpretation/lower-section/core/eb",
+        "result-interpretation/lower-section/core/EA",
+        "result-interpretation/lower-section/core",
+        "scoring-input/determinants/F",
+        "scoring-input/fq",
+        "result-interpretation/lower-section/core/R"
+      ],
+      "requiredRouteRanks": {
+        "result-interpretation/lower-section/core/Lambda": 1,
+        "result-interpretation/lower-section/core/EB": 2
+      },
+      "topRouteContaminated": false,
+      "trace": [
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/Lambda",
+          "finalScore": 0.036762,
+          "lexicalRank": 1,
+          "vectorSimilarity": 0.5223,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/EB",
+          "finalScore": 0.036285,
+          "lexicalRank": 2,
+          "vectorSimilarity": 0.5758,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/eb",
+          "finalScore": 0.034995,
+          "lexicalRank": 3,
+          "vectorSimilarity": 0.4645,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/EA",
+          "finalScore": 0.034169,
+          "lexicalRank": 7,
+          "vectorSimilarity": 0.4573,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core",
+          "finalScore": 0.033939,
+          "lexicalRank": 10,
+          "vectorSimilarity": 0.4788,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "scoring-input/determinants/F",
+          "finalScore": 0.017788,
+          "lexicalRank": 4,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "scoring-input/fq",
+          "finalScore": 0.017373,
+          "lexicalRank": 5,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/R",
+          "finalScore": 0.017267,
+          "lexicalRank": 6,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        }
+      ]
+    },
+    {
+      "fixtureId": "relation-lambda-eb-ja",
+      "locale": "ja",
+      "bucket": "relation",
+      "mode": "hybrid",
+      "vectorHitCount": 4,
+      "latencyMs": 823,
+      "returnedRoutes": [
+        "result-interpretation/lower-section/core/Lambda",
+        "result-interpretation/lower-section/core/EB",
+        "result-interpretation/lower-section/core/eb",
+        "scoring-input/determinants/F",
+        "scoring-input/fq",
+        "result-interpretation/lower-section/core/R",
+        "result-interpretation/lower-section/core/EA",
+        "result-interpretation/lower-section/processing/W_D_Dd"
+      ],
+      "requiredRouteRanks": {
+        "result-interpretation/lower-section/core/Lambda": 1,
+        "result-interpretation/lower-section/core/EB": 2
+      },
+      "topRouteContaminated": false,
+      "trace": [
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/Lambda",
+          "finalScore": 0.036162,
+          "lexicalRank": 1,
+          "vectorSimilarity": 0.5508,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/EB",
+          "finalScore": 0.036135,
+          "lexicalRank": 2,
+          "vectorSimilarity": 0.5611,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/eb",
+          "finalScore": 0.035085,
+          "lexicalRank": 3,
+          "vectorSimilarity": 0.4751,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "scoring-input/determinants/F",
+          "finalScore": 0.017188,
+          "lexicalRank": 4,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "scoring-input/fq",
+          "finalScore": 0.016923,
+          "lexicalRank": 5,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/R",
+          "finalScore": 0.016667,
+          "lexicalRank": 6,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/EA",
+          "finalScore": 0.016418,
+          "lexicalRank": 7,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/processing/W_D_Dd",
+          "finalScore": 0.016176,
+          "lexicalRank": 8,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        }
+      ]
+    },
+    {
+      "fixtureId": "relation-lambda-eb-es",
+      "locale": "es",
+      "bucket": "relation",
+      "mode": "hybrid",
+      "vectorHitCount": 5,
+      "latencyMs": 678,
+      "returnedRoutes": [
+        "result-interpretation/lower-section/core/EB",
+        "result-interpretation/lower-section/core/Lambda",
+        "result-interpretation/lower-section/core/eb",
+        "result-interpretation/lower-section/core",
+        "scoring-input/determinants/F",
+        "scoring-input/fq",
+        "result-interpretation/lower-section/core/R",
+        "result-interpretation/lower-section/core/EA"
+      ],
+      "requiredRouteRanks": {
+        "result-interpretation/lower-section/core/Lambda": 2,
+        "result-interpretation/lower-section/core/EB": 1
+      },
+      "topRouteContaminated": false,
+      "trace": [
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/EB",
+          "finalScore": 0.036585,
+          "lexicalRank": 2,
+          "vectorSimilarity": 0.627,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/Lambda",
+          "finalScore": 0.036258,
+          "lexicalRank": 1,
+          "vectorSimilarity": 0.576,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/eb",
+          "finalScore": 0.035295,
+          "lexicalRank": 3,
+          "vectorSimilarity": 0.5399,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core",
+          "finalScore": 0.034443,
+          "lexicalRank": 10,
+          "vectorSimilarity": 0.5951,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "scoring-input/determinants/F",
+          "finalScore": 0.017638,
+          "lexicalRank": 4,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "scoring-input/fq",
+          "finalScore": 0.017373,
+          "lexicalRank": 5,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/R",
+          "finalScore": 0.017117,
+          "lexicalRank": 6,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/EA",
+          "finalScore": 0.017018,
+          "lexicalRank": 7,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        }
+      ]
+    },
+    {
+      "fixtureId": "relation-lambda-eb-pt",
+      "locale": "pt",
+      "bucket": "relation",
+      "mode": "hybrid",
+      "vectorHitCount": 6,
+      "latencyMs": 948,
+      "returnedRoutes": [
+        "result-interpretation/lower-section/core/Lambda",
+        "result-interpretation/lower-section/core/EB",
+        "result-interpretation/lower-section/core/eb",
+        "result-interpretation/lower-section/core/EA",
+        "result-interpretation/lower-section/core",
+        "scoring-input/determinants/F",
+        "scoring-input/fq",
+        "result-interpretation/lower-section/core/R"
+      ],
+      "requiredRouteRanks": {
+        "result-interpretation/lower-section/core/Lambda": 1,
+        "result-interpretation/lower-section/core/EB": 2
+      },
+      "topRouteContaminated": false,
+      "trace": [
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/Lambda",
+          "finalScore": 0.036976,
+          "lexicalRank": 1,
+          "vectorSimilarity": 0.6025,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/EB",
+          "finalScore": 0.036471,
+          "lexicalRank": 2,
+          "vectorSimilarity": 0.584,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/eb",
+          "finalScore": 0.034912,
+          "lexicalRank": 3,
+          "vectorSimilarity": 0.5199,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/EA",
+          "finalScore": 0.034103,
+          "lexicalRank": 7,
+          "vectorSimilarity": 0.5341,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core",
+          "finalScore": 0.033489,
+          "lexicalRank": 10,
+          "vectorSimilarity": 0.5437,
+          "sourceKinds": [
+            "lexical",
+            "vector"
+          ]
+        },
+        {
+          "canonicalRoute": "scoring-input/determinants/F",
+          "finalScore": 0.017488,
+          "lexicalRank": 4,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "scoring-input/fq",
+          "finalScore": 0.017223,
+          "lexicalRank": 5,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        },
+        {
+          "canonicalRoute": "result-interpretation/lower-section/core/R",
+          "finalScore": 0.017217,
+          "lexicalRank": 6,
+          "vectorSimilarity": null,
+          "sourceKinds": [
+            "lexical"
+          ]
+        }
+      ]
+    }
+  ]
+}
