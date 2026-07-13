@@ -1,0 +1,214 @@
+{
+  "version": "hybrid-retrieval-dev-v1",
+  "purpose": "Development challenge set for tuning retrieval. This is not a blind held-out set.",
+  "topK": 8,
+  "queries": [
+    {
+      "id": "broad-ko-where-start",
+      "locale": "ko",
+      "bucket": "broad",
+      "query": "이 프로토콜의 전체 해석을 어디서부터 시작하면 좋을까요?",
+      "requiredRoutes": ["result-interpretation"],
+      "forbiddenTopRoutePrefixes": ["scoring-input/"]
+    },
+    {
+      "id": "broad-ko-first-pass",
+      "locale": "ko",
+      "bucket": "broad",
+      "query": "첫 단계에서 구조요약의 전반적인 패턴을 어떻게 읽나요?",
+      "requiredRoutes": ["result-interpretation"],
+      "forbiddenTopRoutePrefixes": ["scoring-input/"]
+    },
+    {
+      "id": "broad-en-where-start",
+      "locale": "en",
+      "bucket": "broad",
+      "query": "Where should I begin interpreting this protocol?",
+      "requiredRoutes": ["result-interpretation"],
+      "forbiddenTopRoutePrefixes": ["scoring-input/"]
+    },
+    {
+      "id": "broad-en-first-pass",
+      "locale": "en",
+      "bucket": "broad",
+      "query": "I need a first-pass view of the whole record. What should I inspect first?",
+      "requiredRoutes": ["result-interpretation"],
+      "forbiddenTopRoutePrefixes": ["scoring-input/"]
+    },
+    {
+      "id": "broad-ja-where-start",
+      "locale": "ja",
+      "bucket": "broad",
+      "query": "このプロトコルはどこから解釈を始めますか。",
+      "requiredRoutes": ["result-interpretation"],
+      "forbiddenTopRoutePrefixes": ["scoring-input/"]
+    },
+    {
+      "id": "broad-ja-first-pass",
+      "locale": "ja",
+      "bucket": "broad",
+      "query": "構造要約の全体像を最初にどう読めばよいですか。",
+      "requiredRoutes": ["result-interpretation"],
+      "forbiddenTopRoutePrefixes": ["scoring-input/"]
+    },
+    {
+      "id": "broad-es-where-start",
+      "locale": "es",
+      "bucket": "broad",
+      "query": "¿Por dónde debería empezar a interpretar este protocolo?",
+      "requiredRoutes": ["result-interpretation"],
+      "forbiddenTopRoutePrefixes": ["scoring-input/"]
+    },
+    {
+      "id": "broad-es-first-pass",
+      "locale": "es",
+      "bucket": "broad",
+      "query": "A primera vista, ¿cómo leo el patrón general del protocolo?",
+      "requiredRoutes": ["result-interpretation"],
+      "forbiddenTopRoutePrefixes": ["scoring-input/"]
+    },
+    {
+      "id": "broad-pt-where-start",
+      "locale": "pt",
+      "bucket": "broad",
+      "query": "Por onde devo começar a interpretar este protocolo?",
+      "requiredRoutes": ["result-interpretation"],
+      "forbiddenTopRoutePrefixes": ["scoring-input/"]
+    },
+    {
+      "id": "broad-pt-first-pass",
+      "locale": "pt",
+      "bucket": "broad",
+      "query": "A partir de uma visão geral, como leio o protocolo completo?",
+      "requiredRoutes": ["result-interpretation"],
+      "forbiddenTopRoutePrefixes": ["scoring-input/"]
+    },
+    {
+      "id": "named-lambda-ko",
+      "locale": "ko",
+      "bucket": "named-variable",
+      "query": "이 기록에서 회피라고 단정하지 않고 Lambda를 어떻게 읽어야 하나요?",
+      "requiredRoutes": ["result-interpretation/lower-section/core/Lambda"]
+    },
+    {
+      "id": "named-lambda-en",
+      "locale": "en",
+      "bucket": "named-variable",
+      "query": "How should a high Lambda be interpreted without treating it as proof of avoidance?",
+      "requiredRoutes": ["result-interpretation/lower-section/core/Lambda"]
+    },
+    {
+      "id": "named-lambda-ja",
+      "locale": "ja",
+      "bucket": "named-variable",
+      "query": "Lambdaが高い場合、それだけで回避と解釈してよいですか。",
+      "requiredRoutes": ["result-interpretation/lower-section/core/Lambda"]
+    },
+    {
+      "id": "named-lambda-es",
+      "locale": "es",
+      "bucket": "named-variable",
+      "query": "¿Cómo se interpreta un Lambda alto sin tomarlo como prueba de evitación?",
+      "requiredRoutes": ["result-interpretation/lower-section/core/Lambda"]
+    },
+    {
+      "id": "named-lambda-pt",
+      "locale": "pt",
+      "bucket": "named-variable",
+      "query": "Como interpretar Lambda alto sem tratá-lo como prova de evitação?",
+      "requiredRoutes": ["result-interpretation/lower-section/core/Lambda"]
+    },
+    {
+      "id": "named-r-ko",
+      "locale": "ko",
+      "bucket": "named-variable",
+      "query": "R이 매우 낮을 때 이 구조요약을 해석해도 되는지 무엇을 먼저 확인하나요?",
+      "requiredRoutes": ["result-interpretation/lower-section/core/R"]
+    },
+    {
+      "id": "named-r-en",
+      "locale": "en",
+      "bucket": "named-variable",
+      "query": "When R is very low, what should be checked before interpreting the record?",
+      "requiredRoutes": ["result-interpretation/lower-section/core/R"]
+    },
+    {
+      "id": "named-r-ja",
+      "locale": "ja",
+      "bucket": "named-variable",
+      "query": "Rが非常に低い場合、解釈の前に何を確認しますか。",
+      "requiredRoutes": ["result-interpretation/lower-section/core/R"]
+    },
+    {
+      "id": "named-r-es",
+      "locale": "es",
+      "bucket": "named-variable",
+      "query": "Si R es muy bajo, ¿qué debe comprobarse antes de interpretar el protocolo?",
+      "requiredRoutes": ["result-interpretation/lower-section/core/R"]
+    },
+    {
+      "id": "named-r-pt",
+      "locale": "pt",
+      "bucket": "named-variable",
+      "query": "Se R for muito baixo, o que deve ser verificado antes da interpretação?",
+      "requiredRoutes": ["result-interpretation/lower-section/core/R"]
+    },
+    {
+      "id": "relation-lambda-eb-ko",
+      "locale": "ko",
+      "bucket": "relation",
+      "query": "Lambda와 EB를 함께 보면 전체 대응 양식을 어떻게 이해할 수 있나요?",
+      "requiredRoutes": [
+        "result-interpretation/lower-section/core/Lambda",
+        "result-interpretation/lower-section/core/EB"
+      ]
+    },
+    {
+      "id": "relation-lambda-eb-en",
+      "locale": "en",
+      "bucket": "relation",
+      "query": "How should Lambda and EB be considered together when reading the overall coping pattern?",
+      "requiredRoutes": [
+        "result-interpretation/lower-section/core/Lambda",
+        "result-interpretation/lower-section/core/EB"
+      ]
+    },
+    {
+      "id": "relation-lambda-eb-ja",
+      "locale": "ja",
+      "bucket": "relation",
+      "query": "全体的な対処様式を読むとき、LambdaとEBをどのように一緒に検討しますか。",
+      "requiredRoutes": [
+        "result-interpretation/lower-section/core/Lambda",
+        "result-interpretation/lower-section/core/EB"
+      ]
+    },
+    {
+      "id": "relation-lambda-eb-es",
+      "locale": "es",
+      "bucket": "relation",
+      "query": "¿Cómo deben considerarse juntos Lambda y EB al leer el patrón general de afrontamiento?",
+      "requiredRoutes": [
+        "result-interpretation/lower-section/core/Lambda",
+        "result-interpretation/lower-section/core/EB"
+      ]
+    },
+    {
+      "id": "relation-lambda-eb-pt",
+      "locale": "pt",
+      "bucket": "relation",
+      "query": "Como Lambda e EB devem ser considerados juntos ao ler o padrão geral de enfrentamento?",
+      "requiredRoutes": [
+        "result-interpretation/lower-section/core/Lambda",
+        "result-interpretation/lower-section/core/EB"
+      ]
+    }
+  ],
+  "candidateThresholds": {
+    "broadHitAt1": 0.8,
+    "broadHitAt8": 1,
+    "namedHitAt4": 0.9,
+    "relationRequiredRouteCoverageAt8": 0.8,
+    "broadWorkflowContaminationAt1": 0
+  }
+}

@@ -36,6 +36,15 @@ export type ReferenceVectorReleaseSnapshot = {
     readyLocalesByProvider: Record<VectorProvider, number>;
     allProvidersReady: boolean;
   };
+  providerAudit: {
+    expectedProviders: VectorProvider[];
+    unexpectedProviders: Array<{
+      provider: string;
+      totalEmbeddings: number;
+    }>;
+    unexpectedEmbeddingCount: number;
+    clean: boolean;
+  };
   providerSnapshots: Record<VectorProvider, ReferenceVectorProviderSnapshot>;
 };
 
@@ -166,5 +175,7 @@ export function getReferenceVectorOverview() {
       readyOpenAiLocales === vectorSnapshot.totals.localeCount,
     openaiModel: vectorSnapshot.providerSnapshots.openai.embeddingModel,
     openaiLatestRefreshedAt: vectorSnapshot.providerSnapshots.openai.latestRefreshedAt,
+    providerResidueFree: vectorSnapshot.providerAudit.clean,
+    unexpectedEmbeddingCount: vectorSnapshot.providerAudit.unexpectedEmbeddingCount,
   };
 }

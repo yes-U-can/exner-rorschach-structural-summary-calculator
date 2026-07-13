@@ -116,6 +116,132 @@ describe('referenceHybridRetrieval', () => {
     expect(ranked.trace[0]?.bothBonus).toBeGreaterThan(0);
   });
 
+  it('drops vector-only candidates below the minimum similarity signal', () => {
+    const lexical: KnowledgeItem = {
+      id: 'route:result-interpretation',
+      title: 'Interpretation overview',
+      content: 'Start with the whole record.',
+      source: 'builtin',
+      locale: 'en',
+      aliases: ['overview'],
+      canonicalRoute: 'result-interpretation',
+      relatedRoutes: [],
+      retrievalKind: 'runtime-route-summary',
+    };
+    const noise: KnowledgeItem = {
+      id: 'chunk:noise',
+      title: 'Unrelated scoring fragment',
+      content: 'A weak semantic match.',
+      source: 'builtin',
+      locale: 'en',
+      aliases: [],
+      canonicalRoute: 'scoring-input/contents/A',
+      relatedRoutes: [],
+      retrievalKind: 'runtime-chunk',
+    };
+
+    const ranked = rankMergedKnowledgeDetailed(
+      'Where should I begin interpreting the whole record?',
+      [lexical],
+      [{ item: noise, similarity: 0.12 }],
+      4,
+    );
+
+    expect(ranked.items).toHaveLength(1);
+    expect(ranked.items[0]?.canonicalRoute).toBe('result-interpretation');
+  });
+
+  it('deduplicates route summaries and chunks by canonical route', () => {
+    const routeSummary: KnowledgeItem = {
+      id: 'route:result-interpretation/lower-section/core/Lambda',
+      title: 'Lambda',
+      content: 'Route-level Lambda guidance.',
+      source: 'builtin',
+      locale: 'en',
+      aliases: ['Lambda'],
+      canonicalRoute: 'result-interpretation/lower-section/core/Lambda',
+      relatedRoutes: [],
+      retrievalKind: 'runtime-route-summary',
+    };
+    const firstChunk: KnowledgeItem = {
+      ...routeSummary,
+      id: 'chunk:lambda-1',
+      content: 'First Lambda chunk.',
+      retrievalKind: 'runtime-chunk',
+    };
+    const secondChunk: KnowledgeItem = {
+      ...routeSummary,
+      id: 'chunk:lambda-2',
+      content: 'Second Lambda chunk.',
+      retrievalKind: 'runtime-chunk',
+    };
+
+    const ranked = rankMergedKnowledgeDetailed(
+      'How should Lambda be interpreted?',
+      [routeSummary],
+      [
+        { item: firstChunk, similarity: 0.82 },
+        { item: secondChunk, similarity: 0.79 },
+      ],
+      4,
+    );
+
+    expect(ranked.items).toHaveLength(1);
+    expect(ranked.items[0]?.id).toBe(routeSummary.id);
+    expect(ranked.trace[0]?.sourceKinds).toEqual(['lexical', 'vector']);
+  });
+
+  it('preserves the broad interpretation anchor through fusion', () => {
+    const overview: KnowledgeItem = {
+      id: 'route:result-interpretation',
+      title: 'Interpretation overview',
+      content: 'Start with the whole record.',
+      source: 'builtin',
+      locale: 'en',
+      aliases: ['first pass'],
+      canonicalRoute: 'result-interpretation',
+      relatedRoutes: [],
+      retrievalKind: 'runtime-route-summary',
+    };
+    const upperSection: KnowledgeItem = {
+      id: 'route:result-interpretation/upper-section',
+      title: 'Upper section',
+      content: 'A section-level overview.',
+      source: 'builtin',
+      locale: 'en',
+      aliases: ['upper section'],
+      canonicalRoute: 'result-interpretation/upper-section',
+      relatedRoutes: [],
+      retrievalKind: 'runtime-route-summary',
+    };
+    const scoringNoise: KnowledgeItem = {
+      id: 'chunk:scoring-input/card/I',
+      title: 'Card I',
+      content: 'Scoring instructions for Card I.',
+      source: 'builtin',
+      locale: 'en',
+      aliases: ['Card I'],
+      canonicalRoute: 'scoring-input/card/I',
+      relatedRoutes: [],
+      retrievalKind: 'runtime-chunk',
+    };
+
+    const ranked = rankMergedKnowledgeDetailed(
+      'I need a first-pass view of the whole record.',
+      [overview, upperSection],
+      [
+        { item: upperSection, similarity: 0.48 },
+        { item: scoringNoise, similarity: 0.45 },
+      ],
+      4,
+    );
+
+    expect(ranked.items[0]?.canonicalRoute).toBe('result-interpretation');
+    expect(ranked.items.some((item) => item.canonicalRoute?.startsWith('scoring-input'))).toBe(
+      false,
+    );
+  });
+
   it('keeps coding retrieval biased toward explicit scoring chunks', () => {
     const scoringChunk: CodingRuleChunk = {
       id: 'en:scoring-input/determinants/m',

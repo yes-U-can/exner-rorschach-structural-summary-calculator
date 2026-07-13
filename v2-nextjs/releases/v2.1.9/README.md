@@ -34,6 +34,10 @@ v2.1.9는 사용자의 질문에서 GPT-5.5에 전달할 참조 문서를 고르
 - GPT-5.5 최종 단일턴: 27/27 통과, issue 0, failed run 0
 - GPT-5.5 최종 멀티턴: 4/4 conversation, 8/8 response 완료
 - production-like `/api/chat` live eval: HTTP 200, stream complete, issue 0
+- production provider cleanup: Google 6,597행 → 0행, OpenAI 6,632행 보존, provider enum `openai` 단일화
+- vector release snapshot: unexpected provider 0, stale 0, 5/5 locale ready
+- unit/integration test: 45 files, 194 passed, 5 intentionally skipped
+- production build: 221/221 static page 생성
 - saved eval artifact audit: raw prompt·raw answer·API key 필드 없음
 - dependency audit: 알려진 취약점 0
 
@@ -41,7 +45,7 @@ v2.1.9는 사용자의 질문에서 GPT-5.5에 전달할 참조 문서를 고르
 
 상세한 before/after, 감사 정정표, 구현 방식, 실측 비용, 남아 있는 한계는 [v2.1.9 RAG Retrieval Hardening Report](../../source/docs/ai-evals/2026-07-13-v2.1.9-rag-retrieval-hardening-report.md)에 기록했습니다.
 
-최종 공개 전 private 배포 repo에서 다음 명령과 OpenAI-only provider cleanup gate를 통과해야 합니다.
+private 배포 repo에서 OpenAI-only provider cleanup을 적용하고 다음 최종 검증을 통과했습니다.
 
 ```bash
 npm run docs:evaluate-rag:all

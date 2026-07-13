@@ -19,6 +19,7 @@ type QueryIntent = {
   explicitCoding: boolean;
   explicitInterpretation: boolean;
   interpretationSignal: boolean;
+  broadInterpretation: boolean;
 };
 
 type ResolvedKnowledgeMeta = {
@@ -33,9 +34,40 @@ type ResolvedKnowledgeMeta = {
 };
 
 const TOKEN_SUFFIX_PATTERNS = [
+  /(해야|해서|하고|하면|하려면|하는|한|할|해요)$/u,
   /(은|는|이|가|을|를|와|과|만|에서|으로|로|의|도|야|요|까|인가)$/u,
   /(이라|라고|이면|이란)$/u,
 ];
+
+const KNOWN_TITLE_CASE_CODES = new Set(['Afr', 'Lambda']);
+const KNOWN_LOWERCASE_SINGLE_CHARACTER_CODES = new Set(['m']);
+const SINGLE_CHARACTER_CODE_SCOPE_CUES = new Set([
+  'card',
+  'cards',
+  'cartao',
+  'codigo',
+  'code',
+  'content',
+  'contents',
+  'conteudo',
+  'contenido',
+  'determinant',
+  'determinants',
+  'lamina',
+  'location',
+  'prancha',
+  'tarjeta',
+  '결정인',
+  '내용',
+  '부호',
+  '위치',
+  '카드',
+  'カード',
+  'コード',
+  '内容',
+  '位置',
+  '決定因',
+]);
 
 const PRIMARY_CODE_TOKEN_STOPWORDS = new Set([
   'a',
@@ -95,6 +127,11 @@ const PRIMARY_CODE_TOKEN_STOPWORDS = new Set([
 
 const LATIN_DIACRITIC_CHARACTER = /[\u00c0-\u024f\u1e00-\u1eff]/g;
 const COMBINING_DIACRITIC_MARK = /[\u0300-\u036f]/g;
+const JAPANESE_KANA = /[\p{Script=Hiragana}\p{Script=Katakana}]/u;
+const JAPANESE_SCRIPT = /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}]/u;
+const WORD_TOKEN_PATTERN = /[\p{L}\p{N}%+/'_:-]+/gu;
+const COMPACT_EXPRESSION_PATTERN = /[\p{L}\p{N}%+/'_():-]+/gu;
+const JAPANESE_WORD_SEGMENTER = new Intl.Segmenter('ja', { granularity: 'word' });
 
 export type KnowledgeItem = {
   id?: string;
@@ -116,13 +153,37 @@ function foldLatinDiacritics(text: string): string {
   );
 }
 
-function tokenize(text: string): string[] {
-  const matches = foldLatinDiacritics(text).toLowerCase().match(/[\p{L}\p{N}%+/'_:-]+/gu);
-  return matches ?? [];
+function tokenizePreservingInputCase(text: string, lang?: Language): string[] {
+  const folded = foldLatinDiacritics(text);
+  const coarseTokens = folded.match(WORD_TOKEN_PATTERN) ?? [];
+
+  if (lang === 'ja' || JAPANESE_KANA.test(folded)) {
+    const expanded = new Set<string>();
+
+    for (const token of coarseTokens) {
+      expanded.add(token);
+      if (!JAPANESE_SCRIPT.test(token)) continue;
+
+      for (const segment of JAPANESE_WORD_SEGMENTER.segment(token)) {
+        if (!segment.isWordLike) continue;
+        for (const segmentedToken of segment.segment.match(WORD_TOKEN_PATTERN) ?? []) {
+          expanded.add(segmentedToken);
+        }
+      }
+    }
+
+    return [...expanded];
+  }
+
+  return coarseTokens;
 }
 
-function tokenizePreserveCase(text: string): string[] {
-  return foldLatinDiacritics(text).match(/[\p{L}\p{N}%+/'_:-]+/gu) ?? [];
+function tokenize(text: string, lang?: Language): string[] {
+  return tokenizePreservingInputCase(text, lang).map((token) => token.toLowerCase());
+}
+
+function tokenizePreserveCase(text: string, lang?: Language): string[] {
+  return tokenizePreservingInputCase(text, lang);
 }
 
 function normalizeCompact(text: string): string {
@@ -133,39 +194,87 @@ function isPotentialCodeToken(token: string): boolean {
   const normalized = token.trim();
   if (!normalized) return false;
   if (PRIMARY_CODE_TOKEN_STOPWORDS.has(normalized.toLowerCase())) return false;
-  if (!/[A-Z]/.test(normalized)) return false;
 
-  return /[%+/'_:-]/.test(normalized) || normalized.length <= 6;
+  if (/^[A-Z]$/.test(normalized)) return true;
+  if (/^[A-Z]{2,8}$/.test(normalized)) return true;
+  if (KNOWN_TITLE_CASE_CODES.has(normalized)) return true;
+  if (/[A-Z]/.test(normalized) && /[0-9%+/'_:-]/.test(normalized)) return true;
+
+  return /^[A-Z][a-z]+[A-Z0-9][A-Za-z0-9]*$/.test(normalized);
 }
 
-function findPrimaryCodeToken(rawTokens: string[]): string | null {
+function isCodeScopeCue(token: string): boolean {
+  const normalized = foldLatinDiacritics(token).toLowerCase();
+  return SINGLE_CHARACTER_CODE_SCOPE_CUES.has(normalized) || /^codific/u.test(normalized);
+}
+
+function hasNearbyCodeScopeCue(rawTokens: string[], index: number): boolean {
+  return [index - 2, index - 1, index + 1, index + 2]
+    .map((candidateIndex) => rawTokens[candidateIndex])
+    .filter((token): token is string => Boolean(token))
+    .flatMap((token) => stripTokenSuffixes(token))
+    .some(isCodeScopeCue);
+}
+
+function isScopedSingleCharacterCodeToken(
+  rawTokens: string[],
+  index: number,
+  intent: QueryIntent,
+): boolean {
+  if (!intent.explicitCoding || !hasNearbyCodeScopeCue(rawTokens, index)) return false;
+
+  const token = rawTokens[index];
+  return /^[A-Z]$/.test(token) || KNOWN_LOWERCASE_SINGLE_CHARACTER_CODES.has(token);
+}
+
+function filterLowSignalQueryTokens(rawTokens: string[], intent: QueryIntent): string[] {
+  return rawTokens.filter((token, index) => {
+    const compact = normalizeCompact(token);
+    if (compact.length !== 1) return true;
+    if (isPotentialCodeToken(token)) return true;
+
+    return isScopedSingleCharacterCodeToken(rawTokens, index, intent);
+  });
+}
+
+function findPrimaryCodeToken(rawTokens: string[], intent: QueryIntent): string | null {
   const codingCueIndex = rawTokens.findIndex((token) =>
-    /^(code|coded|coding)$/i.test(token) ||
-    /^codific/u.test(token.toLowerCase()) ||
-    /채점|부호화|코딩/u.test(token),
+    isCodeScopeCue(token) || /채점|부호화|코딩/u.test(token),
   );
-  const candidates = rawTokens.filter(isPotentialCodeToken);
+  const candidates = rawTokens
+    .map((token, index) => ({ token, index }))
+    .filter(
+      ({ token, index }) =>
+        isPotentialCodeToken(token) || isScopedSingleCharacterCodeToken(rawTokens, index, intent),
+    );
 
   if (!candidates.length) return null;
 
   if (codingCueIndex >= 0) {
-    const afterCue = rawTokens.slice(codingCueIndex + 1).find(isPotentialCodeToken);
-    if (afterCue) return afterCue;
+    const afterCue = candidates.find(({ index }) => index > codingCueIndex);
+    if (afterCue) return afterCue.token;
   }
 
-  return candidates[0];
+  return candidates[0].token;
 }
 
 function stripTokenSuffixes(token: string): string[] {
   const stripped = new Set<string>([token]);
   let current = token;
 
-  for (const pattern of TOKEN_SUFFIX_PATTERNS) {
-    const next = current.replace(pattern, '');
-    if (next && next !== current) {
-      stripped.add(next);
-      current = next;
+  for (let pass = 0; pass < 3; pass += 1) {
+    let changed = false;
+
+    for (const pattern of TOKEN_SUFFIX_PATTERNS) {
+      const next = current.replace(pattern, '');
+      if (next && next !== current) {
+        stripped.add(next);
+        current = next;
+        changed = true;
+      }
     }
+
+    if (!changed) break;
   }
 
   return [...stripped];
@@ -176,10 +285,6 @@ function expandQueryTokens(tokens: string[]): string[] {
 
   for (const token of tokens) {
     expanded.add(token);
-
-    if (!/[a-z0-9%+/'-]/i.test(token)) {
-      continue;
-    }
 
     for (const variant of stripTokenSuffixes(token)) {
       expanded.add(variant);
@@ -207,6 +312,15 @@ function buildCompactTerms(queryText: string, rawTokens: string[]): string[] {
 
   if (compactQuery) {
     compact.add(compactQuery);
+  }
+
+  for (const expression of foldLatinDiacritics(queryText).match(COMPACT_EXPRESSION_PATTERN) ?? []) {
+    if (!/[0-9%+/'_():-]/.test(expression)) continue;
+
+    const compactExpression = normalizeCompact(expression);
+    if (compactExpression && compactExpression.length <= 32) {
+      compact.add(compactExpression);
+    }
   }
 
   for (let index = 0; index < rawTokens.length; index += 1) {
@@ -240,8 +354,18 @@ function buildCompactTerms(queryText: string, rawTokens: string[]): string[] {
 }
 
 function inferDocDomain(item: Pick<KnowledgeItem, 'canonicalRoute'>): DocDomain {
-  if (item.canonicalRoute?.startsWith('scoring-input/')) return 'coding';
-  if (item.canonicalRoute?.startsWith('result-interpretation/')) return 'interpretation';
+  if (
+    item.canonicalRoute === 'scoring-input' ||
+    item.canonicalRoute?.startsWith('scoring-input/')
+  ) {
+    return 'coding';
+  }
+  if (
+    item.canonicalRoute === 'result-interpretation' ||
+    item.canonicalRoute?.startsWith('result-interpretation/')
+  ) {
+    return 'interpretation';
+  }
   return 'other';
 }
 
@@ -267,7 +391,7 @@ function resolveKnowledgeMeta(item: KnowledgeItem, lang: Language): ResolvedKnow
   };
 }
 
-function inferQueryIntent(queryText: string): QueryIntent {
+function inferQueryIntent(queryText: string, lang: Language): QueryIntent {
   const normalized = foldLatinDiacritics(queryText).toLowerCase();
 
   const codingPatterns = [
@@ -299,6 +423,15 @@ function inferQueryIntent(queryText: string): QueryIntent {
     /내용/u,
     /형태질/u,
     /발달질/u,
+    /採点/u,
+    /符号化/u,
+    /コーディング/u,
+    /入力/u,
+    /カード/u,
+    /内容/u,
+    /位置/u,
+    /決定因/u,
+    /特殊スコア/u,
   ];
   const interpretationPatterns = [
     /해석/u,
@@ -328,6 +461,16 @@ function inferQueryIntent(queryText: string): QueryIntent {
     /프로파일/u,
     /높/u,
     /낮/u,
+    /解釈/u,
+    /意味/u,
+    /示唆/u,
+    /指標/u,
+    /傾向/u,
+    /プロフィール/u,
+    /高い/u,
+    /低い/u,
+    /全体像/u,
+    /構造要約/u,
   ];
   const graphPatterns = [
     /같이/u,
@@ -340,7 +483,35 @@ function inferQueryIntent(queryText: string): QueryIntent {
     /comparar/u,
     /relacionad/u,
     /ligad/u,
+    /一緒/u,
+    /関連/u,
+    /つなが/u,
+    /参照/u,
+    /文書/u,
+    /比較/u,
   ];
+  const broadInterpretationPatterns = [
+    /어디서부터|어디부터|무엇부터|뭐부터|첫 단계|처음|먼저|전체 해석|전반적인 패턴|개요/u,
+    /\bwhere\s+(?:should|do|can)\s+i\s+(?:begin|start)\b/i,
+    /\bfirst[- ]pass\b/i,
+    /\bwhole (?:record|protocol)\b/i,
+    /\b(?:overview|overall)\b/i,
+    /どこから|何から|始め|最初|全体像|概要/u,
+    /\bpor donde\b/i,
+    /\bprimera vista\b/i,
+    /\bpatron general\b/i,
+    /\bvision general\b/i,
+    /\b(?:empez|comenz)/i,
+    /\bpor onde\b/i,
+    /\bvisao geral\b/i,
+    /\bprimeir/i,
+    /\bcomec/i,
+    /\bprotocolo completo\b/i,
+  ];
+
+  const namedCodeSignal = tokenizePreserveCase(queryText, lang).some(isPotentialCodeToken);
+  const broadInterpretation =
+    !namedCodeSignal && broadInterpretationPatterns.some((pattern) => pattern.test(normalized));
 
   const explicitCoding = codingPatterns.some((pattern) => pattern.test(normalized));
   const interpretationSignal = interpretationPatterns.some((pattern) => pattern.test(normalized));
@@ -348,7 +519,7 @@ function inferQueryIntent(queryText: string): QueryIntent {
     /interpretac[\s\S]{0,80}codific/u.test(normalized) &&
     /difere|diferenca|compar/u.test(normalized);
   const explicitInterpretation =
-    (!explicitCoding && interpretationSignal) || interpretationVersusCoding;
+    broadInterpretation || (!explicitCoding && interpretationSignal) || interpretationVersusCoding;
   const graphIntent = graphPatterns.some((pattern) => pattern.test(normalized));
   const preferDomain = interpretationVersusCoding
     ? 'interpretation'
@@ -364,6 +535,7 @@ function inferQueryIntent(queryText: string): QueryIntent {
     explicitCoding,
     explicitInterpretation,
     interpretationSignal,
+    broadInterpretation,
   };
 }
 
@@ -381,7 +553,8 @@ function scoreScopeHints(queryText: string, routeLower: string): number {
     { pattern: /\bspecial score\b/i, routeFragment: '/special-score/' },
     { pattern: /\bcard\b/i, routeFragment: '/card/' },
     { pattern: /cartao|prancha/i, routeFragment: '/card/' },
-    { pattern: /ideacao/i, routeFragment: '/ideation/' },
+    { pattern: /ideacao|ideacion/i, routeFragment: '/ideation/' },
+    { pattern: /processamento|procesamiento/i, routeFragment: '/processing/' },
     { pattern: /autopercepcao|egocentricidade|egocentrico/i, routeFragment: '/selfperception/' },
   ];
 
@@ -399,8 +572,8 @@ function scoreScopeHints(queryText: string, routeLower: string): number {
   return score;
 }
 
-function overlapScore(queryTokens: Set<string>, text: string): number {
-  const tokens = new Set(tokenize(text));
+function overlapScore(queryTokens: Set<string>, text: string, lang: Language): number {
+  const tokens = new Set(tokenize(text, lang));
   let score = 0;
 
   queryTokens.forEach((token) => {
@@ -473,15 +646,19 @@ function scoreKnowledgeItem(
   const routeSegments = routeLower.split('/').filter(Boolean);
   const rawAliases = item.aliases ?? [];
   const meta = resolveKnowledgeMeta(item, lang);
-  const codeFocused = rawQueryTokens.some((token) => /[A-Z%+\-]/.test(token));
-  const primaryCodeToken = findPrimaryCodeToken(rawQueryTokens);
+  const codeFocused = rawQueryTokens.some(
+    (token, index) =>
+      isPotentialCodeToken(token) ||
+      isScopedSingleCharacterCodeToken(rawQueryTokens, index, intent),
+  );
+  const primaryCodeToken = findPrimaryCodeToken(rawQueryTokens, intent);
   const primaryCompactCode = primaryCodeToken ? normalizeCompact(primaryCodeToken) : '';
 
   let score = 0;
-  score += overlapScore(queryTokens, item.title) * 6;
-  score += overlapScore(queryTokens, aliasText) * 5;
-  score += overlapScore(queryTokens, routeText) * 5;
-  score += overlapScore(queryTokens, item.content);
+  score += overlapScore(queryTokens, item.title, lang) * 6;
+  score += overlapScore(queryTokens, aliasText, lang) * 5;
+  score += overlapScore(queryTokens, routeText, lang) * 5;
+  score += overlapScore(queryTokens, item.content, lang);
 
   for (const token of queryTokens) {
     if (aliasesLower.some((alias) => alias === token)) {
@@ -516,8 +693,12 @@ function scoreKnowledgeItem(
       score += 40;
     }
 
-    if (meta.compactAliases.some((alias) => alias === term)) {
+    const exactCompactAliasMatch = meta.compactAliases.some((alias) => alias === term);
+    if (exactCompactAliasMatch) {
       score += 52;
+      if (term.length >= 4 && /\d/.test(term) && /[+%]/.test(term)) {
+        score += 48;
+      }
     } else if (
       meta.compactAliases.some(
         (alias) =>
@@ -562,6 +743,16 @@ function scoreKnowledgeItem(
   }
 
   score += scoreScopeHints(queryText, routeLower);
+
+  if (intent.broadInterpretation) {
+    if (routeLower === 'result-interpretation') {
+      score += 180;
+    } else if (meta.domain === 'interpretation') {
+      score += meta.level === 'category' ? 18 : 6;
+    } else if (meta.domain === 'coding') {
+      score -= 60;
+    }
+  }
 
   if (codeFocused && !intent.explicitInterpretation) {
     if (meta.domain === 'coding') {
@@ -810,10 +1001,14 @@ export function selectRelevantKnowledge(
   const effectiveBuiltIn = (builtInKnowledge ?? getBuiltInKnowledge(lang)).filter(
     (item) => !item.locale || item.locale === lang,
   );
-  const rawQueryTokens = expandRawQueryTokens(tokenizePreserveCase(userQuery));
-  const queryTokens = new Set(expandQueryTokens(tokenize(userQuery)));
+  const queryIntent = inferQueryIntent(userQuery, lang);
+  const sourceRawQueryTokens = tokenizePreserveCase(userQuery, lang);
+  const filteredRawQueryTokens = filterLowSignalQueryTokens(sourceRawQueryTokens, queryIntent);
+  const rawQueryTokens = expandRawQueryTokens(filteredRawQueryTokens);
+  const queryTokens = new Set(
+    expandQueryTokens(filteredRawQueryTokens.map((token) => token.toLowerCase())),
+  );
   const compactTerms = new Set(buildCompactTerms(userQuery, rawQueryTokens));
-  const queryIntent = inferQueryIntent(userQuery);
 
   if (queryTokens.size === 0) {
     const runtimeSummaries = effectiveBuiltIn.filter(

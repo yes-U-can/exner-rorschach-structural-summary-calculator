@@ -12,10 +12,12 @@ Use this checklist before deploying the BYOK-only RAG build to production.
 
 ## 2) Data And Migrations
 
-1. Prisma migration is reviewed before applying because it removes user/account/session/audit tables.
-2. Migration is tested on a staging/dev clone first.
-3. Neon keeps only public reference corpus embedding rows after migration.
-4. RAG write credentials are used only from local maintenance scripts.
+1. Every pending Prisma migration is reviewed before it is applied, especially when it deletes rows or narrows an enum.
+2. Destructive migrations are tested on an isolated staging/dev database with representative rows first.
+3. The production migration preflight records provider and locale counts before changing data.
+4. Neon keeps only OpenAI public reference-corpus embedding rows after the provider-cleanup migration.
+5. The vector release snapshot is regenerated after migration and `providerAudit.clean` is `true` with unexpected embedding count `0`.
+6. RAG write credentials are used only from local maintenance scripts and remain absent from Vercel runtime environments.
 
 ## 3) Security And Privacy
 

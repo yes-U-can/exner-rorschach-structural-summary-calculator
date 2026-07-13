@@ -11,7 +11,7 @@ const emptyCodes = {
   dq: '',
   determinants: [],
   fq: '',
-  pair: false,
+  pair: '',
   contents: [],
   popular: false,
   z: '',

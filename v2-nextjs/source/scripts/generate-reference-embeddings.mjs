@@ -115,7 +115,7 @@ async function upsertEmbeddingBatch(pool, provider, chunks, embeddingModel, vect
     const vector = vectors[index] ?? [];
     const offset = index * 8;
     valuesSql.push(
-      `($${offset + 1}, $${offset + 2}, $${offset + 3}, $${offset + 4}, $${offset + 5}::"EmbeddingProvider", $${offset + 6}, $${offset + 7}, $${offset + 8}::vector, NOW(), NOW())`,
+      `($${offset + 1}, $${offset + 2}, $${offset + 3}, $${offset + 4}, $${offset + 5}::"EmbeddingProvider", $${offset + 6}, $${offset + 7}, $${offset + 8}::vector, timezone('UTC', CURRENT_TIMESTAMP), timezone('UTC', CURRENT_TIMESTAMP))`,
     );
     parameters.push(
       randomUUID(),
@@ -151,7 +151,7 @@ async function upsertEmbeddingBatch(pool, provider, chunks, embeddingModel, vect
         "embeddingModel" = EXCLUDED."embeddingModel",
         "dimensions" = EXCLUDED."dimensions",
         "vector" = EXCLUDED."vector",
-        "updatedAt" = NOW()
+        "updatedAt" = timezone('UTC', CURRENT_TIMESTAMP)
     `,
     parameters,
   );

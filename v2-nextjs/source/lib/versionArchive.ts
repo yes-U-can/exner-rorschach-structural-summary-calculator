@@ -21,6 +21,18 @@ const v2SourceUrl = `${exhibitionRepoUrl}/tree/main/v2-nextjs/source`;
 
 export const v2NextVersions: VersionArchiveEntry[] = [
   {
+    version: 'v2.1.9',
+    title: 'Version 2.1.9',
+    series: 'v2-nextjs',
+    publishedAt: '2026-07-13',
+    releaseKind: 'bugfix',
+    releaseLabel: '버그 패치',
+    summary:
+      '다섯 언어 RAG 검색의 토큰 처리와 hybrid fusion을 보강하고, 실제 API 경로 평가·벡터 관측성·OpenAI-only provider 정리 게이트를 추가한 AI 검색 품질 강화 패치입니다.',
+    sourceUrl: v2SourceUrl,
+    releaseUrl: v2ReleaseUrl('v2.1.9'),
+  },
+  {
     version: 'v2.1.8',
     title: 'Version 2.1.8',
     series: 'v2-nextjs',

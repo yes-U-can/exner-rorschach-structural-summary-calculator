@@ -37,8 +37,13 @@ async function queryEmbeddingRows(pool, corpusGeneratedAtIso) {
         COUNT(*)::int AS embedded_count,
         MIN("dimensions")::int AS min_dimensions,
         MAX("dimensions")::int AS max_dimensions,
-        MAX("updatedAt") AS latest_refreshed_at,
-        SUM(CASE WHEN "updatedAt" < $1::timestamp THEN 1 ELSE 0 END)::int AS stale_count
+        MAX("updatedAt" AT TIME ZONE 'UTC') AS latest_refreshed_at,
+        SUM(
+          CASE
+            WHEN "updatedAt" < ($1::timestamptz AT TIME ZONE 'UTC') THEN 1
+            ELSE 0
+          END
+        )::int AS stale_count
       FROM "ReferenceChunkEmbedding"
       GROUP BY "provider", "locale"
       ORDER BY "provider", "locale"
@@ -55,7 +60,7 @@ async function queryProviderRows(pool) {
         "provider"::text AS provider,
         "embeddingModel",
         "dimensions",
-        "updatedAt" AS latest_refreshed_at
+        "updatedAt" AT TIME ZONE 'UTC' AS latest_refreshed_at
       FROM "ReferenceChunkEmbedding"
       ORDER BY "provider", "updatedAt" DESC
     `,
@@ -74,6 +79,28 @@ async function queryProviderTotals(pool) {
     `,
   );
   return result.rows;
+}
+
+function buildProviderAudit(totalRows) {
+  const expectedProviders = new Set(PROVIDERS);
+  const unexpectedProviders = totalRows
+    .filter((row) => !expectedProviders.has(row.provider))
+    .map((row) => ({
+      provider: row.provider,
+      totalEmbeddings: Number(row.total_embeddings ?? 0),
+    }))
+    .sort((left, right) => left.provider.localeCompare(right.provider));
+  const unexpectedEmbeddingCount = unexpectedProviders.reduce(
+    (sum, provider) => sum + provider.totalEmbeddings,
+    0,
+  );
+
+  return {
+    expectedProviders: PROVIDERS,
+    unexpectedProviders,
+    unexpectedEmbeddingCount,
+    clean: unexpectedEmbeddingCount === 0,
+  };
 }
 
 async function main() {
@@ -118,6 +145,7 @@ async function main() {
 
     const providerInfo = new Map(providerRows.map((row) => [row.provider, row]));
     const providerTotals = new Map(totalRows.map((row) => [row.provider, row.total_embeddings]));
+    const providerAudit = buildProviderAudit(totalRows);
     const localeInfo = new Map(
       embeddingRows.map((row) => [`${row.provider}:${row.locale}`, row]),
     );
@@ -197,8 +225,18 @@ async function main() {
           (provider) => readyLocalesByProvider[provider] === chunksArtifact.locales.length,
         ),
       },
+      providerAudit,
       providerSnapshots,
     };
+
+    if (!providerAudit.clean) {
+      const unexpectedSummary = providerAudit.unexpectedProviders
+        .map((provider) => `${provider.provider}:${provider.totalEmbeddings}`)
+        .join(', ');
+      console.warn(
+        `[reference-vector-release] unexpected provider rows detected (${unexpectedSummary})`,
+      );
+    }
 
     await fs.writeFile(OUTPUT_PATH, `${JSON.stringify(snapshot, null, 2)}\n`, 'utf8');
     console.log(`[reference-vector-release] wrote ${OUTPUT_PATH}`);

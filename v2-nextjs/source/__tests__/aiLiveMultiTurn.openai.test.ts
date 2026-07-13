@@ -28,7 +28,6 @@ const liveEvalModel = process.env.OPENAI_LIVE_EVAL_MODEL ?? DEFAULT_PROVIDER_MOD
 const liveEvalLocale = process.env.OPENAI_LIVE_EVAL_LOCALE;
 const liveEvalWorkflow = process.env.OPENAI_LIVE_EVAL_WORKFLOW as AiWorkflowMode | undefined;
 const liveEvalRetrievalMode = process.env.OPENAI_LIVE_EVAL_RETRIEVAL ?? 'fixture';
-const shouldPrintDebugOutput = process.env.OPENAI_LIVE_EVAL_DEBUG_OUTPUT === '1';
 const liveEvalMaxOutputTokens = Number.parseInt(process.env.OPENAI_LIVE_EVAL_MAX_OUTPUT_TOKENS ?? '', 10);
 const liveEvalIds = new Set(
   (process.env.OPENAI_LIVE_EVAL_IDS ?? '')
@@ -46,7 +45,7 @@ const emptyCodes = {
   dq: '',
   determinants: [],
   fq: '',
-  pair: false,
+  pair: '',
   contents: [],
   popular: false,
   z: '',
@@ -339,15 +338,6 @@ describe.runIf(apiKey && liveFixtures.length > 0)('OpenAI live AI multi-turn har
           retrievalTurnCount: retrievalEvidence.length,
         }),
       );
-      if (shouldPrintDebugOutput) {
-        console.info(
-          JSON.stringify({
-            debugFixtureId: fixture.id,
-            outputPreviews: outputs.map((output) => output.trim().slice(0, 1600)),
-          }),
-        );
-      }
-
       expect(status).toBe('completed');
       expect(outputChars).toBeGreaterThan(160);
       if (liveEvalRetrievalMode === 'runtime') {

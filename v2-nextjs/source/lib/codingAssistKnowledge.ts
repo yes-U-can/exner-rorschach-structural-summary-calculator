@@ -49,6 +49,9 @@ const LOW_SIGNAL_CODING_TOKENS = new Set([
 ]);
 
 const CARD_ROMAN_TOKENS = new Set(['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix', 'x']);
+const MAX_EMBEDDING_QUERY_CHARS = 3_000;
+const MAX_EMBEDDING_MEMO_CHARS = 800;
+const MAX_EMBEDDING_CONTEXT_ROWS = 12;
 
 function routeSegments(route: string): string[] {
   return route.toLowerCase().split(/[\/_-]+/u).filter(Boolean);
@@ -114,36 +117,61 @@ function scoreChunk(queryTokens: Set<string>, chunk: CodingRuleChunk): number {
 }
 
 export function buildCodingAssistQuery(context: CodingAssistContext): string {
-  const selectedRows = context.sheetRows.filter((row) => context.selectedRowIndices.includes(row.rowIndex));
-  const supportingRows = context.sheetRows.filter((row) => row.rowIndex !== context.focusRowIndex);
-  const focusLabel = `Card-${context.card} ${context.responseMemo}`.trim();
-  const selectedSummary = selectedRows
-    .map((row) => `Card-${row.card} ${row.responseMemo}`.trim())
-    .join(' ');
-  const sheetSummary = supportingRows
-    .slice(0, 8)
-    .map((row) => `Card-${row.card} ${row.responseMemo}`.trim())
-    .join(' ');
+  const normalizePart = (value: string, maxChars: number) =>
+    value.replace(/\s+/gu, ' ').trim().slice(0, maxChars);
+  const serializeCodes = (codes: CodingAssistContext['existingCodes']) =>
+    [
+      codes.location,
+      codes.dq,
+      codes.fq,
+      codes.pair,
+      codes.popular ? 'Popular P' : '',
+      codes.z,
+      ...codes.determinants,
+      ...codes.contents,
+      ...codes.specialScores,
+    ]
+      .map((value) => normalizePart(String(value ?? ''), 80))
+      .filter(Boolean)
+      .join(' ');
+  const focusRowIndex = context.focusRowIndex ?? context.rowIndex;
+  const selectedRowIndices = new Set(context.selectedRowIndices);
+  const selectedRows = context.sheetRows
+    .filter(
+      (row) =>
+        selectedRowIndices.has(row.rowIndex) &&
+        (focusRowIndex === null || row.rowIndex !== focusRowIndex),
+    )
+    .slice(0, MAX_EMBEDDING_CONTEXT_ROWS - 1);
+  const rows = [
+    {
+      label: 'focus',
+      rowIndex: focusRowIndex,
+      card: context.card,
+      responseMemo: context.responseMemo,
+      existingCodes: context.existingCodes,
+    },
+    ...selectedRows.map((row) => ({ ...row, label: 'selected' })),
+  ];
+  const rowSummaries = rows.map((row) => {
+    const memo = normalizePart(row.responseMemo, MAX_EMBEDDING_MEMO_CHARS);
+    const codes = serializeCodes(row.existingCodes);
+    const rowLabel = row.rowIndex === null ? row.label : `${row.label}-${row.rowIndex + 1}`;
 
-  return [
-    focusLabel,
-    selectedSummary,
-    sheetSummary,
-    ...(context.focusRowIndex === null
-      ? []
-      : [
-          context.existingCodes.location,
-          context.existingCodes.dq,
-          context.existingCodes.fq,
-          context.existingCodes.pair,
-          context.existingCodes.popular ? 'Popular P' : '',
-          context.existingCodes.z,
-          ...context.existingCodes.determinants,
-          ...context.existingCodes.contents,
-          ...context.existingCodes.specialScores,
-        ]),
-    'scoring input response coding',
-  ].join(' ');
+    return [
+      rowLabel,
+      `Card-${normalizePart(row.card, 40)}`,
+      memo,
+      codes ? `codes ${codes}` : '',
+    ]
+      .filter(Boolean)
+      .join(' ');
+  });
+
+  return ['scoring input response coding', ...rowSummaries]
+    .join('\n')
+    .slice(0, MAX_EMBEDDING_QUERY_CHARS)
+    .trim();
 }
 
 export function getCodingRuleChunks(lang: Language): CodingRuleChunk[] {

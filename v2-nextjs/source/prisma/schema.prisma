@@ -8,7 +8,6 @@ datasource db {
 
 enum EmbeddingProvider {
   openai
-  google
 }
 
 model ReferenceChunkEmbedding {

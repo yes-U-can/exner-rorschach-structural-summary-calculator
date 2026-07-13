@@ -24,7 +24,6 @@ const liveEvalModel = process.env.OPENAI_LIVE_EVAL_MODEL ?? DEFAULT_PROVIDER_MOD
 const liveEvalLocale = process.env.OPENAI_LIVE_EVAL_LOCALE;
 const liveEvalWorkflow = process.env.OPENAI_LIVE_EVAL_WORKFLOW as AiWorkflowMode | undefined;
 const liveEvalRetrievalMode = process.env.OPENAI_LIVE_EVAL_RETRIEVAL ?? 'fixture';
-const shouldPrintDebugOutput = process.env.OPENAI_LIVE_EVAL_DEBUG_OUTPUT === '1';
 const liveEvalMaxOutputTokens = Number.parseInt(process.env.OPENAI_LIVE_EVAL_MAX_OUTPUT_TOKENS ?? '', 10);
 const liveEvalIds = new Set(
   (process.env.OPENAI_LIVE_EVAL_IDS ?? '')
@@ -42,7 +41,7 @@ const emptyCodes = {
   dq: '',
   determinants: [],
   fq: '',
-  pair: false,
+  pair: '',
   contents: [],
   popular: false,
   z: '',
@@ -317,15 +316,6 @@ describe.runIf(apiKey && liveFixtures.length > 0)('OpenAI live AI harness eval',
           vectorHitCount: prepared.vectorHitCount,
         }),
       );
-      if (shouldPrintDebugOutput) {
-        console.info(
-          JSON.stringify({
-            fixtureId: fixture.id,
-            outputPreview: output.trim().slice(0, 1200),
-          }),
-        );
-      }
-
       expect(completion.status).toBe('completed');
       expect(output.trim().length).toBeGreaterThan(80);
       if (liveEvalRetrievalMode === 'runtime') {

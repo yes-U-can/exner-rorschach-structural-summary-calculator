@@ -28,7 +28,7 @@ The detailed public release documentation standard is kept at [`v2-nextjs/source
 
 ## v2.1.9
 
-v2.1.9 hardens the five-locale RAG retrieval path without changing the app UI/UX. It replaces direct lexical/vector score addition with weighted Reciprocal Rank Fusion, improves low-signal and multilingual token handling, minimizes coding-assistant embedding queries, adds a production-like `/api/chat` live eval, and makes legacy provider residue release-blocking.
+v2.1.9 hardens the five-locale RAG retrieval path without changing the app UI/UX. It replaces direct lexical/vector score addition with weighted Reciprocal Rank Fusion, improves low-signal and multilingual token handling, minimizes coding-assistant embedding queries, adds a production-like `/api/chat` live eval, and makes legacy provider residue release-blocking. The production cleanup removed 6,597 legacy Google embedding rows while preserving all 6,632 current OpenAI rows.
 
 The review workflow records **Claude Fable 5** as the independent audit and correction reviewer, and **GPT-5.6 Sol / Codex** as the local reproduction, implementation, and measurement agent. The report includes both accepted findings and corrected audit mistakes. These roles are engineering-process attribution, not clinical validation or vendor certification.
 

@@ -18,6 +18,35 @@ describe('referenceVectorRuntime', () => {
     expect(isReferenceVectorSnapshotCurrent()).toBe(true);
   });
 
+  it('serializes ready embedding timestamps as UTC instants after corpus generation', () => {
+    const snapshot = getReferenceVectorReleaseSnapshot();
+    const corpusGeneratedAt = Date.parse(snapshot.corpus?.generatedAt ?? '');
+    const openAiSnapshot = snapshot.providerSnapshots.openai;
+
+    expect(corpusGeneratedAt).not.toBeNaN();
+    expect(Date.parse(openAiSnapshot.latestRefreshedAt ?? '')).toBeGreaterThanOrEqual(
+      corpusGeneratedAt,
+    );
+    for (const localeSnapshot of Object.values(openAiSnapshot.locales)) {
+      if (!localeSnapshot?.ready) continue;
+      expect(Date.parse(localeSnapshot.latestRefreshedAt ?? '')).toBeGreaterThanOrEqual(
+        corpusGeneratedAt,
+      );
+    }
+  });
+
+  it('reports unsupported provider rows instead of hiding them', () => {
+    const snapshot = getReferenceVectorReleaseSnapshot();
+    const unexpectedEmbeddingCount = snapshot.providerAudit.unexpectedProviders.reduce(
+      (sum, provider) => sum + provider.totalEmbeddings,
+      0,
+    );
+
+    expect(snapshot.providerAudit.expectedProviders).toEqual(['openai']);
+    expect(snapshot.providerAudit.unexpectedEmbeddingCount).toBe(unexpectedEmbeddingCount);
+    expect(snapshot.providerAudit.clean).toBe(unexpectedEmbeddingCount === 0);
+  });
+
   it('reports not-ready runtime while embeddings are still missing', () => {
     const overview = getReferenceVectorOverview();
 

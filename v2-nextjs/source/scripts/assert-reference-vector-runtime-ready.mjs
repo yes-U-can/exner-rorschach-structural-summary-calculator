@@ -50,6 +50,10 @@ function main() {
     PROVIDERS.every((provider) => vectorRelease.providers.includes(provider)),
     'Vector release snapshot must include the openai provider.',
   );
+  assert(
+    vectorRelease.providerAudit?.clean === true,
+    `Unsupported provider embeddings remain in the vector store (${vectorRelease.providerAudit?.unexpectedEmbeddingCount ?? 'unknown'} rows). Apply the provider-cleanup migration and regenerate the vector snapshot.`,
+  );
   const rows = [];
 
   for (const provider of PROVIDERS) {

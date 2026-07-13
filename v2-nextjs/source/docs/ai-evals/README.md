@@ -40,6 +40,15 @@ Human review rubric:
 - [`2026-07-03-v2.1.6-ai-quality-closure-report.md`](./2026-07-03-v2.1.6-ai-quality-closure-report.md)
 - [`2026-07-03-v2.1.6-ai-quality-closure-gate.md`](./2026-07-03-v2.1.6-ai-quality-closure-gate.md)
 - [`2026-07-12-corpus-evidence-calibration-report.md`](./2026-07-12-corpus-evidence-calibration-report.md)
+- [`2026-07-13-v2.1.9-rag-retrieval-hardening-report.md`](./2026-07-13-v2.1.9-rag-retrieval-hardening-report.md)
+
+Run the five-locale hybrid retrieval development challenge with real OpenAI query embeddings and the runtime vector database:
+
+```bash
+npm run docs:evaluate-hybrid:openai -- --enforce
+```
+
+The default challenge set is a tuning set, not a blind held-out evaluation. Saved output contains fixture IDs, routes, ranks, scores, and latency only. It does not contain the API key or model-generated text.
 
 Validate saved human review records:
 
@@ -62,6 +71,14 @@ Run a multi-turn live batch when you want to test follow-up behavior:
 ```bash
 npm run ai:evaluate-live:batch -- --suite multiturn --model gpt-5.5 --locales en --rounds 1 --budget-usd 5
 ```
+
+Run the explicit production-like `/api/chat` path with a synthetic validated Structural Summary CSV, real BYOK cookie handling, runtime hybrid RAG, GPT-5.5 streaming, and HITL contracts:
+
+```bash
+npm run ai:evaluate-live:openai:route
+```
+
+The route eval keeps the model output in process memory only. It prints aggregate status and contract metadata, not the raw response.
 
 Audit the saved JSONL artifacts:
 
