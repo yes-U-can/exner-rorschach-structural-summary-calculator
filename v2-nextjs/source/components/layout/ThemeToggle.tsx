@@ -12,7 +12,7 @@ const LABELS = {
   pt: 'Alternar entre modo claro e escuro',
 } as const;
 
-export default function ThemeToggle() {
+export default function ThemeToggle({ compact = false }: { compact?: boolean }) {
   const { language } = useTranslation();
   const label = LABELS[language] ?? LABELS.en;
 
@@ -23,7 +23,7 @@ export default function ThemeToggle() {
       aria-label={label}
       title={label}
       data-theme-allow-transition="true"
-      className="theme-toggle"
+      className={`theme-toggle ${compact ? 'is-compact' : ''}`}
     >
       <span className="sr-only">{label}</span>
       <span className="theme-toggle-icon theme-toggle-icon-light">

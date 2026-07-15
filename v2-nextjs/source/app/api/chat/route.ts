@@ -20,12 +20,13 @@ import {
   buildSupportingInterpretationChunks,
   selectCodingRuleChunks,
 } from '@/lib/codingAssistKnowledge';
-import { buildSafeApiErrorResponse, logApiError } from '@/lib/apiError';
+import { buildSafeApiErrorResponse, logApiError, logApiEvent } from '@/lib/apiError';
 import { parseJsonWithSizeLimit, REQUEST_BODY_SIZE_POLICIES } from '@/lib/requestBodyGuard';
 import { normalizeEphemeralChatContext } from '@/lib/chatEphemeralContext';
 import { readByokSessionFromRequest } from '@/lib/byokSession';
 import { BYOK_SESSION_MISSING_CODE } from '@/lib/chatApiErrors';
 import { detectChatSafetyAssessment } from '@/lib/chatSafety';
+import { detectChatDomainBoundary } from '@/lib/chatDomainBoundary';
 import { classifyChatProviderError } from '@/lib/chatProviderErrors';
 import {
   CHAT_STREAM_CONTENT_TYPE,
@@ -68,6 +69,7 @@ type ChatStreamStatus =
   | 'aborted'
   | 'provider_init_failed'
   | 'provider_unknown';
+type ProviderAbortReason = 'client_aborted' | 'timeout';
 
 function getStructuralSummaryCsvFromWorkflowContext(input: unknown) {
   if (!input || typeof input !== 'object') return '';
@@ -148,6 +150,30 @@ function buildChatStreamTerminalEvent(
     type: 'error',
     code: failure.code,
     message: failure.publicMessage,
+  };
+}
+
+function getProviderAbortReason(args: {
+  requestSignal: AbortSignal;
+  downstreamSignal: AbortSignal;
+  timeoutSignal: AbortSignal;
+}): ProviderAbortReason | null {
+  if (args.timeoutSignal.aborted) return 'timeout';
+  if (args.requestSignal.aborted || args.downstreamSignal.aborted) return 'client_aborted';
+  return null;
+}
+
+function withProviderAbortReason(
+  completion: OpenAITextStreamCompletion,
+  reason: ProviderAbortReason | null,
+): OpenAITextStreamCompletion {
+  if (!reason) return completion;
+  return {
+    ...completion,
+    status: 'aborted',
+    incompleteReason: reason,
+    errorCode: undefined,
+    errorMessage: undefined,
   };
 }
 
@@ -274,6 +300,35 @@ export async function POST(req: Request) {
       });
     }
 
+    const domainBoundary = detectChatDomainBoundary({
+      text: userMessage.content,
+      locale: workflowLocale,
+    });
+
+    if (domainBoundary.interventionTriggered && domainBoundary.safeResponse) {
+      logApiEvent('chat_domain_intervention', requestId, {
+        locale: workflowLocale,
+        workflowType: workflowMode,
+        boundaryType: domainBoundary.type,
+        boundaryReason: domainBoundary.interventionReason,
+      });
+
+      const responseHeaders = new Headers();
+      responseHeaders.set('X-Chat-Request-Id', requestId);
+      responseHeaders.set('X-Chat-Model-Id', selectedModel.id);
+      responseHeaders.set('X-Chat-Workflow-Mode', workflowMode);
+      responseHeaders.set('X-Chat-Domain-Intervention', 'true');
+      if (domainBoundary.type) {
+        responseHeaders.set('X-Chat-Domain-Boundary', domainBoundary.type);
+      }
+      applyAiHarnessHeaders(responseHeaders, promptProfile);
+      return buildImmediateChatResponse({
+        content: domainBoundary.safeResponse,
+        headers: responseHeaders,
+        structuredStreamRequested,
+      });
+    }
+
     const codingAssistContext =
       workflowMode === 'coding_assist' ? normalizeCodingAssistContext(body.workflowContext) : null;
     if (workflowMode === 'coding_assist' && !codingAssistContext) {
@@ -297,10 +352,18 @@ export async function POST(req: Request) {
     }
 
     const normalizedMessages: NormalizedMessage[] = [...contextResult.messages, userMessage];
+    const downstreamAbortController = new AbortController();
+    const providerTimeoutSignal = AbortSignal.timeout(OPENAI_GENERATION_TIMEOUT_MS);
     const providerSignal = AbortSignal.any([
       req.signal,
-      AbortSignal.timeout(OPENAI_GENERATION_TIMEOUT_MS),
+      downstreamAbortController.signal,
+      providerTimeoutSignal,
     ]);
+    const readProviderAbortReason = () => getProviderAbortReason({
+      requestSignal: req.signal,
+      downstreamSignal: downstreamAbortController.signal,
+      timeoutSignal: providerTimeoutSignal,
+    });
     const retrievalQuery = buildChatRetrievalQuery({
       mode: workflowMode,
       messages: normalizedMessages,
@@ -429,7 +492,7 @@ export async function POST(req: Request) {
       streamFinalized = true;
 
       if (streamStatus !== 'completed') {
-        logApiError('chat_stream_not_completed', requestId, new Error(`Stream status: ${streamStatus}`), {
+        const runMetadata = {
           ...buildAiRunMetadata({
             profile: promptProfile,
             provider,
@@ -444,7 +507,20 @@ export async function POST(req: Request) {
           vectorHitCount,
           retrievalTrace,
           retrievedDocCount: retrievedDocIds.length,
-        });
+        };
+        if (
+          (streamStatus === 'aborted' || streamStatus === 'partial_aborted') &&
+          completion?.incompleteReason === 'client_aborted'
+        ) {
+          logApiEvent('chat_stream_cancelled_by_client', requestId, runMetadata);
+        } else {
+          logApiError(
+            'chat_stream_not_completed',
+            requestId,
+            new Error(`Stream status: ${streamStatus}`),
+            runMetadata,
+          );
+        }
       }
     };
 
@@ -509,7 +585,10 @@ export async function POST(req: Request) {
                 : encoder.encode(tail),
             );
           }
-          latestProviderCompletion = await providerResult.completion;
+          latestProviderCompletion = withProviderAbortReason(
+            await providerResult.completion,
+            readProviderAbortReason(),
+          );
           await finalizeStreamResult(
             getTerminalStreamStatus(latestProviderCompletion, aiResponseContent.length),
             latestProviderCompletion,
@@ -521,19 +600,24 @@ export async function POST(req: Request) {
           }
           controller.close();
         } catch (streamError) {
-          latestProviderCompletion = await providerResult.completion;
-          const providerFailure = classifyChatProviderError(streamError);
-          logApiError('chat_stream_failed', requestId, streamError, {
-            ...buildAiRunMetadata({
-              profile: promptProfile,
-              provider,
-              modelId: selectedModel.id,
-              workflowType: workflowMode,
-              locale: workflowLocale,
-              maxOutputTokens,
-              completion: latestProviderCompletion,
-            }),
-          });
+          const providerAbortReason = readProviderAbortReason();
+          latestProviderCompletion = withProviderAbortReason(
+            await providerResult.completion,
+            providerAbortReason,
+          );
+          if (!providerAbortReason) {
+            logApiError('chat_stream_failed', requestId, streamError, {
+              ...buildAiRunMetadata({
+                profile: promptProfile,
+                provider,
+                modelId: selectedModel.id,
+                workflowType: workflowMode,
+                locale: workflowLocale,
+                maxOutputTokens,
+                completion: latestProviderCompletion,
+              }),
+            });
+          }
           await finalizeStreamResult(
             getTerminalStreamStatus(latestProviderCompletion, aiResponseContent.length),
             latestProviderCompletion,
@@ -544,11 +628,7 @@ export async function POST(req: Request) {
               return;
             }
             controller.enqueue(
-              encodeChatStreamEvent({
-                type: 'error',
-                code: providerFailure.code,
-                message: providerFailure.publicMessage,
-              }),
+              encodeChatStreamEvent(buildChatStreamTerminalEvent(latestProviderCompletion)),
             );
             controller.close();
           } catch {
@@ -559,12 +639,16 @@ export async function POST(req: Request) {
         }
       },
       async cancel(reason) {
+        downstreamAbortController.abort('client_aborted');
         try {
           await providerReader?.cancel(reason);
         } catch {
           // The provider stream is already closing; audit finalization below is the important part.
         }
-        latestProviderCompletion = await providerResult.completion;
+        latestProviderCompletion = withProviderAbortReason(
+          await providerResult.completion,
+          'client_aborted',
+        );
         await finalizeStreamResult(
           getTerminalStreamStatus(latestProviderCompletion, aiResponseContent.length),
           latestProviderCompletion,

@@ -38,6 +38,7 @@ No sustituye la evaluación clínica inmediata, pero indica cuando el tema requi
 
 ## Puntos de interpretación
 
+- Aplique el umbral y la interpretación de `S-CON` solo a personas de 15 años o más. Su utilidad no se ha demostrado en menores de 15 años, por lo que no debe usarse la puntuación calculada como una conclusión positiva o negativa en ese grupo.
 - Si `S-CON` alcanza el umbral, evalúe de inmediato ideación suicida, intención, plan, acceso a medios, intentos previos, cambios recientes y factores de protección.
 - La constelación integra señales de estrés, autocrítica, dolor emocional y control reducido.
 - Su valor aumenta cuando coincide con `D` bajo, `AdjD` bajo, `SumV`, `SumY`, `MOR_self` y `DEPI`.

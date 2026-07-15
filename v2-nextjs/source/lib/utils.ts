@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /**
- * Rorschach Calculator v2.1.7
+ * Rorschach Calculator v2.2.0
  * Utility Functions
  * 
  * Code.gs의 유틸리티 함수들을 TypeScript로 이전
@@ -34,7 +34,7 @@ export function fix2(n: number | string): string {
  */
 export function zestFromZf(zf: number, zestTable: readonly (number | null)[]): number | null {
   if (typeof zf !== 'number' || !Number.isFinite(zf)) return null;
-  if (zf < 1 || zf >= zestTable.length) return null;
+  if (zf < 1 || zf > zestTable.length) return null;
   return zestTable[zf - 1];
 }
 
@@ -51,7 +51,9 @@ export function dTable(
   if (x < min) return -5;
   if (x > max) return 5;
   if (typeof x !== 'number' || !Number.isFinite(x)) return '-';
-  if (x >= 0) return Math.trunc((x - offset) / divisor);
-  return -Math.trunc(((-x) - offset) / divisor);
+  const score = x >= 0
+    ? Math.trunc((x - offset) / divisor)
+    : -Math.trunc(((-x) - offset) / divisor);
+  return Object.is(score, -0) ? 0 : score;
 }
 

@@ -1,8 +1,23 @@
 import type { Metadata } from 'next';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
 import VersionArchiveList from '@/components/versions/VersionArchiveList';
 import { v1GasVersions, v2NextVersions } from '@/lib/versionArchive';
+import type { Language } from '@/types';
+
+type VersionsPageProps = {
+  searchParams: Promise<{ lang?: string }>;
+};
+
+const TITLES: Record<Language, string> = {
+  ko: '버전 아카이브',
+  en: 'Version Archive',
+  ja: 'バージョンアーカイブ',
+  es: 'Archivo de versiones',
+  pt: 'Arquivo de versões',
+};
+
+function normalizeLang(lang?: string): Language {
+  return lang === 'ko' || lang === 'ja' || lang === 'es' || lang === 'pt' ? lang : 'en';
+}
 
 export const metadata: Metadata = {
   title: 'Version Archive',
@@ -12,19 +27,20 @@ export const metadata: Metadata = {
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
-export default function VersionsPage() {
+export default async function VersionsPage({ searchParams }: VersionsPageProps) {
+  const { lang: requestedLanguage } = await searchParams;
+  const language = normalizeLang(requestedLanguage);
+
   return (
     <div className="min-h-screen bg-[var(--brand-page)] text-[var(--text-body)]">
-      <Header />
-      <main className="relative z-10 mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 pb-16 pt-4 sm:px-6 lg:px-8">
-        <section className="ui-ref-card rounded-3xl p-6">
-          <h1 className="text-2xl font-semibold tracking-tight text-[var(--text-strong)] sm:text-3xl">
-            {'\uBC84\uC804 \uC544\uCE74\uC774\uBE0C'}
+      <main className="mx-auto w-full max-w-4xl px-5 pb-20 pt-10 sm:px-8 sm:pt-14 lg:px-10">
+        <article id="versions-page-content">
+          <h1 className="text-2xl font-bold text-[var(--text-strong)]">
+            {TITLES[language]}
           </h1>
           <VersionArchiveList v2NextVersions={v2NextVersions} v1GasVersions={v1GasVersions} />
-        </section>
+        </article>
       </main>
-      <Footer />
     </div>
   );
 }

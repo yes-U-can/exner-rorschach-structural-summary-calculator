@@ -8,6 +8,8 @@ import { TranslationProvider } from '@/hooks/useTranslation';
 import { ToastProvider } from '@/components/ui/Toast';
 import GoogleAnalyticsPageView from '@/components/analytics/GoogleAnalyticsPageView';
 import ByokSessionDialog from '@/components/byok/ByokSessionDialog';
+import AppShell from '@/components/layout/AppShell';
+import { DEFAULT_LANGUAGE, normalizeLanguage } from '@/i18n/config';
 import './globals.css';
 
 const inter = Inter({
@@ -93,7 +95,9 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const nonce = (await headers()).get('x-nonce') ?? undefined;
+  const requestHeaders = await headers();
+  const nonce = requestHeaders.get('x-nonce') ?? undefined;
+  const initialLanguage = normalizeLanguage(requestHeaders.get('x-language')) ?? DEFAULT_LANGUAGE;
   const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
   const cookieYesScriptUrl = process.env.NEXT_PUBLIC_COOKIEYES_SCRIPT_URL;
 
@@ -120,7 +124,7 @@ export default async function RootLayout({
   };
 
   return (
-    <html lang="ko" suppressHydrationWarning>
+    <html lang={initialLanguage} suppressHydrationWarning>
       <head>
         <script
           id="theme-init"
@@ -188,7 +192,7 @@ export default async function RootLayout({
       </head>
       <body className={`${inter.variable} bg-[var(--brand-page)] font-sans antialiased text-[var(--text-body)]`}>
         <Providers>
-          <TranslationProvider>
+          <TranslationProvider initialLanguage={initialLanguage}>
             <ToastProvider>
               {gaId && gaId !== 'G-XXXXXXXXXX' ? (
                 <Suspense fallback={null}>
@@ -196,7 +200,7 @@ export default async function RootLayout({
                 </Suspense>
               ) : null}
               <ByokSessionDialog />
-              {children}
+              <AppShell>{children}</AppShell>
             </ToastProvider>
           </TranslationProvider>
         </Providers>

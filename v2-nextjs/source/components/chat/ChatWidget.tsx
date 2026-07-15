@@ -1,17 +1,34 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { SparklesIcon, XMarkIcon } from '@heroicons/react/24/solid';
+import { useCallback, useEffect, useMemo, useState } from 'react';
+import { SparklesIcon, StopIcon, XMarkIcon } from '@heroicons/react/24/solid';
 import { PaperAirplaneIcon } from '@heroicons/react/24/outline';
 import { toPlainTextChat } from '@/lib/chatPlainText';
 import { useTranslation } from '@/hooks/useTranslation';
+import { useChatAutoScroll } from '@/hooks/useChatAutoScroll';
+import { useChatRequestControl } from '@/hooks/useChatRequestControl';
 import type {
+  AiFeedbackRating,
+  AiFeedbackReasonCode,
   ChatMessageMetadata,
   CodingAssistContext,
   Language,
 } from '@/types';
 import { getCodingAssistWidgetUi } from '@/lib/codingAssistUi';
-import { ChatBubble, ChatMessageRow, ChatMessageText } from '@/components/chat/ChatBubble';
+import { getChatRuntimeUi } from '@/lib/chatPageUi';
+import { getChatMessageActionsUi } from '@/lib/chatMessageActionsUi';
+import {
+  shouldShowChatMessageActions,
+  withClientFeedbackIds,
+} from '@/lib/chatMessageActions';
+import {
+  ChatBubble,
+  ChatMessageGroup,
+  ChatMessageRow,
+  ChatMessageText,
+} from '@/components/chat/ChatBubble';
+import { ChatMessageActions } from '@/components/chat/ChatMessageActions';
+import { ChatScrollToLatestButton } from '@/components/chat/ChatScrollToLatestButton';
 import {
   buildEphemeralChatStorageKey,
   clearAllEphemeralChatStorage,
@@ -28,6 +45,11 @@ import {
 } from '@/lib/byokSessionClient';
 import { isByokSessionMissingError, readChatApiErrorPayload } from '@/lib/chatApiErrors';
 import { CHAT_STREAM_PROTOCOL, consumeChatEventStream } from '@/lib/chatStreamProtocol';
+import {
+  AI_RESPONSE_FEEDBACK_ENABLED,
+  createClientFeedbackId,
+  submitAiResponseFeedback,
+} from '@/lib/aiFeedbackClient';
 
 type Provider = 'openai';
 type ModelOption = {
@@ -46,6 +68,7 @@ type Message = {
   id: number;
   role: 'ai' | 'user';
   content: string;
+  statusNotice?: string;
   uiOnly?: boolean;
   metadata?: ChatMessageMetadata;
 };
@@ -69,6 +92,8 @@ export default function ChatWidget({
 }: ChatWidgetProps) {
   const { t, language } = useTranslation();
   const ui = getCodingAssistWidgetUi(language as Language);
+  const chatRuntimeUi = getChatRuntimeUi(language as Language);
+  const messageActionsUi = getChatMessageActionsUi(language);
 
   const [provider, setProvider] = useState<Provider>('openai');
   const [modelId, setModelId] = useState('gpt-5.5');
@@ -77,10 +102,18 @@ export default function ChatWidget({
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputText, setInputText] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const { beginRequest, finishRequest, stopRequest } = useChatRequestControl();
   const [loadedStorageKey, setLoadedStorageKey] = useState<string | null>(null);
-  const messagesScrollRef = useRef<HTMLDivElement | null>(null);
-  const messagesEndRef = useRef<HTMLDivElement | null>(null);
-  const shouldAutoScrollRef = useRef(true);
+  const latestMessageContent = messages[messages.length - 1]?.content ?? '';
+  const {
+    scrollContainerRef,
+    isFollowing,
+    resumeFollowing,
+    scrollHandlers,
+  } = useChatAutoScroll({
+    messageCount: messages.length,
+    latestContent: latestMessageContent,
+  });
 
   const currentWorkflow = useMemo(
     () =>
@@ -99,20 +132,6 @@ export default function ChatWidget({
     }),
     [],
   );
-
-  const updateAutoScrollPreference = useCallback(() => {
-    const scrollElement = messagesScrollRef.current;
-    if (!scrollElement) return;
-    const distanceFromBottom = scrollElement.scrollHeight - scrollElement.scrollTop - scrollElement.clientHeight;
-    shouldAutoScrollRef.current = distanceFromBottom < 96;
-  }, []);
-
-  const lastMessageContent = messages[messages.length - 1]?.content ?? '';
-
-  useEffect(() => {
-    if (!shouldAutoScrollRef.current) return;
-    messagesEndRef.current?.scrollIntoView({ behavior: 'auto', block: 'end' });
-  }, [messages.length, lastMessageContent]);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -236,7 +255,13 @@ export default function ChatWidget({
 
     setLoadedStorageKey(null);
 
-    const storedMessages = readEphemeralChatMessages<Message>(storageKey);
+    const storedMessages = withClientFeedbackIds(
+      readEphemeralChatMessages<Message>(storageKey),
+      {
+        enabled: AI_RESPONSE_FEEDBACK_ENABLED,
+        createId: createClientFeedbackId,
+      },
+    );
     setMessages(storedMessages.length > 0 ? storedMessages : currentWorkflow.context ? [starter] : []);
     setLoadedStorageKey(storageKey);
   }, [currentWorkflow.context, currentWorkflow.starterMessage, isOpen, loadedStorageKey, storageKey]);
@@ -296,6 +321,37 @@ export default function ChatWidget({
     return t('chat.errorMessage');
   }, [t]);
 
+  const saveMessageFeedback = useCallback(async (args: {
+    messageId: number;
+    feedbackId: string;
+    completionState: NonNullable<ChatMessageMetadata['completionState']>;
+    responseChars: number;
+    rating: AiFeedbackRating | null;
+    reasonCodes: AiFeedbackReasonCode[];
+  }) => {
+    await submitAiResponseFeedback({
+      feedbackId: args.feedbackId,
+      rating: args.rating,
+      workflowType: 'coding_assist',
+      locale: language as Language,
+      completionState: args.completionState,
+      responseChars: args.responseChars,
+      reasonCodes: args.reasonCodes,
+    });
+    setMessages((current) => current.map((message) => (
+      message.id === args.messageId
+        ? {
+            ...message,
+            metadata: {
+              ...message.metadata,
+              feedbackRating: args.rating,
+              feedbackReasonCodes: args.rating ? args.reasonCodes : [],
+            },
+          }
+        : message
+    )));
+  }, [language]);
+
   const sendMessage = useCallback(async (messageText: string) => {
     if (!currentWorkflow.context || messageText.trim() === '' || isLoading || !isModelStateLoaded) return;
     const activeSession = await fetchByokSessionStatus();
@@ -308,9 +364,34 @@ export default function ChatWidget({
     if (!hasSelectableModel) return;
 
     const newMessages = [...messages, { id: Date.now(), role: 'user' as const, content: messageText }];
+    resumeFollowing('auto');
     setMessages(newMessages);
     setInputText('');
     setIsLoading(true);
+    const requestController = beginRequest();
+    let aiMessageId: number | null = null;
+    let aiResponseText = '';
+
+    const updateAiMessage = (
+      content: string,
+      completionState?: ChatMessageMetadata['completionState'],
+      statusNotice?: string,
+    ) => {
+      if (aiMessageId === null) return;
+      setMessages((prev) => prev.map((message) => (
+        message.id === aiMessageId
+          ? {
+              ...message,
+              content,
+              statusNotice,
+              metadata: {
+                ...message.metadata,
+                ...(completionState ? { completionState } : {}),
+              },
+            }
+          : message
+      )));
+    };
 
     try {
       const response = await fetch('/api/chat', {
@@ -327,6 +408,7 @@ export default function ChatWidget({
           workflowContext: currentWorkflow.context,
           lang: language,
         }),
+        signal: requestController.signal,
       });
 
       if (!response.ok) {
@@ -343,15 +425,25 @@ export default function ChatWidget({
         throw new Error(ui.serverFallbackError);
       }
 
-      const aiMessageId = Date.now() + 1;
-      setMessages((prev) => [...prev, { id: aiMessageId, role: 'ai', content: '' }]);
-      let aiResponseText = '';
-      const updateAiMessage = (content: string) => {
-        setMessages((prev) => prev.map((message) => (
-          message.id === aiMessageId ? { ...message, content } : message
-        )));
-      };
-
+      const nextAiMessageId = Date.now() + 1;
+      aiMessageId = nextAiMessageId;
+      setMessages((prev) => [
+        ...prev,
+        {
+          id: nextAiMessageId,
+          role: 'ai',
+          content: '',
+          metadata: {
+            workflowType: 'coding_assist',
+            locale: language,
+            modelId,
+            ...(AI_RESPONSE_FEEDBACK_ENABLED
+              ? { clientFeedbackId: createClientFeedbackId() }
+              : {}),
+            completionState: 'streaming',
+          },
+        },
+      ]);
       try {
         const terminalEvent = await consumeChatEventStream(response.body, (delta) => {
           aiResponseText += delta;
@@ -360,23 +452,79 @@ export default function ChatWidget({
         if (terminalEvent.type !== 'complete') {
           const notice = terminalEvent.type === 'error'
             ? getFriendlyErrorMessage(terminalEvent.message)
-            : ui.streamInterrupted;
-          aiResponseText = aiResponseText ? `${aiResponseText}\n\n${notice}` : notice;
-          updateAiMessage(aiResponseText);
+            : terminalEvent.reason === 'max_output_tokens'
+              ? chatRuntimeUi.responseLengthReached
+              : terminalEvent.reason === 'timeout'
+                ? chatRuntimeUi.responseTimedOut
+                : chatRuntimeUi.streamInterrupted;
+          updateAiMessage(
+            aiResponseText,
+            terminalEvent.type === 'error' ? 'failed' : 'incomplete',
+            notice,
+          );
+        } else {
+          updateAiMessage(aiResponseText, 'completed');
         }
-      } catch {
-        aiResponseText = aiResponseText
-          ? `${aiResponseText}\n\n${ui.streamInterrupted}`
-          : ui.streamInterrupted;
-        updateAiMessage(aiResponseText);
+      } catch (streamError) {
+        if (!requestController.signal.aborted) {
+          console.error('Coding assistant stream interrupted:', streamError);
+        }
+        updateAiMessage(
+          aiResponseText,
+          requestController.signal.aborted ? 'incomplete' : 'failed',
+          requestController.signal.aborted
+            ? chatRuntimeUi.responseStopped
+            : chatRuntimeUi.streamInterrupted,
+        );
       }
     } catch (error) {
+      if (requestController.signal.aborted) {
+        if (aiMessageId === null) {
+          setMessages((prev) => [
+            ...prev,
+            {
+              id: Date.now() + 2,
+              role: 'ai',
+              content: '',
+              statusNotice: chatRuntimeUi.responseStopped,
+              metadata: {
+                workflowType: 'coding_assist',
+                locale: language,
+                modelId,
+                completionState: 'incomplete',
+              },
+            },
+          ]);
+        } else {
+          updateAiMessage(
+            aiResponseText,
+            'incomplete',
+            chatRuntimeUi.responseStopped,
+          );
+        }
+        return;
+      }
       const friendly = getFriendlyErrorMessage(error instanceof Error ? error.message : '');
-      setMessages((prev) => [...prev, { id: Date.now() + 2, role: 'ai', content: friendly }]);
+      setMessages((prev) => [
+        ...prev,
+        {
+          id: Date.now() + 2,
+          role: 'ai',
+          content: '',
+          statusNotice: friendly,
+          metadata: {
+            workflowType: 'coding_assist',
+            locale: language,
+            modelId,
+            completionState: 'failed',
+          },
+        },
+      ]);
     } finally {
+      finishRequest(requestController);
       setIsLoading(false);
     }
-  }, [currentWorkflow.context, getFriendlyErrorMessage, hasSelectableModel, isLoading, isModelStateLoaded, language, messages, ui.serverFallbackError, ui.streamInterrupted]);
+  }, [beginRequest, chatRuntimeUi.responseLengthReached, chatRuntimeUi.responseStopped, chatRuntimeUi.responseTimedOut, chatRuntimeUi.streamInterrupted, currentWorkflow.context, finishRequest, getFriendlyErrorMessage, hasSelectableModel, isLoading, isModelStateLoaded, language, messages, modelId, resumeFollowing, ui.serverFallbackError]);
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
@@ -405,19 +553,53 @@ export default function ChatWidget({
           </button>
         </div>
 
-        <div
-          ref={messagesScrollRef}
-          onScroll={updateAutoScrollPreference}
-          className="min-h-0 flex-1 overflow-y-auto px-4 py-4 pb-3"
-        >
-          <div className="space-y-4">
+        <div className="relative min-h-0 flex-1 overflow-hidden">
+          <div
+            ref={scrollContainerRef}
+            {...scrollHandlers}
+            className="h-full overflow-y-auto overscroll-contain px-4 py-4 pb-3 [overflow-anchor:none]"
+          >
+            <div className="space-y-4">
             {messages.map((message) => (
               <ChatMessageRow key={message.id} role={message.role}>
-                <ChatBubble role={message.role}>
-                  <ChatMessageText>
-                    {message.role === 'ai' ? toPlainTextChat(message.content) : message.content}
-                  </ChatMessageText>
-                </ChatBubble>
+                <ChatMessageGroup role={message.role}>
+                  {message.content.trim() ? (
+                    <ChatBubble role={message.role}>
+                      <ChatMessageText>
+                        {message.role === 'ai' ? toPlainTextChat(message.content) : message.content}
+                      </ChatMessageText>
+                    </ChatBubble>
+                  ) : null}
+                  {message.statusNotice ? (
+                    <p className="ui-chat-message-status" role="status">{message.statusNotice}</p>
+                  ) : null}
+                  {shouldShowChatMessageActions({
+                    content: message.content,
+                    uiOnly: message.uiOnly,
+                    completionState: message.metadata?.completionState,
+                  }) ? (
+                    <ChatMessageActions
+                      content={message.role === 'ai' ? toPlainTextChat(message.content) : message.content}
+                      language={language as Language}
+                      feedbackRating={message.role === 'ai' ? message.metadata?.feedbackRating : undefined}
+                      onFeedback={
+                        message.role === 'ai' &&
+                        AI_RESPONSE_FEEDBACK_ENABLED &&
+                        message.metadata?.clientFeedbackId &&
+                        message.metadata.completionState !== 'failed'
+                          ? (rating, reasonCodes) => saveMessageFeedback({
+                              messageId: message.id,
+                              feedbackId: message.metadata!.clientFeedbackId!,
+                              completionState: message.metadata?.completionState ?? 'unknown',
+                              responseChars: toPlainTextChat(message.content).length,
+                              rating,
+                              reasonCodes,
+                            })
+                          : undefined
+                      }
+                    />
+                  ) : null}
+                </ChatMessageGroup>
               </ChatMessageRow>
             ))}
             {isLoading && messages[messages.length - 1]?.role !== 'ai' && (
@@ -431,8 +613,14 @@ export default function ChatWidget({
                 </div>
               </div>
             )}
-            <div ref={messagesEndRef} />
+            </div>
           </div>
+          {!isFollowing && messages.length > 0 ? (
+            <ChatScrollToLatestButton
+              label={messageActionsUi.jumpToLatest}
+              onClick={() => resumeFollowing('smooth')}
+            />
+          ) : null}
         </div>
 
         <div className="pb-safe rounded-b-2xl border-t border-[var(--border-subtle)] bg-[var(--surface-base)] p-3 md:p-4">
@@ -476,14 +664,27 @@ export default function ChatWidget({
               disabled={inputDisabled}
               className="ui-chat-input focus:ring-1"
             />
-            <button
-              type="submit"
-              className="ui-send-button"
-              disabled={inputDisabled || inputText.trim() === ''}
-              aria-label={ui.send}
-            >
-              <PaperAirplaneIcon className="mx-auto h-5 w-5" />
-            </button>
+            {isLoading ? (
+              <button
+                type="button"
+                className="ui-send-button"
+                onClick={stopRequest}
+                aria-label={chatRuntimeUi.stopGenerating}
+                title={chatRuntimeUi.stopGenerating}
+              >
+                <StopIcon className="mx-auto h-5 w-5" />
+              </button>
+            ) : (
+              <button
+                type="submit"
+                className="ui-send-button"
+                disabled={inputDisabled || inputText.trim() === ''}
+                aria-label={ui.send}
+                title={ui.send}
+              >
+                <PaperAirplaneIcon className="mx-auto h-5 w-5" />
+              </button>
+            )}
           </form>
         </div>
       </div>

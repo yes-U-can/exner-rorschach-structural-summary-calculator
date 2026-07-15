@@ -1,13 +1,27 @@
 'use client';
 
-import { useMemo, useState, useCallback, useRef, useEffect, Fragment } from 'react';
-import type { PointerEvent as ReactPointerEvent } from 'react';
+import { useMemo, useState, useCallback, useRef, useEffect, useLayoutEffect, Fragment } from 'react';
+import type { PointerEvent as ReactPointerEvent, ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 import type { RorschachResponse } from '@/types';
 import { useTranslation } from '@/hooks/useTranslation';
 import { useToast } from '@/components/ui/Toast';
 import { SCORING_CONFIG } from '@/lib/constants';
 import { OPTIONS } from '@/lib/options';
+import {
+  SCORING_CANVAS_DEFAULT_ZOOM,
+  SCORING_CANVAS_VERTICAL_EDGE_PADDING,
+  type ScoringCanvasTransform,
+  getBoundedScoringCanvasTransform,
+  getScoringCanvasBackdropPadding,
+  getInitialScoringCanvasTransform,
+  getNextScoringZoom,
+  getNormalizedScoringPanDelta,
+  getPointerAnchoredScoringTransform,
+  getScoringCanvasBaseWidth,
+  shouldHandleScoringZoomGesture,
+  shouldStartScoringPanGesture,
+} from '@/lib/scoringCanvas';
 import InputRow from './InputRow';
 import Button from '@/components/ui/Button';
 import Tooltip from '@/components/ui/Tooltip';
@@ -78,6 +92,7 @@ interface InputTableProps {
   onRowSelection: (rowIndex: number, modifiers: { metaKey?: boolean; ctrlKey?: boolean; shiftKey?: boolean }) => void;
   onAddRowRequest: (rowIndices: number[]) => void;
   onDeleteRowsRequest: (rowIndices: number[]) => void;
+  actions?: ReactNode;
   maxRows?: number;
 }
 
@@ -88,6 +103,75 @@ interface PendingDragState {
   pointerOffsetY: number;
   rowRect: { top: number; left: number; width: number; height: number };
   rowElement: HTMLTableRowElement;
+}
+
+interface CanvasPanState {
+  pointerId: number;
+  startClientX: number;
+  startClientY: number;
+  latestClientX: number;
+  latestClientY: number;
+  startTransform: ScoringCanvasTransform;
+}
+
+function applyScoringCanvasTransform(
+  stage: HTMLDivElement | null,
+  viewport: HTMLDivElement | null,
+  transform: ScoringCanvasTransform,
+  motion: 'smooth' | 'direct'
+) {
+  if (!stage) return;
+  stage.style.transform = `translate3d(${transform.x}px, ${transform.y}px, 0) scale(${transform.zoom})`;
+  stage.dataset.scoringMotion = motion;
+  stage.dataset.scoringOffsetX = transform.x.toFixed(2);
+  stage.dataset.scoringOffsetY = transform.y.toFixed(2);
+  stage.dataset.scoringZoom = transform.zoom.toFixed(3);
+  stage.dataset.scoringDetail = transform.zoom >= 1.15 ? 'expanded' : 'hidden';
+  if (viewport) viewport.dataset.scoringZoom = transform.zoom.toFixed(3);
+}
+
+function boundScoringCanvasTransform(
+  stage: HTMLDivElement,
+  viewport: HTMLDivElement,
+  transform: ScoringCanvasTransform
+) {
+  const canvasWidth = Math.max(stage.offsetWidth, stage.scrollWidth);
+  const canvasHeight = Math.max(stage.offsetHeight, stage.scrollHeight);
+
+  return getBoundedScoringCanvasTransform({
+    transform,
+    viewportWidth: viewport.clientWidth,
+    viewportHeight: viewport.clientHeight,
+    canvasWidth,
+    canvasHeight,
+    horizontalEdgePadding: getScoringCanvasBackdropPadding(
+      viewport.clientWidth,
+      canvasWidth
+    ),
+    verticalEdgePadding: getScoringCanvasBackdropPadding(
+      viewport.clientHeight,
+      canvasHeight,
+      SCORING_CANVAS_VERTICAL_EDGE_PADDING
+    ),
+  });
+}
+
+function readRenderedScoringCanvasTransform(
+  stage: HTMLDivElement,
+  fallback: ScoringCanvasTransform
+): ScoringCanvasTransform {
+  const renderedTransform = window.getComputedStyle(stage).transform;
+  if (!renderedTransform || renderedTransform === 'none') return fallback;
+
+  const matrix = new DOMMatrixReadOnly(renderedTransform);
+  const zoom = Math.hypot(matrix.a, matrix.b);
+  if (!Number.isFinite(zoom) || zoom <= 0) return fallback;
+
+  return {
+    x: matrix.m41,
+    y: matrix.m42,
+    zoom,
+  };
 }
 
 // Calculate Z score for a response
@@ -151,6 +235,7 @@ export default function InputTable({
   onRowSelection,
   onAddRowRequest,
   onDeleteRowsRequest,
+  actions,
   maxRows = 50,
 }: InputTableProps) {
   const { t, language } = useTranslation();
@@ -167,9 +252,21 @@ export default function InputTable({
   const [dragSourceIndex, setDragSourceIndex] = useState<number | null>(null);
   const [dragInsertIndex, setDragInsertIndex] = useState<number | null>(null);
   const [dragGapHeight, setDragGapHeight] = useState(48);
+  const [tableCanvasBaseWidth, setTableCanvasBaseWidth] = useState<number | null>(null);
+  const [isCanvasPanning, setIsCanvasPanning] = useState(false);
   const portalRoot = typeof document !== 'undefined' ? document.body : null;
   const responsesRef = useRef(responses);
   const tbodyRef = useRef<HTMLTableSectionElement | null>(null);
+  const tableScrollRef = useRef<HTMLDivElement | null>(null);
+  const tableStageRef = useRef<HTMLDivElement | null>(null);
+  const canvasTransformRef = useRef<ScoringCanvasTransform>({
+    x: 0,
+    y: 0,
+    zoom: SCORING_CANVAS_DEFAULT_ZOOM,
+  });
+  const canvasHasInteractedRef = useRef(false);
+  const canvasPanRef = useRef<CanvasPanState | null>(null);
+  const canvasPanRafRef = useRef<number | null>(null);
   const ghostRef = useRef<HTMLElement | null>(null);
   const dragSourceRef = useRef<number | null>(null);
   const dragInsertRef = useRef<number | null>(null);
@@ -195,6 +292,198 @@ export default function InputTable({
   useEffect(() => {
     dragInsertRef.current = dragInsertIndex;
   }, [dragInsertIndex]);
+
+  useEffect(() => {
+    const root = document.documentElement;
+    root.classList.add('ui-scoring-canvas-active');
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    return () => root.classList.remove('ui-scoring-canvas-active');
+  }, []);
+
+  useLayoutEffect(() => {
+    const viewport = tableScrollRef.current;
+    const stage = tableStageRef.current;
+    if (!viewport || !stage) return;
+
+    const updateCanvasBounds = () => {
+      const nextWidth = getScoringCanvasBaseWidth(viewport.clientWidth);
+      setTableCanvasBaseWidth((currentWidth) => (
+        currentWidth !== null && Math.abs(currentWidth - nextWidth) < 0.5
+          ? currentWidth
+          : nextWidth
+      ));
+
+      const nextTransform = canvasHasInteractedRef.current
+        ? canvasTransformRef.current
+        : getInitialScoringCanvasTransform({
+            viewportWidth: viewport.clientWidth,
+            canvasWidth: Math.max(stage.offsetWidth, stage.scrollWidth),
+          });
+      const boundedTransform = boundScoringCanvasTransform(stage, viewport, nextTransform);
+      canvasTransformRef.current = boundedTransform;
+      applyScoringCanvasTransform(stage, viewport, boundedTransform, 'direct');
+    };
+
+    updateCanvasBounds();
+    const resizeObserver = new ResizeObserver(updateCanvasBounds);
+    resizeObserver.observe(viewport);
+    resizeObserver.observe(stage);
+    return () => resizeObserver.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const viewport = tableScrollRef.current;
+    if (!viewport) return;
+
+    const handleCanvasWheel = (event: WheelEvent) => {
+      if (event.ctrlKey || event.metaKey) return;
+
+      const stage = tableStageRef.current;
+      if (!stage) return;
+
+      event.preventDefault();
+      event.stopPropagation();
+      canvasHasInteractedRef.current = true;
+
+      if (shouldHandleScoringZoomGesture(event)) {
+        const nextZoom = getNextScoringZoom(
+          canvasTransformRef.current.zoom,
+          event.deltaY,
+          event.deltaMode
+        );
+        if (nextZoom === canvasTransformRef.current.zoom) return;
+
+        const viewportRect = viewport.getBoundingClientRect();
+        const renderedTransform = readRenderedScoringCanvasTransform(
+          stage,
+          canvasTransformRef.current
+        );
+        const nextTransform = boundScoringCanvasTransform(
+          stage,
+          viewport,
+          getPointerAnchoredScoringTransform({
+            transform: renderedTransform,
+            nextZoom,
+            pointerX: event.clientX - viewportRect.left,
+            pointerY: event.clientY - viewportRect.top,
+          })
+        );
+        canvasTransformRef.current = nextTransform;
+        applyScoringCanvasTransform(stage, viewport, nextTransform, 'smooth');
+        return;
+      }
+
+      const horizontalWheel = event.shiftKey && event.deltaX === 0
+        ? event.deltaY
+        : event.deltaX;
+      const verticalWheel = event.shiftKey && event.deltaX === 0
+        ? 0
+        : event.deltaY;
+      const nextTransform = boundScoringCanvasTransform(stage, viewport, {
+        ...canvasTransformRef.current,
+        x: canvasTransformRef.current.x - getNormalizedScoringPanDelta(horizontalWheel, event.deltaMode),
+        y: canvasTransformRef.current.y - getNormalizedScoringPanDelta(verticalWheel, event.deltaMode),
+      });
+      canvasTransformRef.current = nextTransform;
+      applyScoringCanvasTransform(stage, viewport, nextTransform, 'smooth');
+    };
+
+    viewport.addEventListener('wheel', handleCanvasWheel, { passive: false });
+    return () => {
+      viewport.removeEventListener('wheel', handleCanvasWheel);
+    };
+  }, []);
+
+  const handleCanvasPointerDown = useCallback((event: ReactPointerEvent<HTMLDivElement>) => {
+    const target = event.target as HTMLElement;
+    const isRowTarget = Boolean(target.closest('tbody tr[data-row-index]'));
+    const isInteractiveTarget = Boolean(target.closest('button, input, select, textarea, a, [role="option"], [contenteditable="true"]'));
+
+    if (!shouldStartScoringPanGesture({
+      button: event.button,
+      ctrlKey: event.ctrlKey,
+      isRowTarget,
+      isInteractiveTarget,
+    })) return;
+
+    event.preventDefault();
+    event.stopPropagation();
+    canvasHasInteractedRef.current = true;
+    event.currentTarget.setPointerCapture(event.pointerId);
+    const stage = tableStageRef.current;
+    const renderedTransform = stage
+      ? readRenderedScoringCanvasTransform(stage, canvasTransformRef.current)
+      : canvasTransformRef.current;
+    const boundedTransform = stage
+      ? boundScoringCanvasTransform(stage, event.currentTarget, renderedTransform)
+      : renderedTransform;
+    canvasTransformRef.current = boundedTransform;
+    applyScoringCanvasTransform(stage, event.currentTarget, boundedTransform, 'direct');
+    canvasPanRef.current = {
+      pointerId: event.pointerId,
+      startClientX: event.clientX,
+      startClientY: event.clientY,
+      latestClientX: event.clientX,
+      latestClientY: event.clientY,
+      startTransform: boundedTransform,
+    };
+    setIsCanvasPanning(true);
+    document.body.style.userSelect = 'none';
+  }, []);
+
+  const applyCanvasPanPosition = useCallback((pan: CanvasPanState, clientX: number, clientY: number) => {
+    const viewport = tableScrollRef.current;
+    const stage = tableStageRef.current;
+    if (!viewport || !stage) return;
+
+    const deltaX = clientX - pan.startClientX;
+    const deltaY = clientY - pan.startClientY;
+    const nextTransform = boundScoringCanvasTransform(stage, viewport, {
+      x: pan.startTransform.x + deltaX,
+      y: pan.startTransform.y + deltaY,
+      zoom: pan.startTransform.zoom,
+    });
+    canvasTransformRef.current = nextTransform;
+    applyScoringCanvasTransform(stage, viewport, nextTransform, 'direct');
+  }, []);
+
+  const handleCanvasPointerMove = useCallback((event: ReactPointerEvent<HTMLDivElement>) => {
+    const pan = canvasPanRef.current;
+    if (!pan || pan.pointerId !== event.pointerId) return;
+
+    event.preventDefault();
+    pan.latestClientX = event.clientX;
+    pan.latestClientY = event.clientY;
+    if (canvasPanRafRef.current !== null) return;
+
+    canvasPanRafRef.current = window.requestAnimationFrame(() => {
+      canvasPanRafRef.current = null;
+      const activePan = canvasPanRef.current;
+      if (activePan) {
+        applyCanvasPanPosition(activePan, activePan.latestClientX, activePan.latestClientY);
+      }
+    });
+  }, [applyCanvasPanPosition]);
+
+  const handleCanvasPointerEnd = useCallback((event: ReactPointerEvent<HTMLDivElement>) => {
+    const pan = canvasPanRef.current;
+    if (!pan || pan.pointerId !== event.pointerId) return;
+
+    if (canvasPanRafRef.current !== null) {
+      window.cancelAnimationFrame(canvasPanRafRef.current);
+      canvasPanRafRef.current = null;
+    }
+    applyCanvasPanPosition(pan, event.clientX, event.clientY);
+    canvasPanRef.current = null;
+    if (event.currentTarget.hasPointerCapture(event.pointerId)) {
+      event.currentTarget.releasePointerCapture(event.pointerId);
+    }
+    if (tableStageRef.current) {
+      tableStageRef.current.dataset.scoringMotion = 'smooth';
+    }
+    setIsCanvasPanning(false);
+    document.body.style.userSelect = '';
+  }, [applyCanvasPanPosition]);
 
   const openResponsePopup = useCallback((index: number) => {
     setEditingResponseIndex(index);
@@ -318,20 +607,56 @@ export default function InputTable({
   }, []);
 
   const startDragFromPending = useCallback((pending: PendingDragState) => {
-    setDragGapHeight(Math.max(40, Math.round(pending.rowRect.height)));
+    const currentZoom = canvasTransformRef.current.zoom;
+    setDragGapHeight(Math.max(40, Math.round(pending.rowRect.height)) / currentZoom);
 
-    const ghost = pending.rowElement.cloneNode(true) as HTMLElement;
+    const ghost = document.createElement('div');
     ghost.style.position = 'fixed';
     ghost.style.top = `${pending.rowRect.top}px`;
     ghost.style.left = `${pending.rowRect.left}px`;
     ghost.style.width = `${pending.rowRect.width}px`;
-    ghost.style.background = '#ffffff';
-    ghost.style.opacity = '1';
-    ghost.style.border = '1px solid rgba(100, 116, 139, 0.85)';
-    ghost.style.boxShadow = '0 22px 40px rgba(15, 23, 42, 0.35)';
+    ghost.style.height = `${pending.rowRect.height}px`;
+    ghost.style.background = 'var(--surface-base)';
+    ghost.style.opacity = '0.98';
+    ghost.style.outline = '1px solid var(--table-insert-border)';
+    ghost.style.borderRadius = '0.5rem';
+    ghost.style.boxShadow = '0 12px 28px rgba(15, 23, 42, 0.22)';
+    ghost.style.overflow = 'hidden';
     ghost.style.pointerEvents = 'none';
     ghost.style.zIndex = '99999';
-    ghost.style.transform = 'scale(1.01)';
+    ghost.style.willChange = 'top';
+    ghost.setAttribute('aria-hidden', 'true');
+
+    const sourceTable = pending.rowElement.closest('table');
+    const ghostTable = sourceTable
+      ? sourceTable.cloneNode(false) as HTMLTableElement
+      : document.createElement('table');
+    ghostTable.removeAttribute('id');
+    ghostTable.style.width = `${100 / currentZoom}%`;
+    ghostTable.style.height = 'auto';
+    ghostTable.style.zoom = String(currentZoom);
+    ghostTable.style.tableLayout = 'fixed';
+    ghostTable.style.borderCollapse = 'collapse';
+    ghostTable.style.borderSpacing = '0';
+
+    const colGroup = document.createElement('colgroup');
+    Array.from(pending.rowElement.cells).forEach((cell) => {
+      const col = document.createElement('col');
+      col.style.width = `${cell.getBoundingClientRect().width / currentZoom}px`;
+      colGroup.appendChild(col);
+    });
+
+    const ghostBody = document.createElement('tbody');
+    const ghostRow = pending.rowElement.cloneNode(true) as HTMLTableRowElement;
+    ghostRow.removeAttribute('data-row-index');
+    ghostRow.style.height = `${pending.rowRect.height / currentZoom}px`;
+    ghostRow.querySelectorAll<HTMLElement>('button, input, [tabindex]').forEach((element) => {
+      element.setAttribute('tabindex', '-1');
+    });
+    ghostBody.appendChild(ghostRow);
+    ghostTable.appendChild(colGroup);
+    ghostTable.appendChild(ghostBody);
+    ghost.appendChild(ghostTable);
     document.body.appendChild(ghost);
 
     ghostRef.current = ghost;
@@ -432,6 +757,12 @@ export default function InputTable({
     if (!rowElement) return;
 
     event.preventDefault();
+    event.stopPropagation();
+    onRowSelection(index, {
+      metaKey: event.metaKey,
+      ctrlKey: event.ctrlKey,
+      shiftKey: event.shiftKey,
+    });
     const rect = rowElement.getBoundingClientRect();
     pendingDragRef.current = {
       sourceIndex: index,
@@ -450,7 +781,7 @@ export default function InputTable({
     window.addEventListener('pointermove', handlePointerMove);
     window.addEventListener('pointerup', handlePointerUp, { once: true });
     window.addEventListener('pointercancel', handlePointerUp, { once: true });
-  }, [handlePointerMove, handlePointerUp]);
+  }, [handlePointerMove, handlePointerUp, onRowSelection]);
 
   useEffect(() => {
     return () => {
@@ -465,13 +796,18 @@ export default function InputTable({
         ghostRef.current.parentNode.removeChild(ghostRef.current);
       }
       ghostRef.current = null;
+      canvasPanRef.current = null;
+      if (canvasPanRafRef.current !== null) {
+        window.cancelAnimationFrame(canvasPanRafRef.current);
+        canvasPanRafRef.current = null;
+      }
       document.body.style.userSelect = '';
     };
   }, [handlePointerMove, handlePointerUp]);
 
   // Header columns — memoized to avoid recreating on every render
   const headers = useMemo(() => [
-    { key: 'no',           label: 'No.',           tooltip: noTooltipText, accent: 'transparent',       className: 'w-10' },
+    { key: 'no',           label: 'No.',           tooltip: noTooltipText, accent: 'transparent',       className: 'w-8 min-w-8 max-w-8 px-1' },
     { key: 'action',       label: <PencilSquareIcon className="mx-auto w-4 h-4 text-[var(--text-soft)]" />, tooltip: memoTooltipText, accent: 'transparent', className: 'w-10' },
     { key: 'card',         label: 'Card',          accent: 'transparent', className: '' },
     { key: 'location',     label: 'Location',      accent: 'transparent', className: '' },
@@ -480,7 +816,7 @@ export default function InputTable({
     { key: 'fq',           label: 'FQ',            accent: 'transparent', className: '' },
     { key: 'pair',         label: 'Pair',          accent: 'transparent', className: '' },
     { key: 'contents',     label: 'Contents',      accent: 'transparent', className: '' },
-    { key: 'popular',      label: 'P',             accent: 'transparent', className: '' },
+    { key: 'popular',      label: 'P',             accent: 'transparent', className: 'w-12 min-w-12' },
     { key: 'z',            label: 'Z',             accent: 'transparent', className: '' },
     { key: 'score',        label: 'Score',         tooltip: scoreTooltipText, accent: 'transparent', className: 'w-14' },
     { key: 'gphr',         label: 'G/PHR',         tooltip: gphrTooltipText, accent: 'transparent', className: 'w-14' },
@@ -488,10 +824,35 @@ export default function InputTable({
   ], [memoTooltipText, scoreTooltipText, gphrTooltipText, noTooltipText]);
 
   return (
-    <div className="overflow-visible rounded-xl border border-[var(--border-subtle)] bg-[var(--surface-base)] shadow-sm">
+    <div className="ui-scoring-table-shell relative">
       {/* Table */}
-      <div className="overflow-x-auto md:overflow-visible">
-        <table className="w-full">
+      <div
+        ref={tableScrollRef}
+        className={`ui-scoring-table-scroll ${isCanvasPanning ? 'is-canvas-panning' : ''}`}
+        data-scoring-base-width={tableCanvasBaseWidth === null ? undefined : Math.round(tableCanvasBaseWidth)}
+        data-scoring-zoom={SCORING_CANVAS_DEFAULT_ZOOM.toFixed(3)}
+        onPointerDown={handleCanvasPointerDown}
+        onPointerMove={handleCanvasPointerMove}
+        onPointerUp={handleCanvasPointerEnd}
+        onPointerCancel={handleCanvasPointerEnd}
+        onLostPointerCapture={handleCanvasPointerEnd}
+      >
+        <div
+          ref={tableStageRef}
+          className="ui-scoring-table-stage"
+          data-scoring-motion="smooth"
+          data-scoring-offset-x="0.00"
+          data-scoring-offset-y="0.00"
+          data-scoring-zoom={SCORING_CANVAS_DEFAULT_ZOOM.toFixed(3)}
+          data-scoring-detail="hidden"
+          style={{
+            width: tableCanvasBaseWidth === null ? '100%' : `${tableCanvasBaseWidth}px`,
+          }}
+        >
+          <div
+            className="ui-scoring-table-canvas"
+          >
+            <table className="ui-scoring-table w-full min-w-[70rem] rounded-xl border border-separate border-spacing-0 border-[var(--border-subtle)] bg-[var(--surface-base)] shadow-sm">
           <thead>
             <tr className="bg-[var(--table-header-bg)]">
               {headers.map((h) => (
@@ -564,7 +925,54 @@ export default function InputTable({
               </tr>
             )}
           </tbody>
-        </table>
+          <tfoot>
+            <tr>
+              <td
+                colSpan={headers.length}
+                className="ui-scoring-table-footer-cap min-h-16 rounded-b-xl border-t-2 border-[var(--table-header-border)] bg-[var(--table-header-bg)] px-5 py-3"
+              >
+                <span className="block whitespace-normal text-left text-xs font-medium leading-5 text-[var(--table-header-text)]">
+                  {t('input.rowOrderTip')}
+                </span>
+              </td>
+            </tr>
+          </tfoot>
+            </table>
+
+          {/* Row controls */}
+          <div className="ui-scoring-action-bar grid grid-cols-[1fr_auto_1fr] items-center gap-3 px-5 py-3">
+            <div className="flex min-w-0 items-center justify-self-start gap-3">
+              <Button
+                variant="secondary"
+                size="sm"
+                onClick={() => onAddRowRequest(selectedRowIndices)}
+                disabled={responses.length >= maxRows}
+              >
+                {t('buttons.add')}
+              </Button>
+              <Button
+                variant="secondary"
+                size="sm"
+                onClick={() => onDeleteRowsRequest(selectedRowIndices)}
+                disabled={responses.length <= 1}
+              >
+                {t('buttons.delete')}
+              </Button>
+              <Tooltip content={rowTooltipText}>
+                <button
+                  type="button"
+                  aria-label={rowTooltipText.split('\n')[0]}
+                  className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-md text-[var(--text-soft)] transition-colors hover:bg-[var(--surface-base)] hover:text-[var(--brand-700)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-500)]"
+                >
+                  <InformationCircleIcon className="h-5 w-5" aria-hidden="true" />
+                </button>
+              </Tooltip>
+            </div>
+            <div className="justify-self-center">{actions}</div>
+            <div aria-hidden="true" />
+          </div>
+          </div>
+        </div>
       </div>
 
       {/* Response editing popup - rendered via portal */}
@@ -638,33 +1046,6 @@ export default function InputTable({
         portalRoot
       )}
 
-      {/* Row controls */}
-      <div className="flex items-center justify-between border-t border-[var(--border-subtle)] bg-[var(--surface-muted)] px-5 py-3">
-        <p className="pr-4 whitespace-pre-line text-xs text-[var(--text-soft)]">{t('input.rowOrderTip')}</p>
-        <div className="flex items-center gap-3">
-          {/* Tooltip info icon */}
-          <Tooltip content={rowTooltipText}>
-            <InformationCircleIcon className="w-5 h-5 cursor-help text-[var(--text-soft)]" />
-          </Tooltip>
-
-          <Button
-            variant="secondary"
-            size="sm"
-            onClick={() => onAddRowRequest(selectedRowIndices)}
-            disabled={responses.length >= maxRows}
-          >
-            {t('buttons.add')}
-          </Button>
-          <Button
-            variant="secondary"
-            size="sm"
-            onClick={() => onDeleteRowsRequest(selectedRowIndices)}
-            disabled={responses.length <= 1}
-          >
-            {t('buttons.delete')}
-          </Button>
-        </div>
-      </div>
     </div>
   );
 }

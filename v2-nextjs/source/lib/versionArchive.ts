@@ -21,6 +21,18 @@ const v2SourceUrl = `${exhibitionRepoUrl}/tree/main/v2-nextjs/source`;
 
 export const v2NextVersions: VersionArchiveEntry[] = [
   {
+    version: 'v2.2.0',
+    title: 'Version 2.2.0',
+    series: 'v2-nextjs',
+    publishedAt: '2026-07-16',
+    releaseKind: 'minor',
+    releaseLabel: '마이너 패치',
+    summary:
+      '전역 앱 사이드바와 AI SaaS형 해석 대화 화면, 채점·참조 문서·버전 아카이브 UX를 정비하고, 구조요약 계산 로직 독립 감사와 GPT-5.5 경계·다국어 실전 평가를 반영한 v2.2.x 첫 릴리즈입니다.',
+    sourceUrl: v2SourceUrl,
+    releaseUrl: v2ReleaseUrl('v2.2.0'),
+  },
+  {
     version: 'v2.1.10',
     title: 'Version 2.1.10',
     series: 'v2-nextjs',

@@ -14,11 +14,16 @@ const localeFiles = fs
 const uiCopyFiles = [
   path.join(rootDir, 'components', 'byok', 'ByokSessionDialog.tsx'),
   path.join(rootDir, 'components', 'chat', 'ChatBubble.tsx'),
+  path.join(rootDir, 'components', 'chat', 'ChatFeedbackReasonDialog.tsx'),
   path.join(rootDir, 'components', 'chat', 'ChatWidget.tsx'),
   path.join(rootDir, 'components', 'input', 'InputTable.tsx'),
-  path.join(rootDir, 'components', 'layout', 'Footer.tsx'),
+  path.join(rootDir, 'components', 'layout', 'AppShell.tsx'),
   path.join(rootDir, 'components', 'layout', 'LanguageSelector.tsx'),
   path.join(rootDir, 'components', 'ref', 'ReferenceRelatedPanel.tsx'),
+  path.join(rootDir, 'lib', 'appShellUi.ts'),
+  path.join(rootDir, 'lib', 'chatFeedbackReasonsUi.ts'),
+  path.join(rootDir, 'lib', 'chatPageUi.ts'),
+  path.join(rootDir, 'lib', 'referenceDocumentUi.ts'),
 ];
 
 const mojibakeFragments = [

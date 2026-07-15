@@ -19,13 +19,13 @@ describe('AI harness profiles', () => {
 
     expect(interpretation).toMatchObject({
       harnessVersion: AI_HARNESS_VERSION,
-      promptProfileId: 'sicp-default-v4',
-      responsePolicyId: 'interpretation-concise-progressive-v2',
+      promptProfileId: 'sicp-default-v5',
+      responsePolicyId: 'interpretation-balanced-continuity-v5',
     });
     expect(codingAssist).toMatchObject({
       harnessVersion: AI_HARNESS_VERSION,
-      promptProfileId: 'sicp-coding-assist-v2',
-      responsePolicyId: 'coding-assist-concise-progressive-v2',
+      promptProfileId: 'sicp-coding-assist-v3',
+      responsePolicyId: 'coding-assist-balanced-continuity-v5',
     });
   });
 
@@ -38,8 +38,8 @@ describe('AI harness profiles', () => {
     const interpretation = getAiPromptProfile('interpretation');
     const codingAssist = getAiPromptProfile('coding_assist');
 
-    expect(getAiMaxOutputTokens(interpretation, 128000)).toBe(2200);
-    expect(getAiMaxOutputTokens(codingAssist, 128000)).toBe(2600);
+    expect(getAiMaxOutputTokens(interpretation, 128000)).toBe(8000);
+    expect(getAiMaxOutputTokens(codingAssist, 128000)).toBe(6000);
     expect(getAiMaxOutputTokens(codingAssist, 1200)).toBe(1200);
   });
 
@@ -50,22 +50,24 @@ describe('AI harness profiles', () => {
     applyAiHarnessHeaders(headers, profile);
 
     expect(headers.get('X-Chat-AI-Harness-Version')).toBe(AI_HARNESS_VERSION);
-    expect(headers.get('X-Chat-Prompt-Profile-Id')).toBe('sicp-default-v4');
-    expect(headers.get('X-Chat-Response-Policy-Id')).toBe('interpretation-concise-progressive-v2');
+    expect(headers.get('X-Chat-Prompt-Profile-Id')).toBe('sicp-default-v5');
+    expect(headers.get('X-Chat-Response-Policy-Id')).toBe('interpretation-balanced-continuity-v5');
   });
 
   it('builds mode-specific response policy text for complete progressive answers', () => {
     const interpretationPolicy = buildAiResponsePolicyPrompt(getAiPromptProfile('interpretation'));
     const codingPolicy = buildAiResponsePolicyPrompt(getAiPromptProfile('coding_assist'));
 
-    expect(interpretationPolicy).toContain('Policy id: interpretation-concise-progressive-v2');
+    expect(interpretationPolicy).toContain('Policy id: interpretation-balanced-continuity-v5');
     expect(interpretationPolicy).toContain('provisional hypothesis');
     expect(interpretationPolicy).toContain('Never turn assumed, invented, or hypothetical values');
     expect(interpretationPolicy).toContain('Keep diagnostic, treatment, medication, legal, and forensic conclusions out of scope.');
-    expect(codingPolicy).toContain('Policy id: coding-assist-concise-progressive-v2');
+    expect(codingPolicy).toContain('Policy id: coding-assist-balanced-continuity-v5');
     expect(codingPolicy).toContain('Candidate codes require clinician confirmation.');
     expect(codingPolicy).toContain('When the focus row changes');
     expect(codingPolicy).toContain('Finish every section or bullet group you start.');
+    expect(codingPolicy).toContain('resume at the exact unfinished point');
+    expect(codingPolicy).toContain('Do not restart completed sections');
   });
 
   it('appends the harness policy after the product guardrails', () => {
@@ -113,7 +115,7 @@ describe('OpenAI response summaries', () => {
       modelId: 'gpt-5.5',
       workflowType: 'coding_assist',
       locale: 'ko',
-      maxOutputTokens: 2600,
+      maxOutputTokens: 6000,
       completion: {
         status: 'completed',
         responseId: 'resp_456',
@@ -127,13 +129,13 @@ describe('OpenAI response summaries', () => {
 
     expect(metadata).toEqual({
       aiHarnessVersion: AI_HARNESS_VERSION,
-      promptProfileId: 'sicp-coding-assist-v2',
-      responsePolicyId: 'coding-assist-concise-progressive-v2',
+      promptProfileId: 'sicp-coding-assist-v3',
+      responsePolicyId: 'coding-assist-balanced-continuity-v5',
       provider: 'openai',
       modelId: 'gpt-5.5',
       workflowType: 'coding_assist',
       locale: 'ko',
-      maxOutputTokens: 2600,
+      maxOutputTokens: 6000,
       providerResponseStatus: 'completed',
       providerResponseId: 'resp_456',
       usageInputTokens: 800,

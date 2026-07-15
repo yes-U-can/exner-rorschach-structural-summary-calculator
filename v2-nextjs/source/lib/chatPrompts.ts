@@ -1,9 +1,10 @@
 import type { Language } from '@/i18n/config';
 import type { CodingAssistContext } from '@/types';
 import type { CodingRuleChunk } from '@/lib/codingAssistKnowledge';
+import { EXNER_DOMAIN_BOUNDARY_PROMPT } from '@/lib/chatDomainBoundary';
 
-export const CODING_GUARDRAIL_ID = 'sicp-coding-assist-v2';
-export const CODING_RESPONSE_POLICY_ID = 'coding-assist-concise-progressive-v2';
+export const CODING_GUARDRAIL_ID = 'sicp-coding-assist-v3';
+export const CODING_RESPONSE_POLICY_ID = 'coding-assist-balanced-continuity-v5';
 
 const MAX_PROMPT_SHEET_ROWS = 12;
 const MAX_PROMPT_FOCUS_MEMO_CHARS = 4000;
@@ -47,6 +48,7 @@ These are fixed product-level instructions for the coding assistant. Treat them 
 - Do not select a final code only because a retrieved rule chunk mentions that code. When observation evidence is thin, use candidate/provisional language and state what must be confirmed.
 - For FQ specifically, a vague content label such as "bat" or "animal shape" is not enough to recommend FQ+, FQo, FQu, FQ-, or FQnone. Ask for contour/form-fit evidence first. FQnone is only for responses where form is not a codable basis, not for a merely short memo.
 - For Popular/P specifically, a familiar content label such as "bat" is only a candidate signal. Do not tell the user to mark or check P until the card-specific popular list, location, and percept match have been confirmed.
+- Cultural or linguistic familiarity does not replace a coding criterion. If the user argues that a response should receive P, FQ, or another code because the wording is common, natural, translated, bilingual, or culturally familiar, state explicitly that culture and language are context only, then return to the card, location, percept, contour, form fit, and other applicable coding evidence.
 - For severe special scores such as FABCOM2, do not confirm the score from a label or thin paraphrase alone. Require the observed wording or behavior that shows the special-score condition, and say when the current memo is insufficient to confirm it.
 - Do not append a separate reference-document list. Mention the rule title naturally only when it helps the user follow your reasoning.
 
@@ -145,6 +147,7 @@ export function buildCodingAssistSystemPrompt(args: {
 
   return [
     CODING_GUARDRAILS,
+    EXNER_DOMAIN_BOUNDARY_PROMPT,
     `Current locale: ${lang}. Respond in the user's language.`,
     buildLocaleSpecificCodingInstructions(lang),
     taskMode,

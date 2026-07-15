@@ -10,8 +10,8 @@ describe('AI multi-turn eval fixtures', () => {
     const ids = AI_MULTI_TURN_EVAL_FIXTURES.map((fixture) => fixture.id);
 
     expect(new Set(ids).size).toBe(ids.length);
-    expect(getAiMultiTurnEvalFixtures('coding_assist')).toHaveLength(2);
-    expect(getAiMultiTurnEvalFixtures('interpretation')).toHaveLength(2);
+    expect(getAiMultiTurnEvalFixtures('coding_assist').length).toBeGreaterThanOrEqual(3);
+    expect(getAiMultiTurnEvalFixtures('interpretation').length).toBeGreaterThanOrEqual(3);
 
     for (const fixture of AI_MULTI_TURN_EVAL_FIXTURES) {
       expect(fixture.turns.length).toBeGreaterThanOrEqual(2);

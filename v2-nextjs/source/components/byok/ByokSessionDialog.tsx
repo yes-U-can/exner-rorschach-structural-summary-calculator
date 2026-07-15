@@ -93,40 +93,39 @@ export default function ByokSessionDialog() {
 
   return (
     <div className="fixed inset-0 z-[17000] flex items-center justify-center bg-slate-950/40 px-4 py-6 backdrop-blur-sm">
-      <div className="w-full max-w-xl rounded-3xl border border-[var(--border-subtle)] bg-[var(--surface-base)] p-5 shadow-2xl">
-        <div className="flex items-start justify-between gap-4">
-          <div>
-            <h2 className="text-xl font-bold text-[var(--text-strong)]">
-              {t('aiSession.apiKeys.promptTitle')}
-            </h2>
-            <p className="mt-2 whitespace-pre-line text-sm leading-6 text-[var(--text-soft)]">
-              {t('aiSession.apiKeys.promptDescription')}
-            </p>
-            <p className="mt-3 whitespace-pre-line text-xs leading-5 text-[var(--text-soft)]">
-              {t('aiSession.apiKeys.modelPolicy')}
-            </p>
-          </div>
-          <button
-            type="button"
-            onClick={() => close(false)}
-            className="rounded-full p-2 text-[var(--text-soft)] transition-colors hover:bg-[var(--surface-muted)] hover:text-[var(--text-strong)]"
-            aria-label={t('common.close')}
-          >
-            <XMarkIcon className="h-5 w-5" />
-          </button>
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="byok-session-dialog-title"
+        className="relative w-full max-w-xl rounded-3xl border border-[var(--border-subtle)] bg-[var(--surface-base)] p-5 shadow-2xl"
+      >
+        <button
+          type="button"
+          onClick={() => close(false)}
+          className="absolute right-3 top-3 rounded-full p-2 text-[var(--text-soft)] transition-colors hover:bg-[var(--surface-muted)] hover:text-[var(--text-strong)]"
+          aria-label={t('common.close')}
+        >
+          <XMarkIcon className="h-5 w-5" />
+        </button>
+
+        <div className="text-center">
+          <h2 id="byok-session-dialog-title" className="sr-only">
+            {t('aiSession.apiKeys.promptTitle')}
+          </h2>
+          <p className="px-8 whitespace-pre-line text-sm leading-6 text-[var(--text-soft)]">
+            {t('aiSession.apiKeys.promptDescription')}
+          </p>
         </div>
 
         <form onSubmit={handleSubmit} className="mt-5 space-y-4">
           <label htmlFor="byok-session-api-key" className="sr-only">
             {t('aiSession.apiKeys.inputLabel', { provider: PROVIDER_NAME })}
           </label>
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-            <div className="shrink-0 rounded-2xl bg-[var(--surface-muted)] p-1 sm:w-44">
-              <div className="rounded-xl bg-[var(--surface-base)] px-3 py-2 text-sm font-semibold text-[var(--brand-700)] shadow-sm">
-                {PROVIDER_NAME} {defaultModel.label}
-              </div>
+          <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
+            <div className="flex h-11 w-full shrink-0 items-center justify-center rounded-md border border-[var(--border-subtle)] bg-[var(--surface-muted)] px-4 text-center text-sm font-semibold text-[var(--brand-700)] shadow-sm sm:w-44">
+              {PROVIDER_NAME} {defaultModel.label}
             </div>
-            <div className="ui-api-key-input-wrap min-w-0 flex-1">
+            <div className="ui-api-key-input-wrap h-11 w-full min-w-0 sm:flex-1">
               <div className="ui-api-key-icon">
                 <KeyIcon className="h-5 w-5" aria-hidden="true" />
               </div>
@@ -138,6 +137,8 @@ export default function ByokSessionDialog() {
                 onChange={(event) => setApiKey(event.target.value)}
                 placeholder={apiKeyPlaceholder}
                 autoComplete="off"
+                aria-invalid={hasFormatError}
+                aria-describedby={hasFormatError ? 'byok-session-api-key-error' : undefined}
               />
               <button
                 type="button"
@@ -153,29 +154,33 @@ export default function ByokSessionDialog() {
               </button>
             </div>
           </div>
-          {hasFormatError && (
-            <p className="text-xs leading-5 text-[var(--danger-text)]">
-              {t('aiSession.apiKeys.providerFormatError')}
-            </p>
-          )}
 
-          <div className="flex flex-col-reverse gap-2 sm:flex-row sm:justify-end">
-            <button
-              type="button"
-              onClick={() => close(false)}
-              className="rounded-xl border border-[var(--border-subtle)] bg-[var(--surface-base)] px-4 py-2 text-sm font-semibold text-[var(--text-body)] transition-colors hover:bg-[var(--surface-muted)]"
+          <div className="grid gap-2 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-center">
+            <p
+              id="byok-session-api-key-error"
+              className="flex h-10 items-center justify-center text-center text-xs leading-5 text-[var(--danger-text)] sm:justify-start sm:pl-4 sm:text-left"
+              aria-live="polite"
             >
-              {t('aiSession.apiKeys.promptLater')}
-            </button>
-            <button
-              type="submit"
-              disabled={!hasApiKey || hasFormatError || isSaving}
-              data-empty={!hasApiKey ? 'true' : undefined}
-              data-busy={isSaving ? 'true' : undefined}
-              className="ui-api-key-action px-4 py-2"
-            >
-              {t('aiSession.apiKeys.connectForSession')}
-            </button>
+              {hasFormatError ? t('aiSession.apiKeys.providerFormatError') : ''}
+            </p>
+            <div className="flex flex-col-reverse gap-2 sm:flex-row">
+              <button
+                type="button"
+                onClick={() => close(false)}
+                className="rounded-xl border border-[var(--border-subtle)] bg-[var(--surface-base)] px-4 py-2 text-sm font-semibold text-[var(--text-body)] transition-colors hover:bg-[var(--surface-muted)]"
+              >
+                {t('aiSession.apiKeys.promptLater')}
+              </button>
+              <button
+                type="submit"
+                disabled={!hasApiKey || hasFormatError || isSaving}
+                data-inactive={!hasApiKey || hasFormatError ? 'true' : undefined}
+                data-busy={isSaving ? 'true' : undefined}
+                className="ui-api-key-action px-4 py-2"
+              >
+                {t('aiSession.apiKeys.connectForSession')}
+              </button>
+            </div>
           </div>
         </form>
       </div>

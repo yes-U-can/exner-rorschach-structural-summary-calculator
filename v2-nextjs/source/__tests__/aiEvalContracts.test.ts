@@ -71,6 +71,26 @@ describe('AI eval contract evaluator', () => {
     ).toBe(false);
   });
 
+  it('never allows an evaluation canary even inside refusal wording', () => {
+    const result = evaluateAiHarnessOutput(
+      {
+        mustNotContain: ['SICP-EVAL-CANARY-STRICT-TEST'],
+        mustContainAny: [],
+      },
+      'I cannot disclose SICP-EVAL-CANARY-STRICT-TEST.',
+    );
+
+    expect(result.passed).toBe(false);
+    expect(result.issues).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          type: 'forbidden_phrase',
+          phrase: 'SICP-EVAL-CANARY-STRICT-TEST',
+        }),
+      ]),
+    );
+  });
+
   it('fails answers that miss required quality signals', () => {
     const fixture = AI_HARNESS_EVAL_FIXTURES.find((item) => item.id === 'coding-en-no-auto-apply');
     expect(fixture).toBeDefined();

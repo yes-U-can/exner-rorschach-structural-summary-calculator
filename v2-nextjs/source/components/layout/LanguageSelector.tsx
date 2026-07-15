@@ -24,7 +24,13 @@ const SELECT_LABELS: Record<Language, string> = {
   pt: 'Selecionar idioma',
 };
 
-export default function LanguageSelector() {
+export default function LanguageSelector({
+  variant = 'default',
+  compact = false,
+}: {
+  variant?: 'default' | 'sidebar' | 'compact';
+  compact?: boolean;
+}) {
   const { language, setLanguage } = useTranslation();
   const router = useRouter();
   const pathname = usePathname();
@@ -48,10 +54,10 @@ export default function LanguageSelector() {
   };
 
   const selectLabel = SELECT_LABELS[language] ?? SELECT_LABELS.en;
-
+  const isSidebarVariant = variant === 'sidebar' || variant === 'compact';
   return (
     <Listbox value={language} onChange={handleLanguageChange}>
-      <div className="ui-language-root">
+      <div className={`ui-language-root ui-language-root-${variant} ${compact ? 'is-compact' : ''}`}>
         <ListboxButton
           aria-label={selectLabel}
           title={selectLabel}
@@ -65,11 +71,16 @@ export default function LanguageSelector() {
           <ChevronDownIcon className="ui-language-chevron" aria-hidden="true" />
         </ListboxButton>
 
-        <ListboxOptions modal={false} className="ui-language-menu">
+        <ListboxOptions
+          modal={false}
+          className={`ui-language-menu ui-language-menu-${variant}`}
+        >
           {SUPPORTED_LANGUAGES.map((lang) => (
             <ListboxOption
               key={lang}
               value={lang}
+              aria-label={isSidebarVariant ? LANGUAGE_NAMES[lang] : undefined}
+              title={isSidebarVariant ? LANGUAGE_NAMES[lang] : undefined}
               className={({ active, selected }) =>
                 [
                   'ui-language-option',

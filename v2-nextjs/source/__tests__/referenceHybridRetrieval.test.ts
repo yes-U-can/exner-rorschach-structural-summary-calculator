@@ -2,6 +2,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 import type { KnowledgeItem } from '@/lib/chatKnowledge';
 import type { CodingRuleChunk } from '@/lib/codingAssistKnowledge';
 import {
+  getHybridCodingRuleChunks,
   getHybridInterpretationKnowledge,
   rankMergedCodingChunks,
   rankMergedKnowledge,
@@ -361,5 +362,86 @@ describe('referenceHybridRetrieval', () => {
     );
 
     expect(ranked[0]?.id).toBe('en:scoring-input/determinants/m');
+  });
+
+  it.each([
+    ['ko', '이 반응을 P로 확정해도 돼?'],
+    ['en', 'Should I mark this response as P?'],
+  ])('routes an explicit %s P shorthand question to the Popular rule', (_locale, query) => {
+    const popularChunk: CodingRuleChunk = {
+      id: 'test:scoring-input/popular',
+      title: 'Popular response / P',
+      text: 'Use the Comprehensive System Popular response criterion.',
+      categoryTags: ['scoring-input', 'popular', 'P'],
+      canonicalRoute: 'scoring-input/popular',
+      relatedRoutes: [],
+      routeScope: 'primary',
+    };
+    const cardChunk: CodingRuleChunk = {
+      id: 'test:scoring-input/card',
+      title: 'Card coding',
+      text: 'Identify the inkblot card before applying another code.',
+      categoryTags: ['scoring-input', 'card'],
+      canonicalRoute: 'scoring-input/card',
+      relatedRoutes: [],
+      routeScope: 'primary',
+    };
+    const locationChunk: CodingRuleChunk = {
+      id: 'test:scoring-input/location',
+      title: 'Location coding',
+      text: 'Determine whether the response uses W, D, or Dd.',
+      categoryTags: ['scoring-input', 'location'],
+      canonicalRoute: 'scoring-input/location',
+      relatedRoutes: [],
+      routeScope: 'primary',
+    };
+
+    const ranked = rankMergedCodingChunks(
+      query,
+      [cardChunk, locationChunk, popularChunk],
+      [
+        { item: cardChunk, similarity: 0.91 },
+        { item: locationChunk, similarity: 0.89 },
+        { item: popularChunk, similarity: 0.64 },
+      ],
+      3,
+    );
+
+    expect(ranked[0]?.canonicalRoute).toBe('scoring-input/popular');
+  });
+
+  it.each([
+    ['ko' as const, '카드 V에서 박쥐라고 했어. P로 확정해도 돼?'],
+    ['en' as const, 'The response was a bat on Card V. Should I mark P?'],
+  ])('injects the explicit %s Popular rule before lexical fallback ranking', async (lang, responseMemo) => {
+    const result = await getHybridCodingRuleChunks({
+      context: {
+        rowIndex: 0,
+        focusRowIndex: 0,
+        selectedRowIndices: [0],
+        card: 'V',
+        responseMemo,
+        existingCodes: {
+          location: '',
+          dq: '',
+          determinants: [],
+          fq: '',
+          pair: '',
+          contents: [],
+          popular: false,
+          z: '',
+          specialScores: [],
+        },
+        sheetRows: [],
+      },
+      lang,
+      provider: 'openai',
+      apiKey: 'unused-in-lexical-fallback',
+      limit: 6,
+    });
+
+    expect(result.mode).toBe('lexical');
+    expect(result.items[0]?.canonicalRoute).toBe('scoring-input/popular');
+    expect(result.trace[0]?.rerankBonus).toBeGreaterThan(0.03);
   });
 });

@@ -17,9 +17,7 @@
     "referenceDocuments": "참조 문서",
     "aiChatTop": "해석 도우미",
     "interpretationNotes": "해석 노트",
-    "transparencyCenter": "참조",
-    "homeIntroLine1": "Exner(CS) 체계 로샤 검사 구조요약 계산기입니다.",
-    "homeIntroLine2": "본 서비스는 전문가의 임상 판단을 대체하지 않습니다."
+    "transparencyCenter": "참조"
   },
   "buttons": {
     "calculate": "결과 계산하기",
@@ -80,7 +78,7 @@
     "gphr": "G/PHR",
     "guideResponse": "피검자의 언어 반응을 메모하는 용도이며 계산에는 사용되지 않으므로 비워 두어도 됩니다.",
     "tooltipInfo": "맨 아래 행만 조작할 수 있으며,\n최대 50행까지 입력할 수 있습니다.",
-    "rowOrderTip": "반응 행의 순서는 결과 계산에 영향을 미치지 않습니다.\n예를 들어, 8번째 행에 6번 카드 내용을, 14번째 행에 2번 카드 내용을 기록해도 문제 없습니다.",
+    "rowOrderTip": "반응 행의 순서는 결과 계산에 영향을 미치지 않습니다. 예를 들어, 8번째 행에 6번 카드 내용을 14번째 행에 2번 카드 내용을 기록해도 문제 없습니다.",
     "scoreTooltip": "[Card]와 [Z] 선택에 따라 자동 계산됩니다.",
     "gphrTooltip": "Contents, Determinants, FQ, Special Score를 바탕으로 자동 분류됩니다.",
     "responseNumber": "반응 #{index}",
@@ -227,7 +225,7 @@
     "SCON": "S-CON",
     "HVI": "HVI",
     "OBS": "OBS",
-    "sconNote": "( 주의 : 14세 이상의 수검자에게만 적용 )",
+    "sconNote": "( 주의: 만 15세 이상의 수검자에게만 적용 )",
     "sconMain": "8개 이상 해당될 경우 체크",
     "depiMain": "5개 이상 해당될 경우 체크",
     "cdiMain": "4개 이상이면 체크",
@@ -330,14 +328,15 @@
   },
   "footer": {
     "title": "로샤 구조요약 계산 도우미",
-    "copyright": "© 1997-2026 서울임상심리연구소(Seoul Institute of Clinical Psychology, SICP). All rights reserved."
+    "copyright": "© 1997-2026 서울임상심리연구소(Seoul Institute of Clinical Psychology, SICP). All rights reserved.",
+    "scoringCanvasCopyright": "© 2026 서울임상심리연구소(Seoul Institute of Clinical Psychology, SICP) & 모오(MOW). All rights reserved."
   },
   "codeList": {
     "header": "각 채점 항목의 코드 목록과 설명입니다."
   },
   "specialIndices": {
     "scon_main": "8개 이상 해당될 경우 체크",
-    "scon_note": "( 주의 : 14세 이상의 수검자에게만 적용 )",
+    "scon_note": "( 주의: 만 15세 이상의 수검자에게만 적용 )",
     "depi_main": "5개 이상 해당될 경우 체크",
     "pti_main": "점수 표시 (컷오프 없음)",
     "cdi_main": "4개 이상이면 체크",
@@ -366,7 +365,6 @@
       "exclusiveDescription": "이번 세션에서 사용할 OpenAI API 키를 연결합니다. 새 키를 연결하면 이전 세션 키는 교체됩니다.",
       "exclusiveNotice": "OpenAI API 키를 연결해 주세요.",
       "loadedModel": "자동 선택 모델",
-      "modelPolicy": "출시된 지 한 달 이상 지나 안정성이 확인된 모델 중,\n현재 사용할 수 있는 가장 최신 모델을 자동으로 사용합니다.",
       "activeProvider": "사용 중",
       "currentProviderHelp": "현재 {provider} 키로 해석 도우미와 코딩 도우미가 작동합니다.",
       "optionalProviderHelp": "{provider} 키를 쓰고 싶을 때만 입력하면 됩니다.",
@@ -423,6 +421,25 @@
     "empty": "일치하는 참조 문서를 찾지 못했습니다. 더 넓은 키워드로 다시 검색해 보세요.",
     "idle": "키워드를 입력해 참조 문서를 검색해 보세요.",
     "results": "\"{query}\" 검색 결과 {count}건"
+  },
+  "versions": {
+    "unpublishedDate": "공개일 미정",
+    "nextHeading": "[NextJS] 버전 2 릴리즈 기록",
+    "gasHeading": "[Google Apps Script] 버전 1 릴리즈 기록",
+    "major": "메이저 패치",
+    "minor": "마이너 패치",
+    "bugfix": "버그 패치",
+    "hotfix": "핫픽스",
+    "release": "릴리즈",
+    "sourceCode": "소스코드",
+    "patchNotes": "패치노트",
+    "deploymentLink": "배포링크",
+    "tutorialVideo": "사용법 영상",
+    "latestFirst": "최신순",
+    "oldestFirst": "오래된순",
+    "sortAria": "버전 정렬 방향 바꾸기",
+    "gasInfoAria": "Google Apps Script 버전 이용 안내",
+    "gasHelp": "'배포링크'를 클릭하면 해당 버전의 계산기를 이용할 수 있습니다.\n필요한 경우, 소스코드를 개인 계정의 GAS 프로젝트에 붙여넣어서 사용해보세요."
   },
   "common": {
     "close": "닫기"

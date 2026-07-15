@@ -1,7 +1,4 @@
 import type { Metadata } from 'next';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
-import CopyPageButton from '@/components/common/CopyPageButton';
 import { buildLanguageAlternates } from '@/lib/seo';
 import type { Language } from '@/types';
 
@@ -37,7 +34,7 @@ export const metadata: Metadata = {
 const CONTENT: Record<Language, PrivacyContent> = {
   ko: {
     title: '개인정보처리방침',
-    effectiveDate: '시행일: 2026년 2월 15일',
+    effectiveDate: '시행일: 2026년 7월 13일',
     intro:
       '이 문서는 현재 서비스가 어떤 데이터를 처리하고, 어떤 데이터를 서버에 저장하지 않는지 설명합니다. 이 서비스의 기본 원칙은 사용자 계정, API 키, AI 대화 기록, 구조요약 계산 데이터를 서버 DB에 지속적으로 저장하지 않는 것입니다.',
     sections: [
@@ -52,8 +49,16 @@ const CONTENT: Record<Language, PrivacyContent> = {
       {
         heading: '서버 DB 사용 범위',
         paragraphs: [
-          '서버 DB는 사용자의 개인정보나 검사자료를 보관하기 위한 용도로 사용하지 않습니다. 현재 서버 DB는 공개 가능한 참조문서의 검색과 RAG 처리를 지원하기 위한 데이터에 한정해 사용합니다.',
-          '따라서 사용자 계정 정보, API 키, AI 대화 기록, 구조요약 계산 데이터는 서버 DB의 보관 대상이 아닙니다.',
+          '공개 참조문서 검색(RAG)용 DB는 참조문서 벡터와 메타데이터에만 사용하며, 운영 환경에서는 읽기 전용 권한을 사용합니다. 사용자 계정 정보, API 키, AI 대화 기록, 구조요약 계산 데이터는 이 DB에 저장하지 않습니다.',
+          '사용자가 선택적으로 제출한 AI 응답 평가는 아래에 설명한 별도의 피드백 DB에만 저장되며, RAG DB와 그 접근 권한을 공유하지 않습니다.',
+        ],
+      },
+      {
+        heading: '선택적 AI 응답 피드백',
+        paragraphs: [
+          '완료된 AI 답변 옆의 좋아요 또는 싫어요 버튼을 누르면 평가값과 선택한 사전 정의 이유 코드, 도우미 종류, 언어, 고정 모델·하네스 식별자, 완료 상태, 대략적인 답변 길이 구간, 무작위 응답 식별자가 별도의 피드백 DB로 전송됩니다. 평가와 이유 선택은 모두 선택 사항입니다.',
+          '질문, AI 답변 원문, 자유 서술 의견, 반응 메모, 구조요약 수치, API 키, 사용자 식별자, IP 주소, 사용자 에이전트는 피드백 요청이나 DB 행에 포함하지 않습니다.',
+          '현재 브라우저 세션에서 선택한 버튼을 다시 누르면 해당 평가와 이유 코드를 삭제합니다. 피드백 메타데이터는 최대 180일 뒤 만료되며 이후 피드백 처리 과정에서 정리됩니다.',
         ],
       },
       {
@@ -80,7 +85,7 @@ const CONTENT: Record<Language, PrivacyContent> = {
   },
   en: {
     title: 'Privacy Policy',
-    effectiveDate: 'Effective Date: February 15, 2026',
+    effectiveDate: 'Effective Date: July 13, 2026',
     intro:
       'This policy explains what data is processed in the current BYOK-only architecture. The core principle is that user accounts, API keys, chat history, and calculator data are not stored in the server database.',
     sections: [
@@ -95,8 +100,16 @@ const CONTENT: Record<Language, PrivacyContent> = {
       {
         heading: 'Server database scope',
         paragraphs: [
-          'The server database is used only for public reference-document retrieval (RAG). User accounts, API keys, chat history, and calculator data are not stored in the server database.',
-          'Production runtime should use the minimum DB permissions needed for reference retrieval.',
+          'The public-reference RAG database is used only for reference vectors and metadata, with a read-only role in production. User accounts, API keys, chat history, and calculator data are not stored in that database.',
+          'Optional AI response ratings are stored only in the separate feedback database described below. It does not share the RAG database or its access role.',
+        ],
+      },
+      {
+        heading: 'Optional AI response feedback',
+        paragraphs: [
+          'If a user presses the helpful or not-helpful button beside a completed AI answer, the service sends the rating and any selected predefined reason codes, assistant workflow, locale, fixed model and harness identifiers, completion class, coarse response-length range, and a random response identifier to a separate feedback database. Both the rating and reason selection are optional.',
+          'The feedback request and database row do not include the question, answer text, free-form comments, response memo, Structural Summary values, API key, user identifier, IP address, or user agent.',
+          'Pressing the selected button again during the current browser session removes that rating and its reason codes. Feedback metadata expires after no more than 180 days and is purged during later feedback processing.',
         ],
       },
       {
@@ -123,7 +136,7 @@ const CONTENT: Record<Language, PrivacyContent> = {
   },
   ja: {
     title: 'プライバシーポリシー',
-    effectiveDate: '施行日: 2026年2月15日',
+    effectiveDate: '施行日: 2026年7月13日',
     intro:
       '本ポリシーは、現在のBYOK-only構成で処理されるデータと保存場所を説明します。基本原則は、ユーザーアカウント、APIキー、チャット履歴、計算データをサーバーDBに保存しないことです。',
     sections: [
@@ -138,8 +151,16 @@ const CONTENT: Record<Language, PrivacyContent> = {
       {
         heading: 'サーバーDBの使用範囲',
         paragraphs: [
-          'サーバーDBは公開参照文書検索(RAG)のために必要な範囲でのみ使用されます。ユーザーアカウント、APIキー、チャット履歴、計算データはサーバーDBに保存されません。',
-          '本番環境ではRAG検索用の読み取り専用DB権限を使うことを原則とします。',
+          '公開参照文書用のRAGデータベースは参照ベクトルとメタデータのみに使用し、本番環境では読み取り専用権限を使用します。ユーザーアカウント、APIキー、チャット履歴、計算データはこのデータベースに保存されません。',
+          '任意で送信されたAI応答評価は、下記の専用フィードバックデータベースにのみ保存されます。RAGデータベースやそのアクセス権限とは共有されません。',
+        ],
+      },
+      {
+        heading: '任意のAI応答フィードバック',
+        paragraphs: [
+          '完了したAI回答の横にある「役に立った」または「役に立たなかった」ボタンを押すと、評価と選択した定型理由コード、アシスタントの種類、言語、固定のモデル・ハーネス識別子、完了状態、回答長のおおまかな区分、ランダムな応答識別子が専用フィードバックデータベースに送信されます。評価と理由の選択はいずれも任意です。',
+          '質問、AI回答本文、自由記述の意見、応答メモ、構造一覧表の数値、APIキー、ユーザー識別子、IPアドレス、ユーザーエージェントは、フィードバック要求やデータベース行に含まれません。',
+          '現在のブラウザセッション中に選択済みのボタンをもう一度押すと、その評価と理由コードは削除されます。フィードバックのメタデータは最長180日後に期限切れとなり、その後のフィードバック処理時に削除されます。',
         ],
       },
       {
@@ -166,7 +187,7 @@ const CONTENT: Record<Language, PrivacyContent> = {
   },
   es: {
     title: 'Política de Privacidad',
-    effectiveDate: 'Fecha de entrada en vigor: 15 de febrero de 2026',
+    effectiveDate: 'Fecha de entrada en vigor: 13 de julio de 2026',
     intro:
       'Esta política explica qué datos se procesan en la arquitectura BYOK-only actual. El principio central es no guardar cuentas, claves API, historial de chat ni datos de cálculo en la base de datos del servidor.',
     sections: [
@@ -181,8 +202,16 @@ const CONTENT: Record<Language, PrivacyContent> = {
       {
         heading: 'Alcance de la base de datos del servidor',
         paragraphs: [
-          'La base de datos del servidor se usa solo en la medida necesaria para recuperar documentos públicos de referencia (RAG). Las cuentas, claves API, historial de chat y datos de cálculo no se guardan en la base de datos del servidor.',
-          'En producción debe usarse un rol de base de datos de solo lectura para la recuperación RAG.',
+          'La base de datos RAG de referencias públicas se usa solo para vectores y metadatos de referencia, con un rol de solo lectura en producción. Las cuentas, claves API, historial de chat y datos de cálculo no se guardan en esa base de datos.',
+          'Las valoraciones opcionales de respuestas de IA se guardan únicamente en la base de datos de feedback independiente descrita a continuación. No comparte la base de datos RAG ni su rol de acceso.',
+        ],
+      },
+      {
+        heading: 'Feedback opcional sobre respuestas de IA',
+        paragraphs: [
+          'Si se pulsa el botón de respuesta útil o no útil junto a una respuesta de IA terminada, el servicio envía la valoración y los códigos de motivos predefinidos seleccionados, el tipo de asistente, el idioma, los identificadores fijos del modelo y del arnés, el estado de finalización, un intervalo aproximado de longitud y un identificador aleatorio de respuesta a una base de datos de feedback independiente. Tanto la valoración como los motivos son opcionales.',
+          'La solicitud y la fila de la base de datos no incluyen la pregunta, el texto de la respuesta, comentarios de texto libre, la nota de respuesta, valores del Resumen Estructural, la clave API, identificadores de usuario, la dirección IP ni el agente de usuario.',
+          'Al pulsar de nuevo el botón seleccionado durante la sesión actual del navegador se eliminan esa valoración y sus códigos de motivos. Los metadatos caducan en un máximo de 180 días y se purgan durante un procesamiento posterior de feedback.',
         ],
       },
       {
@@ -209,7 +238,7 @@ const CONTENT: Record<Language, PrivacyContent> = {
   },
   pt: {
     title: 'Política de Privacidade',
-    effectiveDate: 'Data de entrada em vigor: 15 de fevereiro de 2026',
+    effectiveDate: 'Data de entrada em vigor: 13 de julho de 2026',
     intro:
       'Esta política explica quais dados são processados na arquitetura BYOK-only atual. O princípio central é não salvar contas, chaves API, histórico de chat nem dados de cálculo no banco de dados do servidor.',
     sections: [
@@ -224,8 +253,16 @@ const CONTENT: Record<Language, PrivacyContent> = {
       {
         heading: 'Escopo do banco de dados do servidor',
         paragraphs: [
-          'O banco de dados do servidor é usado apenas na medida necessária para recuperar documentos públicos de referência (RAG). Contas, chaves API, histórico de chat e dados de cálculo não são salvos no banco de dados do servidor.',
-          'Em produção, deve ser usado um papel de banco de dados somente leitura para recuperação RAG.',
+          'O banco de dados RAG de referências públicas é usado somente para vetores e metadados de referência, com um papel somente leitura em produção. Contas, chaves API, histórico de chat e dados de cálculo não são salvos nesse banco de dados.',
+          'As avaliações opcionais de respostas de IA são salvas apenas no banco de dados de feedback separado descrito abaixo. Ele não compartilha o banco de dados RAG nem seu papel de acesso.',
+        ],
+      },
+      {
+        heading: 'Feedback opcional sobre respostas de IA',
+        paragraphs: [
+          'Ao pressionar o botão de resposta útil ou não útil ao lado de uma resposta de IA concluída, o serviço envia a avaliação e os códigos de motivos predefinidos selecionados, o tipo de assistente, o idioma, os identificadores fixos do modelo e do harness, o estado de conclusão, uma faixa aproximada de tamanho e um identificador aleatório da resposta para um banco de dados de feedback separado. Tanto a avaliação quanto os motivos são opcionais.',
+          'A solicitação e a linha do banco de dados não incluem a pergunta, o texto da resposta, comentários em texto livre, a nota de resposta, valores do Resumo Estrutural, a chave API, identificadores de usuário, o endereço IP nem o agente de usuário.',
+          'Pressionar novamente o botão selecionado durante a sessão atual do navegador remove a avaliação e seus códigos de motivos. Os metadados expiram em no máximo 180 dias e são eliminados durante um processamento posterior de feedback.',
         ],
       },
       {
@@ -258,20 +295,16 @@ export default async function PrivacyPage({ searchParams }: PrivacyPageProps) {
   const content = CONTENT[activeLang];
 
   return (
-    <div className="ui-page">
-      <Header />
-      <main className="mx-auto max-w-7xl px-4 pb-10 sm:px-6 lg:px-8">
-        <div
+    <div className="min-h-screen bg-[var(--brand-page)] text-[var(--text-body)]">
+      <main className="mx-auto w-full max-w-4xl px-5 pb-20 pt-10 sm:px-8 sm:pt-14 lg:px-10">
+        <article
           id="privacy-page-content"
-          className="relative mx-auto max-w-4xl rounded-2xl border border-[var(--border-subtle)] bg-[var(--surface-base)] p-6 text-[var(--text-body)] shadow-sm sm:p-10"
+          className="relative"
         >
-          <CopyPageButton
-            language={activeLang}
-            targetId="privacy-page-content"
-            className="absolute right-4 top-4 sm:right-6 sm:top-6"
-          />
-          <h1 className="pr-14 text-2xl font-bold text-[var(--text-strong)] sm:pr-16">{content.title}</h1>
-          <p className="mt-3 text-sm text-[var(--text-soft)]">{content.effectiveDate}</p>
+          <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1.5">
+            <h1 className="text-2xl font-bold text-[var(--text-strong)]">{content.title}</h1>
+            <p className="shrink-0 text-sm text-[var(--text-soft)]">{content.effectiveDate}</p>
+          </div>
           <p className="mt-4 text-[15px] leading-7 text-[var(--text-body)]">{content.intro}</p>
 
           <div className="mt-8 space-y-8">
@@ -286,9 +319,8 @@ export default async function PrivacyPage({ searchParams }: PrivacyPageProps) {
               </section>
             ))}
           </div>
-        </div>
+        </article>
       </main>
-      <Footer />
     </div>
   );
 }

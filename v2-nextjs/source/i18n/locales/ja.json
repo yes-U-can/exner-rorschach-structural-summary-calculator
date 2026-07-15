@@ -17,9 +17,7 @@
     "referenceDocuments": "参照文書",
     "aiChatTop": "解釈補助",
     "interpretationNotes": "解釈ノート",
-    "transparencyCenter": "参照",
-    "homeIntroLine1": "Exner(CS)体系ロールシャッハ検査の構造要約計算機です。",
-    "homeIntroLine2": "本サービスは専門家の臨床判断を代替するものではありません。"
+    "transparencyCenter": "参照"
   },
   "buttons": {
     "calculate": "結果を計算する",
@@ -80,7 +78,7 @@
     "gphr": "G/PHR",
     "guideResponse": "被検者の言語反応をメモする用途であり、計算には使われないため空欄でも構いません。",
     "tooltipInfo": "一番下の行のみ操作でき、\n最大50行まで入力できます。",
-    "rowOrderTip": "反応行の順序は結果計算に影響しません。\n例えば8行目に6番カードの内容を記録し、14行目に2番カードの内容を記録しても問題ありません。",
+    "rowOrderTip": "反応行の順序は結果計算に影響しません。例えば8行目に6番カードの内容を記録し、14行目に2番カードの内容を記録しても問題ありません。",
     "scoreTooltip": "[Card]と[Z]の選択に基づいて自動計算されます。",
     "gphrTooltip": "Contents, Determinants, FQ, Special Score をもとに自動分類されます。",
     "responseNumber": "反応 #{index}",
@@ -227,7 +225,7 @@
     "SCON": "S-CON",
     "HVI": "HVI",
     "OBS": "OBS",
-    "sconNote": "( 注意：14歳以上の受検者にのみ適用 )",
+    "sconNote": "( 注意：15歳以上の受検者にのみ適用 )",
     "sconMain": "8個以上該当する場合チェック",
     "depiMain": "5個以上該当する場合チェック",
     "cdiMain": "4個以上の場合チェック",
@@ -330,14 +328,15 @@
   },
   "footer": {
     "title": "Computing Program for Rorschach Structural Summary",
-    "copyright": "© 1997–2026 ソウル臨床心理研究所 (Seoul Institute of Clinical Psychology, SICP). All rights reserved."
+    "copyright": "© 1997–2026 ソウル臨床心理研究所 (Seoul Institute of Clinical Psychology, SICP). All rights reserved.",
+    "scoringCanvasCopyright": "© 2026 ソウル臨床心理研究所 (SICP) & MOW. All rights reserved."
   },
   "codeList": {
     "header": "各スコアリング項目のコード一覧と説明です。"
   },
   "specialIndices": {
     "scon_main": "8個以上該当する場合チェック",
-    "scon_note": "( 注意：14歳以上の受検者にのみ適用 )",
+    "scon_note": "( 注意：15歳以上の受検者にのみ適用 )",
     "depi_main": "5個以上該当する場合チェック",
     "pti_main": "スコア表示（カットオフなし）",
     "cdi_main": "4個以上の場合チェック",
@@ -366,7 +365,6 @@
       "exclusiveDescription": "このセッションで使うOpenAI APIキーを接続します。新しいキーを接続すると前のセッションキーは置き換わります。",
       "exclusiveNotice": "OpenAI APIキーを接続してください。",
       "loadedModel": "自動選択モデル",
-      "modelPolicy": "リリースから1か月以上経ち、安定性を確認できたモデルの中から、\n現在使える最新モデルを自動で使用します。",
       "activeProvider": "使用中",
       "currentProviderHelp": "現在、解釈アシスタントとコーディングアシスタントは{provider}キーで動作します。",
       "optionalProviderHelp": "{provider}キーを使いたい場合だけ入力してください。",
@@ -423,6 +421,25 @@
     "empty": "該当する参照文書が見つかりません。より広いキーワードで検索してください。",
     "idle": "キーワードを入力して参照文書を検索してください。",
     "results": "検索結果 {count}件: \"{query}\""
+  },
+  "versions": {
+    "unpublishedDate": "公開日未定",
+    "nextHeading": "[NextJS] バージョン2 リリース履歴",
+    "gasHeading": "[Google Apps Script] バージョン1 リリース履歴",
+    "major": "メジャーリリース",
+    "minor": "マイナーリリース",
+    "bugfix": "バグ修正",
+    "hotfix": "ホットフィックス",
+    "release": "リリース",
+    "sourceCode": "ソースコード",
+    "patchNotes": "パッチノート",
+    "deploymentLink": "公開版を開く",
+    "tutorialVideo": "使い方動画",
+    "latestFirst": "新しい順",
+    "oldestFirst": "古い順",
+    "sortAria": "バージョンの並び順を変更",
+    "gasInfoAria": "Google Apps Script版の利用案内",
+    "gasHelp": "「公開版を開く」を選択すると、そのバージョンの計算機を利用できます。\n必要に応じて、ソースコードを自分のアカウントのGASプロジェクトへ貼り付けてください。"
   },
   "common": {
     "close": "閉じる"

@@ -1,0 +1,48 @@
+datasource db {
+  provider = "postgresql"
+}
+
+enum AiFeedbackRating {
+  helpful
+  unhelpful
+}
+
+enum AiFeedbackWorkflow {
+  interpretation
+  coding_assist
+}
+
+enum AiFeedbackCompletion {
+  completed
+  incomplete
+  unknown
+}
+
+enum AiFeedbackLengthBucket {
+  under_500
+  from_500_to_1499
+  from_1500_to_2999
+  from_3000_to_5999
+  over_6000
+}
+
+model AiResponseFeedback {
+  id                  String                 @id
+  feedbackKey         String                 @unique
+  rating              AiFeedbackRating
+  workflow            AiFeedbackWorkflow
+  locale              String
+  modelId             String
+  harnessVersion      String
+  completion          AiFeedbackCompletion
+  lengthBucket        AiFeedbackLengthBucket
+  reasonCodes         String[]               @default([])
+  reasonSchemaVersion Int                    @default(1)
+  createdAt           DateTime               @default(now())
+  updatedAt           DateTime               @updatedAt
+  expiresAt           DateTime               @default(dbgenerated("(CURRENT_TIMESTAMP + INTERVAL '180 days')"))
+
+  @@index([workflow, rating, createdAt])
+  @@index([modelId, createdAt])
+  @@index([expiresAt])
+}

@@ -32,6 +32,7 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 `S-CON` is an actuarial constellation that groups signs associated with greater suicide risk.
 It does not replace immediate clinical assessment, but indicates when the issue needs high priority attention.
 ## Interpretation Points
+- Apply the S-CON threshold and interpretation only to examinees age 15 or older. Its usefulness has not been demonstrated for age 14 or younger, so do not treat a computed score as a positive or negative conclusion in that group.
 - If `S-CON` reaches threshold, directly assess suicidal ideation, intent, plan, access to means, prior attempts, recent changes, and protective factors immediately.
 - The constellation integrates signs of stress, self-criticism, emotional pain, and reduced control.
 - Its weight increases when it appears with low `D`, low `AdjD`, `SumV`, `SumY`, `MOR_self`, and `DEPI`.

@@ -17,7 +17,7 @@ const CLOSE_DIALOG_EVENT = 'sicp-byok-session-dialog-close';
 
 export type ByokSessionDialogOpenDetail = {
   required?: boolean;
-  source?: 'chat' | 'header' | 'widget' | 'unknown';
+  source?: 'chat' | 'header' | 'sidebar' | 'widget' | 'unknown';
 };
 
 export type ByokSessionDialogCloseDetail = ByokSessionDialogOpenDetail & {

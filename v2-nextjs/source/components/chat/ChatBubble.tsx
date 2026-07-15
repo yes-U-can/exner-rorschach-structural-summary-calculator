@@ -32,6 +32,20 @@ export function ChatMessageRow({
   );
 }
 
+export function ChatMessageGroup({
+  role,
+  children,
+}: {
+  role: ChatRole;
+  children: ReactNode;
+}) {
+  return (
+    <div className={`ui-chat-message-group ${role === 'ai' ? 'items-start' : 'items-end'}`}>
+      {children}
+    </div>
+  );
+}
+
 export function ChatBubble({
   role,
   children,

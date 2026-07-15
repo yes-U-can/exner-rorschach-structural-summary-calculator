@@ -27,21 +27,17 @@ export default function SlotSelect({
   showClearButton = false
 }: SlotSelectProps) {
   const isGrid = gridCols && gridCols > 1;
+  const buttonStateClass = disabled ? 'is-disabled' : value ? 'is-filled' : 'is-empty';
 
   return (
     <Listbox value={value} onChange={onChange} disabled={disabled}>
-      <div className={`relative ${className}`}>
+      <div className={`relative mx-auto h-8 ${className}`}>
         <ListboxButton
-          className={`w-full h-8 px-1.5 text-xs rounded-md
-            bg-[var(--surface-input)] border border-[var(--border-subtle)] text-center
-            hover:border-[var(--brand-300)]
-            focus:outline-none focus:ring-2 focus:ring-[var(--brand-500)]/40 focus:border-[var(--brand-500)]
-            disabled:opacity-40 disabled:cursor-not-allowed transition-colors
-            ${!value ? 'text-[var(--text-soft)]' : 'text-[var(--text-body)] font-medium'}`}
+          className={`ui-slot-select-button ${buttonStateClass} relative flex h-8 min-h-8 max-h-8 w-full min-w-full max-w-full appearance-none items-center justify-center rounded-md px-1.5 text-center text-xs leading-none disabled:cursor-not-allowed`}
         >
-          <span className="block truncate">{value || placeholder}</span>
+          <span className="block h-4 w-full truncate leading-4">{value || placeholder}</span>
           <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-0.5">
-            <ChevronDownIcon className="h-3 w-3 text-[var(--text-soft)]" aria-hidden="true" />
+            <ChevronDownIcon className="ui-slot-select-chevron h-3.5 w-3.5" aria-hidden="true" />
           </span>
         </ListboxButton>
         <ListboxOptions
@@ -79,7 +75,7 @@ export default function SlotSelect({
                     disabled={isOptionDisabled}
                     className={({ active, selected }) =>
                       isOptionDisabled
-                        ? 'cursor-not-allowed select-none rounded-lg py-1.5 px-1 text-center text-[var(--text-soft)] line-through opacity-45'
+                        ? 'cursor-not-allowed select-none rounded-lg py-1.5 px-1 text-center text-[var(--text-soft)] line-through opacity-70'
                         : `cursor-pointer select-none py-1.5 px-1 text-center rounded-lg transition-colors ${
                         selected
                           ? 'bg-[var(--brand-700)] text-[var(--on-brand)] font-semibold shadow-sm'
@@ -127,7 +123,7 @@ export default function SlotSelect({
                   disabled={isOptionDisabled}
                   className={({ active, selected }) =>
                     isOptionDisabled
-                      ? 'cursor-not-allowed select-none py-1.5 px-3 text-[var(--text-soft)] line-through opacity-45'
+                      ? 'cursor-not-allowed select-none py-1.5 px-3 text-[var(--text-soft)] line-through opacity-70'
                       : `cursor-pointer select-none py-1.5 px-3 transition-colors ${
                       selected
                         ? 'bg-[var(--brand-50)] text-[var(--brand-700)] font-medium'

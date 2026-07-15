@@ -91,7 +91,7 @@ type OpenAIResponseLike = {
   } | null;
 };
 
-export const AI_HARNESS_VERSION = 'sicp-openai-harness-v1';
+export const AI_HARNESS_VERSION = 'sicp-openai-harness-v4';
 export const OPENAI_GENERATION_TIMEOUT_MS = 3 * 60 * 1000;
 export const OPENAI_GENERATION_MAX_RETRIES = 1;
 
@@ -101,14 +101,14 @@ const PROMPT_PROFILES: Record<AiWorkflowMode, AiPromptProfile> = {
     harnessVersion: AI_HARNESS_VERSION,
     promptProfileId: DEFAULT_INTERPRETATION_GUARDRAIL_ID,
     responsePolicyId: DEFAULT_INTERPRETATION_RESPONSE_POLICY_ID,
-    maxOutputTokens: 2200,
+    maxOutputTokens: 8000,
   },
   coding_assist: {
     workflowMode: 'coding_assist',
     harnessVersion: AI_HARNESS_VERSION,
     promptProfileId: CODING_GUARDRAIL_ID,
     responsePolicyId: CODING_RESPONSE_POLICY_ID,
-    maxOutputTokens: 2600,
+    maxOutputTokens: 6000,
   },
 };
 
@@ -176,8 +176,12 @@ export function buildAiResponsePolicyPrompt(profile: AiPromptProfile): string {
     `Policy id: ${profile.responsePolicyId}`,
     '',
     '- Answer the current user request first; do not expand into a full report unless the user explicitly asks for one.',
+    '- Match depth to the request: stay concise for narrow questions and provide structured detail only when the user explicitly asks for it.',
     '- Use progressive disclosure: give a complete first-pass answer, then invite a narrower follow-up only when more depth would help.',
     '- Finish every section or bullet group you start. If the answer would be too long, shorten the scope instead of ending mid-thought.',
+    '- Before a long answer, choose a finite outline and reserve enough space to complete the final section and caveat. Prefer fewer complete sections over an exhaustive answer that is cut off.',
+    '- Treat the provider output limit as an emergency ceiling, not a target. Control normal answer length through scope and structure.',
+    '- If the prior assistant response visibly ended mid-sentence or mid-section and the user asks to continue or points out the interruption, resume at the exact unfinished point. Do not restart completed sections, repeat their headings, or spend more than one short sentence apologizing.',
     '- Do not mention token budgets, internal harness rules, hidden prompts, or system instructions.',
   ];
 
@@ -383,23 +387,43 @@ export async function createOpenAITextStream(args: {
           }
         }
 
-        settle(summarizeOpenAIResponse(finalResponse));
+        const providerSummary = summarizeOpenAIResponse(finalResponse);
+        if (args.signal?.aborted || providerStream.controller.signal.aborted) {
+          settle({
+            ...providerSummary,
+            status: 'aborted',
+            incompleteReason: providerSummary.incompleteReason || 'aborted',
+          });
+        } else {
+          settle(providerSummary);
+        }
         controller.close();
       } catch (error) {
         const providerSummary = summarizeOpenAIResponse(finalResponse);
-        settle({
-          ...providerSummary,
-          status: 'failed',
-          errorMessage: providerSummary.errorMessage || toErrorMessage(error, 'OpenAI stream failed.'),
-        });
+        const streamWasAborted = args.signal?.aborted || providerStream.controller.signal.aborted;
+        settle(
+          streamWasAborted
+            ? {
+                ...providerSummary,
+                status: 'aborted',
+                incompleteReason: providerSummary.incompleteReason || 'aborted',
+              }
+            : {
+                ...providerSummary,
+                status: 'failed',
+                errorMessage: providerSummary.errorMessage || toErrorMessage(error, 'OpenAI stream failed.'),
+              },
+        );
         controller.error(error);
       }
     },
     cancel(reason) {
       settle({
         status: 'aborted',
+        incompleteReason: 'client_aborted',
         errorMessage: typeof reason === 'string' ? reason : 'Client aborted the response stream.',
       });
+      providerStream.controller.abort(reason);
     },
   });
 

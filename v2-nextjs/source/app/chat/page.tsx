@@ -2,15 +2,39 @@
 
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { PaperAirplaneIcon } from '@heroicons/react/24/outline';
+import {
+  CheckCircleIcon,
+  ClipboardDocumentIcon,
+  PaperAirplaneIcon,
+  XMarkIcon,
+} from '@heroicons/react/24/outline';
+import { StopIcon } from '@heroicons/react/24/solid';
 import { useTranslation } from '@/hooks/useTranslation';
+import { useChatAutoScroll } from '@/hooks/useChatAutoScroll';
+import { useChatRequestControl } from '@/hooks/useChatRequestControl';
 import { getCondensedSystemMessage } from '@/lib/chatMessageVisibility';
 import { toPlainTextChat } from '@/lib/chatPlainText';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
-import type { Language } from '@/types';
+import type {
+  AiFeedbackRating,
+  AiFeedbackReasonCode,
+  ChatMessageMetadata,
+  Language,
+} from '@/types';
 import { getChatPageUi, getChatRuntimeUi } from '@/lib/chatPageUi';
-import { ChatBubble, ChatMessageRow, ChatMessageText, ChatSystemNotice } from '@/components/chat/ChatBubble';
+import { getChatMessageActionsUi } from '@/lib/chatMessageActionsUi';
+import {
+  shouldShowChatMessageActions,
+  withClientFeedbackIds,
+} from '@/lib/chatMessageActions';
+import {
+  ChatBubble,
+  ChatMessageGroup,
+  ChatMessageRow,
+  ChatMessageText,
+  ChatSystemNotice,
+} from '@/components/chat/ChatBubble';
+import { ChatMessageActions } from '@/components/chat/ChatMessageActions';
+import { ChatScrollToLatestButton } from '@/components/chat/ChatScrollToLatestButton';
 import {
   buildEphemeralChatStorageKey,
   clearAllEphemeralChatStorage,
@@ -29,24 +53,19 @@ import {
 import { isByokSessionMissingError, readChatApiErrorPayload } from '@/lib/chatApiErrors';
 import { CHAT_STREAM_PROTOCOL, consumeChatEventStream } from '@/lib/chatStreamProtocol';
 import { validateStructuralSummaryCsv } from '@/lib/structuralSummaryCsv';
+import {
+  AI_RESPONSE_FEEDBACK_ENABLED,
+  createClientFeedbackId,
+  submitAiResponseFeedback,
+} from '@/lib/aiFeedbackClient';
+import { FIXED_OPENAI_MODEL_ID } from '@/lib/aiModels';
 
 type Message = {
   id: number;
   role: 'ai' | 'user';
   content: string;
-};
-
-type Provider = 'openai';
-type ModelOption = {
-  id: string;
-  provider: Provider;
-  label: string;
-  description: string;
-  qualityLevel: 'basic' | 'standard' | 'advanced';
-  priceLevel: 'low' | 'medium' | 'high';
-  speedLevel: 'fast' | 'balanced' | 'deep';
-  psychologyLabel: string;
-  byokAvailable: boolean;
+  statusNotice?: string;
+  metadata?: ChatMessageMetadata;
 };
 
 function ChatPageClient() {
@@ -55,11 +74,10 @@ function ChatPageClient() {
   const { t, language } = useTranslation();
   const pageUi = getChatPageUi(language as Language);
   const chatUi = getChatRuntimeUi(language as Language);
+  const messageActionsUi = getChatMessageActionsUi(language);
   const draftCopied = searchParams.get('draft') === 'summary-copied';
 
-  const [provider, setProvider] = useState<Provider>('openai');
-  const [modelId, setModelId] = useState('gpt-5.5');
-  const [models, setModels] = useState<ModelOption[]>([]);
+  const modelId = FIXED_OPENAI_MODEL_ID;
   const [byokStatus, setByokStatus] = useState<ByokSessionStatus | null>(null);
   const [inputText, setInputText] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -70,6 +88,7 @@ function ChatPageClient() {
   const [summaryCsvText, setSummaryCsvText] = useState('');
   const [summaryCsvError, setSummaryCsvError] = useState<string | null>(null);
   const [systemNotice, setSystemNotice] = useState<string | null>(null);
+  const [activePromptId, setActivePromptId] = useState<number | null>(null);
   const storageKey = useMemo(
     () => buildEphemeralChatStorageKey({
       userId: 'browser',
@@ -79,13 +98,30 @@ function ChatPageClient() {
   );
   const summaryCsvStorageKey = storageKey ? `${storageKey}:structural-summary-csv` : null;
 
-  const messagesScrollRef = useRef<HTMLDivElement | null>(null);
-  const messagesEndRef = useRef<HTMLDivElement | null>(null);
-  const shouldAutoScrollRef = useRef(true);
   const requiredSessionPromptRef = useRef(false);
+  const summaryCsvInputRef = useRef<HTMLTextAreaElement | null>(null);
+  const { beginRequest, finishRequest, stopRequest } = useChatRequestControl();
+  const latestMessageContent = streamingMessages[streamingMessages.length - 1]?.content ?? '';
+  const {
+    scrollContainerRef,
+    isFollowing,
+    isAtBottom,
+    pauseFollowing,
+    resumeFollowing,
+    scrollHandlers,
+  } = useChatAutoScroll({
+    messageCount: streamingMessages.length,
+    latestContent: latestMessageContent,
+  });
   useEffect(() => {
     setLoadedStorageKey(null);
-    setStreamingMessages(readEphemeralChatMessages<Message>(storageKey));
+    setStreamingMessages(withClientFeedbackIds(
+      readEphemeralChatMessages<Message>(storageKey),
+      {
+        enabled: AI_RESPONSE_FEEDBACK_ENABLED,
+        createId: createClientFeedbackId,
+      },
+    ));
     setLoadedStorageKey(storageKey);
   }, [storageKey]);
 
@@ -135,50 +171,35 @@ function ChatPageClient() {
     return () => window.removeEventListener(EPHEMERAL_CHAT_CLEAR_EVENT, handleClear);
   }, []);
 
-  const loadChatModelState = useCallback(async () => {
-    const activeSession = await fetchByokSessionStatus();
-    setByokStatus(activeSession);
-    if (!activeSession.active || !activeSession.provider) {
-      clearAllEphemeralChatStorage();
-      setModels([]);
-      return;
-    }
-
+  const refreshChatSessionState = useCallback(async () => {
     try {
-      const res = await fetch('/api/chat/models');
-      if (!res.ok) return;
-      const data = (await res.json()) as {
-        models: ModelOption[];
-        defaultProvider: Provider | null;
-        defaultModelId: string | null;
-      };
-      const allModels = data.models ?? [];
-      const available = allModels.filter((model) => model.provider === activeSession.provider);
-      setModels(available);
-
-      const defaultModel =
-        available.find((model) => model.provider === activeSession.provider && model.byokAvailable) ??
-        available[0];
-
-      if (defaultModel) {
-        setModelId(defaultModel.id);
-        setProvider(activeSession.provider);
+      const activeSession = await fetchByokSessionStatus();
+      setByokStatus(activeSession);
+      if (!activeSession.active) {
+        clearAllEphemeralChatStorage();
       }
     } catch {
-      // no-op
+      setByokStatus({
+        active: false,
+        provider: null,
+        masked: null,
+        expiresAt: null,
+        ttlHours: 24,
+      });
     }
   }, []);
 
   useEffect(() => {
-    void loadChatModelState();
+    void refreshChatSessionState();
     return subscribeByokSessionChange(() => {
-      void loadChatModelState();
+      void refreshChatSessionState();
     });
-  }, [loadChatModelState]);
+  }, [refreshChatSessionState]);
 
   const isModelStateLoaded = byokStatus !== null;
-  const hasSelectableModel = Boolean(byokStatus?.active) && models.length > 0;
-  const canUseChatInput = isModelStateLoaded && hasSelectableModel;
+  const canUseChatInput = isModelStateLoaded && Boolean(
+    byokStatus?.active && byokStatus.provider === 'openai',
+  );
 
   useEffect(() => {
     return subscribeByokSessionDialogClose((detail) => {
@@ -199,16 +220,6 @@ function ChatPageClient() {
     requiredSessionPromptRef.current = true;
     openByokSessionDialog({ required: true, source: 'chat' });
   }, [byokStatus?.active, isModelStateLoaded]);
-
-  useEffect(() => {
-    if (!byokStatus?.provider || models.length === 0) return;
-    const current = models.find((model) => model.id === modelId);
-    const next = current ?? models.find((model) => model.provider === byokStatus.provider) ?? models[0];
-    if (!next) return;
-
-    if (next.id !== modelId) setModelId(next.id);
-    if (provider !== byokStatus.provider) setProvider(byokStatus.provider);
-  }, [byokStatus?.provider, modelId, models, provider]);
 
   const getFriendlyErrorMessage = useCallback(
     (rawError: string) => {
@@ -249,19 +260,36 @@ function ChatPageClient() {
     [pageUi.summaryCsvInvalid, t],
   );
 
-  const updateAutoScrollPreference = useCallback(() => {
-    const scrollElement = messagesScrollRef.current;
-    if (!scrollElement) return;
-    const distanceFromBottom = scrollElement.scrollHeight - scrollElement.scrollTop - scrollElement.clientHeight;
-    shouldAutoScrollRef.current = distanceFromBottom < 120;
-  }, []);
-
-  const lastMessageContent = streamingMessages[streamingMessages.length - 1]?.content ?? '';
-
-  useEffect(() => {
-    if (!shouldAutoScrollRef.current) return;
-    messagesEndRef.current?.scrollIntoView({ behavior: 'auto', block: 'end' });
-  }, [streamingMessages.length, lastMessageContent]);
+  const saveMessageFeedback = useCallback(async (args: {
+    messageId: number;
+    feedbackId: string;
+    completionState: NonNullable<ChatMessageMetadata['completionState']>;
+    responseChars: number;
+    rating: AiFeedbackRating | null;
+    reasonCodes: AiFeedbackReasonCode[];
+  }) => {
+    await submitAiResponseFeedback({
+      feedbackId: args.feedbackId,
+      rating: args.rating,
+      workflowType: 'interpretation',
+      locale: language as Language,
+      completionState: args.completionState,
+      responseChars: args.responseChars,
+      reasonCodes: args.reasonCodes,
+    });
+    setStreamingMessages((current) => current.map((message) => (
+      message.id === args.messageId
+        ? {
+            ...message,
+            metadata: {
+              ...message.metadata,
+              feedbackRating: args.rating,
+              feedbackReasonCodes: args.rating ? args.reasonCodes : [],
+            },
+          }
+        : message
+    )));
+  }, [language]);
 
   const sendMessage = useCallback(
     async (messageText: string) => {
@@ -280,8 +308,6 @@ function ChatPageClient() {
         openByokSessionDialog({ required: true, source: 'chat' });
         return;
       }
-      if (!hasSelectableModel) return;
-
       const userMessageContent = messageText.trim();
       const userMessage: Message = {
         id: Date.now(),
@@ -290,12 +316,39 @@ function ChatPageClient() {
       };
       const newMessages = [...streamingMessages, userMessage];
 
+      resumeFollowing('auto');
       setStreamingMessages(newMessages);
       setInputText('');
       setSummaryCsvError(null);
       setSystemNotice(null);
       setIsLoading(true);
       setIsStreaming(true);
+      const requestController = beginRequest();
+      let aiMessageId: number | null = null;
+      let aiResponseText = '';
+
+      const updateAiMessage = (
+        content: string,
+        completionState?: ChatMessageMetadata['completionState'],
+        statusNotice?: string,
+      ) => {
+        if (aiMessageId === null) return;
+        setStreamingMessages((prev) =>
+          prev.map((message) =>
+            message.id === aiMessageId
+              ? {
+                  ...message,
+                  content,
+                  statusNotice,
+                  metadata: {
+                    ...message.metadata,
+                    ...(completionState ? { completionState } : {}),
+                  },
+                }
+              : message,
+          ),
+        );
+      };
 
       try {
         const response = await fetch('/api/chat', {
@@ -315,6 +368,7 @@ function ChatPageClient() {
             },
             lang: language,
           }),
+          signal: requestController.signal,
         });
 
         if (!response.ok) {
@@ -331,21 +385,26 @@ function ChatPageClient() {
           throw new Error(chatUi.serverFallbackError);
         }
 
-        let aiResponseText = '';
-        const aiMessageId = Date.now() + 1;
+        const nextAiMessageId = Date.now() + 1;
+        aiMessageId = nextAiMessageId;
 
         setStreamingMessages((prev) => [
           ...prev,
-          { id: aiMessageId, role: 'ai', content: '' },
+          {
+            id: nextAiMessageId,
+            role: 'ai',
+            content: '',
+            metadata: {
+              workflowType: 'interpretation',
+              locale: language,
+              modelId,
+              ...(AI_RESPONSE_FEEDBACK_ENABLED
+                ? { clientFeedbackId: createClientFeedbackId() }
+                : {}),
+              completionState: 'streaming',
+            },
+          },
         ]);
-
-        const updateAiMessage = (content: string) => {
-          setStreamingMessages((prev) =>
-            prev.map((message) =>
-              message.id === aiMessageId ? { ...message, content } : message,
-            ),
-          );
-        };
 
         try {
           const terminalEvent = await consumeChatEventStream(response.body, (delta) => {
@@ -356,44 +415,92 @@ function ChatPageClient() {
           if (terminalEvent.type !== 'complete') {
             const notice = terminalEvent.type === 'error'
               ? getFriendlyErrorMessage(terminalEvent.message)
-              : chatUi.streamInterrupted;
-            aiResponseText = aiResponseText ? `${aiResponseText}\n\n${notice}` : notice;
-            updateAiMessage(aiResponseText);
+              : terminalEvent.reason === 'max_output_tokens'
+                ? chatUi.responseLengthReached
+                : terminalEvent.reason === 'timeout'
+                  ? chatUi.responseTimedOut
+                  : chatUi.streamInterrupted;
+            updateAiMessage(
+              aiResponseText,
+              terminalEvent.type === 'error' ? 'failed' : 'incomplete',
+              notice,
+            );
+          } else {
+            updateAiMessage(aiResponseText, 'completed');
           }
         } catch (streamError) {
-          console.error('Stream interrupted:', streamError);
-          aiResponseText = aiResponseText
-            ? `${aiResponseText}\n\n${chatUi.streamInterrupted}`
-            : chatUi.streamInterrupted;
-          updateAiMessage(aiResponseText);
+          if (!requestController.signal.aborted) {
+            console.error('Stream interrupted:', streamError);
+          }
+          updateAiMessage(
+            aiResponseText,
+            requestController.signal.aborted ? 'incomplete' : 'failed',
+            requestController.signal.aborted ? chatUi.responseStopped : chatUi.streamInterrupted,
+          );
         }
 
       } catch (error) {
+        if (requestController.signal.aborted) {
+          if (aiMessageId === null) {
+            setStreamingMessages((prev) => [
+              ...prev,
+              {
+                id: Date.now() + 2,
+                role: 'ai',
+                content: '',
+                statusNotice: chatUi.responseStopped,
+                metadata: {
+                  workflowType: 'interpretation',
+                  locale: language,
+                  modelId,
+                  completionState: 'incomplete',
+                },
+              },
+            ]);
+          } else {
+            updateAiMessage(aiResponseText, 'incomplete', chatUi.responseStopped);
+          }
+          return;
+        }
         console.error(error);
         setStreamingMessages((prev) => [
           ...prev,
           {
             id: Date.now() + 2,
             role: 'ai',
-            content: getFriendlyErrorMessage(error instanceof Error ? error.message : ''),
+            content: '',
+            statusNotice: getFriendlyErrorMessage(error instanceof Error ? error.message : ''),
+            metadata: {
+              workflowType: 'interpretation',
+              locale: language,
+              modelId,
+              completionState: 'failed',
+            },
           },
         ]);
       } finally {
+        finishRequest(requestController);
         setIsLoading(false);
         setIsStreaming(false);
       }
     },
     [
       chatUi.serverFallbackError,
+      chatUi.responseLengthReached,
+      chatUi.responseStopped,
+      chatUi.responseTimedOut,
       chatUi.streamInterrupted,
+      beginRequest,
       draftCopied,
+      finishRequest,
       getFriendlyErrorMessage,
-      hasSelectableModel,
       isModelStateLoaded,
       isLoading,
       language,
+      modelId,
       pageUi.summaryCsvInvalid,
       pageUi.summaryCsvRequired,
+      resumeFollowing,
       streamingMessages,
       summaryCsvText,
     ],
@@ -405,60 +512,157 @@ function ChatPageClient() {
   };
 
   const showConversation = streamingMessages.length > 0 || isStreaming;
+  const userPrompts = useMemo(
+    () => streamingMessages.filter((message) => message.role === 'user' && message.content.trim()),
+    [streamingMessages],
+  );
+  const userPromptIdsKey = userPrompts.map((message) => message.id).join(':');
+
+  const updateActivePrompt = useCallback(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    const anchors = Array.from(
+      container.querySelectorAll<HTMLElement>('[data-chat-prompt-id]'),
+    );
+    if (anchors.length === 0) {
+      setActivePromptId(null);
+      return;
+    }
+
+    const containerRect = container.getBoundingClientRect();
+    const readingLine = containerRect.top + Math.min(container.clientHeight * 0.35, 220);
+    let nextPromptId = Number(anchors[0].dataset.chatPromptId);
+
+    for (const anchor of anchors) {
+      if (anchor.getBoundingClientRect().top > readingLine) break;
+      nextPromptId = Number(anchor.dataset.chatPromptId);
+    }
+
+    setActivePromptId((current) => (current === nextPromptId ? current : nextPromptId));
+  }, [scrollContainerRef]);
+
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container || !userPromptIdsKey) {
+      setActivePromptId(null);
+      return;
+    }
+
+    let frameId: number | null = null;
+    const scheduleUpdate = () => {
+      if (frameId !== null) return;
+      frameId = window.requestAnimationFrame(() => {
+        frameId = null;
+        updateActivePrompt();
+      });
+    };
+
+    scheduleUpdate();
+    container.addEventListener('scroll', scheduleUpdate, { passive: true });
+    const resizeObserver = new ResizeObserver(scheduleUpdate);
+    resizeObserver.observe(container);
+
+    return () => {
+      container.removeEventListener('scroll', scheduleUpdate);
+      resizeObserver.disconnect();
+      if (frameId !== null) window.cancelAnimationFrame(frameId);
+    };
+  }, [scrollContainerRef, updateActivePrompt, userPromptIdsKey]);
+
+  const scrollToPrompt = useCallback((messageId: number) => {
+    pauseFollowing();
+    setActivePromptId(messageId);
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.getElementById(`chat-prompt-${messageId}`)?.scrollIntoView({
+      behavior: reduceMotion ? 'auto' : 'smooth',
+      block: 'center',
+    });
+  }, [pauseFollowing]);
+
   const greetingTitle = draftCopied ? pageUi.welcomeCopiedTitle : pageUi.welcomeTitle;
   const inputPlaceholder = streamingMessages.length === 0 ? pageUi.inputPlaceholder : '';
   const showMessageArea = showConversation || Boolean(systemNotice);
   const showInitialState = streamingMessages.length === 0 && !isStreaming && !systemNotice;
   const hasSummaryCsvValidationError = Boolean(summaryCsvError);
+  const hasSummaryCsv = Boolean(summaryCsvText.trim());
   const clearSummaryCsvInput = () => {
     setSummaryCsvText('');
     setSummaryCsvError(null);
     setSystemNotice(null);
   };
   const summaryCsvInput = (
-    <input
-      type="text"
-      id="structural-summary-csv"
-      value={summaryCsvText.trim() ? pageUi.summaryCsvReadyLabel : ''}
-      onChange={(event) => {
-        setSummaryCsvText(event.target.value);
-        setSummaryCsvError(null);
-        setSystemNotice(null);
-      }}
-      onPaste={(event) => {
-        event.preventDefault();
-        setSummaryCsvText(event.clipboardData.getData('text'));
-        setSummaryCsvError(null);
-        setSystemNotice(null);
-      }}
-      onKeyDown={(event) => {
-        if ((event.key === 'Backspace' || event.key === 'Delete') && summaryCsvText.trim()) {
+    <div
+      className={`ui-summary-csv-control ${hasSummaryCsv ? 'is-ready' : ''} ${hasSummaryCsvValidationError ? 'is-error' : ''} ${!canUseChatInput || isLoading ? 'is-disabled' : ''}`}
+    >
+      {hasSummaryCsv ? (
+        <CheckCircleIcon className="ui-summary-csv-icon" aria-hidden="true" />
+      ) : (
+        <ClipboardDocumentIcon className="ui-summary-csv-icon" aria-hidden="true" />
+      )}
+      <span className="ui-summary-csv-label" aria-hidden="true">
+        {hasSummaryCsv ? pageUi.summaryCsvReadyLabel : pageUi.summaryCsvPlaceholder}
+      </span>
+      <textarea
+        ref={summaryCsvInputRef}
+        id="structural-summary-csv"
+        value=""
+        rows={1}
+        onChange={(event) => {
+          if (!event.target.value) return;
+          setSummaryCsvText(event.target.value);
+          setSummaryCsvError(null);
+          setSystemNotice(null);
+        }}
+        onPaste={(event) => {
           event.preventDefault();
-          clearSummaryCsvInput();
-        }
-      }}
-      placeholder={pageUi.summaryCsvPlaceholder}
-      disabled={!canUseChatInput || isLoading}
-      spellCheck={false}
-      className={`ui-summary-csv-inline-input ${hasSummaryCsvValidationError ? 'is-error' : ''}`}
-      aria-label={pageUi.summaryCsvLabel}
-      title={pageUi.summaryCsvLabel}
-    />
+          setSummaryCsvText(event.clipboardData.getData('text'));
+          setSummaryCsvError(null);
+          setSystemNotice(null);
+        }}
+        onKeyDown={(event) => {
+          if ((event.key === 'Backspace' || event.key === 'Delete') && hasSummaryCsv) {
+            event.preventDefault();
+            clearSummaryCsvInput();
+          }
+        }}
+        disabled={!canUseChatInput || isLoading}
+        autoComplete="off"
+        spellCheck={false}
+        className="ui-summary-csv-paste-target"
+        aria-label={`${pageUi.summaryCsvLabel}: ${hasSummaryCsv ? pageUi.summaryCsvReadyLabel : pageUi.summaryCsvPlaceholder}`}
+        aria-invalid={hasSummaryCsvValidationError}
+      />
+      {hasSummaryCsv ? (
+        <button
+          type="button"
+          className="ui-summary-csv-clear"
+          onClick={() => {
+            clearSummaryCsvInput();
+            summaryCsvInputRef.current?.focus();
+          }}
+          disabled={!canUseChatInput || isLoading}
+          aria-label={pageUi.clearSummaryCsv}
+          title={pageUi.clearSummaryCsv}
+        >
+          <XMarkIcon className="h-4 w-4" aria-hidden="true" />
+        </button>
+      ) : null}
+    </div>
   );
 
   return (
-    <div className="flex min-h-screen flex-col bg-[var(--brand-page)]">
-      <Header />
-      <div className="mx-auto flex w-full max-w-5xl flex-1 px-4 py-8 sm:px-6 lg:px-8">
-        <div className="ui-chat-panel relative flex min-w-0 flex-1 flex-col overflow-hidden rounded-2xl border shadow-sm">
-          <main className="flex min-h-0 flex-1 flex-col">
-            <div
-              ref={messagesScrollRef}
-              onScroll={updateAutoScrollPreference}
-              className="flex-1 overflow-y-auto bg-gradient-to-b from-[var(--surface-muted)] to-[var(--surface-base)]"
-            >
+    <div className="ui-chat-page-layout bg-[var(--brand-page)]">
+      <main className="ui-chat-workspace">
+        <section className="ui-chat-primary">
+        <div className="relative min-h-0 flex-1 overflow-hidden">
+          <div
+            ref={scrollContainerRef}
+            {...scrollHandlers}
+            className="ui-chat-scroll h-full overflow-y-auto overscroll-contain [overflow-anchor:none]"
+          >
               {showMessageArea && (
-                <div className="flex-1 overflow-y-auto p-4">
+                <div className="ui-chat-conversation mx-auto w-full max-w-3xl px-4 pb-48 pt-6 sm:px-6 sm:pb-44 sm:pt-8 xl:pb-36">
                   <div className="space-y-4">
                     {streamingMessages.map((message) => {
                       const condensed = getCondensedSystemMessage(message.content);
@@ -469,13 +673,52 @@ function ChatPageClient() {
                       }
 
                       return (
-                        <ChatMessageRow key={message.id} role={message.role}>
-                          <ChatBubble role={message.role}>
-                            <ChatMessageText>
-                              {message.role === 'ai' ? toPlainTextChat(message.content) : message.content}
-                            </ChatMessageText>
-                          </ChatBubble>
-                        </ChatMessageRow>
+                        <div
+                          key={message.id}
+                          id={message.role === 'user' ? `chat-prompt-${message.id}` : undefined}
+                          data-chat-prompt-id={message.role === 'user' ? message.id : undefined}
+                          className="ui-chat-message-anchor"
+                        >
+                          <ChatMessageRow role={message.role}>
+                            <ChatMessageGroup role={message.role}>
+                              {message.content.trim() ? (
+                                <ChatBubble role={message.role}>
+                                  <ChatMessageText>
+                                    {message.role === 'ai' ? toPlainTextChat(message.content) : message.content}
+                                  </ChatMessageText>
+                                </ChatBubble>
+                              ) : null}
+                              {message.statusNotice ? (
+                                <p className="ui-chat-message-status" role="status">{message.statusNotice}</p>
+                              ) : null}
+                              {shouldShowChatMessageActions({
+                                content: message.content,
+                                completionState: message.metadata?.completionState,
+                              }) ? (
+                                <ChatMessageActions
+                                  content={message.role === 'ai' ? toPlainTextChat(message.content) : message.content}
+                                  language={language as Language}
+                                  feedbackRating={message.role === 'ai' ? message.metadata?.feedbackRating : undefined}
+                                  onFeedback={
+                                    message.role === 'ai' &&
+                                    AI_RESPONSE_FEEDBACK_ENABLED &&
+                                    message.metadata?.clientFeedbackId &&
+                                    message.metadata.completionState !== 'failed'
+                                      ? (rating, reasonCodes) => saveMessageFeedback({
+                                          messageId: message.id,
+                                          feedbackId: message.metadata!.clientFeedbackId!,
+                                          completionState: message.metadata?.completionState ?? 'unknown',
+                                          responseChars: toPlainTextChat(message.content).length,
+                                          rating,
+                                          reasonCodes,
+                                        })
+                                      : undefined
+                                  }
+                                />
+                              ) : null}
+                            </ChatMessageGroup>
+                          </ChatMessageRow>
+                        </div>
                       );
                     })}
                     {systemNotice && (
@@ -492,7 +735,6 @@ function ChatPageClient() {
                         </div>
                       </div>
                     )}
-                    <div ref={messagesEndRef} />
                   </div>
                 </div>
               )}
@@ -508,34 +750,86 @@ function ChatPageClient() {
                   </div>
                 </div>
               )}
-            </div>
+          </div>
+          {!isFollowing && showConversation ? (
+            <ChatScrollToLatestButton
+              label={messageActionsUi.jumpToLatest}
+              onClick={() => resumeFollowing('smooth')}
+            />
+          ) : null}
+          {userPrompts.length > 1 ? (
+            <nav className="ui-chat-prompt-rail" aria-label={pageUi.conversationOutline}>
+              <ol className="ui-chat-prompt-rail-list">
+                {userPrompts.map((message, index) => {
+                  const isActive = activePromptId === message.id;
+                  return (
+                    <li key={message.id}>
+                      <button
+                        type="button"
+                        className="ui-chat-prompt-rail-button"
+                        onClick={() => scrollToPrompt(message.id)}
+                        aria-label={`${pageUi.jumpToPrompt} ${index + 1}: ${message.content}`}
+                        aria-current={isActive ? 'location' : undefined}
+                      >
+                        <span className="ui-chat-prompt-rail-marker" aria-hidden="true" />
+                        <span className="ui-chat-prompt-rail-preview" aria-hidden="true">
+                          {message.content}
+                        </span>
+                      </button>
+                    </li>
+                  );
+                })}
+              </ol>
+            </nav>
+          ) : null}
+        </div>
 
-            <div className="pb-safe rounded-b-2xl border-t border-[var(--border-subtle)] bg-[var(--surface-base)] p-3 md:p-4">
-              <form onSubmit={handleSubmit} className="flex items-center gap-2">
-                {summaryCsvInput}
-                <div className="min-w-0 flex-1">
-                  <input
-                    type="text"
-                    value={inputText}
-                    onChange={(event) => setInputText(event.target.value)}
-                    placeholder={inputPlaceholder}
-                    disabled={!canUseChatInput || isLoading}
-                    className="ui-chat-input focus:ring-1"
-                  />
-                </div>
+        <div className="ui-chat-composer">
+          <div className="ui-chat-composer-main">
+            <div className="ui-chat-summary-slot">{summaryCsvInput}</div>
+            <p
+              className={`ui-chat-clinical-disclaimer ${isAtBottom ? 'is-visible' : ''}`}
+              aria-hidden={!isAtBottom}
+            >
+              {pageUi.clinicalDisclaimer}
+            </p>
+            <form onSubmit={handleSubmit} className="ui-chat-composer-form flex w-full items-center gap-2 backdrop-blur-[32px] backdrop-saturate-[1.6]">
+              <div className="min-w-0 flex-1">
+                <input
+                  type="text"
+                  value={inputText}
+                  onChange={(event) => setInputText(event.target.value)}
+                  placeholder={inputPlaceholder}
+                  disabled={!canUseChatInput || isLoading}
+                  className="ui-chat-input focus:ring-1"
+                />
+              </div>
+              {isLoading ? (
+                <button
+                  type="button"
+                  className="ui-send-button"
+                  onClick={stopRequest}
+                  aria-label={chatUi.stopGenerating}
+                  title={chatUi.stopGenerating}
+                >
+                  <StopIcon className="mx-auto h-5 w-5" />
+                </button>
+              ) : (
                 <button
                   type="submit"
                   className="ui-send-button"
-                  disabled={inputText.trim() === '' || isLoading || !canUseChatInput}
+                  disabled={inputText.trim() === '' || !canUseChatInput}
+                  aria-label={pageUi.sendMessage}
+                  title={pageUi.sendMessage}
                 >
                   <PaperAirplaneIcon className="mx-auto h-5 w-5" />
                 </button>
-              </form>
-            </div>
-          </main>
+              )}
+            </form>
+          </div>
         </div>
-      </div>
-      <Footer />
+        </section>
+      </main>
     </div>
   );
 }

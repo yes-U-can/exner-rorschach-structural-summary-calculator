@@ -5,11 +5,25 @@ export const EPHEMERAL_CHAT_CLEAR_EVENT = 'rorschach:ephemeral-ai-chat-clear';
 
 const STORAGE_PREFIX = 'rorschach_ephemeral_ai_chat_v1:';
 const MAX_STORED_MESSAGES = 24;
+const LEGACY_STREAM_STATUS_SUFFIXES = [
+  '[Stream interrupted]',
+  '[응답 스트림이 중단되었습니다]',
+  '[応答ストリームが中断されました]',
+  '[La transmisión se interrumpió]',
+  '[O fluxo de resposta foi interrompido]',
+];
+
+export function stripLegacyStreamStatus(content: string) {
+  const trimmed = content.trimEnd();
+  const suffix = LEGACY_STREAM_STATUS_SUFFIXES.find((candidate) => trimmed.endsWith(candidate));
+  return suffix ? trimmed.slice(0, -suffix.length).trimEnd() : content;
+}
 
 export type StoredEphemeralChatMessage = {
   id: number;
   role: 'user' | 'ai';
   content: string;
+  statusNotice?: string;
   metadata?: ChatMessageMetadata;
   uiOnly?: boolean;
 };
@@ -84,8 +98,9 @@ export function toEphemeralChatContext(messages: StoredEphemeralChatMessage[]) {
     .filter((message) => message.content.trim())
     .map((message) => ({
       role: message.role,
-      content: message.content,
-    }));
+      content: stripLegacyStreamStatus(message.content),
+    }))
+    .filter((message) => message.content.trim());
 
   const result = normalizeEphemeralChatContext(contextMessages);
   return result.ok ? result.messages : [];

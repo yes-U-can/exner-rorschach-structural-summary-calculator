@@ -1,7 +1,4 @@
 import type { Metadata } from 'next';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
-import CopyPageButton from '@/components/common/CopyPageButton';
 import { buildLanguageAlternates } from '@/lib/seo';
 import type { Language } from '@/types';
 
@@ -98,7 +95,7 @@ const CONTENT: Record<Language, AboutContent> = {
     introParagraphs: [
       'This web app supports Exner (CS) Rorschach Structural Summary calculation and reference-document search. Calculation and reference search are available without creating an account.',
       'AI features use a BYOK session rather than a user account. When a user enters an OpenAI API key, the key is encrypted into a 24-hour HttpOnly cookie and is not stored in the server database.',
-      'The server database is used only to support public reference-document retrieval (RAG). It is not used as a user account, API-key, or chat-history database.',
+      'The public-reference RAG database is used only for reference retrieval and remains separate from the optional, content-free AI response feedback database. Neither database stores user accounts, API keys, chat history, or calculator data.',
       'The AI helper is a support tool for review and learning. It does not replace independent professional clinical judgment, formal diagnosis, or the user’s final responsibility.',
     ],
     frameworkTitle: 'Human-in-the-Loop: Human-Centered AI Principles',
@@ -122,7 +119,7 @@ const CONTENT: Record<Language, AboutContent> = {
       {
         title: '3. Data minimization',
         paragraphs: [
-          'The app is designed not to store accounts, API keys, chat history, or calculator data in the server database. The remaining database scope is public reference RAG data.',
+          'The app does not store accounts, API keys, chat history, or calculator data in a server database. Public RAG data and optional content-free response ratings use separate database boundaries.',
         ],
       },
       {
@@ -144,7 +141,7 @@ const CONTENT: Record<Language, AboutContent> = {
     introParagraphs: [
       'このWebアプリは、Exner (CS) に基づくロールシャッハ構造要約の計算と参照文書検索を支援します。計算と参照文書検索はアカウントなしで利用できます。',
       'AI機能はログインアカウントではなくBYOKセッションで動作します。OpenAIのAPIキーを入力すると、キーは24時間のHttpOnly Cookieに暗号化され、サーバーDBには保存されません。',
-      'サーバーDBは公開可能な参照文書検索(RAG)を支える範囲でのみ使用します。ユーザーアカウント、APIキー、チャット履歴の保存には使いません。',
+      '公開参照文書用のRAGデータベースは参照検索のみに使用し、任意かつ本文を含まないAI応答評価用データベースとは分離します。どちらにもユーザーアカウント、APIキー、チャット履歴、計算データは保存しません。',
       'AIヘルパーは最終判断者ではなく、確認と学習を助ける補助ツールです。最終的な解釈と責任は常に利用者にあります。',
     ],
     frameworkTitle: 'Human-in-the-Loop: 人間中心AIの原則',
@@ -168,7 +165,7 @@ const CONTENT: Record<Language, AboutContent> = {
       {
         title: '3. データ最小化',
         paragraphs: [
-          'このアプリはアカウント、APIキー、チャット履歴、計算データをサーバーDBに保存しない設計です。DBに残る範囲は公開参照文書のRAGデータです。',
+          'このアプリはアカウント、APIキー、チャット履歴、計算データをサーバーDBに保存しない設計です。公開RAGデータと、任意かつ本文を含まない応答評価は、分離されたデータベース境界で扱います。',
         ],
       },
       {
@@ -190,7 +187,7 @@ const CONTENT: Record<Language, AboutContent> = {
     introParagraphs: [
       'Esta aplicación apoya el cálculo del Structural Summary de Rorschach según Exner (CS) y la búsqueda de documentos de referencia. El cálculo y la búsqueda pueden usarse sin crear cuenta.',
       'Las funciones de IA usan una sesión BYOK, no una cuenta de usuario. Cuando se introduce una clave API de OpenAI, la clave se cifra en una cookie HttpOnly de 24 horas y no se guarda en la base de datos del servidor.',
-      'La base de datos del servidor se usa solo para apoyar la recuperación de documentos públicos de referencia (RAG). No se usa como base de datos de cuentas, claves API ni historial de chat.',
+      'La base de datos RAG de referencias públicas se usa solo para la recuperación y se mantiene separada de la base de datos opcional de valoraciones de IA, que no contiene el texto. Ninguna guarda cuentas, claves API, historial de chat ni datos de cálculo.',
       'El asistente de IA es una herramienta de apoyo para revisión y aprendizaje. No sustituye el juicio clínico profesional, el diagnóstico formal ni la responsabilidad final de la persona usuaria.',
     ],
     frameworkTitle: 'Human-in-the-Loop: principios de IA centrada en la persona',
@@ -214,7 +211,7 @@ const CONTENT: Record<Language, AboutContent> = {
       {
         title: '3. Minimización de datos',
         paragraphs: [
-          'La app está diseñada para no guardar cuentas, claves API, historial de chat ni datos de cálculo en la base de datos del servidor. La base de datos queda limitada a datos RAG públicos de referencia.',
+          'La app no guarda cuentas, claves API, historial de chat ni datos de cálculo en una base de datos del servidor. Los datos RAG públicos y las valoraciones opcionales sin contenido usan bases de datos separadas.',
         ],
       },
       {
@@ -235,8 +232,8 @@ const CONTENT: Record<Language, AboutContent> = {
     title: 'Sobre o serviço',
     introParagraphs: [
       'Este aplicativo apoia o cálculo do Structural Summary de Rorschach segundo Exner (CS) e a busca de documentos de referência. O cálculo e a busca podem ser usados sem criar conta.',
-      'Os recursos de IA usam uma sessão BYOK, não uma conta de usuário. Ao inserir uma chave API da OpenAI ou do Google, a chave é criptografada em um cookie HttpOnly de 24 horas e não é salva no banco de dados do servidor.',
-      'O banco de dados do servidor é usado apenas para apoiar a recuperação de documentos públicos de referência (RAG). Ele não é usado como banco de contas, chaves API ou histórico de chat.',
+      'Os recursos de IA usam uma sessão BYOK, não uma conta de usuário. Ao inserir uma chave API da OpenAI, a chave é criptografada em um cookie HttpOnly de 24 horas e não é salva no banco de dados do servidor.',
+      'O banco de dados RAG de referências públicas é usado somente para recuperação e permanece separado do banco opcional de avaliações de IA sem conteúdo. Nenhum deles salva contas, chaves API, histórico de chat ou dados de cálculo.',
       'O assistente de IA é uma ferramenta de apoio para revisão e aprendizagem. Ele não substitui julgamento clínico profissional, diagnóstico formal nem a responsabilidade final da pessoa usuária.',
     ],
     frameworkTitle: 'Human-in-the-Loop: princípios de IA centrada na pessoa',
@@ -260,7 +257,7 @@ const CONTENT: Record<Language, AboutContent> = {
       {
         title: '3. Minimização de dados',
         paragraphs: [
-          'O app foi desenhado para não salvar contas, chaves API, histórico de chat ou dados de cálculo no banco do servidor. O banco fica limitado a dados RAG públicos de referência.',
+          'O app não salva contas, chaves API, histórico de chat ou dados de cálculo no banco do servidor. Dados RAG públicos e avaliações opcionais sem conteúdo usam bancos de dados separados.',
         ],
       },
       {
@@ -285,19 +282,13 @@ export default async function AboutPage({ searchParams }: AboutPageProps) {
   const content = CONTENT[activeLang];
 
   return (
-    <div className="ui-page">
-      <Header />
-      <main className="mx-auto max-w-7xl px-4 pb-10 sm:px-6 lg:px-8">
-        <div
+    <div className="min-h-screen bg-[var(--brand-page)] text-[var(--text-body)]">
+      <main className="mx-auto w-full max-w-4xl px-5 pb-20 pt-10 sm:px-8 sm:pt-14 lg:px-10">
+        <article
           id="about-page-content"
-          className="relative mx-auto max-w-4xl rounded-2xl border border-[var(--border-subtle)] bg-[var(--surface-base)] p-6 text-[var(--text-body)] shadow-sm sm:p-10"
+          className="relative"
         >
-          <CopyPageButton
-            language={activeLang}
-            targetId="about-page-content"
-            className="absolute right-4 top-4 sm:right-6 sm:top-6"
-          />
-          <h1 className="pr-14 text-2xl font-bold text-[var(--text-strong)] sm:pr-16">{content.title}</h1>
+          <h1 className="text-2xl font-bold text-[var(--text-strong)]">{content.title}</h1>
 
           <div className="mt-6 space-y-4">
             {content.introParagraphs.map((paragraph, index) => (
@@ -307,7 +298,7 @@ export default async function AboutPage({ searchParams }: AboutPageProps) {
             ))}
           </div>
 
-          <section className="mt-10 rounded-2xl border border-[var(--border-subtle)] bg-[var(--surface-muted)] px-5 py-6 sm:px-7 sm:py-8">
+          <section className="mt-10 border-t border-[var(--border-subtle)] pt-8">
             <h2 className="text-xl font-semibold text-[var(--text-strong)]">{content.frameworkTitle}</h2>
             <p className="mt-3 text-[15px] leading-7 text-[var(--text-body)]">{content.frameworkLead}</p>
             <p className="mt-3 text-[15px] leading-7 text-[var(--text-body)]">
@@ -338,9 +329,8 @@ export default async function AboutPage({ searchParams }: AboutPageProps) {
               ))}
             </div>
           </section>
-        </div>
+        </article>
       </main>
-      <Footer />
     </div>
   );
 }

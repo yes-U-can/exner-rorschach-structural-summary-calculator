@@ -7,8 +7,9 @@ Use this checklist before deploying the BYOK-only RAG build to production.
 1. `BYOK_COOKIE_SECRET` exists in the target environment and is at least 32 random characters.
 2. `RAG_DATABASE_URL` points to a read-only Neon/Postgres role and uses `sslmode=verify-full`.
 3. `RAG_WRITE_DATABASE_URL` is absent from Vercel production runtime envs.
-4. Google OAuth, NextAuth, server-stored API-key encryption, credits, and store envs are absent.
-5. No secrets are committed in the diff (`npm run security:check` and `git diff --cached` sanity check).
+4. If `NEXT_PUBLIC_AI_FEEDBACK_ENABLED=1`, `AI_FEEDBACK_DATABASE_URL` points to a dedicated production feedback database, does not reuse either RAG URL, and is separate from the development feedback database.
+5. Google OAuth, NextAuth, server-stored API-key encryption, credits, and store envs are absent.
+6. No secrets are committed in the diff (`npm run security:check` and `git diff --cached` sanity check).
 
 ## 2) Data And Migrations
 
@@ -18,6 +19,7 @@ Use this checklist before deploying the BYOK-only RAG build to production.
 4. Neon keeps only OpenAI public reference-corpus embedding rows after the provider-cleanup migration.
 5. The vector release snapshot is regenerated after migration and `providerAudit.clean` is `true` with unexpected embedding count `0`.
 6. RAG write credentials are used only from local maintenance scripts and remain absent from Vercel runtime environments.
+7. The separate feedback migration is applied only to the dedicated feedback database; the RAG migration history remains RAG-only.
 
 ## 3) Security And Privacy
 
@@ -26,6 +28,8 @@ Use this checklist before deploying the BYOK-only RAG build to production.
 3. API keys are not written to DB, localStorage, or sessionStorage.
 4. Chat messages are not written to DB and are kept only in browser session storage.
 5. Logs do not contain raw API keys, full chat bodies, or sensitive assessment payloads.
+6. Feedback payloads and rows contain no prompt, answer, memo, Structural Summary value, API key, user id, IP address, or user agent.
+7. Feedback controls remain hidden unless the dedicated database, migration, public feature flag, and privacy disclosure are all ready.
 
 ## 4) AI And RAG
 

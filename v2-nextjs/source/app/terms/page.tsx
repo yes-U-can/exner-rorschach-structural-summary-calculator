@@ -1,7 +1,4 @@
 import type { Metadata } from 'next';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
-import CopyPageButton from '@/components/common/CopyPageButton';
 import { buildLanguageAlternates } from '@/lib/seo';
 import type { Language } from '@/types';
 
@@ -249,20 +246,16 @@ export default async function TermsPage({ searchParams }: TermsPageProps) {
   const content = CONTENT[activeLang];
 
   return (
-    <div className="ui-page">
-      <Header />
-      <main className="mx-auto max-w-7xl px-4 pb-10 sm:px-6 lg:px-8">
-        <div
+    <div className="min-h-screen bg-[var(--brand-page)] text-[var(--text-body)]">
+      <main className="mx-auto w-full max-w-4xl px-5 pb-20 pt-10 sm:px-8 sm:pt-14 lg:px-10">
+        <article
           id="terms-page-content"
-          className="relative mx-auto max-w-4xl rounded-2xl border border-[var(--border-subtle)] bg-[var(--surface-base)] p-6 text-[var(--text-body)] shadow-sm sm:p-10"
+          className="relative"
         >
-          <CopyPageButton
-            language={activeLang}
-            targetId="terms-page-content"
-            className="absolute right-4 top-4 sm:right-6 sm:top-6"
-          />
-          <h1 className="pr-14 text-2xl font-bold text-[var(--text-strong)] sm:pr-16">{content.title}</h1>
-          <p className="mt-3 text-sm text-[var(--text-soft)]">{content.effectiveDate}</p>
+          <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1.5">
+            <h1 className="text-2xl font-bold text-[var(--text-strong)]">{content.title}</h1>
+            <p className="shrink-0 text-sm text-[var(--text-soft)]">{content.effectiveDate}</p>
+          </div>
           <p className="mt-4 text-[15px] leading-7 text-[var(--text-body)]">{content.intro}</p>
 
           <div className="mt-8 space-y-8">
@@ -277,9 +270,8 @@ export default async function TermsPage({ searchParams }: TermsPageProps) {
               </section>
             ))}
           </div>
-        </div>
+        </article>
       </main>
-      <Footer />
     </div>
   );
 }

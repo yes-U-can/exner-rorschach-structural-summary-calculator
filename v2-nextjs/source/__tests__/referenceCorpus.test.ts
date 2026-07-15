@@ -139,5 +139,9 @@ describe('reference corpus artifacts', () => {
     expect(results[0]?.canonicalRoute).toBe('scoring-input/dq');
     expect(results.some((doc) => doc.canonicalRoute === 'scoring-input/dq/+')).toBe(true);
   });
+
+  it('returns no documents when the query has no textual match', () => {
+    expect(searchReferenceRuntimeDocs('ko', 'zzzz-no-match')).toEqual([]);
+  });
 });
 

@@ -6,10 +6,6 @@ import { useRorschachForm } from '@/hooks/useRorschachForm';
 import { useAutoSave } from '@/hooks/useAutoSave';
 import { useToast } from '@/components/ui/Toast';
 
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
-import LanguageSelector from '@/components/layout/LanguageSelector';
-import ThemeToggle from '@/components/layout/ThemeToggle';
 
 import InputTable from '@/components/input/InputTable';
 import MobileCard from '@/components/input/MobileCard';
@@ -80,6 +76,17 @@ const homeUiByLanguage = {
     responseNotesEmpty: 'No response memos were recorded.',
     pdfErrorTitle: 'PDF download failed',
     pdfErrorMessage: 'The PDF could not be generated. Please try again.',
+    codingUnavailableTitle: 'Coding helper unavailable',
+    codingUnavailableMessage: 'Select a row that contains both a card and a RESPONSE memo.',
+    rowInsertUnavailableTitle: 'Cannot add a row',
+    rowInsertUnavailableMessage: 'Rows {rows} are selected. A new row can only be inserted after one row.',
+    rowInsertConfirmMessage: 'A new row will be added immediately after row {row}.',
+    rowDeleteConfirmMessage: 'Delete the selected rows {rows}?',
+    rowDeleteConfirmTitle: 'Delete selected rows?',
+    rowInsertConfirmTitle: 'Add after selected row',
+    skipTablePrompt: "Don't show this confirmation again",
+    cancel: 'Cancel',
+    confirm: 'Confirm',
   },
   ko: {
     downloadButton: '데이터 다운로드',
@@ -102,6 +109,17 @@ const homeUiByLanguage = {
     responseNotesEmpty: '기록된 response 메모가 없습니다.',
     pdfErrorTitle: 'PDF 저장 실패',
     pdfErrorMessage: 'PDF 파일을 만드는 중 오류가 발생했습니다. 다시 시도해 주세요.',
+    codingUnavailableTitle: '코딩 도우미를 열 수 없습니다',
+    codingUnavailableMessage: '현재 시트에서 카드와 RESPONSE 메모가 함께 입력된 행을 먼저 선택해 주세요.',
+    rowInsertUnavailableTitle: '행 추가 불가',
+    rowInsertUnavailableMessage: '현재 {rows}번 행이 함께 선택되어 있습니다. 새 행은 한 행 바로 다음에만 추가할 수 있습니다.',
+    rowInsertConfirmMessage: '{row}번 행 바로 다음에 새 행을 추가합니다.',
+    rowDeleteConfirmMessage: '현재 선택된 {rows}번 행을 삭제하시겠습니까?',
+    rowDeleteConfirmTitle: '선택된 행 삭제 확인',
+    rowInsertConfirmTitle: '선택된 행 다음에 추가',
+    skipTablePrompt: '이 안내 다시 보지 않기',
+    cancel: '취소',
+    confirm: '확인',
   },
   ja: {
     downloadButton: 'データをダウンロード',
@@ -124,6 +142,17 @@ const homeUiByLanguage = {
     responseNotesEmpty: '記録された response メモはありません。',
     pdfErrorTitle: 'PDF 保存失敗',
     pdfErrorMessage: 'PDF を生成できませんでした。もう一度お試しください。',
+    codingUnavailableTitle: 'コーディングヘルパーを開けません',
+    codingUnavailableMessage: 'CardとRESPONSEメモの両方が入力されている行を選択してください。',
+    rowInsertUnavailableTitle: '行を追加できません',
+    rowInsertUnavailableMessage: '{rows}行が選択されています。新しい行は1行の直後にのみ追加できます。',
+    rowInsertConfirmMessage: '{row}行目の直後に新しい行を追加します。',
+    rowDeleteConfirmMessage: '選択した{rows}行を削除しますか？',
+    rowDeleteConfirmTitle: '選択した行を削除',
+    rowInsertConfirmTitle: '選択した行の後に追加',
+    skipTablePrompt: '今後この確認を表示しない',
+    cancel: 'キャンセル',
+    confirm: '確認',
   },
   es: {
     downloadButton: 'Descargar datos',
@@ -146,6 +175,17 @@ const homeUiByLanguage = {
     responseNotesEmpty: 'No se registraron notas de response.',
     pdfErrorTitle: 'No se pudo guardar el PDF',
     pdfErrorMessage: 'No se pudo generar el PDF. Inténtalo de nuevo.',
+    codingUnavailableTitle: 'No se puede abrir el asistente de codificación',
+    codingUnavailableMessage: 'Selecciona una fila que tenga Card y una nota RESPONSE.',
+    rowInsertUnavailableTitle: 'No se puede añadir una fila',
+    rowInsertUnavailableMessage: 'Están seleccionadas las filas {rows}. Solo se puede añadir una fila después de una única fila.',
+    rowInsertConfirmMessage: 'Se añadirá una fila justo después de la fila {row}.',
+    rowDeleteConfirmMessage: '¿Eliminar las filas seleccionadas {rows}?',
+    rowDeleteConfirmTitle: 'Eliminar filas seleccionadas',
+    rowInsertConfirmTitle: 'Añadir después de la fila seleccionada',
+    skipTablePrompt: 'No volver a mostrar esta confirmación',
+    cancel: 'Cancelar',
+    confirm: 'Confirmar',
   },
   pt: {
     downloadButton: 'Baixar dados',
@@ -168,6 +208,17 @@ const homeUiByLanguage = {
     responseNotesEmpty: 'Nenhuma nota de response foi registrada.',
     pdfErrorTitle: 'Falha ao salvar PDF',
     pdfErrorMessage: 'Não foi possível gerar o PDF. Tente novamente.',
+    codingUnavailableTitle: 'Não foi possível abrir o assistente de codificação',
+    codingUnavailableMessage: 'Selecione uma linha que contenha Card e uma nota RESPONSE.',
+    rowInsertUnavailableTitle: 'Não foi possível adicionar uma linha',
+    rowInsertUnavailableMessage: 'As linhas {rows} estão selecionadas. Uma nova linha só pode ser adicionada após uma única linha.',
+    rowInsertConfirmMessage: 'Uma nova linha será adicionada logo após a linha {row}.',
+    rowDeleteConfirmMessage: 'Excluir as linhas selecionadas {rows}?',
+    rowDeleteConfirmTitle: 'Excluir linhas selecionadas',
+    rowInsertConfirmTitle: 'Adicionar após a linha selecionada',
+    skipTablePrompt: 'Não mostrar esta confirmação novamente',
+    cancel: 'Cancelar',
+    confirm: 'Confirmar',
   },
 } as const;
 
@@ -397,17 +448,10 @@ export default function HomePage() {
       return;
     }
 
-    if (selectedRowIndices.length === 1 && selectedRowIndices[0] === rowIndex) {
-      setSelectedRowIndices([]);
-      setSelectionAnchorIndex(null);
-      setSelectionFocusIndex(null);
-      return;
-    }
-
     setSelectedRowIndices([rowIndex]);
     setSelectionAnchorIndex(rowIndex);
     setSelectionFocusIndex(rowIndex);
-  }, [selectedRowIndices, selectionAnchorIndex]);
+  }, [selectionAnchorIndex]);
 
   const selectAllDesktopRows = useCallback(() => {
     const allRowIndices = Array.from({ length: responses.length }, (_, index) => index);
@@ -495,14 +539,14 @@ export default function HomePage() {
     if (!primed) {
       showToast({
         type: 'warning',
-        title: '코딩 도우미를 열 수 없습니다',
-        message: '현재 시트에서 카드와 RESPONSE 메모가 함께 입력된 행을 먼저 선택해 주세요.',
+        title: pageUi.codingUnavailableTitle,
+        message: pageUi.codingUnavailableMessage,
       });
       return;
     }
 
     setShowChatWidget(true);
-  }, [effectiveSelectedRowIndices, primeCodingAssistState, showToast]);
+  }, [effectiveSelectedRowIndices, pageUi, primeCodingAssistState, showToast]);
 
   const handleInsertRequest = useCallback((rowIndices: number[]) => {
     if (rowIndices.length === 0) {
@@ -513,8 +557,11 @@ export default function HomePage() {
     if (rowIndices.length > 1) {
       showToast({
         type: 'warning',
-        title: '행 추가 불가',
-        message: `현재 ${rowIndices.map((rowIndex) => rowIndex + 1).join(', ')}번 행이 함께 선택되어 있습니다. 새 행은 한 행 바로 다음에만 추가할 수 있습니다.`,
+        title: pageUi.rowInsertUnavailableTitle,
+        message: pageUi.rowInsertUnavailableMessage.replace(
+          '{rows}',
+          rowIndices.map((rowIndex) => rowIndex + 1).join(', '),
+        ),
       });
       return;
     }
@@ -529,9 +576,9 @@ export default function HomePage() {
     setPendingTableAction({
       type: 'insert-after-selection',
       rowIndices: [targetRowIndex],
-      message: `${targetRowIndex + 1}번 행 바로 다음에 새 행을 추가합니다.`,
+      message: pageUi.rowInsertConfirmMessage.replace('{row}', String(targetRowIndex + 1)),
     });
-  }, [applyInsertAfterRow, responses.length, showToast, sessionPreferences.tablePrompts.skipInsertAfterSelectedConfirm]);
+  }, [applyInsertAfterRow, pageUi, responses.length, showToast, sessionPreferences.tablePrompts.skipInsertAfterSelectedConfirm]);
 
   const handleDeleteRequest = useCallback((rowIndices: number[]) => {
     if (rowIndices.length === 0) {
@@ -548,9 +595,12 @@ export default function HomePage() {
     setPendingTableAction({
       type: 'delete-selection',
       rowIndices,
-      message: `현재 선택된 ${rowIndices.map((rowIndex) => `${rowIndex + 1}번`).join(', ')} 행을 삭제하시겠습니까?`,
+      message: pageUi.rowDeleteConfirmMessage.replace(
+        '{rows}',
+        rowIndices.map((rowIndex) => rowIndex + 1).join(', '),
+      ),
     });
-  }, [applyDeleteRows, responses.length, sessionPreferences.tablePrompts.skipDeleteSelectedConfirm]);
+  }, [applyDeleteRows, pageUi, responses.length, sessionPreferences.tablePrompts.skipDeleteSelectedConfirm]);
 
   const confirmPendingTableAction = useCallback(async () => {
     if (!pendingTableAction) return;
@@ -849,13 +899,42 @@ export default function HomePage() {
     })();
   };
 
+  const inputActionButtons = (
+    <div className="ui-input-action-buttons flex flex-wrap items-center justify-center gap-3 print:hidden">
+      <Button
+        variant="primary"
+        size="lg"
+        onClick={handleCalculate}
+        disabled={isCalculating || validResponseCount === 0}
+      >
+        {isCalculating ? (
+          <>
+            <ArrowPathIcon className="w-5 h-5 mr-2 animate-spin" />
+            {t('loader.calculating')}
+          </>
+        ) : (
+          <>
+            <CalculatorIcon className="w-5 h-5 mr-2" />
+            {t('buttons.calculate')}
+          </>
+        )}
+      </Button>
+      <Button
+        variant="secondary"
+        size="lg"
+        onClick={() => setShowResetModal(true)}
+      >
+        <ArrowPathIcon className="w-5 h-5 mr-2" />
+        {t('buttons.reset')}
+      </Button>
+    </div>
+  );
+
   return (
     <div className="min-h-screen relative bg-[var(--brand-page)]">
       {/* Main Content */}
       <div className="relative z-10">
-        <Header />
-
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+        <main className={`ui-scoring-page-main ${showResult ? 'max-w-7xl px-4 sm:px-6 lg:px-8' : 'max-w-[112rem] px-3 sm:px-4 lg:pl-2 lg:pr-1 2xl:px-8'} mx-auto py-6`}>
           {!showResult ? (
             // Input Section
             <div className="space-y-6">
@@ -863,14 +942,17 @@ export default function HomePage() {
                 {/* Input Table */}
                 <div className="print:hidden">
                   {isMobile ? (
-                    <MobileCard
-                      responses={responses}
-                      onChange={setResponses}
-                      currentIndex={activeMobileRowIndex}
-                      onCurrentIndexChange={setActiveMobileRowIndex}
-                      onAddRowRequest={handleInsertRequest}
-                      onDeleteRowsRequest={handleDeleteRequest}
-                    />
+                    <div className="space-y-6">
+                      <MobileCard
+                        responses={responses}
+                        onChange={setResponses}
+                        currentIndex={activeMobileRowIndex}
+                        onCurrentIndexChange={setActiveMobileRowIndex}
+                        onAddRowRequest={handleInsertRequest}
+                        onDeleteRowsRequest={handleDeleteRequest}
+                      />
+                      {inputActionButtons}
+                    </div>
                   ) : (
                     <InputTable
                       responses={responses}
@@ -879,38 +961,9 @@ export default function HomePage() {
                       onRowSelection={handleDesktopRowSelection}
                       onAddRowRequest={handleInsertRequest}
                       onDeleteRowsRequest={handleDeleteRequest}
+                      actions={inputActionButtons}
                     />
                   )}
-                </div>
-
-                {/* Action Buttons */}
-                <div className="flex flex-wrap justify-center gap-4 print:hidden">
-                  <Button
-                    variant="primary"
-                    size="lg"
-                    onClick={handleCalculate}
-                    disabled={isCalculating || validResponseCount === 0}
-                  >
-                    {isCalculating ? (
-                      <>
-                        <ArrowPathIcon className="w-5 h-5 mr-2 animate-spin" />
-                        {t('loader.calculating')}
-                      </>
-                    ) : (
-                      <>
-                        <CalculatorIcon className="w-5 h-5 mr-2" />
-                        {t('buttons.calculate')}
-                      </>
-                    )}
-                  </Button>
-                  <Button
-                    variant="secondary"
-                    size="lg"
-                    onClick={() => setShowResetModal(true)}
-                  >
-                    <ArrowPathIcon className="w-5 h-5 mr-2" />
-                    {t('buttons.reset')}
-                  </Button>
                 </div>
               </>
             </div>
@@ -1052,7 +1105,6 @@ export default function HomePage() {
           )}
         </main>
 
-        <Footer />
       </div>
 
       {/* AI Chat Widget and Button */}
@@ -1099,13 +1151,6 @@ export default function HomePage() {
         showCloseButton={false}
       >
         <div className="space-y-4">
-          <div className="mb-5 flex justify-center">
-            <div className="inline-flex items-center gap-2">
-              <LanguageSelector />
-              <ThemeToggle />
-            </div>
-          </div>
-
           <div className="space-y-3">
             <button
               onClick={handleNewStart}
@@ -1204,7 +1249,7 @@ export default function HomePage() {
           setPendingTableAction(null);
           setTableActionPreferenceChecked(false);
         }}
-        title={pendingTableAction?.type === 'delete-selection' ? '선택된 행 삭제 확인' : '선택된 행 다음에 추가'}
+        title={pendingTableAction?.type === 'delete-selection' ? pageUi.rowDeleteConfirmTitle : pageUi.rowInsertConfirmTitle}
         size="sm"
       >
         <div className="space-y-4">
@@ -1216,7 +1261,7 @@ export default function HomePage() {
               onChange={(event) => setTableActionPreferenceChecked(event.target.checked)}
               className="h-4 w-4 rounded border-[var(--border-subtle)] text-[var(--brand-700)] focus:ring-[var(--brand-500)]"
             />
-            <span>이 안내 다시 보지 않기</span>
+            <span>{pageUi.skipTablePrompt}</span>
           </label>
           <div className="flex justify-end gap-3">
             <Button
@@ -1226,10 +1271,10 @@ export default function HomePage() {
                 setTableActionPreferenceChecked(false);
               }}
             >
-              취소
+              {pageUi.cancel}
             </Button>
             <Button variant="primary" onClick={() => void confirmPendingTableAction()}>
-              확인
+              {pageUi.confirm}
             </Button>
           </div>
         </div>

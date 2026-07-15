@@ -298,6 +298,8 @@ function scoreReferenceRuntimeDoc(doc: ReferenceDocRecord, query: string): numbe
     score += scoreTokenMatch(bodyText, token, 2);
   }
 
+  if (score === 0) return 0;
+
   if (doc.kind === 'entry') score += 4;
   if (doc.runtimeReady) score += 2;
 

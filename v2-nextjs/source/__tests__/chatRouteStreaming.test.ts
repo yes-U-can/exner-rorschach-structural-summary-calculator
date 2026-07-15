@@ -35,7 +35,10 @@ const VALID_SUMMARY_CSV = [
   "12,43.5,38,'+5.5,15,.15,6:3.5,9.5,1.71,7:8,15,10,0,0,0,0,0,0,0,0,3,3",
 ].join('\n');
 
-function buildChatRequest(message = 'Explain the low R caution briefly.') {
+function buildChatRequest(
+  message = 'Explain the low R caution briefly.',
+  signal?: AbortSignal,
+) {
   const localFormatOnlyKey = ['s', 'k', '-local-route-test-key-never-sent'].join('');
   const session = createByokSession('openai', localFormatOnlyKey);
 
@@ -53,6 +56,7 @@ function buildChatRequest(message = 'Explain the low R caution briefly.') {
       workflowContext: { structuralSummaryCsv: VALID_SUMMARY_CSV },
       lang: 'en',
     }),
+    signal,
   });
 }
 
@@ -113,7 +117,7 @@ describe('chat route structured provider streaming', () => {
     expect(mocks.createOpenAITextStream).toHaveBeenCalledWith(
       expect.objectContaining({
         model: 'gpt-5.5',
-        maxOutputTokens: 2200,
+        maxOutputTokens: 8000,
         signal: expect.any(AbortSignal),
       }),
     );
@@ -140,6 +144,56 @@ describe('chat route structured provider streaming', () => {
 
     expect(deltas.join('')).toBe('This answer is partial.');
     expect(terminal).toEqual({ type: 'incomplete', reason: 'max_output_tokens' });
+  });
+
+  it('reports provider timeouts as incomplete instead of a generic provider failure', async () => {
+    mocks.createOpenAITextStream.mockResolvedValue(
+      buildProviderResult({
+        chunks: ['Partial answer before the deadline.'],
+        completion: {
+          status: 'aborted',
+          incompleteReason: 'timeout',
+        },
+      }),
+    );
+
+    const response = await POST(buildChatRequest());
+    const deltas: string[] = [];
+    const terminal = await consumeChatEventStream(response.body!, (delta) => deltas.push(delta));
+
+    expect(deltas.join('')).toBe('Partial answer before the deadline.');
+    expect(terminal).toEqual({ type: 'incomplete', reason: 'timeout' });
+  });
+
+  it('propagates downstream response cancellation to the provider signal', async () => {
+    let providerSignal: AbortSignal | null = null;
+    let resolveCompletion: (completion: OpenAITextStreamCompletion) => void = () => {};
+    const completion = new Promise<OpenAITextStreamCompletion>((resolve) => {
+      resolveCompletion = resolve;
+    });
+    const encoder = new TextEncoder();
+    const providerStream = new ReadableStream<Uint8Array>({
+      start(controller) {
+        controller.enqueue(encoder.encode('Partial response.'));
+      },
+      cancel() {
+        resolveCompletion({ status: 'aborted', incompleteReason: 'client_aborted' });
+      },
+    });
+    mocks.createOpenAITextStream.mockImplementation(async (args) => {
+      providerSignal = args.signal ?? null;
+      return { stream: providerStream, completion };
+    });
+
+    const response = await POST(buildChatRequest());
+    const reader = response.body!.getReader();
+    const firstChunk = await reader.read();
+    expect(firstChunk.done).toBe(false);
+
+    await reader.cancel('user_stopped');
+
+    expect(providerSignal).not.toBeNull();
+    expect(providerSignal!.aborted).toBe(true);
   });
 
   it('converts a mid-stream quota failure into a privacy-safe terminal event', async () => {

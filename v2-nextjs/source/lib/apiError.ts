@@ -20,6 +20,18 @@ export function logApiError(
   console.error(`[${label}] requestId=${requestId}`, error);
 }
 
+export function logApiEvent(
+  label: string,
+  requestId: string,
+  context?: Record<string, unknown>,
+) {
+  if (context) {
+    console.info(`[${label}] requestId=${requestId}`, context);
+    return;
+  }
+  console.info(`[${label}] requestId=${requestId}`);
+}
+
 export function buildSafeApiErrorResponse(args: SafeApiErrorResponseArgs) {
   const body: Record<string, unknown> = {
     error: `${args.publicMessage} (Reference ID: ${args.requestId})`,

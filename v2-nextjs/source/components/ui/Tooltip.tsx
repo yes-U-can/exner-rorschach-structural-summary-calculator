@@ -50,6 +50,8 @@ export default function Tooltip({ children, content, className = '' }: TooltipPr
         ref={triggerRef}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
+        onFocus={handleMouseEnter}
+        onBlur={handleMouseLeave}
         className="inline-flex"
       >
         {children}

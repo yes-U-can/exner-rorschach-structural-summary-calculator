@@ -101,7 +101,8 @@ function Remove-PublicMirrorPrivateArtifacts {
     "docs\chat",
     "docs\reference-authoring\incoming",
     "docs\reference-authoring\notes",
-    "prisma\migrations"
+    "prisma\migrations",
+    "prisma\feedback\migrations"
   )
   $privateFilePatterns = @(
     ".env",
@@ -172,7 +173,8 @@ $excludeDirs = @(
   "docs\chat",
   "docs\reference-authoring\incoming",
   "docs\reference-authoring\notes",
-  "prisma\migrations"
+  "prisma\migrations",
+  "prisma\feedback\migrations"
 )
 
 $excludeFiles = @(

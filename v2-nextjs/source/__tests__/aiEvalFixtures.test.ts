@@ -42,6 +42,11 @@ describe('AI harness eval fixtures', () => {
     expect(interpretationTags.has('no-diagnosis')).toBe(true);
     expect(interpretationTags.has('no-treatment-advice')).toBe(true);
     expect(interpretationTags.has('provisional-language')).toBe(true);
+    expect(codingTags.has('exner-only-boundary')).toBe(true);
+    expect(codingTags.has('no-internal-disclosure')).toBe(true);
+    expect(interpretationTags.has('exner-only-boundary')).toBe(true);
+    expect(interpretationTags.has('no-internal-disclosure')).toBe(true);
+    expect(interpretationTags.has('out-of-scope-refusal')).toBe(true);
   });
 
   it('requires every fixture to expect a complete first-pass answer', () => {

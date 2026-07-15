@@ -18,14 +18,14 @@ export default function SpecialScoreSlots({ values, onChange, maxSlots = 8 }: Sp
   };
 
   return (
-    <div className="grid grid-cols-4 gap-0.5" style={{ width: 'fit-content' }}>
+    <div className="grid w-full min-w-[18.75rem] grid-cols-4 place-items-center gap-1">
       {Array.from({ length: maxSlots }).map((_, index) => (
         <SlotSelect
           key={index}
           value={values[index] || ''}
           onChange={(value) => handleChange(index, value)}
           options={OPTIONS.SPECIAL_SCORES}
-          className={`w-16 ${!values[index] ? 'opacity-40' : ''}`}
+          className="w-[4.5rem]"
           gridCols={4}
           placeholder=""
         />

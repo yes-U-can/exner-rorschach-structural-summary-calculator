@@ -17,9 +17,7 @@
     "referenceDocuments": "Reference Documents",
     "aiChatTop": "Interpretation helper",
     "interpretationNotes": "Interpretation Notes",
-    "transparencyCenter": "Reference",
-    "homeIntroLine1": "Exner (CS) Structural Summary calculator for the Rorschach test.",
-    "homeIntroLine2": "This service does not replace professional clinical judgment."
+    "transparencyCenter": "Reference"
   },
   "buttons": {
     "calculate": "Calculate Results",
@@ -80,7 +78,7 @@
     "gphr": "G/PHR",
     "guideResponse": "Used to memo the subject's verbal responses; it is not used in calculations, so it may be left blank.",
     "tooltipInfo": "Only the bottommost row can be manipulated,\nand up to 50 rows are possible.",
-    "rowOrderTip": "The order of response rows does not affect the calculation results.\nFor example, it's fine to record content for Card 6 in the 8th row and content for Card 2 in the 14th row.",
+    "rowOrderTip": "The order of response rows does not affect the calculation results. For example, you can record Card 6 content in row 8 and Card 2 content in row 14 without affecting the result.",
     "scoreTooltip": "Automatically calculated from [Card] and [Z] selection.",
     "gphrTooltip": "Automatically classified from [Contents], [Determinants], [FQ], and [Special Score].",
     "noReorderTooltip": "Click the handle area to lift a row and move it to a new position.",
@@ -227,7 +225,7 @@
     "SCON": "S-CON",
     "HVI": "HVI",
     "OBS": "OBS",
-    "sconNote": "( Note: Applies only to examinees aged 14 or older )",
+    "sconNote": "( Note: Applies only to examinees aged 15 or older )",
     "sconMain": "Check if 8 or more criteria are met",
     "depiMain": "Check if 5 or more criteria are met",
     "cdiMain": "Check if 4 or more criteria are met",
@@ -330,14 +328,15 @@
   },
   "footer": {
     "title": "Computing Program for Rorschach Structural Summary",
-    "copyright": "© 1997–2026 서울임상심리연구소 (Seoul Institute of Clinical Psychology, SICP). All rights reserved."
+    "copyright": "© 1997–2026 서울임상심리연구소 (Seoul Institute of Clinical Psychology, SICP). All rights reserved.",
+    "scoringCanvasCopyright": "© 2026 Seoul Institute of Clinical Psychology (SICP) and MOW. All rights reserved."
   },
   "codeList": {
     "header": "Code list and descriptions for each scoring item."
   },
   "specialIndices": {
     "scon_main": "Check if 8 or more criteria are met",
-    "scon_note": "( Note: Applies only to examinees aged 14 or older )",
+    "scon_note": "( Note: Applies only to examinees aged 15 or older )",
     "depi_main": "Check if 5 or more criteria are met",
     "pti_main": "Score displayed (no cutoff)",
     "cdi_main": "Check if 4 or more criteria are met",
@@ -366,7 +365,6 @@
       "exclusiveDescription": "Connect an OpenAI API key for this session. A new key replaces the previous session key.",
       "exclusiveNotice": "Connect an OpenAI API key.",
       "loadedModel": "Auto-selected model",
-      "modelPolicy": "The app automatically uses the newest available model\nthat has been out for at least one month.",
       "activeProvider": "Active",
       "currentProviderHelp": "The interpretation assistant and coding assistant currently use {provider}.",
       "optionalProviderHelp": "Enter a {provider} key only if you want to use it.",
@@ -423,6 +421,25 @@
     "empty": "No matching reference documents found. Try a broader keyword.",
     "idle": "Enter a keyword to search the reference documents.",
     "results": "{count} result(s) for \"{query}\""
+  },
+  "versions": {
+    "unpublishedDate": "Release date pending",
+    "nextHeading": "[NextJS] Version 2 releases",
+    "gasHeading": "[Google Apps Script] Version 1 releases",
+    "major": "Major release",
+    "minor": "Minor release",
+    "bugfix": "Bug fix",
+    "hotfix": "Hotfix",
+    "release": "Release",
+    "sourceCode": "Source code",
+    "patchNotes": "Patch notes",
+    "deploymentLink": "Open release",
+    "tutorialVideo": "Tutorial video",
+    "latestFirst": "Newest first",
+    "oldestFirst": "Oldest first",
+    "sortAria": "Change version sort order",
+    "gasInfoAria": "Google Apps Script version usage guide",
+    "gasHelp": "Select 'Open release' to use that calculator version.\nWhen needed, copy the source code into a GAS project in your own account."
   },
   "common": {
     "close": "Close"

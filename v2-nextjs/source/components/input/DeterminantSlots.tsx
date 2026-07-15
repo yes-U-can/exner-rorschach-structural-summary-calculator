@@ -18,14 +18,14 @@ export default function DeterminantSlots({ values, onChange, maxSlots = 6 }: Det
   };
 
   return (
-    <div className="grid grid-cols-3 gap-0.5" style={{ width: 'fit-content' }}>
+    <div className="grid w-full min-w-[11rem] grid-cols-3 place-items-center gap-1">
       {Array.from({ length: maxSlots }).map((_, index) => (
         <SlotSelect
           key={index}
           value={values[index] || ''}
           onChange={(value) => handleChange(index, value)}
           options={OPTIONS.DETERMINANTS}
-          className={`w-14 ${!values[index] ? 'opacity-40' : ''}`}
+          className="w-14"
           gridCols={6}
           placeholder=""
         />

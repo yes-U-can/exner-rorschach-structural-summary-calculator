@@ -9,6 +9,7 @@ Next.js-based web application for Exner structural summary scoring, documentatio
 - Tailwind CSS 4
 - BYOK AI session cookie (no Google login or server-side account DB)
 - Prisma + Neon PostgreSQL for read-only RAG reference retrieval
+- Optional, separately configured PostgreSQL store for content-free AI response ratings
 
 ## Main Features
 
@@ -50,7 +51,7 @@ components/     UI and feature components
 hooks/          Client hooks
 i18n/           Translation config and locale JSON
 lib/            Core logic and utilities
-prisma/         Prisma schema and config
+prisma/         RAG schema plus isolated feedback schema and migrations
 types/          Shared TypeScript types
 ```
 
@@ -59,5 +60,5 @@ types/          Shared TypeScript types
 - Do not commit secrets (`.env`, API keys, private notes).
 - Keep private operational notes outside tracked files.
 - Do not reintroduce Google OAuth, NextAuth, account pages, server-stored API keys, or chat-history persistence unless the product model intentionally changes.
-- Runtime database credentials should be read-only and scoped to the public RAG corpus tables.
+- RAG runtime credentials should be read-only and scoped to the public corpus tables. Optional feedback writes must use a separate database and credential.
 - Keep PWA support manifest-only unless service worker caching gets a separate privacy and security review.

@@ -19,11 +19,13 @@ The detailed public release documentation standard is kept at [`v2-nextjs/source
 
 ## Current Archive
 
-- Latest v2 release note: [`v2-nextjs/releases/v2.1.10`](./v2-nextjs/releases/v2.1.10/)
+- Latest v2 release note: [`v2-nextjs/releases/v2.2.0`](./v2-nextjs/releases/v2.2.0/)
 - v2 public source snapshot: [`v2-nextjs/source`](./v2-nextjs/source/)
 - AI quality gate docs: [`v2-nextjs/source/docs/ai-evals/README.md`](./v2-nextjs/source/docs/ai-evals/README.md)
 - AI human rubric: [`v2-nextjs/source/docs/ai-evals/HUMAN_RUBRIC.md`](./v2-nextjs/source/docs/ai-evals/HUMAN_RUBRIC.md)
-- v2.1.10 independent audit closure report: [`v2-nextjs/source/docs/ai-evals/2026-07-13-v2.1.10-final-independent-audit-closure-report.md`](./v2-nextjs/source/docs/ai-evals/2026-07-13-v2.1.10-final-independent-audit-closure-report.md)
+- v2.2.0 calculation audit: [`v2-nextjs/source/docs/ops/2026-07-15-v2.2.0-calculation-audit.md`](./v2-nextjs/source/docs/ops/2026-07-15-v2.2.0-calculation-audit.md)
+- v2.2.0 workspace validation: [`v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md`](./v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md)
+- v2.2.0 Exner domain-boundary report: [`v2-nextjs/source/docs/ai-evals/2026-07-15-v2.2.0-exner-domain-boundary-report.md`](./v2-nextjs/source/docs/ai-evals/2026-07-15-v2.2.0-exner-domain-boundary-report.md)
 - v1 GAS archive: [`v1-gas/releases`](./v1-gas/releases/)
 
 ## v2.1.x AI Quality Sequence
@@ -37,6 +39,12 @@ The AI-related v2.1.x patches were not repeated claims that the same work was fi
 - **v2.1.10:** confirmed follow-up retrieval and migration-replay defect fixes
 
 Earlier release notes that described the whole version line as closed now include dated retrospective scope notes. Their historical implementation and verification results remain unchanged.
+
+## v2.2.0
+
+v2.2.0 is the first desktop-focused v2.2.x release. It replaces the old header/footer layout with an overlay application sidebar, turns the interpretation assistant into a cardless AI workspace with an internal scroller and cancellable streaming, adds privacy-minimized structured feedback, and refines the scoring table, reference reader, legal pages, version archive, localization, and dark theme.
+
+The release also audits the calculator against the author's 2019 Excel formulas, the v1 GAS lineage, the current TypeScript implementation, and published response-sequence cases. Seven boundary defects were corrected and locked with regression tests. GPT-5.5 remains fixed under the BYOK and HITL policy, with new Exner(CS) domain boundaries and Korean, Japanese, and English production-parity evaluations. Dedicated mobile refinement continues in later v2.2.x releases.
 
 ## v2.1.10
 

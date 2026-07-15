@@ -10,6 +10,19 @@ The eval artifacts are not meant to prove clinical correctness. They are enginee
 - diagnosis, treatment planning, legal, and forensic claims stay bounded
 - reference retrieval remains connected to the knowledge layer
 
+## v2.2.0 Chat UX And Streaming
+
+- [`2026-07-15-v2.2.0-cultural-validity-report.md`](./2026-07-15-v2.2.0-cultural-validity-report.md)
+- [`2026-07-15-v2.2.0-cultural-validity-final-production-parity-2x.jsonl`](./2026-07-15-v2.2.0-cultural-validity-final-production-parity-2x.jsonl)
+- [`2026-07-15-v2.2.0-exner-domain-boundary-report.md`](./2026-07-15-v2.2.0-exner-domain-boundary-report.md)
+- [`2026-07-15-v2.2.0-domain-boundary-single-final-pass-2x.jsonl`](./2026-07-15-v2.2.0-domain-boundary-single-final-pass-2x.jsonl)
+- [`2026-07-15-v2.2.0-domain-boundary-multiturn-final-pass-2x.jsonl`](./2026-07-15-v2.2.0-domain-boundary-multiturn-final-pass-2x.jsonl)
+- [`2026-07-15-v2.2.0-domain-boundary-valid-route-final.jsonl`](./2026-07-15-v2.2.0-domain-boundary-valid-route-final.jsonl)
+- [`2026-07-13-v2.2.0-chat-ux-streaming-validation.md`](./2026-07-13-v2.2.0-chat-ux-streaming-validation.md)
+- [`2026-07-14-v2.2.0-chat-cancellation-continuity.jsonl`](./2026-07-14-v2.2.0-chat-cancellation-continuity.jsonl)
+- [`v2.2.0-chat-ux-baseline.jsonl`](./v2.2.0-chat-ux-baseline.jsonl)
+- [`v2.2.0-chat-ux-after.jsonl`](./v2.2.0-chat-ux-after.jsonl)
+
 ## Local Commands
 
 Run the static harness and retrieval contract suite:

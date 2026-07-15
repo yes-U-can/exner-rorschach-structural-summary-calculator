@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-13T06:48:26.123Z",
+  "generatedAt": "2026-07-15T15:19:51.698Z",
   "providers": [
     "openai"
   ],
   "corpus": {
-    "generatedAt": "2026-07-12T07:27:46.558Z",
-    "fingerprint": "b536f3170d829d8255b2c69580966327b065c20db39de75caa48a2d2d628a4cb",
+    "generatedAt": "2026-07-15T15:12:38.817Z",
+    "fingerprint": "9985d15c6e4e70520c9a81de6fc57f7aa61a6b781ff87f6c0c6c9a26363ea8c8",
     "chunkCounts": {
       "ko": 1405,
       "en": 1283,
@@ -35,7 +35,7 @@
       "embeddingModel": "text-embedding-3-large",
       "dimensions": 3072,
       "totalEmbeddings": 6632,
-      "latestRefreshedAt": "2026-07-12T07:34:07.126Z",
+      "latestRefreshedAt": "2026-07-15T15:19:39.750Z",
       "locales": {
         "ko": {
           "locale": "ko",
@@ -44,7 +44,7 @@
           "dimensions": 3072,
           "staleEmbeddingCount": 0,
           "ready": true,
-          "latestRefreshedAt": "2026-07-12T07:31:01.787Z"
+          "latestRefreshedAt": "2026-07-15T15:16:49.313Z"
         },
         "en": {
           "locale": "en",
@@ -53,7 +53,7 @@
           "dimensions": 3072,
           "staleEmbeddingCount": 0,
           "ready": true,
-          "latestRefreshedAt": "2026-07-12T07:31:46.171Z"
+          "latestRefreshedAt": "2026-07-15T15:17:24.190Z"
         },
         "ja": {
           "locale": "ja",
@@ -62,7 +62,7 @@
           "dimensions": 3072,
           "staleEmbeddingCount": 0,
           "ready": true,
-          "latestRefreshedAt": "2026-07-12T07:32:55.360Z"
+          "latestRefreshedAt": "2026-07-15T15:18:14.303Z"
         },
         "es": {
           "locale": "es",
@@ -71,7 +71,7 @@
           "dimensions": 3072,
           "staleEmbeddingCount": 0,
           "ready": true,
-          "latestRefreshedAt": "2026-07-12T07:33:33.921Z"
+          "latestRefreshedAt": "2026-07-15T15:19:07.285Z"
         },
         "pt": {
           "locale": "pt",
@@ -80,7 +80,7 @@
           "dimensions": 3072,
           "staleEmbeddingCount": 0,
           "ready": true,
-          "latestRefreshedAt": "2026-07-12T07:34:07.126Z"
+          "latestRefreshedAt": "2026-07-15T15:19:39.750Z"
         }
       }
     }

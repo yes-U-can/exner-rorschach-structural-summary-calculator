@@ -18,14 +18,14 @@ export default function ContentSlots({ values, onChange, maxSlots = 6 }: Content
   };
 
   return (
-    <div className="grid grid-cols-3 gap-0.5" style={{ width: 'fit-content' }}>
+    <div className="grid w-full min-w-[9.5rem] grid-cols-3 place-items-center gap-1">
       {Array.from({ length: maxSlots }).map((_, index) => (
         <SlotSelect
           key={index}
           value={values[index] || ''}
           onChange={(value) => handleChange(index, value)}
           options={OPTIONS.CONTENTS}
-          className={`w-12 ${!values[index] ? 'opacity-40' : ''}`}
+          className="w-12"
           gridCols={6}
           placeholder=""
         />

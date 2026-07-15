@@ -3,10 +3,9 @@ import { notFound, redirect } from 'next/navigation';
 import type { Metadata } from 'next';
 
 import CopyDocButton from '@/components/docs/CopyDocButton';
-import Footer from '@/components/layout/Footer';
-import Header from '@/components/layout/Header';
 import ReferenceMarkdown from '@/components/ref/ReferenceMarkdown';
 import ReferenceRelatedPanel from '@/components/ref/ReferenceRelatedPanel';
+import ReferenceSearchForm from '@/components/ref/ReferenceSearchForm';
 import { getTranslation } from '@/i18n/client';
 import {
   buildReferenceDocHref,
@@ -19,7 +18,7 @@ import type { Language } from '@/types';
 
 type PageProps = {
   params: Promise<{ slug?: string[] }>;
-  searchParams: Promise<{ lang?: string }>;
+  searchParams: Promise<{ lang?: string; q?: string }>;
 };
 
 type NavRow = {
@@ -127,8 +126,9 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
 
 export default async function DocDetailPage({ params, searchParams }: PageProps) {
   const { slug } = await params;
-  const { lang } = await searchParams;
+  const { lang, q } = await searchParams;
   const activeLang = normalizeLang(lang);
+  const query = (q ?? '').trim();
 
   if (!slug?.length) {
     notFound();
@@ -149,9 +149,16 @@ export default async function DocDetailPage({ params, searchParams }: PageProps)
 
   return (
     <div className="min-h-screen bg-[var(--brand-page)]">
-      <Header />
-      <main className="mx-auto max-w-5xl px-4 py-10">
-        <section className="ui-ref-card mb-6 p-4">
+      <main className="mx-auto w-full max-w-6xl px-5 pb-20 pt-8 sm:px-8 sm:pt-10 lg:px-10">
+        <ReferenceSearchForm
+          language={activeLang}
+          label={getTranslation(activeLang, 'reference.searchLabel')}
+          placeholder={getTranslation(activeLang, 'reference.searchPlaceholder')}
+          defaultQuery={query}
+          className="mx-auto mb-8 max-w-4xl"
+        />
+
+        <section className="mx-auto mb-10 max-w-4xl border-b border-[var(--border-subtle)] pb-6">
           {navRows.map((row, rowIndex) => (
             <div
               key={row.key}
@@ -167,7 +174,7 @@ export default async function DocDetailPage({ params, searchParams }: PageProps)
                   <Link
                     key={`${row.key}:${itemPath}`}
                     href={buildReferenceDocHref(item.canonicalRoute, activeLang)}
-                    className={`rounded-md border px-2.5 py-1 text-xs transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-sm active:translate-y-0 ${
+                    className={`inline-flex min-h-9 items-center rounded-md border px-3 py-2 text-sm leading-5 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-sm active:translate-y-0 ${
                       isActive
                         ? 'border-[var(--brand-700)] bg-[var(--brand-700)] text-[var(--on-brand)]'
                         : isInPath
@@ -183,10 +190,10 @@ export default async function DocDetailPage({ params, searchParams }: PageProps)
           ))}
         </section>
 
-        <article className="ui-ref-card rounded-lg p-5">
+        <article className="mx-auto max-w-4xl">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <h1 className="break-words text-2xl font-bold text-[var(--text-strong)] sm:text-3xl">{doc.title}</h1>
-            <CopyDocButton text={copyText} />
+            <CopyDocButton text={copyText} language={activeLang} />
           </div>
           <ReferenceMarkdown
             markdown={bodyMarkdown}
@@ -196,7 +203,6 @@ export default async function DocDetailPage({ params, searchParams }: PageProps)
           <ReferenceRelatedPanel language={activeLang} currentDoc={doc} className="mt-10" />
         </article>
       </main>
-      <Footer />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /**
- * Computing Program for Rorschach Structural Summary v2.1.7
+ * Computing Program for Rorschach Structural Summary v2.2.0
  * Main Calculation Logic
  * 
  * Code.gs의 calculateRorschach 함수를 TypeScript로 이전
@@ -164,18 +164,22 @@ export function calculateStructuralSummary(
     );
 
     let EBPer: string | number = '-';
-    const { DIV_BY_ZERO_FALLBACK } = SCORING_CONFIG.CRITERIA.EBPER;
+    const { EA_THRESHOLD, RATIO_THRESHOLD } = SCORING_CONFIG.CRITERIA.EBPER;
     if (M_total > 0 && WSumC > 0) {
       const largerVal = Math.max(M_total, WSumC);
       const smallerVal = Math.min(M_total, WSumC);
-      EBPer = fix2(largerVal / (smallerVal || DIV_BY_ZERO_FALLBACK));
+      const ratio = largerVal / smallerVal;
+      if (EA >= EA_THRESHOLD && ratio >= RATIO_THRESHOLD) {
+        EBPer = fix2(ratio);
+      }
     }
 
     // Lambda
     const F_pure = validResponses.filter(r =>
       r.determinants.length === 1 && r.determinants[0] === 'F'
     ).length;
-    const Lambda = (R - F_pure) !== 0 ? (F_pure / (R - F_pure)) : 0;
+    const lambdaDenominator = R - F_pure;
+    const Lambda = lambdaDenominator === 0 ? '∞' : (F_pure / lambdaDenominator);
 
     // 형태질 및 Afr
     const fq_plus_count = validResponses.filter(r => r.fq === '+').length;
@@ -270,7 +274,7 @@ export function calculateStructuralSummary(
     const F_pairs = validResponses.filter(r => r.pair === '(2)').length;
     const Fr = exactCount('Fr', 'determinants');
     const rF = exactCount('rF', 'determinants');
-    const EgocentricityIndex = (R > 0) ? (((Fr + rF) * 2 + F_pairs) / R) : 0;
+    const EgocentricityIndex = (R > 0) ? (((Fr + rF) * 3 + F_pairs) / R) : 0;
     const AB = exactCount('AB', 'specialScores');
     const Art = exactCount('Art', 'contents');
     const Ay = exactCount('Ay', 'contents');
@@ -307,8 +311,10 @@ export function calculateStructuralSummary(
     const VF = exactCount('VF', 'determinants');
     const V = exactCount('V', 'determinants');
     const FD = exactCount('FD', 'determinants');
-    const active_dets = countContainsAny(SCORING_CONFIG.CODES.MOVEMENT_ACTIVE);
-    const passive_dets = countContainsAny(SCORING_CONFIG.CODES.MOVEMENT_PASSIVE);
+    const active_dets = SCORING_CONFIG.CODES.MOVEMENT_ACTIVE
+      .reduce((sum, code) => sum + exactCount(code), 0);
+    const passive_dets = SCORING_CONFIG.CODES.MOVEMENT_PASSIVE
+      .reduce((sum, code) => sum + exactCount(code), 0);
     const PureH = exactCount('H', 'contents');
     const Ma = exactCount('Ma') + exactCount('Ma-p');
     const Mp = exactCount('Mp') + exactCount('Ma-p');
@@ -511,7 +517,7 @@ export function calculateStructuralSummary(
       },
       lower_section: {
         R,
-        Lambda: fix2(Lambda),
+        Lambda: typeof Lambda === 'number' ? fix2(Lambda) : Lambda,
         EB: `${M_total}:${fix1(WSumC)}`,
         EA: fix1(EA),
         EBPer: EBPer,

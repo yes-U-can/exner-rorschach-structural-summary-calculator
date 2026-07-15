@@ -1,6 +1,7 @@
 import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
 import { randomBytes } from 'crypto';
+import { DEFAULT_LANGUAGE, normalizeLanguage } from '@/i18n/config';
 
 function getNonce() {
   return randomBytes(16).toString('base64');
@@ -66,6 +67,10 @@ export function proxy(request: NextRequest) {
   const nonce = getNonce();
   const requestHeaders = new Headers(request.headers);
   requestHeaders.set('x-nonce', nonce);
+  requestHeaders.set(
+    'x-language',
+    normalizeLanguage(request.nextUrl.searchParams.get('lang')) ?? DEFAULT_LANGUAGE,
+  );
 
   const response = NextResponse.next({
     request: {

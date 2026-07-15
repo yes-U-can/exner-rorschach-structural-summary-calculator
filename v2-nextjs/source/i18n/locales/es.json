@@ -8,7 +8,7 @@
     "scoring": "Codificación y Sumario Estructural",
     "more": "Documentos de referencia",
     "login": "Iniciar sesión de IA con API key",
-    "logout": "Finalizar sesion de IA",
+    "logout": "Finalizar sesión de IA",
     "loginRequired": "Se necesita una API key",
     "aiAssistant": "Asistente de codificación",
     "aiGuide": "Introduce una API key de OpenAI para usar el asistente de IA durante 24 horas.",
@@ -17,9 +17,7 @@
     "referenceDocuments": "Documentos de Referencia",
     "aiChatTop": "Asistente de interpretación",
     "interpretationNotes": "Notas de Interpretación",
-    "transparencyCenter": "Referencia",
-    "homeIntroLine1": "Calculadora del Structural Summary del test de Rorschach en el sistema Exner (CS).",
-    "homeIntroLine2": "Este servicio no sustituye el juicio clínico de un profesional."
+    "transparencyCenter": "Referencia"
   },
   "buttons": {
     "calculate": "Calcular Resultados",
@@ -80,7 +78,7 @@
     "gphr": "G/PHR",
     "guideResponse": "Se usa para anotar las respuestas verbales del evaluado; no se usa en los calculos, por lo que puede dejarse en blanco.",
     "tooltipInfo": "Solo se puede manipular la fila inferior,\ny hasta 50 filas son posibles.",
-    "rowOrderTip": "El orden de las filas de respuesta no afecta los resultados del cálculo.\nPor ejemplo, registrar contenido para la Lámina 6 en la fila 8 y registrar contenido para la Lámina 2 en la fila 14 está bien.",
+    "rowOrderTip": "El orden de las filas de respuesta no afecta los resultados del cálculo. Por ejemplo, puede registrar contenido de la Lámina 6 en la fila 8 y contenido de la Lámina 2 en la fila 14 sin afectar el resultado.",
     "scoreTooltip": "Se calcula automaticamente segun [Card] y [Z].",
     "gphrTooltip": "Clasificado automaticamente segun [Contents], [Determinants], [FQ] y [Special Score].",
     "noReorderTooltip": "Haz clic en el area del controlador para levantar una fila y moverla de posicion.",
@@ -227,7 +225,7 @@
     "SCON": "S-CON",
     "HVI": "HVI",
     "OBS": "OBS",
-    "sconNote": "( Nota: Se aplica solo a examinados de 14 años o más )",
+    "sconNote": "( Nota: Se aplica solo a examinados de 15 años o más )",
     "sconMain": "Marcar si se cumplen 8 o más criterios",
     "depiMain": "Marcar si se cumplen 5 o más criterios",
     "cdiMain": "Marcar si se cumplen 4 o más criterios",
@@ -330,14 +328,15 @@
   },
   "footer": {
     "title": "Computing Program for Rorschach Structural Summary",
-    "copyright": "© 1997–2026 서울임상심리연구소 (Seoul Institute of Clinical Psychology, SICP). All rights reserved."
+    "copyright": "© 1997–2026 서울임상심리연구소 (Seoul Institute of Clinical Psychology, SICP). All rights reserved.",
+    "scoringCanvasCopyright": "© 2026 Seoul Institute of Clinical Psychology (SICP) y MOW. Todos los derechos reservados."
   },
   "codeList": {
     "header": "Lista de códigos y descripción de cada ítem de codificación."
   },
   "specialIndices": {
     "scon_main": "Marcar si se cumplen 8 o más criterios",
-    "scon_note": "( Nota: Se aplica solo a examinados de 14 años o más )",
+    "scon_note": "( Nota: Se aplica solo a examinados de 15 años o más )",
     "depi_main": "Marcar si se cumplen 5 o más criterios",
     "pti_main": "Puntuación mostrada (sin punto de corte)",
     "cdi_main": "Marcar si se cumplen 4 o más criterios",
@@ -366,7 +365,6 @@
       "exclusiveDescription": "Conecta una API key de OpenAI para esta sesion. Una clave nueva reemplaza la clave anterior de la sesion.",
       "exclusiveNotice": "Conecta una API key de OpenAI.",
       "loadedModel": "Modelo automatico",
-      "modelPolicy": "La app usa automaticamente el modelo mas reciente disponible\nque lleve al menos un mes publicado.",
       "activeProvider": "Activo",
       "currentProviderHelp": "El asistente de interpretacion y el asistente de codificacion usan {provider}.",
       "optionalProviderHelp": "Introduce una clave de {provider} solo si quieres usarla.",
@@ -423,6 +421,25 @@
     "empty": "No se encontraron documentos de referencia coincidentes. Prueba una palabra clave más amplia.",
     "idle": "Escribe una palabra clave para buscar en los documentos de referencia.",
     "results": "{count} resultado(s) para \"{query}\""
+  },
+  "versions": {
+    "unpublishedDate": "Fecha de publicación pendiente",
+    "nextHeading": "[NextJS] Historial de la versión 2",
+    "gasHeading": "[Google Apps Script] Historial de la versión 1",
+    "major": "Versión mayor",
+    "minor": "Versión menor",
+    "bugfix": "Corrección de errores",
+    "hotfix": "Corrección urgente",
+    "release": "Versión",
+    "sourceCode": "Código fuente",
+    "patchNotes": "Notas de la versión",
+    "deploymentLink": "Abrir versión",
+    "tutorialVideo": "Vídeo de uso",
+    "latestFirst": "Más recientes",
+    "oldestFirst": "Más antiguas",
+    "sortAria": "Cambiar el orden de las versiones",
+    "gasInfoAria": "Guía de uso de la versión de Google Apps Script",
+    "gasHelp": "Selecciona 'Abrir versión' para usar esa versión de la calculadora.\nSi lo necesitas, copia el código fuente en un proyecto de GAS de tu propia cuenta."
   },
   "common": {
     "close": "Cerrar"

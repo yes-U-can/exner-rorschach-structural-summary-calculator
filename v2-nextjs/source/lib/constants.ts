@@ -1,7 +1,7 @@
 import { Category, InfoCategory, InfoNode } from '@/types';
 
 /**
- * Computing Program for Rorschach Structural Summary v2.1.7
+ * Computing Program for Rorschach Structural Summary v2.2.0
  * Constants and Configuration
  * 
  * Code.gs의 SCORING_CONFIG를 TypeScript로 이전
@@ -89,8 +89,8 @@ export const SCORING_CONFIG = {
     SHADING_DIFFUSE: ['Y'],
     SHADING_ALL_CONTAINS: ["C'", 'T', 'V', 'Y'],
 
-    MOVEMENT_ACTIVE: ['Ma', 'FMa', 'ma'],
-    MOVEMENT_PASSIVE: ['Mp', 'FMp', 'mp'],
+    MOVEMENT_ACTIVE: ['Ma', 'Ma-p', 'FMa', 'FMa-p', 'ma', 'ma-p'],
+    MOVEMENT_PASSIVE: ['Mp', 'Ma-p', 'FMp', 'FMa-p', 'mp', 'ma-p'],
 
     // 위치(Location) 그룹
     LOCATION_W: ['W', 'WS'],
@@ -257,7 +257,7 @@ export const SCORING_CONFIG = {
     HVI: {
       C1_SUM_T: 0,
       C2_ZF: 12,
-      C3_ZD: 3.0,
+      C3_ZD: 3.5,
       C4_S: 3,
       C5_HUMAN_CONT: 6,
       C6_PAREN_CONT: 3,

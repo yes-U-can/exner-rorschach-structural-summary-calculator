@@ -1,7 +1,12 @@
 'use client';
 
-import { createContext, useContext, useState, useCallback, ReactNode, useEffect } from 'react';
-import { Language, DEFAULT_LANGUAGE, STORAGE_KEY, SUPPORTED_LANGUAGES } from '@/i18n/config';
+import { createContext, useContext, useState, useCallback, ReactNode, useEffect, useRef } from 'react';
+import {
+  DEFAULT_LANGUAGE,
+  STORAGE_KEY,
+  normalizeLanguage,
+  type Language,
+} from '@/i18n/config';
 import { getTranslation, getTranslations } from '@/i18n/client';
 
 interface TranslationContextType {
@@ -12,45 +17,65 @@ interface TranslationContextType {
 
 const TranslationContext = createContext<TranslationContextType | undefined>(undefined);
 
-function normalizeLanguage(value: string | null | undefined): Language | null {
-  return SUPPORTED_LANGUAGES.includes(value as Language) ? (value as Language) : null;
-}
-
 function readUrlLanguage(): Language | null {
   if (typeof window === 'undefined') return null;
   return normalizeLanguage(new URLSearchParams(window.location.search).get('lang'));
 }
 
-export function TranslationProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>(() => {
-    if (typeof window === 'undefined') return DEFAULT_LANGUAGE;
-    const urlLang = readUrlLanguage();
-    if (urlLang) {
-      return urlLang;
-    }
-    const savedLang = normalizeLanguage(localStorage.getItem(STORAGE_KEY));
-    if (savedLang) {
-      return savedLang;
-    }
-    return DEFAULT_LANGUAGE;
-  });
+export function TranslationProvider({
+  children,
+  initialLanguage = DEFAULT_LANGUAGE,
+}: {
+  children: ReactNode;
+  initialLanguage?: Language;
+}) {
+  const [language, setLanguageState] = useState<Language>(initialLanguage);
+  const hasMounted = useRef(false);
 
   const setLanguage = useCallback((lang: Language) => {
     setLanguageState(lang);
     if (typeof window !== 'undefined') {
-      localStorage.setItem(STORAGE_KEY, lang);
+      try {
+        localStorage.setItem(STORAGE_KEY, lang);
+      } catch {
+        // ignore storage errors
+      }
     }
   }, []);
 
   useEffect(() => {
     if (typeof document === 'undefined') return;
+
+    if (!hasMounted.current) {
+      hasMounted.current = true;
+      let savedLanguage: Language | null = null;
+      try {
+        savedLanguage = normalizeLanguage(localStorage.getItem(STORAGE_KEY));
+      } catch {
+        // ignore storage errors
+      }
+
+      const resolvedLanguage = readUrlLanguage() ?? savedLanguage ?? initialLanguage;
+      document.documentElement.lang = resolvedLanguage;
+      try {
+        localStorage.setItem(STORAGE_KEY, resolvedLanguage);
+      } catch {
+        // ignore storage errors
+      }
+      if (resolvedLanguage !== language) {
+        const timerId = window.setTimeout(() => setLanguageState(resolvedLanguage), 0);
+        return () => window.clearTimeout(timerId);
+      }
+      return;
+    }
+
     document.documentElement.lang = language;
     try {
       localStorage.setItem(STORAGE_KEY, language);
     } catch {
       // ignore storage errors
     }
-  }, [language]);
+  }, [initialLanguage, language]);
 
   const t = useCallback((key: string, params?: Record<string, string>): string => {
     return getTranslation(language, key, params);

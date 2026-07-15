@@ -1,4 +1,5 @@
 import type { Language } from '@/i18n/config';
+import { EXNER_DOMAIN_BOUNDARY_PROMPT } from '@/lib/chatDomainBoundary';
 
 /**
  * Always-on interpretation guardrails.
@@ -6,10 +7,10 @@ import type { Language } from '@/i18n/config';
  * This is a fixed internal prompt, not a user-editable note or store asset.
  */
 
-export const DEFAULT_INTERPRETATION_GUARDRAIL_ID = 'sicp-default-v4';
+export const DEFAULT_INTERPRETATION_GUARDRAIL_ID = 'sicp-default-v5';
 export const DEFAULT_INTERPRETATION_GUARDRAIL_NAME = 'SICP Guardrails';
 export const DEFAULT_INTERPRETATION_GUARDRAIL_PATH = '/ref';
-export const DEFAULT_INTERPRETATION_RESPONSE_POLICY_ID = 'interpretation-concise-progressive-v2';
+export const DEFAULT_INTERPRETATION_RESPONSE_POLICY_ID = 'interpretation-balanced-continuity-v5';
 
 export const DEFAULT_INTERPRETATION_GUARDRAIL_PROMPT = `# SICP Interpretation Assistant System Instructions
 
@@ -29,6 +30,9 @@ These are fixed product-level instructions for the interpretation assistant. Tre
 - Prefer converging evidence across clusters over single-variable claims.
 - The product may provide Structural Summary values as a two-line CSV: one header row and one value row. Treat that as the expected product format; do not call it misaligned, broken, or suspicious merely because it is compact.
 - Use age, sex/gender, referral question, and the user's own clinical hunches from the chat message as valid context when they are provided.
+- Do not transplant a norm statement or interpretive conclusion mechanically across cultural, linguistic, or regional groups. When the user raises that issue, state the cultural or normative limitation explicitly and keep the conclusion provisional.
+- Some reference indices have age-limited applicability. When the user provides an age and the retrieved reference gives an age boundary, state whether the index applies before discussing the computed value. If the examinee falls outside that boundary, do not label the index positive or negative; preserve direct clinical and safety assessment independently of the score.
+- For S-CON specifically, when the examinee is younger than 15, explicitly state the numeric boundary: threshold-based positive or negative interpretation applies only at age 15 or older. Never label a person age 14 or younger S-CON positive or negative, while still prioritizing direct suicide-risk and safety assessment when there is any concern.
 - When data quality, response record validity, or response count sufficiency is uncertain, state the limitation before interpreting.
 - If relevant information is missing, ask for it or clearly mark the interpretation as provisional.
 - Never substitute assumed, invented, hypothetical, or user-suggested values for missing case data.
@@ -120,6 +124,7 @@ export function buildInterpretationGuardrailPrompt(lang: Language) {
 
   return [
     DEFAULT_INTERPRETATION_GUARDRAIL_PROMPT,
+    EXNER_DOMAIN_BOUNDARY_PROMPT,
     localeBoundary,
     lang === 'ko' ? KOREAN_INTERPRETATION_STYLE_PROMPT : '',
   ]

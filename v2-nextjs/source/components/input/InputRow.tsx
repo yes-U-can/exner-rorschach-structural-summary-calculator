@@ -75,12 +75,12 @@ const InputRow = memo(function InputRow({
     >
       {/* Row Number */}
       <td
-        className="group relative w-10 cursor-grab select-none overflow-visible border-r border-[var(--border-subtle)] px-2 py-2.5 text-center text-xs font-semibold tabular-nums text-[var(--brand-700)] active:cursor-grabbing"
+        className="group relative w-8 min-w-8 max-w-8 cursor-grab select-none overflow-visible border-r border-[var(--border-subtle)] py-2.5 pl-3 pr-1 text-center text-xs font-semibold tabular-nums text-[var(--brand-700)] active:cursor-grabbing"
         onPointerDown={(event) => onNoCellPointerDown?.(index, event)}
       >
         <span
           aria-hidden="true"
-          className={`pointer-events-none absolute left-0 top-1/2 z-10 inline-grid -translate-x-1/2 -translate-y-1/2 grid-cols-2 grid-rows-3 gap-[2px] rounded-md border px-1 py-1 shadow-[0_1px_2px_rgba(15,23,42,0.12)] transition-all duration-150 group-hover:shadow-[0_3px_8px_rgba(15,23,42,0.18)] ${
+          className={`pointer-events-none absolute left-0 top-1/2 z-30 inline-grid -translate-x-1/2 -translate-y-1/2 grid-cols-2 grid-rows-3 gap-[2px] rounded-md border px-1 py-1 shadow-[0_1px_2px_rgba(15,23,42,0.12)] transition-all duration-150 group-hover:shadow-[0_3px_8px_rgba(15,23,42,0.18)] ${
             isDragging
               ? 'border-[var(--table-insert-border)] bg-[var(--table-drag-handle-bg)]'
               : 'border-[var(--table-drag-handle-border)] bg-[var(--table-drag-handle-bg)] group-hover:border-[var(--brand-300)]'
@@ -99,7 +99,7 @@ const InputRow = memo(function InputRow({
       </td>
 
       {/* Memo icon */}
-      <td className="px-1.5 py-1 text-center">
+      <td className="px-1 py-1 text-center">
         <button
           type="button"
           onClick={() => onResponseClick(index)}
@@ -115,7 +115,7 @@ const InputRow = memo(function InputRow({
       </td>
 
       {/* Card */}
-      <td className="px-1.5 py-2">
+      <td className="px-1 py-2">
         <SlotSelect
           value={response.card}
           onChange={(v) => updateField('card', v)}
@@ -126,7 +126,7 @@ const InputRow = memo(function InputRow({
       </td>
 
       {/* Location */}
-      <td className="px-1.5 py-2">
+      <td className="px-1 py-2">
         <SlotSelect
           value={response.location}
           onChange={(v) => updateField('location', v)}
@@ -137,18 +137,18 @@ const InputRow = memo(function InputRow({
       </td>
 
       {/* DQ */}
-      <td className="px-1.5 py-2">
+      <td className="px-1 py-2">
         <SlotSelect
           value={response.dq}
           onChange={(v) => updateField('dq', v)}
           options={OPTIONS.DQ}
           showClearButton
-          className="w-12"
+          className="w-14"
         />
       </td>
 
       {/* Determinants */}
-      <td className="px-1.5 py-2">
+      <td className="px-1 py-2">
         <DeterminantSlots
           values={response.determinants}
           onChange={(v) => updateField('determinants', v)}
@@ -156,7 +156,7 @@ const InputRow = memo(function InputRow({
       </td>
 
       {/* FQ '+' disabled when DQ is 'v' */}
-      <td className="px-1.5 py-2">
+      <td className="px-1 py-2">
         <SlotSelect
           value={response.fq}
           onChange={(v) => updateField('fq', v)}
@@ -168,7 +168,7 @@ const InputRow = memo(function InputRow({
       </td>
 
       {/* Pair disabled when Fr/rF (reflection) is present */}
-      <td className="px-1.5 py-2 text-center">
+      <td className="px-1 py-2 text-center">
         <input
           type="checkbox"
           checked={response.pair === '(2)'}
@@ -181,7 +181,7 @@ const InputRow = memo(function InputRow({
       </td>
 
       {/* Contents */}
-      <td className="px-1.5 py-2">
+      <td className="px-1 py-2">
         <ContentSlots
           values={response.contents}
           onChange={(v) => updateField('contents', v)}
@@ -189,7 +189,7 @@ const InputRow = memo(function InputRow({
       </td>
 
       {/* Popular */}
-      <td className="px-1.5 py-2 text-center">
+      <td className="w-12 min-w-12 px-1 py-2 text-center">
         <input
           type="checkbox"
           checked={response.popular}
@@ -200,7 +200,7 @@ const InputRow = memo(function InputRow({
       </td>
 
       {/* Z disabled when DQ is 'v' (no organizational activity for vague responses) */}
-      <td className="px-1.5 py-2">
+      <td className="px-1 py-2">
         <SlotSelect
           value={response.z}
           onChange={(v) => updateField('z', v)}
@@ -212,14 +212,14 @@ const InputRow = memo(function InputRow({
       </td>
 
       {/* Score */}
-      <td className="px-1.5 py-2 text-center w-14">
+      <td className="w-14 px-1 py-2 text-center">
         <span className="text-xs font-medium tabular-nums text-[var(--text-body)]">
           {zScore !== null ? zScore.toFixed(1) : ''}
         </span>
       </td>
 
       {/* G/PHR */}
-      <td className="px-1.5 py-2 text-center w-14">
+      <td className="w-14 px-1 py-2 text-center">
         <span className={`text-xs font-semibold ${
           gphr === 'GHR' ? 'text-emerald-600'
           : gphr === 'PHR' ? 'text-rose-500'
@@ -230,7 +230,7 @@ const InputRow = memo(function InputRow({
       </td>
 
       {/* Special Scores */}
-      <td className="px-1.5 py-2">
+      <td className="px-1 py-2">
         <SpecialScoreSlots
           values={response.specialScores}
           onChange={(v) => updateField('specialScores', v)}

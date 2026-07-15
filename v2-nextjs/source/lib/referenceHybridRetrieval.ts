@@ -78,6 +78,20 @@ const CODING_MERGE_CONFIG: RrfMergeConfig = {
 };
 
 const BROAD_INTERPRETATION_ANCHOR_BONUS = 0.02;
+const EXPLICIT_CODING_INTENT_BONUS = 0.04;
+
+const POPULAR_QUERY_PATTERNS = [
+  /\bpopular(?:\s+response)?\b/iu,
+  /인기\s*반응/u,
+  /人気反応/u,
+  /respuesta\s+popular/iu,
+  /resposta\s+popular/iu,
+  /(^|[^\p{L}\p{N}])p(?:로|를|가|는|으로)?(?=$|[^\p{L}\p{N}])/iu,
+];
+
+function isExplicitPopularQuery(query: string): boolean {
+  return POPULAR_QUERY_PATTERNS.some((pattern) => pattern.test(query));
+}
 
 type MergeAccumulator<TItem> = {
   item: TItem;
@@ -219,8 +233,13 @@ function scoreCodingRerankBonus(query: string, item: CodingRuleChunk): number {
   const routeTagBonus = item.categoryTags.some((tag) => tag.startsWith('scoring-input'))
     ? 0.0004
     : 0;
+  const intentBonus =
+    item.canonicalRoute?.toLowerCase() === 'scoring-input/popular' &&
+    isExplicitPopularQuery(query)
+      ? EXPLICIT_CODING_INTENT_BONUS
+      : 0;
 
-  return titleBonus + tagBonus + routeTagBonus;
+  return titleBonus + tagBonus + routeTagBonus + intentBonus;
 }
 
 export function rankMergedKnowledge(
@@ -548,14 +567,27 @@ export async function getHybridCodingRuleChunks(params: {
 }): Promise<HybridCodingResult> {
   const limit = params.limit ?? 6;
   const query = buildCodingAssistQuery(params.context);
-  const lexicalItems = selectCodingRuleChunks(params.context, params.lang, limit);
+  const codingChunks = getCodingRuleChunks(params.lang);
+  const explicitIntentItems = isExplicitPopularQuery(query)
+    ? codingChunks.filter(
+        (item) => item.canonicalRoute?.toLowerCase() === 'scoring-input/popular',
+      )
+    : [];
+  const lexicalItems = deduplicateByKey(
+    [
+      ...explicitIntentItems,
+      ...selectCodingRuleChunks(params.context, params.lang, limit),
+    ],
+    (item) => item.canonicalRoute ?? item.id,
+  );
+  const lexicalOnly = rankMergedCodingChunksDetailed(query, lexicalItems, [], limit);
 
   if (!isReferenceVectorRuntimeReady(params.provider, params.lang)) {
     return {
-      items: lexicalItems,
+      items: lexicalOnly.items,
       mode: 'lexical',
       vectorHitCount: 0,
-      trace: rankMergedCodingChunksDetailed(query, lexicalItems, [], limit).trace,
+      trace: lexicalOnly.trace,
     };
   }
 
@@ -584,7 +616,6 @@ export async function getHybridCodingRuleChunks(params: {
       trace: rankMergedCodingChunksDetailed(query, lexicalItems, [], limit).trace,
     };
   }
-  const codingChunks = getCodingRuleChunks(params.lang);
   const vectorItems = prepareVectorCandidates(
     vectorHits
       .filter((hit) => hit.canonicalRoute.startsWith('scoring-input/'))

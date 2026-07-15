@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback, createContext, useContext, ReactNode } from 'react';
 import { Transition } from '@headlessui/react';
 import { XMarkIcon, CheckCircleIcon, ExclamationTriangleIcon, InformationCircleIcon } from '@heroicons/react/24/outline';
+import { useTranslation } from '@/hooks/useTranslation';
 
 type ToastType = 'success' | 'error' | 'warning' | 'info';
 
@@ -29,6 +30,7 @@ export function useToast() {
 }
 
 function ToastItem({ toast, onRemove }: { toast: Toast; onRemove: (id: string) => void }) {
+  const { t } = useTranslation();
   const [show, setShow] = useState(true);
 
   useEffect(() => {
@@ -96,7 +98,7 @@ function ToastItem({ toast, onRemove }: { toast: Toast; onRemove: (id: string) =
                   setTimeout(() => onRemove(toast.id), 200);
                 }}
               >
-                <span className="sr-only">Close</span>
+                <span className="sr-only">{t('buttons.close')}</span>
                 <XMarkIcon className="h-5 w-5" aria-hidden="true" />
               </button>
             </div>

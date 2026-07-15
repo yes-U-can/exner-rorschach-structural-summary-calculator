@@ -61,10 +61,39 @@ export interface RorschachResponse {
 }
 
 export type ChatWorkflowMode = 'interpretation' | 'coding_assist';
+export type AiFeedbackRating = 'helpful' | 'unhelpful';
+export type AiFeedbackReasonCode =
+  | 'accurate'
+  | 'well_grounded'
+  | 'clear'
+  | 'right_level_of_detail'
+  | 'respects_clinical_boundaries'
+  | 'incorrect'
+  | 'missed_context'
+  | 'unsupported'
+  | 'overconfident'
+  | 'too_long'
+  | 'too_short'
+  | 'incomplete'
+  | 'unclear'
+  | 'unsafe_or_inappropriate'
+  | 'other';
+export type AiFeedbackLengthBucket =
+  | 'under_500'
+  | 'from_500_to_1499'
+  | 'from_1500_to_2999'
+  | 'from_3000_to_5999'
+  | 'over_6000';
+export type AiMessageCompletionState = 'streaming' | 'completed' | 'incomplete' | 'failed' | 'unknown';
 
 export interface ChatMessageMetadata {
   workflowType?: ChatWorkflowMode;
   locale?: string;
+  clientFeedbackId?: string;
+  modelId?: string;
+  completionState?: AiMessageCompletionState;
+  feedbackRating?: AiFeedbackRating | null;
+  feedbackReasonCodes?: AiFeedbackReasonCode[];
   attachments?: {
     name: string;
     size: number;
