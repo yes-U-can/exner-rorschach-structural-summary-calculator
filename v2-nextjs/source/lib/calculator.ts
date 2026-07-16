@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /**
- * Computing Program for Rorschach Structural Summary v2.2.0
+ * Computing Program for Rorschach Structural Summary v2.2.1
  * Main Calculation Logic
  * 
  * Code.gs의 calculateRorschach 함수를 TypeScript로 이전
@@ -8,6 +8,7 @@
 
 import { SCORING_CONFIG } from './constants';
 import { val, fix1, fix2, zestFromZf, dTable } from './utils';
+import { classifyGPHR } from './gphr';
 import type { RorschachResponse, CalculationResult, StructuralSummary } from '@/types';
 
 /**
@@ -133,6 +134,7 @@ export function calculateStructuralSummary(
     const FC = exactCount('FC');
     const CF = exactCount('CF');
     const C = exactCount('C');
+    const Cn = exactCount('Cn');
     const { FC_WEIGHT, CF_WEIGHT, C_WEIGHT } = SCORING_CONFIG.CRITERIA.WSUMC;
     const WSumC = (FC_WEIGHT * FC) + (CF_WEIGHT * CF) + (C_WEIGHT * C);
     
@@ -150,29 +152,12 @@ export function calculateStructuralSummary(
     
     const D_bucket = dTable(
       EA - es,
-      SCORING_CONFIG.CRITERIA.D_TABLE.MIN,
-      SCORING_CONFIG.CRITERIA.D_TABLE.MAX,
       SCORING_CONFIG.CRITERIA.D_TABLE.DIVISOR,
-      SCORING_CONFIG.CRITERIA.D_TABLE.OFFSET
     );
     const AdjD_bucket = dTable(
       EA - AdjEs,
-      SCORING_CONFIG.CRITERIA.D_TABLE.MIN,
-      SCORING_CONFIG.CRITERIA.D_TABLE.MAX,
       SCORING_CONFIG.CRITERIA.D_TABLE.DIVISOR,
-      SCORING_CONFIG.CRITERIA.D_TABLE.OFFSET
     );
-
-    let EBPer: string | number = '-';
-    const { EA_THRESHOLD, RATIO_THRESHOLD } = SCORING_CONFIG.CRITERIA.EBPER;
-    if (M_total > 0 && WSumC > 0) {
-      const largerVal = Math.max(M_total, WSumC);
-      const smallerVal = Math.min(M_total, WSumC);
-      const ratio = largerVal / smallerVal;
-      if (EA >= EA_THRESHOLD && ratio >= RATIO_THRESHOLD) {
-        EBPer = fix2(ratio);
-      }
-    }
 
     // Lambda
     const F_pure = validResponses.filter(r =>
@@ -180,6 +165,24 @@ export function calculateStructuralSummary(
     ).length;
     const lambdaDenominator = R - F_pure;
     const Lambda = lambdaDenominator === 0 ? '∞' : (F_pure / lambdaDenominator);
+
+    // EBPer is reported only when the record has a marked, interpretable EB style.
+    let EBPer: string | number = '-';
+    const EBPER_C = SCORING_CONFIG.CRITERIA.EBPER;
+    const ebDifference = Math.abs(M_total - WSumC);
+    const requiredEbDifference = EA <= EBPER_C.EA_BREAKPOINT
+      ? EBPER_C.DIFFERENCE_AT_OR_BELOW_BREAKPOINT
+      : EBPER_C.DIFFERENCE_ABOVE_BREAKPOINT;
+    const hasEligibleLambda = typeof Lambda === 'number' && Lambda < EBPER_C.LAMBDA_MAX_EXCLUSIVE;
+    if (
+      EA >= EBPER_C.EA_MIN &&
+      hasEligibleLambda &&
+      M_total > 0 &&
+      WSumC > 0 &&
+      ebDifference >= requiredEbDifference
+    ) {
+      EBPer = fix2(Math.max(M_total, WSumC) / Math.min(M_total, WSumC));
+    }
 
     // 형태질 및 Afr
     const fq_plus_count = validResponses.filter(r => r.fq === '+').length;
@@ -200,7 +203,7 @@ export function calculateStructuralSummary(
       SCORING_CONFIG.CODES.FQ_GOOD.includes(r.fq as any)
     ).length;
 
-    const WDA_percent = W_plus_D > 0 ? (W_plus_D_good_fq / W_plus_D) : 0;
+    const WDA_percent = W_plus_D > 0 ? (W_plus_D_good_fq / W_plus_D) : null;
     const S_locations = validResponses.filter(r => 
       SCORING_CONFIG.CODES.LOCATION_S.includes(r.location as any)
     );
@@ -211,48 +214,7 @@ export function calculateStructuralSummary(
       ['VIII', 'IX', 'X'].includes(r.card)
     ).length;
     const firstSevenCardsCount = R - lastThreeCardsCount;
-    const Afr = firstSevenCardsCount > 0 ? (lastThreeCardsCount / firstSevenCardsCount) : 0;
-
-    // GHR/PHR 분류 함수
-    function classifyGPHR(r: RorschachResponse): string {
-      const hasAnyContent = (arr: readonly string[]) => 
-        Array.isArray(r.contents) && r.contents.some(c => arr.includes(c));
-      const hasAnySS = (arr: readonly string[]) => 
-        Array.isArray(r.specialScores) && r.specialScores.some(s => arr.includes(s));
-      const hasAnyDet = (arr: readonly string[]) => 
-        Array.isArray(r.determinants) && r.determinants.some(d => arr.includes(d));
-      
-      const hasHumanContent = hasAnyContent(SCORING_CONFIG.CODES.HUMAN_CONTENT_GPHR);
-      const hasHumanMovement = hasAnyDet(SCORING_CONFIG.CODES.HUMAN_MOVEMENT);
-      const hasAnimalMovement = hasAnyDet(SCORING_CONFIG.CODES.ANIMAL_MOVEMENT);
-      const hasCopOrAg = hasAnySS(SCORING_CONFIG.CODES.COP_OR_AG);
-      const isEligible = hasHumanContent || hasHumanMovement || (hasAnimalMovement && hasCopOrAg);
-
-      if (!isEligible) return "";
-
-      const FQ = r.fq;
-      const popular = r.popular;
-      const card = r.card;
-      const isPureH = hasAnyContent(SCORING_CONFIG.CODES.PURE_H);
-      const isGoodFQ = SCORING_CONFIG.CODES.FQ_GOOD.includes(FQ as any);
-      const hasBadCognitiveSS = hasAnySS(SCORING_CONFIG.CODES.COGNITIVE_SS_BAD);
-      const hasAgOrMor = hasAnySS(SCORING_CONFIG.CODES.AG_OR_MOR);
-
-      if (isPureH && isGoodFQ && !hasBadCognitiveSS && !hasAgOrMor) {
-        return "GHR";
-      }
-
-      const isBadFQ = SCORING_CONFIG.CODES.FQ_BAD.includes(FQ as any);
-      const hasLevel2SS = hasAnySS(SCORING_CONFIG.CODES.LEVEL_2_SS);
-
-      if (isBadFQ || hasLevel2SS) return "PHR";
-      if (hasAnySS(['COP']) && !hasAnySS(['AG'])) return "GHR";
-      if (hasAnySS(['FABCOM1', 'MOR']) || hasAnyContent(['An'])) return "PHR";
-      if (popular && SCORING_CONFIG.CODES.GPHR_POPULAR_CARDS.includes(card as any)) return "GHR";
-      if (hasAnySS(['AG', 'INCOM1', 'DR1']) || hasAnyContent(['Hd'])) return "PHR";
-
-      return "GHR";
-    }
+    const Afr = firstSevenCardsCount > 0 ? (lastThreeCardsCount / firstSevenCardsCount) : null;
 
     const row_calculations = validResponses.map(r => ({
       card: r.card,
@@ -338,10 +300,15 @@ export function calculateStructuralSummary(
     // 특수 지표 계산 (PTI, DEPI, CDI, S-CON, HVI, OBS)
     const PTI_C = SCORING_CONFIG.CRITERIA.PTI;
     const pti_criteria = {
-      c1: (XA_percent < PTI_C.C1_XA_PERCENT && WDA_percent < PTI_C.C1_WDA_PERCENT),
+      c1: (
+        WDA_percent !== null &&
+        XA_percent < PTI_C.C1_XA_PERCENT &&
+        WDA_percent < PTI_C.C1_WDA_PERCENT
+      ),
       c2: (X_minus_percent > PTI_C.C2_X_MINUS_PERCENT),
       c3: (Level2_count > PTI_C.C3_LEVEL2_COUNT && FABCOM2 > PTI_C.C3_FABCOM2_COUNT),
-      c4: ((R < PTI_C.C4_R_LOW && WSum6 > PTI_C.C4_WSUM6_LOW) || (R > PTI_C.C4_R_HIGH && WSum6 > PTI_C.C4_WSUM6_HIGH)),
+      c4: ((R < PTI_C.C4_R_LOW && WSum6 > PTI_C.C4_WSUM6_LOW) ||
+        (R > PTI_C.C4_R_HIGH && WSum6 > PTI_C.C4_WSUM6_HIGH)),
       c5: (M_minus > PTI_C.C5_M_MINUS || X_minus_percent > PTI_C.C5_X_MINUS_PERCENT)
     };
     const pti_score = Object.values(pti_criteria).filter(val => val === true).length;
@@ -352,7 +319,7 @@ export function calculateStructuralSummary(
       c1: ((FV + VF + V > DEPI_C.C1_V_COUNT) || (FD > DEPI_C.C1_FD_COUNT)),
       c2: ((ColorShadingBlends > DEPI_C.C2_COLOR_SHADING_BLENDS) || (S > DEPI_C.C2_S_COUNT)),
       c3: ((EgocentricityIndex > DEPI_C.C3_EGO_MAX && (Fr + rF) === DEPI_C.C3_EGO_NO_REF) || (EgocentricityIndex < DEPI_C.C3_EGO_MIN)),
-      c4: ((Afr < DEPI_C.C4_AFR) || (Blends_count < DEPI_C.C4_BLENDS)),
+      c4: (((Afr !== null) && Afr < DEPI_C.C4_AFR) || (Blends_count < DEPI_C.C4_BLENDS)),
       c5: ((SumShadingAll > (FM_total + m_total)) || (SumCprime > DEPI_C.C5_SUM_C_PRIME)),
       c6: ((MOR > DEPI_C.C6_MOR) || ((2 * AB + Art + Ay) > DEPI_C.C6_INTELLECT)),
       c7: ((COP < DEPI_C.C7_COP) || (IsolateIndex > DEPI_C.C7_ISOLATE))
@@ -364,7 +331,7 @@ export function calculateStructuralSummary(
     const cdi_criteria = {
       c1: (EA < CDI_C.C1_EA || (typeof AdjD_bucket === 'number' && AdjD_bucket < CDI_C.C1_ADJ_D)),
       c2: (COP < CDI_C.C2_COP && AG < CDI_C.C2_AG),
-      c3: (WSumC < CDI_C.C3_WSUMC || Afr < CDI_C.C3_AFR),
+      c3: (WSumC < CDI_C.C3_WSUMC || ((Afr !== null) && Afr < CDI_C.C3_AFR)),
       c4: ((passive_dets > active_dets + CDI_C.C4_PASSIVE_RATIO) || PureH < CDI_C.C4_PURE_H),
       c5: (SumT > CDI_C.C5_SUM_T || IsolateIndex > CDI_C.C5_ISOLATE || Food > CDI_C.C5_FOOD)
     };
@@ -532,9 +499,9 @@ export function calculateStructuralSummary(
         SumT: SumT,
         SumV: SumV,
         SumY: SumY,
-        Afr: fix2(Afr),
+        Afr: Afr === null ? '-' : fix2(Afr),
         XA_percent: fix2(XA_percent),
-        WDA_percent: fix2(WDA_percent),
+        WDA_percent: WDA_percent === null ? '-' : fix2(WDA_percent),
         X_minus_percent: fix2(X_minus_percent),
         S_minus: S_minus_count,
         P: Populars,
@@ -556,7 +523,7 @@ export function calculateStructuralSummary(
         WSum6_ideation: WSum6,
         M_minus_ideation: M_minus,
         Mnone: Mnone,
-        FC_CF_C: `${FC} : ${CF + C}`,
+        FC_CF_C: `${FC} : ${CF + Cn + C}`,
         PureC: C,
         SumC_WSumC: `${SumCprime} : ${fix1(WSumC)}`,
         S_aff: S,

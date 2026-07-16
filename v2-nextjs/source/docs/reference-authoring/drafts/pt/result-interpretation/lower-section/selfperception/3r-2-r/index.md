@@ -33,7 +33,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-selfperception-fam
 
 ## Definição central
 
-`3r+(2)/R` é um índice egocêntrico calculado a partir de respostas de reflexo e de par em proporção ao total de respostas.
+`3r+(2)/R` é um índice egocêntrico calculado como `[3 x (Fr + rF) + Sum(2)] / R`. Cada determinante de reflexo recebe, portanto, o peso de três respostas de par; o multiplicador não é dois, apesar da notação de par `(2)` no nome.
 Na interpretação, ele ajuda a estimar quanto peso o self, o valor pessoal ou a importância pessoal ocupam no campo perceptivo.
 
 ## Pontos de interpretação

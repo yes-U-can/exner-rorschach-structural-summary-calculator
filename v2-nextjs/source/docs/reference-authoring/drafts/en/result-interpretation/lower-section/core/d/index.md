@@ -34,7 +34,8 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 
 ## Core Definition
 
-`D` is the difference between `EA` and `es`.
+`D` is not the raw difference itself. First calculate `EA - es`, then convert that raw difference to the scaled D score. A raw difference from `-2.5` through `+2.5` yields `D = 0`; beyond that interval, D changes by one unit for each additional `2.5` raw-score points, preserving the sign. The same conversion rule continues beyond the usual printed `-5` to `+5` table when an extreme protocol requires it.
+
 It summarizes whether available resources are enough to manage the current level of demand without clear overload.
 
 ## Interpretation Points

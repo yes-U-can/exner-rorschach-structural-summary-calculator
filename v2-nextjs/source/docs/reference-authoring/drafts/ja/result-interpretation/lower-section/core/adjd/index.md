@@ -36,8 +36,9 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-core-d-family-2026
 
 ## Core Definition
 
-`AdjD` は `EA` から `AdjEs` を引いた差である。
-`m` と `Y` に由来する反応的な負荷を一部補正したうえで、より安定した統制余力を見積もるための指標である。
+`AdjD` は生の差そのものではない。まず `EA - AdjEs` を求め、D と同じ尺度変換を適用する。生の差が `-2.5` 以上 `+2.5` 以下なら `0` で、その範囲を超えると追加の `2.5` 点ごとに同じ符号で AdjD が1段階変化する。必要な場合は、通常印刷される `-5` から `+5` の表を超えても同じ系列を続ける。
+
+`AdjEs` は `es` から1個を超える `m` と1個を超える `Y` を差し引くため、それらが表す状況的負荷の一部を補正した統制余力を見積もる指標である。
 
 ## Interpretation Points
 

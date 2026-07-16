@@ -34,8 +34,9 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 
 ## Core Definition
 
-`AdjD` is the difference between `EA` and `AdjEs`.
-It works as a more stable estimate of control margin because it corrects part of the situational overload associated with `m` and `Y`.
+`AdjD` is not the raw difference itself. First calculate `EA - AdjEs`, then apply the same scaled conversion used for D: raw differences from `-2.5` through `+2.5` yield `0`, and each additional `2.5` points changes AdjD by one unit with the same sign. The sequence continues beyond the usual printed `-5` to `+5` table when needed.
+
+It works as a more stable estimate of control margin because `AdjEs` removes all but one `m` and one `Y` from `es`, reducing part of the situational overload represented by those determinants.
 
 ## Interpretation Points
 

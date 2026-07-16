@@ -33,7 +33,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-selfperception-202
 
 ## Core Definition
 
-`3r+(2)/R` は、reflection response と pair response を total response で割って求める自己中心性指数です。  
+`3r+(2)/R` は `[3 x (Fr + rF) + Sum(2)] / R` で求める自己中心性指数です。reflection determinant 1個は pair response 3個分として重みづけされ、名称中の pair 記号 `(2)` があっても乗数は2ではありません。
 自己への関心、自己重要感、自己価値の占める比重を読む手がかりになります。
 
 ## Interpretation Points

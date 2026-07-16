@@ -33,7 +33,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretat
 
 ## Definición central
 
-`3r+(2)/R` es un índice de egocentricidad calculado a partir de respuestas de reflejo y pares en proporción al total de respuestas.
+`3r+(2)/R` es un índice de egocentricidad calculado como `[3 x (Fr + rF) + Sum(2)] / R`. Cada determinante de reflejo equivale así a tres respuestas de par; el multiplicador no es dos, aunque la notación de par `(2)` aparezca en el nombre.
 En interpretación ayuda a estimar cuánto peso ocupa el yo, el propio valor o la propia importancia dentro del foco perceptivo.
 
 ## Puntos de interpretación

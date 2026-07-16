@@ -1,7 +1,7 @@
 import { Category, InfoCategory, InfoNode } from '@/types';
 
 /**
- * Computing Program for Rorschach Structural Summary v2.2.0
+ * Computing Program for Rorschach Structural Summary v2.2.1
  * Constants and Configuration
  * 
  * Code.gs의 SCORING_CONFIG를 TypeScript로 이전
@@ -82,6 +82,8 @@ export const SCORING_CONFIG = {
     ANIMAL_MOVEMENT: ['FM', 'FMa', 'FMp', 'FMa-p'],
     INANIMATE_MOVEMENT: ['m', 'ma', 'mp', 'ma-p'],
 
+    // Color-shading blends use FC/CF/C. Cn is included only in the displayed
+    // FC:CF+C ratio and remains excluded from both this group and WSumC.
     CHROMATIC_COLOR: ['FC', 'CF', 'C'],
     ACHROMATIC_COLOR: ["C'"],
     SHADING_TEXTURE: ['T'],
@@ -106,7 +108,9 @@ export const SCORING_CONFIG = {
 
     // 특수 점수(Special Scores) 그룹
     LEVEL_2_SS: ['DV2', 'INCOM2', 'DR2', 'FABCOM2'],
-    COGNITIVE_SS_BAD: ['DR1', 'DR2', 'INCOM1', 'INCOM2', 'FABCOM1', 'FABCOM2', 'ALOG', 'CONTAM'],
+    // Step 1 permits DV1, but every Level 2 score (including DV2) must fall
+    // through to the Step 2 PHR rule.
+    COGNITIVE_SS_BAD: ['DV2', 'DR1', 'DR2', 'INCOM1', 'INCOM2', 'FABCOM1', 'FABCOM2', 'ALOG', 'CONTAM'],
     AG_OR_MOR: ['AG', 'MOR'],
     COP_OR_AG: ['COP', 'AG'],
 
@@ -125,7 +129,7 @@ export const SCORING_CONFIG = {
    * B. 참조 테이블 (TABLES)
    */
   TABLES: {
-    // ZEst (Zf 1~50)
+    // ZEst (Zf 2~50; the Comprehensive System table leaves Zf=1 undefined)
     ZEST: [
       null,   2.5,   6.0,  10.0,
       13.5,  17.0,  20.5,  24.0,
@@ -164,10 +168,7 @@ export const SCORING_CONFIG = {
   CRITERIA: {
     // D Table
     D_TABLE: {
-      MIN: -15,
-      MAX: 15,
-      DIVISOR: 2.5,
-      OFFSET: 0.25
+      DIVISOR: 2.5
     },
     
     // WSumC
@@ -179,9 +180,11 @@ export const SCORING_CONFIG = {
     
     // EBPer
     EBPER: {
-      RATIO_THRESHOLD: 2.5,
-      EA_THRESHOLD: 4.0,
-      DIV_BY_ZERO_FALLBACK: 0.0001
+      EA_MIN: 4.0,
+      EA_BREAKPOINT: 10.0,
+      DIFFERENCE_AT_OR_BELOW_BREAKPOINT: 2.0,
+      DIFFERENCE_ABOVE_BREAKPOINT: 2.5,
+      LAMBDA_MAX_EXCLUSIVE: 1.0
     },
     
     // PTI

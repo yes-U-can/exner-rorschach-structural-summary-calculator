@@ -33,7 +33,7 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 
 ## Core Definition
 
-`3r+(2)/R` is an egocentricity index calculated from reflection and pair responses in proportion to total responses.
+`3r+(2)/R` is an egocentricity index calculated as `[3 x (Fr + rF) + Sum(2)] / R`. Each reflection determinant is therefore weighted as three pair responses; the multiplier is not two despite the `(2)` pair notation in the label.
 In interpretation, it helps estimate how much weight the self, personal value, or personal importance occupies in the perceptual field.
 
 ## Interpretation Points

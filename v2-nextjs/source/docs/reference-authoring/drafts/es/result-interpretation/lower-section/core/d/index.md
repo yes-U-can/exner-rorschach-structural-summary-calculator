@@ -34,7 +34,8 @@ provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretat
 
 ## Definición central
 
-`D` es la diferencia entre `EA` y `es`.
+`D` no es la diferencia bruta en sí. Primero se calcula `EA - es` y después esa diferencia se convierte en la puntuación D escalada. Una diferencia bruta entre `-2.5` y `+2.5`, inclusive, produce `D = 0`; fuera de ese intervalo, D cambia una unidad por cada `2.5` puntos brutos adicionales, conservando el signo. La misma regla continúa más allá de la tabla impresa habitual de `-5` a `+5` cuando un protocolo extremo lo requiere.
+
 Resume si los recursos disponibles alcanzan para manejar la demanda actual sin quedar claramente sobrepasados.
 
 ## Puntos de interpretación

@@ -34,8 +34,9 @@ provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretat
 
 ## Definición central
 
-`AdjD` es la diferencia entre `EA` y `AdjEs`.
-Funciona como una estimación más estable del margen de control, porque corrige parte del peso de la sobrecarga más situacional asociada con `m` y `Y`.
+`AdjD` no es la diferencia bruta en sí. Primero se calcula `EA - AdjEs` y después se aplica la misma conversión escalada de D: las diferencias brutas entre `-2.5` y `+2.5`, inclusive, producen `0`, y cada `2.5` puntos adicionales cambian AdjD una unidad con el mismo signo. La secuencia continúa más allá de la tabla impresa habitual de `-5` a `+5` cuando es necesario.
+
+Funciona como una estimación más estable del margen de control porque `AdjEs` elimina de `es` todos salvo un `m` y un `Y`, reduciendo parte de la sobrecarga situacional representada por esos determinantes.
 
 ## Puntos de interpretación
 

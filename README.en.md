@@ -19,11 +19,11 @@ The detailed public release documentation standard is kept at [`v2-nextjs/source
 
 ## Current Archive
 
-- Latest v2 release note: [`v2-nextjs/releases/v2.2.0`](./v2-nextjs/releases/v2.2.0/)
+- Latest v2 release note: [`v2-nextjs/releases/v2.2.1`](./v2-nextjs/releases/v2.2.1/)
 - v2 public source snapshot: [`v2-nextjs/source`](./v2-nextjs/source/)
 - AI quality gate docs: [`v2-nextjs/source/docs/ai-evals/README.md`](./v2-nextjs/source/docs/ai-evals/README.md)
 - AI human rubric: [`v2-nextjs/source/docs/ai-evals/HUMAN_RUBRIC.md`](./v2-nextjs/source/docs/ai-evals/HUMAN_RUBRIC.md)
-- v2.2.0 calculation audit: [`v2-nextjs/source/docs/ops/2026-07-15-v2.2.0-calculation-audit.md`](./v2-nextjs/source/docs/ops/2026-07-15-v2.2.0-calculation-audit.md)
+- v2.2.1 calculation trace: [`v2-nextjs/source/docs/ops/2026-07-16-v2.2.1-calculation-trace.md`](./v2-nextjs/source/docs/ops/2026-07-16-v2.2.1-calculation-trace.md)
 - v2.2.0 workspace validation: [`v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md`](./v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md)
 - v2.2.0 Exner domain-boundary report: [`v2-nextjs/source/docs/ai-evals/2026-07-15-v2.2.0-exner-domain-boundary-report.md`](./v2-nextjs/source/docs/ai-evals/2026-07-15-v2.2.0-exner-domain-boundary-report.md)
 - v1 GAS archive: [`v1-gas/releases`](./v1-gas/releases/)
@@ -45,6 +45,14 @@ Earlier release notes that described the whole version line as closed now includ
 v2.2.0 is the first desktop-focused v2.2.x release. It replaces the old header/footer layout with an overlay application sidebar, turns the interpretation assistant into a cardless AI workspace with an internal scroller and cancellable streaming, adds privacy-minimized structured feedback, and refines the scoring table, reference reader, legal pages, version archive, localization, and dark theme.
 
 The release also audits the calculator against the author's 2019 Excel formulas, the v1 GAS lineage, the current TypeScript implementation, and published response-sequence cases. Seven boundary defects were corrected and locked with regression tests. GPT-5.5 remains fixed under the BYOK and HITL policy, with new Exner(CS) domain boundaries and Korean, Japanese, and English production-parity evaluations. Dedicated mobile refinement continues in later v2.2.x releases.
+
+The calculation audit was partially corrected in v2.2.1. The v2.2.0 note remains the historical UI/UX record, while the v2.2.1 trace is the current source for calculation findings.
+
+## v2.2.1
+
+v2.2.1 is a calculation-accuracy hotfix with no UI/UX change and no age field. It cross-checks explicit Exner rules and the completed Chapter 9 example against the official CHESSSS implementation, the 2019 Excel cell formulas used during early v1 development, the v1 GAS code, and the v2.2.0 TypeScript implementation. It fixes the D/AdjD cap, EBPer gates, ordered GHR/PHR classification, Cn display, and undefined WDA%/Afr denominators.
+
+The release openly documents the Excel lineage and acquisition path without redistributing the workbook or guessing the author's identity. Verification includes 25 five-locale calculation-invariance runs, 2,000 deterministic synthetic protocols, real GPT-5.5 coding and interpretation calls, and a refreshed 6,632-chunk OpenAI vector runtime.
 
 ## v2.1.10
 

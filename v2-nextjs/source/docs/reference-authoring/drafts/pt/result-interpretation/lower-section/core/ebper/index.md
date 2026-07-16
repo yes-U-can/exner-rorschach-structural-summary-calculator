@@ -38,6 +38,8 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-core-eb-family-202
 `EBPer` é a razão entre o lado maior e o lado menor de `EB`.
 Ela só é interpretada quando `EB` tem direção clara e ajuda a estimar quão fixa ou dominante essa preferência de coping se torna.
 
+Ela só é calculada quando todas as condições são atendidas: `EA >= 4.0`, `Lambda < 1.0` e diferença absoluta entre os dois lados de `EB` de pelo menos `2.0` quando `EA` está entre `4.0` e `10.0`, ou de pelo menos `2.5` quando `EA > 10.0`. Os dois lados devem ser maiores que zero para que o maior possa ser dividido pelo menor. Caso contrário, `EBPer` não é informado.
+
 ## Pontos de interpretação
 
 - `EBPer` mais baixo sugere estilo preferencial ainda com alguma flexibilidade.

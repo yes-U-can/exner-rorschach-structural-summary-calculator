@@ -38,6 +38,8 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 `EBPer` is the ratio between the larger and smaller sides of `EB`.
 It is interpreted only when `EB` has a clear direction, and it helps estimate how fixed or dominant that coping preference is.
 
+It is calculated only when all eligibility conditions are met: `EA >= 4.0`, `Lambda < 1.0`, and the absolute difference between the two sides of `EB` is at least `2.0` when `EA` is from `4.0` through `10.0`, or at least `2.5` when `EA > 10.0`. Both sides must be greater than zero so that the larger side can be divided by the smaller side. Otherwise, `EBPer` is not reported.
+
 ## Interpretation Points
 
 - Lower `EBPer` suggests that a preferred style exists but still keeps some flexibility.

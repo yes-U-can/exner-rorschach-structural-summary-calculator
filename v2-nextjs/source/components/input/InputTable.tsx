@@ -7,6 +7,7 @@ import type { RorschachResponse } from '@/types';
 import { useTranslation } from '@/hooks/useTranslation';
 import { useToast } from '@/components/ui/Toast';
 import { SCORING_CONFIG } from '@/lib/constants';
+import { classifyGPHR } from '@/lib/gphr';
 import { OPTIONS } from '@/lib/options';
 import {
   SCORING_CANVAS_DEFAULT_ZOOM,
@@ -184,48 +185,6 @@ function calculateZScore(response: RorschachResponse): number | null {
 
   const score = cardScores[response.z as keyof typeof cardScores];
   return typeof score === 'number' ? score : null;
-}
-
-// Simple GHR/PHR classification (for display only - actual calculation happens in calculator.ts)
-function classifyGPHR(response: RorschachResponse): string {
-  const humanContentCodes = SCORING_CONFIG.CODES.HUMAN_CONTENT_GPHR as readonly string[];
-  const humanMovementCodes = SCORING_CONFIG.CODES.HUMAN_MOVEMENT as readonly string[];
-  const animalMovementCodes = SCORING_CONFIG.CODES.ANIMAL_MOVEMENT as readonly string[];
-  const copOrAgCodes = SCORING_CONFIG.CODES.COP_OR_AG as readonly string[];
-  const fqGoodCodes = SCORING_CONFIG.CODES.FQ_GOOD as readonly string[];
-  const cognitiveSsBadCodes = SCORING_CONFIG.CODES.COGNITIVE_SS_BAD as readonly string[];
-  const agOrMorCodes = SCORING_CONFIG.CODES.AG_OR_MOR as readonly string[];
-  const fqBadCodes = SCORING_CONFIG.CODES.FQ_BAD as readonly string[];
-  const level2SsCodes = SCORING_CONFIG.CODES.LEVEL_2_SS as readonly string[];
-  const gphrPopularCards = SCORING_CONFIG.CODES.GPHR_POPULAR_CARDS as readonly string[];
-
-  const hasHumanContent = response.contents.some(c => humanContentCodes.includes(c));
-  const hasHumanMovement = response.determinants.some(d => humanMovementCodes.includes(d));
-  const hasAnimalMovement = response.determinants.some(d => animalMovementCodes.includes(d));
-  const hasCopOrAg = response.specialScores.some(s => copOrAgCodes.includes(s));
-
-  const isEligible = hasHumanContent || hasHumanMovement || (hasAnimalMovement && hasCopOrAg);
-  if (!isEligible) return '';
-
-  const isPureH = response.contents.includes('H');
-  const isGoodFQ = fqGoodCodes.includes(response.fq);
-  const hasBadCognitiveSS = response.specialScores.some(s => cognitiveSsBadCodes.includes(s));
-  const hasAgOrMor = response.specialScores.some(s => agOrMorCodes.includes(s));
-
-  if (isPureH && isGoodFQ && !hasBadCognitiveSS && !hasAgOrMor) {
-    return 'GHR';
-  }
-
-  const isBadFQ = fqBadCodes.includes(response.fq);
-  const hasLevel2SS = response.specialScores.some(s => level2SsCodes.includes(s));
-
-  if (isBadFQ || hasLevel2SS) return 'PHR';
-  if (response.specialScores.includes('COP') && !response.specialScores.includes('AG')) return 'GHR';
-  if (response.specialScores.includes('FABCOM1') || response.specialScores.includes('MOR') || response.contents.includes('An')) return 'PHR';
-  if (response.popular && gphrPopularCards.includes(response.card)) return 'GHR';
-  if (response.specialScores.includes('AG') || response.specialScores.includes('INCOM1') || response.specialScores.includes('DR1') || response.contents.includes('Hd')) return 'PHR';
-
-  return 'GHR';
 }
 
 export default function InputTable({

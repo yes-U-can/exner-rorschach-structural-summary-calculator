@@ -40,7 +40,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-affect-opening-fcc
 
 ## Core Definition
 
-`FC:CF+C` は有彩色反応の中で、形態と色彩がどう組み合わさっているかを示す比率です。
+`FC:CF+C` は `FC : (CF + C + Cn)` と表示し、各出現を同じ重みで数えます。有彩色反応の中で、形態と色彩がどう組み合わさっているかを示す比率です。
 解釈では、感情が形態で調整されやすいか、それとも直接放出されやすいかを見積もるのに使います。
 
 ## Interpretation Points
@@ -55,7 +55,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-affect-opening-fcc
 - 色彩反応が少ないプロトコルでは、この比率は安定しにくくなります。
 - `CF+C` 側が強いだけで、すぐに病理や衝動性と決めつけないでください。
 - `Pure C` は、より直接的な情動放出を示すことがあり、この比率だけでは十分に表れません。
-- route 名は `FC_CF_C` ですが、実際の解釈では `Cn` を含む広い情動文脈も確認します。
+- `Cn` を含めるのは、表示されるこの比率の右側だけです。`WSumC`、S-CON の比較 `CF+C > FC`、Color-Shading blend 数からは除外します。
 
 ## Cross References
 

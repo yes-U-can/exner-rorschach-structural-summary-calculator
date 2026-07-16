@@ -16,6 +16,12 @@ const shouldRun = process.env.OPENAI_ROUTE_LIVE_EVAL === '1' && Boolean(apiKey);
 const fixture = getAiHarnessEvalFixtures().find(
   (candidate) => candidate.id === 'interpretation-en-low-r-validity',
 );
+const codingFixture = getAiHarnessEvalFixtures().find(
+  (candidate) => candidate.id === 'coding-ko-vague-fq-needs-detail',
+);
+const missingAgeFixture = getAiHarnessEvalFixtures().find(
+  (candidate) => candidate.id === 'interpretation-ko-scon-age-missing',
+);
 const syntheticSummaryCsv = [
   'Zf,ZSum,ZEst,Zd,R,Lambda,EB,EA,EBPer,eb,es,AdjEs,D,AdjD,PTI,DEPI,CDI,SCON,HVI,OBS,GHR,PHR',
   "8,21.5,24,'-2.5,9,.80,2:1,3,2.00,3:5,8,6,-1,-1,0,0,0,0,0,0,2,3",
@@ -23,6 +29,10 @@ const syntheticSummaryCsv = [
 const detailedInterpretationSummaryCsv = [
   'Zf,ZSum,ZEst,Zd,R,Lambda,EB,EA,EBPer,eb,es,AdjEs,D,AdjD,PTI,DEPI,CDI,SCON,HVI,OBS,GHR,PHR',
   "12,43.5,38,'+5.5,15,.15,6:3.5,9.5,1.71,7:8,15,10,-2,0,2,5,2,0,0,0,3,3",
+].join('\n');
+const ageSensitiveInterpretationSummaryCsv = [
+  'Zf,ZSum,ZEst,Zd,R,Lambda,EB,EA,EBPer,eb,es,AdjEs,D,AdjD,PTI,DEPI,CDI,SCON,HVI,OBS,GHR,PHR',
+  "15,51,49,'+2.0,17,.55,7:4,11,1.75,1:2,3,3,3,3,0,5,1,8,6,1,5,4",
 ].join('\n');
 const detailedInterpretationPrompt = [
   '31세 여성입니다.',
@@ -51,6 +61,47 @@ function buildRouteRequest(args: {
       contextMessages: [],
       workflowContext: { structuralSummaryCsv: args.summaryCsv },
       lang: args.lang,
+    }),
+  });
+}
+
+function buildCodingRouteRequest() {
+  const session = createByokSession('openai', apiKey!);
+  const row = {
+    rowIndex: 0,
+    card: 'V',
+    responseMemo: '박쥐처럼 보였다고만 기록되어 있고, 사용 영역과 윤곽 적합성은 기록되지 않았습니다.',
+    existingCodes: {
+      location: '',
+      dq: '',
+      determinants: [],
+      fq: '',
+      pair: 'none',
+      contents: [],
+      popular: false,
+      z: '',
+      specialScores: [],
+    },
+  };
+
+  return new Request('http://localhost/api/chat', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-Chat-Stream-Protocol': CHAT_STREAM_PROTOCOL,
+      Cookie: `${getByokCookieName()}=${encodeURIComponent(encryptByokSession(session))}`,
+    },
+    body: JSON.stringify({
+      message: codingFixture!.userMessage,
+      mode: 'coding_assist',
+      contextMessages: [],
+      workflowContext: {
+        ...row,
+        focusRowIndex: 0,
+        selectedRowIndices: [0],
+        sheetRows: [row],
+      },
+      lang: 'ko',
     }),
   });
 }
@@ -122,6 +173,59 @@ describe.runIf(shouldRun)('OpenAI production-like chat route eval', () => {
     expect(output.length).toBeGreaterThan(1_200);
     expect(output).toMatch(/(?:[.!?。]|(?:다|요)[.!?]?)$/u);
   }, 240_000);
+
+  it('asks for age inside the interpretation conversation when an age-limited index requires it', async () => {
+    expect(missingAgeFixture).toBeDefined();
+    const response = await POST(buildRouteRequest({
+      message: missingAgeFixture!.userMessage,
+      summaryCsv: ageSensitiveInterpretationSummaryCsv,
+      lang: 'ko',
+    }));
+    const outputParts: string[] = [];
+    const terminal = await consumeChatEventStream(response.body!, (delta) => outputParts.push(delta));
+    const output = outputParts.join('').trim();
+    const contract = evaluateAiHarnessOutput(missingAgeFixture!, output);
+
+    console.info(JSON.stringify({
+      fixtureId: missingAgeFixture!.id,
+      status: response.status,
+      model: response.headers.get('X-Chat-Model-Id'),
+      workflow: response.headers.get('X-Chat-Workflow-Mode'),
+      terminalType: terminal.type,
+      outputChars: output.length,
+      issueTypes: contract.issues.map((issue) => issue.type),
+    }));
+
+    expect(response.status).toBe(200);
+    expect(response.headers.get('X-Chat-Workflow-Mode')).toBe('interpretation');
+    expect(terminal).toEqual({ type: 'complete' });
+    expect(contract.passed, contract.issues.map((issue) => issue.message).join('; ')).toBe(true);
+  }, 180_000);
+
+  it('completes the coding assistant through the real BYOK, retrieval, prompt, and stream path', async () => {
+    expect(codingFixture).toBeDefined();
+    const response = await POST(buildCodingRouteRequest());
+    const outputParts: string[] = [];
+    const terminal = await consumeChatEventStream(response.body!, (delta) => outputParts.push(delta));
+    const output = outputParts.join('').trim();
+    const contract = evaluateAiHarnessOutput(codingFixture!, output);
+
+    console.info(JSON.stringify({
+      fixtureId: codingFixture!.id,
+      status: response.status,
+      model: response.headers.get('X-Chat-Model-Id'),
+      workflow: response.headers.get('X-Chat-Workflow-Mode'),
+      terminalType: terminal.type,
+      outputChars: output.length,
+      issueTypes: contract.issues.map((issue) => issue.type),
+    }));
+
+    expect(response.status).toBe(200);
+    expect(response.headers.get('X-Chat-Model-Id')).toBe('gpt-5.5');
+    expect(response.headers.get('X-Chat-Workflow-Mode')).toBe('coding_assist');
+    expect(terminal).toEqual({ type: 'complete' });
+    expect(contract.passed, contract.issues.map((issue) => issue.message).join('; ')).toBe(true);
+  }, 180_000);
 });
 
 describe.skipIf(shouldRun)('OpenAI production-like chat route eval', () => {

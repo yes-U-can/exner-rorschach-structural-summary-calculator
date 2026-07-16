@@ -21,6 +21,18 @@ const v2SourceUrl = `${exhibitionRepoUrl}/tree/main/v2-nextjs/source`;
 
 export const v2NextVersions: VersionArchiveEntry[] = [
   {
+    version: 'v2.2.1',
+    title: 'Version 2.2.1',
+    series: 'v2-nextjs',
+    publishedAt: '2026-07-16',
+    releaseKind: 'hotfix',
+    releaseLabel: '핫픽스',
+    summary:
+      'Exner 원전, 2019 Excel, v1 GAS, v2, CHESSSS와 공개 완성 사례를 교차감사해 D/AdjD, EBPer, GHR/PHR, Cn 표시, 정의 불가 분모 처리를 교정하고 계산기와 연령 해석의 경계를 고정한 계산 정확성 핫픽스입니다.',
+    sourceUrl: v2SourceUrl,
+    releaseUrl: v2ReleaseUrl('v2.2.1'),
+  },
+  {
     version: 'v2.2.0',
     title: 'Version 2.2.0',
     series: 'v2-nextjs',

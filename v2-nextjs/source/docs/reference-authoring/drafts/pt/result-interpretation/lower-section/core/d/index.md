@@ -34,7 +34,8 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-core-d-family-2026
 
 ## Definição central
 
-`D` é a diferença entre `EA` e `es`.
+`D` não é a diferença bruta em si. Primeiro calcula-se `EA - es` e depois essa diferença é convertida na pontuação D escalonada. Uma diferença bruta entre `-2.5` e `+2.5`, inclusive, produz `D = 0`; fora desse intervalo, D muda uma unidade a cada `2.5` pontos brutos adicionais, preservando o sinal. A mesma regra continua além da tabela impressa habitual de `-5` a `+5` quando um protocolo extremo exige isso.
+
 Ela resume se os recursos disponíveis bastam para manejar o nível atual de demanda sem sobrecarga clara.
 
 ## Pontos de interpretação

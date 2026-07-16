@@ -37,7 +37,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretat
 
 ## Definición central
 
-`FC:CF+C` expresa como se relacionan forma y color en las respuestas cromáticas.
+`FC:CF+C` se muestra como `FC : (CF + C + Cn)`, contando cada aparición con el mismo peso. Expresa cómo se relacionan forma y color en las respuestas cromáticas.
 En interpretación, ayuda a ver si la emoción suele pasar por mayor control formal o si tiende a descargarse de modo más directo.
 
 ## Puntos de interpretación
@@ -52,7 +52,7 @@ En interpretación, ayuda a ver si la emoción suele pasar por mayor control for
 - Con pocas respuestas de color, la proporción puede ser inestable.
 - No debe confundirse una mayor presencia de `CF+C` con impulsividad patológica por sí sola.
 - `Pure C` puede mostrar una descarga afectiva más directa que no queda resumida del todo por esta proporción.
-- El nombre del route es `FC_CF_C`, pero la lectura clínica incluye la posición de `Cn` en las notas de fundamento.
+- `Cn` se incluye solo en el lado derecho de esta proporción mostrada. Se excluye de `WSumC`, de la comparación de S-CON `CF+C > FC` y del recuento de mezclas Color-Shading.
 
 ## Limites de interpretación aislada
 

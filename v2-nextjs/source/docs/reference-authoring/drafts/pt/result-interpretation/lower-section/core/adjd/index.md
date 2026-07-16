@@ -34,8 +34,9 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-core-d-family-2026
 
 ## Definição central
 
-`AdjD` é a diferença entre `EA` e `AdjEs`.
-Ele funciona como estimativa mais estável da margem de controle porque corrige parte da sobrecarga situacional associada a `m` e `Y`.
+`AdjD` não é a diferença bruta em si. Primeiro calcula-se `EA - AdjEs` e depois se aplica a mesma conversão escalonada de D: diferenças brutas entre `-2.5` e `+2.5`, inclusive, produzem `0`, e cada `2.5` pontos adicionais mudam AdjD uma unidade com o mesmo sinal. A sequência continua além da tabela impressa habitual de `-5` a `+5` quando necessário.
+
+Ele funciona como estimativa mais estável da margem de controle porque `AdjEs` remove de `es` todos salvo um `m` e um `Y`, reduzindo parte da sobrecarga situacional representada por esses determinantes.
 
 ## Pontos de interpretação
 

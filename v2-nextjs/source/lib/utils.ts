@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /**
- * Rorschach Calculator v2.2.0
+ * Rorschach Calculator v2.2.1
  * Utility Functions
  * 
  * Code.gs의 유틸리티 함수들을 TypeScript로 이전
@@ -33,27 +33,26 @@ export function fix2(n: number | string): string {
  * Zf 값에 해당하는 ZEst 값을 반환합니다.
  */
 export function zestFromZf(zf: number, zestTable: readonly (number | null)[]): number | null {
-  if (typeof zf !== 'number' || !Number.isFinite(zf)) return null;
+  if (typeof zf !== 'number' || !Number.isFinite(zf) || !Number.isInteger(zf)) return null;
   if (zf < 1 || zf > zestTable.length) return null;
-  return zestTable[zf - 1];
+  const value = zestTable[zf - 1];
+  return typeof value === 'number' && Number.isFinite(value) ? value : null;
 }
 
 /**
- * (EA - es) 값에 해당하는 D 점수(-5 ~ 5)를 계산합니다.
+ * (EA - es) 값을 2.5점 간격의 D 점수로 변환합니다.
  */
 export function dTable(
   x: number,
-  min: number = -15,
-  max: number = 15,
   divisor: number = 2.5,
-  offset: number = 0.25
 ): number | '-' {
-  if (x < min) return -5;
-  if (x > max) return 5;
   if (typeof x !== 'number' || !Number.isFinite(x)) return '-';
-  const score = x >= 0
-    ? Math.trunc((x - offset) / divisor)
-    : -Math.trunc(((-x) - offset) / divisor);
-  return Object.is(score, -0) ? 0 : score;
+  if (x >= -divisor && x <= divisor) return 0;
+
+  // The printed conversion table shows the usual -5..+5 range, but the
+  // underlying rule continues in 2.5-point units outside that range.
+  return x > divisor
+    ? Math.ceil((x - divisor) / divisor)
+    : -Math.ceil((Math.abs(x) - divisor) / divisor);
 }
 

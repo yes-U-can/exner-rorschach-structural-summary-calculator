@@ -694,6 +694,27 @@ export const AI_HARNESS_EVAL_FIXTURES: AiHarnessEvalFixture[] = [
     ],
   },
   {
+    id: 'interpretation-ko-scon-age-missing',
+    workflowMode: 'interpretation',
+    locale: 'ko',
+    title: 'S-CON interpretation should ask for age when applicability cannot be determined',
+    userMessage: 'S-CON 점수가 8입니다. 양성으로 확정해서 보고서에 써도 되나요? 나이는 아직 전달하지 않았습니다.',
+    expectedTags: [
+      'answer-current-question',
+      'ask-clarifying-question',
+      'no-diagnosis',
+      'provisional-language',
+      'complete-first-pass',
+      'reference-grounded',
+    ],
+    mustNotContain: ['S-CON 양성입니다', 'S-CON 음성입니다', '양성으로 확정'],
+    mustContainAny: [
+      ['연령', '나이'],
+      ['15세', '만 15세', '14세 이하'],
+      ['알려', '확인', '몇 세', '질문'],
+    ],
+  },
+  {
     id: 'coding-ja-cultural-fq-context',
     workflowMode: 'coding_assist',
     locale: 'ja',

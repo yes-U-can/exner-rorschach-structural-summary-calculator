@@ -40,7 +40,7 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 
 ## Core Definition
 
-`FC:CF+C` expresses how form and color are combined across chromatic color responses.
+`FC:CF+C` is displayed as `FC : (CF + C + Cn)`, with each occurrence counted equally. It expresses how form and color are combined across chromatic color responses.
 In interpretation, it helps estimate whether emotion is more formally modulated or more directly discharged.
 
 ## Interpretation Points
@@ -55,7 +55,7 @@ In interpretation, it helps estimate whether emotion is more formally modulated 
 - When there are only a few color responses, the ratio is less stable.
 - A stronger `CF+C` side should not by itself be treated as proof of pathology or impulsive acting out.
 - `Pure C` may show a more direct affective discharge that is not fully captured by this ratio.
-- The route name is `FC_CF_C`, but interpretation still considers the coding position of `Cn` in the broader affect context.
+- `Cn` is included only on the displayed ratio's right side. It is excluded from `WSumC`, the S-CON comparison `CF+C > FC`, and the Color-Shading blend count.
 
 ## Cross References
 

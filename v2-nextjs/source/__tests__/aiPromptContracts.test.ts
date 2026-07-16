@@ -50,6 +50,10 @@ describe('AI prompt contracts', () => {
     expect(prompt).toContain('you cannot determine dangerousness, legal risk, or forensic status');
     expect(prompt).toContain('Never substitute assumed, invented, hypothetical, or user-suggested values');
     expect(prompt).toContain('Do not transplant a norm statement or interpretive conclusion mechanically');
+    expect(prompt).toContain("The calculator itself does not require or collect the examinee's age.");
+    expect(prompt).toContain('Never present age as a requirement for calculation');
+    expect(prompt).toContain('In the interpretation conversation only, ask for age');
+    expect(prompt).toContain('do not request it routinely for age-independent calculations');
     expect(prompt).toContain('Some reference indices have age-limited applicability.');
     expect(prompt).toContain('do not label the index positive or negative');
     expect(prompt).toContain('For S-CON specifically, when the examinee is younger than 15');

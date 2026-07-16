@@ -38,6 +38,8 @@ provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretat
 `EBPer` es la proporción entre el lado mayor y el menor de `EB`.
 Solo se interpreta cuando `EB` tiene una dirección clara, y sirve para estimar cuán fija o dominante es esa preferencia de afrontamiento.
 
+Solo se calcula cuando se cumplen todas las condiciones: `EA >= 4.0`, `Lambda < 1.0` y una diferencia absoluta entre ambos lados de `EB` de al menos `2.0` si `EA` está entre `4.0` y `10.0`, o de al menos `2.5` si `EA > 10.0`. Ambos lados deben ser mayores que cero para poder dividir el mayor por el menor. Si no se cumplen estas condiciones, `EBPer` no se informa.
+
 ## Puntos de interpretación
 
 - Un `EBPer` bajo sugiere que el estilo preferente existe pero conserva cierta flexibilidad.

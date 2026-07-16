@@ -96,24 +96,20 @@ describe('published RIAP v5 calculation oracle', () => {
     expect(Object.is(dTable(-0.1), -0)).toBe(false);
   });
 
-  it('matches the original half-step D table and keeps all-F Lambda infinite', () => {
+  it('continues the half-step D conversion beyond the printed table and keeps all-F Lambda infinite', () => {
     const expectedD = (value: number) => {
-      if (value > 12.5) return 5;
-      if (value > 10) return 4;
-      if (value > 7.5) return 3;
-      if (value > 5) return 2;
-      if (value > 2.5) return 1;
-      if (value > -3) return 0;
-      if (value > -5.5) return -1;
-      if (value > -8) return -2;
-      if (value > -10.5) return -3;
-      if (value > -13) return -4;
-      return -5;
+      if (value >= -2.5 && value <= 2.5) return 0;
+      return value > 2.5
+        ? Math.ceil((value - 2.5) / 2.5)
+        : -Math.ceil((Math.abs(value) - 2.5) / 2.5);
     };
 
     for (let value = -20; value <= 20; value += 0.5) {
       expect(dTable(value)).toBe(expectedD(value));
     }
+
+    expect(dTable(-15.5)).toBe(-6);
+    expect(dTable(15.5)).toBe(6);
 
     const allPureF = PUBLISHED_RIAP_CASE.map((response) => ({
       ...response,
@@ -284,7 +280,7 @@ describe('published Tibon Czopp et al. calculation oracle', () => {
       R: 21,
       Lambda: '0.24',
       Blends_R: '9 : 21',
-      FC_CF_C: '2 : 4',
+      FC_CF_C: '2 : 5',
       PureC: 0,
       a_p: '7 : 7',
       SumCprime: 2,
@@ -308,10 +304,9 @@ describe('published Tibon Czopp et al. calculation oracle', () => {
       INCOM2: 1,
     });
 
-    // The corrigendum prints FC:CF+C=2:5, while the published score sequence
-    // contains four CF codes and one Cn. Cn is not part of WSumC, so this test
-    // preserves the sequence-derived 2:4 and records the source discrepancy.
-    expect(result.data?.lower_section.FC_CF_C).toBe('2 : 4');
+    // The conventional label is FC:CF+C, but Cn belongs on the right side of
+    // this display ratio. It remains excluded from WSumC and S-CON criterion 7.
+    expect(result.data?.lower_section.FC_CF_C).toBe('2 : 5');
   });
 
   it('keeps aggregate results invariant when response rows are reordered', () => {
