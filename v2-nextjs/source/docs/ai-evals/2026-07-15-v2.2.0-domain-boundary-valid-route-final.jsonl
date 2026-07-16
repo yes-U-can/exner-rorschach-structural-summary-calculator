@@ -1,4 +1,4 @@
-{"type":"route_eval_start","startedAt":"2026-07-15T14:00:56.134Z","source":{"appVersion":"2.1.10","gitCommit":"f52a401e09267478a6448829b7983eb4eac8c92c","gitDirty":true}}
-{"type":"route_eval_result","fixtureId":"interpretation-en-low-r-validity","status":200,"model":"gpt-5.5","workflow":"interpretation","terminalType":"complete","outputChars":1178,"issueTypes":[],"source":{"appVersion":"2.1.10","gitCommit":"f52a401e09267478a6448829b7983eb4eac8c92c","gitDirty":true}}
-{"type":"route_eval_result","fixtureId":"interpretation-ko-detailed-completion","status":200,"model":"gpt-5.5","workflow":"interpretation","terminalType":"complete","outputChars":4024,"source":{"appVersion":"2.1.10","gitCommit":"f52a401e09267478a6448829b7983eb4eac8c92c","gitDirty":true}}
-{"type":"route_eval_summary","finishedAt":"2026-07-15T14:02:16.285Z","exitCode":0,"eventCount":2,"source":{"appVersion":"2.1.10","gitCommit":"f52a401e09267478a6448829b7983eb4eac8c92c","gitDirty":true}}
+{"type":"route_eval_start","startedAt":"2026-07-15T14:00:56.134Z","source":{"appVersion":"2.1.10"}}
+{"type":"route_eval_result","fixtureId":"interpretation-en-low-r-validity","status":200,"model":"gpt-5.5","workflow":"interpretation","terminalType":"complete","outputChars":1178,"issueTypes":[],"source":{"appVersion":"2.1.10"}}
+{"type":"route_eval_result","fixtureId":"interpretation-ko-detailed-completion","status":200,"model":"gpt-5.5","workflow":"interpretation","terminalType":"complete","outputChars":4024,"source":{"appVersion":"2.1.10"}}
+{"type":"route_eval_summary","finishedAt":"2026-07-15T14:02:16.285Z","exitCode":0,"eventCount":2,"source":{"appVersion":"2.1.10"}}

@@ -50,7 +50,7 @@ Na interpretação, ajuda a estimar se a emoção está mais formalmente modulad
 - Com poucas respostas de cor, a razão fica menos estável.
 - Lado `CF+C` mais forte não deve ser tratado, sozinho, como prova de patologia ou acting out impulsivo.
 - `Pure C` pode mostrar descarga afetiva mais direta que não fica totalmente captada por esta razão.
-- `Cn` entra apenas no lado direito desta razão exibida. Ele é excluído de `WSumC`, da comparação do S-CON `CF+C > FC` e da contagem de blends Color-Shading.
+- `Cn` é incluído apenas no lado direito da razão exibida. Ele é excluído de `WSumC`, da comparação separada do S-CON `CF+C > FC` e da contagem de blends Color-Shading.
 
 ## Referências cruzadas
 

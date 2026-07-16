@@ -304,8 +304,9 @@ describe('published Tibon Czopp et al. calculation oracle', () => {
       INCOM2: 1,
     });
 
-    // The conventional label is FC:CF+C, but Cn belongs on the right side of
-    // this display ratio. It remains excluded from WSumC and S-CON criterion 7.
+    // The conventional label is FC:CF+C, but the published completed summary
+    // confirms that Cn belongs on this display ratio's right side. WSumC and
+    // S-CON criterion 7 retain their own formulas and do not reuse this total.
     expect(result.data?.lower_section.FC_CF_C).toBe('2 : 5');
   });
 

@@ -105,6 +105,21 @@ describe('reference corpus artifacts', () => {
     expect(getReferenceRuntimeChunks('ko').length).toBeGreaterThan(0);
   });
 
+  it('preserves semantic section headings instead of relabeling them by position', () => {
+    const route = 'result-interpretation/lower-section/affect/FC_CF_C';
+    const spanishHeadings = getReferenceRuntimeChunks('es')
+      .filter((chunk) => chunk.canonicalRoute === route)
+      .map((chunk) => chunk.headingPath.at(-1));
+    const koreanHeadings = getReferenceRuntimeChunks('ko')
+      .filter((chunk) => chunk.canonicalRoute === route)
+      .map((chunk) => chunk.headingPath.at(-1));
+
+    expect(spanishHeadings).toContain('Variables relacionadas');
+    expect(spanishHeadings).toContain('Referencias cruzadas');
+    expect(spanishHeadings).toContain('Nota de evidencia');
+    expect(koreanHeadings.filter((heading) => heading === '근거 메모')).toHaveLength(1);
+  });
+
   it('aligns reference document rendering with the active runtime source per locale', () => {
     const route = findDocRouteByCanonicalRoute('scoring-input/dq/+');
     expect(route).toBeDefined();

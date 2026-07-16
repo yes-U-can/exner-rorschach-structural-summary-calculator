@@ -47,6 +47,8 @@ That is why `Cn` does not belong to the full chromatic family `C / CF / FC` as a
 - `Cn` should not be counted interpretively as if it were full chromatic color.
 - When in doubt, ask whether color makes it look like that, or whether the person is only describing an accessory feature.
 
+**Downstream calculation boundary:** The conventional lower-section label remains `FC:CF+C`, but this displayed ratio uses `FC:(CF+C+Cn)`. A coded `Cn` therefore increases the displayed right side by one. This display convention must not be reused as a general chromatic-color total: `WSumC`, S-CON criterion `CF+C > FC`, and Color-Shading blend counts exclude `Cn` and retain their own formulas.
+
 ## Cross References
 
 - [[Coding/Determinants] Determinants](ref://scoring-input/determinants)

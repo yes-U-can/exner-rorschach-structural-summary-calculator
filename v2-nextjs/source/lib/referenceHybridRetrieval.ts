@@ -79,6 +79,7 @@ const CODING_MERGE_CONFIG: RrfMergeConfig = {
 
 const BROAD_INTERPRETATION_ANCHOR_BONUS = 0.02;
 const EXPLICIT_CODING_INTENT_BONUS = 0.04;
+const EXPLICIT_CN_BOUNDARY_INTENT_BONUS = 0.05;
 
 const POPULAR_QUERY_PATTERNS = [
   /\bpopular(?:\s+response)?\b/iu,
@@ -91,6 +92,21 @@ const POPULAR_QUERY_PATTERNS = [
 
 function isExplicitPopularQuery(query: string): boolean {
   return POPULAR_QUERY_PATTERNS.some((pattern) => pattern.test(query));
+}
+
+function isExplicitCnCalculationBoundaryQuery(query: string): boolean {
+  // Use an ASCII code boundary so Korean/Japanese particles may immediately
+  // follow `Cn` without turning it into an unrelated English identifier.
+  if (!/(^|[^a-z0-9_])cn(?=$|[^a-z0-9_])/iu.test(query)) return false;
+
+  const boundarySignals = [
+    /wsumc/iu,
+    /s-?con/iu,
+    /color[\s-]*shading/iu,
+    /fc\s*:\s*cf\s*\+\s*c/iu,
+  ];
+
+  return boundarySignals.filter((pattern) => pattern.test(query)).length >= 2;
 }
 
 type MergeAccumulator<TItem> = {
@@ -238,8 +254,13 @@ function scoreCodingRerankBonus(query: string, item: CodingRuleChunk): number {
     isExplicitPopularQuery(query)
       ? EXPLICIT_CODING_INTENT_BONUS
       : 0;
+  const cnBoundaryBonus =
+    item.canonicalRoute?.toLowerCase() === 'scoring-input/determinants/cn' &&
+    isExplicitCnCalculationBoundaryQuery(query)
+      ? EXPLICIT_CN_BOUNDARY_INTENT_BONUS
+      : 0;
 
-  return titleBonus + tagBonus + routeTagBonus + intentBonus;
+  return titleBonus + tagBonus + routeTagBonus + intentBonus + cnBoundaryBonus;
 }
 
 export function rankMergedKnowledge(
@@ -568,14 +589,24 @@ export async function getHybridCodingRuleChunks(params: {
   const limit = params.limit ?? 6;
   const query = buildCodingAssistQuery(params.context);
   const codingChunks = getCodingRuleChunks(params.lang);
-  const explicitIntentItems = isExplicitPopularQuery(query)
+  const explicitPopularItems = isExplicitPopularQuery(query)
     ? codingChunks.filter(
         (item) => item.canonicalRoute?.toLowerCase() === 'scoring-input/popular',
       )
     : [];
+  const explicitCnBoundaryItems = isExplicitCnCalculationBoundaryQuery(query)
+    ? codingChunks.filter(
+        (item) =>
+          item.canonicalRoute?.toLowerCase() === 'scoring-input/determinants/cn' &&
+          /wsumc/iu.test(item.text) &&
+          /s-?con/iu.test(item.text) &&
+          /color[\s-]*shading/iu.test(item.text),
+      )
+    : [];
   const lexicalItems = deduplicateByKey(
     [
-      ...explicitIntentItems,
+      ...explicitCnBoundaryItems,
+      ...explicitPopularItems,
       ...selectCodingRuleChunks(params.context, params.lang, limit),
     ],
     (item) => item.canonicalRoute ?? item.id,

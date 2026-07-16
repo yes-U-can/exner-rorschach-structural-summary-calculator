@@ -19,7 +19,7 @@ describe('AI harness profiles', () => {
 
     expect(interpretation).toMatchObject({
       harnessVersion: AI_HARNESS_VERSION,
-      promptProfileId: 'sicp-default-v6',
+      promptProfileId: 'sicp-default-v7',
       responsePolicyId: 'interpretation-balanced-continuity-v5',
     });
     expect(codingAssist).toMatchObject({
@@ -50,7 +50,7 @@ describe('AI harness profiles', () => {
     applyAiHarnessHeaders(headers, profile);
 
     expect(headers.get('X-Chat-AI-Harness-Version')).toBe(AI_HARNESS_VERSION);
-    expect(headers.get('X-Chat-Prompt-Profile-Id')).toBe('sicp-default-v6');
+    expect(headers.get('X-Chat-Prompt-Profile-Id')).toBe('sicp-default-v7');
     expect(headers.get('X-Chat-Response-Policy-Id')).toBe('interpretation-balanced-continuity-v5');
   });
 

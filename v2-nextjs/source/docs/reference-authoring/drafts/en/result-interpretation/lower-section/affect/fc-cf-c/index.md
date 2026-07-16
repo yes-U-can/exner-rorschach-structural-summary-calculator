@@ -55,7 +55,7 @@ In interpretation, it helps estimate whether emotion is more formally modulated 
 - When there are only a few color responses, the ratio is less stable.
 - A stronger `CF+C` side should not by itself be treated as proof of pathology or impulsive acting out.
 - `Pure C` may show a more direct affective discharge that is not fully captured by this ratio.
-- `Cn` is included only on the displayed ratio's right side. It is excluded from `WSumC`, the S-CON comparison `CF+C > FC`, and the Color-Shading blend count.
+- `Cn` is included only on the displayed ratio's right side. It is excluded from `WSumC`, the separate S-CON comparison `CF+C > FC`, and the Color-Shading blend count.
 
 ## Cross References
 

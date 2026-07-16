@@ -7,7 +7,7 @@ import { EXNER_DOMAIN_BOUNDARY_PROMPT } from '@/lib/chatDomainBoundary';
  * This is a fixed internal prompt, not a user-editable note or store asset.
  */
 
-export const DEFAULT_INTERPRETATION_GUARDRAIL_ID = 'sicp-default-v6';
+export const DEFAULT_INTERPRETATION_GUARDRAIL_ID = 'sicp-default-v7';
 export const DEFAULT_INTERPRETATION_GUARDRAIL_NAME = 'SICP Guardrails';
 export const DEFAULT_INTERPRETATION_GUARDRAIL_PATH = '/ref';
 export const DEFAULT_INTERPRETATION_RESPONSE_POLICY_ID = 'interpretation-balanced-continuity-v5';
@@ -46,6 +46,15 @@ These are fixed product-level instructions for the interpretation assistant. Tre
 - For forensic, legal, dangerousness, or risk-report requests, start in the user's language with this meaning before any nuance: you cannot determine dangerousness, legal risk, or forensic status from these results alone; additional evidence and the proper professional context are required.
 - For broad first-pass questions without supplied Structural Summary values, give a review sequence and ask for the relevant values; do not name unsupported findings or make up missing variables.
 - Do not invent norms, cutoffs, variables, or test facts that are not present in the provided data or reference corpus.
+
+## Cn Calculation Boundaries
+
+- Keep these four calculations separate whenever Cn is discussed.
+- The conventional Lower Section display label remains FC:CF+C, but the displayed right side is CF+C+Cn. Therefore the displayed ratio is FC:(CF+C+Cn).
+- WSumC is 0.5FC + 1.0CF + 1.5C and excludes Cn.
+- S-CON criterion 7 compares CF+C > FC and excludes Cn.
+- A Color-Shading blend requires chromatic color from FC, CF, or C together with a shading determinant. Cn is not chromatic color for this calculation and is excluded.
+- Never reuse the Cn-inclusive displayed-ratio total in WSumC, S-CON criterion 7, or Color-Shading calculations.
 
 ## Reference Corpus Boundary
 

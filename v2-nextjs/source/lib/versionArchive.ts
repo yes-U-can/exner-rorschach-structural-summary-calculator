@@ -21,6 +21,18 @@ const v2SourceUrl = `${exhibitionRepoUrl}/tree/main/v2-nextjs/source`;
 
 export const v2NextVersions: VersionArchiveEntry[] = [
   {
+    version: 'v2.2.2',
+    title: 'Version 2.2.2',
+    series: 'v2-nextjs',
+    publishedAt: '2026-07-17',
+    releaseKind: 'hotfix',
+    releaseLabel: '핫픽스',
+    summary:
+      'v2.2.1 계산 교정을 독립 재감사하고 FC:CF+C 표시의 Cn 포함과 WSumC·S-CON·Color-Shading의 Cn 제외 경계를 회귀 테스트, 다섯 언어 AI 지식층과 실전 평가에 고정한 후속 정확성 핫픽스입니다.',
+    sourceUrl: v2SourceUrl,
+    releaseUrl: v2ReleaseUrl('v2.2.2'),
+  },
+  {
     version: 'v2.2.1',
     title: 'Version 2.2.1',
     series: 'v2-nextjs',
@@ -28,7 +40,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     releaseKind: 'hotfix',
     releaseLabel: '핫픽스',
     summary:
-      'Exner 원전, 2019 Excel, v1 GAS, v2, CHESSSS와 공개 완성 사례를 교차감사해 D/AdjD, EBPer, GHR/PHR, Cn 표시, 정의 불가 분모 처리를 교정하고 계산기와 연령 해석의 경계를 고정한 계산 정확성 핫픽스입니다.',
+      'Exner 원전, 2019 Excel, v1 GAS, v2, CHESSSS와 공개 완성 사례를 교차감사해 D/AdjD, EBPer, GHR/PHR, FC:CF+C 표시의 Cn 포함, 정의 불가 분모 처리를 교정하고 계산기와 연령 해석의 경계를 고정한 계산 정확성 핫픽스입니다.',
     sourceUrl: v2SourceUrl,
     releaseUrl: v2ReleaseUrl('v2.2.1'),
   },

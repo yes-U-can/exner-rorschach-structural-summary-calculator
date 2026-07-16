@@ -20,6 +20,12 @@ export const INTERPRETATION_SECURITY_EVAL_CANARY =
   'SICP-EVAL-CANARY-INTERPRETATION-71E9';
 export const CODING_SECURITY_EVAL_CANARY = 'SICP-EVAL-CANARY-CODING-4A2C';
 
+export type AiEvalNearbyExpectation = {
+  label: string;
+  termGroups: string[][];
+  maxChars?: number;
+};
+
 export type AiHarnessEvalFixture = {
   id: string;
   workflowMode: AiWorkflowMode;
@@ -29,6 +35,7 @@ export type AiHarnessEvalFixture = {
   expectedTags: AiEvalExpectationTag[];
   mustNotContain: string[];
   mustContainAny?: string[][];
+  mustContainNearby?: AiEvalNearbyExpectation[];
 };
 
 export const AI_HARNESS_EVAL_FIXTURES: AiHarnessEvalFixture[] = [
@@ -950,6 +957,159 @@ export const AI_HARNESS_EVAL_FIXTURES: AiHarnessEvalFixture[] = [
       ['Exner', 'Sistema Compreensivo', 'CS'],
       ['limitado', 'escopo', 'não oferece', 'não posso', 'não realizo'],
       ['codificação', 'Sumário Estrutural'],
+    ],
+  },
+  {
+    id: 'coding-en-cn-lower-ratio-boundary',
+    workflowMode: 'coding_assist',
+    locale: 'en',
+    title: 'Cn calculation boundaries should remain separated',
+    userMessage: 'In the Exner CS, explain exactly how Cn affects the displayed lower-section FC:CF+C ratio, WSumC, S-CON criterion CF+C>FC, and Color-Shading blends.',
+    expectedTags: [
+      'answer-current-question',
+      'complete-first-pass',
+      'reference-grounded',
+    ],
+    mustNotContain: [
+      'Cn is excluded from the displayed ratio',
+      'Cn is excluded from FC:CF+C',
+      'the displayed ratio does not include Cn',
+      'the FC:CF+C ratio does not include Cn',
+      'Cn does not change the displayed ratio',
+      'WSumC includes Cn',
+      'S-CON includes Cn',
+      'Color-Shading includes Cn',
+    ],
+    mustContainAny: [
+      ['FC:(CF+C+Cn)', 'FC : (CF + C + Cn)', 'FC:CF+C+Cn', 'FC : CF+C+Cn', 'CF+C+Cn', 'CF + C + Cn'],
+    ],
+    mustContainNearby: [
+      {
+        label: 'WSumC excludes Cn',
+        termGroups: [['WSumC'], ['Cn'], ['excludes', 'excluded', 'does not include', 'not included', 'does not enter', 'not counted', 'does not count', 'not added', 'left out']],
+      },
+      {
+        label: 'S-CON excludes Cn',
+        termGroups: [['S-CON'], ['Cn'], ['excludes', 'excluded', 'does not include', 'not included', 'does not enter', 'not counted', 'does not count', 'not added', 'left out']],
+      },
+      {
+        label: 'Color-Shading excludes Cn',
+        termGroups: [['Color-Shading'], ['Cn'], ['excludes', 'excluded', 'does not include', 'not included', 'does not enter', 'not counted', 'does not count', 'not added', 'left out']],
+      },
+    ],
+  },
+  {
+    id: 'coding-ko-cn-calculation-boundaries',
+    workflowMode: 'coding_assist',
+    locale: 'ko',
+    title: 'Cn의 네 계산 경계를 분리해 설명해야 함',
+    userMessage: 'Cn이 하단의 FC:CF+C 화면 비율, WSumC, S-CON의 CF+C>FC 조건, Color-Shading blend에 각각 어떻게 반영되는지 정확히 설명해줘.',
+    expectedTags: ['answer-current-question', 'complete-first-pass', 'reference-grounded'],
+    mustNotContain: [
+      '화면 비율에서 Cn을 제외',
+      'WSumC에 Cn을 포함',
+      'S-CON에 Cn을 포함',
+      'Color-Shading에 Cn을 포함',
+    ],
+    mustContainAny: [
+      ['FC:(CF+C+Cn)', 'FC : (CF + C + Cn)', 'FC:CF+C+Cn', 'FC : CF+C+Cn', 'CF+C+Cn', 'CF + C + Cn'],
+    ],
+    mustContainNearby: [
+      { label: 'WSumC에서 Cn 제외', termGroups: [['WSumC'], ['Cn'], ['제외', '포함하지', '들어가지', '더하지', '세지 않', '빠집']] },
+      { label: 'S-CON에서 Cn 제외', termGroups: [['S-CON'], ['Cn'], ['제외', '포함하지', '들어가지', '더하지', '세지 않', '빠집']] },
+      { label: 'Color-Shading에서 Cn 제외', termGroups: [['Color-Shading'], ['Cn'], ['제외', '포함하지', '들어가지', '더하지', '세지 않', '빠집']] },
+    ],
+  },
+  {
+    id: 'coding-ja-cn-calculation-boundaries',
+    workflowMode: 'coding_assist',
+    locale: 'ja',
+    title: 'Cnの4つの計算境界を分けて説明する',
+    userMessage: 'Cn が下段の FC:CF+C 表示比率、WSumC、S-CON の CF+C>FC 条件、Color-Shading blend にそれぞれどう反映されるか正確に説明してください。',
+    expectedTags: ['answer-current-question', 'complete-first-pass', 'reference-grounded'],
+    mustNotContain: [
+      '表示比率から Cn を除外',
+      '表示比率からCnを除外',
+      'WSumC に Cn を含めます',
+      'WSumCにCnを含めます',
+      'S-CON に Cn を含めます',
+      'S-CONにCnを含めます',
+      'Color-Shading に Cn を含めます',
+      'Color-ShadingにCnを含めます',
+    ],
+    mustContainAny: [
+      ['FC:(CF+C+Cn)', 'FC : (CF + C + Cn)', 'FC:CF+C+Cn', 'FC : CF+C+Cn', 'CF+C+Cn', 'CF + C + Cn'],
+    ],
+    mustContainNearby: [
+      { label: 'WSumC excludes Cn', termGroups: [['WSumC'], ['Cn'], ['除外', '対象外', '含めません', '含まれません', '含めない', '加えません', '加算しません', '加算されません', '加算対象にはなりません', '算入しません', '算入されません', '入りません', '入れません', '入れない', '数えません', '数えない', 'カウントしません', 'カウントしない', '足しません', '足さない', '反映しません', '反映されません', '使いません', '使わない', '用いません', '用いない']] },
+      { label: 'S-CON excludes Cn', termGroups: [['S-CON'], ['Cn'], ['除外', '対象外', '含めません', '含まれません', '含めない', '加えません', '加算しません', '加算されません', '加算対象にはなりません', '算入しません', '算入されません', '入りません', '入れません', '入れない', '数えません', '数えない', 'カウントしません', 'カウントしない', '足しません', '足さない', '反映しません', '反映されません', '使いません', '使わない', '用いません', '用いない']] },
+      { label: 'Color-Shading excludes Cn', termGroups: [['Color-Shading'], ['Cn'], ['除外', '対象外', '含めません', '含まれません', '含めない', '加えません', '加算しません', '加算されません', '加算対象にはなりません', '算入しません', '算入されません', '入りません', '入れません', '入れない', '数えません', '数えない', 'カウントしません', 'カウントしない', '足しません', '足さない', '反映しません', '反映されません', '使いません', '使わない', '用いません', '用いない']] },
+    ],
+  },
+  {
+    id: 'coding-es-cn-calculation-boundaries',
+    workflowMode: 'coding_assist',
+    locale: 'es',
+    title: 'Los cuatro límites de cálculo de Cn deben mantenerse separados',
+    userMessage: 'Explica exactamente cómo afecta Cn a la razón mostrada FC:CF+C de la sección inferior, a WSumC, al criterio CF+C>FC de S-CON y a los blends Color-Shading.',
+    expectedTags: ['answer-current-question', 'complete-first-pass', 'reference-grounded'],
+    mustNotContain: [
+      'Cn se excluye de la razón mostrada',
+      'WSumC incluye Cn',
+      'S-CON incluye Cn',
+      'Color-Shading incluye Cn',
+    ],
+    mustContainAny: [
+      ['FC:(CF+C+Cn)', 'FC : (CF + C + Cn)', 'FC:CF+C+Cn', 'FC : CF+C+Cn', 'CF+C+Cn', 'CF + C + Cn'],
+    ],
+    mustContainNearby: [
+      { label: 'WSumC excluye Cn', termGroups: [['WSumC'], ['Cn'], ['excluye', 'excluido', 'excluyendo', 'no se incluye', 'no incluye', 'no entra', 'no se suma', 'no cuenta', 'sin sumar', 'sin añadir', 'fuera de']] },
+      { label: 'S-CON excluye Cn', termGroups: [['S-CON'], ['Cn'], ['excluye', 'excluido', 'excluyendo', 'no se incluye', 'no incluye', 'no entra', 'no se suma', 'no cuenta', 'sin sumar', 'sin añadir', 'fuera de']] },
+      { label: 'Color-Shading excluye Cn', termGroups: [['Color-Shading'], ['Cn'], ['excluye', 'excluido', 'excluyendo', 'no se incluye', 'no incluye', 'no entra', 'no se suma', 'no cuenta', 'sin sumar', 'sin añadir', 'fuera de']] },
+    ],
+  },
+  {
+    id: 'coding-pt-cn-calculation-boundaries',
+    workflowMode: 'coding_assist',
+    locale: 'pt',
+    title: 'Os quatro limites de cálculo de Cn devem permanecer separados',
+    userMessage: 'Explique exatamente como Cn afeta a razão exibida FC:CF+C da seção inferior, o WSumC, o critério CF+C>FC do S-CON e os blends Color-Shading.',
+    expectedTags: ['answer-current-question', 'complete-first-pass', 'reference-grounded'],
+    mustNotContain: [
+      'Cn é excluído da razão exibida',
+      'WSumC inclui Cn',
+      'S-CON inclui Cn',
+      'Color-Shading inclui Cn',
+    ],
+    mustContainAny: [
+      ['FC:(CF+C+Cn)', 'FC : (CF + C + Cn)', 'FC:CF+C+Cn', 'FC : CF+C+Cn', 'CF+C+Cn', 'CF + C + Cn'],
+    ],
+    mustContainNearby: [
+      { label: 'WSumC exclui Cn', termGroups: [['WSumC'], ['Cn'], ['exclui', 'excluído', 'excluindo', 'não se inclui', 'não inclui', 'não entra', 'não se soma', 'não conta', 'sem somar', 'sem adicionar', 'fora de']] },
+      { label: 'S-CON exclui Cn', termGroups: [['S-CON'], ['Cn'], ['exclui', 'excluído', 'excluindo', 'não se inclui', 'não inclui', 'não entra', 'não se soma', 'não conta', 'sem somar', 'sem adicionar', 'fora de']] },
+      { label: 'Color-Shading exclui Cn', termGroups: [['Color-Shading'], ['Cn'], ['exclui', 'excluído', 'excluindo', 'não se inclui', 'não inclui', 'não entra', 'não se soma', 'não conta', 'sem somar', 'sem adicionar', 'fora de']] },
+    ],
+  },
+  {
+    id: 'interpretation-en-cn-lower-ratio-boundary',
+    workflowMode: 'interpretation',
+    locale: 'en',
+    title: 'Interpretation should calculate the displayed FC:CF+C with Cn',
+    userMessage: 'The summary has FC=2, CF=4, C=0, and Cn=1. Should the lower-section FC:CF+C display be 2:5 or 2:4, and why?',
+    expectedTags: [
+      'answer-current-question',
+      'complete-first-pass',
+      'reference-grounded',
+    ],
+    mustNotContain: [
+      'the ratio is 2:4',
+      'the ratio is 2 : 4',
+      'the display should be 2:4',
+      'the display should be 2 : 4',
+      'Cn is excluded from FC:CF+C',
+    ],
+    mustContainAny: [
+      ['2:5', '2 : 5'],
     ],
   },
 ];

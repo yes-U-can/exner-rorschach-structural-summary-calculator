@@ -234,26 +234,43 @@ export function buildSupportingInterpretationChunks(args: {
       .filter((doc) => interpretationRoutes.includes(doc.canonicalRoute))
       .map((doc) => [doc.canonicalRoute, doc]),
   );
+  const runtimeChunks = getReferenceRuntimeChunks(args.lang)
+    .filter((chunk) => interpretationRoutes.includes(chunk.canonicalRoute));
 
-  const candidates = interpretationRoutes
-    .map((route) => {
-      const doc = docsByRoute.get(route);
-      if (!doc) return null;
+  const candidates: CodingRuleChunk[] = runtimeChunks.map((chunk) => {
+    const doc = docsByRoute.get(chunk.canonicalRoute);
+    const sectionLabel = chunk.headingPath.at(-1) ?? chunk.canonicalRoute;
 
-      return {
-        id: `${args.lang}:support:${route}`,
-        title: doc.title,
-        text: doc.excerpt || doc.bodyText,
-        canonicalRoute: doc.canonicalRoute,
-        relatedRoutes: doc.relatedRoutes,
-        routeScope: 'secondary' as const,
-        categoryTags: [
-          ...doc.canonicalRoute.split('/'),
-          ...doc.aliases,
-        ],
-      };
-    })
-    .filter((chunk): chunk is NonNullable<typeof chunk> => Boolean(chunk));
+    return {
+      id: `${args.lang}:support:${chunk.chunkId}`,
+      title: doc ? `${doc.title} / ${sectionLabel}` : sectionLabel,
+      text: chunk.text,
+      canonicalRoute: chunk.canonicalRoute,
+      relatedRoutes: chunk.relatedRoutes,
+      routeScope: 'secondary',
+      categoryTags: [
+        ...chunk.canonicalRoute.split('/'),
+        ...chunk.headingPath,
+        ...chunk.aliases,
+      ],
+    };
+  });
+
+  for (const route of interpretationRoutes) {
+    if (candidates.some((chunk) => chunk.canonicalRoute === route)) continue;
+    const doc = docsByRoute.get(route);
+    if (!doc) continue;
+
+    candidates.push({
+      id: `${args.lang}:support:${route}`,
+      title: doc.title,
+      text: doc.excerpt || doc.bodyText,
+      canonicalRoute: doc.canonicalRoute,
+      relatedRoutes: doc.relatedRoutes,
+      routeScope: 'secondary',
+      categoryTags: [...doc.canonicalRoute.split('/'), ...doc.aliases],
+    });
+  }
 
   if (!candidates.length) {
     return [];

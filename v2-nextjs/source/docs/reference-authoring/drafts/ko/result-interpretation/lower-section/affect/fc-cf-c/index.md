@@ -50,7 +50,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - 유채색 반응이 아주 적으면 비율 자체가 쉽게 흔들린다.
 - `FC:CF+C`가 조절 양식을 보여 준다고 해서 곧바로 성숙성이나 충동성으로 단정하지 않는다.
 - `Pure C`가 있으면 비율만으로는 포착되지 않는 즉시적 정서 방출이 섞일 수 있다.
-- `Cn`은 화면에 표시하는 이 비율의 오른쪽에만 포함한다. `WSumC`, S-CON의 `CF+C > FC` 조건, Color-Shading blend 수에서는 제외한다.
+- `Cn`은 화면에 표시하는 이 비율의 오른쪽에만 포함한다. `WSumC`, 별도 규칙인 S-CON의 `CF+C > FC` 조건, Color-Shading blend 수에서는 제외한다.
 
 ## 상호 참조
 
@@ -59,16 +59,5 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 
 ## 근거 메모
 
-- `Pure C`
-- `SumC / WSumC`
-- `Afr`
-- `EB`
-- `EA`
-
-## 근거 메모
-
-이 문서는 서비스 운영용 참조 코퍼스로 정리된 런타임 문서입니다.
-
-## 근거 메모
-
+- 이 문서는 서비스 운영용 참조 코퍼스로 정리된 런타임 문서입니다.
 - 표기 체계와 `Cn` 처리 메모는 provenance note에 분리했다.

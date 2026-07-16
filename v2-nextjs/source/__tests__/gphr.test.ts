@@ -28,9 +28,13 @@ describe('shared GHR/PHR decision sequence', () => {
     expect(classifyGPHR(response({ specialScores: ['MOR'] }))).not.toBe('GHR');
   });
 
-  it('applies Step 2 to poor or absent FQ', () => {
+  it('applies Step 2 to poor FQ or explicit FQnone', () => {
     expect(classifyGPHR(response({ fq: '-' }))).toBe('PHR');
     expect(classifyGPHR(response({ determinants: ['C'], fq: 'none' }))).toBe('PHR');
+  });
+
+  it('does not classify an eligible but unfinished row with blank FQ', () => {
+    expect(classifyGPHR(response({ fq: '' }))).toBe('');
   });
 
   it.each(['ALOG', 'CONTAM', 'DV2', 'INCOM2', 'DR2', 'FABCOM2'])(

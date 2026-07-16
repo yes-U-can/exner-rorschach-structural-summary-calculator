@@ -415,10 +415,8 @@ html.theme-switching [data-theme-allow-transition]::after {
     min-width: 0;
     overflow: hidden;
     border-right: 1px solid var(--border-subtle);
-    background-color: color-mix(in srgb, var(--surface-base) 92%, transparent);
+    background-color: var(--surface-base);
     box-shadow: inset -1px 0 0 rgb(255 255 255 / 0.28);
-    backdrop-filter: blur(28px) saturate(140%);
-    -webkit-backdrop-filter: blur(28px) saturate(140%);
     transition:
       width 300ms cubic-bezier(0.4, 0, 0.2, 1),
       box-shadow 280ms ease,
@@ -427,7 +425,7 @@ html.theme-switching [data-theme-allow-transition]::after {
   }
 
   html.dark .ui-app-sidebar {
-    background-color: color-mix(in srgb, var(--surface-base) 88%, transparent);
+    background-color: var(--surface-base);
     box-shadow: inset -1px 0 0 rgb(255 255 255 / 0.08);
   }
 
@@ -722,10 +720,8 @@ html.theme-switching [data-theme-allow-transition]::after {
     width: min(310px, calc(100vw - 2rem));
     height: 100dvh;
     border-right: 1px solid var(--border-subtle);
-    background-color: color-mix(in srgb, var(--surface-base) 92%, transparent);
+    background-color: var(--surface-base);
     box-shadow: 18px 0 42px rgb(15 23 42 / 0.18);
-    backdrop-filter: blur(28px) saturate(140%);
-    -webkit-backdrop-filter: blur(28px) saturate(140%);
   }
 
   .ui-shortcuts-backdrop {

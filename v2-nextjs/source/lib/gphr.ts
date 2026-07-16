@@ -22,6 +22,9 @@ export function classifyGPHR(response: RorschachResponse): GphrClassification {
   const isEligible = hasHumanContent || hasHumanMovement || (hasAnimalMovement && hasCopOrAg);
 
   if (!isEligible) return '';
+  // A blank value is an unfinished row, not the explicit Exner FQnone code.
+  // Do not let incomplete input fall through to the final GHR rule.
+  if (!response.fq.trim()) return '';
 
   const isGoodFQ = SCORING_CONFIG.CODES.FQ_GOOD.includes(response.fq as never);
   const isBadFQ = SCORING_CONFIG.CODES.FQ_BAD.includes(response.fq as never);

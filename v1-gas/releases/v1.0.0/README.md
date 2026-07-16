@@ -9,6 +9,8 @@
 | Release type | 메이저 패치 |
 | GAS deployment | [Open GAS app](https://script.google.com/macros/s/AKfycbxYTxqKcmRNJhpE8eCGTBZPyUFVJIRQiUTbyW48lJKg2E7Bgc5RKSitdDTVcE3bzk07JA/exec) |
 
+> **2026-07-17 계보 보충:** 초기 v1 구현은 공개 배포된 2019 Excel scoring workbook의 셀 수식과 Jeremy Leader의 [RorScore](https://github.com/jleader/RorScore)를 학습 참고 자료로 삼았습니다. 이 파일들은 코드를 만들 수 있다는 출발점과 계산 구조를 이해하는 데 도움을 주었지만 단독 정답으로 복사하지 않았습니다. 이후 확인된 Excel·RorScore·v1·v2 사이의 차이와 교정 범위는 [Acknowledgements](../../../ACKNOWLEDGEMENTS.md)와 [v2.2.2 계산 정확성 재감사](../../../v2-nextjs/releases/v2.2.2/)에 공개했습니다. 아래 내용과 소스는 당시 기록으로 보존합니다.
+
 ## Patch Notes
 
 # 안내
@@ -23,11 +25,11 @@
 
 이제까지 여러 전문가 선생님들의 노력이 있었습니다.
 
-제가 기억하기로 .exe 파일 형태로 배포되던 프로그램부터,
+당시에는 .exe 파일 형태로 배포되던 프로그램부터,
 
 엑셀 매크로를 활용하여 구조 요약지를 출력해주는 시트를 만들어주신 분도 계십니다.
 
-저는  구글앱스크립트(GAS)라는 도구를 이용하여,
+이 프로젝트는 구글앱스크립트(GAS)라는 도구를 이용하여,
 
 컴퓨터에 별도의 설치 과정이 필요없는 웹앱 형태로 제작해 보았으니 널리 사용해주세요.
 

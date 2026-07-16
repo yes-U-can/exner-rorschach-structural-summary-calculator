@@ -47,6 +47,8 @@ Por eso `Cn` no entra en la familia cromática `C / CF / FC` como código de col
 - `Cn` no se incorpora a recuentos interpretativos como si fuera color cromático pleno.
 - Cuando exista duda, la pregunta clave es si el color hace que eso parezca eso o si el sujeto solo está describiendo un rasgo accesorio.
 
+**Límite de cálculo posterior:** La etiqueta convencional de la sección inferior sigue siendo `FC:CF+C`, pero la proporción mostrada usa `FC:(CF+C+Cn)`. Por tanto, un `Cn` codificado aumenta en uno el lado derecho mostrado. Esta convención de presentación no debe reutilizarse como total cromático general: `WSumC`, el criterio de S-CON `CF+C > FC` y los recuentos Color-Shading excluyen `Cn` y conservan sus propias fórmulas.
+
 ## Referencias cruzadas
 
 - [[Codificación/Determinantes] Determinants](ref://scoring-input/determinants)

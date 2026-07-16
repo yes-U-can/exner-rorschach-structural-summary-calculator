@@ -46,6 +46,8 @@ Por isso `Cn` não pertence a família completa `C / CF / FC` como código pleno
 - Uma menção casual de cor não deve ser inflada para `FC` ou `CF` se a resposta não depender dela.
 - `Cn` não deve ser contado interpretativamente como se fosse cor cromática plena.
 
+**Limite do cálculo posterior:** O rótulo convencional da Lower Section permanece `FC:CF+C`, mas a razão exibida usa `FC:(CF+C+Cn)`. Portanto, um `Cn` codificado aumenta em um o lado direito exibido. Essa convenção de exibição não deve ser reutilizada como total cromático geral: `WSumC`, o critério de S-CON `CF+C > FC` e as contagens Color-Shading excluem `Cn` e mantêm fórmulas próprias.
+
 ## Referências cruzadas
 
 - [[Codificação/Determinantes] Determinantes](ref://scoring-input/determinants)

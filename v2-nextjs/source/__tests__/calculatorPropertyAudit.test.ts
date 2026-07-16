@@ -438,7 +438,7 @@ function auditExpected(protocol: RorschachResponse[]) {
       Xu_percent: fixed2(Xu),
       a_p: `${active} : ${passive}`,
       Ma_Mp: `${Ma} : ${Mp}`,
-      FC_CF_C: `${FC} : ${CF + Cn + C}`,
+      FC_CF_C: `${FC} : ${CF + C + Cn}`,
       _3r_2_R: fixed2(ego),
       ISO_Index: fixed2(isolate),
     },

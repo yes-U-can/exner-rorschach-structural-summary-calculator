@@ -444,4 +444,44 @@ describe('referenceHybridRetrieval', () => {
     expect(result.items[0]?.canonicalRoute).toBe('scoring-input/popular');
     expect(result.trace[0]?.rerankBonus).toBeGreaterThan(0.03);
   });
+
+  it.each([
+    ['ko' as const, 'Cn이 FC:CF+C 화면 비율, WSumC, S-CON, Color-Shading에 어떻게 반영돼?'],
+    ['en' as const, 'How does Cn affect FC:CF+C, WSumC, S-CON, and Color-Shading?'],
+    ['ja' as const, 'Cn は FC:CF+C、WSumC、S-CON、Color-Shading にどう反映されますか。'],
+    ['es' as const, '¿Cómo afecta Cn a FC:CF+C, WSumC, S-CON y Color-Shading?'],
+    ['pt' as const, 'Como Cn afeta FC:CF+C, WSumC, S-CON e Color-Shading?'],
+  ])('anchors the explicit %s Cn calculation-boundary query to the complete Cn rule', async (lang, responseMemo) => {
+    const result = await getHybridCodingRuleChunks({
+      context: {
+        rowIndex: 0,
+        focusRowIndex: 0,
+        selectedRowIndices: [0],
+        card: 'VIII',
+        responseMemo,
+        existingCodes: {
+          location: '',
+          dq: '',
+          determinants: ['Cn'],
+          fq: '',
+          pair: '',
+          contents: [],
+          popular: false,
+          z: '',
+          specialScores: [],
+        },
+        sheetRows: [],
+      },
+      lang,
+      provider: 'openai',
+      apiKey: 'unused-in-lexical-fallback',
+      limit: 6,
+    });
+
+    expect(result.mode).toBe('lexical');
+    expect(result.items[0]?.canonicalRoute).toBe('scoring-input/determinants/Cn');
+    expect(result.items[0]?.text).toMatch(/WSumC/u);
+    expect(result.items[0]?.text).toMatch(/S-CON/u);
+    expect(result.items[0]?.text).toMatch(/Color-Shading/iu);
+  });
 });

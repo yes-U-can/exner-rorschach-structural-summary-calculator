@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-07-16T06:25:10.216Z",
+  "generatedAt": "2026-07-16T20:54:45.253Z",
   "providers": [
     "openai"
   ],
   "corpus": {
-    "generatedAt": "2026-07-16T02:05:02.825Z",
-    "fingerprint": "4510bd75cd602a5e310f753a9c335a51290df7533f23181eb0edda7050edf438",
+    "generatedAt": "2026-07-16T20:31:19.653Z",
+    "fingerprint": "66206fa07cbc4ade9f56bdc874acbb545ee183898f62beda1bfcb0be27e8dd5a",
     "chunkCounts": {
-      "ko": 1405,
+      "ko": 1403,
       "en": 1283,
       "ja": 1283,
-      "es": 1406,
+      "es": 1405,
       "pt": 1255
     }
   },
@@ -34,17 +34,17 @@
       "provider": "openai",
       "embeddingModel": "text-embedding-3-large",
       "dimensions": 3072,
-      "totalEmbeddings": 6632,
-      "latestRefreshedAt": "2026-07-16T06:25:08.382Z",
+      "totalEmbeddings": 6629,
+      "latestRefreshedAt": "2026-07-16T20:54:34.559Z",
       "locales": {
         "ko": {
           "locale": "ko",
-          "chunkCount": 1405,
-          "embeddedChunkCount": 1405,
+          "chunkCount": 1403,
+          "embeddedChunkCount": 1403,
           "dimensions": 3072,
           "staleEmbeddingCount": 0,
           "ready": true,
-          "latestRefreshedAt": "2026-07-16T06:22:59.419Z"
+          "latestRefreshedAt": "2026-07-16T20:54:34.559Z"
         },
         "en": {
           "locale": "en",
@@ -53,7 +53,7 @@
           "dimensions": 3072,
           "staleEmbeddingCount": 0,
           "ready": true,
-          "latestRefreshedAt": "2026-07-16T06:23:33.493Z"
+          "latestRefreshedAt": "2026-07-16T20:45:17.013Z"
         },
         "ja": {
           "locale": "ja",
@@ -62,16 +62,16 @@
           "dimensions": 3072,
           "staleEmbeddingCount": 0,
           "ready": true,
-          "latestRefreshedAt": "2026-07-16T06:24:06.513Z"
+          "latestRefreshedAt": "2026-07-16T20:45:57.194Z"
         },
         "es": {
           "locale": "es",
-          "chunkCount": 1406,
-          "embeddedChunkCount": 1406,
+          "chunkCount": 1405,
+          "embeddedChunkCount": 1405,
           "dimensions": 3072,
           "staleEmbeddingCount": 0,
           "ready": true,
-          "latestRefreshedAt": "2026-07-16T06:24:40.779Z"
+          "latestRefreshedAt": "2026-07-16T20:46:36.477Z"
         },
         "pt": {
           "locale": "pt",
@@ -80,7 +80,7 @@
           "dimensions": 3072,
           "staleEmbeddingCount": 0,
           "ready": true,
-          "latestRefreshedAt": "2026-07-16T06:25:08.382Z"
+          "latestRefreshedAt": "2026-07-16T20:47:12.297Z"
         }
       }
     }

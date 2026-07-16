@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /**
- * Computing Program for Rorschach Structural Summary v2.2.1
+ * Computing Program for Rorschach Structural Summary v2.2.2
  * Main Calculation Logic
  * 
  * Code.gs의 calculateRorschach 함수를 TypeScript로 이전
@@ -137,6 +137,9 @@ export function calculateStructuralSummary(
     const Cn = exactCount('Cn');
     const { FC_WEIGHT, CF_WEIGHT, C_WEIGHT } = SCORING_CONFIG.CRITERIA.WSUMC;
     const WSumC = (FC_WEIGHT * FC) + (CF_WEIGHT * CF) + (C_WEIGHT * C);
+    // These similarly named values intentionally use different Cn boundaries.
+    const displayedColorRatioRight = CF + C + Cn;
+    const sconUnmodulatedColor = CF + C;
     
     const SumCprime = countContainsAny(SCORING_CONFIG.CODES.ACHROMATIC_COLOR);
     const SumT = countContainsAny(SCORING_CONFIG.CODES.SHADING_TEXTURE);
@@ -346,7 +349,7 @@ export function calculateStructuralSummary(
       c4: MOR > SCON_C.C4_MOR,
       c5: (typeof Zd === 'number') && (Zd < SCON_C.C5_ZD_MIN || Zd > SCON_C.C5_ZD_MAX),
       c6: es > EA,
-      c7: (CF + C) > (FC + SCON_C.C7_FC_RATIO - 1),
+      c7: sconUnmodulatedColor > (FC + SCON_C.C7_FC_RATIO - 1),
       c8: X_plus_percent < SCON_C.C8_X_PLUS_PERCENT,
       c9: S > SCON_C.C9_S,
       c10: Populars < SCON_C.C10_P_MIN || Populars > SCON_C.C10_P_MAX,
@@ -523,7 +526,7 @@ export function calculateStructuralSummary(
         WSum6_ideation: WSum6,
         M_minus_ideation: M_minus,
         Mnone: Mnone,
-        FC_CF_C: `${FC} : ${CF + Cn + C}`,
+        FC_CF_C: `${FC} : ${displayedColorRatioRight}`,
         PureC: C,
         SumC_WSumC: `${SumCprime} : ${fix1(WSumC)}`,
         S_aff: S,

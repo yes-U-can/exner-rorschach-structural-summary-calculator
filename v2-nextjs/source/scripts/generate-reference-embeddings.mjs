@@ -8,6 +8,7 @@ import OpenAI from 'openai';
 import pg from 'pg';
 
 import { loadProjectEnv } from './load-project-env.mjs';
+import { pruneProviderRows } from './lib/referenceEmbeddingMaintenance.mjs';
 
 const { Pool } = pg;
 
@@ -157,25 +158,6 @@ async function upsertEmbeddingBatch(pool, provider, chunks, embeddingModel, vect
   );
 }
 
-async function pruneProviderRows(pool, provider, locales, chunkIds) {
-  if (chunkIds.length === 0) {
-    await pool.query(`DELETE FROM "ReferenceChunkEmbedding" WHERE "provider" = $1::"EmbeddingProvider"`, [
-      provider,
-    ]);
-    return;
-  }
-
-  await pool.query(
-    `
-      DELETE FROM "ReferenceChunkEmbedding"
-      WHERE "provider" = $1::"EmbeddingProvider"
-        AND "locale" = ANY($2::text[])
-        AND NOT ("chunkId" = ANY($3::text[]))
-    `,
-    [provider, locales, chunkIds],
-  );
-}
-
 async function main() {
   loadProjectEnv(ROOT);
 
@@ -239,7 +221,7 @@ async function main() {
       pool,
       provider,
       locales,
-      chunks.map((chunk) => chunk.chunkId),
+      chunks,
     );
 
     console.log(`[reference-embeddings] completed provider=${provider} locales=${locales.join(',')}`);

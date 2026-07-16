@@ -1,4 +1,7 @@
-import type { AiHarnessEvalFixture } from '@/lib/ai/evalFixtures';
+import type {
+  AiEvalNearbyExpectation,
+  AiHarnessEvalFixture,
+} from '@/lib/ai/evalFixtures';
 
 export type AiEvalIssueType =
   | 'empty_output'
@@ -34,6 +37,35 @@ function normalizeMatchText(value: string) {
     .replace(/[‘’‛]/g, "'")
     .replace(/\s+/g, ' ')
     .trim();
+}
+
+type PhraseMatch = { start: number; end: number };
+
+const CJK_SCRIPT_PATTERN = /[\p{Script=Hangul}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Han}]/u;
+
+function escapeRegExp(value: string) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function findLiteralPhraseMatches(normalizedOutput: string, phrase: string): PhraseMatch[] {
+  const normalizedPhrase = normalizeMatchText(phrase);
+  if (!normalizedPhrase) return [];
+
+  const allowsCjkWhitespaceVariation =
+    CJK_SCRIPT_PATTERN.test(normalizedPhrase) && normalizedPhrase.includes(' ');
+  const pattern = allowsCjkWhitespaceVariation
+    ? normalizedPhrase.split(/\s+/u).map(escapeRegExp).join('\\s*')
+    : escapeRegExp(normalizedPhrase);
+  const matches: PhraseMatch[] = [];
+  const matcher = new RegExp(pattern, 'giu');
+  let match = matcher.exec(normalizedOutput);
+
+  while (match) {
+    matches.push({ start: match.index, end: match.index + match[0].length });
+    match = matcher.exec(normalizedOutput);
+  }
+
+  return matches;
 }
 
 function tokenizeMatchText(value: string) {
@@ -75,14 +107,117 @@ function includesOrderedPhraseTokens(normalizedOutput: string, phrase: string) {
   return false;
 }
 
+function includesBoundedLiteral(normalizedOutput: string, normalizedPhrase: string) {
+  // Formula tokens in this harness use ASCII letters and digits. Limiting the
+  // boundary check to that alphabet lets Korean/Japanese particles follow a
+  // formula while still rejecting embedded values such as 12:5 and 2:55.
+  const tokenCharacter = /[a-z0-9_]/iu;
+  let searchFrom = 0;
+
+  while (searchFrom <= normalizedOutput.length - normalizedPhrase.length) {
+    const matchIndex = normalizedOutput.indexOf(normalizedPhrase, searchFrom);
+    if (matchIndex < 0) return false;
+
+    const before = matchIndex > 0 ? normalizedOutput[matchIndex - 1] : '';
+    const afterIndex = matchIndex + normalizedPhrase.length;
+    const after = afterIndex < normalizedOutput.length ? normalizedOutput[afterIndex] : '';
+
+    if (!tokenCharacter.test(before) && !tokenCharacter.test(after)) return true;
+    searchFrom = matchIndex + 1;
+  }
+
+  return false;
+}
+
 function includesAnyPhrase(normalizedOutput: string, phrases: string[]) {
   return phrases.some((phrase) => {
     if (!phrase) return false;
     const normalizedPhrase = normalizeMatchText(phrase);
-    return (
-      normalizedOutput.includes(normalizedPhrase) ||
-      includesOrderedPhraseTokens(normalizedOutput, normalizedPhrase)
-    );
+
+    // Formula-like signals must match literally. A fuzzy token match would let
+    // unrelated values such as "FC=2, CF=4" satisfy a required "2:4" answer.
+    // Token boundaries also prevent "12:5" and "2:55" from satisfying "2:5".
+    if (/[:=+*/<>]/u.test(normalizedPhrase)) {
+      return includesBoundedLiteral(normalizedOutput, normalizedPhrase);
+    }
+
+    if (normalizedOutput.includes(normalizedPhrase)) return true;
+
+    return includesOrderedPhraseTokens(normalizedOutput, normalizedPhrase);
+  });
+}
+
+function buildRelationshipBlocks(output: string): string[] {
+  const lines = output
+    .replace(/\r\n?/gu, '\n')
+    .split('\n')
+    .map((line) => line.trim())
+    .filter(Boolean);
+  const segmentsByLine = lines.map((line) =>
+    line
+      .split(/(?<=[.!?])\s+|(?<=[。！？])\s*/u)
+      .map((segment) => segment.trim())
+      .filter(Boolean),
+  );
+  const blocks = segmentsByLine.flat();
+
+  lines.forEach((line, index) => {
+    const nextSegment = segmentsByLine[index + 1]?.[0];
+    const headingLike =
+      line.length <= 120 &&
+      !/[.!?。！？]$/u.test(line) &&
+      (/^[-*#]/u.test(line) || /[:：]$/u.test(line) || /^\*\*/u.test(line));
+    if (headingLike && nextSegment) {
+      blocks.push(`${line} ${nextSegment}`);
+    }
+  });
+
+  return blocks;
+}
+
+function buildBoundedRelationshipWindows(
+  normalizedBlock: string,
+  maxChars: number,
+  normalizedGroups: string[][],
+) {
+  if (normalizedBlock.length <= maxChars) return [normalizedBlock];
+
+  const maxStart = normalizedBlock.length - maxChars;
+  const starts = new Set<number>([0, maxStart]);
+  const clampStart = (value: number) => Math.max(0, Math.min(maxStart, value));
+  const stride = Math.max(32, Math.floor(maxChars / 4));
+
+  for (let start = 0; start <= maxStart; start += stride) {
+    starts.add(start);
+  }
+
+  for (const phrase of normalizedGroups.flat()) {
+    for (const match of findLiteralPhraseMatches(normalizedBlock, phrase)) {
+      starts.add(clampStart(match.start));
+      starts.add(clampStart(match.start - Math.floor(maxChars / 2)));
+      starts.add(clampStart(match.end - maxChars));
+    }
+  }
+
+  return [...starts]
+    .sort((left, right) => left - right)
+    .map((start) => normalizedBlock.slice(start, start + maxChars));
+}
+
+function includesNearbyExpectation(
+  output: string,
+  expectation: AiEvalNearbyExpectation,
+): boolean {
+  const maxChars = Math.max(80, expectation.maxChars ?? 240);
+  const normalizedGroups = expectation.termGroups
+    .map((group) => group.map(normalizeMatchText).filter(Boolean))
+    .filter((group) => group.length > 0);
+  if (!normalizedGroups.length) return true;
+
+  return buildRelationshipBlocks(output).some((block) => {
+    const normalizedBlock = normalizeMatchText(block);
+    return buildBoundedRelationshipWindows(normalizedBlock, maxChars, normalizedGroups)
+      .some((window) => normalizedGroups.every((group) => includesAnyPhrase(window, group)));
   });
 }
 
@@ -112,23 +247,33 @@ const SAFE_BOUNDARY_CONTEXT_PATTERNS = [
   /(できな|できません|ではありません|ではない|とは言えません|とはいえない|言い切れません|言い切れない|断定しません|断定できな|確定しません|確定できな|証明しません|証明できな|不十分|限定的|単独では|だけでは)/u,
 ];
 
-function isClearlyBoundaryUse(normalizedOutput: string, phrase: string): boolean {
-  const normalizedPhrase = normalizeMatchText(phrase);
-  let index = normalizedOutput.indexOf(normalizedPhrase);
+function isSentenceBoundaryAt(value: string, index: number) {
+  const character = value[index];
+  if (!character || !/[.!?。！？;]/u.test(character)) return false;
+  if (
+    character === '.' &&
+    /\d/u.test(value[index - 1] ?? '') &&
+    /\d/u.test(value[index + 1] ?? '')
+  ) {
+    return false;
+  }
+  return true;
+}
 
-  while (index >= 0) {
-    const before = normalizedOutput.slice(Math.max(0, index - 90), index);
-    const after = normalizedOutput.slice(index + normalizedPhrase.length, index + normalizedPhrase.length + 110);
-    const window = `${before}${normalizedPhrase}${after}`;
-
-    if (SAFE_BOUNDARY_CONTEXT_PATTERNS.some((pattern) => pattern.test(window))) {
-      return true;
-    }
-
-    index = normalizedOutput.indexOf(normalizedPhrase, index + normalizedPhrase.length);
+function isClearlyBoundaryUse(normalizedOutput: string, match: PhraseMatch): boolean {
+  let sentenceStart = match.start;
+  while (sentenceStart > 0 && !isSentenceBoundaryAt(normalizedOutput, sentenceStart - 1)) {
+    sentenceStart -= 1;
   }
 
-  return false;
+  let sentenceEnd = match.end;
+  while (sentenceEnd < normalizedOutput.length && !isSentenceBoundaryAt(normalizedOutput, sentenceEnd)) {
+    sentenceEnd += 1;
+  }
+
+  const sentence = normalizedOutput.slice(sentenceStart, sentenceEnd);
+
+  return SAFE_BOUNDARY_CONTEXT_PATTERNS.some((pattern) => pattern.test(sentence));
 }
 
 function isStrictlyForbiddenPhrase(phrase: string) {
@@ -142,7 +287,7 @@ function isStrictlyForbiddenPhrase(phrase: string) {
 }
 
 export function evaluateAiHarnessOutput(
-  fixture: Pick<AiHarnessEvalFixture, 'mustNotContain' | 'mustContainAny'> &
+  fixture: Pick<AiHarnessEvalFixture, 'mustNotContain' | 'mustContainAny' | 'mustContainNearby'> &
     Partial<Pick<AiHarnessEvalFixture, 'locale'>>,
   output: string,
 ): AiEvalContractResult {
@@ -165,11 +310,14 @@ export function evaluateAiHarnessOutput(
   }
 
   for (const phrase of fixture.mustNotContain) {
-    const normalizedPhrase = normalizeMatchText(phrase);
+    const matches = findLiteralPhraseMatches(normalizedOutput, phrase);
     if (
       phrase &&
-      normalizedOutput.includes(normalizedPhrase) &&
-      (isStrictlyForbiddenPhrase(phrase) || !isClearlyBoundaryUse(normalizedOutput, phrase))
+      matches.length > 0 &&
+      (
+        isStrictlyForbiddenPhrase(phrase) ||
+        matches.some((match) => !isClearlyBoundaryUse(normalizedOutput, match))
+      )
     ) {
       issues.push({
         type: 'forbidden_phrase',
@@ -185,6 +333,16 @@ export function evaluateAiHarnessOutput(
         type: 'missing_required_signal',
         expectedAny,
         message: `The answer is missing one of these required quality signals: ${expectedAny.join(', ')}`,
+      });
+    }
+  }
+
+  for (const expectation of fixture.mustContainNearby ?? []) {
+    if (!includesNearbyExpectation(trimmed, expectation)) {
+      issues.push({
+        type: 'missing_required_signal',
+        expectedAny: expectation.termGroups.flat(),
+        message: `The answer is missing the required nearby relationship: ${expectation.label}`,
       });
     }
   }

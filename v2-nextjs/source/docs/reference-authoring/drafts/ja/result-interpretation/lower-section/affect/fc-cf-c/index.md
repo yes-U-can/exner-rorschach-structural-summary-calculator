@@ -55,7 +55,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-affect-opening-fcc
 - 色彩反応が少ないプロトコルでは、この比率は安定しにくくなります。
 - `CF+C` 側が強いだけで、すぐに病理や衝動性と決めつけないでください。
 - `Pure C` は、より直接的な情動放出を示すことがあり、この比率だけでは十分に表れません。
-- `Cn` を含めるのは、表示されるこの比率の右側だけです。`WSumC`、S-CON の比較 `CF+C > FC`、Color-Shading blend 数からは除外します。
+- `Cn` は表示比率の右辺にだけ含めます。`WSumC`、別規則である S-CON の比較 `CF+C > FC`、Color-Shading blend 数からは除外します。
 
 ## Cross References
 

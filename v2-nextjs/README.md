@@ -2,7 +2,8 @@
 
 이 폴더는 로샤 구조요약 계산 도우미 v2의 공개 전시용 Next.js 자료입니다.
 
-- 최신 패치노트: [releases/v2.2.1](./releases/v2.2.1/)
+- 최신 패치노트: [releases/v2.2.2](./releases/v2.2.2/)
+- 최신 계산 재감사: [source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md](./source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md)
 - 최초 v2 릴리즈 패치노트: [releases/v2.0.0](./releases/v2.0.0/)
 - 공개 소스코드: [source](./source/)
 

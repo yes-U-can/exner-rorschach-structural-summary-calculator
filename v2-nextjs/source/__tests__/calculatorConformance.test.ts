@@ -125,6 +125,64 @@ describe('Comprehensive System calculation conformance', () => {
     expect(result.data?.special_indices.scon_criteria.c7).toBe(false);
   });
 
+  it('keeps displayed color, WSumC, S-CON, and Color-Shading Cn boundaries separate', () => {
+    const result = calculateStructuralSummary([
+      makeResponse(0, { determinants: ['FC'] }),
+      makeResponse(1, { determinants: ['FC'] }),
+      makeResponse(2, { determinants: ['CF'] }),
+      makeResponse(3, { determinants: ['Cn', 'FY'], fq: 'none' }),
+      makeResponse(4, { determinants: ['Cn'], fq: 'none' }),
+    ]);
+
+    expect(result.success).toBe(true);
+    expect(result.data?.lower_section).toMatchObject({
+      FC_CF_C: '2 : 3',
+      EB: '0:2.0',
+    });
+    expect(result.data?.special_indices.depi_criteria.c2).toBe(false);
+    expect(result.data?.special_indices.scon_criteria.c2).toBe(false);
+    expect(result.data?.special_indices.scon_criteria.c7).toBe(false);
+  });
+
+  it('changes only the displayed color ratio when Cn is injected into an existing blend', () => {
+    const baseProtocol = [
+      makeResponse(0, { determinants: ['FC'] }),
+      makeResponse(1, { determinants: ['CF'] }),
+      makeResponse(2, { determinants: ['FY', "FC'"] }),
+    ];
+    const withCnProtocol = baseProtocol.map((response, index) => (
+      index === 2
+        ? { ...response, determinants: [...response.determinants, 'Cn'] }
+        : response
+    ));
+
+    const base = calculateStructuralSummary(baseProtocol);
+    const withCn = calculateStructuralSummary(withCnProtocol);
+
+    expect(base.success).toBe(true);
+    expect(withCn.success).toBe(true);
+    expect(base.data?.lower_section).toMatchObject({
+      R: 3,
+      FC_CF_C: '1 : 1',
+      EB: '0:1.5',
+      SumC_WSumC: '1 : 1.5',
+      Blends_R: '1 : 3',
+    });
+    expect(withCn.data?.lower_section).toMatchObject({
+      R: 3,
+      FC_CF_C: '1 : 2',
+      EB: '0:1.5',
+      SumC_WSumC: '1 : 1.5',
+      Blends_R: '1 : 3',
+    });
+    expect(withCn.data?.special_indices.depi_criteria.c2)
+      .toBe(base.data?.special_indices.depi_criteria.c2);
+    expect(withCn.data?.special_indices.scon_criteria.c2)
+      .toBe(base.data?.special_indices.scon_criteria.c2);
+    expect(withCn.data?.special_indices.scon_criteria.c7)
+      .toBe(base.data?.special_indices.scon_criteria.c7);
+  });
+
   it('keeps the published triple weighting in the egocentricity index', () => {
     const protocol = Array.from({ length: 10 }, (_, index) => makeResponse(index, {
       determinants: index === 0 ? ['Fr'] : ['F'],

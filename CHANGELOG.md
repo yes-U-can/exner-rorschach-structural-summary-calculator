@@ -6,6 +6,7 @@
 
 | Date | Version | Type | Patch Note | Source |
 | --- | --- | --- | --- | --- |
+| 2026-07-17 | v2.2.2 | 핫픽스 | [패치노트](./v2-nextjs/releases/v2.2.2/) | [소스코드](./v2-nextjs/source/) |
 | 2026-07-16 | v2.2.1 | 핫픽스 | [패치노트](./v2-nextjs/releases/v2.2.1/) | [소스코드](./v2-nextjs/source/) |
 | 2026-07-16 | v2.2.0 | 마이너 패치 | [패치노트](./v2-nextjs/releases/v2.2.0/) | [소스코드](./v2-nextjs/source/) |
 | 2026-07-13 | v2.1.10 | 버그 패치 | [패치노트](./v2-nextjs/releases/v2.1.10/) | [소스코드](./v2-nextjs/source/) |

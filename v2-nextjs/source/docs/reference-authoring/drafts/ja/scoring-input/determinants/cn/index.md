@@ -47,6 +47,8 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 - `Cn` は解釈で完全な色彩 determinant と同じようには数えません。
 - 迷うときは、「色がそう見えさせているのか」、それとも「付随的説明として色を言っているだけか」を確認します。
 
+**後続計算の境界:** Lower Section の慣例的ラベルは `FC:CF+C` のままですが、画面に表示する比率は `FC:(CF+C+Cn)` です。したがって、`Cn` が1つあれば表示上の右辺は1増えます。この表示上の慣例を一般的な色彩合計として再利用してはいけません。`WSumC`、S-CON の `CF+C > FC`、Color-Shading blend はそれぞれ別の式を使い、`Cn` を含めません。
+
 ## Cross References
 
 - [[コーディング/決定因] Determinants](ref://scoring-input/determinants)

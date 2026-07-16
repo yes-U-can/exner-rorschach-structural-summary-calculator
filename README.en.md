@@ -19,11 +19,12 @@ The detailed public release documentation standard is kept at [`v2-nextjs/source
 
 ## Current Archive
 
-- Latest v2 release note: [`v2-nextjs/releases/v2.2.1`](./v2-nextjs/releases/v2.2.1/)
+- Latest v2 release note: [`v2-nextjs/releases/v2.2.2`](./v2-nextjs/releases/v2.2.2/)
 - v2 public source snapshot: [`v2-nextjs/source`](./v2-nextjs/source/)
 - AI quality gate docs: [`v2-nextjs/source/docs/ai-evals/README.md`](./v2-nextjs/source/docs/ai-evals/README.md)
 - AI human rubric: [`v2-nextjs/source/docs/ai-evals/HUMAN_RUBRIC.md`](./v2-nextjs/source/docs/ai-evals/HUMAN_RUBRIC.md)
-- v2.2.1 calculation trace: [`v2-nextjs/source/docs/ops/2026-07-16-v2.2.1-calculation-trace.md`](./v2-nextjs/source/docs/ops/2026-07-16-v2.2.1-calculation-trace.md)
+- v2.2.2 calculation re-audit: [`v2-nextjs/source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md`](./v2-nextjs/source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md)
+- v2.2.2 Cn and five-locale live eval: [`v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md`](./v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md)
 - v2.2.0 workspace validation: [`v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md`](./v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md)
 - v2.2.0 Exner domain-boundary report: [`v2-nextjs/source/docs/ai-evals/2026-07-15-v2.2.0-exner-domain-boundary-report.md`](./v2-nextjs/source/docs/ai-evals/2026-07-15-v2.2.0-exner-domain-boundary-report.md)
 - v1 GAS archive: [`v1-gas/releases`](./v1-gas/releases/)
@@ -44,15 +45,21 @@ Earlier release notes that described the whole version line as closed now includ
 
 v2.2.0 is the first desktop-focused v2.2.x release. It replaces the old header/footer layout with an overlay application sidebar, turns the interpretation assistant into a cardless AI workspace with an internal scroller and cancellable streaming, adds privacy-minimized structured feedback, and refines the scoring table, reference reader, legal pages, version archive, localization, and dark theme.
 
-The release also audits the calculator against the author's 2019 Excel formulas, the v1 GAS lineage, the current TypeScript implementation, and published response-sequence cases. Seven boundary defects were corrected and locked with regression tests. GPT-5.5 remains fixed under the BYOK and HITL policy, with new Exner(CS) domain boundaries and Korean, Japanese, and English production-parity evaluations. Dedicated mobile refinement continues in later v2.2.x releases.
+The release also audits the calculator against a publicly distributed 2019 Excel workbook, the v1 GAS lineage, the current TypeScript implementation, and published response-sequence cases. Seven boundary defects were corrected and locked with regression tests. GPT-5.5 remains fixed under the BYOK and HITL policy, with new Exner(CS) domain boundaries and Korean, Japanese, and English production-parity evaluations. Dedicated mobile refinement continues in later v2.2.x releases.
 
-The calculation audit was partially corrected in v2.2.1. The v2.2.0 note remains the historical UI/UX record, while the v2.2.1 trace is the current source for calculation findings.
+The calculation audit was corrected in stages by v2.2.1 and v2.2.2. The v2.2.0 note remains the historical UI/UX record, while the v2.2.2 re-audit is the current source for calculation findings.
 
 ## v2.2.1
 
-v2.2.1 is a calculation-accuracy hotfix with no UI/UX change and no age field. It cross-checks explicit Exner rules and the completed Chapter 9 example against the official CHESSSS implementation, the 2019 Excel cell formulas used during early v1 development, the v1 GAS code, and the v2.2.0 TypeScript implementation. It fixes the D/AdjD cap, EBPer gates, ordered GHR/PHR classification, Cn display, and undefined WDA%/Afr denominators.
+v2.2.1 is a calculation-accuracy hotfix with no age field. Its audit scope is limited to the **Upper Section, Lower Section, and Special Indices** displayed by the app. It fixes the D/AdjD cap, EBPer gates, ordered GHR/PHR classification, undefined WDA%/Afr denominators, and the Cn-inclusive `FC:CF+C` display value. The deployed runtime and the public v2.2.1 release note consistently recorded that Cn-inclusive calculation from the start.
 
 The release openly documents the Excel lineage and acquisition path without redistributing the workbook or guessing the author's identity. Verification includes 25 five-locale calculation-invariance runs, 2,000 deterministic synthetic protocols, real GPT-5.5 coding and interpretation calls, and a refreshed 6,632-chunk OpenAI vector runtime.
+
+## v2.2.2
+
+v2.2.2 independently re-audits the exact **Upper Section, Lower Section, and Special Indices** rendered by this application. It confirms that the conventional display label `FC:CF+C` uses `FC:(CF+C+Cn)`, while this application's adopted WSumC, S-CON criterion 7, and Color-Shading calculations exclude Cn. The deployed v2.2.1 runtime and public release note were already correct, so this release preserves that output and strengthens the variable boundaries, regression tests, five-locale corpus, vector snapshot, retrieval evidence, and GPT-5.5 eval contracts.
+
+The release separates the roles of the publicly distributed 2019 Excel workbook, RorScore's canonical Perl source, v1 GAS, v2 TypeScript, CHESSSS, RAP3, and RIAP5 instead of treating any one implementation as the sole authority. Validation records 376 passing unit/integration tests, 101 AI contract tests, a 222/222 production build, 6,629/6,629 ready OpenAI vectors, a 10/10 post-audit direct five-locale Cn-boundary eval, a 3/3 interpretation guardrail v7 smoke eval, and a 5/5 representative five-locale live eval. The only approved UI change is making the sidebar fully opaque; dedicated mobile refinement remains follow-up v2.2.x work.
 
 ## v2.1.10
 

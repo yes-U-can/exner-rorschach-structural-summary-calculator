@@ -160,7 +160,9 @@ const HEADING_LABELS = new Map([
   ['aliases / search terms', 'Aliases'],
   ['aliases', 'Aliases'],
   ['alias / t\u00E9rminos de b\u00FAsqueda', 'Aliases'],
+  ['alias y b\u00FAsqueda', 'Aliases'],
   ['aliases / termos de busca', 'Aliases'],
+  ['apelidos e busca', 'Aliases'],
   ['\uBCC4\uCE6D/\uAC80\uC0C9\uC5B4', 'Aliases'],
   ['\u5225\u540D/\u691C\u7D22\u8A9E', 'Aliases'],
   ['core definition', 'Definition'],
@@ -183,11 +185,16 @@ const HEADING_LABELS = new Map([
   ['\u89E3\u91C8\u30DD\u30A4\u30F3\u30C8', 'Interpretation'],
   ['cautions / distinctions', 'Cautions'],
   ['precauciones / distinciones', 'Cautions'],
+  ['precauciones y distinciones', 'Cautions'],
+  ['limites de interpretaci\u00F3n aislada', 'Cautions'],
+  ['l\u00EDmites de interpretaci\u00F3n aislada', 'Cautions'],
   ['cuidados / distin\u00E7\u00F5es', 'Cautions'],
+  ['cuidados e diferencia\u00E7\u00E3o', 'Cautions'],
   ['\uC8FC\uC758\uC0AC\uD56D/\uAC10\uBCC4 \uAE30\uC900', 'Cautions'],
   ['\u6CE8\u610F\u4E8B\u9805/\u9451\u5225\u57FA\u6E96', 'Cautions'],
   ['related variables', 'Related Variables'],
   ['variables relacionadas', 'Related Variables'],
+  ['variables para revisar juntas', 'Related Variables'],
   ['vari\u00E1veis relacionadas', 'Related Variables'],
   ['\uAD00\uB828 \uBCC0\uC218', 'Related Variables'],
   ['\u95A2\u9023\u5909\u6570', 'Related Variables'],
@@ -198,7 +205,9 @@ const HEADING_LABELS = new Map([
   ['\u76F8\u4E92\u53C2\u7167', 'Cross References'],
   ['evidence note', 'Evidence Note'],
   ['nota de evidencia', 'Evidence Note'],
+  ['nota de fundamento', 'Evidence Note'],
   ['nota de evid\u00EAncia', 'Evidence Note'],
+  ['nota de base', 'Evidence Note'],
   ['\uADFC\uAC70 \uBA54\uBAA8', 'Evidence Note'],
   ['\u6839\u62E0\u30E1\u30E2', 'Evidence Note'],
 ]);
@@ -382,7 +391,11 @@ function buildFallbackSectionMarkdown({ locale, sectionKind, canonicalRoute, san
 }
 
 async function sanitizeSectionContent(args) {
-  const sectionKind = inferSectionKind(args);
+  const sectionKind = inferSectionKind({
+    normalizedHeading: args.section.normalizedHeading,
+    docKind: args.docKind,
+    sectionIndex: args.sectionIndex,
+  });
   const safeHeading = getLocalizedSectionLabel(args.locale, sectionKind);
   const withSafeLinks = sanitizeCrossReferenceMarkdown(args.locale, args.section.markdown);
   const needsFallback = isCorruptedText(args.section.normalizedHeading) || isCorruptedText(withSafeLinks);

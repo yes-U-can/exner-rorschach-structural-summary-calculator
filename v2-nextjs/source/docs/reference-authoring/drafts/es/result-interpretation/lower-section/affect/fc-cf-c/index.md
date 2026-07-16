@@ -52,14 +52,12 @@ En interpretación, ayuda a ver si la emoción suele pasar por mayor control for
 - Con pocas respuestas de color, la proporción puede ser inestable.
 - No debe confundirse una mayor presencia de `CF+C` con impulsividad patológica por sí sola.
 - `Pure C` puede mostrar una descarga afectiva más directa que no queda resumida del todo por esta proporción.
-- `Cn` se incluye solo en el lado derecho de esta proporción mostrada. Se excluye de `WSumC`, de la comparación de S-CON `CF+C > FC` y del recuento de mezclas Color-Shading.
-
-## Limites de interpretación aislada
+- `Cn` se incluye solo en el lado derecho de la razón mostrada. Se excluye de `WSumC`, de la comparación separada de S-CON `CF+C > FC` y del recuento de mezclas Color-Shading.
 
 - `FC:CF+C` no basta por sí solo para describir la regulación afectiva completa.
 - Conviene leerlo junto con `Afr`, `Pure C`, `SumC / WSumC`, `EB` y `EA`.
 
-## Variables para revisar juntas
+## Variables relacionadas
 
 - `Pure C`
 - `SumC / WSumC`

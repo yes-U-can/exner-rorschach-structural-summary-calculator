@@ -156,6 +156,123 @@ function Remove-PublicMirrorPrivateArtifacts {
   }
 }
 
+function Remove-PrivateGitMetadataProperties {
+  param(
+    [object]$Value,
+    [Parameter(Mandatory = $true)]
+    [string[]]$FieldNames
+  )
+
+  if ($null -eq $Value -or $Value -is [string] -or $Value.GetType().IsPrimitive) {
+    return 0
+  }
+
+  $removed = 0
+  if ($Value -is [System.Collections.IEnumerable]) {
+    foreach ($item in $Value) {
+      $removed += Remove-PrivateGitMetadataProperties -Value $item -FieldNames $FieldNames
+    }
+    return $removed
+  }
+
+  foreach ($property in @($Value.PSObject.Properties)) {
+    if ($FieldNames -contains $property.Name) {
+      $Value.PSObject.Properties.Remove($property.Name)
+      $removed += 1
+      continue
+    }
+    $removed += Remove-PrivateGitMetadataProperties -Value $property.Value -FieldNames $FieldNames
+  }
+
+  return $removed
+}
+
+function Remove-PublicEvalPrivateMetadata {
+  param(
+    [Parameter(Mandatory = $true)]
+    [string]$Root,
+    [switch]$WhatIf
+  )
+
+  $evalRoot = Join-Path $Root "docs\ai-evals"
+  if (-not (Test-Path -LiteralPath $evalRoot)) {
+    return
+  }
+
+  $privateGitMetadataFields = @("gitCommit", "baseCommit", "commitSha", "sourceCommit", "commit", "gitDirty")
+
+  foreach ($file in Get-ChildItem -LiteralPath $evalRoot -File -Filter "*.jsonl" -Recurse) {
+    $changed = $false
+    $sanitizedLines = foreach ($line in [IO.File]::ReadAllLines($file.FullName)) {
+      if ([string]::IsNullOrWhiteSpace($line)) {
+        continue
+      }
+
+      $record = $line | ConvertFrom-Json
+      $removed = Remove-PrivateGitMetadataProperties -Value $record -FieldNames $privateGitMetadataFields
+      if ($removed -gt 0) {
+        $changed = $true
+      }
+      $record | ConvertTo-Json -Compress -Depth 100
+    }
+
+    if (-not $changed) {
+      continue
+    }
+
+    if ($WhatIf) {
+      Write-Host "[dry-run] would remove private git metadata from: $($file.FullName)"
+      continue
+    }
+
+    $content = if ($sanitizedLines.Count -gt 0) {
+      ($sanitizedLines -join "`n") + "`n"
+    } else {
+      ""
+    }
+    [IO.File]::WriteAllText($file.FullName, $content, [Text.UTF8Encoding]::new($false))
+  }
+
+  foreach ($file in Get-ChildItem -LiteralPath $evalRoot -File -Filter "*.json" -Recurse) {
+    $record = Get-Content -LiteralPath $file.FullName -Raw -Encoding UTF8 | ConvertFrom-Json
+    $changed = (Remove-PrivateGitMetadataProperties -Value $record -FieldNames $privateGitMetadataFields) -gt 0
+
+    if (-not $changed) {
+      continue
+    }
+
+    if ($WhatIf) {
+      Write-Host "[dry-run] would remove private git metadata from: $($file.FullName)"
+      continue
+    }
+
+    $content = ($record | ConvertTo-Json -Depth 100) + "`n"
+    [IO.File]::WriteAllText($file.FullName, $content, [Text.UTF8Encoding]::new($false))
+  }
+}
+
+function Assert-NoPublicGitMetadata {
+  param(
+    [Parameter(Mandatory = $true)]
+    [string]$Root
+  )
+
+  $fieldPattern = '"(?:gitCommit|baseCommit|commitSha|sourceCommit|commit|gitDirty)"\s*:'
+  $leaks = @()
+  foreach ($file in Get-ChildItem -LiteralPath $Root -File -Recurse -ErrorAction SilentlyContinue) {
+    if ($file.Extension -notin @('.json', '.jsonl')) {
+      continue
+    }
+    if (Select-String -LiteralPath $file.FullName -Pattern $fieldPattern -Quiet) {
+      $leaks += $file.FullName
+    }
+  }
+
+  if ($leaks.Count -gt 0) {
+    throw "Private git metadata remains in public JSON artifacts:`n$($leaks -join "`n")"
+  }
+}
+
 $excludeDirs = @(
   ".git",
   ".next",
@@ -313,6 +430,10 @@ if ($rc -ge 8) {
 }
 
 Remove-PublicMirrorPrivateArtifacts -Root $targetRoot -WhatIf:$DryRun
+Remove-PublicEvalPrivateMetadata -Root $targetRoot -WhatIf:$DryRun
+if (-not $DryRun) {
+  Assert-NoPublicGitMetadata -Root $targetRoot
+}
 
 if ($DryRun) {
   Write-Host "[dry-run] sync simulation completed."

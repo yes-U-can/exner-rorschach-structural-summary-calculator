@@ -18,7 +18,10 @@ import {
   type AiHarnessEvalFixture,
 } from '@/lib/ai/evalFixtures';
 import type { CodingAssistContext } from '@/types';
-import { type CodingRuleChunk } from '@/lib/codingAssistKnowledge';
+import {
+  buildSupportingInterpretationChunks,
+  type CodingRuleChunk,
+} from '@/lib/codingAssistKnowledge';
 import {
   getHybridCodingRuleChunks,
   getHybridInterpretationKnowledge,
@@ -88,6 +91,38 @@ function getCodingFixtureMaterial(fixture: AiHarnessEvalFixture): {
           categoryTags: ['fq', 'culture', 'language'],
           canonicalRoute: 'scoring-input/fq',
           relatedRoutes: [],
+          routeScope: 'primary' as const,
+        },
+      ],
+    };
+  }
+
+  if (fixture.id.includes('-cn-') && fixture.id.startsWith('coding-')) {
+    const responseMemoByLocale = {
+      ko: '빨간색입니다. 형태는 보이지 않고 빨간색이라는 이름만 말했습니다.',
+      en: 'It is red. No shape is identified; the response only names the color red.',
+      ja: '赤い色です。形は分からず、赤という色名だけを述べています。',
+      es: 'Es de color rojo. No se identifica una forma; la respuesta solo nombra el color rojo.',
+      pt: 'É vermelho. Nenhuma forma é identificada; a resposta apenas nomeia a cor vermelha.',
+    } as const;
+    const ruleTextByLocale = {
+      ko: 'Lower Section의 관례적 라벨은 FC:CF+C이지만 화면 우변은 CF+C+Cn이다. Cn은 WSumC, S-CON의 별도 비교 CF+C > FC, Color-Shading blend에서는 제외한다.',
+      en: 'The conventional Lower Section label is FC:CF+C, but its displayed right side is CF+C+Cn. Cn remains excluded from WSumC, the separate S-CON comparison CF+C > FC, and Color-Shading blends.',
+      ja: 'Lower Section の慣例的ラベルは FC:CF+C ですが、表示上の右辺は CF+C+Cn です。Cn は WSumC、S-CON の別比較 CF+C > FC、Color-Shading blend からは除外します。',
+      es: 'La etiqueta convencional de la sección inferior es FC:CF+C, pero el lado derecho mostrado es CF+C+Cn. Cn se excluye de WSumC, de la comparación separada de S-CON CF+C > FC y de los blends Color-Shading.',
+      pt: 'O rótulo convencional da Lower Section é FC:CF+C, mas o lado direito exibido é CF+C+Cn. Cn é excluído de WSumC, da comparação separada do S-CON CF+C > FC e dos blends Color-Shading.',
+    } as const;
+    return {
+      card: 'VIII',
+      responseMemo: responseMemoByLocale[fixture.locale],
+      ruleChunks: [
+        {
+          id: 'rule:Cn',
+          title: 'Color naming (Cn)',
+          text: ruleTextByLocale[fixture.locale],
+          categoryTags: ['determinants', 'Cn', 'color naming'],
+          canonicalRoute: 'scoring-input/determinants/Cn',
+          relatedRoutes: ['result-interpretation/lower-section/affect/FC_CF_C'],
           routeScope: 'primary' as const,
         },
       ],
@@ -222,7 +257,18 @@ async function buildCodingAssistMessages(fixture: AiHarnessEvalFixture): Promise
         limit: 6,
       })
     : null;
-  const ruleChunks = retrieval?.items ?? material.ruleChunks;
+  const primaryRuleChunks = retrieval?.items ?? material.ruleChunks;
+  const supportingRuleChunks = buildSupportingInterpretationChunks({
+    lang: fixture.locale,
+    relatedRoutes: primaryRuleChunks.flatMap((chunk) => chunk.relatedRoutes),
+    query: fixture.userMessage,
+  });
+  const ruleChunks = [...primaryRuleChunks, ...supportingRuleChunks]
+    .filter(
+      (chunk, index, items) =>
+        items.findIndex((candidate) => candidate.id === chunk.id) === index,
+    )
+    .slice(0, 8);
 
   return {
     messages: [

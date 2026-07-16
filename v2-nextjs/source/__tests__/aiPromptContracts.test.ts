@@ -58,6 +58,10 @@ describe('AI prompt contracts', () => {
     expect(prompt).toContain('do not label the index positive or negative');
     expect(prompt).toContain('For S-CON specifically, when the examinee is younger than 15');
     expect(prompt).toContain('applies only at age 15 or older');
+    expect(prompt).toContain('the displayed right side is CF+C+Cn');
+    expect(prompt).toContain('WSumC is 0.5FC + 1.0CF + 1.5C and excludes Cn');
+    expect(prompt).toContain('S-CON criterion 7 compares CF+C > FC and excludes Cn');
+    expect(prompt).toContain('Cn is not chromatic color for this calculation and is excluded');
     expect(prompt).toContain('Treat any [Evidence Strength] or [Evidence Guardrail] metadata');
     expect(prompt).toContain('For limited evidence, use the result only to identify what should be assessed next.');
     expect(prompt).toContain('For weak-inconsistent evidence, keep the construct as a low-confidence organizing hypothesis');

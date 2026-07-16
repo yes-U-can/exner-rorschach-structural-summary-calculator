@@ -71,6 +71,26 @@ describe('AI eval contract evaluator', () => {
     ).toBe(false);
   });
 
+  it('does not let a negation in another sentence waive a forbidden claim', () => {
+    const result = evaluateAiHarnessOutput(
+      {
+        mustNotContain: ['Cn is excluded from the displayed ratio'],
+        mustContainAny: [],
+      },
+      'Cn is excluded from the displayed ratio. WSumC does not include Cn.',
+    );
+
+    expect(result.passed).toBe(false);
+    expect(result.issues).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          type: 'forbidden_phrase',
+          phrase: 'Cn is excluded from the displayed ratio',
+        }),
+      ]),
+    );
+  });
+
   it('never allows an evaluation canary even inside refusal wording', () => {
     const result = evaluateAiHarnessOutput(
       {
@@ -120,6 +140,200 @@ describe('AI eval contract evaluator', () => {
     );
 
     expect(result).toEqual({ passed: true, issues: [] });
+  });
+
+  it('requires literal formula signals instead of matching separated numbers', () => {
+    const fixture = {
+      mustNotContain: [],
+      mustContainAny: [['2:5', '2 : 5']],
+    };
+
+    expect(
+      evaluateAiHarnessOutput(
+        fixture,
+        'FC=2, CF=4, C=0, and Cn=1. The displayed ratio is 2:5.',
+      ),
+    ).toEqual({ passed: true, issues: [] });
+
+    const wrongAnswer = evaluateAiHarnessOutput(
+      fixture,
+      'FC=2 and CF=4. Cn is listed separately, so I would report 2:4.',
+    );
+    expect(wrongAnswer.passed).toBe(false);
+    expect(wrongAnswer.issues.map((issue) => issue.type)).toContain('missing_required_signal');
+
+    for (const embeddedWrongValue of ['The ratio is 12:5.', 'The ratio is 2:55.']) {
+      const embeddedResult = evaluateAiHarnessOutput(fixture, embeddedWrongValue);
+      expect(embeddedResult.passed).toBe(false);
+      expect(embeddedResult.issues.map((issue) => issue.type)).toContain('missing_required_signal');
+    }
+  });
+
+  it('accepts common literal variants of the Cn-inclusive display formula', () => {
+    const fixture = {
+      mustNotContain: [],
+      mustContainAny: [[
+        'FC:(CF+C+Cn)',
+        'FC : (CF + C + Cn)',
+        'FC:CF+C+Cn',
+        'FC : CF+C+Cn',
+        'CF+C+Cn',
+        'CF + C + Cn',
+      ]],
+    };
+
+    expect(evaluateAiHarnessOutput(fixture, 'The display is FC : CF+C+Cn.')).toEqual({ passed: true, issues: [] });
+    expect(evaluateAiHarnessOutput(fixture, 'Its right side is CF+C+Cn.')).toEqual({ passed: true, issues: [] });
+  });
+
+  it('accepts explicit Cn boundary explanations in all five supported locales', () => {
+    const examples = {
+      'coding-en-cn-lower-ratio-boundary': 'The displayed ratio is FC:(CF+C+Cn) and includes Cn. WSumC excludes Cn. S-CON uses CF+C > FC and excludes Cn. Color-Shading excludes Cn because chromatic color is FC, CF, and C.',
+      'coding-ko-cn-calculation-boundaries': '화면 비율은 FC:(CF+C+Cn)입니다. WSumC는 Cn을 제외합니다. S-CON은 CF+C > FC를 사용하고 Cn을 제외합니다. Color-Shading에서는 Cn을 제외합니다.',
+      'coding-ja-cn-calculation-boundaries': '表示比率は FC:(CF+C+Cn) です。WSumC から Cn を除外します。S-CON は CF+C > FC を使い、Cn を除外します。Color-Shading から Cn を除外します。',
+      'coding-es-cn-calculation-boundaries': 'La razón mostrada es FC:(CF+C+Cn). WSumC excluye Cn. S-CON usa CF+C > FC y excluye Cn. Color-Shading excluye Cn.',
+      'coding-pt-cn-calculation-boundaries': 'A razão exibida é FC:(CF+C+Cn). WSumC exclui Cn. S-CON usa CF+C > FC e exclui Cn. Color-Shading exclui Cn.',
+    } as const;
+
+    for (const [fixtureId, output] of Object.entries(examples)) {
+      const fixture = AI_HARNESS_EVAL_FIXTURES.find((item) => item.id === fixtureId);
+      expect(fixture).toBeDefined();
+      expect(evaluateAiHarnessOutput(fixture!, output)).toEqual({ passed: true, issues: [] });
+    }
+  });
+
+  it('accepts natural word order while keeping Cn exclusion tied to each named calculation', () => {
+    const fixture = AI_HARNESS_EVAL_FIXTURES.find(
+      (item) => item.id === 'coding-ko-cn-calculation-boundaries',
+    );
+    expect(fixture).toBeDefined();
+
+    const correct = evaluateAiHarnessOutput(
+      fixture!,
+      [
+        '화면 비율에서는 우변을 FC:(CF+C+Cn)으로 계산하므로 Cn 1개는 화면상 우변을 1 증가시킵니다.',
+        'Cn은 WSumC에 포함하지 않습니다.',
+        'S-CON의 비교에서도 Cn을 CF+C 쪽에 포함하지 않습니다.',
+        'Cn은 Color-Shading blend 계산에서도 제외합니다.',
+      ].join(' '),
+    );
+    expect(correct).toEqual({ passed: true, issues: [] });
+
+    const missingColorBoundary = evaluateAiHarnessOutput(
+      fixture!,
+      '화면은 FC:(CF+C+Cn)입니다. Cn은 WSumC와 S-CON에서 제외합니다. Color-Shading은 별도 항목입니다.',
+    );
+    expect(missingColorBoundary.passed).toBe(false);
+    expect(
+      missingColorBoundary.issues.some((issue) =>
+        issue.message.includes('Color-Shading에서 Cn 제외'),
+      ),
+    ).toBe(true);
+  });
+
+  it('accepts common Japanese exclusion wording for each Cn calculation boundary', () => {
+    const fixture = AI_HARNESS_EVAL_FIXTURES.find(
+      (item) => item.id === 'coding-ja-cn-calculation-boundaries',
+    );
+    expect(fixture).toBeDefined();
+
+    const output = [
+      '表示比率は FC:(CF+C+Cn) です。',
+      'WSumC では Cn は加算対象にはなりません。',
+      'S-CON の判定には Cn を使いません。',
+      'Color-Shading では Cn は対象外です。',
+    ].join('\n');
+
+    expect(evaluateAiHarnessOutput(fixture!, output)).toEqual({ passed: true, issues: [] });
+  });
+
+  it('accepts correct Cn relationships inside a long Japanese paragraph without spaces', () => {
+    const fixture = AI_HARNESS_EVAL_FIXTURES.find(
+      (item) => item.id === 'coding-ja-cn-calculation-boundaries',
+    );
+    expect(fixture).toBeDefined();
+
+    const output = [
+      '補足'.repeat(140),
+      '表示比率はFC:(CF+C+Cn)です',
+      'WSumCではCnを除外します',
+      'S-CONではCnを除外します',
+      'Color-ShadingではCnを除外します',
+    ].join('');
+
+    expect(evaluateAiHarnessOutput(fixture!, output)).toEqual({ passed: true, issues: [] });
+  });
+
+  it('rejects a Japanese Cn inclusion claim even when spacing is omitted', () => {
+    const fixture = AI_HARNESS_EVAL_FIXTURES.find(
+      (item) => item.id === 'coding-ja-cn-calculation-boundaries',
+    );
+    expect(fixture).toBeDefined();
+
+    const result = evaluateAiHarnessOutput(
+      fixture!,
+      [
+        '表示比率はFC:(CF+C+Cn)です。',
+        'WSumCにCnを含めます。',
+        'S-CONではCnを除外します。',
+        'Color-ShadingではCnを除外します。',
+      ].join(''),
+    );
+
+    expect(result.passed).toBe(false);
+    expect(result.issues).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          type: 'forbidden_phrase',
+          phrase: 'WSumC に Cn を含めます',
+        }),
+      ]),
+    );
+  });
+
+  it('does not mistake the S-CON ratio boundary for exclusion from the displayed ratio', () => {
+    const fixture = AI_HARNESS_EVAL_FIXTURES.find(
+      (item) => item.id === 'coding-en-cn-lower-ratio-boundary',
+    );
+    expect(fixture).toBeDefined();
+
+    const output = [
+      'The displayed ratio is FC:(CF+C+Cn).',
+      'WSumC excludes Cn.',
+      'Cn is excluded from the ratio used by S-CON, which remains CF+C > FC.',
+      'Color-Shading excludes Cn.',
+    ].join('\n');
+
+    expect(evaluateAiHarnessOutput(fixture!, output)).toEqual({ passed: true, issues: [] });
+  });
+
+  it('accepts equivalent Cn inclusion wording without accepting a negated claim', () => {
+    const fixture = {
+      mustNotContain: ['Cn is excluded', 'Cn is not counted'],
+      mustContainAny: [[
+        'includes Cn',
+        'Cn is included',
+        'including Cn',
+        'Cn is counted',
+        'count Cn',
+        'Cn contributes',
+        'Cn increases',
+      ]],
+    };
+
+    expect(
+      evaluateAiHarnessOutput(
+        fixture,
+        'The displayed right side is CF+C+Cn because Cn contributes one count.',
+      ),
+    ).toEqual({ passed: true, issues: [] });
+
+    const negated = evaluateAiHarnessOutput(
+      fixture,
+      'Cn is not counted in the displayed ratio.',
+    );
+    expect(negated.passed).toBe(false);
+    expect(negated.issues.map((issue) => issue.type)).toContain('forbidden_phrase');
   });
 
   it('accepts a natural Portuguese operational-only OBS boundary', () => {

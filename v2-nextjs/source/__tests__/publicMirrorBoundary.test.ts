@@ -28,6 +28,9 @@ describe('public mirror privacy boundary', () => {
     expect(script).toContain('HANDOFF*.md');
     expect(script).toContain('EN_Detailing_Workflow.md');
     expect(script).toContain('Remove-PublicMirrorPrivateArtifacts');
+    expect(script).toContain('Remove-PrivateGitMetadataProperties');
+    expect(script).toContain('Assert-NoPublicGitMetadata');
+    expect(script).toContain('"gitCommit", "baseCommit", "commitSha", "sourceCommit", "commit", "gitDirty"');
     expect(script).toContain('Refusing to remove path outside publish root');
     expect(script).toContain('Refusing to publish outside publish root');
     expect(script).toContain('PublishTargetRelativePath');
