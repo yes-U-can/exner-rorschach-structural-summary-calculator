@@ -7,6 +7,7 @@ const CARDS = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'] as c
 const LOCATIONS = ['W', 'WS', 'D', 'DS', 'Dd', 'DdS'] as const;
 const DQ = ['+', 'o', 'v/+', 'v'] as const;
 const FQ = ['+', 'o', 'u', '-', 'none'] as const;
+type ZCode = '' | 'ZW' | 'ZA' | 'ZD' | 'ZS';
 const DETERMINANTS = [
   'Ma', 'Mp', 'Ma-p', 'FMa', 'FMp', 'FMa-p',
   'ma', 'mp', 'ma-p', 'FC', 'CF', 'C', 'Cn', "FC'", "C'F", "C'",
@@ -146,7 +147,7 @@ function makeProtocol(random: () => number): RorschachResponse[] {
       specialScores = specialScores.filter((score) => score !== 'CP');
     }
 
-    const validZCodes: typeof Z_CODES[number][] = [];
+    const validZCodes: ZCode[] = [];
     if (fq !== 'none' && dq !== 'v') {
       if (location === 'W' || location === 'WS') validZCodes.push('ZW');
       if (dq === '+' || dq === 'v/+') validZCodes.push('ZA', 'ZD');
