@@ -65,18 +65,13 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - 개별 변수 하나만으로 인지적 손상, 고집, 창의성, 반항성 같은 성격 결론을 확정하지 않는다.
 - 문화권, 연령, 기록 길이, 방어성은 이 영역 수치에 직접 영향을 줄 수 있다.
 
-## 근거 메모
-
+## 함께 볼 변수
 - `result-interpretation/lower-section/processing/Zf_proc`
 - `result-interpretation/lower-section/processing/Zd_proc`
 - `result-interpretation/lower-section/processing/W_D_Dd`
 - `result-interpretation/lower-section/processing/W_M`
 - `result-interpretation/lower-section/processing/DQ_plus_proc`
 - `result-interpretation/lower-section/processing/DQ_v_proc`
-
-## 근거 메모
-
-이 문서는 서비스 운영용 참조 코퍼스로 정리된 런타임 문서입니다.
 
 ## 근거 메모
 

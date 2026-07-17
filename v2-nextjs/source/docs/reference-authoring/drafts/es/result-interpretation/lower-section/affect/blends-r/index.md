@@ -46,7 +46,7 @@ En afecto, ayuda a estimar cuánta complejidad y mezcla de estados emocionales a
 - Una proporción baja no implica necesariamente pobreza emocional, sobre todo si `R` es pequeño o `Lambda` es alto.
 - Los blends de color-sombreado merecen atención especial porque pueden señalar mezcla de afecto y malestar.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `Blends:R` muestra complejidad estructural, pero no dice por sí solo si esa complejidad está bien regulada.
 - Debe leerse junto con `Afr`, `FC:CF+C`, `SumC / WSumC`, `Lambda` y `DEPI`.
@@ -66,7 +66,7 @@ En afecto, ayuda a estimar cuánta complejidad y mezcla de estados emocionales a
 - [[Interpretación/Afecto] SumC / WSumC](ref://result-interpretation/lower-section/affect/SumC_WSumC)
 - [[Interpretación/Core] R](ref://result-interpretation/lower-section/core/R)
 - [[Interpretación/Core] Lambda](ref://result-interpretation/lower-section/core/Lambda)
-- [[Interpretación/Special Indices] DEPI](ref://result-interpretation/special-indices/DEPI)
+- [[Interpretación/Índices Especiales] DEPI](ref://result-interpretation/special-indices/DEPI)
 
 ## Nota de fundamento
 

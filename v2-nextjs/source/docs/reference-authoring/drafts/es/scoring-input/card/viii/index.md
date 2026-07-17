@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/card/VIII"
 locale: "es"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/card/VIII"
-displayTitle: "[Codificación/Tarjetas] VIII"
+displayTitle: "[Codificación/Láminas] VIII"
 aliases:
   - "Card VIII"
   - "card VIII"
@@ -24,19 +24,19 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/card/viii/index.md"
 ---
 
-# Nombre del documento: [Codificación/Tarjetas] VIII
+# Nombre del documento: [Codificación/Láminas] VIII
 
 ## Alias y búsqueda
 
 - Card VIII
 - card VIII
 - card 8
-- tarjeta VIII
+- lámina VIII
 - lámina VIII
 
 ## Definición central
 
-`Tarjeta VIII` suele facilitar respuestas animales y puede hacer más visible la participación del color.
+`Lámina VIII` suele facilitar respuestas animales y puede hacer más visible la participación del color.
 La página resume esos focos de codificación.
 
 ## Condiciones de aplicación
@@ -48,8 +48,8 @@ La página resume esos focos de codificación.
 
 ## Precauciones y distinciones
 
-- La presencia de color visible en la tarjeta no basta para un determinante cromático.
-- No toda respuesta animal de esta tarjeta es `Popular`.
+- La presencia de color visible en la lámina no basta para un determinante cromático.
+- No toda respuesta animal de esta lámina es `Popular`.
 - Si la forma sigue dominando, el peso del color debe evaluarse con cuidado.
 
 ## Referencias cruzadas

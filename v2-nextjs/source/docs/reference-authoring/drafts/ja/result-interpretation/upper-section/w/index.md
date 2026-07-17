@@ -21,40 +21,40 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-upper-section-location-dq-2026-03-10.md"
 ---
 
-# Document Name: [解釈/Upper Section] W
+# [解釈/Upper Section] W
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - W
 - whole responses
 - 全体反応
 
-## Core Definition
+## 中核的定義
 
 `W` は、全体ブロットに対して与えられた反応の頻度です。
 解釈では、刺激場を全体として取り込もうとする傾向がどの程度あり、その広い焦点が有効に使われているかを見る手がかりになります。
 
-## Interpretation Points
+## 解釈の要点
 
 - 適度な `W` は、より広い文脈をまとめて把握する力と並ぶことがあります。
 - 高い `W` は、全体から入りやすいことや、大きな単位で処理しやすいことを示す場合があります。
 - 低い `W` は、全体像より細部への重点が強いことと並ぶ場合があります。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
 - `W` が高くても、それだけで効率的な統合とは言えません。`DQ`、`FQ`、`W:M`、`Zd` を合わせて見る必要があります。
 - `W` が低いことも、それだけで狭さを意味しません。実用的で細部志向の様式と並ぶことがあります。
 - `W` が高く、同時に `Dd` も高いときは、広く見る傾向と散りやすさが併存している可能性があります。
 
-## Cross References
+## 相互参照
 
-- [[解釈/Upper Section] Upper Section](ref://result-interpretation/upper-section)
-- [[解釈/Upper Section] D](ref://result-interpretation/upper-section/D)
-- [[解釈/Upper Section] Dd](ref://result-interpretation/upper-section/Dd)
+- [[解釈/上段] 上段](ref://result-interpretation/upper-section)
+- [[解釈/上段] D](ref://result-interpretation/upper-section/D)
+- [[解釈/上段] Dd](ref://result-interpretation/upper-section/Dd)
 - [[コーディング/位置] W](ref://scoring-input/location/W)
-- [[解釈/Processing] W:D:Dd](ref://result-interpretation/lower-section/processing/W_D_Dd)
-- [[解釈/Processing] W:M](ref://result-interpretation/lower-section/processing/W_M)
+- [[解釈/情報処理] W:D:Dd](ref://result-interpretation/lower-section/processing/W_D_Dd)
+- [[解釈/情報処理] W:M](ref://result-interpretation/lower-section/processing/W_M)
 
-## Evidence Note
+## 根拠メモ
 
 - 詳細な出典比較は内部 provenance note に分けて保持します。

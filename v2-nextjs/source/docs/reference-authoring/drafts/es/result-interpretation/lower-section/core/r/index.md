@@ -45,7 +45,7 @@ En interpretación funciona primero como indicador de amplitud, productividad y 
 - Un `R` alto tampoco implica por sí solo riqueza adaptativa.
 - La lectura de `R` cambia según `Lambda`, `DQ` y el comportamiento de prueba.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `R` es sobre todo un indicador de marco.
 - No se usa solo para decidir salud, patología o capacidad general.

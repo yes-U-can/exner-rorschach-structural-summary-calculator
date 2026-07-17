@@ -52,16 +52,11 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `Pure C`는 즉시성을 보여 줄 뿐, 그 정서가 긍정적인지 부정적인지, 잘 조절되는지는 설명하지 못한다.
 - 반드시 `FC:CF+C`, `SumC / WSumC`, `CP`와 함께 읽어야 한다.
 
-## 근거 메모
-
+## 함께 볼 변수
 - `FC:CF+C`
 - `SumC / WSumC`
 - `CP`
 - `EB`
-
-## 근거 메모
-
-이 문서는 서비스 운영용 참조 코퍼스로 정리된 런타임 문서입니다.
 
 ## 근거 메모
 

@@ -1,4 +1,4 @@
-﻿---
+---
 canonicalRoute: "scoring-input/contents/Hh"
 locale: "es"
 docKind: "coding-entry"

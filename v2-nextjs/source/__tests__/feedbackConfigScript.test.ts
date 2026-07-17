@@ -13,6 +13,8 @@ function runFeedbackConfig(overrides: Record<string, string>) {
       RAG_DATABASE_URL: '',
       RAG_WRITE_DATABASE_URL: '',
       VERCEL: '0',
+      VERCEL_ENV: '',
+      CI: '',
       ...overrides,
     },
   });
@@ -72,10 +74,25 @@ describe('AI feedback deployment configuration', () => {
       NEXT_PUBLIC_AI_FEEDBACK_ENABLED: '1',
       AI_FEEDBACK_DATABASE_URL: 'postgresql://feedback.example/feedback',
       VERCEL: '1',
+      VERCEL_ENV: 'production',
+      CI: '1',
     });
 
     expect(result.status).not.toBe(0);
     expect(result.stderr).toContain('AI_FEEDBACK_EDGE_RATE_LIMIT_READY=1');
+  });
+
+  it('does not treat locally pulled Vercel variables as a deployment build', () => {
+    const result = runFeedbackConfig({
+      NEXT_PUBLIC_AI_FEEDBACK_ENABLED: '1',
+      AI_FEEDBACK_DATABASE_URL: 'postgresql://feedback.example/feedback',
+      VERCEL: '1',
+      VERCEL_ENV: 'production',
+    });
+
+    expect(result.status).toBe(0);
+    expect(result.stdout).toContain('"dedicatedDatabaseBoundary":true');
+    expect(result.stdout).toContain('"edgeRateLimitReady":false');
   });
 
   it('accepts a dedicated feedback database after the Vercel rate limit is confirmed', () => {
@@ -85,6 +102,8 @@ describe('AI feedback deployment configuration', () => {
       AI_FEEDBACK_EDGE_RATE_LIMIT_READY: '1',
       RAG_DATABASE_URL: 'postgresql://rag.example/reference',
       VERCEL: '1',
+      VERCEL_ENV: 'production',
+      CI: '1',
     });
 
     expect(result.status).toBe(0);

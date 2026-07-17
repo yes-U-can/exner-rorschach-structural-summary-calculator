@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/card/IV"
 locale: "es"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/card/IV"
-displayTitle: "[Codificación/Tarjetas] IV"
+displayTitle: "[Codificación/Láminas] IV"
 aliases:
   - "Card IV"
   - "card IV"
@@ -23,32 +23,32 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/card/iv/index.md"
 ---
 
-# Nombre del documento: [Codificación/Tarjetas] IV
+# Nombre del documento: [Codificación/Láminas] IV
 
 ## Alias y búsqueda
 
 - Card IV
 - card IV
 - card 4
-- tarjeta IV
+- lámina IV
 - lámina IV
 
 ## Definición central
 
-`Tarjeta IV` suele favorecer respuestas globales y comentarios ligados a forma, textura o peso visual.
-Esta página resume que aspectos conviene revisar al codificar esas respuestas.
+`Lámina IV` suele favorecer respuestas globales y comentarios ligados a forma, textura o peso visual.
+Esta página resume qué aspectos conviene revisar al codificar esas respuestas.
 
 ## Condiciones de aplicación
 
-- En `Tarjeta IV` son frecuentes respuestas `W`.
+- En `Lámina IV` son frecuentes respuestas `W`.
 - Si la persona describe cualidades de textura o tacto, revisa `T` o `TF` según el papel de la forma.
 - Si la respuesta se mantiene principalmente formal, conviene revisar `F` y `FQ`.
-- El hecho de que la tarjeta se vea pesada o sombreada no agrega por sí mismo un determinante de sombreado.
+- El hecho de que la lámina se vea pesada o sombreada no agrega por sí mismo un determinante de sombreado.
 
 ## Precauciones y distinciones
 
 - La descripción verbal de rugosidad o peso no basta si no forma parte real de la percepción codificada.
-- Esta página no interpreta el simbolismo de la tarjeta; solo recuerda focos de codificación.
+- Esta página no interpreta el simbolismo de la lámina; solo recuerda focos de codificación.
 - `Card IV` y el determinante `V` son cosas distintas y no deben confundirse.
 
 ## Referencias cruzadas

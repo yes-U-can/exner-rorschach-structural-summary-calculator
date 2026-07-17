@@ -43,7 +43,7 @@ Solo se calcula cuando se cumplen todas las condiciones: `EA >= 4.0`, `Lambda < 
 ## Puntos de interpretación
 
 - Un `EBPer` bajo sugiere que el estilo preferente existe pero conserva cierta flexibilidad.
-- Un `EBPer` alto indica que la dirección `introversive` o `extratensive` se vuelve más rígida o dominante.
+- Un `EBPer` alto indica que la dirección introversiva o extratensiva se vuelve más rígida o dominante.
 - En ese caso, la persona puede depender demasiado de un canal preferido y perder plasticidad.
 
 ## Precauciones y distinciones
@@ -52,7 +52,7 @@ Solo se calcula cuando se cumplen todas las condiciones: `EA >= 4.0`, `Lambda < 
 - Superar el punto de corte no significa por sí solo patología; describe menor flexibilidad.
 - Si `EA` es muy bajo o el protocolo es corto, la proporción puede parecer más extrema de lo que realmente es.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `EBPer` no decide por sí solo fracaso adaptativo.
 - Para saber si la pervasividad es clínicamente relevante, hay que revisar `EA`, `es`, `D` y los componentes concretos de `EB`.

@@ -67,7 +67,7 @@ En el Sistema Comprehensivo, significa convertir cada respuesta del Rorschach en
 - [[Codificación/Popular] Popular](ref://scoring-input/popular)
 - [[Codificación/Z] Z](ref://scoring-input/z)
 - [[Codificación/GHR-PHR] GHR/PHR](ref://scoring-input/gphr)
-- [[Codificación/Códigos especiales] Special Scores](ref://scoring-input/special-score)
+- [[Codificación/Códigos especiales] Códigos Especiales](ref://scoring-input/special-score)
 
 ## Nota de fundamento
 

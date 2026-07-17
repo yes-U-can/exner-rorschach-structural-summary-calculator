@@ -14,6 +14,7 @@ export type ReferenceVectorHit = {
   similarity: number;
   embeddingModel: string;
   dimensions: number;
+  contentHash: string;
 };
 
 const globalForVectorPool = globalThis as GlobalWithReferenceVectorPool;
@@ -57,6 +58,7 @@ export async function searchReferenceChunkEmbeddings(params: {
       "provider",
       "embeddingModel",
       "dimensions",
+      "contentHash",
       1 - ("vector" <=> $1::vector) AS similarity
     FROM "ReferenceChunkEmbedding"
     WHERE "locale" = $2
@@ -82,5 +84,6 @@ export async function searchReferenceChunkEmbeddings(params: {
     similarity: Number(row.similarity ?? 0),
     embeddingModel: String(row.embeddingModel),
     dimensions: Number(row.dimensions),
+    contentHash: String(row.contentHash ?? ''),
   }));
 }

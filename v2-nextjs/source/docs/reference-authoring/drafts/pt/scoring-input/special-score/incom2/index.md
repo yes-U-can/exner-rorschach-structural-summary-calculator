@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/special-score/INCOM2"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/special-score/INCOM2"
-displayTitle: "[Codificação/Escores Especiais] INCOM2"
+displayTitle: "[Codificação/Códigos Especiais] INCOM2"
 aliases:
   - "INCOM2"
   - "combinação incongruente nível 2"
@@ -22,7 +22,7 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-special-score-incom-fabcom-contam-alog-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificação/Escores Especiais] INCOM2
+# Nome do documento: [Codificação/Códigos Especiais] INCOM2
 
 ## Apelidos e busca
 
@@ -50,10 +50,10 @@ Os elementos unidos não apenas combinam mal, mas formam uma incongruência niti
 
 ## Referências cruzadas
 
-- [[Codificação/Escores Especiais] Special Scores](ref://scoring-input/special-score)
-- [[Codificação/Escores Especiais] INCOM1](ref://scoring-input/special-score/INCOM1)
-- [[Codificação/Escores Especiais] FABCOM2](ref://scoring-input/special-score/FABCOM2)
-- [[Codificação/Escores Especiais] CONTAM](ref://scoring-input/special-score/CONTAM)
+- [[Codificação/Códigos Especiais] Códigos Especiais](ref://scoring-input/special-score)
+- [[Codificação/Códigos Especiais] INCOM1](ref://scoring-input/special-score/INCOM1)
+- [[Codificação/Códigos Especiais] FABCOM2](ref://scoring-input/special-score/FABCOM2)
+- [[Codificação/Códigos Especiais] CONTAM](ref://scoring-input/special-score/CONTAM)
 - [[Interpretação/Ideation] Sum6](ref://result-interpretation/lower-section/ideation/Sum6)
 - [[Interpretação/Ideation] Lv2](ref://result-interpretation/lower-section/ideation/Lv2)
 - [[Interpretação/Ideation] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)

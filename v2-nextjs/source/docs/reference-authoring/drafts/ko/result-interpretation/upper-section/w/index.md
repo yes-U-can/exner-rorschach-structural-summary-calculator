@@ -50,17 +50,12 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `W`만으로 통찰, 지능, 추상성, 경직성을 결론 내리지 않는다.
 - `D`, `Dd`, `W:M`, `DQ`, `Zd`와 함께 봐야 안전하다.
 
-## 근거 메모
-
+## 함께 볼 변수
 - `D`
 - `Dd`
 - `W_M`
 - `W_D_Dd`
 - `DQ+`
-
-## 근거 메모
-
-이 문서는 서비스 운영용 참조 코퍼스로 정리된 런타임 문서입니다.
 
 ## 근거 메모
 

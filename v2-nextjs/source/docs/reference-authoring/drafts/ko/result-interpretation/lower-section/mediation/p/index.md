@@ -42,7 +42,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 
 ## 높거나 낮을 때 주의
 
-- `P`는 문화권에 따라 목록 차이가 있을 수 있으므로 locale 문맥을 고려해야 한다.
+- `P`는 적용하는 종합체계 기준에 따라 부호화하고, 해석할 때에는 문화적 맥락을 함께 고려한다.
 - `P`가 적다고 곧바로 병리로, 많다고 곧바로 적응으로 읽지 않는다.
 - 반응 수와 카드별 분포도 함께 봐야 한다.
 

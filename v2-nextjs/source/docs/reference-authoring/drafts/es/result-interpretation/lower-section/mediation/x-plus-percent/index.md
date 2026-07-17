@@ -48,7 +48,7 @@ Resume cuánto predomina una mediación perceptiva alineada con lecturas comunes
 - `X+%` bajo no equivale automáticamente a distorsión grave; hay que revisar `Xu%` y `X-%`.
 - Con protocolos cortos, la proporción puede cambiar con pocas respuestas.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `X+%` por sí solo no define si la excentricidad es creativa, defensiva o desorganizadora.
 - Conviene leerlo junto con `XA%`, `WDA%`, `Xu%`, `X-%` y `P`.

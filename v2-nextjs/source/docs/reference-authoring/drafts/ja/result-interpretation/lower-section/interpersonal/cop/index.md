@@ -23,38 +23,38 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-processing-dqv-interpersonal-opening-2026-03-10.md"
 ---
 
-# Document Name: [Interpretation/Interpersonal] COP
+# [Interpretation/Interpersonal] COP
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - COP
 - cooperative movement
 - 協力的イメージ
 
-## Core Definition
+## 中核的定義
 
-`COP` は、協力的または相互に協調した対人場面がどれくらい記録に現れるかを示す。
-Interpretation では、支え合い、協調、相互性という形で relatedness を想像しやすいかの手がかりとして使う。
+`COP` は、協力的または相互に協調した対人場面がどれくらい記録に現れるかを示します。
+解釈では、支え合い、協調、相互性という形で対人関係性を想像しやすいかの手がかりとして使います。
 
-## Interpretation Points
+## 解釈の要点
 
-- `COP` が見られるときは、協力的なやり取りや支えになる関係を想像しやすいことが多い。
-- `COP` が非常に低いか absent なら、記録は協力的場面へあまり傾かないことがある。
-- これは完璧な social skill を示すのではなく、どんな relational organization が想像されやすいかを示す。
-- `AG` と比べると、対人トーンが協力的か、衝突的か、混合かを見やすい。
+- `COP` が見られるときは、協力的なやり取りや支えになる関係を想像しやすいことが多いです。
+- `COP` が非常に低いか認められない場合、記録は協力的場面へあまり傾かないことがあります。
+- これは完璧な社会的技能を示すのではなく、どんな対人関係の組織化が想像されやすいかを示します。
+- `AG` と比べると、対人トーンが協力的か、衝突的か、混合かを見やすいです。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
-- 高い `COP` は、そのまま現実の関係が健康で安定していることを保証しない。
-- 低い `COP` だけで病理と決めない。
-- `COP` と `AG` は同じ protocol 内に共存しうる。
+- 高い `COP` は、そのまま現実の関係が健康で安定していることを保証しません。
+- 低い `COP` だけで病理と決めません。
+- `COP` と `AG` は同じプロトコル内に共存することがあります。
 
-## Limits of Isolated Interpretation
+## 単独解釈の限界
 
-- `COP` は imagined relational structure についての一つのサインにすぎない。
-- `SumT_inter`、`HumanCont`、`ISO_Index`、`GHR/PHR` と一緒に読む必要がある。
+- `COP` は想像上の対人関係構造についての一つのサインにすぎません。
+- `SumT_inter`、`HumanCont`、`ISO_Index`、`GHR/PHR` と一緒に読む必要があります。
 
-## Variables to Review Together
+## 併せて確認する変数
 
 - `AG`
 - `HumanCont`
@@ -62,17 +62,17 @@ Interpretation では、支え合い、協調、相互性という形で related
 - `ISO_Index`
 - `GHR`
 
-## Cross References
+## 相互参照
 
-- [[Interpretation/Lower Section/Interpersonal] Interpersonal](ref://result-interpretation/lower-section/interpersonal)
-- [[Interpretation/Interpersonal] AG](ref://result-interpretation/lower-section/interpersonal/AG)
-- [[Interpretation/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
-- [[Interpretation/Interpersonal] SumT](ref://result-interpretation/lower-section/interpersonal/SumT_inter)
+- [[解釈/下段/Interpersonal] Interpersonal](ref://result-interpretation/lower-section/interpersonal)
+- [[解釈/Interpersonal] AG](ref://result-interpretation/lower-section/interpersonal/AG)
+- [[解釈/Interpersonal] 人間内容](ref://result-interpretation/lower-section/interpersonal/HumanCont)
+- [[解釈/Interpersonal] SumT](ref://result-interpretation/lower-section/interpersonal/SumT_inter)
 - [[Coding/Special Score] COP](ref://scoring-input/special-score/COP)
 - [[Coding/GHR-PHR] GHR](ref://scoring-input/gphr/GHR)
 - [[Coding/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
-- [[Interpretation/Interpersonal] Isolation Index](ref://result-interpretation/lower-section/interpersonal/ISO_Index)
+- [[解釈/Interpersonal] Isolation Index](ref://result-interpretation/lower-section/interpersonal/ISO_Index)
 
-## Evidence Note
+## 根拠メモ
 
-- Detailed source comparison is stored in internal provenance notes.
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

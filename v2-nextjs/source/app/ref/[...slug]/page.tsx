@@ -14,6 +14,7 @@ import {
   getReferenceRuntimeStaticSlugs,
 } from '@/lib/referenceCorpus';
 import { buildLocalizedPageMetadata, getSeoCopy } from '@/lib/seo';
+import { getReferencePresentationTitle } from '@/lib/referencePresentation';
 import type { Language } from '@/types';
 
 type PageProps = {
@@ -117,11 +118,12 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   }
 
   const canonicalPath = `/ref/${doc.slug.map((segment) => encodeURIComponent(segment)).join('/')}`;
+  const presentationTitle = getReferencePresentationTitle(activeLang, doc.canonicalRoute, doc.title);
 
   return buildLocalizedPageMetadata({
     language: activeLang,
     pathname: canonicalPath,
-    title: `${doc.title} | ${docsLabel}`,
+    title: `${presentationTitle} | ${docsLabel}`,
     description: buildSeoDescription(doc.excerpt || doc.bodyText),
   });
 }
@@ -146,7 +148,8 @@ export default async function DocDetailPage({ params, searchParams }: PageProps)
   }
 
   const navRows = buildNavRows(activeLang, slug);
-  const copyText = `${doc.title}\n\n${doc.bodyText}`;
+  const presentationTitle = getReferencePresentationTitle(activeLang, doc.canonicalRoute, doc.title);
+  const copyText = `${presentationTitle}\n\n${doc.bodyText}`;
   const bodyMarkdown = stripDuplicateTitleHeading(doc.bodyMarkdown || doc.bodyText, doc.title);
 
   return (
@@ -184,7 +187,7 @@ export default async function DocDetailPage({ params, searchParams }: PageProps)
                           : 'border-[var(--border-subtle)] bg-[var(--surface-base)] text-[var(--text-body)] hover:border-[var(--brand-200)] hover:bg-[var(--surface-muted)]'
                     }`}
                   >
-                    {item.title}
+                    {getReferencePresentationTitle(activeLang, item.canonicalRoute, item.title)}
                   </Link>
                 );
               })}
@@ -194,7 +197,7 @@ export default async function DocDetailPage({ params, searchParams }: PageProps)
 
         <article className="mx-auto max-w-4xl">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <h1 className="break-words text-2xl font-bold text-[var(--text-strong)] sm:text-3xl">{doc.title}</h1>
+            <h1 className="break-words text-2xl font-bold text-[var(--text-strong)] sm:text-3xl">{presentationTitle}</h1>
             <CopyDocButton text={copyText} language={activeLang} />
           </div>
           <ReferenceMarkdown

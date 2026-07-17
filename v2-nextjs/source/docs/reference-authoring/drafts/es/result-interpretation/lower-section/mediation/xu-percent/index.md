@@ -46,7 +46,7 @@ Señala una mediación perceptiva que todavía puede sostenerse, aunque se aleja
 - Un `Xu%` alto no debe confundirse de inmediato con patología.
 - El valor cambia de sentido según su relación con `X+%`, `XA%`, `P` y el resto del protocolo.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `Xu%` muestra rareza tolerable, pero no define por sí solo si esa rareza es flexible o problemática.
 - Conviene leerlo junto con `X+%`, `X-%`, `XA%`, `P` y `FQu`.

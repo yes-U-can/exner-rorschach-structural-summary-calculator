@@ -3,7 +3,7 @@ canonicalRoute: "result-interpretation/special-indices/SCON"
 locale: "es"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/special-indices/SCON"
-displayTitle: "[Interpretación/Special Indices] Suicide Constellation"
+displayTitle: "[Interpretación/Índices Especiales] Suicide Constellation"
 aliases:
   - "S-CON"
   - "Suicide Constellation"
@@ -23,7 +23,7 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/special-indices/scon/index.md"
 ---
 
-# Nombre del documento: [Interpretación/Special Indices] Suicide Constellation
+# Nombre del documento: [Interpretación/Índices Especiales] Suicide Constellation
 
 ## Alias y búsqueda
 
@@ -51,7 +51,7 @@ No sustituye la evaluación clínica inmediata, pero indica cuando el tema requi
 - Como el suicidio tiene una tasa base baja, también puede haber falsos positivos; ningún resultado sustituye la evaluación directa del riesgo.
 - En protocolos cortos o muy defensivos pueden aparecer falsos negativos.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `S-CON` exige contraste con entrevista, historia reciente y juicio clínico directo.
 - Conviene volver a las variables que componen la constelación.
@@ -66,14 +66,14 @@ No sustituye la evaluación clínica inmediata, pero indica cuando el tema requi
 
 ## Referencias cruzadas
 
-- [[Interpretación/Special Indices] Special Indices](ref://result-interpretation/special-indices)
+- [[Interpretación/Índices Especiales] Índices Especiales](ref://result-interpretation/special-indices)
 - [[Interpretación/Core] D](ref://result-interpretation/lower-section/core/D)
 - [[Interpretación/Core] AdjD](ref://result-interpretation/lower-section/core/AdjD)
 - [[Interpretación/Core] SumV](ref://result-interpretation/lower-section/core/SumV)
 - [[Interpretación/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
 - [[Interpretación/Self Perception] SumV](ref://result-interpretation/lower-section/selfPerception/SumV_self)
 - [[Interpretación/Self Perception] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
-- [[Interpretación/Special Indices] DEPI](ref://result-interpretation/special-indices/DEPI)
+- [[Interpretación/Índices Especiales] DEPI](ref://result-interpretation/special-indices/DEPI)
 
 ## Nota de fundamento
 

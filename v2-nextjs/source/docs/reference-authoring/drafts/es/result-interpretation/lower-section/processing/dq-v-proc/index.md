@@ -47,7 +47,7 @@ En interpretación funciona como una señal de que la calidad organizativa puede
 - Un valor alto no describe por sí solo la causa del descenso organizativo.
 - Conviene no confundir esta variable con severidad clínica automática.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `DQv` sugiere un punto de falla del procesamiento, pero no explica por sí solo todo el estilo cognitivo.
 - Conviene leerlo junto con `DQ+`, `PSV`, `X-%` y `WSum6`.

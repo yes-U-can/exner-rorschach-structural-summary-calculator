@@ -1,4 +1,4 @@
-﻿---
+---
 canonicalRoute: "result-interpretation/lower-section/processing/DQ_plus_proc"
 locale: "pt"
 docKind: "interpretation-entry"

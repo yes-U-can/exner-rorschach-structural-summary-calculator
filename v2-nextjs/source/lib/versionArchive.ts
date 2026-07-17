@@ -21,6 +21,18 @@ const v2SourceUrl = `${exhibitionRepoUrl}/tree/main/v2-nextjs/source`;
 
 export const v2NextVersions: VersionArchiveEntry[] = [
   {
+    version: 'v2.2.4',
+    title: 'Version 2.2.4',
+    series: 'v2-nextjs',
+    publishedAt: '2026-07-19',
+    releaseKind: 'bugfix',
+    releaseLabel: '버그 패치',
+    summary:
+      '다섯 언어의 참조 문서 용어와 문체를 각 언어권의 전문 용례에 맞춰 정리하고, 참조 문서 표기와 AI 검색 무결성, 요청 과부하 방어를 보강한 패치입니다. 계산식과 채점 화면 배치는 변경하지 않았습니다.',
+    sourceUrl: v2SourceUrl,
+    releaseUrl: v2ReleaseUrl('v2.2.4'),
+  },
+  {
     version: 'v2.2.3',
     title: 'Version 2.2.3',
     series: 'v2-nextjs',

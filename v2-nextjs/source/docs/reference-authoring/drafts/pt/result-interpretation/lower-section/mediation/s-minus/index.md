@@ -3,10 +3,12 @@ canonicalRoute: "result-interpretation/lower-section/mediation/S_minus"
 locale: "pt"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/mediation/S_minus"
-displayTitle: "[Interpretação/Mediação] S-%"
+displayTitle: "[Interpretação/Mediação] S-"
 aliases:
+  - "S-"
   - "S-%"
   - "distorção em espaço branco"
+  - "frequência FQ menos em respostas de espaço branco"
 relatedRoutes:
   - "result-interpretation/lower-section/mediation"
   - "result-interpretation/lower-section/mediation/X_minus_percent"
@@ -20,29 +22,30 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-mediation-opening-2026-03-11.md"
 ---
 
-# Nome do documento: [Interpretação/Mediação] S-%
+# Nome do documento: [Interpretação/Mediação] S-
 
 ## Apelidos e busca
 
+- S-
 - S-%
 - distorção em espaço branco
+- frequência FQ menos em respostas de espaço branco
 
 ## Definição central
 
-`S-%` indica a proporção de respostas distorcidas entre as respostas que usam espaço branco.
-Ele não mede apenas quantas respostas `S` aparecem, mas quanta distorção se combina com esse uso.
+`S-` é a frequência bruta de respostas que usam espaço branco (`S`) e recebem Qualidade Formal menos (`FQ-`). O aplicativo mostra essa contagem, e não uma porcentagem, na seção inferior do Sumário Estrutural.
 
 ## Pontos de interpretação
 
-- Quando `S-%` é alto, oposição ou distância do campo pode vir acompanhada de maior distorção perceptiva.
-- Isso pode sugerir que o uso de espaço branco não é apenas postura defensiva, mas também fonte de desorganização da mediação.
-- Seu significado ganha peso quando `S` também aparece elevado.
+- Um `S-` diferente de zero mostra que o uso do espaço branco e a distorção perceptiva ocorreram na mesma resposta.
+- A contagem deve ser interpretada com o `R` total, o total de `FQ-`, o número de respostas de espaço branco e o contexto do protocolo.
+- O `S-%` calculado separadamente é uma proporção derivada distinta. A contagem `S-` exibida na tela não deve ser lida como `S-%`, nem receber diretamente um ponto de corte percentual.
 
 ## Cuidados e diferenciação
 
-- `S-%` não é o mesmo que `S` da seção superior nem que `S` de afeto.
-- Se houver poucas respostas `S`, a razão pode ficar instável.
-- Ele deve ser lido como espaço branco mais distorção, não como índice puro de negativismo.
+- `S-`, a frequência total de espaço branco `S`, `S_aff` e a proporção derivada `S-%` são variáveis distintas.
+- Não se deve inferir oposição, hostilidade ou psicopatologia a partir da contagem bruta isolada.
+- Se `S-%` for usado separadamente, é necessário verificar seu denominador exato e suas condições de aplicação.
 
 ## Referências cruzadas
 

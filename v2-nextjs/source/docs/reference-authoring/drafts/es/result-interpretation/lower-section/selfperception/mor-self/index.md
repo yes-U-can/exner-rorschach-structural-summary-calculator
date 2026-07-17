@@ -48,7 +48,7 @@ Mientras `MOR` en `Ideación` describe un tono general del pensamiento, aquí se
 - Enfermedad real, trauma físico o una etapa de pérdida pueden aumentar la autoimagen dañada de forma reactiva.
 - Un valor cero no garantiza una autoimagen sana o estable.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `MOR_self` muestra tono negativo de la autoimagen, pero no explica por sí solo como se defiende o regula esa experiencia.
 - Conviene leerlo junto con `SumV_self`, `FD`, `Fr+rF` y `DEPI`.
@@ -67,8 +67,8 @@ Mientras `MOR` en `Ideación` describe un tono general del pensamiento, aquí se
 - [[Interpretación/Ideación] MOR](ref://result-interpretation/lower-section/ideation/MOR)
 - [[Interpretación/Self Perception] SumV](ref://result-interpretation/lower-section/selfPerception/SumV_self)
 - [[Interpretación/Self Perception] An + Xy](ref://result-interpretation/lower-section/selfPerception/An_Xy)
-- [[Codificación/Special Scores] MOR](ref://scoring-input/special-score/MOR)
-- [[Interpretación/Special Indices] DEPI](ref://result-interpretation/special-indices/DEPI)
+- [[Codificación/Códigos Especiales] MOR](ref://scoring-input/special-score/MOR)
+- [[Interpretación/Índices Especiales] DEPI](ref://result-interpretation/special-indices/DEPI)
 
 ## Nota de fundamento
 

@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/determinants/m"
 locale: "ko"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/determinants/m"
-displayTitle: "[결정인] M"
+displayTitle: "[결정인] m"
 aliases:
   - "m"
   - "inanimate movement"
@@ -20,7 +20,7 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/determinants/m--6d/index.md"
 ---
 
-# [결정인] M
+# [결정인] m
 
 ## 별칭/검색어
 
@@ -29,19 +29,23 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/dete
 
 ## 핵심 정의
 
-[결정인] M은(는) 이 서비스에서 로샤 검사 채점과 해석 보조를 위해 정리한 참조 문서입니다.
+`m`은 무생물이나 기계적 대상의 움직임처럼 인간 또는 동물 움직임으로 부호화하지 않는 운동이 지각될 때 사용하는 결정인이다.
 
 ## 채점/적용 조건
 
-최종 부호화를 확정하기 전에는 이 서비스가 사용하는 채점 기준과 현재 반응의 앞뒤 맥락을 함께 검토해 주세요.
+- 반응에 실제 움직임이 지각되어야 한다.
+- 움직이는 주체는 무생물, 기계 또는 물체다.
+- 인간적 움직임이나 통상적인 동물 움직임에 해당하지 않아야 한다.
 
 ## 주의사항/감별 기준
 
-이 변수만으로 단정하지 말고, 인접 변수와 다른 가능성을 함께 비교해 주세요.
+- 인간적이거나 의인화된 움직임은 [`M`](ref://scoring-input/determinants/M), 통상적인 동물 움직임은 [`FM`](ref://scoring-input/determinants/FM)과 구분한다.
+- 반응이 긴장되거나 불안정하게 느껴진다는 이유만으로 `m`을 부호화하지 않는다. 지각된 움직임이 있어야 한다.
+- 검사자의 인상보다 피검자가 설명한 움직임의 주체와 방식을 기준으로 판단한다.
 
 ## 상호 참조
 
-인접 규칙이나 연결된 해석 맥락이 필요할 때는 아래 문서를 함께 확인해 주세요.
+인접 규칙이나 연결된 해석 맥락이 필요할 때는 아래 문서를 함께 확인한다.
 
 - [scoring-input/determinants](ref://scoring-input%2Fdeterminants)
 - [scoring-input/determinants/M](ref://scoring-input%2Fdeterminants%2FM)
@@ -52,4 +56,4 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/dete
 
 ## 근거 메모
 
-이 문서는 서비스 운영용 참조 코퍼스로 정리된 런타임 문서입니다.
+세부 출처 비교와 판단 근거는 내부 검토 메모에서 관리한다.

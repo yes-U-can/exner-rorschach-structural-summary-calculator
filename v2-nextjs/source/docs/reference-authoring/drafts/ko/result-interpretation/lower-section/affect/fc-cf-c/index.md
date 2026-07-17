@@ -59,5 +59,5 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 
 ## 근거 메모
 
-- 이 문서는 서비스 운영용 참조 코퍼스로 정리된 런타임 문서입니다.
+- 세부 출처 비교와 판단 근거는 내부 검토 메모에서 관리한다.
 - 표기 체계와 `Cn` 처리 메모는 provenance note에 분리했다.

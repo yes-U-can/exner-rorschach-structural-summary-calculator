@@ -44,7 +44,7 @@ No se asignan por impresión clínica general, sino siguiendo una secuencia de d
 - Primero hay que confirmar que la respuesta es de representación humana.
 - Eso puede ocurrir por contenido humano, por determinante `M`, o por una respuesta `FM` que lleve [`COP`](ref://scoring-input/special-score/COP) o [`AG`](ref://scoring-input/special-score/AG).
 - Después se sigue la secuencia de criterios para decidir si la respuesta queda en [`GHR`](ref://scoring-input/gphr/GHR) o en [`PHR`](ref://scoring-input/gphr/PHR).
-- La decisión final depende de calidad formal, códigos especiales cognitivos, `AG`, `MOR`, `An`, `Hd`, popularidad y otros señales ya codificadas.
+- La decisión final depende de la calidad formal, los códigos especiales cognitivos, `AG`, `MOR`, `An`, `Hd`, la popularidad y otras señales ya codificadas.
 
 ## Precauciones y distinciones
 

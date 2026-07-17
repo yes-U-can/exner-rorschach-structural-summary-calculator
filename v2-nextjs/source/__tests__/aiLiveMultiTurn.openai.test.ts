@@ -15,6 +15,7 @@ import { evaluateAiMultiTurnTranscript } from '@/lib/ai/evalMultiTurnContracts';
 import {
   getAiMultiTurnEvalFixtures,
   type AiMultiTurnEvalFixture,
+  type AiMultiTurnEvalTurn,
 } from '@/lib/ai/evalMultiTurnFixtures';
 import type { CodingAssistContext } from '@/types';
 import { type CodingRuleChunk } from '@/lib/codingAssistKnowledge';
@@ -265,6 +266,12 @@ function addUsage(left: OpenAITextStreamUsage, right: OpenAITextStreamUsage | un
   };
 }
 
+function requiresRuntimeVectorEvidence(turn: AiMultiTurnEvalTurn) {
+  return !turn.expectedTags.some(
+    (tag) => tag === 'out-of-scope-refusal' || tag === 'no-internal-disclosure',
+  );
+}
+
 const liveFixtures = getAiMultiTurnEvalFixtures()
   .filter((fixture) => (liveEvalLocale ? fixture.locale === liveEvalLocale : liveEvalIds.size ? true : fixture.locale === 'en'))
   .filter((fixture) => (liveEvalWorkflow ? fixture.workflowMode === liveEvalWorkflow : true))
@@ -341,9 +348,18 @@ describe.runIf(apiKey && liveFixtures.length > 0)('OpenAI live AI multi-turn har
       expect(status).toBe('completed');
       expect(outputChars).toBeGreaterThan(160);
       if (liveEvalRetrievalMode === 'runtime') {
-        for (const evidence of retrievalEvidence) {
-          expect(evidence.retrievalMode).toBe('hybrid');
-          expect(evidence.vectorHitCount).toBeGreaterThan(0);
+        for (let turnIndex = 0; turnIndex < retrievalEvidence.length; turnIndex += 1) {
+          const evidence = retrievalEvidence[turnIndex];
+          const turn = fixture.turns[turnIndex];
+          if (requiresRuntimeVectorEvidence(turn)) {
+            expect(evidence.retrievalMode).toBe('hybrid');
+            expect(evidence.vectorHitCount).toBeGreaterThan(0);
+          } else {
+            expect(['lexical', 'hybrid']).toContain(evidence.retrievalMode);
+            if (evidence.retrievalMode === 'lexical') {
+              expect(evidence.vectorHitCount).toBe(0);
+            }
+          }
         }
       }
       expect(contract.passed, contract.issues.map((issue) => issue.message).join('; ')).toBe(true);

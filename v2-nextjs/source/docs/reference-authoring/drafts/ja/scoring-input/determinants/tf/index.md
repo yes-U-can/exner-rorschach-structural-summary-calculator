@@ -22,35 +22,35 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
-# Document Name: [コーディング/決定因] TF
+# [コーディング/決定因] TF
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - TF
 - 質感-形態
 - 質感優位
 
-## Core Definition
+## 中核的定義
 
-`TF` は、質感や触覚的性質が反応を主に支え、形は補助的に残っているときにつける determinant です。
+`TF` は、質感や触覚的性質が反応を主に支え、形は補助的に残っているときにつける決定因です。
 形はあるが、反応を押しているのは触覚的・表面感覚の方です。
 
-## Application Conditions
+## 採点・適用条件
 
-- 質感が反応の主な基盤になっている。
-- 形の支えもあるが、二次的である。
-- 形が主なら [`FT`](ref://scoring-input/determinants/FT) を再検討する。
-- 形の支えがほぼなければ [`T`](ref://scoring-input/determinants/T) の方が適切かもしれない。
+- 質感が反応の主な基盤になっています。
+- 形の支えもあるが、二次的です。
+- 形が主なら [`FT`](ref://scoring-input/determinants/FT) を再検討します。
+- 形の支えがほぼなければ [`T`](ref://scoring-input/determinants/T) の方が適切かもしれません。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
 - `TF` は単に材質を言っただけではありません。触覚的性質が反応を導いている必要があります。
 - 奥行き感が中心なら [`V`](ref://scoring-input/determinants/V) を見直します。
 - 拡散的陰影が中心なら [`Y`](ref://scoring-input/determinants/Y) を見直します。
 
-## Cross References
+## 相互参照
 
-- [[コーディング/決定因] Determinants](ref://scoring-input/determinants)
+- [[コーディング/決定因] 決定因](ref://scoring-input/determinants)
 - [[コーディング/決定因] FT](ref://scoring-input/determinants/FT)
 - [[コーディング/決定因] T](ref://scoring-input/determinants/T)
 - [[コーディング/決定因] F](ref://scoring-input/determinants/F)
@@ -58,6 +58,6 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 - [[コーディング/決定因] Y](ref://scoring-input/determinants/Y)
 - [[解釈/Core] SumT](ref://result-interpretation/lower-section/core/SumT)
 
-## Evidence Note
+## 根拠メモ
 
-- 詳細な出典比較と判断根拠は内部 provenance note に分離してあります。
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

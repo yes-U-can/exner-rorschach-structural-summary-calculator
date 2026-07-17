@@ -52,17 +52,12 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - 이 변수만으로 관계의 질을 말할 수는 없다.
 - 관계의 정조는 `COP`, `AG`와 같이 보고, 친밀 욕구는 `SumT_inter`, 자기 쪽 왜곡은 `PER`와 함께 봐야 한다.
 
-## 근거 메모
-
+## 함께 볼 변수
 - `a:p`
 - `Ma:Mp`
 - `COP`
 - `AG`
 - `SumT_inter`
-
-## 근거 메모
-
-이 문서는 서비스 운영용 참조 코퍼스로 정리된 런타임 문서입니다.
 
 ## 근거 메모
 

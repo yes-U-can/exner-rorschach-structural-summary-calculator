@@ -40,7 +40,7 @@ It does not explain how to code a single response; it explains how already-calcu
 - The usual reading path is organized through `upper section`, `lower section`, and `special indices`.
 - A single variable is rarely enough by itself; safer reading depends on patterns and combinations.
 - When needed, structural interpretation should be checked against response sequence and content.
-- Locale versions remain separate because clinical emphasis and hyperlink structure can shift by language and culture.
+- Clinical interpretation should account for linguistic and cultural context while preserving the same Comprehensive System variables.
 
 ## Cautions / Distinctions
 

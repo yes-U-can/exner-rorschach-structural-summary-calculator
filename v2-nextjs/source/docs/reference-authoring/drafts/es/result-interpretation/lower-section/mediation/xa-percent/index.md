@@ -47,7 +47,7 @@ Incluye respuestas con `FQ+`, `FQo` y `FQu`, por eso muestra una visión amplia 
 - `XA%` bajo debe leerse junto con `X-%`, no por separado.
 - Con pocos protocolos o pocas respuestas, la proporción puede oscilar más.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `XA%` orienta sobre adecuación global, pero no basta para separar convencionalidad de excentricidad tolerable.
 - Conviene leerlo junto con `WDA%`, `X+%`, `Xu%` y `X-%`.

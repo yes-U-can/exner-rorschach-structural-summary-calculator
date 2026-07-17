@@ -48,9 +48,9 @@ En esta zona se usa como una medida de frecuencia del esfuerzo organizativo, no 
 - Un `Zf` bajo puede ser esperable si el protocolo es corto.
 - Para interpretar el valor, conviene revisar también la distribución `W:D:Dd`.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
-- `Zf` solo muestra con que frecuencia aparece el esfuerzo organizativo.
+- `Zf` solo muestra con qué frecuencia aparece el esfuerzo organizativo.
 - Conviene leerlo junto con `Zd`, `W:D:Dd`, `DQ+` y `DQv`.
 
 ## Variables para revisar juntas

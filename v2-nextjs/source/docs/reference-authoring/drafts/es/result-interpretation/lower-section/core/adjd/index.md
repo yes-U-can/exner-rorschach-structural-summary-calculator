@@ -51,7 +51,7 @@ Funciona como una estimación más estable del margen de control porque `AdjEs` 
 - Un `AdjD` no negativo no elimina la posibilidad de descompensación en contextos muy exigentes.
 - La diferencia entre `D` y `AdjD` es clínicamente relevante porque ayuda a separar carga actual de carga más sostenida.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `AdjD` por sí solo no basta para concluir buen pronóstico adaptativo.
 - Debe revisarse junto con `D`, `AdjEs`, `EA`, `es`, `m` y `SumY`.
@@ -77,7 +77,7 @@ Funciona como una estimación más estable del margen de control porque `AdjEs` 
 - [[Interpretación/Core] m](ref://result-interpretation/lower-section/core/m)
 - [[Interpretación/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
 - [[Interpretación/Core] Lambda](ref://result-interpretation/lower-section/core/Lambda)
-- [[Interpretación/Special Indices] CDI](ref://result-interpretation/special-indices/CDI)
+- [[Interpretación/Índices Especiales] CDI](ref://result-interpretation/special-indices/CDI)
 
 ## Nota de fundamento
 

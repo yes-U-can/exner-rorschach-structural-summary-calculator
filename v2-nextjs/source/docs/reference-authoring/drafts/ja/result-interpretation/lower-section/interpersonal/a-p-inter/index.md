@@ -25,39 +25,39 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-interpersonal-ap-food-sumt-humancont-2026-03-10.md"
 ---
 
-# Document Name: [Interpretation/Interpersonal] a:p
+# [Interpretation/Interpersonal] a:p
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - a:p
 - interpersonal a:p
 - 対人 a:p
 - active:passive
 
-## Core Definition
+## 中核的定義
 
-`a:p` は、対人的な角度から読んだときの active movement と passive movement の比率を示す。
-この section では、他者との関係をより能動的な立場から想像するか、より受け身の立場から想像するかをみる助けになる。
+`a:p` は、対人的な角度から読んだときの能動運動と受動運動の比率を示します。
+この領域では、他者との関係をより能動的な立場から想像するか、より受け身の立場から想像するかをみる助けになります。
 
-## Interpretation Points
+## 解釈の要点
 
-- passive 側が重いと、相手から受け取る、待つ、依存する方向の期待が強いことがある。
-- active 側が優位だと、より initiative や介入、自発性のある関係の想像になりやすい。
-- これは関係の方向性を示すのであって、関係の質全体を示すわけではない。
-- `COP`、`AG`、`SumT_inter` と比べると、主導性、依存性、葛藤がどのように混じるかが見やすい。
+- 受動側が重いと、相手から受け取る、待つ、依存する方向の期待が強いことがあります。
+- 能動側が優位だと、より主導性や介入、自発性のある関係の想像になりやすいです。
+- これは関係の方向性を示すのであって、関係の質全体を示すわけではありません。
+- `COP`、`AG`、`SumT_inter` と比べると、主導性、依存性、葛藤がどのように混じるかが見やすいです。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
-- movement 全体の量が少ないと、わずかな差が大きく見えやすい。
-- passive 優位を自動的に病的受動性とみなさない。
-- active 優位も、それだけで健康な自律性を意味しない。`AG` が高いと統制的、攻撃的な色合いを帯びうる。
+- 運動全体の量が少ないと、わずかな差が大きく見えやすいです。
+- 受動優位を自動的に病的受動性とみなしません。
+- 能動優位も、それだけで健康な自律性を意味しません。`AG` が高いと統制的、攻撃的な色合いを帯びることがあります。
 
-## Limits of Isolated Interpretation
+## 単独解釈の限界
 
-- `a:p` は対人役割の方向の一面だけを示す。
-- `Ma:Mp`、`COP`、`AG`、`SumT_inter`、`M` と一緒に読む必要がある。
+- `a:p` は対人役割の方向の一面だけを示します。
+- `Ma:Mp`、`COP`、`AG`、`SumT_inter`、`M` と一緒に読む必要があります。
 
-## Variables to Review Together
+## 併せて確認する変数
 
 - `a:p`
 - `Ma:Mp`
@@ -65,16 +65,16 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-interpersonal-ap-f
 - `AG`
 - `SumT_inter`
 
-## Cross References
+## 相互参照
 
-- [[Interpretation/Lower Section/Interpersonal] Interpersonal](ref://result-interpretation/lower-section/interpersonal)
-- [[Interpretation/Ideation] a:p](ref://result-interpretation/lower-section/ideation/a_p)
-- [[Interpretation/Ideation] Ma:Mp](ref://result-interpretation/lower-section/ideation/Ma_Mp)
-- [[Interpretation/Interpersonal] COP](ref://result-interpretation/lower-section/interpersonal/COP)
-- [[Interpretation/Interpersonal] AG](ref://result-interpretation/lower-section/interpersonal/AG)
-- [[Interpretation/Interpersonal] SumT](ref://result-interpretation/lower-section/interpersonal/SumT_inter)
-- [[Coding/Determinants] M](ref://scoring-input/determinants/M)
+- [[解釈/下段/Interpersonal] Interpersonal](ref://result-interpretation/lower-section/interpersonal)
+- [[解釈/Ideation] a:p](ref://result-interpretation/lower-section/ideation/a_p)
+- [[解釈/Ideation] Ma:Mp](ref://result-interpretation/lower-section/ideation/Ma_Mp)
+- [[解釈/Interpersonal] COP](ref://result-interpretation/lower-section/interpersonal/COP)
+- [[解釈/Interpersonal] AG](ref://result-interpretation/lower-section/interpersonal/AG)
+- [[解釈/Interpersonal] SumT](ref://result-interpretation/lower-section/interpersonal/SumT_inter)
+- [[Coding/決定因] M](ref://scoring-input/determinants/M)
 
-## Evidence Note
+## 根拠メモ
 
-- Detailed source comparison is stored in internal provenance notes.
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

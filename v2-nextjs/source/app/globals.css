@@ -1087,6 +1087,18 @@ html.theme-switching [data-theme-allow-transition]::after {
     transform-origin: bottom left;
   }
 
+  .ui-language-menu[data-anchor] {
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    margin: 0;
+  }
+
+  .ui-language-menu[data-anchor^='right'] {
+    transform-origin: left center;
+  }
+
   .ui-language-root-sidebar {
     width: 128px;
     transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1);

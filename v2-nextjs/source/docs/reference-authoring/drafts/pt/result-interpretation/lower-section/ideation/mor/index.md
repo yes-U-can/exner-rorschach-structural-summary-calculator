@@ -49,7 +49,7 @@ Na área de `ideação`, ele ajuda a mostrar quanto o conteúdo mental está col
 ## Referências cruzadas
 
 - [[Interpretação/Seção Inferior/Ideação] Ideação](ref://result-interpretation/lower-section/ideation)
-- [[Codificação/Special Score] MOR](ref://scoring-input/special-score/MOR)
+- [[Codificação/Código Especial] MOR](ref://scoring-input/special-score/MOR)
 - [[Interpretação/Ideação] 2AB+Art+Ay](ref://result-interpretation/lower-section/ideation/_2AB_Art_Ay)
 - [[Interpretação/Autopercepção] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
 - [[Interpretação/Índices Especiais] DEPI](ref://result-interpretation/special-indices/DEPI)

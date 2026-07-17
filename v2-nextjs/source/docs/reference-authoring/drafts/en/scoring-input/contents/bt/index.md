@@ -44,7 +44,7 @@ It includes plants, flowers, trees, leaves, or recognizable plant parts.
 
 - `Bt` is botanical content, not a judgment about color, texture, or shape.
 - Do not use it just because something looks organic; the response has to organize it specifically as plant material.
-- Some sources write `BT`, but this corpus keeps the canonical code as `Bt`.
+- Some sources write `BT`; this application uses the Comprehensive System code `Bt`.
 
 ## Cross References
 

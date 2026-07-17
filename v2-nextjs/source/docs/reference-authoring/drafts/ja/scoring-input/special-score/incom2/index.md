@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/special-score/INCOM2"
 locale: "ja"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/special-score/INCOM2"
-displayTitle: "[符号化/特殊得点] INCOM2"
+displayTitle: "[コーディング/特殊スコア] INCOM2"
 aliases:
   - "INCOM2"
   - "重度の不調和結合"
@@ -22,43 +22,43 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-score-incom-fabcom-contam-alog-2026-03-10.md"
 ---
 
-# Document Name: [符号化/特殊得点] INCOM2
+# [コーディング/特殊スコア] INCOM2
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - INCOM2
 - 重度の不調和結合
 - Incongruous Combination 2
 
-## Core Definition
+## 中核的定義
 
-`INCOM2` は、`INCOM1` より明らかに強く、より奇妙な不調和結合が見られるときに付ける特殊得点です。  
+`INCOM2` は、`INCOM1` より明らかに強く、より奇妙な不調和結合が見られるときに付ける特殊スコアです。
 結びつけられた要素の組み合わせが、かなり不自然で支えにくい水準になっています。
 
-## Application Conditions
+## 採点・適用条件
 
 - 不調和な結合が強く、軽度のずれでは説明しにくいときに使います。
 - 単に合わないだけでなく、かなり奇妙で重い不一致が見える必要があります。
 - 水準1か2か迷うときは、本当に重い場合だけ `INCOM2` にします。
 - 後の解釈では [`Sum6`](ref://result-interpretation/lower-section/ideation/Sum6)、[`Lv2`](ref://result-interpretation/lower-section/ideation/Lv2)、[`WSum6`](ref://result-interpretation/lower-section/ideation/WSum6) に反映されます。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
 - 長い、奇妙、想像的というだけでは `INCOM2` にしません。
 - 問題が要素同士の作話的な関係づけにあるなら `FABCOM2` を見直します。
 - 両立しない知覚がひとつに融合しているなら `CONTAM` を見直します。
 - 奇妙さが主に語の問題なら `DV2` と比較して見ます。
 
-## Cross References
+## 相互参照
 
-- [[符号化/特殊得点] Special Scores](ref://scoring-input/special-score)
-- [[符号化/特殊得点] INCOM1](ref://scoring-input/special-score/INCOM1)
-- [[符号化/特殊得点] FABCOM2](ref://scoring-input/special-score/FABCOM2)
-- [[符号化/特殊得点] CONTAM](ref://scoring-input/special-score/CONTAM)
+- [[コーディング/特殊スコア] 特殊スコア](ref://scoring-input/special-score)
+- [[コーディング/特殊スコア] INCOM1](ref://scoring-input/special-score/INCOM1)
+- [[コーディング/特殊スコア] FABCOM2](ref://scoring-input/special-score/FABCOM2)
+- [[コーディング/特殊スコア] CONTAM](ref://scoring-input/special-score/CONTAM)
 - [[解釈/観念化] Sum6](ref://result-interpretation/lower-section/ideation/Sum6)
 - [[解釈/観念化] Lv2](ref://result-interpretation/lower-section/ideation/Lv2)
 - [[解釈/観念化] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
 
-## Evidence Note
+## 根拠メモ
 
-- 詳細な出典比較は内部 provenance note に分離してあります。
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

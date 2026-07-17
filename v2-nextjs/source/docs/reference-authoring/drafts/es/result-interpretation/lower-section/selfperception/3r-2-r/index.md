@@ -49,7 +49,7 @@ En interpretación ayuda a estimar cuánto peso ocupa el yo, el propio valor o l
 - Si `R` es bajo, el cociente puede verse más extremo de lo que realmente representa.
 - Un valor alto no equivale automáticamente a narcisismo clínico.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - Conviene leer este índice junto con `Fr+rF`, `FD`, `SumV`, `MOR` y `H ratio`.
 - Su significado cambia si hay muy pocos pares o muy pocas respuestas totales.

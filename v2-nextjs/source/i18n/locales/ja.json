@@ -1,8 +1,8 @@
 {
   "app": {
-    "title": "ロールシャッハ構造要約計算ヘルパー",
-    "version": "v2.1.3",
-    "provider": "Sicp Seoul"
+    "title": "ロールシャッハ構造一覧表計算ツール",
+    "version": "v2.2.4",
+    "provider": "MOWが制作・保守"
   },
   "nav": {
     "scoring": "採点 & 構造要約",
@@ -37,7 +37,7 @@
   },
   "modal": {
     "welcome": {
-      "title": "Computing Program for Rorschach Structural Summary",
+      "title": "ロールシャッハ構造一覧表計算ツール",
       "new": "新規作成",
       "loadSample": "サンプルデータで開始",
       "loadSaved": "自動保存された内容を読み込む",
@@ -327,7 +327,7 @@
     "summaryTitle": "構造一覧表に算出されたすべての項目をCSV形式でエクスポートします"
   },
   "footer": {
-    "title": "Computing Program for Rorschach Structural Summary",
+    "title": "ロールシャッハ構造一覧表計算ツール",
     "copyright": "© 1997–2026 ソウル臨床心理研究所 (Seoul Institute of Clinical Psychology, SICP). All rights reserved.",
     "scoringCanvasCopyright": "© 2026 ソウル臨床心理研究所 (SICP) & MOW. All rights reserved."
   },
@@ -369,7 +369,7 @@
       "currentProviderHelp": "現在、解釈アシスタントとコーディングアシスタントは{provider}キーで動作します。",
       "optionalProviderHelp": "{provider}キーを使いたい場合だけ入力してください。",
       "replacementNotice": "接続すると現在の{otherProvider}キーは置き換わります。",
-      "conflictNotice": "有効にできる提供元は一つだけです。新しいキーを接続すると現在のセッションキーは置き換わります。",
+      "conflictNotice": "新しいOpenAI APIキーを接続すると、現在のセッションキーが置き換わります。",
       "saveAndReplaceButton": "接続して置き換え",
       "replacedToast": "{provider} APIキーをこのセッションに接続しました。",
       "connectedProvider": "{provider}接続中",
@@ -407,7 +407,8 @@
     "billingOrQuota": "APIの請求状態または利用上限を確認してから、もう一度お試しください。",
     "invalidApiKey": "入力したAPIキーを確認してください。無効または期限切れの可能性があります。",
     "modelUnavailable": "現在接続されているAPIキーでは、このAIモデルを利用できません。API提供元のモデルアクセス権限を確認してください。",
-    "providerRejected": "AIプロバイダーがリクエストを拒否しました。APIキー、請求状態、モデルアクセス権限を確認してください。"
+    "providerRejected": "AIプロバイダーがリクエストを拒否しました。APIキー、請求状態、モデルアクセス権限を確認してください。",
+    "appRateLimited": "短時間に多数のリクエストが送信されました。しばらく待ってから、もう一度お試しください。"
   },
   "errors": {
     "title": "エラー",

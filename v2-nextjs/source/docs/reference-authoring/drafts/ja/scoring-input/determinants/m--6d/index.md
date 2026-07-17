@@ -19,38 +19,38 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
-# Document Name: [コーディング/決定因] m
+# [コーディング/決定因] m
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - m
 - 無生物運動
 - inanimate movement
 
-## Core Definition
+## 中核的定義
 
-`m` は、無生物や機械的な力による動きが知覚されているときにつける determinant です。
+`m` は、無生物や機械的な力による動きが知覚されているときにつける決定因です。
 生き物が自発的に動く感じではなく、押される、落ちる、引っ張られるなどの動きを表します。
 
-## Application Conditions
+## 採点・適用条件
 
-- 動きが無生物的、機械的、または物理的力によるものとして述べられている。
-- たとえば落下、爆発、押し流される、裂ける、引き寄せられるなどが含まれる。
-- 判定は受検者が実際に述べた動きに基づく。
+- 動きが無生物的、機械的、または物理的力によるものとして述べられています。
+- たとえば落下、爆発、押し流される、裂ける、引き寄せられるなどが含まれます。
+- 判定は受検者が実際に述べた動きに基づきます。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
 - 人間的活動なら [`M`](ref://scoring-input/determinants/M) です。
 - 動物的活動なら [`FM`](ref://scoring-input/determinants/FM) です。
 - 緊張感のある場面でも、無生物運動が述べられていなければ `m` にしません。
 
-## Cross References
+## 相互参照
 
-- [[コーディング/決定因] Determinants](ref://scoring-input/determinants)
+- [[コーディング/決定因] 決定因](ref://scoring-input/determinants)
 - [[コーディング/決定因] M](ref://scoring-input/determinants/M)
 - [[コーディング/決定因] FM](ref://scoring-input/determinants/FM)
 - [[解釈/Core] m](ref://result-interpretation/lower-section/core/m)
 
-## Evidence Note
+## 根拠メモ
 
-- 詳細な出典比較と判断根拠は内部 provenance note に分離してあります。
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

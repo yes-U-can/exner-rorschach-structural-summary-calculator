@@ -47,7 +47,7 @@ Esta família não interpreta o significado simbólico global de cada prancha; e
 - As páginas de cartão ajudam a revisar respostas comuns, possibilidades de `Popular`, tendências de localização e determinantes que costumam aparecer com mais facilidade em cada prancha.
 - A codificação sempre depende da resposta real da pessoa, não do cartão isoladamente.
 - A mesma resposta pode mudar de código se a descrição real não confirmar aquilo que a prancha costuma facilitar.
-- O esqueleto de rotas é compartilhado entre os idiomas, mas o corpo do texto e as referências cruzadas podem variar por locale.
+- As páginas das pranchas servem como apoio à codificação; os dados da resposta e do inquérito permanecem prioritários.
 
 ## Cuidados e diferenciação
 

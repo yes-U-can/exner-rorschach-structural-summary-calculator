@@ -58,18 +58,13 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - 이 값은 정서 자극량을 보여 줄 뿐, 정서 조절의 질이나 정서 회피 여부는 따로 보아야 한다.
 - 반드시 `FC:CF+C`, `Afr`, `Pure C`, `EB`와 함께 읽어야 한다.
 
-## 근거 메모
-
+## 함께 볼 변수
 - `FC:CF+C`
 - `Afr`
 - `Pure C`
 - `EB`
 - `EA`
 - `SumCprime`
-
-## 근거 메모
-
-이 문서는 서비스 운영용 참조 코퍼스로 정리된 런타임 문서입니다.
 
 ## 근거 메모
 

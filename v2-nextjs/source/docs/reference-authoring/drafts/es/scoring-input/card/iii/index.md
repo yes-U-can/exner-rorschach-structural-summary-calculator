@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/card/III"
 locale: "es"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/card/III"
-displayTitle: "[Codificación/Tarjetas] III"
+displayTitle: "[Codificación/Láminas] III"
 aliases:
   - "Card III"
   - "card III"
@@ -24,19 +24,19 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/card/iii/index.md"
 ---
 
-# Nombre del documento: [Codificación/Tarjetas] III
+# Nombre del documento: [Codificación/Láminas] III
 
 ## Alias y búsqueda
 
 - Card III
 - card III
 - card 3
-- tarjeta III
+- lámina III
 - lámina III
 
 ## Definición central
 
-`Tarjeta III` facilita con frecuencia respuestas humanas y escenas de interacción.
+`Lámina III` facilita con frecuencia respuestas humanas y escenas de interacción.
 La página funciona como recordatorio de codificación para contenido humano, movimiento y calidad relacional.
 
 ## Condiciones de aplicación

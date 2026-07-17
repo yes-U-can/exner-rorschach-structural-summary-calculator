@@ -53,7 +53,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 
 - 한 변수만으로 현실검증이나 사고장애를 단정하지 않는다.
 - 기록이 짧거나 `R`이 적으면 비율이 쉽게 흔들린다.
-- `P`는 문화권에 따라 기준 반응 목록이 다를 수 있으므로 locale 문맥을 함께 고려해야 한다.
+- `P`는 적용하는 종합체계 기준에 따라 부호화하고, 해석할 때에는 문화적 맥락을 함께 고려한다.
 - `XA%`와 `X+%`는 비슷해 보이지만 같지 않다. 하나는 적절성의 넓은 범위, 다른 하나는 특히 관습적인 형태 사용에 더 가깝다.
 
 ## 상호 참조
@@ -61,8 +61,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `Mediation`은 번역 방식의 질을 보여 주지만, 왜 그런 번역이 나왔는지의 동기나 사고 조직 전체를 모두 설명하지는 않는다.
 - 반드시 `Processing`, `Ideation`, `FQ`, `Popular`, `Special Scores`와 함께 읽어야 한다.
 
-## 근거 메모
-
+## 함께 볼 변수
 - `XA%`
 - `WDA%`
 - `X-%`
@@ -70,10 +69,6 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `P`
 - `X+%`
 - `Xu%`
-
-## 근거 메모
-
-이 문서는 서비스 운영용 참조 코퍼스로 정리된 런타임 문서입니다.
 
 ## 근거 메모
 

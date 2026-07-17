@@ -8,6 +8,10 @@ import OpenAI from 'openai';
 import pg from 'pg';
 
 import { loadProjectEnv } from './load-project-env.mjs';
+import {
+  buildReferenceChunkContentHash,
+  buildReferenceEmbeddingText,
+} from './lib/referenceChunkContent.mjs';
 import { pruneProviderRows } from './lib/referenceEmbeddingMaintenance.mjs';
 
 const { Pool } = pg;
@@ -48,19 +52,6 @@ function resolveApiKey(provider) {
   return null;
 }
 
-function buildEmbeddingText(chunk) {
-  const headingPath = Array.isArray(chunk.headingPath) ? chunk.headingPath.join(' > ') : '';
-  const aliases = Array.isArray(chunk.aliases) && chunk.aliases.length > 0 ? chunk.aliases.join(', ') : '';
-  return [
-    `[Route] ${chunk.canonicalRoute}`,
-    headingPath ? `[Heading] ${headingPath}` : '',
-    aliases ? `[Aliases] ${aliases}` : '',
-    chunk.text,
-  ]
-    .filter(Boolean)
-    .join('\n');
-}
-
 function getBatchSize(provider) {
   const raw =
     provider === 'openai'
@@ -71,7 +62,7 @@ function getBatchSize(provider) {
 }
 
 async function embedChunkBatch(provider, apiKey, chunks) {
-  const texts = chunks.map((chunk) => buildEmbeddingText(chunk));
+  const texts = chunks.map((chunk) => buildReferenceEmbeddingText(chunk));
   if (provider === 'openai') {
     const model = process.env.REFERENCE_EMBEDDING_MODEL_OPENAI ?? 'text-embedding-3-large';
     const outputDimensions = Number(process.env.REFERENCE_EMBEDDING_DIMENSIONS_OPENAI ?? '0');
@@ -114,9 +105,9 @@ async function upsertEmbeddingBatch(pool, provider, chunks, embeddingModel, vect
 
   chunks.forEach((chunk, index) => {
     const vector = vectors[index] ?? [];
-    const offset = index * 8;
+    const offset = index * 9;
     valuesSql.push(
-      `($${offset + 1}, $${offset + 2}, $${offset + 3}, $${offset + 4}, $${offset + 5}::"EmbeddingProvider", $${offset + 6}, $${offset + 7}, $${offset + 8}::vector, timezone('UTC', CURRENT_TIMESTAMP), timezone('UTC', CURRENT_TIMESTAMP))`,
+      `($${offset + 1}, $${offset + 2}, $${offset + 3}, $${offset + 4}, $${offset + 5}::"EmbeddingProvider", $${offset + 6}, $${offset + 7}, $${offset + 8}, $${offset + 9}::vector, timezone('UTC', CURRENT_TIMESTAMP), timezone('UTC', CURRENT_TIMESTAMP))`,
     );
     parameters.push(
       randomUUID(),
@@ -126,6 +117,7 @@ async function upsertEmbeddingBatch(pool, provider, chunks, embeddingModel, vect
       provider,
       embeddingModel,
       vector.length,
+      chunk.contentHash ?? buildReferenceChunkContentHash(chunk),
       toVectorLiteral(vector),
     );
   });
@@ -140,6 +132,7 @@ async function upsertEmbeddingBatch(pool, provider, chunks, embeddingModel, vect
         "provider",
         "embeddingModel",
         "dimensions",
+        "contentHash",
         "vector",
         "createdAt",
         "updatedAt"
@@ -151,6 +144,7 @@ async function upsertEmbeddingBatch(pool, provider, chunks, embeddingModel, vect
         "locale" = EXCLUDED."locale",
         "embeddingModel" = EXCLUDED."embeddingModel",
         "dimensions" = EXCLUDED."dimensions",
+        "contentHash" = EXCLUDED."contentHash",
         "vector" = EXCLUDED."vector",
         "updatedAt" = timezone('UTC', CURRENT_TIMESTAMP)
     `,

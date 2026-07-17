@@ -46,7 +46,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/card
 - 카드 문서는 특정 카드에서 `자주 나오는 반응`, `자주 헷갈리는 determinant/content`, `Popular 확인 포인트`를 짧게 안내한다.
 - 실제 채점은 언제나 반응 그 자체를 기준으로 한다. 카드 특성은 coding을 돕는 참고틀일 뿐이다.
 - 같은 내용이라도 카드에 따라 `Popular` 여부나 흔한 조직화 방식이 다를 수 있다.
-- locale마다 카드별 설명의 본문과 relatedRoutes는 달라질 수 있지만, route skeleton은 공통이다.
+- 카드별 설명은 부호화를 돕는 참고 정보이며, 실제 반응과 질문 단계에서 확인된 근거를 우선한다.
 
 ## 주의사항/감별 기준
 

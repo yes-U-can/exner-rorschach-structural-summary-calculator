@@ -49,7 +49,7 @@ En `core` suele indicar el peso de malestar disfórico, afecto desagradable o to
 - Un valor bajo tampoco excluye malestar, porque algunas personas restringen o simplifican la expresión afectiva en el protocolo.
 - Conviene revisar la relación con `Afr`, `SumShd` y `WSumC`.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `SumCprime` por sí solo no basta para inferir un cuadro afectivo completo.
 - Debe leerse con `eb`, `es`, `AdjD`, `SumC / WSumC` y otros indicadores afectivos.

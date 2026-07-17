@@ -48,16 +48,11 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 
 - `Ma:Mp`는 인간운동 표상의 방향을 말해 주지만, 사고 질의 안정성은 `M-`, `WSum6`, `Mediation`과 함께 봐야 한다.
 
-## 근거 메모
-
+## 함께 볼 변수
 - `a:p`
 - `M-`
 - `Mnone`
 - `M`
-
-## 근거 메모
-
-이 문서는 서비스 운영용 참조 코퍼스로 정리된 런타임 문서입니다.
 
 ## 근거 메모
 

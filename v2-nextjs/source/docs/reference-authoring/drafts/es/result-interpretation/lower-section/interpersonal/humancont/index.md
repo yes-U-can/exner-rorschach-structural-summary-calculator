@@ -51,7 +51,7 @@ En esta lectura interpersonal sirve para estimar cuánto peso tienen las persona
 - Un valor alto no equivale automáticamente a vínculos sanos o empáticos.
 - Un valor bajo no basta por sí solo para concluir aislamiento crónico.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - Esta variable habla del peso del tema humano, no de la forma completa del vínculo.
 - Conviene leerla junto con `PureH`, `GHR`, `PHR` y `H ratio`.

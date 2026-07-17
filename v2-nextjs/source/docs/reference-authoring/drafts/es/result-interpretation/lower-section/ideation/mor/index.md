@@ -46,7 +46,7 @@ En la zona de ideación se usa para ver cuán tenido queda el contenido mental p
 - Es importante distinguir entre una imagen aislada desagradable y un patrón consistente de pensamiento mórbidamente tenido.
 - Un valor bajo no garantiza ausencia de autocrítica o desesperanza.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `MOR` por sí solo no dice si el foco principal es el self, los otros o el mundo.
 - Debe leerse con `MOR_self`, `AG`, `An_Xy`, `2AB+Art+Ay` y `DEPI`.
@@ -62,10 +62,10 @@ En la zona de ideación se usa para ver cuán tenido queda el contenido mental p
 ## Referencias cruzadas
 
 - [[Interpretación/Lower Section/Ideación] Ideación](ref://result-interpretation/lower-section/ideation)
-- [[Codificación/Special Score] MOR](ref://scoring-input/special-score/MOR)
+- [[Codificación/Código Especial] MOR](ref://scoring-input/special-score/MOR)
 - [[Interpretación/Ideación] 2AB+Art+Ay](ref://result-interpretation/lower-section/ideation/_2AB_Art_Ay)
 - [[Interpretación/Self Perception] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
-- [[Interpretación/Special Indices] DEPI](ref://result-interpretation/special-indices/DEPI)
+- [[Interpretación/Índices Especiales] DEPI](ref://result-interpretation/special-indices/DEPI)
 
 ## Nota de fundamento
 

@@ -22,41 +22,41 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-mediation-opening-xa-wda-2026-03-10.md"
 ---
 
-# Document Name: [Interpretation/Mediation] WDA%
+# [Interpretation/Mediation] WDA%
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - WDA%
 - Form Appropriate Common Areas
 - 共通領域適合率
 
-## Core Definition
+## 中核的定義
 
 `WDA%` は、`W` と `D` 領域における適切な反応の割合を示します。
 比較的よく共有されやすい部分で、知覚的媒介がどれくらい安定しているかをみる指標です。
 
-## Interpretation Points
+## 解釈の要点
 
 - `WDA%` が高いと、より一般的な部分では知覚が安定しやすいと考えます。
 - これが下がると、比較的単純な領域でも知覚的不一致が増えている可能性があります。
 - `WDA%` が `XA%` より保たれているなら、困難はより複雑で構造の弱い反応に集中しているのかもしれません。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
 - `WDA%` はプロトコル全体を表すのではなく、`W` と `D` のみを要約します。
 - `W` と `D` の反応数が少ないときは、この比率は不安定になります。
 - `WDA%` の低下は重要ですが、それだけで臨床的重症度を決めることはできません。
 
-## Cross References
+## 相互参照
 
-- [[Interpretation/Lower Section/Mediation] Mediation](ref://result-interpretation/lower-section/mediation)
-- [[Interpretation/Mediation] XA%](ref://result-interpretation/lower-section/mediation/XA_percent)
-- [[Interpretation/Mediation] X+%](ref://result-interpretation/lower-section/mediation/X_plus_percent)
-- [[Interpretation/Mediation] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
-- [[Coding/Location] W](ref://scoring-input/location/W)
-- [[Coding/Location] D](ref://scoring-input/location/D)
+- [[解釈/下段/Mediation] Mediation](ref://result-interpretation/lower-section/mediation)
+- [[解釈/Mediation] XA%](ref://result-interpretation/lower-section/mediation/XA_percent)
+- [[解釈/Mediation] X+%](ref://result-interpretation/lower-section/mediation/X_plus_percent)
+- [[解釈/Mediation] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
+- [[Coding/領域] W](ref://scoring-input/location/W)
+- [[Coding/領域] D](ref://scoring-input/location/D)
 - [[Coding/FQ] FQ](ref://scoring-input/fq)
 
-## Evidence Note
+## 根拠メモ
 
-- Detailed source comparison is stored in internal provenance notes.
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

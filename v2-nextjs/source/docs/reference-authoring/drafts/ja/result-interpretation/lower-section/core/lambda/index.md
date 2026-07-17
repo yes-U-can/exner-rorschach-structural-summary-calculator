@@ -24,43 +24,43 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-lower-section-core-opening-2026-03-10.md"
 ---
 
-# Document Name: [Interpretation/Core] Lambda
+# [Interpretation/Core] Lambda
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - Lambda
 - L
 - lambda
 - ラムダ
 
-## Core Definition
+## 中核的定義
 
 `Lambda` は、純粋形態反応とそれ以外の反応の比率です。
 解釈では、刺激処理をどれだけ単純化し、節約し、限定しているかを見る指標として用います。
 
-## Interpretation Points
+## 解釈の要点
 
 - 高い `Lambda` は、より単純で経済的、あるいは防衛的な処理スタイルを示すことがあります。
 - 反応数が十分にあるプロトコルで高い `Lambda` がみられるときは、回避、視野の縮小、刺激の簡略化処理を考えます。
 - 非常に低い `Lambda` は複雑さの増加と関係することがありますが、過剰包含や開放性の高さを伴うこともあります。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
 - `R` が少ない場合、高い `Lambda` は安定したスタイルというより防衛的な構えを反映している可能性があります。
 - 低い `Lambda` を自動的に長所とみなしてはいけません。資源が弱いときは非効率と並ぶこともあります。
 - `Zd`、`W:D:Dd`、`EB`、`EA`、`D`、`AdjD` と合わせて読む必要があります。
 
-## Cross References
+## 相互参照
 
-- [[Interpretation/Lower Section/Core] Core](ref://result-interpretation/lower-section/core)
-- [[Interpretation/Core] R](ref://result-interpretation/lower-section/core/R)
-- [[Interpretation/Core] EA](ref://result-interpretation/lower-section/core/EA)
-- [[Interpretation/Core] EB](ref://result-interpretation/lower-section/core/EB)
-- [[Interpretation/Processing] W:D:Dd](ref://result-interpretation/lower-section/processing/W_D_Dd)
-- [[Interpretation/Processing] W:M](ref://result-interpretation/lower-section/processing/W_M)
+- [[解釈/下段/Core] Core](ref://result-interpretation/lower-section/core)
+- [[解釈/Core] R](ref://result-interpretation/lower-section/core/R)
+- [[解釈/Core] EA](ref://result-interpretation/lower-section/core/EA)
+- [[解釈/Core] EB](ref://result-interpretation/lower-section/core/EB)
+- [[解釈/情報処理] W:D:Dd](ref://result-interpretation/lower-section/processing/W_D_Dd)
+- [[解釈/情報処理] W:M](ref://result-interpretation/lower-section/processing/W_M)
 - [[Coding/FQ] FQ](ref://scoring-input/fq)
-- [[Coding/Determinants] F](ref://scoring-input/determinants/F)
+- [[Coding/決定因] F](ref://scoring-input/determinants/F)
 
-## Evidence Note
+## 根拠メモ
 
-- Detailed source comparison is stored in internal provenance notes.
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

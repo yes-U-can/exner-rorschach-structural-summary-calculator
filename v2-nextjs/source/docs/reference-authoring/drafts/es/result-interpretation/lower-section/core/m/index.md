@@ -41,7 +41,7 @@ En `core` suele leerse como un indicador de tensión reactiva, sensación de ver
 - `m = 0` sugiere que este tipo de tensión reactiva no aparece de manera marcada en el protocolo.
 - Un `m` alto puede asociarse con vivencias de presión, impotencia, preocupación invasiva o carga situacional intensa.
 - `m` suele tener un tono más reactivo y menos integrado que `FM`.
-- `m` pesa en `AdjEs` y ayuda a entender por que `D` puede caer en contextos de estrés reciente.
+- `m` pesa en `AdjEs` y ayuda a entender por qué `D` puede caer en contextos de estrés reciente.
 
 ## Precauciones y distinciones
 
@@ -49,7 +49,7 @@ En `core` suele leerse como un indicador de tensión reactiva, sensación de ver
 - Conviene distinguir entre carga situacional y patrón más sostenido comparando `D` con `AdjD`.
 - `m` debe leerse junto con `Y` y `es`, no como un valor aislado.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `m` por sí solo no basta para concluir indefensión o deterioro estable.
 - Debe revisarse con `eb`, `es`, `AdjEs`, `AdjD` y `FM`.

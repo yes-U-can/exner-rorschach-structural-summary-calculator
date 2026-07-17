@@ -3,7 +3,7 @@ canonicalRoute: "result-interpretation/special-indices/DEPI"
 locale: "es"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/special-indices/DEPI"
-displayTitle: "[Interpretación/Special Indices] DEPI"
+displayTitle: "[Interpretación/Índices Especiales] DEPI"
 aliases:
   - "DEPI"
   - "Depression Index"
@@ -22,7 +22,7 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/special-indices/depi/index.md"
 ---
 
-# Nombre del documento: [Interpretación/Special Indices] DEPI
+# Nombre del documento: [Interpretación/Índices Especiales] DEPI
 
 ## Alias y búsqueda
 
@@ -48,7 +48,7 @@ Integra variables de afecto, carga de malestar, autoimagen negativa y retirada e
 - `DEPI` negativo no excluye depresión.
 - El contexto vital, el duelo y el estrés reciente pueden influir en la constelación.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - Hay que volver a las variables de base antes de fijar una conclusión clínica.
 - Conviene integrarlo con `Affect`, `SumV`, `SumY`, `MOR_self` y `CDI`.
@@ -63,13 +63,13 @@ Integra variables de afecto, carga de malestar, autoimagen negativa y retirada e
 
 ## Referencias cruzadas
 
-- [[Interpretación/Special Indices] Special Indices](ref://result-interpretation/special-indices)
+- [[Interpretación/Índices Especiales] Índices Especiales](ref://result-interpretation/special-indices)
 - [[Interpretación/Lower Section/Affect] Affect](ref://result-interpretation/lower-section/affect)
 - [[Interpretación/Core] SumV](ref://result-interpretation/lower-section/core/SumV)
 - [[Interpretación/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
 - [[Interpretación/Self Perception] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
 - [[Interpretación/Affect] Afr](ref://result-interpretation/lower-section/affect/Afr)
-- [[Interpretación/Special Indices] CDI](ref://result-interpretation/special-indices/CDI)
+- [[Interpretación/Índices Especiales] CDI](ref://result-interpretation/special-indices/CDI)
 
 ## Nota de fundamento
 

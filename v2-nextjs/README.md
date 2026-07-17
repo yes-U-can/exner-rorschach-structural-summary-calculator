@@ -2,7 +2,7 @@
 
 이 폴더는 로샤 구조요약 계산기 v2의 릴리즈 기록과 공개 가능한 소스코드를 모은 공간입니다. 계산 변경을 확인하려는 임상심리사는 먼저 최신 패치노트를 읽고, 개발 세부 사항이 필요한 경우에만 재감사 보고서와 소스코드를 확인하면 됩니다.
 
-- 최신 패치노트: [releases/v2.2.3](./releases/v2.2.3/)
+- 최신 패치노트: [releases/v2.2.4](./releases/v2.2.4/)
 - 최신 계산 재감사: [source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md](./source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md)
 - 최초 v2 릴리즈 패치노트: [releases/v2.0.0](./releases/v2.0.0/)
 - 공개 소스코드: [source](./source/)

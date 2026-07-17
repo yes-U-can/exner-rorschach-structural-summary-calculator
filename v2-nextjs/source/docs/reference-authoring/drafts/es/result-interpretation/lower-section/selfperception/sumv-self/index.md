@@ -52,7 +52,7 @@ En `Core` también se vincula con carga de malestar, pero aquí se enfatiza su s
 - La variable puede subir de forma reactiva en momentos de pérdida, frustración o estrés.
 - Cero no significa ausencia total de autocrítica.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - Conviene leer `SumV` junto con `FD`, `Fr+rF`, `MOR_self` y `AdjD`.
 - Su sentido cambia si el protocolo muestra muy poca introspección general.

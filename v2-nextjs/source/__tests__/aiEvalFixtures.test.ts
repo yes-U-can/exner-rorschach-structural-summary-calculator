@@ -58,6 +58,33 @@ describe('AI harness eval fixtures', () => {
     }
   });
 
+  it('never combines refusal-only fixtures with corpus-grounding exemptions', () => {
+    for (const fixture of AI_HARNESS_EVAL_FIXTURES) {
+      const tags = new Set(fixture.expectedTags);
+      const isRefusalFixture =
+        tags.has('out-of-scope-refusal') || tags.has('no-internal-disclosure');
+
+      if (isRefusalFixture) {
+        expect(
+          tags.has('reference-grounded'),
+          `${fixture.id} must not bypass retrieval checks through contradictory tags`,
+        ).toBe(false);
+      }
+    }
+  });
+
+  it('keeps structural-summary CSV fixtures explicit and synthetic', () => {
+    const csvFixtures = AI_HARNESS_EVAL_FIXTURES.filter(
+      (fixture) => fixture.structuralSummaryProfile,
+    );
+
+    expect(csvFixtures.map((fixture) => fixture.structuralSummaryProfile).sort()).toEqual([
+      'long-protocol',
+      'standard',
+    ]);
+    expect(csvFixtures.every((fixture) => fixture.workflowMode === 'interpretation')).toBe(true);
+  });
+
   it('keeps localized fixture text readable instead of mojibake', () => {
     for (const fixture of AI_HARNESS_EVAL_FIXTURES) {
       const localizedText = [

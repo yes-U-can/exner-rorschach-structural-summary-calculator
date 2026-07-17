@@ -52,7 +52,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/spec
 
 ## 상호 참조
 
-인접 규칙이나 연결된 해석 맥락이 필요할 때는 아래 문서를 함께 확인해 주세요.
+인접 규칙이나 연결된 해석 맥락이 필요할 때는 아래 문서를 함께 확인한다.
 
 - [scoring-input/special-score](ref://scoring-input%2Fspecial-score)
 - [scoring-input/special-score/COP](ref://scoring-input%2Fspecial-score%2FCOP)

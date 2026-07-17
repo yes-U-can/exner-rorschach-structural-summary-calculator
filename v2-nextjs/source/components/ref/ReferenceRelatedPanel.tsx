@@ -1,6 +1,10 @@
 import Link from 'next/link';
 import { buildReferenceDocHref, getReferenceRelatedDocs, type ReferenceDocRecord } from '@/lib/referenceCorpus';
 import type { Language } from '@/types';
+import {
+  getReferencePresentationCategory,
+  getReferencePresentationTitle,
+} from '@/lib/referencePresentation';
 
 type ReferenceRelatedPanelProps = {
   language: Language;
@@ -60,11 +64,14 @@ export default function ReferenceRelatedPanel({
       <ul className="mt-3 grid gap-x-6 gap-y-2 sm:grid-cols-2">
         {relatedDocs.map((doc) => (
           <li key={doc.canonicalRoute} className="min-w-0">
+            <span className="block text-xs text-[var(--text-soft)]">
+              {getReferencePresentationCategory(language, doc.canonicalRoute)}
+            </span>
             <Link
               href={buildReferenceDocHref(doc.canonicalRoute, language)}
               className="break-words text-sm font-medium leading-6 text-[var(--brand-700)] underline decoration-[var(--brand-300)] underline-offset-4 transition hover:text-[var(--brand-700-hover)]"
             >
-              {doc.title}
+              {getReferencePresentationTitle(language, doc.canonicalRoute, doc.title)}
             </Link>
           </li>
         ))}

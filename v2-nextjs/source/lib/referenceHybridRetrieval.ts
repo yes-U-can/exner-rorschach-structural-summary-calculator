@@ -14,7 +14,9 @@ import {
 } from '@/lib/codingAssistKnowledge';
 import type { CodingAssistContext } from '@/types';
 import { embedReferenceQuery } from '@/lib/referenceEmbeddings';
+import { getReferenceRuntimeChunks } from '@/lib/referenceCorpus';
 import { isReferenceVectorRuntimeReady } from '@/lib/referenceVectorRuntime';
+import { filterCurrentReferenceVectorHits } from '@/lib/referenceVectorIntegrity';
 import { searchReferenceChunkEmbeddings } from '@/lib/referenceVectorStore';
 
 type HybridProvider = Extract<Provider, 'openai'>;
@@ -80,6 +82,7 @@ const CODING_MERGE_CONFIG: RrfMergeConfig = {
 const BROAD_INTERPRETATION_ANCHOR_BONUS = 0.02;
 const EXPLICIT_CODING_INTENT_BONUS = 0.04;
 const EXPLICIT_CN_BOUNDARY_INTENT_BONUS = 0.05;
+const EXPLICIT_NATURE_CONTENT_BOUNDARY_BONUS = 0.05;
 
 const POPULAR_QUERY_PATTERNS = [
   /\bpopular(?:\s+response)?\b/iu,
@@ -94,10 +97,14 @@ function isExplicitPopularQuery(query: string): boolean {
   return POPULAR_QUERY_PATTERNS.some((pattern) => pattern.test(query));
 }
 
+function hasAsciiCodeToken(query: string, code: string): boolean {
+  return new RegExp(`(^|[^a-z0-9_])${code}(?=$|[^a-z0-9_])`, 'iu').test(query);
+}
+
 function isExplicitCnCalculationBoundaryQuery(query: string): boolean {
   // Use an ASCII code boundary so Korean/Japanese particles may immediately
   // follow `Cn` without turning it into an unrelated English identifier.
-  if (!/(^|[^a-z0-9_])cn(?=$|[^a-z0-9_])/iu.test(query)) return false;
+  if (!hasAsciiCodeToken(query, 'cn')) return false;
 
   const boundarySignals = [
     /wsumc/iu,
@@ -106,7 +113,11 @@ function isExplicitCnCalculationBoundaryQuery(query: string): boolean {
     /fc\s*:\s*cf\s*\+\s*c/iu,
   ];
 
-  return boundarySignals.filter((pattern) => pattern.test(query)).length >= 2;
+  return boundarySignals.some((pattern) => pattern.test(query));
+}
+
+function isExplicitNatureContentBoundaryQuery(query: string): boolean {
+  return ['na', 'bt', 'ls'].every((code) => hasAsciiCodeToken(query, code));
 }
 
 type MergeAccumulator<TItem> = {
@@ -259,8 +270,20 @@ function scoreCodingRerankBonus(query: string, item: CodingRuleChunk): number {
     isExplicitCnCalculationBoundaryQuery(query)
       ? EXPLICIT_CN_BOUNDARY_INTENT_BONUS
       : 0;
+  const natureContentBoundaryBonus =
+    item.canonicalRoute?.toLowerCase() === 'scoring-input/contents/na' &&
+    isExplicitNatureContentBoundaryQuery(query)
+      ? EXPLICIT_NATURE_CONTENT_BOUNDARY_BONUS
+      : 0;
 
-  return titleBonus + tagBonus + routeTagBonus + intentBonus + cnBoundaryBonus;
+  return (
+    titleBonus +
+    tagBonus +
+    routeTagBonus +
+    intentBonus +
+    cnBoundaryBonus +
+    natureContentBoundaryBonus
+  );
 }
 
 export function rankMergedKnowledge(
@@ -536,13 +559,17 @@ export async function getHybridInterpretationKnowledge(params: {
       text: params.query,
       signal: params.signal,
     });
-    vectorHits = await searchReferenceChunkEmbeddings({
+    const searchedVectorHits = await searchReferenceChunkEmbeddings({
       locale: params.lang,
       provider: params.provider,
       queryVector: embedding.vector,
       limit: Math.max(limit * 2, 10),
       routePrefix: broadInterpretation ? 'result-interpretation' : undefined,
     });
+    vectorHits = filterCurrentReferenceVectorHits(
+      searchedVectorHits,
+      getReferenceRuntimeChunks(params.lang),
+    );
   } catch (error) {
     if (params.signal?.aborted) throw error;
     console.warn('[reference-hybrid-retrieval] Falling back to lexical interpretation retrieval.', error);
@@ -603,9 +630,19 @@ export async function getHybridCodingRuleChunks(params: {
           /color[\s-]*shading/iu.test(item.text),
       )
     : [];
+  const explicitNatureContentBoundaryItems = isExplicitNatureContentBoundaryQuery(query)
+    ? codingChunks.filter(
+        (item) =>
+          item.canonicalRoute?.toLowerCase() === 'scoring-input/contents/na' &&
+          /(^|[^a-z0-9_])na(?=$|[^a-z0-9_])/iu.test(item.text) &&
+          /(^|[^a-z0-9_])bt(?=$|[^a-z0-9_])/iu.test(item.text) &&
+          /(^|[^a-z0-9_])ls(?=$|[^a-z0-9_])/iu.test(item.text),
+      )
+    : [];
   const lexicalItems = deduplicateByKey(
     [
       ...explicitCnBoundaryItems,
+      ...explicitNatureContentBoundaryItems,
       ...explicitPopularItems,
       ...selectCodingRuleChunks(params.context, params.lang, limit),
     ],
@@ -630,21 +667,25 @@ export async function getHybridCodingRuleChunks(params: {
       text: query,
       signal: params.signal,
     });
-    vectorHits = await searchReferenceChunkEmbeddings({
+    const searchedVectorHits = await searchReferenceChunkEmbeddings({
       locale: params.lang,
       provider: params.provider,
       queryVector: embedding.vector,
       limit: Math.max(limit * 2, 10),
       routePrefix: 'scoring-input/',
     });
+    vectorHits = filterCurrentReferenceVectorHits(
+      searchedVectorHits,
+      getReferenceRuntimeChunks(params.lang),
+    );
   } catch (error) {
     if (params.signal?.aborted) throw error;
     console.warn('[reference-hybrid-retrieval] Falling back to lexical coding retrieval.', error);
     return {
-      items: lexicalItems,
+      items: lexicalOnly.items,
       mode: 'lexical',
       vectorHitCount: 0,
-      trace: rankMergedCodingChunksDetailed(query, lexicalItems, [], limit).trace,
+      trace: lexicalOnly.trace,
     };
   }
   const vectorItems = prepareVectorCandidates(
@@ -663,7 +704,7 @@ export async function getHybridCodingRuleChunks(params: {
 
   return {
     items: ranked.items,
-    mode: 'hybrid',
+    mode: vectorItems.length > 0 ? 'hybrid' : 'lexical',
     vectorHitCount: vectorItems.length,
     trace: ranked.trace,
   };

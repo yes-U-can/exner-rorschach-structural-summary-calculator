@@ -39,7 +39,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - 해석은 보통 `upper section`, `lower section`, `special indices`처럼 cluster 단위로 진행한다.
 - 단일 변수 하나만 보고 결론을 확정하지 않는다. 대부분의 변수는 다른 변수들과 함께 볼 때 의미가 선명해진다.
 - 구조요약은 대표적 자료이지만, 필요하면 반응 sequence와 내용 정교화도 함께 본다.
-- 문화권, 연령, 성별, 상황 맥락에 따라 같은 수치의 의미가 달라질 수 있다. 그래서 locale별 문서 버전이 분리된다.
+- 문화권, 연령, 성별, 상황 맥락에 따라 같은 수치의 의미가 달라질 수 있으므로, 구조요약 수치는 면담과 행동관찰을 함께 고려해 해석한다.
 
 ## 주의사항/감별 기준
 

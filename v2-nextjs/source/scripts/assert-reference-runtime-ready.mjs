@@ -6,6 +6,7 @@ import path from 'node:path';
 const root = process.cwd();
 const generatedDir = path.join(root, 'generated', 'reference-corpus');
 const manifestPath = path.join(generatedDir, 'manifest.json');
+const routeDocsPath = path.join(generatedDir, 'route-docs.json');
 const qaReportPath = path.join(generatedDir, 'qa-report.json');
 const releaseSnapshotPath = path.join(generatedDir, 'release-snapshot.json');
 
@@ -38,6 +39,7 @@ function summarizeLocale(locale, manifestSummary, qualitySummary, releaseSummary
 
 function main() {
   const manifest = readJson(manifestPath);
+  const routeDocs = readJson(routeDocsPath);
   const qaReport = readJson(qaReportPath);
   const releaseSnapshot = readJson(releaseSnapshotPath);
 
@@ -61,6 +63,15 @@ function main() {
   );
 
   const rows = [];
+
+  for (const locale of locales) {
+    for (const doc of routeDocs.docsByLocale?.[locale] ?? []) {
+      assert(
+        !Object.hasOwn(doc, 'sourcePath') && !Object.hasOwn(doc, 'provenanceNote'),
+        `Locale "${locale}" exposes an internal authoring path in route-docs.json (${doc.canonicalRoute}).`,
+      );
+    }
+  }
 
   for (const locale of locales) {
     const manifestSummary = manifest.localeSummaries?.[locale];

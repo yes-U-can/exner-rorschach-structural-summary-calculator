@@ -53,7 +53,7 @@ En interpretación, `WSumC` suele ser más útil porque refleja no solo cuántas
 - `Cn` no se incluye en `WSumC`, por lo que conviene no mezclar naming de color con respuestas cromáticas propiamente dichas.
 - Debe diferenciarse de `SumCprime`, que se refiere a color acromático y no a color cromático.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `SumC / WSumC` muestra carga afectiva, pero no describe por sí solo el estilo de regulación.
 - Conviene leerlo junto con `FC:CF+C`, `Afr`, `Pure C`, `EB` y `EA`.

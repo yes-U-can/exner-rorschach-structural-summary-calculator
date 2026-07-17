@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/special-score/CONTAM"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/special-score/CONTAM"
-displayTitle: "[Codificação/Escores Especiais] CONTAM"
+displayTitle: "[Codificação/Códigos Especiais] CONTAM"
 aliases:
   - "CONTAM"
   - "contaminação"
@@ -20,7 +20,7 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-special-score-incom-fabcom-contam-alog-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificação/Escores Especiais] CONTAM
+# Nome do documento: [Codificação/Códigos Especiais] CONTAM
 
 ## Apelidos e busca
 
@@ -48,9 +48,9 @@ Ele não descreve apenas uma mistura estranha, mas uma integração impossível 
 
 ## Referências cruzadas
 
-- [[Codificação/Escores Especiais] Special Scores](ref://scoring-input/special-score)
-- [[Codificação/Escores Especiais] INCOM2](ref://scoring-input/special-score/INCOM2)
-- [[Codificação/Escores Especiais] FABCOM2](ref://scoring-input/special-score/FABCOM2)
+- [[Codificação/Códigos Especiais] Códigos Especiais](ref://scoring-input/special-score)
+- [[Codificação/Códigos Especiais] INCOM2](ref://scoring-input/special-score/INCOM2)
+- [[Codificação/Códigos Especiais] FABCOM2](ref://scoring-input/special-score/FABCOM2)
 - [[Interpretação/Ideation] Sum6](ref://result-interpretation/lower-section/ideation/Sum6)
 - [[Interpretação/Ideation] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
 

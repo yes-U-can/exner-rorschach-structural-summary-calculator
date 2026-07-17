@@ -49,7 +49,7 @@ En el plano interpersonal ayuda a ver si la imagen del otro tiende a organizarse
 - Un valor alto no garantiza vínculos maduros si `PHR`, `AG` o `MOR` también son altos.
 - Un valor bajo no significa por sí solo rechazo de las personas.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - Para leer bien `PureH` hay que compararlo con `HumanCont`, `GHR`, `PHR` y `H ratio`.
 - Su sentido cambia si el protocolo casi no contiene respuestas humanas.
@@ -71,7 +71,7 @@ En el plano interpersonal ayuda a ver si la imagen del otro tiende a organizarse
 - [[Codificación/GHR-PHR] GHR](ref://scoring-input/gphr/GHR)
 - [[Codificación/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
 - [[Interpretación/Self Perception] H Ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
-- [[Interpretación/Special Indices] CDI](ref://result-interpretation/special-indices/CDI)
+- [[Interpretación/Índices Especiales] CDI](ref://result-interpretation/special-indices/CDI)
 
 ## Nota de fundamento
 

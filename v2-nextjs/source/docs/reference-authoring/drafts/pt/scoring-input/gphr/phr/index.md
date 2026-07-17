@@ -56,8 +56,8 @@ Assim como `GHR`, ele não é escolhido por impressão livre, mas por critérios
 - [[Codificação/GHR-PHR] GHR](ref://scoring-input/gphr/GHR)
 - [[Codificação/Conteúdo] Hd](ref://scoring-input/contents/Hd)
 - [[Codificação/Conteúdo] An](ref://scoring-input/contents/An)
-- [[Codificação/Escore Especial] AG](ref://scoring-input/special-score/AG)
-- [[Codificação/Escore Especial] MOR](ref://scoring-input/special-score/MOR)
+- [[Codificação/Código Especial] AG](ref://scoring-input/special-score/AG)
+- [[Codificação/Código Especial] MOR](ref://scoring-input/special-score/MOR)
 - [[Interpretação/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
 - [[Interpretação/Autopercepção] H ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
 

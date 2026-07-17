@@ -4,6 +4,8 @@ Public source and release archive for a Structural Summary calculator for the Ex
 
 This repository publishes curated release notes and source snapshots for the project. Version 1 was built with Google Apps Script, and version 2 is a Next.js web app.
 
+MOW plans, builds, deploys, operates, and maintains the web app. The Seoul Institute of Clinical Psychology (SICP) reviews the initial transfer of calculation logic, compares calculated results, and provides clinical review from real-use experience.
+
 ## Who These Documents Are For
 
 The human-readable documents in this archive are written first for clinical psychologists, including readers who do not write software. A calculation change should explain the affected condition, whether an existing result needs to be recalculated, and the evidence used to verify the correction before presenting engineering details.
@@ -19,7 +21,7 @@ The detailed public release documentation standard is kept at [`v2-nextjs/source
 
 ## Current Archive
 
-- Latest v2 release note: [`v2-nextjs/releases/v2.2.3`](./v2-nextjs/releases/v2.2.3/)
+- Latest v2 release note: [`v2-nextjs/releases/v2.2.4`](./v2-nextjs/releases/v2.2.4/)
 - v2 public source snapshot: [`v2-nextjs/source`](./v2-nextjs/source/)
 - AI answer-quality checks: [`v2-nextjs/source/docs/ai-evals/README.md`](./v2-nextjs/source/docs/ai-evals/README.md)
 - Human review criteria for AI answers: [`v2-nextjs/source/docs/ai-evals/HUMAN_RUBRIC.md`](./v2-nextjs/source/docs/ai-evals/HUMAN_RUBRIC.md)
@@ -40,6 +42,12 @@ The v2.1.x patches improved the optional AI assistants in stages: completing ans
 - **v2.1.10:** corrected remaining Japanese-code recognition, broad-interpretation routing, and clean-database setup problems.
 
 Each release note states what that version completed and points to the later release that addressed any remaining issue.
+
+## v2.2.4
+
+v2.2.4 does not change Structural Summary formulas or scoring-table input behavior, so existing results do not need to be recalculated. It aligns the human-readable reference library and the optional AI assistants' retrieval corpus across Korean, English, Japanese, Spanish, and Brazilian Portuguese using target-language professional and scholarly sources rather than literal translation.
+
+The release rebuilds 1,015 reference documents and 5,589 current vector-search chunks, with zero missing, stale, or content-hash-mismatched vectors. It also strengthens the assistants' exact Exner CS scope, prompt-injection refusal, and per-session request limits. The final GPT-5.5 checks passed 66 of 66 single-turn and multi-turn coding and interpretation scenarios across all five languages. The [Korean canonical release note](./v2-nextjs/releases/v2.2.4/) contains the detailed evidence and limitations.
 
 ## v2.2.3
 

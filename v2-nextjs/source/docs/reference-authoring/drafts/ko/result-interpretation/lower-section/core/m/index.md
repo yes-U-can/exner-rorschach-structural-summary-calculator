@@ -53,18 +53,13 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `m` 하나만으로 helplessness의 만성성을 판단하지 않는다.
 - 그것이 일시적 위기인지 더 넓은 overload 일부인지는 `D`, `AdjEs`, `AdjD`, `es`를 함께 봐야 한다.
 
-## 근거 메모
-
+## 함께 볼 변수
 - `FM`
 - `eb`
 - `es`
 - `D`
 - `AdjEs`
 - `AdjD`
-
-## 근거 메모
-
-이 문서는 서비스 운영용 참조 코퍼스로 정리된 런타임 문서입니다.
 
 ## 근거 메모
 

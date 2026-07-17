@@ -51,17 +51,12 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `W:M`은 목표 수준과 자원 균형에 대한 힌트를 주지만, 실제 성취나 자아강도를 단독으로 판정하지 않는다.
 - 반드시 `W:D:Dd`, `M 관련 변수`, `AdjD`, `Egocentricity`와 함께 읽어야 한다.
 
-## 근거 메모
-
+## 함께 볼 변수
 - `W:D:Dd`
 - `M`
 - `Ma:Mp`
 - `AdjD`
 - `3r+(2)/R`
-
-## 근거 메모
-
-이 문서는 서비스 운영용 참조 코퍼스로 정리된 런타임 문서입니다.
 
 ## 근거 메모
 

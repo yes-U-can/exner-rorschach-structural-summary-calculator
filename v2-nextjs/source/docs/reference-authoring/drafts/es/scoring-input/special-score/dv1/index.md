@@ -49,7 +49,7 @@ La idea central es que la formulación suena rara o impropia sin llegar a una al
 
 ## Referencias cruzadas
 
-- [[Codificación/Puntuaciones especiales] Special Scores](ref://scoring-input/special-score)
+- [[Codificación/Puntuaciones especiales] Códigos Especiales](ref://scoring-input/special-score)
 - [[Codificación/Puntuaciones especiales] DV2](ref://scoring-input/special-score/DV2)
 - [[Codificación/Puntuaciones especiales] DR1](ref://scoring-input/special-score/DR1)
 - [[Codificación/Puntuaciones especiales] DR2](ref://scoring-input/special-score/DR2)

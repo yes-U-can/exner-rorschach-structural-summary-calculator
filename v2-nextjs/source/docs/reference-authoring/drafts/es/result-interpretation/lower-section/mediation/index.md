@@ -54,9 +54,9 @@ En esta zona se revisa cuánta adecuación perceptiva hay, cuánta rareza aparec
 - Si `R` es bajo, varias proporciones se vuelven menos estables.
 - `XA%` y `WDA%` se parecen, pero no son lo mismo: `WDA%` mira solo áreas más comunes y `XA%` cubre el conjunto extendido.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
-- `Mediación` muestra estilo de traducción perceptiva, pero no explica por sí sola por que ocurre.
+- `Mediación` muestra el estilo de traducción perceptiva, pero no explica por sí sola por qué ocurre.
 - Conviene integrarla con `Processing`, `Ideación`, `FQ`, `Popular` y los indices compuestos.
 
 ## Variables para revisar juntas

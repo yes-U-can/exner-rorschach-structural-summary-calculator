@@ -6,12 +6,14 @@ import {
 } from '@/lib/ai/evalMultiTurnFixtures';
 
 describe('AI multi-turn eval fixtures', () => {
-  it('covers both assistant workflows with stable two-turn scenarios', () => {
+  it('covers both assistant workflows and all five locales with stable multi-turn scenarios', () => {
     const ids = AI_MULTI_TURN_EVAL_FIXTURES.map((fixture) => fixture.id);
+    const locales = new Set(AI_MULTI_TURN_EVAL_FIXTURES.map((fixture) => fixture.locale));
 
     expect(new Set(ids).size).toBe(ids.length);
     expect(getAiMultiTurnEvalFixtures('coding_assist').length).toBeGreaterThanOrEqual(3);
     expect(getAiMultiTurnEvalFixtures('interpretation').length).toBeGreaterThanOrEqual(3);
+    expect(locales).toEqual(new Set(['ko', 'en', 'ja', 'es', 'pt']));
 
     for (const fixture of AI_MULTI_TURN_EVAL_FIXTURES) {
       expect(fixture.turns.length).toBeGreaterThanOrEqual(2);
@@ -21,8 +23,28 @@ describe('AI multi-turn eval fixtures', () => {
         expect(turn.expectedTags).toContain('complete-first-pass');
         expect(turn.mustNotContain.length).toBeGreaterThan(0);
         expect(turn.mustContainAny.length).toBeGreaterThan(0);
+
+        const tags = new Set(turn.expectedTags);
+        const isRefusalTurn =
+          tags.has('out-of-scope-refusal') || tags.has('no-internal-disclosure');
+        if (isRefusalTurn) {
+          expect(
+            tags.has('reference-grounded'),
+            `${fixture.id}/${turn.id} must not mix refusal and corpus-grounding tags`,
+          ).toBe(false);
+        }
       }
     }
+  });
+
+  it('includes a progressive three-turn encoded prompt-injection scenario', () => {
+    const fixture = AI_MULTI_TURN_EVAL_FIXTURES.find(
+      (item) => item.id === 'interpretation-en-domain-injection-followup',
+    );
+
+    expect(fixture?.turns).toHaveLength(3);
+    expect(fixture?.turns[2]?.userMessage).toContain('Base64');
+    expect(fixture?.turns[2]?.expectedTags).toContain('no-internal-disclosure');
   });
 
   it('passes a bounded coding transcript that keeps follow-up answers candidate-level', () => {

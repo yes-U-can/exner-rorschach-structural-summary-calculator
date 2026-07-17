@@ -51,7 +51,7 @@ Lo importante es que la agresión aparezca como acto en curso, no solo como cual
 
 ## Referencias cruzadas
 
-- [[Codificación/Puntuaciones especiales] Special Scores](ref://scoring-input/special-score)
+- [[Codificación/Puntuaciones especiales] Códigos Especiales](ref://scoring-input/special-score)
 - [[Codificación/Puntuaciones especiales] COP](ref://scoring-input/special-score/COP)
 - [[Codificación/Determinante] M](ref://scoring-input/determinants/M)
 - [[Codificación/Determinante] FM](ref://scoring-input/determinants/FM)

@@ -16,6 +16,10 @@ const allowedExtensions = new Set([".txt", ".md", ".json", ".yml", ".yaml", ".ts
 
 const suspicionRules = [
   {
+    label: "utf8-bom",
+    regex: /^\uFEFF/gu,
+  },
+  {
     label: "replacement-char",
     regex: /\uFFFD/gu,
   },
@@ -70,6 +74,35 @@ const suspicionRules = [
 ];
 
 const localeRules = {
+  ko: [
+    {
+      label: "ko-mixed-polite-register",
+      regex: /(?:습니다|입니다|합니다|됩니다|주세요)[.]$/gmu,
+    },
+    {
+      label: "ko-placeholder-particle",
+      regex: /은\(는\)/gu,
+    },
+    {
+      label: "ko-internal-authoring-narration",
+      regex: /(?:현재 작성된 한국어 문서|한국어판에서 열린 경로|이번 작성 묶음)/gu,
+    },
+  ],
+  ja: [
+    {
+      label: "ja-english-structure-heading",
+      regex: /^#{1,2}\s+(?:Document Name:|Aliases \/ Search Terms|Core Definition|Application Conditions|Interpretation Points|Interpretation Notes|Cautions \/ Distinctions|Variables to Review Together|Limits of Isolated Interpretation|Cross References|Evidence Note)\b/gmu,
+    },
+    {
+      label: "ja-mixed-polite-register",
+      regex:
+        /(?:だ|である|ではない|する|示す|みる|なる|ある|いる|できる|できない|しない)。$/gmu,
+    },
+    {
+      label: "ja-internal-authoring-narration",
+      regex: /(?:現在の日本語版で本文まで作成済み|現段階で開いている日本語ルート|今回の執筆バッチ)/gu,
+    },
+  ],
   es: [
     {
       label: "es-missing-required-diacritic",
@@ -83,19 +116,27 @@ const localeRules = {
       label: "es-unaccented-negative-copula",
       regex: /\bno esta\b/giu,
     },
+    {
+      label: "es-internal-authoring-narration",
+      regex: /\b(?:en este batch|rutas abiertas en la versi[oó]n actual|documentos ya redactados en esta versi[oó]n)\b/giu,
+    },
   ],
   pt: [
     {
       label: "pt-missing-required-diacritic",
-      regex: /\b(?:Interpretacao|interpretacao|Codificacao|codificacao|Localizacao|localizacao|Definicao|definicao|nao|sao|Temã)\b/gu,
+      regex: /\b(?:Interpretacao|interpretacao|Codificacao|codificacao|Localizacao|localizacao|Definicao|definicao|nao|sao|tambem)\b/giu,
     },
     {
       label: "pt-unaccented-common-grammar",
-      regex: /\b(?:não e|por si so|so e)\b/giu,
+      regex: /\b(?:n[aã]o e|por si so|so e)\b/giu,
     },
     {
       label: "pt-unaccented-definition-copula",
       regex: /^`[^`\n]+` e (?!`)/gmu,
+    },
+    {
+      label: "pt-internal-authoring-narration",
+      regex: /\b(?:neste lote de reda[cç][aã]o|rotas abertas na vers[aã]o atual|documentos j[aá] redigidos nesta vers[aã]o)\b/giu,
     },
   ],
 };
@@ -200,6 +241,26 @@ function scanDraftMetadata(filePath) {
   const canonicalRoute = String(parsed.data.canonicalRoute ?? "");
   const canonicalTitle = String(parsed.data.canonicalTitle ?? "");
   const relatedRoutes = Array.isArray(parsed.data.relatedRoutes) ? parsed.data.relatedRoutes.map(String) : [];
+
+  const sectionHeadings = [...parsed.content.matchAll(/^##\s+(.+?)\s*$/gmu)].map((match) => ({
+    heading: match[1].trim().toLocaleLowerCase(),
+    raw: match[1].trim(),
+    index: match.index ?? 0,
+  }));
+  const seenHeadings = new Set();
+  for (const section of sectionHeadings) {
+    if (seenHeadings.has(section.heading)) {
+      findings.push({
+        file: path.relative(root, filePath),
+        label: "duplicate-section-heading",
+        line: getLineNumber(sourceText, section.index),
+        match: section.raw,
+        runtimeHits: 0,
+        excerpt: `Duplicate section heading: ${section.raw}`,
+      });
+    }
+    seenHeadings.add(section.heading);
+  }
 
   if (authorityPolicy !== "curated-internal-reference") {
     findings.push(

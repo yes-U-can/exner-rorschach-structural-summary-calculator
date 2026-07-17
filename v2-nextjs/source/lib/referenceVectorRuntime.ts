@@ -10,6 +10,7 @@ export type ReferenceVectorLocaleSnapshot = {
   embeddedChunkCount: number;
   dimensions: number | null;
   staleEmbeddingCount: number;
+  contentHashMismatchCount: number;
   ready: boolean;
   latestRefreshedAt: string | null;
 };
@@ -58,6 +59,7 @@ export type ReferenceVectorProviderOverview = {
   readyLocaleCount: number;
   pendingLocaleCount: number;
   staleEmbeddingCount: number;
+  contentHashMismatchCount: number;
   pendingLocales: Language[];
   ready: boolean;
 };
@@ -123,6 +125,9 @@ export function getReferenceVectorProviderOverview(
   const staleEmbeddingCount = snapshotCurrent
     ? locales.reduce((sum, locale) => sum + locale.staleEmbeddingCount, 0)
     : providerSnapshot.totalEmbeddings;
+  const contentHashMismatchCount = snapshotCurrent
+    ? locales.reduce((sum, locale) => sum + locale.contentHashMismatchCount, 0)
+    : providerSnapshot.totalEmbeddings;
 
   return {
     provider,
@@ -134,6 +139,7 @@ export function getReferenceVectorProviderOverview(
     readyLocaleCount,
     pendingLocaleCount: pendingLocales.length,
     staleEmbeddingCount,
+    contentHashMismatchCount,
     pendingLocales,
     ready: pendingLocales.length === 0 && locales.length > 0,
   };

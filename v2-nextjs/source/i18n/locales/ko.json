@@ -1,8 +1,8 @@
 {
   "app": {
-    "title": "로샤 구조요약 계산 도우미",
-    "version": "v2.1.3",
-    "provider": "Sicp Seoul"
+    "title": "Exner 로샤 종합체계 구조요약 계산기",
+    "version": "v2.2.4",
+    "provider": "MOW 제작·유지보수"
   },
   "nav": {
     "scoring": "채점 & 구조 요약",
@@ -37,7 +37,7 @@
   },
   "modal": {
     "welcome": {
-      "title": "로샤 구조요약 계산 도우미",
+      "title": "로샤 구조요약 계산기",
       "new": "새로 만들기",
       "loadSample": "샘플 데이터로 시작하기",
       "loadSaved": "자동저장된 내용 불러오기",
@@ -327,7 +327,7 @@
     "summaryTitle": "구조 요약지에 산출된 항목을 모두 csv 형태로 내보냅니다"
   },
   "footer": {
-    "title": "로샤 구조요약 계산 도우미",
+    "title": "로샤 구조요약 계산기",
     "copyright": "© 1997-2026 서울임상심리연구소(Seoul Institute of Clinical Psychology, SICP). All rights reserved.",
     "scoringCanvasCopyright": "© 2026 서울임상심리연구소(Seoul Institute of Clinical Psychology, SICP) & 모오(MOW). All rights reserved."
   },
@@ -369,7 +369,7 @@
       "currentProviderHelp": "현재 {provider} 키로 해석 도우미와 코딩 도우미가 작동합니다.",
       "optionalProviderHelp": "{provider} 키를 쓰고 싶을 때만 입력하면 됩니다.",
       "replacementNotice": "저장하면 기존 {otherProvider} 키가 삭제됩니다.",
-      "conflictNotice": "두 제공자의 키가 모두 저장되어 있습니다. 새로 사용할 키 하나를 저장하면 다른 키는 자동으로 정리됩니다.",
+      "conflictNotice": "새 OpenAI API 키를 연결하면 현재 세션 키를 교체합니다.",
       "saveAndReplaceButton": "연결하고 교체",
       "replacedToast": "{provider} API 키를 이번 세션에 연결했습니다.",
       "connectedProvider": "{provider} 연결됨",
@@ -407,7 +407,8 @@
     "billingOrQuota": "API 사용 한도 또는 결제 상태를 확인한 뒤 다시 시도해 주세요.",
     "invalidApiKey": "입력한 API 키를 확인해 주세요. 키가 잘못되었거나 만료되었을 수 있습니다.",
     "modelUnavailable": "현재 연결한 API 키로는 이 AI 모델을 사용할 수 없습니다. API 제공자 계정의 모델 접근 권한을 확인해 주세요.",
-    "providerRejected": "AI 제공자가 요청을 거절했습니다. API 키, 결제 상태, 모델 접근 권한을 확인해 주세요."
+    "providerRejected": "AI 제공자가 요청을 거절했습니다. API 키, 결제 상태, 모델 접근 권한을 확인해 주세요.",
+    "appRateLimited": "짧은 시간에 요청이 너무 많이 전송되었습니다. 잠시 기다린 뒤 다시 시도해 주세요."
   },
   "errors": {
     "title": "오류",

@@ -48,7 +48,7 @@ En interpretación se usa como indicador del grado en que el protocolo simplific
 - Un `Lambda` bajo no es automáticamente fortaleza; si los recursos son insuficientes puede ir junto a ineficiencia.
 - Conviene revisar `Zd`, `W:D:Dd`, `EB`, `EA`, `D` y `AdjD`.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `Lambda` orienta la lectura del protocolo, pero no decide por sí solo adaptación o desadaptación.
 - Su valor depende mucho del contexto del protocolo y de su longitud.

@@ -3,10 +3,12 @@ canonicalRoute: "result-interpretation/lower-section/mediation/S_minus"
 locale: "ko"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/mediation/S_minus"
-displayTitle: "[해석/Mediation] S-%"
+displayTitle: "[해석/Mediation] S-"
 aliases:
+  - "S-"
   - "S-%"
   - "White Space Distortion"
+  - "공백 형태질 마이너스 빈도"
   - "공백왜곡비율"
 relatedRoutes:
   - "result-interpretation/lower-section/mediation"
@@ -21,37 +23,38 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/mediation/s-minus/index.md"
 ---
 
-# [해석/Mediation] S-%
+# [해석/Mediation] S-
 
 ## 별칭/검색어
 
+- S-
 - S-%
 - White Space Distortion
+- 공백 형태질 마이너스 빈도
 - 공백왜곡비율
 
 ## 핵심 정의
 
-`S-%`는 왜곡된 반응들 가운데 공백(`S`) 위치를 사용한 왜곡이 얼마나 되는지를 보는 비율이다. 단순히 `S`가 많다는 뜻이 아니라, 왜곡된 번역이 공백 사용과 얼마나 결합되는지 읽는 변수다.
+`S-`는 공백(`S`) 위치를 사용하면서 형태질이 마이너스(`FQ-`)로 부호화된 반응의 원시 빈도다. 이 웹앱의 구조요약 하단부에는 비율이 아니라 이 개수가 표시된다.
 
 ## 해석 포인트
 
-- `S-%`가 높으면 왜곡이 공백 사용, 반대하기, 부정적 세트, 정서적 간섭과 더 강하게 결합될 가능성을 생각한다.
-- 상위 종합체계 기준에서는 `S-%`가 33%를 넘고, 특히 minus 반응이 3개보다 많은 기록에서 강한 세트나 분노/부정주의가 왜곡에 기여할 수 있다고 본다.
-- `S` 자체가 높지 않아도 `S-%`는 높을 수 있으므로 두 변수는 분리해서 읽어야 한다.
+- `S-`가 있으면 공백 사용과 지각적 왜곡이 같은 반응에서 함께 나타났다는 점을 확인한다.
+- 값의 의미는 전체 `R`, 전체 `FQ-`, 공백 반응의 수와 맥락을 함께 보고 판단한다.
+- 별도로 계산되는 `S-%`는 원시 빈도 `S-`와 다른 파생 비율이다. 이 페이지의 화면값을 `S-%`로 읽거나 33% 기준에 직접 대입해서는 안 된다.
 
 ## 주의사항/감별 기준
 
-- minus 반응이 거의 없으면 `S-%`는 매우 불안정하다.
-- `S-%`는 `S` 빈도와 같지 않고, `S_aff`와도 같지 않다.
-- 높은 값만 보고 곧바로 적대성이나 병리를 단정하지 않는다.
+- `S-`는 전체 공백 빈도 `S`, 정서 영역의 `S_aff`, 파생 비율 `S-%`와 서로 다른 변수다.
+- 원시 빈도만 보고 반대성, 분노, 적대성 또는 병리를 단정하지 않는다.
+- `S-%`를 따로 사용할 때에는 해당 비율의 정확한 분모와 적용 조건을 확인해야 한다.
 
 ## 상호 참조
 
-- `S-%`는 왜곡의 맥락을 보여 줄 뿐, 왜곡 총량 자체를 대신하지 않는다.
+- `S-`는 공백과 왜곡이 겹친 반응의 수를 보여 줄 뿐, 왜곡 총량 자체를 대신하지 않는다.
 - 반드시 `X-%`, `S`, `S_aff`, `HVI`와 함께 읽어야 한다.
 
-## 근거 메모
-
+## 함께 볼 변수
 - `X-%`
 - `S`
 - `S_aff`
@@ -60,8 +63,4 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 
 ## 근거 메모
 
-이 문서는 서비스 운영용 참조 코퍼스로 정리된 런타임 문서입니다.
-
-## 근거 메모
-
-- `S-%`는 SCZI 연구 맥락에서 보강된 변수라는 메모를 provenance note에 남겼다.
+- 상세 검토 기록은 내부 검증 노트에서 관리한다.

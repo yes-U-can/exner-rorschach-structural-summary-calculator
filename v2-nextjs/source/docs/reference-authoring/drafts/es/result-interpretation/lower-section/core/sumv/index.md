@@ -48,7 +48,7 @@ En `core` suele indicar cuánto peso tiene la autocrítica, la disconformidad co
 - Un valor de 0 no excluye autocrítica si esta se expresa por otras vías.
 - Conviene diferenciar la lectura de carga actual en `core` de la lectura estructural más amplia en `selfPerception`.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `SumV` por sí solo no basta para describir la organización completa del autoconcepto.
 - Debe leerse con `eb`, `es`, `AdjD`, `SumV_self` y, cuando corresponda, `MOR`.

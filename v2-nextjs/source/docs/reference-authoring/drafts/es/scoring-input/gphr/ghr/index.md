@@ -34,14 +34,14 @@ provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/gphr
 ## Definición central
 
 `GHR` marca una respuesta de representación humana relativamente más integrada o adaptativa dentro de la secuencia del sistema.
-No es un juicio clínico libre, sino el resultado de pasar por los criterios sucesivos y no quedar excluida por los señales que empujan a `PHR`.
+No es un juicio clínico libre, sino el resultado de aplicar los criterios sucesivos y no quedar excluida por las señales que conducen a `PHR`.
 
 ## Condiciones de aplicación
 
 - Primero hay que confirmar que la respuesta entra en el dominio de representación humana.
 - Un caso fuerte de `GHR` es `H` puro con `FQ+`, `FQo` o `FQu`, sin códigos cognitivos relevantes, y sin [`AG`](ref://scoring-input/special-score/AG) ni [`MOR`](ref://scoring-input/special-score/MOR).
 - También puede terminar en `GHR` una respuesta con [`COP`](ref://scoring-input/special-score/COP) siempre que no lleve `AG`.
-- Las respuestas populares de las laminas III, IV, VII y IX también pueden empujar hacia `GHR` si no apareció antes un criterio de `PHR`.
+- Las respuestas populares de las láminas III, IV, VII y IX también pueden conducir a `GHR` si no apareció antes un criterio de `PHR`.
 - Si ningún criterio de `PHR` la captura antes, la respuesta de representación humana restante termina en `GHR`.
 
 ## Precauciones y distinciones

@@ -29,19 +29,23 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/dete
 
 ## 핵심 정의
 
-[결정인] FC은(는) 이 서비스에서 로샤 검사 채점과 해석 보조를 위해 정리한 참조 문서입니다.
+`FC`는 형태가 반응을 주로 결정하고 유채색은 부차적으로 관여할 때 사용하는 결정인이다.
 
 ## 채점/적용 조건
 
-최종 부호화를 확정하기 전에는 이 서비스가 사용하는 채점 기준과 현재 반응의 앞뒤 맥락을 함께 검토해 주세요.
+- 형태가 대상의 식별과 구성을 주도한다.
+- 유채색도 반응 형성에 관여하지만 형태보다 비중이 작다.
+- 색채가 더 우세하면 [`CF`](ref://scoring-input/determinants/CF), 형태가 실질적으로 관여하지 않으면 [`C`](ref://scoring-input/determinants/C)를 검토한다.
 
 ## 주의사항/감별 기준
 
-이 변수만으로 단정하지 말고, 인접 변수와 다른 가능성을 함께 비교해 주세요.
+- 카드에 색채가 있다는 사실만으로 `FC`를 부호화하지 않는다. 형태가 우세한 반응에 색채가 실제로 관여해야 한다.
+- `CF`와의 핵심 구분은 형태와 색채 중 어느 쪽이 반응을 더 강하게 규정하는가에 있다.
+- Inquiry에서 형태가 주도했다는 점이 확인되면 처음에 `CF`처럼 보인 반응도 `FC`가 될 수 있다.
 
 ## 상호 참조
 
-인접 규칙이나 연결된 해석 맥락이 필요할 때는 아래 문서를 함께 확인해 주세요.
+인접 규칙이나 연결된 해석 맥락이 필요할 때는 아래 문서를 함께 확인한다.
 
 - [scoring-input/determinants](ref://scoring-input%2Fdeterminants)
 - [scoring-input/determinants/CF](ref://scoring-input%2Fdeterminants%2FCF)
@@ -52,4 +56,4 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/dete
 
 ## 근거 메모
 
-이 문서는 서비스 운영용 참조 코퍼스로 정리된 런타임 문서입니다.
+세부 출처 비교와 판단 근거는 내부 검토 메모에서 관리한다.

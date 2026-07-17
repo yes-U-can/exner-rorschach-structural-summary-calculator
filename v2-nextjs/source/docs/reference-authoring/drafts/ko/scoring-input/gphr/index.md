@@ -62,7 +62,7 @@ GHR와 PHR은 인간을 어떻게 표상하는지에 대한 special coding이다
 
 ## 상호 참조
 
-인접 규칙이나 연결된 해석 맥락이 필요할 때는 아래 문서를 함께 확인해 주세요.
+인접 규칙이나 연결된 해석 맥락이 필요할 때는 아래 문서를 함께 확인한다.
 
 - [scoring-input/gphr/GHR](ref://scoring-input%2Fgphr%2FGHR)
 - [scoring-input/gphr/PHR](ref://scoring-input%2Fgphr%2FPHR)

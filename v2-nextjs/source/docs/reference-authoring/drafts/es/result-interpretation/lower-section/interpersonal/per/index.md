@@ -38,7 +38,7 @@ En interpretación sugiere cuánto pesa un marco autorreferencial al mirar a otr
 
 - Si `PER` es alto, puede haber mayor tendencia a interpretar el mundo interpersonal desde referencias propias y menos desde claves compartidas.
 - Esta variable puede acompañar rigidez, necesidad de afirmarse o una forma muy privada de validar la experiencia.
-- Cuando aparece junto con `Xu%` alto, la lectura interpersonal puede volverse aun más idiosincrática.
+- Cuando aparece junto con un `Xu%` alto, la lectura interpersonal puede volverse aún más idiosincrática.
 - Un valor bajo solo indica que este sesgo aparece menos, no que la persona sea automáticamente abierta o flexible.
 
 ## Precauciones y distinciones
@@ -47,7 +47,7 @@ En interpretación sugiere cuánto pesa un marco autorreferencial al mirar a otr
 - La variable no mide simple opinión personal; apunta a la forma en que la respuesta se sostiene desde un marco propio.
 - Debe distinguirse del código de puntuación `PER`, aunque ambos se relacionan.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `PER` no basta por sí solo para concluir egocentrismo relacional.
 - Conviene leerlo junto con `a:p`, `HumanCont`, `Xu%` y `H ratio`.
@@ -65,7 +65,7 @@ En interpretación sugiere cuánto pesa un marco autorreferencial al mirar a otr
 - [[Interpretación/Lower Section/Interpersonal] Interpersonal](ref://result-interpretation/lower-section/interpersonal)
 - [[Interpretación/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
 - [[Interpretación/Interpersonal] a:p](ref://result-interpretation/lower-section/interpersonal/a_p_inter)
-- [[Codificación/Special Scores] PER](ref://scoring-input/special-score/PER)
+- [[Codificación/Códigos Especiales] PER](ref://scoring-input/special-score/PER)
 - [[Interpretación/Mediation] Xu%](ref://result-interpretation/lower-section/mediation/Xu_percent)
 - [[Interpretación/Self Perception] H Ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
 

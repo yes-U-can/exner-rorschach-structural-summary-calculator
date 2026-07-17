@@ -48,7 +48,7 @@ En `Self Perception` ayuda a leer si la autoimagen necesita brillo especial, con
 - Aun así, un solo reflejo no define por sí solo el estilo de personalidad.
 - Su ausencia no prueba que no exista sensibilidad narcisista o necesidad de validación.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - Conviene integrarlo con `3r+(2)/R`, `SumV`, `FD` y `MOR`.
 - La variable marca una dirección de la autoimagen, no toda su estabilidad.

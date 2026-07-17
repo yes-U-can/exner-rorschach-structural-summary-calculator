@@ -37,7 +37,7 @@ El foco está en una inferencia injustificada, no en una palabra rara ni en una 
 
 ## Condiciones de aplicación
 
-- Usa `ALOG` cuando la explicación o justificación del response muestra un salto lógico inapropiado.
+- Se codifica `ALOG` cuando la explicación o justificación de la respuesta muestra un salto lógico inapropiado.
 - La conclusión presentada debe sonar poco valida incluso dentro del propio marco de la respuesta.
 - El problema está en la lógica usada para sostener la idea, no solo en la forma verbal.
 - `ALOG` aporta a `Sum6` y después puede influir en `WSum6`.
@@ -46,12 +46,12 @@ El foco está en una inferencia injustificada, no en una palabra rara ni en una 
 
 - No asignas `ALOG` solo por estilo raro, tono dramatizado o respuesta difícil de seguir.
 - Si la rareza principal está en una palabra o expresión desviada, compara primero con `DV1`.
-- Si la desviación afecta la organización global del response, compara también con `DR1`.
+- Si la desviación afecta a la organización global de la respuesta, debe compararse también con `DR1`.
 - Las respuestas inducidas por preguntas de seguimiento no deben convertirse automáticamente en `ALOG`.
 
 ## Referencias cruzadas
 
-- [[Codificación/Puntuaciones especiales] Special Scores](ref://scoring-input/special-score)
+- [[Codificación/Puntuaciones especiales] Códigos Especiales](ref://scoring-input/special-score)
 - [[Codificación/Puntuaciones especiales] DV1](ref://scoring-input/special-score/DV1)
 - [[Codificación/Puntuaciones especiales] DR1](ref://scoring-input/special-score/DR1)
 - [[Interpretación/Ideation] Sum6](ref://result-interpretation/lower-section/ideation/Sum6)

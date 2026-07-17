@@ -36,7 +36,7 @@ La organización general aparece seriamente alterada o muy apartada de un curso 
 
 ## Condiciones de aplicación
 
-- Se considera cuando la desviación afecta al response de manera amplia y marcada.
+- Se considera cuando la desviación afecta a la respuesta de manera amplia y marcada.
 - La alteración es más severa que en [`DR1`](ref://scoring-input/special-score/DR1).
 - Si el problema parece limitarse a palabras o formulaciones aisladas, primero se revisan [`DV1`](ref://scoring-input/special-score/DV1) y [`DV2`](ref://scoring-input/special-score/DV2).
 - `DR2` se conecta después con [`Sum6`](ref://result-interpretation/lower-section/ideation/Sum6), [`Lv2`](ref://result-interpretation/lower-section/ideation/Lv2) y [`WSum6`](ref://result-interpretation/lower-section/ideation/WSum6).
@@ -44,12 +44,12 @@ La organización general aparece seriamente alterada o muy apartada de un curso 
 ## Precauciones y distinciones
 
 - No se usa `DR2` solo porque una respuesta sea muy larga o muy compleja.
-- `DR2` exige desorganización clara del response global.
+- `DR2` exige una desorganización clara de la respuesta global.
 - Si la gravedad de nivel 2 no es clara, no se fuerza `DR2`.
 
 ## Referencias cruzadas
 
-- [[Codificación/Puntuaciones especiales] Special Scores](ref://scoring-input/special-score)
+- [[Codificación/Puntuaciones especiales] Códigos Especiales](ref://scoring-input/special-score)
 - [[Codificación/Puntuaciones especiales] DV2](ref://scoring-input/special-score/DV2)
 - [[Codificación/Puntuaciones especiales] DR1](ref://scoring-input/special-score/DR1)
 - [[Interpretación/Ideation] Sum6](ref://result-interpretation/lower-section/ideation/Sum6)

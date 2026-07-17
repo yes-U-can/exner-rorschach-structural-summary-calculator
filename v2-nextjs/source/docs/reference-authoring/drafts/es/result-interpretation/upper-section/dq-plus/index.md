@@ -46,7 +46,7 @@ En interpretación indica con cuánta regularidad aparece una organización comp
 - Si `DQ+` es alto pero `FQ` o `Zd` son débiles, la complejidad puede no ser eficiente.
 - Un `DQ+` bajo también puede aparecer en protocolos breves o muy defensivos.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `DQ+` debe leerse dentro de toda la distribución de `DQ`.
 - Conviene distinguir organización compleja de simple extensión verbal.

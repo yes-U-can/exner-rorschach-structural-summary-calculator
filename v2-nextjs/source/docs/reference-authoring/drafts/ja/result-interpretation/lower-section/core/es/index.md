@@ -29,49 +29,49 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-core-eb-family-2026-03-10.md"
 ---
 
-# Document Name: [Interpretation/Core] es
+# [Interpretation/Core] es
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - es
 - Experienced Stimulations
 - current demand load
 - 現在負荷総量
 
-## Core Definition
+## 中核的定義
 
 `es` は `eb` を構成する成分の総和です。
 プロトコルの中で登録されている、現在の要求や内的負荷の総量を表します。
 
-## Interpretation Points
+## 解釈の要点
 
 - 高い `es` は、多くの内的要求や高い緊張負荷が同時に動いていることを示します。
 - 中程度の `es` は、現在の要求が明確にシステムを圧倒していないことを示す場合があります。
 - 低い `es` は、苦痛の不在を自動的に意味するわけではなく、最小化や防衛的な縮小を反映していることもあります。
 - [`EA`](ref://result-interpretation/lower-section/core/EA) との比較は、[`D`](ref://result-interpretation/lower-section/core/D) や [`AdjD`](ref://result-interpretation/lower-section/core/AdjD) を読む中心になります。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
 - 高い `es` は負荷を示しますが、その負荷が一時的か慢性的かを単独では決めません。
 - 低い `es` と低い `EA` が並ぶ場合、落ち着きよりも全般的な資源不足を示している可能性があります。
 - 何がこの総量を作っているかを見るために、`eb` の構成も確認する必要があります。
 
-## Cross References
+## 相互参照
 
-- [[Interpretation/Lower Section/Core] Core](ref://result-interpretation/lower-section/core)
-- [[Interpretation/Core] EA](ref://result-interpretation/lower-section/core/EA)
-- [[Interpretation/Core] EB](ref://result-interpretation/lower-section/core/EB)
-- [[Interpretation/Core] eb](ref://result-interpretation/lower-section/core/eb)
-- [[Interpretation/Core] D](ref://result-interpretation/lower-section/core/D)
-- [[Interpretation/Core] AdjEs](ref://result-interpretation/lower-section/core/AdjEs)
-- [[Interpretation/Core] AdjD](ref://result-interpretation/lower-section/core/AdjD)
-- [[Interpretation/Core] FM](ref://result-interpretation/lower-section/core/FM)
-- [[Interpretation/Core] m](ref://result-interpretation/lower-section/core/m)
-- [[Interpretation/Core] SumCprime](ref://result-interpretation/lower-section/core/SumCprime)
-- [[Interpretation/Core] SumT](ref://result-interpretation/lower-section/core/SumT)
-- [[Interpretation/Core] SumV](ref://result-interpretation/lower-section/core/SumV)
-- [[Interpretation/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
+- [[解釈/下段/Core] Core](ref://result-interpretation/lower-section/core)
+- [[解釈/Core] EA](ref://result-interpretation/lower-section/core/EA)
+- [[解釈/Core] EB](ref://result-interpretation/lower-section/core/EB)
+- [[解釈/Core] eb](ref://result-interpretation/lower-section/core/eb)
+- [[解釈/Core] D](ref://result-interpretation/lower-section/core/D)
+- [[解釈/Core] AdjEs](ref://result-interpretation/lower-section/core/AdjEs)
+- [[解釈/Core] AdjD](ref://result-interpretation/lower-section/core/AdjD)
+- [[解釈/Core] FM](ref://result-interpretation/lower-section/core/FM)
+- [[解釈/Core] m](ref://result-interpretation/lower-section/core/m)
+- [[解釈/Core] SumCprime](ref://result-interpretation/lower-section/core/SumCprime)
+- [[解釈/Core] SumT](ref://result-interpretation/lower-section/core/SumT)
+- [[解釈/Core] SumV](ref://result-interpretation/lower-section/core/SumV)
+- [[解釈/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
 
-## Evidence Note
+## 根拠メモ
 
-- Detailed source comparison is stored in internal provenance notes.
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

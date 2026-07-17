@@ -47,7 +47,7 @@ Isso significa que a forma não está disponível como base codificável para ju
 
 - [[Codificação/Qualidade Formal] FQ](ref://scoring-input/fq)
 - [[Codificação/Determinantes] M](ref://scoring-input/determinants/M)
-- [[Codificação/Scores Especiais] AB](ref://scoring-input/special-score/AB)
+- [[Codificação/Códigos Especiais] AB](ref://scoring-input/special-score/AB)
 
 ## Nota de base
 

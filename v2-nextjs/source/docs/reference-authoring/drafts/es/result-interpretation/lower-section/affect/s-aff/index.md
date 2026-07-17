@@ -47,7 +47,7 @@ Se revisa como una señal posible de oposición, autoafirmación, tensión o dis
 - Pocos casos no bastan para concluir un estilo oposicionista estable.
 - Conviene revisar si el uso del blanco aparece junto con `AG`, `CP` o signos de tensión.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `S` orienta sobre tono afectivo y postura frente al campo, pero no explica por sí solo la fuente del conflicto.
 - Debe leerse junto con `AG`, `CP`, `upper-section S` y `S-%`.
@@ -67,9 +67,9 @@ Se revisa como una señal posible de oposición, autoafirmación, tensión o dis
 - [[Interpretación/Upper Section] S](ref://result-interpretation/upper-section/S)
 - [[Interpretación/Mediación] S-%](ref://result-interpretation/lower-section/mediation/S_minus)
 - [[Codificación/Location] S](ref://scoring-input/location/S)
-- [[Codificación/Special Scores] AG](ref://scoring-input/special-score/AG)
-- [[Interpretación/Special Indices] DEPI](ref://result-interpretation/special-indices/DEPI)
-- [[Interpretación/Special Indices] HVI](ref://result-interpretation/special-indices/HVI)
+- [[Codificación/Códigos Especiales] AG](ref://scoring-input/special-score/AG)
+- [[Interpretación/Índices Especiales] DEPI](ref://result-interpretation/special-indices/DEPI)
+- [[Interpretación/Índices Especiales] HVI](ref://result-interpretation/special-indices/HVI)
 
 ## Nota de fundamento
 

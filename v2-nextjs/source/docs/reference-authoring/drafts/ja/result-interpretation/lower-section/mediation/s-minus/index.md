@@ -3,11 +3,13 @@ canonicalRoute: "result-interpretation/lower-section/mediation/S_minus"
 locale: "ja"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/mediation/S_minus"
-displayTitle: "[Interpretation/Mediation] S-%"
+displayTitle: "[Interpretation/Mediation] S-"
 aliases:
+  - "S-"
   - "S-%"
   - "White Space Distortion"
   - "白地歪曲"
+  - "白地反応の形態水準マイナス頻度"
 relatedRoutes:
   - "result-interpretation/lower-section/mediation"
   - "result-interpretation/lower-section/mediation/X_minus_percent"
@@ -21,40 +23,41 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-mediation-xminus-sminus-p-2026-03-10.md"
 ---
 
-# Document Name: [Interpretation/Mediation] S-%
+# [Interpretation/Mediation] S-
 
-## Aliases / Search Terms
+## 別名・検索語
 
+- S-
 - S-%
 - White Space Distortion
 - 白地歪曲
+- 白地反応の形態水準マイナス頻度
 
-## Core Definition
+## 中核的定義
 
-`S-%` は、白地を用いた反応の中で歪みを伴う反応の割合を示します。
-白地反応がどれくらい出たかではなく、白地使用にどれほど歪みが結びついているかをみる指標です。
+`S-` は、白地（`S`）を用い、かつ形態水準がマイナス（`FQ-`）とコーディングされた反応の実数です。このアプリの構造一覧表の下段に表示されるのは割合ではなく、この反応数です。
 
-## Interpretation Points
+## 解釈の要点
 
-- `S-%` が高いと、反対性や距離化が、より知覚的歪みを伴って現れている可能性があります。
-- これは白地使用が単なる防衛的構えだけでなく、媒介の乱れとも結びついていることを示す場合があります。
-- `S` 自体も高いときに、その意味はより強くなります。
+- `S-` が1以上なら、白地の使用と知覚的な歪みが同じ反応に現れたことを示します。
+- 全反応数 `R`、全 `FQ-`、白地反応数、およびプロトコル全体の文脈と併せて検討します。
+- 別に算出される `S-%` は `S-` とは異なる派生比率です。画面に表示された `S-` を `S-%` とみなしたり、割合の基準値を直接適用したりしてはいけません。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
-- `S-%` は `upper section` の `S` や、`affect` の `S` と同じではありません。
-- `S` 反応が非常に少ないときは、この比率は不安定になります。
-- これは白地使用に歪みが加わった指標であり、純粋な反対性指数として読まないでください。
+- `S-`、白地反応の総数 `S`、感情領域の `S_aff`、派生比率 `S-%` はそれぞれ異なる変数です。
+- 実数だけから反抗性、怒り、敵意、精神病理を断定してはいけません。
+- `S-%` を別途使用する場合は、正確な分母と適用条件を確認する必要があります。
 
-## Cross References
+## 相互参照
 
-- [[Interpretation/Lower Section/Mediation] Mediation](ref://result-interpretation/lower-section/mediation)
-- [[Interpretation/Mediation] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
-- [[Interpretation/Upper Section] S](ref://result-interpretation/upper-section/S)
-- [[Interpretation/Affect] S](ref://result-interpretation/lower-section/affect/S_aff)
-- [[Coding/Location] S](ref://scoring-input/location/S)
-- [[Interpretation/Special Indices] HVI](ref://result-interpretation/special-indices/HVI)
+- [[解釈/下段/Mediation] Mediation](ref://result-interpretation/lower-section/mediation)
+- [[解釈/Mediation] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
+- [[解釈/上段] S](ref://result-interpretation/upper-section/S)
+- [[解釈/Affect] S](ref://result-interpretation/lower-section/affect/S_aff)
+- [[Coding/領域] S](ref://scoring-input/location/S)
+- [[解釈/特殊指標] HVI](ref://result-interpretation/special-indices/HVI)
 
-## Evidence Note
+## 根拠メモ
 
-- Detailed source comparison is stored in internal provenance notes.
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

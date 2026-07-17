@@ -1,4 +1,4 @@
-﻿---
+---
 canonicalRoute: "result-interpretation/lower-section/processing/PSV"
 locale: "pt"
 docKind: "interpretation-entry"

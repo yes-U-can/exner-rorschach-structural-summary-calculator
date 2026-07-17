@@ -3,10 +3,12 @@ canonicalRoute: "result-interpretation/lower-section/mediation/S_minus"
 locale: "en"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/lower-section/mediation/S_minus"
-displayTitle: "[Interpretation/Mediation] S-%"
+displayTitle: "[Interpretation/Mediation] S-"
 aliases:
+  - "S-"
   - "S-%"
   - "White Space Distortion"
+  - "white-space FQ-minus frequency"
 relatedRoutes:
   - "result-interpretation/lower-section/mediation"
   - "result-interpretation/lower-section/mediation/X_minus_percent"
@@ -20,29 +22,30 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
-# Document Name: [Interpretation/Mediation] S-%
+# Document Name: [Interpretation/Mediation] S-
 
 ## Aliases / Search Terms
 
+- S-
 - S-%
 - White Space Distortion
+- white-space FQ-minus frequency
 
 ## Core Definition
 
-`S-%` indicates the proportion of distorted responses among responses that use white space.
-It does not measure only how often `S` appears, but how much distortion is combined with white-space use.
+`S-` is the raw frequency of responses that use white space (`S`) and receive minus Form Quality (`FQ-`). The application displays this count, not a percentage, in the Lower Section of the Structural Summary.
 
 ## Interpretation Points
 
-- If `S-%` is high, opposition or distance from the field may be accompanied by more perceptual distortion.
-- It can suggest that white-space use is not only a defensive stance, but also a source of mediation disorganization.
-- Its meaning gains strength when `S` is also elevated.
+- A nonzero `S-` shows that white-space use and perceptual distortion occurred in the same response.
+- Interpret the count in relation to total `R`, total `FQ-`, the number of white-space responses, and the rest of the protocol.
+- A separately derived `S-%` is a different variable. Do not read the displayed `S-` count as `S-%` or apply a percentage cutoff directly to it.
 
 ## Cautions / Distinctions
 
-- `S-%` is not the same as `S` in the upper section or `S` in affect.
-- If there are very few `S` responses, the ratio can be unstable.
-- It should be read as white space plus distortion, not as a pure index of negativism.
+- `S-`, total white-space frequency `S`, affective `S_aff`, and the derived ratio `S-%` are distinct variables.
+- Do not infer hostility, oppositionality, or psychopathology from the raw count alone.
+- If `S-%` is calculated separately, verify its exact denominator and conditions of use.
 
 ## Cross References
 

@@ -29,19 +29,24 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/dete
 
 ## 핵심 정의
 
-[결정인] M은(는) 이 서비스에서 로샤 검사 채점과 해석 보조를 위해 정리한 참조 문서입니다.
+`M`은 인간적이거나 의인화된 활동이 지각될 때 사용하는 결정인이다. 동물이나 가상 존재라도 뚜렷하게 인간다운 행동을 하면 `M`에 포함할 수 있다.
 
 ## 채점/적용 조건
 
-최종 부호화를 확정하기 전에는 이 서비스가 사용하는 채점 기준과 현재 반응의 앞뒤 맥락을 함께 검토해 주세요.
+- 지각된 행동이 인간적이거나 명백히 의인화되어야 한다.
+- 싸우기, 생각하기, 잠자기, 바라보기, 기대기처럼 능동적·수동적 활동을 모두 포함할 수 있다.
+- 동물이 그 종에 통상적이지 않은 인간적 행동을 하면 `M`을 검토한다.
+- 검사자의 추론을 덧붙이지 않고 피검자가 실제로 묘사한 활동을 기준으로 판단한다.
 
 ## 주의사항/감별 기준
 
-이 변수만으로 단정하지 말고, 인접 변수와 다른 가능성을 함께 비교해 주세요.
+- 통상적인 동물 움직임은 [`FM`](ref://scoring-input/determinants/FM), 무생물의 움직임은 [`m`](ref://scoring-input/determinants/m)과 구분한다.
+- 인간 내용이 있다는 사실만으로는 충분하지 않으며, 지각된 활동이 있어야 한다.
+- 협동 또는 공격적 상호작용이 함께 나타나면 [`COP`](ref://scoring-input/special-score/COP) 또는 [`AG`](ref://scoring-input/special-score/AG)를 별도로 검토한다.
 
 ## 상호 참조
 
-인접 규칙이나 연결된 해석 맥락이 필요할 때는 아래 문서를 함께 확인해 주세요.
+인접 규칙이나 연결된 해석 맥락이 필요할 때는 아래 문서를 함께 확인한다.
 
 - [scoring-input/determinants](ref://scoring-input%2Fdeterminants)
 - [scoring-input/determinants/FM](ref://scoring-input%2Fdeterminants%2FFM)
@@ -52,4 +57,4 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/dete
 
 ## 근거 메모
 
-이 문서는 서비스 운영용 참조 코퍼스로 정리된 런타임 문서입니다.
+세부 출처 비교와 판단 근거는 내부 검토 메모에서 관리한다.

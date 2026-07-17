@@ -52,17 +52,12 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `FM` 하나만으로 concentration problem이나 행동 문제를 단정하지 않는다.
 - intrusive ideation의 실제 부담 정도는 `m`과 묶인 `FM + m`, 그리고 전체 demand인 `es`에서 다시 봐야 한다.
 
-## 근거 메모
-
+## 함께 볼 변수
 - `m`
 - `eb`
 - `es`
 - `D`
 - `AdjD`
-
-## 근거 메모
-
-이 문서는 서비스 운영용 참조 코퍼스로 정리된 런타임 문서입니다.
 
 ## 근거 메모
 

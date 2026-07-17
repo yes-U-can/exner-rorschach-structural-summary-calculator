@@ -51,7 +51,7 @@ En procesamiento se usa para ver si la persona tiende a abarcar el conjunto, a c
 - El valor depende también del total de respuestas y del estilo general del protocolo.
 - Un `Dd` alto no debe confundirse automáticamente con obsesividad o deterioro.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `W:D:Dd` muestra la forma de recortar el campo, no toda la calidad del procesamiento.
 - Conviene leerlo junto con `Zd`, `W:M`, las distribuciones `DQ` y las codificaciones de `Location`.

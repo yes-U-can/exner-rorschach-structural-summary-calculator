@@ -41,10 +41,10 @@ En interpretación funciona como una señal de rigidez, dificultad para cambiar 
 ## Precauciones y distinciones
 
 - `PSV` no es lo mismo que consistencia normal o preferencia estilística.
-- El valor necesita contexto del protocolo y del modo exacto en que se codifico la perseveración.
+- El valor necesita el contexto del protocolo y el modo exacto en que se codificó la perseveración.
 - No debe sobredimensionarse sin revisar `Zd`, `DQ` y otras señales de organización.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `PSV` es una señal de advertencia, no un diagnóstico por sí solo.
 - Conviene leerlo junto con `Zd`, `DQ+`, `DQv`, `WSum6` y `X-%`.
@@ -60,7 +60,7 @@ En interpretación funciona como una señal de rigidez, dificultad para cambiar 
 ## Referencias cruzadas
 
 - [[Interpretación/Lower Section/Procesamiento] Procesamiento](ref://result-interpretation/lower-section/processing)
-- [[Codificación/Special Score] PSV](ref://scoring-input/special-score/PSV)
+- [[Codificación/Código Especial] PSV](ref://scoring-input/special-score/PSV)
 - [[Interpretación/Procesamiento] Zd](ref://result-interpretation/lower-section/processing/Zd_proc)
 - [[Interpretación/Procesamiento] W:D:Dd](ref://result-interpretation/lower-section/processing/W_D_Dd)
 

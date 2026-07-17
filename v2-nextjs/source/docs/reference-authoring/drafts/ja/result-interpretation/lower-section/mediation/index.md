@@ -28,48 +28,48 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-mediation-opening-xa-wda-2026-03-10.md"
 ---
 
-# Document Name: [Interpretation/Lower Section/Mediation] Mediation
+# [Interpretation/Lower Section/Mediation] Mediation
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - Mediation
 - 媒介
 - 認知的媒介
 
-## Core Definition
+## 中核的定義
 
 `Mediation` は、被検者がインクのしみをどのように共有可能な知覚へ変換しているかをみる領域です。
 この領域では、知覚の妥当性、独自性、共有現実からのずれの程度を確認します。
 
-## Interpretation Points
+## 解釈の要点
 
 - `XA%`、`WDA%`、`X+%`、`P` は、より一般的で共有しやすい知覚にどれだけ近いかをみます。
 - `Xu%` は、珍しいがまだ可能な知覚の割合を示します。
 - `X-%` と `S-%` は、知覚が共有現実からどれくらい外れているかを見積もる助けになります。
 - この領域は単独で読むのではなく、`Processing` や `Ideation` と一緒に読む必要があります。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
 - 1つの変数だけで知覚の質全体を要約しないでください。
 - `R` が少ないと、いくつかの比率は不安定になります。
 - `XA%` と `WDA%` は関連しますが同一ではありません。`WDA%` は比較的ありふれた領域に限られ、`XA%` はより広い許容範囲を含みます。
 
-## Cross References
+## 相互参照
 
-- [[Interpretation/Lower Section] Lower Section](ref://result-interpretation/lower-section)
-- [[Interpretation/Mediation] XA%](ref://result-interpretation/lower-section/mediation/XA_percent)
-- [[Interpretation/Mediation] WDA%](ref://result-interpretation/lower-section/mediation/WDA_percent)
-- [[Interpretation/Mediation] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
-- [[Interpretation/Mediation] S-%](ref://result-interpretation/lower-section/mediation/S_minus)
-- [[Interpretation/Mediation] P](ref://result-interpretation/lower-section/mediation/P)
-- [[Interpretation/Mediation] X+%](ref://result-interpretation/lower-section/mediation/X_plus_percent)
-- [[Interpretation/Mediation] Xu%](ref://result-interpretation/lower-section/mediation/Xu_percent)
-- [[Interpretation/Lower Section/Processing] Processing](ref://result-interpretation/lower-section/processing)
-- [[Interpretation/Lower Section/Ideation] Ideation](ref://result-interpretation/lower-section/ideation)
+- [[解釈/下段] 下段](ref://result-interpretation/lower-section)
+- [[解釈/Mediation] XA%](ref://result-interpretation/lower-section/mediation/XA_percent)
+- [[解釈/Mediation] WDA%](ref://result-interpretation/lower-section/mediation/WDA_percent)
+- [[解釈/Mediation] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
+- [[解釈/Mediation] S-%](ref://result-interpretation/lower-section/mediation/S_minus)
+- [[解釈/Mediation] P](ref://result-interpretation/lower-section/mediation/P)
+- [[解釈/Mediation] X+%](ref://result-interpretation/lower-section/mediation/X_plus_percent)
+- [[解釈/Mediation] Xu%](ref://result-interpretation/lower-section/mediation/Xu_percent)
+- [[解釈/下段/情報処理] 情報処理](ref://result-interpretation/lower-section/processing)
+- [[解釈/下段/Ideation] Ideation](ref://result-interpretation/lower-section/ideation)
 - [[Coding/FQ] FQ](ref://scoring-input/fq)
 - [[Coding/Popular] Popular](ref://scoring-input/popular)
-- [[Coding/Location] S](ref://scoring-input/location/S)
+- [[Coding/領域] S](ref://scoring-input/location/S)
 
-## Evidence Note
+## 根拠メモ
 
-- Detailed source comparison is stored in internal provenance notes.
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

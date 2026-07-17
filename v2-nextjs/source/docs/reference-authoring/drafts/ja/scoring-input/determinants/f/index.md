@@ -23,44 +23,44 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-determinants-f-fr-rf-fd-2026-03-10.md"
 ---
 
-# Document Name: [Coding/Determinants] F
+# [Coding/Determinants] F
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - F
 - 純粋形態
 - 形態のみ
 - form only
 
-## Core Definition
+## 中核的定義
 
-`F` は、反応の根拠が形態だけで支えられているときに付ける determinant です。  
-運動、色彩、反射、texture、vista、diffuse shading など、別の determinant は作動していません。
+`F` は、反応の根拠が形態だけで支えられているときに付ける決定因です。
+運動、色彩、反射、質感、ビスタ、拡散陰影など、別の決定因は作動していません。
 
-## Application Conditions
+## 採点・適用条件
 
-- Inquiry でも輪郭、外形、形のまとまりだけを根拠にしている。
-- 被検者の説明の中に、別の determinant を裏づける手がかりが出てこない。
-- 検査者の推測ではなく、被検者が実際に述べた根拠に従って確定する。
-- 形態以外の determinant が明確なら、`F` 単独では確定しない。
+- 質問段階でも輪郭、外形、形のまとまりだけを根拠にしています。
+- 被検者の説明の中に、別の決定因を裏づける手がかりが出てきません。
+- 検査者の推測ではなく、被検者が実際に述べた根拠に従って確定します。
+- 形態以外の決定因が明確なら、`F` 単独では確定しません。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
-- `F` は [`FQ`](ref://scoring-input/fq) と同じではありません。`F` は determinant、`FQ` は form quality です。
+- `F` は [`FQ`](ref://scoring-input/fq) と同じではありません。`F` は決定因、`FQ` は形態水準です。
 - 輪郭や相対的大きさで奥行きや次元感が出ているなら [`FD`](ref://scoring-input/determinants/FD) を見直します。
-- texture、vista、diffuse shading が加わるなら [`FT`](ref://scoring-input/determinants/FT)、[`V`](ref://scoring-input/determinants/V)、[`Y`](ref://scoring-input/determinants/Y) を再検討します。
-- 複合 determinant の一部として `F` が含まれることはありますが、その場合も何が優勢かを別に判断する必要があります。
+- 質感、ビスタ、拡散陰影が加わるなら [`FT`](ref://scoring-input/determinants/FT)、[`V`](ref://scoring-input/determinants/V)、[`Y`](ref://scoring-input/determinants/Y) を再検討します。
+- 複合決定因の一部として `F` が含まれることはありますが、その場合も何が優勢かを別に判断する必要があります。
 
-## Cross References
+## 相互参照
 
-- [[Coding/Determinants] Determinants](ref://scoring-input/determinants)
-- [[Coding/Form Quality] FQ](ref://scoring-input/fq)
-- [[Coding/Form Quality] +](ref://scoring-input/fq/%2B)
-- [[Coding/Form Quality] o](ref://scoring-input/fq/o)
-- [[Coding/Form Quality] u](ref://scoring-input/fq/u)
-- [[Coding/Form Quality] -](ref://scoring-input/fq/-)
-- [[Interpretation/Core] Lambda](ref://result-interpretation/lower-section/core/Lambda)
+- [[Coding/決定因] 決定因](ref://scoring-input/determinants)
+- [[Coding/形態水準] FQ](ref://scoring-input/fq)
+- [[Coding/形態水準] +](ref://scoring-input/fq/%2B)
+- [[Coding/形態水準] o](ref://scoring-input/fq/o)
+- [[Coding/形態水準] u](ref://scoring-input/fq/u)
+- [[Coding/形態水準] -](ref://scoring-input/fq/-)
+- [[解釈/Core] Lambda](ref://result-interpretation/lower-section/core/Lambda)
 
-## Evidence Note
+## 根拠メモ
 
-- Detailed source comparisons remain in the internal provenance note.
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

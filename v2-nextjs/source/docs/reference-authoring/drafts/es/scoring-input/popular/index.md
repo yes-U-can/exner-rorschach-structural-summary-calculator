@@ -46,12 +46,12 @@ En codificación, `P` se usa cuando la respuesta coincide con una popular defini
 - Una cuasi-popular no recibe `P` si cambia de manera relevante el contenido o la localización.
 - La orientación de la lámina puede influir en la decisión, porque algunas populares exigen que la cabeza o la parte superior queden en la posición esperada.
 - La frecuencia o ausencia de `P` se interpreta después; en la fase de codificación solo importa si la respuesta cumple el criterio.
-- Las diferencias culturales pueden modificar como se discuten ciertas respuestas en cada locale, pero la decisión de codificación sigue el criterio del manual activo para ese locale.
+- El contexto cultural puede modificar la interpretación, pero la decisión de codificación debe seguir el criterio aplicable del Sistema Comprehensivo.
 
 ## Referencias cruzadas
 
 - [[Codificación] score](ref://scoring-input/score)
-- [[Codificación/Tarjetas] Card](ref://scoring-input/card)
+- [[Codificación/Láminas] Card](ref://scoring-input/card)
 - [[Codificación/GHR-PHR] GHR](ref://scoring-input/gphr/GHR)
 - [[Interpretación/Mediation] P](ref://result-interpretation/lower-section/mediation/P)
 

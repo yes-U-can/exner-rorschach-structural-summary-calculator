@@ -61,7 +61,7 @@ Esta página resume o que vale a pena revisar na codificação quando essas resp
 - [[Codificação/Determinantes] FT](ref://scoring-input/determinants/FT)
 - [[Codificação/Conteúdos] Ad](ref://scoring-input/contents/Ad)
 - [[Codificação/Popular] Popular](ref://scoring-input/popular)
-- [[Codificação/Scores Especiais] MOR](ref://scoring-input/special-score/MOR)
+- [[Codificação/Códigos Especiais] MOR](ref://scoring-input/special-score/MOR)
 
 ## Nota de base
 

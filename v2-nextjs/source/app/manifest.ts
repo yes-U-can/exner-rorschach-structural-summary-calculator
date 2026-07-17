@@ -1,11 +1,12 @@
 import type { MetadataRoute } from 'next';
+import { SITE_NAME } from '@/lib/seo';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Computing Program for Rorschach Structural Summary',
-    short_name: 'Rorschach SS',
+    name: SITE_NAME,
+    short_name: SITE_NAME,
     description:
-      'Free online Rorschach Comprehensive System structural summary calculator for clinical practice and training.',
+      'Open-source Exner Rorschach Comprehensive System Structural Summary calculator for clinical practice and training.',
     start_url: '/',
     scope: '/',
     display: 'standalone',

@@ -46,7 +46,7 @@ En interpretación se usa como un indicador complementario de necesidad de cuida
 - `Food = 1` no basta para concluir dependencia intensa.
 - No debe confundirse el contenido `Fd` con una interpretación automática de carencia interpersonal.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `Food` es una variable complementaria.
 - Conviene leerla junto con `SumT_inter`, `COP`, `ISO_Index` y `CDI`.
@@ -66,7 +66,7 @@ En interpretación se usa como un indicador complementario de necesidad de cuida
 - [[Interpretación/Interpersonal] Isolation Index](ref://result-interpretation/lower-section/interpersonal/ISO_Index)
 - [[Codificación/Contenido] Fd](ref://scoring-input/contents/Fd)
 - [[Interpretación/Core] SumT](ref://result-interpretation/lower-section/core/SumT)
-- [[Interpretación/Special Indices] CDI](ref://result-interpretation/special-indices/CDI)
+- [[Interpretación/Índices Especiales] CDI](ref://result-interpretation/special-indices/CDI)
 
 ## Nota de fundamento
 

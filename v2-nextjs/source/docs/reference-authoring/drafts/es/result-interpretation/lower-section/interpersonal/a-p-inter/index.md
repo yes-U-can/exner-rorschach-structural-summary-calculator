@@ -48,7 +48,7 @@ En esta zona ayuda a estimar si la persona imagina el vínculo desde una posici�
 - Predominio pasivo no equivale automáticamente a pasividad clínica patológica.
 - Predominio activo no equivale automáticamente a autonomía sana; con `AG` alto puede volverse más controlador o agresivo.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `a:p` solo muestra una dirección del rol relacional.
 - Conviene leerlo junto con `Ma:Mp`, `COP`, `AG`, `SumT_inter` y `M`.

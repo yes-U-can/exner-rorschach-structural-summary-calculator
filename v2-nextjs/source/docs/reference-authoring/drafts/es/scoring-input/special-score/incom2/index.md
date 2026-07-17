@@ -34,7 +34,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/spec
 
 ## Definición central
 
-`INCOM2` es un special score de nivel 2 para combinaciones incongruentes claramente más graves y extrañas que `INCOM1`.
+`INCOM2` es un código especial de nivel 2 para combinaciones incongruentes claramente más graves y extrañas que `INCOM1`.
 Se usa cuando la unión entre partes o cualidades resulta marcadamente inverosímil o ilógica dentro de la respuesta.
 
 ## Condiciones de aplicación
@@ -53,7 +53,7 @@ Se usa cuando la unión entre partes o cualidades resulta marcadamente inverosí
 
 ## Referencias cruzadas
 
-- [[Codificación/Puntuaciones especiales] Special Scores](ref://scoring-input/special-score)
+- [[Codificación/Puntuaciones especiales] Códigos Especiales](ref://scoring-input/special-score)
 - [[Codificación/Puntuaciones especiales] INCOM1](ref://scoring-input/special-score/INCOM1)
 - [[Codificación/Puntuaciones especiales] FABCOM2](ref://scoring-input/special-score/FABCOM2)
 - [[Codificación/Puntuaciones especiales] CONTAM](ref://scoring-input/special-score/CONTAM)

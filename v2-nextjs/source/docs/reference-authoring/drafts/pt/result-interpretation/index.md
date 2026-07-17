@@ -40,7 +40,7 @@ Ele não explica como codificar uma resposta isolada; ele explica como ler, em c
 - O caminho habitual de leitura se organiza por `upper section`, `lower section` e `special índices`.
 - Uma variável isolada raramente basta; a leitura mais segura depende de padrões e combinações.
 - Quando necessário, a interpretação estrutural deve ser conferida com a sequência das respostas e com o conteúdo.
-- As versões por locale permanecem separadas porque a ênfase clínica e a estrutura de hiperlinks podem mudar conforme a língua e a cultura.
+- A interpretação clínica deve considerar o contexto linguístico e cultural, preservando as mesmas variáveis do Sistema Compreensivo.
 
 ## Cuidados e diferenciação
 

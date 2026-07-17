@@ -52,9 +52,9 @@ En esta zona se revisan juntos `a:p`, `Ma:Mp`, `2AB+Art+Ay`, `MOR`, `Sum6`, `Lv2
 - Una variable aislada ligeramente elevada no basta para concluir distorsión ideacional importante.
 - Cuando `M` es muy escaso, algunos cocientes o contrastes pierden estabilidad.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
-- `Ideación` describe como se orienta y se organiza el pensamiento, pero no explica por sí sola la fuente exacta del problema.
+- `Ideación` describe cómo se orienta y se organiza el pensamiento, pero no explica por sí sola la fuente exacta del problema.
 - Conviene leerla junto con `Mediation`, `Processing`, `Core` y, cuando corresponda, `PTI` o `SCON`.
 
 ## Variables para revisar juntas

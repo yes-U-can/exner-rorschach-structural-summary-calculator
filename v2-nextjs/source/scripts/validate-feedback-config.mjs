@@ -7,7 +7,13 @@ config({ path: '.env.local' });
 const enabled = process.env.NEXT_PUBLIC_AI_FEEDBACK_ENABLED === '1';
 const feedbackUrl = process.env.AI_FEEDBACK_DATABASE_URL?.trim() ?? '';
 const edgeRateLimitReady = process.env.AI_FEEDBACK_EDGE_RATE_LIMIT_READY === '1';
-const isVercelBuild = process.env.VERCEL === '1';
+const isContinuousIntegration = ['1', 'true'].includes(
+  process.env.CI?.trim().toLowerCase() ?? '',
+);
+const isVercelBuild =
+  process.env.VERCEL === '1' &&
+  (process.env.VERCEL_ENV === 'production' || process.env.VERCEL_ENV === 'preview') &&
+  isContinuousIntegration;
 
 function databaseIdentity(rawUrl, variableName) {
   let parsed;

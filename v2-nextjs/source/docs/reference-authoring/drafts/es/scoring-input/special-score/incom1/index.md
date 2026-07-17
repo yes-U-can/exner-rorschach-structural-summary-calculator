@@ -33,7 +33,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/spec
 
 ## Definición central
 
-`INCOM1` es un special score de nivel 1 para combinaciones incongruentes dentro de una misma respuesta.
+`INCOM1` es un código especial de nivel 1 para combinaciones incongruentes dentro de una misma respuesta.
 Se usa cuando los elementos unidos no encajan bien entre si, pero la extrañeza todavía no alcanza el grado más grave de `INCOM2`.
 
 ## Condiciones de aplicación
@@ -52,7 +52,7 @@ Se usa cuando los elementos unidos no encajan bien entre si, pero la extrañeza 
 
 ## Referencias cruzadas
 
-- [[Codificación/Puntuaciones especiales] Special Scores](ref://scoring-input/special-score)
+- [[Codificación/Puntuaciones especiales] Códigos Especiales](ref://scoring-input/special-score)
 - [[Codificación/Puntuaciones especiales] INCOM2](ref://scoring-input/special-score/INCOM2)
 - [[Codificación/Puntuaciones especiales] FABCOM1](ref://scoring-input/special-score/FABCOM1)
 - [[Codificación/Puntuaciones especiales] CONTAM](ref://scoring-input/special-score/CONTAM)

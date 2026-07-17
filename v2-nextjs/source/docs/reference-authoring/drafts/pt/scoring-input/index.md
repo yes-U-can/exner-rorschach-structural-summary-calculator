@@ -46,7 +46,7 @@ Esta página não interpreta variáveis do sumário estrutural; ela organiza as 
 
 - A codificação e feita resposta por resposta, na ordem real do protocolo.
 - Para cada resposta, costuma ser mais seguro verificar `location`, `DQ`, `determinants`, `FQ`, `content` é códigos suplementares numa sequência consistente.
-- Quando necessário, `Pair`, `Popular`, `Z`, `GHR/PHR` e `Special Scores` também são acrescentados.
+- Quando necessário, `Pair`, `Popular`, `Z`, `GHR/PHR` e `Códigos Especiais` também são acrescentados.
 - As decisões de codificação devem vir da resposta mais o inquérito relevante, não de uma impressão clínica global posterior.
 - O objetivo desta fase e registrar cada resposta em símbolos com precisão suficiente para sustentar o sumário estrutural.
 
@@ -72,7 +72,7 @@ Esta página não interpreta variáveis do sumário estrutural; ela organiza as 
 - [[Codificação/Popular] Popular](ref://scoring-input/popular)
 - [[Codificação/Z] Z](ref://scoring-input/z)
 - [[Codificação/GHR-PHR] GHR/PHR](ref://scoring-input/gphr)
-- [[Codificação/Scores Especiais] Special Scores](ref://scoring-input/special-score)
+- [[Codificação/Códigos Especiais] Códigos Especiais](ref://scoring-input/special-score)
 
 ## Nota de base
 

@@ -34,7 +34,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretat
 
 ## Definición central
 
-`Afr` compara las respuestas dadas a las laminas VIII, IX y X con las respuestas dadas a las laminas I a VII.
+`Afr` compara las respuestas dadas a las láminas VIII, IX y X con las respuestas dadas a las láminas I a VII.
 En interpretación, se usa para estimar cuánto se acerca o se retira la persona frente a estímulos con mayor tono afectivo o cromático.
 
 ## Puntos de interpretación
@@ -48,9 +48,9 @@ En interpretación, se usa para estimar cuánto se acerca o se retira la persona
 
 - Si el número total de respuestas es bajo, la proporción puede oscilar demasiado.
 - Un `Afr` alto no implica por sí solo buena salud afectiva, ni un `Afr` bajo significa necesariamente evitación patológica.
-- También conviene mirar si hubo variaciones de administración o de productividad entre laminas.
+- También conviene mirar si hubo variaciones de administración o de productividad entre láminas.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `Afr` describe receptividad relativa ante estímulos afectivos, pero no explica por sí solo la forma de regulación emocional.
 - Debe leerse junto con `FC:CF+C`, `Blends:R`, `SumC / WSumC` y `Lambda`.
@@ -69,8 +69,8 @@ En interpretación, se usa para estimar cuánto se acerca o se retira la persona
 - [[Interpretación/Afecto] FC:CF+C](ref://result-interpretation/lower-section/affect/FC_CF_C)
 - [[Interpretación/Afecto] Blends:R](ref://result-interpretation/lower-section/affect/Blends_R)
 - [[Interpretación/Core] Lambda](ref://result-interpretation/lower-section/core/Lambda)
-- [[Interpretación/Special Indices] DEPI](ref://result-interpretation/special-indices/DEPI)
-- [[Interpretación/Special Indices] CDI](ref://result-interpretation/special-indices/CDI)
+- [[Interpretación/Índices Especiales] DEPI](ref://result-interpretation/special-indices/DEPI)
+- [[Interpretación/Índices Especiales] CDI](ref://result-interpretation/special-indices/CDI)
 - [[Codificación/Card] VIII](ref://scoring-input/card/VIII)
 - [[Codificación/Card] IX](ref://scoring-input/card/IX)
 - [[Codificación/Card] X](ref://scoring-input/card/X)

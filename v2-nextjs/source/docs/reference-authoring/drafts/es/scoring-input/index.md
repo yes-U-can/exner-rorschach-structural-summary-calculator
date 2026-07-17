@@ -48,15 +48,15 @@ Esta página no calcula variables interpretativas; organiza el mapa de familias 
 
 - La codificación se hace respuesta por respuesta, siguiendo el orden real del protocolo.
 - En cada respuesta conviene revisar primero localización, DQ, determinantes, FQ, contenido y códigos complementarios.
-- Si corresponde, también se agregan `Pair`, `Popular`, `Z`, `GHR/PHR` y `Special Scores`.
+- Si corresponde, también se agregan `Pair`, `Popular`, `Z`, `GHR/PHR` y `Códigos Especiales`.
 - La información usada para codificar debe venir de la respuesta y de la indagación pertinente, no de una impresión general posterior.
 - El objetivo de esta fase es dejar cada respuesta registrada en símbolos de manera suficientemente precisa como para poder construir después el resumen estructural.
 
 ## Precauciones y distinciones
 
 - Codificar no es lo mismo que interpretar.
-- En esta fase importa más la descripción exacta del response que la explicación clínica amplia.
-- La tarjeta o el contexto pueden orientar, pero el código siempre se decide por la forma concreta de la respuesta.
+- En esta fase importa más la descripción exacta de la respuesta que la explicación clínica amplia.
+- La lámina o el contexto pueden orientar, pero el código siempre se decide por la forma concreta de la respuesta.
 - El mismo signo puede significar cosas distintas si cambia el contexto.
   - Por ejemplo, `Card V` no es el determinante `V`.
   - Del mismo modo, `DQ +` no es `FQ +`.
@@ -64,7 +64,7 @@ Esta página no calcula variables interpretativas; organiza el mapa de familias 
 ## Referencias cruzadas
 
 - [[Codificación] score](ref://scoring-input/score)
-- [[Codificación/Tarjetas] Card](ref://scoring-input/card)
+- [[Codificación/Láminas] Card](ref://scoring-input/card)
 - [[Codificación/Localización] Location](ref://scoring-input/location)
 - [[Codificación/DQ] DQ](ref://scoring-input/dq)
 - [[Codificación/Determinantes] Determinants](ref://scoring-input/determinants)
@@ -74,7 +74,7 @@ Esta página no calcula variables interpretativas; organiza el mapa de familias 
 - [[Codificación/Popular] Popular](ref://scoring-input/popular)
 - [[Codificación/Z] Z](ref://scoring-input/z)
 - [[Codificación/GHR-PHR] GHR/PHR](ref://scoring-input/gphr)
-- [[Codificación/Puntuaciones especiales] Special Scores](ref://scoring-input/special-score)
+- [[Codificación/Puntuaciones especiales] Códigos Especiales](ref://scoring-input/special-score)
 
 ## Nota de fundamento
 

@@ -47,7 +47,7 @@ Se interpreta como una señal mixta: hay esfuerzo integrativo, aunque la base es
 - Si `DQv/+` aparece con buena calidad formal y sin exceso de vaguedad, puede reflejar ensayo de complejidad más que desorganización.
 - No se confunde con `DQ+`.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - Su significado depende del equilibrio entre `DQ+`, `DQo` y `DQv`.
 - Conviene revisar también el procesamiento general del protocolo.

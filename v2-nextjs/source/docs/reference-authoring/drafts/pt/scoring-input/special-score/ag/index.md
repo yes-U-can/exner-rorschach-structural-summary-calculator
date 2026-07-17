@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/special-score/AG"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/special-score/AG"
-displayTitle: "[Codificação/Escores Especiais] AG"
+displayTitle: "[Codificação/Códigos Especiais] AG"
 aliases:
   - "AG"
   - "movimento agressivo"
@@ -23,7 +23,7 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-special-score-opening-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificação/Escores Especiais] AG
+# Nome do documento: [Codificação/Códigos Especiais] AG
 
 ## Apelidos e busca
 
@@ -51,8 +51,8 @@ O que importa e agressão como ato em curso, não apenas uma qualidade hostil va
 
 ## Referências cruzadas
 
-- [[Codificação/Escores Especiais] Special Scores](ref://scoring-input/special-score)
-- [[Codificação/Escores Especiais] COP](ref://scoring-input/special-score/COP)
+- [[Codificação/Códigos Especiais] Códigos Especiais](ref://scoring-input/special-score)
+- [[Codificação/Códigos Especiais] COP](ref://scoring-input/special-score/COP)
 - [[Codificação/Determinantes] M](ref://scoring-input/determinants/M)
 - [[Codificação/Determinantes] FM](ref://scoring-input/determinants/FM)
 - [[Codificação/Determinantes] m](ref://scoring-input/determinants/m)

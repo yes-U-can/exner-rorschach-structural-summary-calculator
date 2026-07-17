@@ -31,7 +31,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/spec
 
 ## Definición central
 
-`FABCOM1` es un special score de nivel 1 para relaciones fabulas o inverosímiles entre elementos de una respuesta.
+`FABCOM1` es un código especial de nivel 1 para relaciones fabulas o inverosímiles entre elementos de una respuesta.
 No describe una sola combinación incongruente dentro de un objeto, sino una relación distorsionada entre ideas, acciones o partes de la escena.
 
 ## Condiciones de aplicación
@@ -46,11 +46,11 @@ No describe una sola combinación incongruente dentro de un objeto, sino una rel
 - Si la rareza principal es una combinación incongruente dentro de una sola unidad perceptiva, revisa antes `INCOM1`.
 - Si dos perceptos incompatibles aparecen fundidos como una misma percepción, revisa `CONTAM`.
 - `FABCOM1` no se usa solo porque una respuesta parezca fantástica o imaginativa.
-- La clave es que la relación entre elementos quede forzada o poco plausible dentro del response.
+- La clave es que la relación entre elementos resulte forzada o poco plausible dentro de la respuesta.
 
 ## Referencias cruzadas
 
-- [[Codificación/Puntuaciones especiales] Special Scores](ref://scoring-input/special-score)
+- [[Codificación/Puntuaciones especiales] Códigos Especiales](ref://scoring-input/special-score)
 - [[Codificación/Puntuaciones especiales] FABCOM2](ref://scoring-input/special-score/FABCOM2)
 - [[Codificación/Puntuaciones especiales] INCOM1](ref://scoring-input/special-score/INCOM1)
 - [[Codificación/Puntuaciones especiales] CONTAM](ref://scoring-input/special-score/CONTAM)

@@ -18,6 +18,7 @@ model ReferenceChunkEmbedding {
   provider       EmbeddingProvider
   embeddingModel String
   dimensions     Int
+  contentHash    String                @default("")
   vector         Unsupported("vector")
   createdAt      DateTime              @default(now())
   updatedAt      DateTime              @updatedAt

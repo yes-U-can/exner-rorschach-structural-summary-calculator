@@ -1,4 +1,4 @@
-﻿---
+---
 canonicalRoute: "result-interpretation/lower-section/processing/W_M"
 locale: "pt"
 docKind: "interpretation-entry"

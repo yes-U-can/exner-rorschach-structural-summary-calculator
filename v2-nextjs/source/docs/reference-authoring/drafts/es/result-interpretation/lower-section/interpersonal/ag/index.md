@@ -32,7 +32,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretat
 
 ## Definición central
 
-`AG` muestra con que frecuencia el protocolo representa escenas interpersonales en clave agresiva, hostil o de confrontación.
+`AG` muestra con qué frecuencia el protocolo representa escenas interpersonales en clave agresiva, hostil o de confrontación.
 En interpretación sirve para leer si el vínculo se organiza con mayor facilidad alrededor del conflicto o la amenaza.
 
 ## Puntos de interpretación
@@ -48,7 +48,7 @@ En interpretación sirve para leer si el vínculo se organiza con mayor facilida
 - El valor cambia de sentido si coexiste con `MOR`, `S_aff` o `PHR`.
 - Conviene revisar si la agresión aparece como defensa, expectativa o simple tonalidad imaginada.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `AG` es solo una pieza del estilo interpersonal.
 - Conviene leerlo junto con `COP`, `ISO_Index`, `SumT_inter`, `MOR` y `PHR`.
@@ -66,7 +66,7 @@ En interpretación sirve para leer si el vínculo se organiza con mayor facilida
 - [[Interpretación/Lower Section/Interpersonal] Interpersonal](ref://result-interpretation/lower-section/interpersonal)
 - [[Interpretación/Interpersonal] COP](ref://result-interpretation/lower-section/interpersonal/COP)
 - [[Interpretación/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
-- [[Codificación/Special Score] AG](ref://scoring-input/special-score/AG)
+- [[Codificación/Código Especial] AG](ref://scoring-input/special-score/AG)
 - [[Codificación/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
 - [[Interpretación/Afecto] S](ref://result-interpretation/lower-section/affect/S_aff)
 - [[Interpretación/Ideación] MOR](ref://result-interpretation/lower-section/ideation/MOR)

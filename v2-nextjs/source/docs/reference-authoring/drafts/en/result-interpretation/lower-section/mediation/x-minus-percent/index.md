@@ -12,7 +12,7 @@ relatedRoutes:
   - "result-interpretation/lower-section/mediation/S_minus"
   - "result-interpretation/lower-section/mediation/X_plus_percent"
   - "result-interpretation/lower-section/mediation/Xu_percent"
-  - "scoring-input/fq/minus"
+  - "scoring-input/fq/-"
   - "result-interpretation/lower-section/ideation/WSum6"
   - "result-interpretation/special-indices/PTI"
 authorityPolicy: "curated-internal-reference"

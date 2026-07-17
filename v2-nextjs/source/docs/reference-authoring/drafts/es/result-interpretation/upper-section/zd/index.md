@@ -46,7 +46,7 @@ Es el indicador más directo de eficiencia organizativa dentro de la familia `Z`
 - Un valor negativo no se traduce automáticamente en deterioro.
 - El significado mejora cuando se revisa junto con `Lambda`, `R`, `Zf` y `ZSum`.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `Zd` es fuerte como señal de estilo de procesamiento, pero sigue siendo una inferencia de patrón.
 - Debe integrarse con `processing` antes de cerrar una conclusión.

@@ -379,8 +379,8 @@
       "query": "S-CON 지수는 뭘 봐?",
       "expectedTopRoute": "result-interpretation/special-indices/SCON",
       "expectedIncludedRoutes": [
-        "result-interpretation/lower-section/core/SumV",
-        "result-interpretation/lower-section/core/SumY"
+        "result-interpretation/lower-section/affect/Blends_R",
+        "result-interpretation/lower-section/selfPerception/_3r_2_R"
       ]
     },
     {

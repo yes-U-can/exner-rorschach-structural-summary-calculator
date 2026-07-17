@@ -24,43 +24,43 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-core-burden-qualities-2026-03-10.md"
 ---
 
-# Document Name: [Interpretation/Core] m
+# [Interpretation/Core] m
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - m
 - inanimate movement total
 - total inanimate movement
 - 無生物運動総数
 
-## Core Definition
+## 中核的定義
 
-`m` は無生物運動反応の総数である。
-`core` では、外から押される感じ、反応的緊張、制御しにくい状況的な心配を示す指標として読まれやすい。
+`m` は無生物運動反応の総数です。
+`core` では、外から押される感じ、反応的緊張、制御しにくい状況的な心配を示す指標として読まれやすいです。
 
-## Interpretation Points
+## 解釈の要点
 
-- `m = 0` は、この種の反応的緊張がプロトコルに強く表れていないことを示しやすい。
-- `m` が高い場合、圧迫感、無力感、侵入的な心配、強い状況負荷と結びつきやすい。
-- `m` は [`FM`](ref://result-interpretation/lower-section/core/FM) よりも、反応的で統合度の低い緊張を帯びやすい。
-- `m` は [`AdjEs`](ref://result-interpretation/lower-section/core/AdjEs) に関わり、最近のストレスで [`D`](ref://result-interpretation/lower-section/core/D) が下がる理由を説明する助けになる。
+- `m = 0` は、この種の反応的緊張がプロトコルに強く表れていないことを示しやすいです。
+- `m` が高い場合、圧迫感、無力感、侵入的な心配、強い状況負荷と結びつきやすいです。
+- `m` は [`FM`](ref://result-interpretation/lower-section/core/FM) よりも、反応的で統合度の低い緊張を帯びやすいです。
+- `m` は [`AdjEs`](ref://result-interpretation/lower-section/core/AdjEs) に関わり、最近のストレスで [`D`](ref://result-interpretation/lower-section/core/D) が下がる理由を説明する助けになります。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
-- `m` が高いだけで、全面的な受け身や特定の障害を断定してはいけない。
-- 状況的負荷とより持続的な負荷を分けるには、[`D`](ref://result-interpretation/lower-section/core/D) と [`AdjD`](ref://result-interpretation/lower-section/core/AdjD) の比較が重要である。
-- `m` は単独で読むのではなく、[`Y`](ref://scoring-input/determinants/Y) や [`es`](ref://result-interpretation/lower-section/core/es) と一緒に見る必要がある。
+- `m` が高いだけで、全面的な受け身や特定の障害を断定してはいけません。
+- 状況的負荷とより持続的な負荷を分けるには、[`D`](ref://result-interpretation/lower-section/core/D) と [`AdjD`](ref://result-interpretation/lower-section/core/AdjD) の比較が重要です。
+- `m` は単独で読むのではなく、[`Y`](ref://scoring-input/determinants/Y) や [`es`](ref://result-interpretation/lower-section/core/es) と一緒に見る必要があります。
 
-## Cross References
+## 相互参照
 
-- [[Interpretation/Lower Section/Core] Core](ref://result-interpretation/lower-section/core)
-- [[Interpretation/Core] eb](ref://result-interpretation/lower-section/core/eb)
-- [[Interpretation/Core] es](ref://result-interpretation/lower-section/core/es)
-- [[Interpretation/Core] D](ref://result-interpretation/lower-section/core/D)
-- [[Interpretation/Core] AdjEs](ref://result-interpretation/lower-section/core/AdjEs)
-- [[Interpretation/Core] AdjD](ref://result-interpretation/lower-section/core/AdjD)
-- [[Interpretation/Core] FM](ref://result-interpretation/lower-section/core/FM)
-- [[Coding/Determinants] m](ref://scoring-input/determinants/m)
+- [[解釈/下段/Core] Core](ref://result-interpretation/lower-section/core)
+- [[解釈/Core] eb](ref://result-interpretation/lower-section/core/eb)
+- [[解釈/Core] es](ref://result-interpretation/lower-section/core/es)
+- [[解釈/Core] D](ref://result-interpretation/lower-section/core/D)
+- [[解釈/Core] AdjEs](ref://result-interpretation/lower-section/core/AdjEs)
+- [[解釈/Core] AdjD](ref://result-interpretation/lower-section/core/AdjD)
+- [[解釈/Core] FM](ref://result-interpretation/lower-section/core/FM)
+- [[Coding/決定因] m](ref://scoring-input/determinants/m)
 
-## Evidence Note
-- Detailed source comparison is stored in internal provenance notes.
+## 根拠メモ
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

@@ -54,18 +54,13 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `AdjEs` 하나만으로 현재 distress 수준을 판단하지 않는다.
 - `es`, `D`, `AdjD`, `m`, `Y`를 함께 놓고 비교해야 의미가 생긴다.
 
-## 근거 메모
-
+## 함께 볼 변수
 - `es`
 - `D`
 - `AdjD`
 - `EA`
 - `m`
 - `SumY`
-
-## 근거 메모
-
-이 문서는 서비스 운영용 참조 코퍼스로 정리된 런타임 문서입니다.
 
 ## 근거 메모
 

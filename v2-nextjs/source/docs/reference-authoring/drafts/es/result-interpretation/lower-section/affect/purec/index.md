@@ -48,7 +48,7 @@ En interpretación, se usa como señal de expresión afectiva más directa, meno
 - Debe distinguirse de `CF`, `FC` y `CP`.
 - Si el protocolo ofrece pocas oportunidades de respuestas cromáticas, su ausencia no significa falta de afecto.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `Pure C` muestra inmediatez en la expresión emocional, pero no define por sí solo valencia ni regulación global.
 - Conviene leerlo junto con `FC:CF+C`, `SumC / WSumC`, `CP` y `EB`.

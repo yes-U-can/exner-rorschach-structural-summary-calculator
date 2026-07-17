@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 import { spawn } from 'node:child_process';
 import { mkdirSync, writeFileSync, appendFileSync } from 'node:fs';
-import { dirname, resolve } from 'node:path';
+import { basename, dirname, resolve } from 'node:path';
 import { loadProjectEnv } from './load-project-env.mjs';
+import { classifyRunFailure } from './lib/liveEvalBatch.mjs';
 import { getSourceMetadata } from './lib/sourceMetadata.mjs';
 
 const PRICE_PER_1M_TOKENS = {
@@ -125,6 +126,7 @@ if (!apiKey) {
 }
 
 const outputPath = resolve(args.output);
+const artifactFile = basename(outputPath);
 const source = getSourceMetadata(process.cwd());
 mkdirSync(dirname(outputPath), { recursive: true });
 writeFileSync(
@@ -139,6 +141,7 @@ writeFileSync(
     suite: args.suite,
     budgetUsd: args.budgetUsd,
     ids: args.ids || null,
+    artifactFile,
     source,
   })}\n`,
 );
@@ -204,6 +207,8 @@ for (let round = 1; round <= args.rounds; round += 1) {
       fixtureCount: events.length,
       runCostUsd: Number(runCostUsd.toFixed(8)),
       totalCostUsd: Number(totalCostUsd.toFixed(8)),
+      artifactFile,
+      failureReason: classifyRunFailure(result, events),
       source,
     };
     appendFileSync(outputPath, `${JSON.stringify(runRecord)}\n`);
@@ -227,6 +232,7 @@ const summary = {
   failedRuns,
   totalCostUsd: Number(totalCostUsd.toFixed(8)),
   issueCounts: Object.fromEntries([...issueCounts.entries()].sort()),
+  artifactFile,
   source,
 };
 appendFileSync(outputPath, `${JSON.stringify(summary)}\n`);

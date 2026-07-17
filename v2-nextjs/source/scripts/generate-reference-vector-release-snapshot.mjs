@@ -81,6 +81,60 @@ async function queryProviderTotals(pool) {
   return result.rows;
 }
 
+async function queryEmbeddingContentRows(pool) {
+  const result = await pool.query(
+    `
+      SELECT
+        "provider"::text AS provider,
+        "locale",
+        "chunkId",
+        "contentHash"
+      FROM "ReferenceChunkEmbedding"
+      ORDER BY "provider", "locale", "chunkId"
+    `,
+  );
+  return result.rows;
+}
+
+function buildContentIntegrityByLocale(chunksArtifact, rows) {
+  const integrity = new Map();
+  const rowsByKey = new Map();
+
+  for (const row of rows) {
+    const key = `${row.provider}:${row.locale}`;
+    const localeRows = rowsByKey.get(key) ?? [];
+    localeRows.push(row);
+    rowsByKey.set(key, localeRows);
+  }
+
+  for (const provider of PROVIDERS) {
+    for (const locale of chunksArtifact.locales ?? []) {
+      const expectedChunks = chunksArtifact.chunksByLocale?.[locale] ?? [];
+      const expectedHashes = new Map(
+        expectedChunks.map((chunk) => [chunk.chunkId, chunk.contentHash]),
+      );
+      const localeRows = rowsByKey.get(`${provider}:${locale}`) ?? [];
+      const matchedChunkIds = new Set();
+      let mismatchedRows = 0;
+
+      for (const row of localeRows) {
+        if (expectedHashes.get(row.chunkId) === row.contentHash && row.contentHash) {
+          matchedChunkIds.add(row.chunkId);
+        } else {
+          mismatchedRows += 1;
+        }
+      }
+
+      integrity.set(`${provider}:${locale}`, {
+        contentHashMismatchCount:
+          mismatchedRows + Math.max(0, expectedHashes.size - matchedChunkIds.size),
+      });
+    }
+  }
+
+  return integrity;
+}
+
 function buildProviderAudit(totalRows) {
   const expectedProviders = new Set(PROVIDERS);
   const unexpectedProviders = totalRows
@@ -127,11 +181,13 @@ async function main() {
     let embeddingRows = [];
     let providerRows = [];
     let totalRows = [];
+    let embeddingContentRows = [];
     try {
-      [embeddingRows, providerRows, totalRows] = await Promise.all([
+      [embeddingRows, providerRows, totalRows, embeddingContentRows] = await Promise.all([
         queryEmbeddingRows(pool, corpusGeneratedAt),
         queryProviderRows(pool),
         queryProviderTotals(pool),
+        queryEmbeddingContentRows(pool),
       ]);
     } catch (error) {
       if (error && typeof error === 'object' && 'code' in error && error.code === '42P01') {
@@ -146,6 +202,10 @@ async function main() {
     const providerInfo = new Map(providerRows.map((row) => [row.provider, row]));
     const providerTotals = new Map(totalRows.map((row) => [row.provider, row.total_embeddings]));
     const providerAudit = buildProviderAudit(totalRows);
+    const contentIntegrityByLocale = buildContentIntegrityByLocale(
+      chunksArtifact,
+      embeddingContentRows,
+    );
     const localeInfo = new Map(
       embeddingRows.map((row) => [`${row.provider}:${row.locale}`, row]),
     );
@@ -162,10 +222,14 @@ async function main() {
             const maxDimensions = localeRow ? Number(localeRow.max_dimensions ?? 0) : 0;
             const dimensions = embeddedChunkCount > 0 && minDimensions === maxDimensions ? maxDimensions : null;
             const staleEmbeddingCount = Number(localeRow?.stale_count ?? 0);
+            const contentHashMismatchCount = Number(
+              contentIntegrityByLocale.get(`${provider}:${locale}`)?.contentHashMismatchCount ?? chunkCount,
+            );
             const ready =
               chunkCount > 0 &&
               embeddedChunkCount === chunkCount &&
               staleEmbeddingCount === 0 &&
+              contentHashMismatchCount === 0 &&
               Number.isFinite(dimensions) &&
               dimensions !== null &&
               dimensions > 0;
@@ -178,6 +242,7 @@ async function main() {
                 embeddedChunkCount,
                 dimensions,
                 staleEmbeddingCount,
+                contentHashMismatchCount,
                 ready,
                 latestRefreshedAt: localeRow?.latest_refreshed_at
                   ? new Date(localeRow.latest_refreshed_at).toISOString()

@@ -1,4 +1,4 @@
-﻿---
+---
 canonicalRoute: "scoring-input/contents/Bt"
 locale: "es"
 docKind: "coding-entry"
@@ -44,7 +44,7 @@ Incluye plantas, flores, arboles, hojas o partes vegetales reconocidas como tale
 
 - `Bt` es contenido botánico, no un juicio sobre color, textura o forma.
 - No se debe usar solo porque algo parezca orgánico; tiene que percibirse específicamente como planta.
-- Algunas fuentes escriben `BT`, pero el código canónico del corpus se mantiene como `Bt`.
+- Algunas fuentes escriben `BT`; esta aplicación utiliza el código canónico `Bt`.
 
 ## Referencias cruzadas
 

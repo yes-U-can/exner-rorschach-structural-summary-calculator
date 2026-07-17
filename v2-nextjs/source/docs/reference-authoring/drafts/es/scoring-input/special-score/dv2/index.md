@@ -49,7 +49,7 @@ La formulación aparece notablemente distorsionada, impropia o extraña en un ni
 
 ## Referencias cruzadas
 
-- [[Codificación/Puntuaciones especiales] Special Scores](ref://scoring-input/special-score)
+- [[Codificación/Puntuaciones especiales] Códigos Especiales](ref://scoring-input/special-score)
 - [[Codificación/Puntuaciones especiales] DV1](ref://scoring-input/special-score/DV1)
 - [[Codificación/Puntuaciones especiales] DR2](ref://scoring-input/special-score/DR2)
 - [[Interpretación/Ideation] Sum6](ref://result-interpretation/lower-section/ideation/Sum6)

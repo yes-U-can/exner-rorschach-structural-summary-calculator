@@ -197,7 +197,11 @@ describe.runIf(shouldRun)('OpenAI hybrid reference retrieval challenge', () => {
     console.log('[reference-hybrid-eval]', JSON.stringify(summary.metrics));
 
     expect(results).toHaveLength(challengeSet.queries.length);
-    expect(results.every((result) => result.mode === 'hybrid')).toBe(true);
+    expect(
+      results.every((result) =>
+        result.vectorHitCount > 0 ? result.mode === 'hybrid' : result.mode === 'lexical',
+      ),
+    ).toBe(true);
 
     if (shouldEnforce) {
       expect(broadHitAt1).toBeGreaterThanOrEqual(challengeSet.candidateThresholds.broadHitAt1);

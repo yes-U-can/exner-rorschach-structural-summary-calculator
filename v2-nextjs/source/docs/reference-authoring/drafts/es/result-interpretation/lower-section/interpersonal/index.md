@@ -38,7 +38,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretat
 
 ## Definición central
 
-`Interpersonal` agrupa las variables que ayudan a leer como la persona imagina, busca, teme o organiza el contacto con otros.
+`Relaciones interpersonales` agrupa las variables que ayudan a leer cómo la persona imagina, busca, teme u organiza el contacto con otras personas.
 En este conjunto se revisan `COP`, `AG`, `a:p`, `Food`, `SumT`, el contenido humano y el aislamiento interpersonal.
 
 ## Puntos de interpretación
@@ -54,7 +54,7 @@ En este conjunto se revisan `COP`, `AG`, `a:p`, `Food`, `SumT`, el contenido hum
 - Una alta frecuencia de contenido humano no equivale automáticamente a vínculos sanos.
 - El estilo interpersonal cambia de sentido según el tono afectivo, la mediación y la ideación.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - Este grupo orienta sobre expectativa y organización del vínculo, no explica por sí solo toda la vida relacional.
 - Conviene integrarlo con `Core`, `Afecto`, `Ideación` y `Self Perception`.

@@ -19,38 +19,38 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
-# Document Name: [コーディング/決定因] Y
+# [コーディング/決定因] Y
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - Y
 - 純拡散陰影
 - pure diffuse shading
 
-## Core Definition
+## 中核的定義
 
-`Y` は、反応が拡散的陰影そのものに依存し、形の支えが十分でないときにつける determinant です。
+`Y` は、反応が拡散的陰影そのものに依存し、形の支えが十分でないときにつける決定因です。
 影、曇り、不定な陰影感が中心で、形は主要基盤になっていません。
 
-## Application Conditions
+## 採点・適用条件
 
-- 拡散陰影が反応の主要基盤になっている。
-- `FY` や `YF` に必要な形の支えが足りない。
-- 不定でぼんやりした陰影質が明確に述べられている。
+- 拡散陰影が反応の主要基盤になっています。
+- `FY` や `YF` に必要な形の支えが足りません。
+- 不定でぼんやりした陰影質が明確に述べられています。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
 - 形の支えがあるなら [`YF`](ref://scoring-input/determinants/YF) や [`FY`](ref://scoring-input/determinants/FY) を再検討します。
 - 奥行きや距離感が中心なら [`V`](ref://scoring-input/determinants/V) 群を見直します。
 - `Y` の意味づけはあとで [`SumY`](ref://result-interpretation/lower-section/core/SumY) で見直します。
 
-## Cross References
+## 相互参照
 
-- [[コーディング/決定因] Determinants](ref://scoring-input/determinants)
+- [[コーディング/決定因] 決定因](ref://scoring-input/determinants)
 - [[コーディング/決定因] FY](ref://scoring-input/determinants/FY)
 - [[コーディング/決定因] YF](ref://scoring-input/determinants/YF)
 - [[解釈/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
 
-## Evidence Note
+## 根拠メモ
 
-- 詳細な出典比較と判断根拠は内部 provenance note に分離してあります。
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

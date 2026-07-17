@@ -58,8 +58,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `EA`는 자원량을 말해 주지만, 현재 요구가 그 자원을 넘어서는지는 `es`, `D`, `AdjD`를 함께 봐야 한다.
 - `EA` 하나만으로 coping deficit, 만성 불안정, 대인관계 실패를 결정하지 않는다.
 
-## 근거 메모
-
+## 함께 볼 변수
 - `R`
 - `Lambda`
 - `EB`
@@ -67,10 +66,6 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `es`
 - `D`
 - `AdjD`
-
-## 근거 메모
-
-이 문서는 서비스 운영용 참조 코퍼스로 정리된 런타임 문서입니다.
 
 ## 근거 메모
 

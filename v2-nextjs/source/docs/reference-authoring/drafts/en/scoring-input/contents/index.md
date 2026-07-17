@@ -68,12 +68,12 @@ They do not explain why it looked that way; that belongs to determinants.
 
 - Content is assigned from the object or class of object named by the person.
 - One response may receive more than one content code if the person truly describes more than one class of object.
-- In the currently authored English set, the human cluster is fixed as [`H`](ref://scoring-input/contents/H), [`(H)`](ref://scoring-input/contents/%28H%29), [`Hd`](ref://scoring-input/contents/Hd), [`(Hd)`](ref://scoring-input/contents/%28Hd%29), and [`Hx`](ref://scoring-input/contents/Hx).
-- The animal and anatomy cluster is also fixed as [`A`](ref://scoring-input/contents/A), [`(A)`](ref://scoring-input/contents/%28A%29), [`Ad`](ref://scoring-input/contents/Ad), [`(Ad)`](ref://scoring-input/contents/%28Ad%29), and [`An`](ref://scoring-input/contents/An).
-- The art/culture/basic nature cluster is now fixed as [`Art`](ref://scoring-input/contents/Art), [`Ay`](ref://scoring-input/contents/Ay), [`Bl`](ref://scoring-input/contents/Bl), and [`Bt`](ref://scoring-input/contents/Bt).
-- The clothing/atmospheric/event cluster is now fixed as [`Cg`](ref://scoring-input/contents/Cg), [`Cl`](ref://scoring-input/contents/Cl), [`Ex`](ref://scoring-input/contents/Ex), and [`Fi`](ref://scoring-input/contents/Fi).
-- The food/map/household cluster is now fixed as [`Fd`](ref://scoring-input/contents/Fd), [`Ge`](ref://scoring-input/contents/Ge), and [`Hh`](ref://scoring-input/contents/Hh).
-- The landscape/nature/science/sexual/X-ray/idiographic cluster is now fixed as [`Ls`](ref://scoring-input/contents/Ls), [`Na`](ref://scoring-input/contents/Na), [`Sc`](ref://scoring-input/contents/Sc), [`Sx`](ref://scoring-input/contents/Sx), [`Xy`](ref://scoring-input/contents/Xy), and [`Id`](ref://scoring-input/contents/Id).
+- Human contents include [`H`](ref://scoring-input/contents/H), [`(H)`](ref://scoring-input/contents/%28H%29), [`Hd`](ref://scoring-input/contents/Hd), [`(Hd)`](ref://scoring-input/contents/%28Hd%29), and [`Hx`](ref://scoring-input/contents/Hx).
+- Animal and anatomy contents include [`A`](ref://scoring-input/contents/A), [`(A)`](ref://scoring-input/contents/%28A%29), [`Ad`](ref://scoring-input/contents/Ad), [`(Ad)`](ref://scoring-input/contents/%28Ad%29), and [`An`](ref://scoring-input/contents/An).
+- Art, cultural-historical, blood, and botanical contents are coded as [`Art`](ref://scoring-input/contents/Art), [`Ay`](ref://scoring-input/contents/Ay), [`Bl`](ref://scoring-input/contents/Bl), and [`Bt`](ref://scoring-input/contents/Bt).
+- Clothing, cloud, explosion, and fire or smoke contents are coded as [`Cg`](ref://scoring-input/contents/Cg), [`Cl`](ref://scoring-input/contents/Cl), [`Ex`](ref://scoring-input/contents/Ex), and [`Fi`](ref://scoring-input/contents/Fi).
+- Food, geography, and household contents are coded as [`Fd`](ref://scoring-input/contents/Fd), [`Ge`](ref://scoring-input/contents/Ge), and [`Hh`](ref://scoring-input/contents/Hh).
+- Landscape, nature, science, sexual, X-ray, and idiographic contents are coded as [`Ls`](ref://scoring-input/contents/Ls), [`Na`](ref://scoring-input/contents/Na), [`Sc`](ref://scoring-input/contents/Sc), [`Sx`](ref://scoring-input/contents/Sx), [`Xy`](ref://scoring-input/contents/Xy), and [`Id`](ref://scoring-input/contents/Id).
 - These content codes later combine with additional decisions such as `GHR/PHR`, `PureH`, or `H ratio`.
 
 ## Cautions / Distinctions

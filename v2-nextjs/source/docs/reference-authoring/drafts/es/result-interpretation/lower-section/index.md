@@ -49,7 +49,7 @@ Si el `Upper Section` funciona como pantalla inicial, el `Lower Section` suele s
 - Los clusters del `Lower Section` se influyen entre si; una lectura aislada aumenta el riesgo de sobregeneralizar.
 - La longitud del protocolo, la defensividad, el contexto cultural y el estrés situacional pueden cambiar el peso de una variable.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - Ningún clúster del `Lower Section` reemplaza la integración total del protocolo.
 - Variables como `Lambda`, `D`, `AdjD`, `SumY`, `MOR` o `PER` pueden parecer separadas en el árbol, pero en uso clínico suelen leerse juntas.

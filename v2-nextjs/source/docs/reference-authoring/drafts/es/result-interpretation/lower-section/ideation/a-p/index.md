@@ -49,7 +49,7 @@ Se usa para estimar si la actividad mental tiende más hacia la iniciativa y la 
 - Un predominio de `p` no significa por sí solo sumisión patológica ni un predominio de `a` significa ajuste saludable.
 - En relaciones interpersonales hay que diferenciar este cociente del `a:p` del dominio interpersonal.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `a:p` indica una dirección de funcionamiento, pero no basta para definir su calidad o adaptatividad.
 - Debe leerse con `Ma:Mp`, `M-`, `Mnone` y con la calidad general de `M`.

@@ -33,7 +33,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretat
 
 ## Definición central
 
-`Afecto` reúne las variables que ayudan a leer como se experimenta, se modula y se expresa la vida emocional en el protocolo.
+`Afecto` reúne las variables que ayudan a leer cómo se experimenta, se modula y se expresa la vida emocional en el protocolo.
 En esta zona se revisan juntas `FC:CF+C`, `Pure C`, `SumC / WSumC`, `Afr`, `S`, `Blends:R` y `CP`.
 
 ## Puntos de interpretación
@@ -49,7 +49,7 @@ En esta zona se revisan juntas `FC:CF+C`, `Pure C`, `SumC / WSumC`, `Afr`, `S`, 
 - Un valor aislado ligeramente alto no basta para concluir descontrol afectivo.
 - Con `R` bajo, varias proporciones se vuelven menos estables.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `Afecto` describe estilo y modulación emocional, pero no basta por sí solo para explicar la causa del malestar.
 - Conviene leerlo junto con `EB`, `Lambda`, `SumCprime`, `SumY` y el contexto interpersonal.

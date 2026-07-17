@@ -62,13 +62,13 @@ provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/cont
 ## Definición central
 
 Los contenidos responden a la pregunta "que es" lo que el sujeto vio en la mancha.
-No explican por que lo vio así; eso pertenece a los determinantes.
+No explican por qué lo vio así; eso pertenece a los determinantes.
 
 ## Condiciones de aplicación
 
 - El contenido se decide según el objeto o la clase de objeto nombrado por el sujeto.
 - Una misma respuesta puede recibir más de un contenido si el sujeto realmente describe más de una clase de objeto.
-- En esta fase, el clúster ya redactado es el humano: [`H`](ref://scoring-input/contents/H), [`(H)`](ref://scoring-input/contents/%28H%29), [`Hd`](ref://scoring-input/contents/Hd), [`(Hd)`](ref://scoring-input/contents/%28Hd%29), [`Hx`](ref://scoring-input/contents/Hx).
+- Los códigos de contenido deben revisarse en sus documentos individuales, incluidos `H`, `(H)`, `Hd`, `(Hd)` y `Hx` para las representaciones humanas.
 - También queda fijado el clúster animal y anatómico básico: [`A`](ref://scoring-input/contents/A), [`(A)`](ref://scoring-input/contents/%28A%29), [`Ad`](ref://scoring-input/contents/Ad), [`(Ad)`](ref://scoring-input/contents/%28Ad%29), [`An`](ref://scoring-input/contents/An).
 - Ahora también queda abierto un clúster cultural y natural básico: [`Art`](ref://scoring-input/contents/Art), [`Ay`](ref://scoring-input/contents/Ay), [`Bl`](ref://scoring-input/contents/Bl), [`Bt`](ref://scoring-input/contents/Bt).
 - Y se suma un grupo de objetos portables o atmosféricos: [`Cg`](ref://scoring-input/contents/Cg), [`Cl`](ref://scoring-input/contents/Cl), [`Ex`](ref://scoring-input/contents/Ex), [`Fi`](ref://scoring-input/contents/Fi).

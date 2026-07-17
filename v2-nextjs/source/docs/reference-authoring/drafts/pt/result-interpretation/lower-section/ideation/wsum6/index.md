@@ -30,7 +30,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-ideation-wsum6-mmi
 
 ## Definição central
 
-`WSum6` é a soma ponderada dos seis escores especiais ligados ao pensamento.
+`WSum6` é a soma ponderada dos seis códigos especiais ligados ao pensamento.
 Ele não mostra apenas quantas peculiaridades aparecem, mas também quanto peso clínico elas carregam conforme a gravidade.
 
 ## Pontos de interpretação
@@ -42,7 +42,7 @@ Ele não mostra apenas quantas peculiaridades aparecem, mas também quanto peso 
 
 ## Cuidados e diferenciação
 
-- `WSum6` não substitui a verificação de quais escores especiais específicos estão presentes.
+- `WSum6` não substitui a verificação de quais códigos especiais específicos estão presentes.
 - É importante ver se o aumento vem de `Lv2`, `CONTAM` ou de vários indicadores menores acumulados.
 - Valor alto sozinho não fecha diagnóstico nem define automaticamente transtorno do pensamento.
 

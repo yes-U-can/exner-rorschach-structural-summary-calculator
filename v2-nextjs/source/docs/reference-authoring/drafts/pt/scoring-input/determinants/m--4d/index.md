@@ -53,8 +53,8 @@ Também vale para animais ou figuras fictícias quando estão agindo de modo gen
 - [[Codificação/Determinantes] Determinantes](ref://scoring-input/determinants)
 - [[Codificação/Determinantes] FM](ref://scoring-input/determinants/FM)
 - [[Codificação/Determinantes] m](ref://scoring-input/determinants/m)
-- [[Codificação/Scores Especiais] COP](ref://scoring-input/special-score/COP)
-- [[Codificação/Scores Especiais] AG](ref://scoring-input/special-score/AG)
+- [[Codificação/Códigos Especiais] COP](ref://scoring-input/special-score/COP)
+- [[Codificação/Códigos Especiais] AG](ref://scoring-input/special-score/AG)
 - [[Interpretação/Ideation] M-](ref://result-interpretation/lower-section/ideation/M_minus)
 
 ## Nota de base

@@ -53,7 +53,7 @@ Costuma ser revisto como possível sinal de oposição, autoafirmacao defensiva,
 - [[Interpretação/Seção Superior] S](ref://result-interpretation/upper-section/S)
 - [[Interpretação/Mediação] S-%](ref://result-interpretation/lower-section/mediation/S_minus)
 - [[Codificação/Localização] S](ref://scoring-input/location/S)
-- [[Codificação/Special Score] AG](ref://scoring-input/special-score/AG)
+- [[Codificação/Código Especial] AG](ref://scoring-input/special-score/AG)
 - [[Interpretação/Índices Especiais] DEPI](ref://result-interpretation/special-indices/DEPI)
 - [[Interpretação/Índices Especiais] HVI](ref://result-interpretation/special-indices/HVI)
 

@@ -31,7 +31,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretat
 ## Definición central
 
 `ZSum` es la suma de los pesos asignados a las respuestas con puntuación `Z`.
-No solo cuenta cuántas veces se intento organizar el campo, sino cuánto esfuerzo organizativo total se invirtió.
+No solo cuenta cuántas veces se intentó organizar el campo, sino cuánto esfuerzo organizativo total se invirtió.
 
 ## Puntos de interpretación
 
@@ -46,7 +46,7 @@ No solo cuenta cuántas veces se intento organizar el campo, sino cuánto esfuer
 - Un `ZSum` bajo no debe leerse automáticamente como déficit de procesamiento.
 - Lo más importante es ver si la diferencia con `ZEst` queda dentro de un rango eficiente o no.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `ZSum` por sí solo tiene poco valor clínico.
 - Conviene leerlo como parte de la secuencia `Zf -> ZEst -> Zd`.

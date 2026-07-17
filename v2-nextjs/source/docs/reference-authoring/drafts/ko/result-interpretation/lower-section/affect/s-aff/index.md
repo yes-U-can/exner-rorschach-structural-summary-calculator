@@ -52,18 +52,13 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `S`는 정서의 색조를 알려 줄 수 있지만, 그 감정이 누구를 향하는지, 실제 행동으로 얼마나 표출되는지는 알려 주지 않는다.
 - 반드시 `AG`, `CP`, `upper-section S`, `S-%`와 함께 읽어야 한다.
 
-## 근거 메모
-
+## 함께 볼 변수
 - `upper-section S`
 - `S-%`
 - `AG`
 - `CP`
 - `DEPI`
 - `HVI`
-
-## 근거 메모
-
-이 문서는 서비스 운영용 참조 코퍼스로 정리된 런타임 문서입니다.
 
 ## 근거 메모
 

@@ -44,7 +44,7 @@ La experiencia dimensional domina por sí misma y la forma no organiza realmente
 
 ## Precauciones y distinciones
 
-- `V` no es lo mismo que la tarjeta `V`; son contextos distintos.
+- `V` no es lo mismo que la lámina `V`; son contextos distintos.
 - Si la respuesta se apoya más en textura, hay que revisar [`T`](ref://scoring-input/determinants/T).
 - Si la respuesta se apoya más en sombreado difuso o impresión vaga, hay que revisar [`Y`](ref://scoring-input/determinants/Y).
 - El uso interpretativo de esta familia reaparece después en [`SumV`](ref://result-interpretation/lower-section/core/SumV).

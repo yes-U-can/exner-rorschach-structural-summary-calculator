@@ -22,41 +22,41 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-mediation-xminus-sminus-p-2026-03-10.md"
 ---
 
-# Document Name: [Interpretation/Mediation] X-%
+# [Interpretation/Mediation] X-%
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - X-%
 - Distorted Form
 - 歪んだ形態
 
-## Core Definition
+## 中核的定義
 
 `X-%` は、明らかに歪んだ形態使用をもつ反応の割合を示します。
 媒介領域では、共有現実からの知覚的距離をみる中心的な指標として扱います。
 
-## Interpretation Points
+## 解釈の要点
 
 - `X-%` が上がると、しみにうまく合わない知覚の頻度が増えていることを意味します。
 - `Xu%` も高い場合は、許容範囲の奇異さと、よりはっきりした歪みが混在している可能性があります。
 - `WSum6` や `PTI` と一緒に高いときは、臨床的注意が強まります。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
 - `X-%` は `Xu%` と同じではありません。`Xu%` は、珍しいがまだ可能な読みを含みます。
 - 総反応数や `FQ-` の広い分布と一緒に確認する必要があります。
 - 値が高いこと自体は重要ですが、それだけで歪みの由来まで説明できるわけではありません。
 
-## Cross References
+## 相互参照
 
-- [[Interpretation/Lower Section/Mediation] Mediation](ref://result-interpretation/lower-section/mediation)
-- [[Interpretation/Mediation] S-%](ref://result-interpretation/lower-section/mediation/S_minus)
-- [[Interpretation/Mediation] X+%](ref://result-interpretation/lower-section/mediation/X_plus_percent)
-- [[Interpretation/Mediation] Xu%](ref://result-interpretation/lower-section/mediation/Xu_percent)
+- [[解釈/下段/Mediation] Mediation](ref://result-interpretation/lower-section/mediation)
+- [[解釈/Mediation] S-%](ref://result-interpretation/lower-section/mediation/S_minus)
+- [[解釈/Mediation] X+%](ref://result-interpretation/lower-section/mediation/X_plus_percent)
+- [[解釈/Mediation] Xu%](ref://result-interpretation/lower-section/mediation/Xu_percent)
 - [[Coding/FQ] -](ref://scoring-input/fq/-)
-- [[Interpretation/Ideation] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
-- [[Interpretation/Special Indices] PTI](ref://result-interpretation/special-indices/PTI)
+- [[解釈/Ideation] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
+- [[解釈/特殊指標] PTI](ref://result-interpretation/special-indices/PTI)
 
-## Evidence Note
+## 根拠メモ
 
-- Detailed source comparison is stored in internal provenance notes.
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

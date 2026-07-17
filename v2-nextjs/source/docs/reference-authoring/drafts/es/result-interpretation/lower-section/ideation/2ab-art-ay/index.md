@@ -32,7 +32,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretat
 ## Definición central
 
 `2AB+Art+Ay` combina el doble de `AB` con `Art` y `Ay`.
-Se usa para estimar con que frecuencia el pensamiento se aleja de la experiencia directa y se desplaza hacia formulaciones más abstractas, artificiales o estilizadas.
+Se usa para estimar con qué frecuencia el pensamiento se aleja de la experiencia directa y se desplaza hacia formulaciones más abstractas, artificiales o estilizadas.
 
 ## Puntos de interpretación
 
@@ -45,9 +45,9 @@ Se usa para estimar con que frecuencia el pensamiento se aleja de la experiencia
 
 - Un valor alto no debe confundirse automáticamente con trastorno del pensamiento.
 - `Art` y `Ay` también pueden verse influidos por intereses culturales, estilo expresivo o preferencias simbólicas.
-- `AB` es un special score, mientras que `Art` y `Ay` son contenidos; primero hay que verificar bien de donde sale la elevación.
+- `AB` es un código especial, mientras que `Art` y `Ay` son contenidos; primero hay que verificar bien de dónde sale la elevación.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `2AB+Art+Ay` muestra dirección de distanciamiento o intelectualización, pero no explica por sí solo su función clínica.
 - Debe leerse con `MOR`, `WSum6`, `DEPI` y el resto de la calidad cognitiva.
@@ -64,11 +64,11 @@ Se usa para estimar con que frecuencia el pensamiento se aleja de la experiencia
 ## Referencias cruzadas
 
 - [[Interpretación/Lower Section/Ideación] Ideación](ref://result-interpretation/lower-section/ideation)
-- [[Codificación/Special Score] AB](ref://scoring-input/special-score/AB)
+- [[Codificación/Código Especial] AB](ref://scoring-input/special-score/AB)
 - [[Codificación/Contenidos] Art](ref://scoring-input/contents/Art)
 - [[Codificación/Contenidos] Ay](ref://scoring-input/contents/Ay)
 - [[Interpretación/Ideación] MOR](ref://result-interpretation/lower-section/ideation/MOR)
-- [[Interpretación/Special Indices] DEPI](ref://result-interpretation/special-indices/DEPI)
+- [[Interpretación/Índices Especiales] DEPI](ref://result-interpretation/special-indices/DEPI)
 
 ## Nota de fundamento
 

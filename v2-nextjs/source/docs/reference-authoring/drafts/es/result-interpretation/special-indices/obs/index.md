@@ -3,7 +3,7 @@ canonicalRoute: "result-interpretation/special-indices/OBS"
 locale: "es"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/special-indices/OBS"
-displayTitle: "[Interpretación/Special Indices] Obsessive Style Index"
+displayTitle: "[Interpretación/Índices Especiales] Obsessive Style Index"
 aliases:
   - "OBS"
   - "Obsessive Style Index"
@@ -22,7 +22,7 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/special-indices/obs/index.md"
 ---
 
-# Nombre del documento: [Interpretación/Special Indices] Obsessive Style Index
+# Nombre del documento: [Interpretación/Índices Especiales] Obsessive Style Index
 
 ## Alias y búsqueda
 
@@ -48,7 +48,7 @@ La evidencia de validez de constructo es insuficiente para inferir rasgos obsesi
 - No debe confundirse con un diagnóstico de TOC.
 - Contextos de exigencia técnica o cultural pueden aumentar rasgos de control sin patología.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - Para entender el estilo hace falta volver a las variables base.
 - Conviene leerlo junto con `Zf`, `Zd`, `Dd`, `P` y `FQ+`.
@@ -63,7 +63,7 @@ La evidencia de validez de constructo es insuficiente para inferir rasgos obsesi
 
 ## Referencias cruzadas
 
-- [[Interpretación/Special Indices] Special Indices](ref://result-interpretation/special-indices)
+- [[Interpretación/Índices Especiales] Índices Especiales](ref://result-interpretation/special-indices)
 - [[Interpretación/Processing] Zf](ref://result-interpretation/lower-section/processing/Zf_proc)
 - [[Interpretación/Processing] Zd](ref://result-interpretation/lower-section/processing/Zd_proc)
 - [[Interpretación/Upper Section] Dd](ref://result-interpretation/upper-section/Dd)

@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/special-score/DV1"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/special-score/DV1"
-displayTitle: "[Codificação/Escores Especiais] DV1"
+displayTitle: "[Codificação/Códigos Especiais] DV1"
 aliases:
   - "DV1"
   - "verbalização desviante nível 1"
@@ -21,7 +21,7 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-special-score-dv-dr-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificação/Escores Especiais] DV1
+# Nome do documento: [Codificação/Códigos Especiais] DV1
 
 ## Apelidos e busca
 
@@ -49,10 +49,10 @@ O foco principal está na expressão verbal, e não numa desorganização global
 
 ## Referências cruzadas
 
-- [[Codificação/Escores Especiais] Special Scores](ref://scoring-input/special-score)
-- [[Codificação/Escores Especiais] DV2](ref://scoring-input/special-score/DV2)
-- [[Codificação/Escores Especiais] DR1](ref://scoring-input/special-score/DR1)
-- [[Codificação/Escores Especiais] DR2](ref://scoring-input/special-score/DR2)
+- [[Codificação/Códigos Especiais] Códigos Especiais](ref://scoring-input/special-score)
+- [[Codificação/Códigos Especiais] DV2](ref://scoring-input/special-score/DV2)
+- [[Codificação/Códigos Especiais] DR1](ref://scoring-input/special-score/DR1)
+- [[Codificação/Códigos Especiais] DR2](ref://scoring-input/special-score/DR2)
 - [[Interpretação/Ideation] Sum6](ref://result-interpretation/lower-section/ideation/Sum6)
 - [[Interpretação/Ideation] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
 

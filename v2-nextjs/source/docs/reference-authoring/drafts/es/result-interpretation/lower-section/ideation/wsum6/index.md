@@ -30,7 +30,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretat
 
 ## Definición central
 
-`WSum6` es la suma ponderada de los six special scores de pensamiento.
+`WSum6` es la suma ponderada de los six códigos especiales de pensamiento.
 No solo cuenta cuántas peculiaridades aparecen, sino cuánto peso clínico tienen según su gravedad.
 
 ## Puntos de interpretación
@@ -41,11 +41,11 @@ No solo cuenta cuántas peculiaridades aparecen, sino cuánto peso clínico tien
 
 ## Precauciones y distinciones
 
-- `WSum6` no reemplaza mirar que special scores concretos están presentes.
+- `WSum6` no reemplaza la revisión de qué códigos especiales concretos están presentes.
 - Conviene revisar si el aumento proviene de `Lv2`, de `CONTAM` o de varios signos menores acumulados.
 - Debe leerse con `M-`, `PTI`, mediación y procesamiento, no como indicador aislado.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - Un valor alto es una señal de alerta, pero no define por sí solo el tipo de alteración ni su causa.
 - La calidad general del protocolo puede cambiar mucho el significado de un mismo puntaje.
@@ -64,7 +64,7 @@ No solo cuenta cuántas peculiaridades aparecen, sino cuánto peso clínico tien
 - [[Interpretación/Ideación] Sum6](ref://result-interpretation/lower-section/ideation/Sum6)
 - [[Interpretación/Ideación] Lv2](ref://result-interpretation/lower-section/ideation/Lv2)
 - [[Interpretación/Ideación] M-](ref://result-interpretation/lower-section/ideation/M_minus)
-- [[Interpretación/Special Indices] PTI](ref://result-interpretation/special-indices/PTI)
+- [[Interpretación/Índices Especiales] PTI](ref://result-interpretation/special-indices/PTI)
 
 ## Nota de fundamento
 

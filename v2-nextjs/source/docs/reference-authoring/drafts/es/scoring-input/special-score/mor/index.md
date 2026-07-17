@@ -48,7 +48,7 @@ El código apunta a daño, degradación o tono patológico atribuido directament
 
 ## Referencias cruzadas
 
-- [[Codificación/Puntuaciones especiales] Special Scores](ref://scoring-input/special-score)
+- [[Codificación/Puntuaciones especiales] Códigos Especiales](ref://scoring-input/special-score)
 - [[Codificación/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
 - [[Codificación/Puntuaciones especiales] AG](ref://scoring-input/special-score/AG)
 - [[Interpretación/Ideation] MOR](ref://result-interpretation/lower-section/ideation/MOR)

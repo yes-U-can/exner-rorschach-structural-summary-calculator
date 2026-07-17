@@ -8,7 +8,7 @@ aliases:
   - "Sum6"
   - "sum of six special scores"
   - "six special scores total"
-  - "6特殊得点合計"
+  - "6特殊スコア合計"
 relatedRoutes:
   - "result-interpretation/lower-section/ideation"
   - "result-interpretation/lower-section/ideation/Lv2"
@@ -30,39 +30,39 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-ideation-2ab-mor-sum6-2026-03-10.md"
 ---
 
-# Document Name: [Interpretation/Ideation] Sum6
+# [Interpretation/Ideation] Sum6
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - Sum6
 - sum of six special scores
 - six special scores total
-- 6特殊得点合計
+- 6特殊スコア合計
 
-## Core Definition
+## 中核的定義
 
-`Sum6` は、思考に関わる6種類の特殊得点に含まれた反応数の単純合計である。
-プロトコルの中で、認知的な特異さ、言語的逸脱、問題のある思考結合がどれくらい頻繁に現れるかを見積もるために使う。
+`Sum6` は、思考に関わる6種類の特殊スコアに含まれた反応数の単純合計です。
+プロトコルの中で、認知的な特異さ、言語的逸脱、問題のある思考結合がどれくらい頻繁に現れるかを見積もるために使います。
 
-## Interpretation Points
+## 解釈の要点
 
-- `Sum6` が高い場合、プロトコル内で認知的特異性がより頻繁に現れていることを示しやすい。
-- これは頻度指標であり、それ自体で重症度判断をするものではない。
-- 成人プロトコルでは、明らかな上昇があるとき、思考組織化をより詳しく点検する必要がある。
-- 意味は [`Lv2`](ref://result-interpretation/lower-section/ideation/Lv2) や [`WSum6`](ref://result-interpretation/lower-section/ideation/WSum6) と比べるとより明確になる。
+- `Sum6` が高い場合、プロトコル内で認知的特異性がより頻繁に現れていることを示しやすいです。
+- これは頻度指標であり、それ自体で重症度判断をするものではありません。
+- 成人プロトコルでは、明らかな上昇があるとき、思考組織化をより詳しく点検する必要があります。
+- 意味は [`Lv2`](ref://result-interpretation/lower-section/ideation/Lv2) や [`WSum6`](ref://result-interpretation/lower-section/ideation/WSum6) と比べるとより明確になります。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
-- `R` が多いと、特殊得点がたまりやすい機会の多さを一部反映している可能性がある。
-- `Sum6` が高くても、その大半が level 1 なら、複数の level 2 を含むプロフィールと同じ重みではない。
-- [`Lv2`](ref://result-interpretation/lower-section/ideation/Lv2)、[`CONTAM`](ref://scoring-input/special-score/CONTAM)、[`M-`](ref://result-interpretation/lower-section/ideation/M_minus) も一緒にあるなら、解釈はより慎重にする必要がある。
+- `R` が多いと、特殊スコアがたまりやすい機会の多さを一部反映している可能性があります。
+- `Sum6` が高くても、その大半がレベル 1 なら、複数のレベル 2 を含むプロフィールと同じ重みではありません。
+- [`Lv2`](ref://result-interpretation/lower-section/ideation/Lv2)、[`CONTAM`](ref://scoring-input/special-score/CONTAM)、[`M-`](ref://result-interpretation/lower-section/ideation/M_minus) も一緒にあるなら、解釈はより慎重にする必要があります。
 
-## Cross References
+## 相互参照
 
-- [[Interpretation/Lower Section/Ideation] Ideation](ref://result-interpretation/lower-section/ideation)
-- [[Interpretation/Ideation] Lv2](ref://result-interpretation/lower-section/ideation/Lv2)
-- [[Interpretation/Ideation] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
-- [[Coding/Special Score] Special Scores](ref://scoring-input/special-score)
+- [[解釈/下段/Ideation] Ideation](ref://result-interpretation/lower-section/ideation)
+- [[解釈/Ideation] Lv2](ref://result-interpretation/lower-section/ideation/Lv2)
+- [[解釈/Ideation] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
+- [[Coding/Special Score] 特殊スコア](ref://scoring-input/special-score)
 - [[Coding/Special Score] DV1](ref://scoring-input/special-score/DV1)
 - [[Coding/Special Score] DV2](ref://scoring-input/special-score/DV2)
 - [[Coding/Special Score] INCOM1](ref://scoring-input/special-score/INCOM1)
@@ -74,5 +74,5 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-ideation-2ab-mor-s
 - [[Coding/Special Score] ALOG](ref://scoring-input/special-score/ALOG)
 - [[Coding/Special Score] CONTAM](ref://scoring-input/special-score/CONTAM)
 
-## Evidence Note
-- Detailed source comparison is stored in internal provenance notes.
+## 根拠メモ
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

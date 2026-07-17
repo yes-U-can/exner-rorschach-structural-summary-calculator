@@ -52,9 +52,9 @@ Representa la magnitud total de la demanda actual o de la carga interna que el p
 
 - `es` alto indica carga, pero no determina por sí solo si esta es transitoria o crónica.
 - Un `es` bajo con `EA` también bajo puede hablar más de escasez general que de tranquilidad.
-- Conviene mirar `eb` para saber de que tipo de demanda se compone la cifra.
+- Conviene mirar `eb` para saber de qué tipo de demanda se compone la cifra.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `es` no debe leerse separado de `EA`, `D`, `AdjD` y `AdjEs`.
 - La intensidad de la carga no equivale automáticamente a descontrol conductual o afectivo.

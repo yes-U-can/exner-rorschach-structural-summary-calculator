@@ -55,17 +55,12 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `W:D:Dd`만으로는 처리의 질, 효율, 성숙도를 다 설명하지 못한다.
 - 반드시 `Zd`, `W:M`, `DQ 분포`, `Location`과 함께 읽어야 한다.
 
-## 근거 메모
-
+## 함께 볼 변수
 - `Zd`
 - `W:M`
 - `W`
 - `D`
 - `Dd`
-
-## 근거 메모
-
-이 문서는 서비스 운영용 참조 코퍼스로 정리된 런타임 문서입니다.
 
 ## 근거 메모
 

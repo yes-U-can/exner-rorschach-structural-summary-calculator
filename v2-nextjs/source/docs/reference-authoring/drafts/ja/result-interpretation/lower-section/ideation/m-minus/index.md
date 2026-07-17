@@ -25,43 +25,43 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-ideation-lv2-wsum6-mminus-2026-03-10.md"
 ---
 
-# Document Name: [Interpretation/Ideation] M-
+# [Interpretation/Ideation] M-
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - M-
 - minus human movement
 - poor form human movement
 - 形態不良のM
 
-## Core Definition
+## 中核的定義
 
-`M-` は、形態質が minus の人間運動反応を示す。
-解釈では、想像された人間活動が、共有現実への根ざしを欠いたり、現実に対して不正確に組織化されていたりするサインとして使う。
+`M-` は、形態質がマイナスの人間運動反応を示します。
+解釈では、想像された人間活動が、共有現実への根ざしを欠いたり、現実に対して不正確に組織化されていたりするサインとして使います。
 
-## Interpretation Points
+## 解釈の要点
 
-- `M-` が出るとき、人間表象はより不正確で、現実に支えられにくい思考を示す可能性がある。
-- `Lv2` や `WSum6` と重なるなら、思考のまとまりの弱さへの懸念は高まる。
-- 奇異な人間ファンタジー、他者理解のゆがみ、より統合されていない心的表象を示すことがある。
+- `M-` が出るとき、人間表象はより不正確で、現実に支えられにくい思考を示す可能性があります。
+- `Lv2` や `WSum6` と重なるなら、思考のまとまりの弱さへの懸念は高まります。
+- 奇異な人間ファンタジー、他者理解のゆがみ、より統合されていない心的表象を示すことがあります。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
-- すべての奇妙な `M` 反応が `M-` になるわけではない。まず `M` のコーディングと形態質の両方を確認する必要がある。
-- 単独の `M-` だけで思考障害を定義してはいけない。
-- 重みは [`Mnone`](ref://result-interpretation/lower-section/ideation/Mnone)、[`PTI`](ref://result-interpretation/special-indices/PTI)、mediation、processing とどう組み合わさるかで大きく変わる。
+- すべての奇妙な `M` 反応が `M-` になるわけではありません。まず `M` のコーディングと形態質の両方を確認する必要があります。
+- 単独の `M-` だけで思考障害を定義してはいけません。
+- 重みは [`Mnone`](ref://result-interpretation/lower-section/ideation/Mnone)、[`PTI`](ref://result-interpretation/special-indices/PTI)、認知的媒介、情報処理とどう組み合わさるかで大きく変わります。
 
-## Cross References
+## 相互参照
 
-- [[Interpretation/Lower Section/Ideation] Ideation](ref://result-interpretation/lower-section/ideation)
-- [[Interpretation/Ideation] a:p](ref://result-interpretation/lower-section/ideation/a_p)
-- [[Interpretation/Ideation] Ma:Mp](ref://result-interpretation/lower-section/ideation/Ma_Mp)
-- [[Interpretation/Ideation] Sum6](ref://result-interpretation/lower-section/ideation/Sum6)
-- [[Interpretation/Ideation] Lv2](ref://result-interpretation/lower-section/ideation/Lv2)
-- [[Interpretation/Ideation] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
-- [[Interpretation/Ideation] Mnone](ref://result-interpretation/lower-section/ideation/Mnone)
-- [[Coding/Determinants] M](ref://scoring-input/determinants/M)
-- [[Interpretation/Special Indices] PTI](ref://result-interpretation/special-indices/PTI)
+- [[解釈/下段/Ideation] Ideation](ref://result-interpretation/lower-section/ideation)
+- [[解釈/Ideation] a:p](ref://result-interpretation/lower-section/ideation/a_p)
+- [[解釈/Ideation] Ma:Mp](ref://result-interpretation/lower-section/ideation/Ma_Mp)
+- [[解釈/Ideation] Sum6](ref://result-interpretation/lower-section/ideation/Sum6)
+- [[解釈/Ideation] Lv2](ref://result-interpretation/lower-section/ideation/Lv2)
+- [[解釈/Ideation] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
+- [[解釈/Ideation] Mnone](ref://result-interpretation/lower-section/ideation/Mnone)
+- [[Coding/決定因] M](ref://scoring-input/determinants/M)
+- [[解釈/特殊指標] PTI](ref://result-interpretation/special-indices/PTI)
 
-## Evidence Note
-- Detailed source comparison is stored in internal provenance notes.
+## 根拠メモ
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

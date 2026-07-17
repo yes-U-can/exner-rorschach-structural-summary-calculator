@@ -28,39 +28,39 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-selfperception-2026-03-10.md"
 ---
 
-# Document Name: [Interpretation/Self Perception] SumV
+# [Interpretation/Self Perception] SumV
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - SumV
 - self perception SumV
 - vista total
 - 自己批判と自己観察
 
-## Core Definition
+## 中核的定義
 
-`Self Perception` における `SumV` は、どれくらい批判的な自己観察、痛みを伴う自己意識、個人的限界への注目が自己像に入り込んでいるかを見る変数です。  
+`Self Perception` における `SumV` は、どれくらい批判的な自己観察、痛みを伴う自己意識、個人的限界への注目が自己像に入り込んでいるかを見る変数です。
 `Core` の `SumV` が負荷全体に関わるのに対し、ここでは自己評価の色合いを強調して読みます。
 
-## Interpretation Points
+## 解釈の要点
 
 - 高いときは、罪悪感、恥、不足感、欠陥感を伴う自己観察が目立つことがあります。
 - 自分を厳しく見たり、弱点に敏感になったりしている可能性があります。
 - `FD` も高いと、自己観察はより意識的で持続的になります。
 - `MOR_self` と一緒に高いと、自己像がより傷ついたものとして経験されやすくなります。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
-- `SumV > 0` だけで disorder や depression を断定しません。
+- `SumV > 0` だけで障害やうつ状態を断定しません。
 - 喪失、挫折、ストレスへの反応として一時的に上がることもあります。
 - 0 だからといって自己批判がまったくないとは言えません。
 
-## Limits of Isolated Interpretation
+## 単独解釈の限界
 
 - `FD`、`Fr+rF`、`MOR_self`、`AdjD` と一緒に読む必要があります。
-- protocol 全体に introspection が乏しい場合、意味づけは変わります。
+- プロトコル全体に内省が乏しい場合、意味づけは変わります。
 
-## Variables to Review Together
+## 併せて確認する変数
 
 - `core SumV`
 - `FD`
@@ -68,18 +68,18 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-selfperception-202
 - `MOR_self`
 - `AdjD`
 
-## Cross References
+## 相互参照
 
-- [[Interpretation/Lower Section/Self Perception] Self Perception](ref://result-interpretation/lower-section/selfPerception)
-- [[Interpretation/Core] SumV](ref://result-interpretation/lower-section/core/SumV)
-- [[Interpretation/Self Perception] Fr + rF](ref://result-interpretation/lower-section/selfPerception/Fr_rF)
-- [[Interpretation/Self Perception] FD](ref://result-interpretation/lower-section/selfPerception/FD)
-- [[Interpretation/Self Perception] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
-- [[Coding/Determinants] V](ref://scoring-input/determinants/V)
-- [[Coding/Determinants] FV](ref://scoring-input/determinants/FV)
-- [[Coding/Determinants] VF](ref://scoring-input/determinants/VF)
-- [[Interpretation/Core] AdjD](ref://result-interpretation/lower-section/core/AdjD)
+- [[解釈/下段/Self Perception] Self Perception](ref://result-interpretation/lower-section/selfPerception)
+- [[解釈/Core] SumV](ref://result-interpretation/lower-section/core/SumV)
+- [[解釈/Self Perception] Fr + rF](ref://result-interpretation/lower-section/selfPerception/Fr_rF)
+- [[解釈/Self Perception] FD](ref://result-interpretation/lower-section/selfPerception/FD)
+- [[解釈/Self Perception] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
+- [[Coding/決定因] V](ref://scoring-input/determinants/V)
+- [[Coding/決定因] FV](ref://scoring-input/determinants/FV)
+- [[Coding/決定因] VF](ref://scoring-input/determinants/VF)
+- [[解釈/Core] AdjD](ref://result-interpretation/lower-section/core/AdjD)
 
-## Evidence Note
+## 根拠メモ
 
-- Detailed source comparison is stored in internal provenance notes.
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

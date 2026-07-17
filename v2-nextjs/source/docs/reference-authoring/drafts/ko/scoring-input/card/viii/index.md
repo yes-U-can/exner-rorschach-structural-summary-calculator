@@ -49,11 +49,11 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/card
 
 - 카드 VIII는 동물이 흔하다고 해서 모든 동물 반응이 `Popular`이 되는 것은 아니다.
 - 색을 언급한 것과 색을 결정인으로 사용한 것은 다르다.
-- 같은 D1 반응이라도 locale에 따라 세부 예시는 달라질 수 있으므로 현재 문서는 coding 원칙만 남긴다.
+- 같은 D1 반응이라도 실제 표현과 문화적 맥락이 다를 수 있으므로, 예시보다 부호화 기준을 우선한다.
 
 ## 상호 참조
 
-인접 규칙이나 연결된 해석 맥락이 필요할 때는 아래 문서를 함께 확인해 주세요.
+인접 규칙이나 연결된 해석 맥락이 필요할 때는 아래 문서를 함께 확인한다.
 
 - [scoring-input/score](ref://scoring-input%2Fscore)
 - [scoring-input/contents/A](ref://scoring-input%2Fcontents%2FA)

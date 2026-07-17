@@ -42,7 +42,7 @@ En esta zona se leen juntas `Zf`, `Zd`, `W:D:Dd`, `W:M`, `PSV`, `DQ+` y `DQv`.
 
 ## Puntos de interpretación
 
-- Este grupo ayuda a ver cuánto material se examina, cuánta complejidad se toma y con que flexibilidad se organiza.
+- Este grupo ayuda a ver cuánto material se examina, cuánta complejidad se toma y con qué flexibilidad se organiza.
 - `Zf` y `Zd` orientan sobre amplitud y eficiencia del escaneo.
 - `W:D:Dd` y `W:M` muestran estilo de recorte y nivel de organización.
 - `PSV`, `DQ+` y `DQv` agregan información sobre repetición, calidad organizativa y simplificación.
@@ -53,10 +53,10 @@ En esta zona se leen juntas `Zf`, `Zd`, `W:D:Dd`, `W:M`, `PSV`, `DQ+` y `DQv`.
 - Procesamiento tampoco equivale a ideación. El recorte perceptivo y la elaboración conceptual son niveles distintos.
 - Con protocolos cortos, varias proporciones del grupo pueden perder estabilidad.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - Este conjunto no debe leerse por separado del resto del protocolo.
-- Conviene integrarlo con `Mediación`, `Ideación`, `Lambda`, `FQ` y `Special Scores`.
+- Conviene integrarlo con `Mediación`, `Ideación`, `Lambda`, `FQ` y `Códigos Especiales`.
 
 ## Variables para revisar juntas
 

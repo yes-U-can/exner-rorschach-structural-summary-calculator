@@ -67,7 +67,7 @@ Onde `MOR` em `Ideação` descreve um tom geral do pensamento, aqui o foco é qu
 - [[Interpretação/Ideação] MOR](ref://result-interpretation/lower-section/ideation/MOR)
 - [[Interpretação/Autopercepção] SumV](ref://result-interpretation/lower-section/selfPerception/SumV_self)
 - [[Interpretação/Autopercepção] An + Xy](ref://result-interpretation/lower-section/selfPerception/An_Xy)
-- [[Codificação/Escores Especiais] MOR](ref://scoring-input/special-score/MOR)
+- [[Codificação/Códigos Especiais] MOR](ref://scoring-input/special-score/MOR)
 - [[Interpretação/Índices Especiais] DEPI](ref://result-interpretation/special-indices/DEPI)
 
 ## Nota de base

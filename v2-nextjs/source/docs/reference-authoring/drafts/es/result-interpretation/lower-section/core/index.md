@@ -57,7 +57,7 @@ Aquí se leen juntos `R`, `Lambda`, `EB`, `EA`, `eb`, `es`, `D`, `AdjD` y las va
 - Las variables del `Core` se afectan entre si; una cifra sola puede engañar.
 - En protocolos breves o con `Lambda` muy alto, varios valores del clúster pueden quedar empobrecidos o distorsionados.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `Core` funciona como base del resto del resumen, no como sentencia final.
 - Si este clúster es inestable, la lectura de los clusters siguientes debe hacerse con más cautela.

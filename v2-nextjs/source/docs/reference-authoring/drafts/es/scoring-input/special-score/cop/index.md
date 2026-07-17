@@ -52,7 +52,7 @@ La idea central es una acción conjunta positiva o coordinada.
 
 ## Referencias cruzadas
 
-- [[Codificación/Puntuaciones especiales] Special Scores](ref://scoring-input/special-score)
+- [[Codificación/Puntuaciones especiales] Códigos Especiales](ref://scoring-input/special-score)
 - [[Codificación/Puntuaciones especiales] AG](ref://scoring-input/special-score/AG)
 - [[Codificación/Determinante] M](ref://scoring-input/determinants/M)
 - [[Codificación/Determinante] FM](ref://scoring-input/determinants/FM)

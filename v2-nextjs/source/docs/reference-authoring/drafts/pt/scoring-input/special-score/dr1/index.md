@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/special-score/DR1"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/special-score/DR1"
-displayTitle: "[Codificação/Escores Especiais] DR1"
+displayTitle: "[Codificação/Códigos Especiais] DR1"
 aliases:
   - "DR1"
   - "resposta desviante nível 1"
@@ -21,7 +21,7 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-special-score-dv-dr-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificação/Escores Especiais] DR1
+# Nome do documento: [Codificação/Códigos Especiais] DR1
 
 ## Apelidos e busca
 
@@ -49,10 +49,10 @@ O desvio não fica apenas em uma palavra isolada, mas na organização ou no des
 
 ## Referências cruzadas
 
-- [[Codificação/Escores Especiais] Special Scores](ref://scoring-input/special-score)
-- [[Codificação/Escores Especiais] DV1](ref://scoring-input/special-score/DV1)
-- [[Codificação/Escores Especiais] DV2](ref://scoring-input/special-score/DV2)
-- [[Codificação/Escores Especiais] DR2](ref://scoring-input/special-score/DR2)
+- [[Codificação/Códigos Especiais] Códigos Especiais](ref://scoring-input/special-score)
+- [[Codificação/Códigos Especiais] DV1](ref://scoring-input/special-score/DV1)
+- [[Codificação/Códigos Especiais] DV2](ref://scoring-input/special-score/DV2)
+- [[Codificação/Códigos Especiais] DR2](ref://scoring-input/special-score/DR2)
 - [[Interpretação/Ideation] Sum6](ref://result-interpretation/lower-section/ideation/Sum6)
 - [[Interpretação/Ideation] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
 

@@ -96,8 +96,8 @@ function ReleaseList({
 export default function VersionArchiveList({ v2NextVersions, v1GasVersions }: VersionArchiveListProps) {
   const { t } = useTranslation();
   const [sortOrder, setSortOrder] = useState<SortOrder>('desc');
-  const [isV2Open, setIsV2Open] = useState(true);
-  const [isV1Open, setIsV1Open] = useState(true);
+  const [isV2Open, setIsV2Open] = useState(false);
+  const [isV1Open, setIsV1Open] = useState(false);
   const v2SourceUrl = v2NextVersions.find((entry) => entry.sourceUrl)?.sourceUrl ?? null;
   const sortedV1Versions = useMemo(() => sortVersions(v1GasVersions, sortOrder), [sortOrder, v1GasVersions]);
   const labels: VersionArchiveLabels = {

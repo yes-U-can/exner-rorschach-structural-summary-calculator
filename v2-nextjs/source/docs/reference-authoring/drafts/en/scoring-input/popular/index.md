@@ -46,7 +46,7 @@ In coding, `P` is assigned when the response matches a defined popular by criter
 - A quasi-popular should not receive `P` if content or location changes in a meaningful way.
 - Card orientation can matter because some populars require the top or head area to remain in the expected position.
 - Frequency or absence of `P` is interpreted later; in coding, the only question is whether the response meets the criterion.
-- Cultural differences may affect how some responses are discussed across locales, but the coding decision still follows the active manual rule for that locale.
+- Cultural context may affect interpretation, but the coding decision must follow the applicable Comprehensive System criterion.
 
 ## Cross References
 

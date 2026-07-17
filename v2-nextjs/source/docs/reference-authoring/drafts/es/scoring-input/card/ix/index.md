@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/card/IX"
 locale: "es"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/card/IX"
-displayTitle: "[Codificación/Tarjetas] IX"
+displayTitle: "[Codificación/Láminas] IX"
 aliases:
   - "Card IX"
   - "card IX"
@@ -23,24 +23,24 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/card/ix/index.md"
 ---
 
-# Nombre del documento: [Codificación/Tarjetas] IX
+# Nombre del documento: [Codificación/Láminas] IX
 
 ## Alias y búsqueda
 
 - Card IX
 - card IX
 - card 9
-- tarjeta IX
+- lámina IX
 - lámina IX
 
 ## Definición central
 
-`Tarjeta IX` suele exigir más organización para mantener buena forma.
-La página resume que conviene vigilar en contenido humano, movimiento y calidad formal.
+`Lámina IX` suele exigir más organización para mantener buena forma.
+La página resume qué conviene vigilar en el contenido humano, el movimiento y la Calidad Formal.
 
 ## Condiciones de aplicación
 
-- Algunas respuestas de esta tarjeta se acercan a figuras humanas o humanoides; por eso conviene revisar `H` y `(H)`.
+- Algunas respuestas de esta lámina se acercan a figuras humanas o humanoides; por eso conviene revisar `H` y `(H)`.
 - Si la respuesta incluye acción humana clara, revisa `M`.
 - Como la forma puede resultar menos estable, conviene revisar `FQ` con cuidado.
 - Si aparece una respuesta popular, debe confirmarse por criterio formal y no solo por familiaridad.
@@ -48,8 +48,8 @@ La página resume que conviene vigilar en contenido humano, movimiento y calidad
 ## Precauciones y distinciones
 
 - Que una figura parezca humana no significa automáticamente `H`; puede corresponder mejor `(H)`.
-- La dificultad organizativa de la tarjeta no convierte por sí sola la respuesta en mala forma.
-- Esta página no interpreta la tarjeta; solo orienta la codificación.
+- La dificultad organizativa de la lámina no convierte por sí sola la respuesta en mala forma.
+- Esta página no interpreta la lámina; solo orienta la codificación.
 
 ## Referencias cruzadas
 

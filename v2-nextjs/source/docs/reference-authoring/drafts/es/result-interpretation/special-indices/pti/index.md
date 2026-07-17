@@ -3,7 +3,7 @@ canonicalRoute: "result-interpretation/special-indices/PTI"
 locale: "es"
 docKind: "interpretation-entry"
 canonicalTitle: "result-interpretation/special-indices/PTI"
-displayTitle: "[Interpretación/Special Indices] PTI"
+displayTitle: "[Interpretación/Índices Especiales] PTI"
 aliases:
   - "PTI"
   - "Perceptual-Thinking Index"
@@ -21,7 +21,7 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/special-indices/pti/index.md"
 ---
 
-# Nombre del documento: [Interpretación/Special Indices] PTI
+# Nombre del documento: [Interpretación/Índices Especiales] PTI
 
 ## Alias y búsqueda
 
@@ -47,7 +47,7 @@ Su función es actuar como alerta para revisar si hay distorsión de la realidad
 - `PTI` negativo no elimina toda posibilidad de alteración del pensamiento.
 - Estrés extremo, intoxicación, desorganización situacional o bajo volumen de respuestas pueden complicar la lectura.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `PTI` es una señal actuarial y necesita volver a las variables base.
 - Conviene releer `WSum6`, `Lv2`, `M-`, `X-%` y `XA%` antes de sacar conclusiones fuertes.
@@ -62,7 +62,7 @@ Su función es actuar como alerta para revisar si hay distorsión de la realidad
 
 ## Referencias cruzadas
 
-- [[Interpretación/Special Indices] Special Indices](ref://result-interpretation/special-indices)
+- [[Interpretación/Índices Especiales] Índices Especiales](ref://result-interpretation/special-indices)
 - [[Interpretación/Ideación] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
 - [[Interpretación/Ideación] Lv2](ref://result-interpretation/lower-section/ideation/Lv2)
 - [[Interpretación/Ideación] M-](ref://result-interpretation/lower-section/ideation/M_minus)

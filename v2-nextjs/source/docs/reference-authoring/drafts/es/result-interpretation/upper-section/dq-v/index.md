@@ -46,7 +46,7 @@ Ayuda a estimar cuántas veces el protocolo produce respuestas poco definidas en
 - Un `DQv` alto en un protocolo muy breve no debe sobreinterpretarse.
 - La lectura mejora cuando se revisan `FQ`, `Lambda` y `DQ_v_proc`.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `DQv` no basta para concluir desorganización general.
 - Su significado depende de la distribución total de `DQ` y del resto del protocolo.

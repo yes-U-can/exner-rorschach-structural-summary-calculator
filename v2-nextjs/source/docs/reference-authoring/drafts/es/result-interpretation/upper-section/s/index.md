@@ -47,7 +47,7 @@ Dentro del `Upper Section` se lee como una pista sobre foco inverso, oposición 
 - Si `S` aumenta junto con `S-%`, `X-%`, `AG` o `PER`, el significado puede inclinarse hacia mayor conflicto o ineficiencia.
 - Si aparece con buena mediación y buen control formal, también puede reflejar flexibilidad u originalidad.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `S` necesita contexto perceptivo y afectivo.
 - Su peso clínico cambia según acompañen medidas de mediación, agresión y calidad formal.

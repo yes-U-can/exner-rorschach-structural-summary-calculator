@@ -6,6 +6,10 @@ import { redirect } from 'next/navigation';
 import ReferenceSearchForm from '@/components/ref/ReferenceSearchForm';
 import { buildReferenceDocHref, searchReferenceRuntimeDocs } from '@/lib/referenceCorpus';
 import { buildReferenceSearchExcerpt } from '@/lib/referenceSearchExcerpt';
+import {
+  getReferencePresentationCategory,
+  getReferencePresentationTitle,
+} from '@/lib/referencePresentation';
 import { buildLocalizedPageMetadata, getSeoCopy } from '@/lib/seo';
 
 type Language = 'en' | 'ko' | 'ja' | 'es' | 'pt';
@@ -131,9 +135,11 @@ export default async function RefIndexPage({ searchParams }: RefPageProps) {
                     <Link href={buildSearchResultHref(doc.canonicalRoute, language, query)} className="flex items-center gap-4 px-1 py-5 sm:px-3">
                       <span className="min-w-0 flex-1">
                         <span className="block break-words text-base font-semibold text-[var(--text-strong)] group-hover:text-[var(--brand-700)]">
-                          {doc.title}
+                          {getReferencePresentationTitle(language, doc.canonicalRoute, doc.title)}
                         </span>
-                        <span className="mt-1 block text-xs text-[var(--text-soft)]">/{doc.canonicalRoute}</span>
+                        <span className="mt-1 inline-flex rounded border border-[var(--border-subtle)] bg-[var(--surface-muted)] px-2 py-0.5 text-xs font-medium text-[var(--text-soft)]">
+                          {getReferencePresentationCategory(language, doc.canonicalRoute)}
+                        </span>
                         <span className="mt-2 line-clamp-3 block text-sm leading-6 text-[var(--text-body)]">
                           {buildReferenceSearchExcerpt(doc.excerpt || doc.bodyText)}
                         </span>

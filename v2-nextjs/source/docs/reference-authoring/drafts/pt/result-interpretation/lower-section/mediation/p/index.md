@@ -41,7 +41,7 @@ Na mediação, ajuda a estimar o quanto a percepção se aproxima de padrões de
 
 ## Cuidados e diferenciação
 
-- `P` depende de listas culturalmente situadas e do contexto do locale.
+- `P` deve ser codificado pelos critérios aplicáveis do Sistema Compreensivo e interpretado com o contexto cultural adequado.
 - Valor alto não significa automaticamente adaptação saudável, e valor baixo não implica patologia por si só.
 - Vale revisar em quais cartões as respostas populares aparecem ou deixam de aparecer.
 

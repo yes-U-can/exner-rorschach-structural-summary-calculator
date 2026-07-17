@@ -47,7 +47,7 @@ Se usa para ver cuán estable es la mediación perceptiva en zonas relativamente
 - Con pocas respuestas `W` y `D`, la proporción puede ser inestable.
 - Un `WDA%` bajo es una señal relevante, pero no basta por sí solo para definir gravedad clínica.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `WDA%` muestra estabilidad en áreas compartibles, pero no describe toda la organización perceptiva.
 - Conviene leerlo junto con `XA%`, `X+%`, `X-%`, `W` y `D`.

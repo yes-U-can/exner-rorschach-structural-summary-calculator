@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/card/VII"
 locale: "es"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/card/VII"
-displayTitle: "[Codificación/Tarjetas] VII"
+displayTitle: "[Codificación/Láminas] VII"
 aliases:
   - "Card VII"
   - "card VII"
@@ -24,20 +24,20 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/card/vii/index.md"
 ---
 
-# Nombre del documento: [Codificación/Tarjetas] VII
+# Nombre del documento: [Codificación/Láminas] VII
 
 ## Alias y búsqueda
 
 - Card VII
 - card VII
 - card 7
-- tarjeta VII
+- lámina VII
 - lámina VII
 
 ## Definición central
 
-`Tarjeta VII` suele facilitar respuestas de cabezas, rostros y figuras humanas parciales.
-La página resume que revisar en contenido humano, organización y movimiento.
+`Lámina VII` suele facilitar respuestas de cabezas, rostros y figuras humanas parciales.
+La página resume qué debe revisarse en el contenido humano, la organización y el movimiento.
 
 ## Condiciones de aplicación
 
@@ -51,7 +51,7 @@ La página resume que revisar en contenido humano, organización y movimiento.
 
 - Que una respuesta parezca humana no significa automáticamente contenido humano total `H`.
 - Dos perfiles o dos rostros no generan por sí solos un código relacional.
-- Esta página sigue siendo una nota de codificación, no una interpretación simbólica de la tarjeta.
+- Esta página sigue siendo una nota de codificación, no una interpretación simbólica de la lámina.
 
 ## Referencias cruzadas
 

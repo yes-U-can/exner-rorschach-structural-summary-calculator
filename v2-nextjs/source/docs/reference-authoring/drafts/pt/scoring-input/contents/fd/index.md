@@ -1,4 +1,4 @@
-﻿---
+---
 canonicalRoute: "scoring-input/contents/Fd"
 locale: "pt"
 docKind: "coding-entry"
@@ -36,7 +36,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-completio
 
 ## Condições de aplicação
 
-- Use para refeição pronta, carnê, bolo, fruta servida ou outro item claramente comestível.
+- Use para refeição pronta, carne, bolo, fruta servida ou outro item claramente comestível.
 - O código também pode entrar quando a cena se organiza em torno de comer ou de um objeto claramente alimentar.
 - Se o foco principal for o animal em si, revise primeiro [`A`](ref://scoring-input/contents/A) ou outro conteúdo animal.
 - Não confunda `Fd` com [`FD`](ref://scoring-input/determinants/FD), que pertence aos determinantes.

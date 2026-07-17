@@ -23,36 +23,36 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
-# Document Name: [コーディング/決定因] FV
+# [コーディング/決定因] FV
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - FV
 - 形態-Vista
 - 形優位の奥行き
 
-## Core Definition
+## 中核的定義
 
-`FV` は、形が反応を主に組織化し、奥行き・距離・立体感が二次的に加わるときにつける determinant です。
+`FV` は、形が反応を主に組織化し、奥行き・距離・立体感が二次的に加わるときにつける決定因です。
 深さや遠近感はあるが、対象はまず形でつかまえられています。
 
-## Application Conditions
+## 採点・適用条件
 
-- 形が主な対象同定を支えている。
-- そのうえで深さ、距離、浮き出し感が述べられている。
-- 立体性は反応の中で実際に語られていなければならない。
-- Vista の方が重いなら [`VF`](ref://scoring-input/determinants/VF) を再検討する。
+- 形が主な対象同定を支えています。
+- そのうえで深さ、距離、浮き出し感が述べられています。
+- 立体性は反応の中で実際に語られていなければなりません。
+- ビスタの方が重いなら [`VF`](ref://scoring-input/determinants/VF) を再検討します。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
 - `FV` と [`VF`](ref://scoring-input/determinants/VF) の違いは、どちらが主導しているかです。
 - 質感が中心なら [`FT`](ref://scoring-input/determinants/FT) を見直します。
 - ぼんやりした陰影的苦痛が中心なら [`Y`](ref://scoring-input/determinants/Y) を見直します。
 - この群の意味づけはあとで [`SumV`](ref://result-interpretation/lower-section/core/SumV) で検討します。
 
-## Cross References
+## 相互参照
 
-- [[コーディング/決定因] Determinants](ref://scoring-input/determinants)
+- [[コーディング/決定因] 決定因](ref://scoring-input/determinants)
 - [[コーディング/決定因] VF](ref://scoring-input/determinants/VF)
 - [[コーディング/決定因] V](ref://scoring-input/determinants/V)
 - [[コーディング/決定因] F](ref://scoring-input/determinants/F)
@@ -61,6 +61,6 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 - [[解釈/Core] SumV](ref://result-interpretation/lower-section/core/SumV)
 - [[解釈/自己知覚] SumV](ref://result-interpretation/lower-section/selfPerception/SumV_self)
 
-## Evidence Note
+## 根拠メモ
 
-- 詳細な出典比較と判断根拠は内部 provenance note に分離してあります。
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

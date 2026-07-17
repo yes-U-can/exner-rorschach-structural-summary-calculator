@@ -1,4 +1,4 @@
-﻿---
+---
 canonicalRoute: "scoring-input/contents/(A)"
 locale: "es"
 docKind: "coding-entry"

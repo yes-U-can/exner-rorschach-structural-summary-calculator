@@ -482,6 +482,158 @@ describe('referenceHybridRetrieval', () => {
     expect(result.items[0]?.canonicalRoute).toBe('scoring-input/determinants/Cn');
     expect(result.items[0]?.text).toMatch(/WSumC/u);
     expect(result.items[0]?.text).toMatch(/S-CON/u);
-    expect(result.items[0]?.text).toMatch(/Color-Shading/iu);
+    expect(result.items[0]?.text).toMatch(/Color-Shading|色彩[・\s-]?陰影/iu);
+  });
+
+  it.each([
+    ['ko' as const, 'WSumC에 Cn을 포함해서 계산해?'],
+    ['en' as const, 'Does WSumC include Cn?'],
+    ['ja' as const, 'WSumC に Cn を含めて計算しますか。'],
+    ['es' as const, '¿WSumC incluye Cn?'],
+    ['pt' as const, 'O WSumC inclui Cn?'],
+  ])('anchors the focused %s WSumC-Cn boundary query to the Cn rule', async (lang, responseMemo) => {
+    const result = await getHybridCodingRuleChunks({
+      context: {
+        rowIndex: 0,
+        focusRowIndex: 0,
+        selectedRowIndices: [0],
+        card: 'VIII',
+        responseMemo,
+        existingCodes: {
+          location: '',
+          dq: '',
+          determinants: ['Cn'],
+          fq: '',
+          pair: '',
+          contents: [],
+          popular: false,
+          z: '',
+          specialScores: [],
+        },
+        sheetRows: [],
+      },
+      lang,
+      provider: 'openai',
+      apiKey: 'unused-in-lexical-fallback',
+      limit: 6,
+    });
+
+    expect(result.mode).toBe('lexical');
+    expect(result.items[0]?.canonicalRoute).toBe('scoring-input/determinants/Cn');
+    expect(result.items[0]?.text).toMatch(/WSumC/u);
+  });
+
+  it.each([
+    ['ko' as const, 'Na, Bt, Ls가 함께 해당되면 어떻게 부호화해?'],
+    ['en' as const, 'How should Na, Bt, and Ls be coded when they overlap?'],
+    ['ja' as const, 'Na、Bt、Ls が重なる場合はどう符号化しますか。'],
+    ['es' as const, '¿Cómo se codifican Na, Bt y Ls cuando coinciden?'],
+    ['pt' as const, 'Como codificar Na, Bt e Ls quando coincidem?'],
+  ])('anchors the explicit %s Na-Bt-Ls boundary query to the Na rule', async (lang, responseMemo) => {
+    const result = await getHybridCodingRuleChunks({
+      context: {
+        rowIndex: 0,
+        focusRowIndex: 0,
+        selectedRowIndices: [0],
+        card: 'I',
+        responseMemo,
+        existingCodes: {
+          location: '',
+          dq: '',
+          determinants: [],
+          fq: '',
+          pair: '',
+          contents: ['Na', 'Bt', 'Ls'],
+          popular: false,
+          z: '',
+          specialScores: [],
+        },
+        sheetRows: [],
+      },
+      lang,
+      provider: 'openai',
+      apiKey: 'unused-in-lexical-fallback',
+      limit: 6,
+    });
+
+    expect(result.mode).toBe('lexical');
+    expect(result.items[0]?.canonicalRoute).toBe('scoring-input/contents/Na');
+    expect(result.items[0]?.text).toMatch(/Na/u);
+    expect(result.items[0]?.text).toMatch(/Bt/u);
+    expect(result.items[0]?.text).toMatch(/Ls/u);
+  });
+
+  it('reports lexical mode when coding vector retrieval has no usable hits', async () => {
+    retrievalMocks.runtimeReady.mockReturnValue(true);
+    retrievalMocks.embedQuery.mockResolvedValue({ vector: [0.1], model: 'test', dimensions: 1 });
+    retrievalMocks.searchVectors.mockResolvedValue([]);
+
+    const result = await getHybridCodingRuleChunks({
+      context: {
+        rowIndex: 0,
+        focusRowIndex: 0,
+        selectedRowIndices: [0],
+        card: 'I',
+        responseMemo: 'How should this response be coded?',
+        existingCodes: {
+          location: '',
+          dq: '',
+          determinants: [],
+          fq: '',
+          pair: '',
+          contents: [],
+          popular: false,
+          z: '',
+          specialScores: [],
+        },
+        sheetRows: [],
+      },
+      lang: 'en',
+      provider: 'openai',
+      apiKey: 'test-key',
+      limit: 4,
+    });
+
+    expect(result.mode).toBe('lexical');
+    expect(result.vectorHitCount).toBe(0);
+    expect(result.items.length).toBeLessThanOrEqual(4);
+  });
+
+  it('keeps ranked coding items and trace aligned when vector retrieval fails', async () => {
+    retrievalMocks.runtimeReady.mockReturnValue(true);
+    retrievalMocks.embedQuery.mockRejectedValue(new Error('test embedding failure'));
+
+    const result = await getHybridCodingRuleChunks({
+      context: {
+        rowIndex: 0,
+        focusRowIndex: 0,
+        selectedRowIndices: [0],
+        card: 'V',
+        responseMemo: 'The response was a bat. Should it be marked P?',
+        existingCodes: {
+          location: 'W',
+          dq: 'o',
+          determinants: ['F'],
+          fq: 'o',
+          pair: '',
+          contents: ['A'],
+          popular: false,
+          z: '',
+          specialScores: [],
+        },
+        sheetRows: [],
+      },
+      lang: 'en',
+      provider: 'openai',
+      apiKey: 'test-key',
+      limit: 3,
+    });
+
+    expect(result.mode).toBe('lexical');
+    expect(result.vectorHitCount).toBe(0);
+    expect(result.items).toHaveLength(3);
+    expect(result.items.map((item) => item.canonicalRoute ?? item.id)).toEqual(
+      result.trace.map((entry) => entry.canonicalRoute ?? entry.id),
+    );
   });
 });

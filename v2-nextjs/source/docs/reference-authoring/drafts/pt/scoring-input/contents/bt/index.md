@@ -1,4 +1,4 @@
-﻿---
+---
 canonicalRoute: "scoring-input/contents/Bt"
 locale: "pt"
 docKind: "coding-entry"

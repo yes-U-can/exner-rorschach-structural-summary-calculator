@@ -44,12 +44,12 @@ La desviación no está solo en una palabra, sino en la organización o desarrol
 ## Precauciones y distinciones
 
 - Una respuesta larga o complicada no basta por sí sola para `DR1`.
-- `DR1` se diferencia de `DV` porque mira la desviación del response completo, no solo una elección verbal.
+- `DR1` se diferencia de `DV` porque considera la desviación de la respuesta completa, no solo una elección verbal.
 - Si existe duda entre nivel 1 y nivel 2, se mantiene el criterio más conservador.
 
 ## Referencias cruzadas
 
-- [[Codificación/Puntuaciones especiales] Special Scores](ref://scoring-input/special-score)
+- [[Codificación/Puntuaciones especiales] Códigos Especiales](ref://scoring-input/special-score)
 - [[Codificación/Puntuaciones especiales] DV1](ref://scoring-input/special-score/DV1)
 - [[Codificación/Puntuaciones especiales] DV2](ref://scoring-input/special-score/DV2)
 - [[Codificación/Puntuaciones especiales] DR2](ref://scoring-input/special-score/DR2)

@@ -37,7 +37,7 @@ No describe solo una mezcla rara, sino una integración imposible dentro de un m
 
 - Usa `CONTAM` cuando una misma respuesta une de forma contaminada dos percepciones que normalmente deberían mantenerse separadas.
 - La clave es que el producto final se presenta como una sola percepción fusionada, no como dos ideas simplemente comparadas.
-- El response debe sonar imposible o internamente contradictorio por la fusión misma.
+- La respuesta debe resultar imposible o internamente contradictoria por la propia fusión.
 - `CONTAM` representa una forma especialmente grave de distorsión y luego pesa en `Sum6` y `WSum6`.
 
 ## Precauciones y distinciones
@@ -49,7 +49,7 @@ No describe solo una mezcla rara, sino una integración imposible dentro de un m
 
 ## Referencias cruzadas
 
-- [[Codificación/Puntuaciones especiales] Special Scores](ref://scoring-input/special-score)
+- [[Codificación/Puntuaciones especiales] Códigos Especiales](ref://scoring-input/special-score)
 - [[Codificación/Puntuaciones especiales] INCOM2](ref://scoring-input/special-score/INCOM2)
 - [[Codificación/Puntuaciones especiales] FABCOM2](ref://scoring-input/special-score/FABCOM2)
 - [[Interpretación/Ideation] Sum6](ref://result-interpretation/lower-section/ideation/Sum6)

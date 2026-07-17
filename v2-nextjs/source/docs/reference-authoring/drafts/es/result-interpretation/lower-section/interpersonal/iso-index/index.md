@@ -55,7 +55,7 @@ En interpretación ayuda a estimar cuánto se organiza el protocolo alrededor de
 - No debe leerse como una prueba única de aislamiento crónico.
 - La variable necesita contexto con `COP`, `HumanCont`, `CDI` y `DEPI`.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `ISO_Index` no explica por sí solo si el aislamiento es defensivo, depresivo o situacional.
 - Conviene leerlo junto con el volumen de respuestas y con otras variables interpersonales.
@@ -80,8 +80,8 @@ En interpretación ayuda a estimar cuánto se organiza el protocolo alrededor de
 - [[Codificación/Contenido] Ls](ref://scoring-input/contents/Ls)
 - [[Codificación/Contenido] Na](ref://scoring-input/contents/Na)
 - [[Interpretación/Core] R](ref://result-interpretation/lower-section/core/R)
-- [[Interpretación/Special Indices] CDI](ref://result-interpretation/special-indices/CDI)
-- [[Interpretación/Special Indices] DEPI](ref://result-interpretation/special-indices/DEPI)
+- [[Interpretación/Índices Especiales] CDI](ref://result-interpretation/special-indices/CDI)
+- [[Interpretación/Índices Especiales] DEPI](ref://result-interpretation/special-indices/DEPI)
 
 ## Nota de fundamento
 

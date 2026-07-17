@@ -46,7 +46,7 @@ Lo importante es que esa información personal funcione como apoyo directo de la
 
 ## Referencias cruzadas
 
-- [[Codificación/Puntuaciones especiales] Special Scores](ref://scoring-input/special-score)
+- [[Codificación/Puntuaciones especiales] Códigos Especiales](ref://scoring-input/special-score)
 - [[Interpretación/Interpersonal] PER](ref://result-interpretation/lower-section/interpersonal/PER)
 - [[Interpretación/Mediation] Xu%](ref://result-interpretation/lower-section/mediation/Xu_percent)
 

@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/special-score/ALOG"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/special-score/ALOG"
-displayTitle: "[Codificação/Escores Especiais] ALOG"
+displayTitle: "[Codificação/Códigos Especiais] ALOG"
 aliases:
   - "ALOG"
   - "lógica inadequada"
@@ -20,7 +20,7 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-special-score-incom-fabcom-contam-alog-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificação/Escores Especiais] ALOG
+# Nome do documento: [Codificação/Códigos Especiais] ALOG
 
 ## Apelidos e busca
 
@@ -31,7 +31,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-special-score-inco
 ## Definição central
 
 `ALOG` é usado quando a pessoa sustenta a resposta com lógica imprópria ou claramente insuficiente.
-O foco esta numa inferência injustificada, e não numa palavra estranha ou numa mistura perceptiva.
+O foco está em uma inferência injustificada, e não em uma palavra estranha ou em uma mistura perceptiva.
 
 ## Condições de aplicação
 
@@ -49,9 +49,9 @@ O foco esta numa inferência injustificada, e não numa palavra estranha ou numa
 
 ## Referências cruzadas
 
-- [[Codificação/Escores Especiais] Special Scores](ref://scoring-input/special-score)
-- [[Codificação/Escores Especiais] DV1](ref://scoring-input/special-score/DV1)
-- [[Codificação/Escores Especiais] DR1](ref://scoring-input/special-score/DR1)
+- [[Codificação/Códigos Especiais] Códigos Especiais](ref://scoring-input/special-score)
+- [[Codificação/Códigos Especiais] DV1](ref://scoring-input/special-score/DV1)
+- [[Codificação/Códigos Especiais] DR1](ref://scoring-input/special-score/DR1)
 - [[Interpretação/Ideation] Sum6](ref://result-interpretation/lower-section/ideation/Sum6)
 - [[Interpretação/Ideation] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
 

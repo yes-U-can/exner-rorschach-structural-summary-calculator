@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/special-score/CP"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/special-score/CP"
-displayTitle: "[Codificação/Escores Especiais] CP"
+displayTitle: "[Codificação/Códigos Especiais] CP"
 aliases:
   - "CP"
   - "projeção de cor"
@@ -21,7 +21,7 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-special-score-ab-psv-per-cp-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificação/Escores Especiais] CP
+# Nome do documento: [Codificação/Códigos Especiais] CP
 
 ## Apelidos e busca
 
@@ -37,7 +37,7 @@ A ideia central é que a cor não está realmente presente naquela área, mas a 
 ## Condições de aplicação
 
 - Considere-o quando área acromática e descrita como vermelha, azul, verde ou outra cor cromática.
-- Ele é acrescentado como escore especial, e não como determinante cromático normal.
+- Ele é acrescentado como código especial, e não como determinante cromático normal.
 - Antes de atribui-lo, descarte lapso verbal ou confusão visual simples.
 - Em muitos casos ele deve ser revisto junto com [`FY`](ref://scoring-input/determinants/FY), [`YF`](ref://scoring-input/determinants/YF), [`Y`](ref://scoring-input/determinants/Y) e depois se liga a [`CP`](ref://result-interpretation/lower-section/affect/CP).
 
@@ -49,7 +49,7 @@ A ideia central é que a cor não está realmente presente naquela área, mas a 
 
 ## Referências cruzadas
 
-- [[Codificação/Escores Especiais] Special Scores](ref://scoring-input/special-score)
+- [[Codificação/Códigos Especiais] Códigos Especiais](ref://scoring-input/special-score)
 - [[Codificação/Determinantes] FC](ref://scoring-input/determinants/FC)
 - [[Codificação/Determinantes] FY](ref://scoring-input/determinants/FY)
 - [[Codificação/Determinantes] YF](ref://scoring-input/determinants/YF)

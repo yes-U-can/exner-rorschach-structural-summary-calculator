@@ -48,17 +48,12 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `D`는 `W:D:Dd` 전체 분포 안에서만 안전하게 읽힌다.
 - `D`가 많다고 해서 유능함, 보수성, 현실감각을 단정하지 않는다.
 
-## 근거 메모
-
+## 함께 볼 변수
 - `W`
 - `Dd`
 - `P`
 - `Xu%`
 - `W_D_Dd`
-
-## 근거 메모
-
-이 문서는 서비스 운영용 참조 코퍼스로 정리된 런타임 문서입니다.
 
 ## 근거 메모
 

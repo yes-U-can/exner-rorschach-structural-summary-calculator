@@ -65,7 +65,7 @@ No Comprehensive System, significa converter cada resposta de Rorschach em uma c
 - [[Codificação/Popular] Popular](ref://scoring-input/popular)
 - [[Codificação/Z] Z](ref://scoring-input/z)
 - [[Codificação/GHR-PHR] GHR/PHR](ref://scoring-input/gphr)
-- [[Codificação/Scores Especiais] Special Scores](ref://scoring-input/special-score)
+- [[Codificação/Códigos Especiais] Códigos Especiais](ref://scoring-input/special-score)
 
 ## Nota de base
 

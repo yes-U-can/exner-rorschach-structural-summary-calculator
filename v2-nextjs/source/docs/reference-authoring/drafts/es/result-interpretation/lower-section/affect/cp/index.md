@@ -46,10 +46,10 @@ Se mira como una señal de afecto que se impone o colorea la percepción de un m
 ## Precauciones y distinciones
 
 - `CP` no es lo mismo que `Pure C`, `CF` o `C`.
-- Primero hay que confirmar que en la codificación realmente se cumple el criterio de special score `CP`.
+- Primero hay que confirmar que en la codificación realmente se cumple el criterio de código especial `CP`.
 - Su rareza le da peso clínico, pero no alcanza por sí solo para una conclusión amplia.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `CP` muestra una forma particular de intrusión afectiva, pero no define por sí solo dirección ni diagnóstico.
 - Debe leerse junto con `S`, `SumY`, `Pure C` y `DEPI`.
@@ -68,11 +68,11 @@ Se mira como una señal de afecto que se impone o colorea la percepción de un m
 - [[Interpretación/Afecto] Pure C](ref://result-interpretation/lower-section/affect/PureC)
 - [[Interpretación/Afecto] S](ref://result-interpretation/lower-section/affect/S_aff)
 - [[Interpretación/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
-- [[Codificación/Special Scores] CP](ref://scoring-input/special-score/CP)
+- [[Codificación/Códigos Especiales] CP](ref://scoring-input/special-score/CP)
 - [[Codificación/Determinantes] Y](ref://scoring-input/determinants/Y)
 - [[Codificación/Determinantes] FY](ref://scoring-input/determinants/FY)
 - [[Codificación/Determinantes] YF](ref://scoring-input/determinants/YF)
-- [[Interpretación/Special Indices] DEPI](ref://result-interpretation/special-indices/DEPI)
+- [[Interpretación/Índices Especiales] DEPI](ref://result-interpretation/special-indices/DEPI)
 
 ## Nota de fundamento
 

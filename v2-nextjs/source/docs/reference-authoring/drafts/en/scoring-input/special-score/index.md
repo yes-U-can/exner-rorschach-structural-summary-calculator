@@ -69,14 +69,13 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 
 ## Core Definition
 
-`Special Scores` are supplementary codes that capture qualities of a response that are not described fully by location, DQ, determinant, FQ, or content alone.  
-In the currently authored English set, the open routes are `COP`, `AG`, `MOR`, `AB`, `PSV`, `PER`, `CP`, `DV1`, `DV2`, `DR1`, `DR2`, `INCOM1`, `INCOM2`, `FABCOM1`, `FABCOM2`, `CONTAM`, and `ALOG`.
+`Special Scores` are supplementary codes that capture qualities of a response that are not described fully by location, DQ, determinant, FQ, or content alone.
 
 ## Application Conditions
 
 - Special Scores are added on top of the main coding; they do not replace location, determinants, or content.
 - Assign them only when the special quality is clearly present in the response.
-- In this stage, the open English routes are [`COP`](ref://scoring-input/special-score/COP), [`AG`](ref://scoring-input/special-score/AG), [`MOR`](ref://scoring-input/special-score/MOR), [`AB`](ref://scoring-input/special-score/AB), [`PSV`](ref://scoring-input/special-score/PSV), [`PER`](ref://scoring-input/special-score/PER), [`CP`](ref://scoring-input/special-score/CP), [`DV1`](ref://scoring-input/special-score/DV1), [`DV2`](ref://scoring-input/special-score/DV2), [`DR1`](ref://scoring-input/special-score/DR1), [`DR2`](ref://scoring-input/special-score/DR2), [`INCOM1`](ref://scoring-input/special-score/INCOM1), [`INCOM2`](ref://scoring-input/special-score/INCOM2), [`FABCOM1`](ref://scoring-input/special-score/FABCOM1), [`FABCOM2`](ref://scoring-input/special-score/FABCOM2), [`CONTAM`](ref://scoring-input/special-score/CONTAM), and [`ALOG`](ref://scoring-input/special-score/ALOG).
+- Review the code-specific criteria for [`COP`](ref://scoring-input/special-score/COP), [`AG`](ref://scoring-input/special-score/AG), [`MOR`](ref://scoring-input/special-score/MOR), [`AB`](ref://scoring-input/special-score/AB), [`PSV`](ref://scoring-input/special-score/PSV), [`PER`](ref://scoring-input/special-score/PER), [`CP`](ref://scoring-input/special-score/CP), [`DV1`](ref://scoring-input/special-score/DV1), [`DV2`](ref://scoring-input/special-score/DV2), [`DR1`](ref://scoring-input/special-score/DR1), [`DR2`](ref://scoring-input/special-score/DR2), [`INCOM1`](ref://scoring-input/special-score/INCOM1), [`INCOM2`](ref://scoring-input/special-score/INCOM2), [`FABCOM1`](ref://scoring-input/special-score/FABCOM1), [`FABCOM2`](ref://scoring-input/special-score/FABCOM2), [`CONTAM`](ref://scoring-input/special-score/CONTAM), and [`ALOG`](ref://scoring-input/special-score/ALOG).
 - `COP` and `AG` depend on movement content, usually [`M`](ref://scoring-input/determinants/M), [`FM`](ref://scoring-input/determinants/FM), or [`m`](ref://scoring-input/determinants/m).
 - `MOR` is added when damage, deterioration, death, or a distinctly morbid quality is attributed to the object.
 - `AB` is used for abstract formulation and often needs review together with [`Hx`](ref://scoring-input/contents/Hx), [`Art`](ref://scoring-input/contents/Art), and [`Ay`](ref://scoring-input/contents/Ay).

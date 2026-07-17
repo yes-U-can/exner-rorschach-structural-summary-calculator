@@ -19,38 +19,38 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
-# Document Name: [コーディング/場所] WS
+# [コーディング/場所] WS
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - WS
 - 全体+白地
 - 全体白地反応
 
-## Core Definition
+## 中核的定義
 
 `WS` は、ブロット全体を使いながら、白地も図の一部として取り込んでいるときの場所コードです。
 単に白い部分が背景に見えるだけではなく、白地が対象の構成に参加していなければなりません。
 
-## Application Conditions
+## 採点・適用条件
 
-- 反応がブロット全体を使っている。
-- 白地が対象の輪郭や重要部分として使われている。
-- inquiry で白地の使用が明確に確認できる。
+- 反応がブロット全体を使っています。
+- 白地が対象の輪郭や重要部分として使われています。
+- 質問段階で白地の使用が明確に確認できます。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
 - 全体だけなら [`W`](ref://scoring-input/location/W) です。
 - よく使われる部分+白地なら [`DS`](ref://scoring-input/location/DS) を使います。
 - 白地が単なる背景説明なら `WS` にはしません。
 
-## Cross References
+## 相互参照
 
 - [[コーディング/場所] W](ref://scoring-input/location/W)
 - [[コーディング/場所] DS](ref://scoring-input/location/DS)
 - [[コーディング/場所] DdS](ref://scoring-input/location/DdS)
 - [[コーディング/場所] S](ref://scoring-input/location/S)
 
-## Evidence Note
+## 根拠メモ
 
-- 詳細な出典比較と判断根拠は内部 provenance note に分離してあります。
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

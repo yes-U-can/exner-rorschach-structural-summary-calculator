@@ -3,7 +3,7 @@ canonicalRoute: "result-interpretation/special-indices"
 locale: "es"
 docKind: "interpretation-overview"
 canonicalTitle: "result-interpretation/special-indices"
-displayTitle: "[Interpretación/Special Indices] Special Indices"
+displayTitle: "[Interpretación/Índices Especiales] Índices Especiales"
 aliases:
   - "special indices"
   - "constellations"
@@ -25,17 +25,17 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/special-indices/index.md"
 ---
 
-# Nombre del documento: [Interpretación/Special Indices] Special Indices
+# Nombre del documento: [Interpretación/Índices Especiales] Índices Especiales
 
 ## Alias y búsqueda
 
-- special indices
+- Índices especiales
 - constellations
 - indices compuestos
 
 ## Definición central
 
-`Special Indices` reúne constelaciones compuestas construidas con varias variables del protocolo.
+`Índices Especiales` reúne constelaciones compuestas construidas con varias variables del protocolo.
 Cada índice no reemplaza la interpretación clínica; funciona como una pantalla actuarial que ayuda a decidir que zonas necesitan revisión prioritaria.
 
 ## Puntos de interpretación
@@ -52,7 +52,7 @@ Cada índice no reemplaza la interpretación clínica; funciona como una pantall
 - Las constelaciones pueden producir falsos positivos o pasar por alto casos individuales.
 - Siempre hay que volver a las variables de base que alimentan el índice.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - Estos indices son atajos de cribado, no sustitutos de la lectura por dominios.
 - Conviene reinterpretarlos a la luz de `Ideación`, `Affect`, `Interpersonal` y `Self Perception`.
@@ -68,12 +68,12 @@ Cada índice no reemplaza la interpretación clínica; funciona como una pantall
 ## Referencias cruzadas
 
 - [[Interpretación] result-interpretation](ref://result-interpretation)
-- [[Interpretación/Special Indices] PTI](ref://result-interpretation/special-indices/PTI)
-- [[Interpretación/Special Indices] DEPI](ref://result-interpretation/special-indices/DEPI)
-- [[Interpretación/Special Indices] CDI](ref://result-interpretation/special-indices/CDI)
-- [[Interpretación/Special Indices] Suicide Constellation](ref://result-interpretation/special-indices/SCON)
-- [[Interpretación/Special Indices] Hypervigilance Index](ref://result-interpretation/special-indices/HVI)
-- [[Interpretación/Special Indices] Obsessive Style Index](ref://result-interpretation/special-indices/OBS)
+- [[Interpretación/Índices Especiales] PTI](ref://result-interpretation/special-indices/PTI)
+- [[Interpretación/Índices Especiales] DEPI](ref://result-interpretation/special-indices/DEPI)
+- [[Interpretación/Índices Especiales] CDI](ref://result-interpretation/special-indices/CDI)
+- [[Interpretación/Índices Especiales] Suicide Constellation](ref://result-interpretation/special-indices/SCON)
+- [[Interpretación/Índices Especiales] Hypervigilance Index](ref://result-interpretation/special-indices/HVI)
+- [[Interpretación/Índices Especiales] Obsessive Style Index](ref://result-interpretation/special-indices/OBS)
 - [[Interpretación/Lower Section/Ideación] Ideación](ref://result-interpretation/lower-section/ideation)
 - [[Interpretación/Lower Section/Affect] Affect](ref://result-interpretation/lower-section/affect)
 - [[Interpretación/Lower Section/Interpersonal] Interpersonal](ref://result-interpretation/lower-section/interpersonal)

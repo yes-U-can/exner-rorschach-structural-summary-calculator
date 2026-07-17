@@ -32,13 +32,13 @@ provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/spec
 
 ## Definición central
 
-`FABCOM2` es un special score de nivel 2 para relaciones fabulas claramente más graves y más inverosímiles que `FABCOM1`.
+`FABCOM2` es un código especial de nivel 2 para relaciones fabulas claramente más graves y más inverosímiles que `FABCOM1`.
 Se usa cuando la organización de la respuesta queda deformada por una relación muy improbable entre sus elementos.
 
 ## Condiciones de aplicación
 
 - Usa `FABCOM2` cuando la relación entre los elementos es marcadamente ilógica, muy forzada o difícil de sostener como una desviación leve.
-- El problema principal debe estar en la conexión fabulizada del response y no solo en una palabra rara o en una mezcla incongruente aislada.
+- El problema principal debe estar en la conexión fabulizada de la respuesta y no solo en una palabra extraña o en una mezcla incongruente aislada.
 - `FABCOM2` se reserva para la versión más severa de esta distorsión relacional.
 - Su presencia suele anticipar relación posterior con `Lv2` y con el peso de `WSum6`.
 
@@ -51,7 +51,7 @@ Se usa cuando la organización de la respuesta queda deformada por una relación
 
 ## Referencias cruzadas
 
-- [[Codificación/Puntuaciones especiales] Special Scores](ref://scoring-input/special-score)
+- [[Codificación/Puntuaciones especiales] Códigos Especiales](ref://scoring-input/special-score)
 - [[Codificación/Puntuaciones especiales] FABCOM1](ref://scoring-input/special-score/FABCOM1)
 - [[Codificación/Puntuaciones especiales] INCOM2](ref://scoring-input/special-score/INCOM2)
 - [[Codificación/Puntuaciones especiales] CONTAM](ref://scoring-input/special-score/CONTAM)

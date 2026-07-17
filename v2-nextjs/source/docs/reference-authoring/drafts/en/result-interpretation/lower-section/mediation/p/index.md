@@ -41,7 +41,7 @@ In mediation, it helps estimate how closely perception approaches widely shared 
 
 ## Cautions / Distinctions
 
-- `P` depends on culturally grounded lists and locale context.
+- `P` must be coded from the applicable Comprehensive System criteria and interpreted with appropriate cultural context.
 - A high value does not automatically mean healthy adaptation, and a low value does not by itself imply pathology.
 - It is useful to review on which cards popular responses appear or fail to appear.
 

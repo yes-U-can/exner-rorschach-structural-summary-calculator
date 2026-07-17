@@ -45,7 +45,7 @@ En interpretación, funciona como una señal de imaginación humana poco organiz
 - Un solo caso no basta para una conclusión amplia.
 - Primero conviene revisar que la codificación de `M` sea correcta y que realmente no haya forma suficiente.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `Mnone` es una señal de alerta, pero necesita contexto para estimar su peso clínico.
 - Debe leerse con `Ma:Mp`, `M-`, el total de `M` y los indices de pensamiento más amplios.
@@ -64,7 +64,7 @@ En interpretación, funciona como una señal de imaginación humana poco organiz
 - [[Interpretación/Ideación] Ma:Mp](ref://result-interpretation/lower-section/ideation/Ma_Mp)
 - [[Interpretación/Ideación] M-](ref://result-interpretation/lower-section/ideation/M_minus)
 - [[Codificación/Determinantes] M](ref://scoring-input/determinants/M)
-- [[Interpretación/Special Indices] SCON](ref://result-interpretation/special-indices/SCON)
+- [[Interpretación/Índices Especiales] SCON](ref://result-interpretation/special-indices/SCON)
 
 ## Nota de fundamento
 

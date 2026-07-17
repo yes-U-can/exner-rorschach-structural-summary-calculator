@@ -56,10 +56,10 @@ Describe la composición de la demanda actual: si pesa más la tensión ligada a
 ## Precauciones y distinciones
 
 - `eb` es una relación, no una magnitud total.
-- Conviene revisar de que componentes concretos se forma: `FM`, `m`, `C'`, `T`, `V`, `Y`.
+- Conviene revisar de qué componentes concretos se forma: `FM`, `m`, `C'`, `T`, `V`, `Y`.
 - En protocolos cortos, la proporción puede verse exagerada o inestable.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `eb` no dice por sí solo cuánta carga total existe.
 - Para valorar el impacto real, hay que revisar `es`, `EA`, `D` y `AdjD`.

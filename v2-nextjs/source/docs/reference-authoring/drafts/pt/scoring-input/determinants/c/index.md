@@ -36,7 +36,7 @@ A percepção depende da cor mais do que da forma.
 ## Condições de aplicação
 
 - A cor precisa participar como elemento principal da resposta.
-- O apoio formal e ausente ou muito fraco para manter `FC` ou `CF`.
+- O apoio formal está ausente ou é muito fraco para manter `FC` ou `CF`.
 - Se ainda houver forma secundária clara, reconsidere [`CF`](ref://scoring-input/determinants/CF).
 - Se a forma dominar mais que a cor, reconsidere [`FC`](ref://scoring-input/determinants/FC).
 

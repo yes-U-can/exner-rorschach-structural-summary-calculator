@@ -45,12 +45,12 @@ Ele ajuda a estimar com que frequência o pensamento se afasta da experiência d
 
 - Valor alto não deve ser confundido automaticamente com transtorno formal do pensamento.
 - `Art` e `Ay` também podem ser influenciados por interesses culturais, estilo expressivo ou preferências simbólicas.
-- `AB` é escore especial, enquanto `Art` e `Ay` são conteúdos; a origem da elevação precisa ser revisada com cuidado.
+- `AB` é código especial, enquanto `Art` e `Ay` são conteúdos; a origem da elevação precisa ser revisada com cuidado.
 
 ## Referências cruzadas
 
 - [[Interpretação/Seção Inferior/Ideação] Ideação](ref://result-interpretation/lower-section/ideation)
-- [[Codificação/Special Score] AB](ref://scoring-input/special-score/AB)
+- [[Codificação/Código Especial] AB](ref://scoring-input/special-score/AB)
 - [[Codificação/Conteúdos] Art](ref://scoring-input/contents/Art)
 - [[Codificação/Conteúdos] Ay](ref://scoring-input/contents/Ay)
 - [[Interpretação/Ideação] MOR](ref://result-interpretation/lower-section/ideation/MOR)

@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/special-score"
 locale: "es"
 docKind: "coding-overview"
 canonicalTitle: "scoring-input/special-score"
-displayTitle: "[Codificación/Puntuaciones especiales] Special Scores"
+displayTitle: "[Codificación/Puntuaciones especiales] Códigos Especiales"
 aliases:
   - "Special Scores"
   - "puntuaciones especiales"
@@ -57,40 +57,40 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/special-score/index.md"
 ---
 
-# Nombre del documento: [Codificación/Puntuaciones especiales] Special Scores
+# Nombre del documento: [Codificación/Puntuaciones especiales] Códigos Especiales
 
 ## Alias y búsqueda
 
-- Special Scores
+- Códigos Especiales
 - puntuaciones especiales
 - códigos especiales
 
 ## Definición central
 
-`Special Scores` son códigos complementarios que capturan cualidades especiales de la respuesta que no quedan descritas solo por localización, DQ, determinante, FQ o contenido.
-En esta fase del corpus ES ya quedan abiertos `COP`, `AG`, `MOR`, `AB`, `PSV`, `PER`, `CP`, `DV1`, `DV2`, `DR1`, `DR2`, `INCOM1`, `INCOM2`, `FABCOM1`, `FABCOM2`, `CONTAM` y `ALOG`.
+`Códigos Especiales` son códigos complementarios que capturan cualidades especiales de la respuesta que no quedan descritas solo por localización, DQ, determinante, FQ o contenido.
+Los Códigos Especiales complementan la codificación principal y describen cualidades particulares de la respuesta que no quedan recogidas por la Localización, la Calidad Evolutiva, los Determinantes, la Calidad Formal o los Contenidos.
 
 ## Condiciones de aplicación
 
-- Los special scores se agregan a la codificación principal; no sustituyen localización, determinantes ni contenidos.
+- Los códigos especiales se agregan a la codificación principal; no sustituyen localización, determinantes ni contenidos.
 - Solo se asignan cuando la cualidad especial aparece de forma clara en la respuesta.
-- En esta fase ya quedan abiertas las rutas [`COP`](ref://scoring-input/special-score/COP), [`AG`](ref://scoring-input/special-score/AG), [`MOR`](ref://scoring-input/special-score/MOR), [`AB`](ref://scoring-input/special-score/AB), [`PSV`](ref://scoring-input/special-score/PSV), [`PER`](ref://scoring-input/special-score/PER), [`CP`](ref://scoring-input/special-score/CP), [`DV1`](ref://scoring-input/special-score/DV1), [`DV2`](ref://scoring-input/special-score/DV2), [`DR1`](ref://scoring-input/special-score/DR1), [`DR2`](ref://scoring-input/special-score/DR2), [`INCOM1`](ref://scoring-input/special-score/INCOM1), [`INCOM2`](ref://scoring-input/special-score/INCOM2), [`FABCOM1`](ref://scoring-input/special-score/FABCOM1), [`FABCOM2`](ref://scoring-input/special-score/FABCOM2), [`CONTAM`](ref://scoring-input/special-score/CONTAM) y [`ALOG`](ref://scoring-input/special-score/ALOG).
+- Cada código se aplica mediante sus criterios específicos; debe revisarse el documento correspondiente antes de asignarlo.
 - `COP` y `AG` dependen de que la respuesta tenga movimiento, normalmente [`M`](ref://scoring-input/determinants/M), [`FM`](ref://scoring-input/determinants/FM) o [`m`](ref://scoring-input/determinants/m).
 - `AB` se conecta con formulación abstracta y suele revisarse junto con [`Hx`](ref://scoring-input/contents/Hx), [`Art`](ref://scoring-input/contents/Art) y [`Ay`](ref://scoring-input/contents/Ay).
 - `PSV` se usa para perseveración y después se conecta con la ruta interpretativa [`PSV`](ref://result-interpretation/lower-section/processing/PSV).
 - `PER` se usa para justificación personalizada y se conecta después con [`PER`](ref://result-interpretation/lower-section/interpersonal/PER) y [`Xu%`](ref://result-interpretation/lower-section/mediation/Xu_percent).
 - `CP` se usa para color cromático proyectado sobre un área acromática y se revisa junto con [`FC`](ref://scoring-input/determinants/FC), [`FY`](ref://scoring-input/determinants/FY), [`YF`](ref://scoring-input/determinants/YF), [`Y`](ref://scoring-input/determinants/Y) y la ruta interpretativa [`CP`](ref://result-interpretation/lower-section/affect/CP).
 - `DV1` y `DV2` se usan para verbalización desviada y se conectan con [`Sum6`](ref://result-interpretation/lower-section/ideation/Sum6), [`Lv2`](ref://result-interpretation/lower-section/ideation/Lv2) y [`WSum6`](ref://result-interpretation/lower-section/ideation/WSum6).
-- `DR1` y `DR2` se usan para desviación del response como conjunto y deben distinguirse de `DV1 / DV2`, que se centran más en la formulación verbal.
+- `DR1` y `DR2` se usan para la desviación de la respuesta como conjunto y deben distinguirse de `DV1 / DV2`, que se centran más en la formulación verbal.
 - `INCOM1` y `INCOM2` se usan para combinaciones incongruentes y deben distinguirse tanto de `FABCOM` como de `CONTAM`.
 - `FABCOM1` y `FABCOM2` se usan para relaciones fabulas o muy improbables entre elementos de la respuesta y deben distinguirse de `INCOM` y `CONTAM`.
 - `CONTAM` se usa para contaminación perceptiva fusionada dentro de una sola respuesta.
-- `ALOG` se usa para lógica inapropiada en la explicación o justificación del response.
+- `ALOG` se usa para una lógica inapropiada en la explicación o justificación de la respuesta.
 - Estas codificaciones después se conectan con rutas interpretativas como [`COP`](ref://result-interpretation/lower-section/interpersonal/COP), [`AG`](ref://result-interpretation/lower-section/interpersonal/AG), [`MOR`](ref://result-interpretation/lower-section/ideation/MOR), [`2AB + Art + Ay`](ref://result-interpretation/lower-section/ideation/_2AB_Art_Ay), [`PER`](ref://result-interpretation/lower-section/interpersonal/PER) o [`CP`](ref://result-interpretation/lower-section/affect/CP).
 
 ## Precauciones y distinciones
 
-- Un special score no debe usarse como impresión global vaga; requiere un criterio observable en la respuesta.
+- Un código especial no debe usarse como impresión global vaga; requiere un criterio observable en la respuesta.
 - `COP` y `AG` no se asignan solo porque haya dos figuras o porque exista tensión general; debe verse interacción cooperativa o agresiva.
 - `MOR` tampoco equivale a "contenido triste" en general; exige daño, deterioro, muerte o cualidad mórbida atribuida al objeto.
 - `AB` no debe convertirse en categoría para cualquier respuesta rara o simbólica.
@@ -98,7 +98,7 @@ En esta fase del corpus ES ya quedan abiertos `COP`, `AG`, `MOR`, `AB`, `PSV`, `
 - `PER` no se asigna solo por el uso de "yo" o por comentario autobiográfico suelto.
 - `CP` no se mezcla con determinantes cromáticos normales cuando el color ha sido proyectado sobre una zona acromática.
 - `DV1` y `DV2` se diferencian por gravedad verbal, y no deben confundirse automáticamente con `DR1` o `DR2`.
-- `DR1` y `DR2` no se usan solo porque una respuesta sea larga; piden desviación del response global.
+- `DR1` y `DR2` no se usan solo porque una respuesta sea larga; requieren una desviación de la respuesta global.
 - `INCOM1` y `INCOM2` tampoco son sinónimos de fantasía amplia; piden una combinación internamente incongruente dentro de la respuesta.
 - `FABCOM1` y `FABCOM2` tampoco son un comodín para respuestas imaginativas; exigen una relación interna poco plausible entre elementos.
 - `CONTAM` exige fusión perceptiva; no basta una relación imposible entre dos elementos.

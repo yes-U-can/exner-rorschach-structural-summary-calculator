@@ -45,7 +45,7 @@ En interpretación indica cuánto se desplaza el foco hacia elementos menos comp
 - Si `Dd` sube junto con `P` bajo y `Xu%` alto, la lectura se acerca más a estilo perceptivo poco convencional.
 - Si `Dd` sube con `Zd` muy positivo, puede haber sobreinspección más que creatividad.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - La interpretación de `Dd` depende del equilibrio con `W` y `D`.
 - No conviene leerlo como rasgo estable sin revisar otras medidas de mediación y procesamiento.

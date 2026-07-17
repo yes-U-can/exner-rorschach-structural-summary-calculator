@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/special-score/PSV"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/special-score/PSV"
-displayTitle: "[Codificação/Escores Especiais] PSV"
+displayTitle: "[Codificação/Códigos Especiais] PSV"
 aliases:
   - "PSV"
   - "perseveração"
@@ -17,7 +17,7 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-special-score-ab-psv-per-cp-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificação/Escores Especiais] PSV
+# Nome do documento: [Codificação/Códigos Especiais] PSV
 
 ## Apelidos e busca
 
@@ -45,7 +45,7 @@ Ele não se refere a simples consistência; aponta para repetição estereotipad
 
 ## Referências cruzadas
 
-- [[Codificação/Escores Especiais] Special Scores](ref://scoring-input/special-score)
+- [[Codificação/Códigos Especiais] Códigos Especiais](ref://scoring-input/special-score)
 - [[Interpretação/Processing] PSV](ref://result-interpretation/lower-section/processing/PSV)
 
 ## Nota de base

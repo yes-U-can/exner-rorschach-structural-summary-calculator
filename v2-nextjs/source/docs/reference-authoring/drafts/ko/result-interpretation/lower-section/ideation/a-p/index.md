@@ -50,17 +50,12 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 
 - `a:p`는 역할 방향을 말해 주지만, 그 역할이 건강한 신중함인지 소극성인지, 혹은 왜곡된 수동성인지는 `Ma:Mp`, `M-`, `Mnone`이 함께 있어야 더 분명해진다.
 
-## 근거 메모
-
+## 함께 볼 변수
 - `Ma:Mp`
 - `M-`
 - `Mnone`
 - `M`
 - `a_p_inter`
-
-## 근거 메모
-
-이 문서는 서비스 운영용 참조 코퍼스로 정리된 런타임 문서입니다.
 
 ## 근거 메모
 

@@ -290,6 +290,9 @@ export default function ChatWidget({
     : null;
   const getFriendlyErrorMessage = useCallback((rawError: string) => {
     const message = rawError.toLowerCase();
+    if (message.includes('chat_app_rate_limited')) {
+      return t('chat.appRateLimited');
+    }
     if (message.includes('chat_provider_invalid_api_key')) {
       return t('chat.invalidApiKey');
     }

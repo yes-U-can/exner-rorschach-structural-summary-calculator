@@ -66,21 +66,21 @@ provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/dete
 ## Definición central
 
 Los determinantes registran que aspecto de la mancha hace que la respuesta parezca lo que parece.
-No dicen que ve el sujeto, sino por que lo ve de esa manera: forma, movimiento, color, sombreado, reflejo o dimensión.
+No indican qué ve la persona, sino por qué lo percibe de esa manera: forma, movimiento, color, sombreado, reflejo o dimensión.
 
 ## Condiciones de aplicación
 
 - La decisión de codificación debe basarse en las palabras del sujeto y en la encuesta, no en una inferencia libre del examinador.
 - Una respuesta puede contener más de un determinante si el sujeto realmente usa más de una característica de la mancha.
 - Cuando una respuesta compleja combina determinantes, se codifican en el orden en que aparecen en la fase de respuesta.
-- En este batch, los ejes ya redactados son movimiento [`M`](ref://scoring-input/determinants/M), [`FM`](ref://scoring-input/determinants/FM), [`m`](ref://scoring-input/determinants/m), color cromático [`FC`](ref://scoring-input/determinants/FC), [`CF`](ref://scoring-input/determinants/CF), [`C`](ref://scoring-input/determinants/C), [`Cn`](ref://scoring-input/determinants/Cn), color acromático [`FC'`](ref://scoring-input/determinants/FC%27), [`C'F`](ref://scoring-input/determinants/C%27F), [`C'`](ref://scoring-input/determinants/C%27), sombreado de textura [`FT`](ref://scoring-input/determinants/FT), [`TF`](ref://scoring-input/determinants/TF), [`T`](ref://scoring-input/determinants/T), vista [`FV`](ref://scoring-input/determinants/FV), [`VF`](ref://scoring-input/determinants/VF), [`V`](ref://scoring-input/determinants/V), sombreado difuso [`FY`](ref://scoring-input/determinants/FY), [`YF`](ref://scoring-input/determinants/YF), [`Y`](ref://scoring-input/determinants/Y), reflejo [`Fr`](ref://scoring-input/determinants/Fr), [`rF`](ref://scoring-input/determinants/rF), dimensión por forma [`FD`](ref://scoring-input/determinants/FD) y forma pura [`F`](ref://scoring-input/determinants/F).
+- Los determinantes se organizan en movimiento [`M`](ref://scoring-input/determinants/M), [`FM`](ref://scoring-input/determinants/FM), [`m`](ref://scoring-input/determinants/m); color cromático [`FC`](ref://scoring-input/determinants/FC), [`CF`](ref://scoring-input/determinants/CF), [`C`](ref://scoring-input/determinants/C), [`Cn`](ref://scoring-input/determinants/Cn); color acromático [`FC'`](ref://scoring-input/determinants/FC%27), [`C'F`](ref://scoring-input/determinants/C%27F), [`C'`](ref://scoring-input/determinants/C%27); sombreado de textura [`FT`](ref://scoring-input/determinants/FT), [`TF`](ref://scoring-input/determinants/TF), [`T`](ref://scoring-input/determinants/T); vista [`FV`](ref://scoring-input/determinants/FV), [`VF`](ref://scoring-input/determinants/VF), [`V`](ref://scoring-input/determinants/V); sombreado difuso [`FY`](ref://scoring-input/determinants/FY), [`YF`](ref://scoring-input/determinants/YF), [`Y`](ref://scoring-input/determinants/Y); reflejo [`Fr`](ref://scoring-input/determinants/Fr), [`rF`](ref://scoring-input/determinants/rF); dimensión por forma [`FD`](ref://scoring-input/determinants/FD); y forma pura [`F`](ref://scoring-input/determinants/F).
 
 ## Precauciones y distinciones
 
 - Los determinantes no sustituyen a [`FQ`](ref://scoring-input/fq) ni a la localización; son ejes distintos de la codificación.
 - En color cromático, la pregunta central es si domina la forma o el color. Esa distinción separa `FC`, `CF`, `C` y `Cn`.
 - En color acromático, la misma lógica reaparece con `FC'`, `C'F` y `C'`, pero usando rasgos negros, blancos o grises tomados como color.
-- En movimiento, la pregunta central es que tipo de acción se atribuye: humana, animal o inanimada.
+- En movimiento, la pregunta central es qué tipo de acción se atribuye: humana, animal o inanimada.
 - La misma palabra no debe codificarse dos veces para justificar varios determinantes del mismo tipo.
 - El uso interpretativo de estos códigos se revisa después en variables como [`FC:CF+C`](ref://result-interpretation/lower-section/affect/FC_CF_C), [`Lambda`](ref://result-interpretation/lower-section/core/Lambda), [`FM`](ref://result-interpretation/lower-section/core/FM) o [`m`](ref://result-interpretation/lower-section/core/m).
 

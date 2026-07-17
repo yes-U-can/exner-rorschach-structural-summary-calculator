@@ -71,6 +71,10 @@ function main() {
         localeSnapshot.staleEmbeddingCount === 0,
         `Stale embeddings remain for ${provider}:${locale}.`,
       );
+      assert(
+        localeSnapshot.contentHashMismatchCount === 0,
+        `Embedding content hashes do not match the current corpus for ${provider}:${locale} (${localeSnapshot.contentHashMismatchCount ?? 'unknown'} mismatch(es)).`,
+      );
       assert(localeSnapshot.ready === true, `Vector runtime is not ready for ${provider}:${locale}.`);
       assert(
         vectorRelease.corpus?.chunkCounts?.[locale] === localeSnapshot.chunkCount,
@@ -83,6 +87,7 @@ function main() {
         embeddings: localeSnapshot.embeddedChunkCount,
         chunks: localeSnapshot.chunkCount,
         stale: localeSnapshot.staleEmbeddingCount,
+        hashMismatches: localeSnapshot.contentHashMismatchCount,
         ready: localeSnapshot.ready,
       });
     }

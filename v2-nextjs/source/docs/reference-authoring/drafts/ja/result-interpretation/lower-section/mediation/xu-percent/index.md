@@ -21,40 +21,40 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-mediation-xplus-xu-processing-2026-03-10.md"
 ---
 
-# Document Name: [Interpretation/Mediation] Xu%
+# [Interpretation/Mediation] Xu%
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - Xu%
 - Unusual Form
 - 珍しい形態
 
-## Core Definition
+## 中核的定義
 
 `Xu%` は、形態としては受け入れ可能だが、より珍しい、あるいは慣習性の低い反応の割合を示します。
 合意からはやや離れていても、なお支えられている媒介様式を表す指標です。
 
-## Interpretation Points
+## 解釈の要点
 
 - `Xu%` が高いと、しみの読み方がより個人的で、慣習性の低い方向へ寄ることがあります。
 - `Xu%` が上がっても `X-%` が低いなら、その奇異さは歪みではなく、まだ許容範囲にとどまっている可能性があります。
 - `Xu%` と `X-%` が一緒に高いと、知覚の信頼性が下がっているかもしれません。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
 - `Xu%` は `X-%` と同じではありません。`Xu%` はまだ受け入れ可能で、`X-%` はより強い歪みを示します。
 - `Xu%` が高いからといって、すぐに病理と結びつけないでください。
 - 意味づけは `X+%`、`XA%`、`P`、そしてプロトコル全体との関係で変わります。
 
-## Cross References
+## 相互参照
 
-- [[Interpretation/Lower Section/Mediation] Mediation](ref://result-interpretation/lower-section/mediation)
-- [[Interpretation/Mediation] XA%](ref://result-interpretation/lower-section/mediation/XA_percent)
-- [[Interpretation/Mediation] X+%](ref://result-interpretation/lower-section/mediation/X_plus_percent)
-- [[Interpretation/Mediation] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
-- [[Interpretation/Mediation] P](ref://result-interpretation/lower-section/mediation/P)
+- [[解釈/下段/Mediation] Mediation](ref://result-interpretation/lower-section/mediation)
+- [[解釈/Mediation] XA%](ref://result-interpretation/lower-section/mediation/XA_percent)
+- [[解釈/Mediation] X+%](ref://result-interpretation/lower-section/mediation/X_plus_percent)
+- [[解釈/Mediation] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
+- [[解釈/Mediation] P](ref://result-interpretation/lower-section/mediation/P)
 - [[Coding/FQ] u](ref://scoring-input/fq/u)
 
-## Evidence Note
+## 根拠メモ
 
-- Detailed source comparison is stored in internal provenance notes.
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

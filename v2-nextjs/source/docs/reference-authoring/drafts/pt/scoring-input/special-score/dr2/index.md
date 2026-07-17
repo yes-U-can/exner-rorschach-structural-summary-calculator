@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/special-score/DR2"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/special-score/DR2"
-displayTitle: "[Codificação/Escores Especiais] DR2"
+displayTitle: "[Codificação/Códigos Especiais] DR2"
 aliases:
   - "DR2"
   - "resposta desviante nível 2"
@@ -21,7 +21,7 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-special-score-dv-dr-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificação/Escores Especiais] DR2
+# Nome do documento: [Codificação/Códigos Especiais] DR2
 
 ## Apelidos e busca
 
@@ -49,9 +49,9 @@ A organização global aparece seriamente perturbada ou muito afastada de um cur
 
 ## Referências cruzadas
 
-- [[Codificação/Escores Especiais] Special Scores](ref://scoring-input/special-score)
-- [[Codificação/Escores Especiais] DV2](ref://scoring-input/special-score/DV2)
-- [[Codificação/Escores Especiais] DR1](ref://scoring-input/special-score/DR1)
+- [[Codificação/Códigos Especiais] Códigos Especiais](ref://scoring-input/special-score)
+- [[Codificação/Códigos Especiais] DV2](ref://scoring-input/special-score/DV2)
+- [[Codificação/Códigos Especiais] DR1](ref://scoring-input/special-score/DR1)
 - [[Interpretação/Ideation] Sum6](ref://result-interpretation/lower-section/ideation/Sum6)
 - [[Interpretação/Ideation] Lv2](ref://result-interpretation/lower-section/ideation/Lv2)
 - [[Interpretação/Ideation] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)

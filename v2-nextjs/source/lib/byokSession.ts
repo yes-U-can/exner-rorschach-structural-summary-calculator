@@ -84,6 +84,12 @@ export function getByokFeedbackRateLimitKey(session: ByokSession) {
     .digest('base64url');
 }
 
+export function getByokChatRateLimitKey(session: ByokSession) {
+  return createHmac('sha256', getSecretMaterial())
+    .update(`ai-chat-session:${session.sessionId}`, 'utf8')
+    .digest('base64url');
+}
+
 function encode(value: Buffer) {
   return value.toString('base64url');
 }

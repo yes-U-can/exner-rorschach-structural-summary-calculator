@@ -9,6 +9,21 @@ import {
 // must never replace it in canonical, hreflang, Open Graph, or sitemap URLs.
 export const SITE_URL = 'https://exner.yesucan.co.kr';
 export const SITE_NAME = 'Yes, U Can!';
+export const PRODUCT_NAME_BY_LANGUAGE: Record<Language, string> = {
+  ko: 'Exner 로샤 종합체계 구조요약 계산기',
+  en: 'Exner Rorschach Comprehensive System Structural Summary Calculator',
+  ja: 'エクスナー・ロールシャッハ包括システム 構造一覧表計算ツール',
+  es: 'Calculadora del Sumario Estructural del Sistema Comprehensivo de Rorschach de Exner',
+  pt: 'Calculadora do Sumário Estrutural do Sistema Compreensivo de Rorschach de Exner',
+};
+
+export const SEO_KEYWORDS_BY_LANGUAGE: Record<Language, string[]> = {
+  ko: ['로샤', '엑스너', '종합체계', '구조요약', '로샤 채점', '임상심리'],
+  en: ['Rorschach', 'Exner', 'Comprehensive System', 'Structural Summary', 'Rorschach scoring', 'clinical psychology'],
+  ja: ['ロールシャッハ', 'エクスナー', '包括システム', '構造一覧表', 'スコアリング', '臨床心理学'],
+  es: ['Rorschach', 'Exner', 'Sistema Comprehensivo', 'Sumario Estructural', 'codificación', 'psicología clínica'],
+  pt: ['Rorschach', 'Exner', 'Sistema Compreensivo', 'Sumário Estrutural', 'codificação', 'psicologia clínica'],
+};
 
 export type SeoPage = 'home' | 'about' | 'terms' | 'privacy' | 'reference' | 'versions';
 
@@ -18,7 +33,7 @@ type SeoCopy = {
 };
 
 const HOME_DESCRIPTION_KO =
-  '회원가입, 설치, 결제가 필요 없는 Exner Rorschach 종합체계(Comprehensive System) 검사 구조요약 계산기입니다. 오픈소스이며, 본 서비스는 전문가의 임상 판단을 대체하지 않습니다.';
+  '회원가입, 설치, 결제가 필요 없는 오픈소스 Exner 로샤 종합체계(Comprehensive System, CS) 구조요약 계산기입니다. 본 서비스는 전문가의 임상 판단을 대체하지 않습니다.';
 
 export const SEO_COPY: Record<Language, Record<SeoPage, SeoCopy>> = {
   ko: {
@@ -28,11 +43,11 @@ export const SEO_COPY: Record<Language, Record<SeoPage, SeoCopy>> = {
     },
     about: {
       title: '서비스 소개',
-      description: 'Exner Rorschach 종합체계 구조요약 계산기와 선택형 AI 도우미의 목적, 범위, 임상적 한계를 설명합니다.',
+      description: 'Exner 로샤 종합체계 구조요약 계산기와 선택형 AI 도우미의 목적, 범위, 임상적 한계를 설명합니다.',
     },
     terms: {
       title: '이용약관',
-      description: 'Exner Rorschach 구조요약 계산기와 선택형 AI 도우미를 이용할 때 적용되는 조건과 책임 범위를 안내합니다.',
+      description: 'Exner 로샤 종합체계 구조요약 계산기와 선택형 AI 도우미를 이용할 때 적용되는 조건과 책임 범위를 안내합니다.',
     },
     privacy: {
       title: '개인정보처리방침',
@@ -40,11 +55,11 @@ export const SEO_COPY: Record<Language, Record<SeoPage, SeoCopy>> = {
     },
     reference: {
       title: '참조 문서',
-      description: 'Exner Rorschach 종합체계의 부호화 항목과 구조요약 변수를 검색하고 확인할 수 있는 참조 문서입니다.',
+      description: 'Exner 로샤 종합체계의 부호화 항목과 구조요약 변수를 검색하고 확인할 수 있는 참조 문서입니다.',
     },
     versions: {
       title: '버전 아카이브',
-      description: 'Exner Rorschach 구조요약 계산기 v2 Next.js와 v1 Google Apps Script의 릴리즈 기록을 확인할 수 있습니다.',
+      description: 'Exner 로샤 종합체계 구조요약 계산기 v2 Next.js와 v1 Google Apps Script의 릴리즈 기록을 확인할 수 있습니다.',
     },
   },
   en: {
@@ -83,17 +98,17 @@ export const SEO_COPY: Record<Language, Record<SeoPage, SeoCopy>> = {
     home: {
       title: SITE_NAME,
       description:
-        '会員登録、インストール、支払いが不要なオープンソースのExner Rorschach 包括システム（Comprehensive System）構造一覧表計算ツールです。本サービスは専門家の臨床判断に代わるものではありません。',
+        '会員登録、インストール、支払いが不要なオープンソースのエクスナー・ロールシャッハ包括システム（Comprehensive System, CS）構造一覧表計算ツールです。本サービスは専門家の臨床判断に代わるものではありません。',
     },
     about: {
       title: 'サービスについて',
       description:
-        'Exner Rorschach 構造一覧表計算ツールと任意のAIアシスタントの目的、範囲、臨床上の限界を説明します。',
+        'エクスナー・ロールシャッハ包括システムの構造一覧表計算ツールと任意のAIアシスタントの目的、範囲、臨床上の限界を説明します。',
     },
     terms: {
       title: '利用規約',
       description:
-        'Exner Rorschach 構造一覧表計算ツールと任意のAIアシスタントを利用する際の条件と責任範囲を案内します。',
+        'エクスナー・ロールシャッハ包括システムの構造一覧表計算ツールと任意のAIアシスタントを利用する際の条件と責任範囲を案内します。',
     },
     privacy: {
       title: 'プライバシーポリシー',
@@ -103,29 +118,29 @@ export const SEO_COPY: Record<Language, Record<SeoPage, SeoCopy>> = {
     reference: {
       title: '参照文書',
       description:
-        'Exner Rorschach 包括システムのコーディング項目と構造一覧表変数を検索できる参照文書です。',
+        'エクスナー・ロールシャッハ包括システムのコーディング項目と構造一覧表変数を検索できる参照文書です。',
     },
     versions: {
       title: 'バージョンアーカイブ',
       description:
-        'Exner Rorschach 構造一覧表計算ツールのNext.js v2とGoogle Apps Script v1のリリース履歴です。',
+        'エクスナー・ロールシャッハ包括システム構造一覧表計算ツールのNext.js v2とGoogle Apps Script v1のリリース履歴です。',
     },
   },
   es: {
     home: {
       title: SITE_NAME,
       description:
-        'Calculadora de código abierto del Resumen Estructural del Sistema Comprehensivo (Comprehensive System) de Rorschach de Exner, sin registro, instalación ni pago. No sustituye el juicio clínico profesional.',
+        'Calculadora de código abierto del Sumario Estructural del Sistema Comprehensivo (Comprehensive System) de Rorschach de Exner, sin registro, instalación ni pago. No sustituye el juicio clínico profesional.',
     },
     about: {
       title: 'Acerca del servicio',
       description:
-        'Propósito, alcance y límites clínicos de la calculadora del Resumen Estructural de Rorschach de Exner y sus asistentes de IA opcionales.',
+        'Propósito, alcance y límites clínicos de la calculadora del Sumario Estructural de Rorschach de Exner y sus asistentes de IA opcionales.',
     },
     terms: {
       title: 'Términos de uso',
       description:
-        'Condiciones y responsabilidades para usar la calculadora del Resumen Estructural de Rorschach de Exner y sus asistentes de IA opcionales.',
+        'Condiciones y responsabilidades para usar la calculadora del Sumario Estructural de Rorschach de Exner y sus asistentes de IA opcionales.',
     },
     privacy: {
       title: 'Política de privacidad',
@@ -135,12 +150,12 @@ export const SEO_COPY: Record<Language, Record<SeoPage, SeoCopy>> = {
     reference: {
       title: 'Documentos de referencia',
       description:
-        'Documentos consultables sobre la codificación y las variables del Resumen Estructural del Sistema Comprehensivo de Rorschach de Exner.',
+        'Documentos consultables sobre la codificación y las variables del Sumario Estructural del Sistema Comprehensivo de Rorschach de Exner.',
     },
     versions: {
       title: 'Archivo de versiones',
       description:
-        'Historial de versiones de la calculadora del Resumen Estructural de Rorschach de Exner: Next.js v2 y Google Apps Script v1.',
+        'Historial de versiones de la calculadora del Sumario Estructural de Rorschach de Exner: Next.js v2 y Google Apps Script v1.',
     },
   },
   pt: {

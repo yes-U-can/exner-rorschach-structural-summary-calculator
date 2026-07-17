@@ -30,16 +30,16 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-ideation-mor-sum6-
 
 - Lv2
 - marcadores de nível 2
-- escores especiais nível 2
+- códigos especiais nível 2
 
 ## Definição central
 
-`Lv2` mostra quantos escores especiais de nível 2 aparecem no protocolo.
+`Lv2` mostra quantos códigos especiais de nível 2 aparecem no protocolo.
 Na interpretação, ele indica quanto peso as peculiaridades cognitivas mais severas carregam dentro do pensamento.
 
 ## Pontos de interpretação
 
-- Se `Lv2 = 0`, não aparecem marcadores de nível 2 no conjunto de escores especiais.
+- Se `Lv2 = 0`, não aparecem marcadores de nível 2 no conjunto de códigos especiais.
 - Quando existe apenas uma ocorrência, o contexto precisa ser revisto com cuidado antes de superestimar.
 - Quando várias ocorrências de nível 2 aparecem, aumenta a chance de desorganização ideativa ou distorção mais marcada.
 
@@ -55,11 +55,11 @@ Na interpretação, ele indica quanto peso as peculiaridades cognitivas mais sev
 - [[Interpretação/Ideação] Sum6](ref://result-interpretation/lower-section/ideation/Sum6)
 - [[Interpretação/Ideação] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
 - [[Interpretação/Ideação] M-](ref://result-interpretation/lower-section/ideation/M_minus)
-- [[Codificação/Special Scores] DV2](ref://scoring-input/special-score/DV2)
-- [[Codificação/Special Scores] INCOM2](ref://scoring-input/special-score/INCOM2)
-- [[Codificação/Special Scores] DR2](ref://scoring-input/special-score/DR2)
-- [[Codificação/Special Scores] FABCOM2](ref://scoring-input/special-score/FABCOM2)
-- [[Codificação/Special Scores] CONTAM](ref://scoring-input/special-score/CONTAM)
+- [[Codificação/Códigos Especiais] DV2](ref://scoring-input/special-score/DV2)
+- [[Codificação/Códigos Especiais] INCOM2](ref://scoring-input/special-score/INCOM2)
+- [[Codificação/Códigos Especiais] DR2](ref://scoring-input/special-score/DR2)
+- [[Codificação/Códigos Especiais] FABCOM2](ref://scoring-input/special-score/FABCOM2)
+- [[Codificação/Códigos Especiais] CONTAM](ref://scoring-input/special-score/CONTAM)
 
 ## Nota de base
 

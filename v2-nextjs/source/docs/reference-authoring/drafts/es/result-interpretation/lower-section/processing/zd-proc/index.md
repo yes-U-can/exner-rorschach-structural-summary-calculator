@@ -48,7 +48,7 @@ Se usa para estimar si el procesamiento tiende a ser equilibrado, excesivo o ins
 - Un `Zd` negativo no implica por sí solo deterioro grave.
 - El valor necesita contexto de `Zf`, `PSV` y `W:D:Dd`.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `Zd` solo habla de la proporción entre esfuerzo real y esperado.
 - Conviene leerlo junto con `Zf`, `PSV`, `W:D:Dd`, `DQ+` y `DQv`.

@@ -45,7 +45,7 @@ En interpretación se usa como indicador básico de atención a unidades practic
 - Si `D` es alto pero `P` es bajo o `Xu%` es alto, la aparente convencionalidad puede no sostenerse.
 - Un `D` bajo debe leerse junto a `W` y `Dd`, no de forma aislada.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `D` necesita el patrón completo `W:D:Dd`.
 - No debe traducirse solo a "buena adaptación cotidiana".

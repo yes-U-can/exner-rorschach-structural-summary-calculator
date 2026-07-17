@@ -68,8 +68,8 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-indices-20
 - [[解釈/処理] Zd](ref://result-interpretation/lower-section/processing/Zd_proc)
 - [[解釈/上段] Dd](ref://result-interpretation/upper-section/Dd)
 - [[解釈/知覚の媒介] P](ref://result-interpretation/lower-section/mediation/P)
-- [[符号化/形態水準] +](ref://scoring-input/fq/%2B)
-- [[符号化/平凡反応] Popular](ref://scoring-input/popular)
+- [[コーディング/形態水準] +](ref://scoring-input/fq/%2B)
+- [[コーディング/平凡反応] Popular](ref://scoring-input/popular)
 
 ## 根拠メモ
 

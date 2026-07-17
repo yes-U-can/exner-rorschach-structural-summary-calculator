@@ -37,7 +37,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretat
 
 ## Definición central
 
-`Self Perception` reúne las variables que ayudan a leer como la persona se mira a sí misma, cuánto valor se asigna, cuánta observación interna hace y que tono tiene su autoimagen.
+`Autopercepción` reúne las variables que ayudan a leer cómo la persona se mira a sí misma, cuánto valor se asigna, cuánta observación interna hace y qué tono tiene su autoimagen.
 En este grupo se revisan `3r+(2)/R`, `Fr+rF`, `SumV`, `FD`, `An+Xy`, `MOR` y `H ratio`.
 
 ## Puntos de interpretación
@@ -53,7 +53,7 @@ En este grupo se revisan `3r+(2)/R`, `Fr+rF`, `SumV`, `FD`, `An+Xy`, `MOR` y `H 
 - Autoobservación, egocentrismo, autocrítica y vulnerabilidad corporal pueden subir por razones distintas.
 - Ninguna variable de este grupo debe leerse aislada del contexto interpersonal y afectivo.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - La autoimagen cambia con el estado afectivo, el estrés y la historia reciente.
 - Conviene integrar `Self Perception` con `Interpersonal`, `Affect` y `Core`.

@@ -50,7 +50,7 @@ Busca estimar cuánta carga sigue presente cuando se ajusta parte del peso de `m
 - Un valor alto no específica por sí solo la fuente exacta del malestar.
 - Conviene revisar si el peso viene de `m`, `Y` u otros componentes de carga.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `AdjEs` no basta por sí sola para decidir gravedad clínica.
 - Debe leerse junto con `es`, `D`, `AdjD`, `EA`, `m` y `SumY`.

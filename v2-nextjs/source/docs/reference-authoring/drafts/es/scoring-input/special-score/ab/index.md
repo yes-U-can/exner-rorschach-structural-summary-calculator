@@ -48,7 +48,7 @@ La idea central es que el sujeto nombra una abstracción o una cualidad global e
 
 ## Referencias cruzadas
 
-- [[Codificación/Puntuaciones especiales] Special Scores](ref://scoring-input/special-score)
+- [[Codificación/Puntuaciones especiales] Códigos Especiales](ref://scoring-input/special-score)
 - [[Codificación/Contenido] Hx](ref://scoring-input/contents/Hx)
 - [[Codificación/Contenido] Art](ref://scoring-input/contents/Art)
 - [[Codificación/Contenido] Ay](ref://scoring-input/contents/Ay)

@@ -1,8 +1,9 @@
 import routeDocsArtifact from '@/generated/reference-corpus/route-docs.json';
 import chunksArtifact from '@/generated/reference-corpus/chunks.json';
 import manifestArtifact from '@/generated/reference-corpus/manifest.json';
+import { DOC_STRUCTURE } from '@/lib/constants';
 import { buildReferenceHrefFromSlug, buildReferenceUrlSlug } from '@/lib/referenceRoutes';
-import type { Language } from '@/types';
+import type { InfoNode, Language } from '@/types';
 
 export type ReferenceDocStatus = 'stub' | 'draft' | 'reviewed' | 'locked';
 export type ReferenceDocKind =
@@ -28,14 +29,13 @@ export type ReferenceDocRecord = {
   evidenceTier: string | null;
   status: ReferenceDocStatus;
   runtimeReady: boolean;
-  provenanceNote: string;
-  sourcePath: string;
 };
 
 export type ReferenceChunkRecord = {
   locale: Language;
   canonicalRoute: string;
   chunkId: string;
+  contentHash: string;
   headingPath: string[];
   text: string;
   aliases: string[];
@@ -90,6 +90,50 @@ const runtimeDocsBySlugMap = new Map<Language, Map<string, ReferenceDocRecord>>(
 const runtimeDocsByCanonicalRouteMap = new Map<Language, Map<string, ReferenceDocRecord>>();
 const runtimeDocChildrenByLocaleMap = new Map<Language, Map<string, ReferenceDocRecord[]>>();
 
+function buildReferenceNavigationRankMap(nodes: InfoNode[]): Map<string, number> {
+  const ranks = new Map<string, number>();
+  let nextRank = 0;
+
+  const visit = (items: InfoNode[], parentRoute: string[]) => {
+    for (const item of items) {
+      const route = [...parentRoute, item.id];
+      ranks.set(route.join('/'), nextRank);
+      nextRank += 1;
+
+      for (const code of item.codes ?? []) {
+        ranks.set([...route, code].join('/'), nextRank);
+        nextRank += 1;
+      }
+
+      if (item.children?.length) {
+        visit(item.children, route);
+      }
+    }
+  };
+
+  visit(nodes, []);
+  return ranks;
+}
+
+const referenceNavigationRanks = buildReferenceNavigationRankMap(DOC_STRUCTURE);
+
+function compareReferenceNavigationOrder(a: ReferenceDocRecord, b: ReferenceDocRecord): number {
+  const aRank = referenceNavigationRanks.get(a.canonicalRoute);
+  const bRank = referenceNavigationRanks.get(b.canonicalRoute);
+
+  if (aRank !== undefined || bRank !== undefined) {
+    if (aRank === undefined) return 1;
+    if (bRank === undefined) return -1;
+    return aRank - bRank;
+  }
+
+  if (a.kind !== b.kind) {
+    return a.kind === 'category' ? -1 : 1;
+  }
+
+  return a.canonicalRoute.localeCompare(b.canonicalRoute, 'en');
+}
+
 for (const locale of routeDocs.locales) {
   const localeDocs = routeDocs.docsByLocale[locale] ?? [];
   const runtimeDocs = localeDocs.filter((doc) => doc.runtimeReady);
@@ -114,12 +158,7 @@ for (const locale of routeDocs.locales) {
   }
 
   for (const siblings of runtimeChildren.values()) {
-    siblings.sort((a, b) => {
-      if (a.kind !== b.kind) {
-        return a.kind === 'category' ? -1 : 1;
-      }
-      return a.title.localeCompare(b.title);
-    });
+    siblings.sort(compareReferenceNavigationOrder);
   }
 
   runtimeDocsBySlugMap.set(locale, runtimeDocsBySlug);

@@ -39,7 +39,7 @@ La idea central es que el color no está en la mancha, pero el sujeto lo atribuy
 - Se considera cuando una parte acromática es descrita como roja, azul, verde u otro color cromático.
 - El código se agrega como puntuación especial y no como determinante cromático normal.
 - Antes de asignarlo conviene descartar desliz verbal o confusión visual.
-- En muchos casos se revisa junto con [`FY`](ref://scoring-input/determinants/FY), [`YF`](ref://scoring-input/determinants/Y) o [`Y`](ref://scoring-input/determinants/Y), y se conecta después con [`CP`](ref://result-interpretation/lower-section/affect/CP).
+- En muchos casos se revisa junto con [`FY`](ref://scoring-input/determinants/FY), [`YF`](ref://scoring-input/determinants/YF) o [`Y`](ref://scoring-input/determinants/Y), y se conecta después con [`CP`](ref://result-interpretation/lower-section/affect/CP).
 
 ## Precauciones y distinciones
 
@@ -49,7 +49,7 @@ La idea central es que el color no está en la mancha, pero el sujeto lo atribuy
 
 ## Referencias cruzadas
 
-- [[Codificación/Puntuaciones especiales] Special Scores](ref://scoring-input/special-score)
+- [[Codificación/Puntuaciones especiales] Códigos Especiales](ref://scoring-input/special-score)
 - [[Codificación/Determinante] FC](ref://scoring-input/determinants/FC)
 - [[Codificación/Determinante] FY](ref://scoring-input/determinants/FY)
 - [[Codificación/Determinante] YF](ref://scoring-input/determinants/YF)

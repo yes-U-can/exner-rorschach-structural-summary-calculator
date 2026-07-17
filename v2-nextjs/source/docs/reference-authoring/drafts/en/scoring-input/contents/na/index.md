@@ -36,12 +36,13 @@ The response points to "nature" as a whole rather than to one isolated object.
 
 - Use it for sky, sea, water, snow, rain, distant mountains, broad vegetation, or another response understood as general nature.
 - The focus has to stay on the natural setting or phenomenon itself.
-- If `Na` appears together with [`Bt`](ref://scoring-input/contents/Bt) or [`Ls`](ref://scoring-input/contents/Ls), `Na` often takes priority and displaces those codes.
+- If `Na` appears together with [`Bt`](ref://scoring-input/contents/Bt) or [`Ls`](ref://scoring-input/contents/Ls), code `Na` only; do not also code `Bt` or `Ls`.
+- If `Na` is absent but both `Bt` and `Ls` apply, choose only the one that best represents the response.
 - If the person describes a cloud as an isolated object, first reconsider [`Cl`](ref://scoring-input/contents/Cl); if the person describes a broad natural environment, reconsider `Na`.
 
 ## Cautions / Distinctions
 
-- `Na` has priority over [`Bt`](ref://scoring-input/contents/Bt) and [`Ls`](ref://scoring-input/contents/Ls) when the real focus is the natural environment.
+- `Na` takes priority over [`Bt`](ref://scoring-input/contents/Bt) and [`Ls`](ref://scoring-input/contents/Ls); these three codes are not combined in one response.
 - `Na` is not used for a map; that belongs to [`Ge`](ref://scoring-input/contents/Ge).
 - An isolated botanical detail does not justify `Na` by itself if the response is not describing general nature.
 

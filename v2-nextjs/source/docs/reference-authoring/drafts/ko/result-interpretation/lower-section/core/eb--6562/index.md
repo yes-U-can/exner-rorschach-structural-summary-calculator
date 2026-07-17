@@ -63,8 +63,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `eb`는 요구의 성질을 말할 뿐, 전체 요구량을 직접 말하지 않는다.
 - 실제 과부하 여부는 `es`, `EA`, `D`, `AdjD`를 함께 봐야 한다.
 
-## 근거 메모
-
+## 함께 볼 변수
 - `es`
 - `EA`
 - `D`
@@ -75,10 +74,6 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `SumT`
 - `SumV`
 - `SumY`
-
-## 근거 메모
-
-이 문서는 서비스 운영용 참조 코퍼스로 정리된 런타임 문서입니다.
 
 ## 근거 메모
 

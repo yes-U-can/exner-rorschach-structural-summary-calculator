@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/special-score"
 locale: "pt"
 docKind: "coding-overview"
 canonicalTitle: "scoring-input/special-score"
-displayTitle: "[Codificação/Escores Especiais] Special Scores"
+displayTitle: "[Codificação/Códigos Especiais] Códigos Especiais"
 aliases:
   - "Special Scores"
   - "escores especiais"
@@ -57,24 +57,24 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-special-score-overview-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificação/Escores Especiais] Special Scores
+# Nome do documento: [Codificação/Códigos Especiais] Códigos Especiais
 
 ## Apelidos e busca
 
-- Special Scores
-- escores especiais
+- Códigos Especiais
+- códigos especiais
 - codificação especial
 
 ## Definição central
 
-`Special Scores` são códigos suplementares usados quando a resposta mostra uma qualidade que não fica totalmente descrita por localização, DQ, determinante, FQ ou conteúdo.
-No conjunto PT atualmente aberto, as rotas redigidas são `COP`, `AG`, `MOR`, `AB`, `PSV`, `PER`, `CP`, `DV1`, `DV2`, `DR1`, `DR2`, `INCOM1`, `INCOM2`, `FABCOM1`, `FABCOM2`, `CONTAM` e `ALOG`.
+`Códigos Especiais` são códigos suplementares usados quando a resposta mostra uma qualidade que não fica totalmente descrita por localização, DQ, determinante, FQ ou conteúdo.
+Cada código descreve um aspecto específico da resposta e deve ser aplicado pelos critérios próprios do Sistema Compreensivo.
 
 ## Condições de aplicação
 
-- Os escores especiais são adicionados sobre a codificação principal; eles não substituem localização, determinantes nem conteúdo.
-- Use-os somente quando a qualidade especial estiver claramente presente na resposta.
-- Neste ponto do conjunto PT, as rotas abertas são [`COP`](ref://scoring-input/special-score/COP), [`AG`](ref://scoring-input/special-score/AG), [`MOR`](ref://scoring-input/special-score/MOR), [`AB`](ref://scoring-input/special-score/AB), [`PSV`](ref://scoring-input/special-score/PSV), [`PER`](ref://scoring-input/special-score/PER), [`CP`](ref://scoring-input/special-score/CP), [`DV1`](ref://scoring-input/special-score/DV1), [`DV2`](ref://scoring-input/special-score/DV2), [`DR1`](ref://scoring-input/special-score/DR1), [`DR2`](ref://scoring-input/special-score/DR2), [`INCOM1`](ref://scoring-input/special-score/INCOM1), [`INCOM2`](ref://scoring-input/special-score/INCOM2), [`FABCOM1`](ref://scoring-input/special-score/FABCOM1), [`FABCOM2`](ref://scoring-input/special-score/FABCOM2), [`CONTAM`](ref://scoring-input/special-score/CONTAM) e [`ALOG`](ref://scoring-input/special-score/ALOG).
+- Os Códigos Especiais são acrescentados à codificação principal; eles não substituem Localização, Determinantes nem Conteúdos.
+- Devem ser usados somente quando a qualidade especial estiver claramente presente na resposta.
+- Cada código deve ser conferido em seu documento específico antes de ser atribuído.
 - `COP` e `AG` dependem de movimento, em geral [`M`](ref://scoring-input/determinants/M), [`FM`](ref://scoring-input/determinants/FM) ou [`m`](ref://scoring-input/determinants/m).
 - `MOR` é acrescentado quando o objeto aparece morto, danificado, arruinado, deteriorado ou claramente mórbido.
 - `AB` é usado para formulação abstrata e costuma ser revisto junto com [`Hx`](ref://scoring-input/contents/Hx), [`Art`](ref://scoring-input/contents/Art) e [`Ay`](ref://scoring-input/contents/Ay).
@@ -88,7 +88,7 @@ No conjunto PT atualmente aberto, as rotas redigidas são `COP`, `AG`, `MOR`, `A
 
 ## Cuidados e diferenciação
 
-- Um escore especial não deve ser usado como impressão vaga; ele exige um sinal observável na resposta.
+- Um Código Especial não deve ser usado como impressão vaga; ele exige um sinal observável na resposta.
 - `COP` e `AG` não são dados só porque duas figuras aparecem juntas; deve existir ação cooperativa ou agressiva clara.
 - `MOR` não significa qualquer conteúdo triste ou desagradável; ele exige dano, morte, deterioração, ruína ou qualidade diretamente mórbida.
 - `AB` não deve virar etiqueta geral para qualquer resposta simbólica ou sofisticada.
@@ -96,27 +96,27 @@ No conjunto PT atualmente aberto, as rotas redigidas são `COP`, `AG`, `MOR`, `A
 - `PER` não é dado só porque a pessoa usa "eu" ou faz comentário autobiográfico solto.
 - `CP` exige cor projetada em área acromática, e não cor realmente presente na mancha.
 - `DV` trata de forma verbal; `DR` trata de organização global da resposta.
-- Conteúdo humano pode depois ligar-se a [`GHR`](ref://scoring-input/gphr/GHR) ou [`PHR`](ref://scoring-input/gphr/PHR), mas os escores especiais não decidem isso sozinhos.
+- O conteúdo humano pode depois ligar-se a [`GHR`](ref://scoring-input/gphr/GHR) ou [`PHR`](ref://scoring-input/gphr/PHR), mas os Códigos Especiais não decidem isso sozinhos.
 
 ## Referências cruzadas
 
-- [[Codificação/Escore Especial] COP](ref://scoring-input/special-score/COP)
-- [[Codificação/Escore Especial] AG](ref://scoring-input/special-score/AG)
-- [[Codificação/Escore Especial] MOR](ref://scoring-input/special-score/MOR)
-- [[Codificação/Escore Especial] AB](ref://scoring-input/special-score/AB)
-- [[Codificação/Escore Especial] PSV](ref://scoring-input/special-score/PSV)
-- [[Codificação/Escore Especial] PER](ref://scoring-input/special-score/PER)
-- [[Codificação/Escore Especial] CP](ref://scoring-input/special-score/CP)
-- [[Codificação/Escore Especial] DV1](ref://scoring-input/special-score/DV1)
-- [[Codificação/Escore Especial] DV2](ref://scoring-input/special-score/DV2)
-- [[Codificação/Escore Especial] DR1](ref://scoring-input/special-score/DR1)
-- [[Codificação/Escore Especial] DR2](ref://scoring-input/special-score/DR2)
-- [[Codificação/Escore Especial] INCOM1](ref://scoring-input/special-score/INCOM1)
-- [[Codificação/Escore Especial] INCOM2](ref://scoring-input/special-score/INCOM2)
-- [[Codificação/Escore Especial] FABCOM1](ref://scoring-input/special-score/FABCOM1)
-- [[Codificação/Escore Especial] FABCOM2](ref://scoring-input/special-score/FABCOM2)
-- [[Codificação/Escore Especial] CONTAM](ref://scoring-input/special-score/CONTAM)
-- [[Codificação/Escore Especial] ALOG](ref://scoring-input/special-score/ALOG)
+- [[Codificação/Código Especial] COP](ref://scoring-input/special-score/COP)
+- [[Codificação/Código Especial] AG](ref://scoring-input/special-score/AG)
+- [[Codificação/Código Especial] MOR](ref://scoring-input/special-score/MOR)
+- [[Codificação/Código Especial] AB](ref://scoring-input/special-score/AB)
+- [[Codificação/Código Especial] PSV](ref://scoring-input/special-score/PSV)
+- [[Codificação/Código Especial] PER](ref://scoring-input/special-score/PER)
+- [[Codificação/Código Especial] CP](ref://scoring-input/special-score/CP)
+- [[Codificação/Código Especial] DV1](ref://scoring-input/special-score/DV1)
+- [[Codificação/Código Especial] DV2](ref://scoring-input/special-score/DV2)
+- [[Codificação/Código Especial] DR1](ref://scoring-input/special-score/DR1)
+- [[Codificação/Código Especial] DR2](ref://scoring-input/special-score/DR2)
+- [[Codificação/Código Especial] INCOM1](ref://scoring-input/special-score/INCOM1)
+- [[Codificação/Código Especial] INCOM2](ref://scoring-input/special-score/INCOM2)
+- [[Codificação/Código Especial] FABCOM1](ref://scoring-input/special-score/FABCOM1)
+- [[Codificação/Código Especial] FABCOM2](ref://scoring-input/special-score/FABCOM2)
+- [[Codificação/Código Especial] CONTAM](ref://scoring-input/special-score/CONTAM)
+- [[Codificação/Código Especial] ALOG](ref://scoring-input/special-score/ALOG)
 - [[Codificação/Determinantes] M](ref://scoring-input/determinants/M)
 - [[Codificação/Determinantes] FM](ref://scoring-input/determinants/FM)
 - [[Codificação/Determinantes] m](ref://scoring-input/determinants/m)

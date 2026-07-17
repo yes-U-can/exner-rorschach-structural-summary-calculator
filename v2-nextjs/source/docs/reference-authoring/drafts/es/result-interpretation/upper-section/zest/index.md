@@ -36,7 +36,7 @@ Se usa como línea de base para calcular `Zd`, más que como una variable clíni
 ## Puntos de interpretación
 
 - `ZEst` funciona como valor de referencia.
-- Permite comparar si la organización real (`ZSum`) quedo por encima o por debajo de lo esperable.
+- Permite comparar si la organización real (`ZSum`) quedó por encima o por debajo de lo esperable.
 - El foco interpretativo suele ponerse en `Zd`, no en `ZEst` por separado.
 
 ## Precauciones y distinciones
@@ -44,7 +44,7 @@ Se usa como línea de base para calcular `Zd`, más que como una variable clíni
 - Un `ZEst` alto suele reflejar simplemente que `Zf` también es alto.
 - Conviene evitar frases como "ZEst alto" o "ZEst bajo" si no se explica su función comparativa.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `ZEst` por sí solo no describe eficiencia, rigidez ni complejidad.
 - Su utilidad principal está en servir de base para `Zd`.

@@ -5,6 +5,7 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import remarkGfm from 'remark-gfm';
 import stripMarkdown from 'strip-markdown';
+import { buildReferenceChunkContentHash } from './lib/referenceChunkContent.mjs';
 import { buildReferenceCorpusFingerprint } from './lib/referenceCorpusFingerprint.mjs';
 import { getSpecialIndexEvidence } from './lib/specialIndexEvidence.mjs';
 import { writeStableJsonArtifact } from './lib/stableJsonArtifact.mjs';
@@ -110,7 +111,7 @@ const SECTION_LABELS = {
     conditions: 'Conditions',
     interpretation: 'Interpretation',
     cautions: 'Cautions',
-    related: 'Related Variables',
+    related: 'Variables to Review Together',
     crossReferences: 'Cross References',
     evidence: 'Evidence Note',
   },
@@ -120,17 +121,17 @@ const SECTION_LABELS = {
     conditions: '\uCC44\uC810/\uC801\uC6A9 \uC870\uAC74',
     interpretation: '\uD574\uC11D \uD3EC\uC778\uD2B8',
     cautions: '\uC8FC\uC758\uC0AC\uD56D/\uAC10\uBCC4 \uAE30\uC900',
-    related: '\uAD00\uB828 \uBCC0\uC218',
+    related: '\uD568\uAED8 \uBCFC \uBCC0\uC218',
     crossReferences: '\uC0C1\uD638 \uCC38\uC870',
     evidence: '\uADFC\uAC70 \uBA54\uBAA8',
   },
   ja: {
-    aliases: '\u5225\u540D/\u691C\u7D22\u8A9E',
-    definition: '\u6838\u5FC3\u5B9A\u7FA9',
-    conditions: '\u63A1\u70B9/\u9069\u7528\u6761\u4EF6',
-    interpretation: '\u89E3\u91C8\u30DD\u30A4\u30F3\u30C8',
-    cautions: '\u6CE8\u610F\u4E8B\u9805/\u9451\u5225\u57FA\u6E96',
-    related: '\u95A2\u9023\u5909\u6570',
+    aliases: '\u5225\u540D\u30FB\u691C\u7D22\u8A9E',
+    definition: '\u4E2D\u6838\u7684\u5B9A\u7FA9',
+    conditions: '\u63A1\u70B9\u30FB\u9069\u7528\u6761\u4EF6',
+    interpretation: '\u89E3\u91C8\u306E\u8981\u70B9',
+    cautions: '\u6CE8\u610F\u70B9\u30FB\u9451\u5225',
+    related: '\u4F75\u305B\u3066\u78BA\u8A8D\u3059\u308B\u5909\u6570',
     crossReferences: '\u76F8\u4E92\u53C2\u7167',
     evidence: '\u6839\u62E0\u30E1\u30E2',
   },
@@ -140,7 +141,7 @@ const SECTION_LABELS = {
     conditions: 'Condiciones de aplicaci\u00F3n',
     interpretation: 'Puntos de interpretaci\u00F3n',
     cautions: 'Precauciones / distinciones',
-    related: 'Variables relacionadas',
+    related: 'Variables para revisar en conjunto',
     crossReferences: 'Referencias cruzadas',
     evidence: 'Nota de evidencia',
   },
@@ -150,10 +151,21 @@ const SECTION_LABELS = {
     conditions: 'Condi\u00E7\u00F5es de aplica\u00E7\u00E3o',
     interpretation: 'Pontos de interpreta\u00E7\u00E3o',
     cautions: 'Cuidados / distin\u00E7\u00F5es',
-    related: 'Vari\u00E1veis relacionadas',
+    related: 'Vari\u00E1veis para revisar em conjunto',
     crossReferences: 'Refer\u00EAncias cruzadas',
     evidence: 'Nota de evid\u00EAncia',
   },
+};
+
+const NORMALIZED_SECTION_HEADINGS = {
+  aliases: 'Aliases',
+  definition: 'Definition',
+  conditions: 'Conditions',
+  interpretation: 'Interpretation',
+  cautions: 'Cautions',
+  related: 'Related Variables',
+  crossReferences: 'Cross References',
+  evidence: 'Evidence Note',
 };
 
 const HEADING_LABELS = new Map([
@@ -165,24 +177,29 @@ const HEADING_LABELS = new Map([
   ['apelidos e busca', 'Aliases'],
   ['\uBCC4\uCE6D/\uAC80\uC0C9\uC5B4', 'Aliases'],
   ['\u5225\u540D/\u691C\u7D22\u8A9E', 'Aliases'],
+  ['\u5225\u540D\u30FB\u691C\u7D22\u8A9E', 'Aliases'],
   ['core definition', 'Definition'],
   ['definition', 'Definition'],
   ['definici\u00F3n central', 'Definition'],
   ['defini\u00E7\u00E3o central', 'Definition'],
   ['\uD575\uC2EC \uC815\uC758', 'Definition'],
   ['\u6838\u5FC3\u5B9A\u7FA9', 'Definition'],
+  ['\u4E2D\u6838\u7684\u5B9A\u7FA9', 'Definition'],
   ['application conditions', 'Conditions'],
   ['conditions', 'Conditions'],
   ['condiciones de aplicaci\u00F3n', 'Conditions'],
   ['condi\u00E7\u00F5es de aplica\u00E7\u00E3o', 'Conditions'],
   ['\uCC44\uC810/\uC801\uC6A9 \uC870\uAC74', 'Conditions'],
   ['\u63A1\u70B9/\u9069\u7528\u6761\u4EF6', 'Conditions'],
+  ['\u63A1\u70B9\u30FB\u9069\u7528\u6761\u4EF6', 'Conditions'],
   ['interpretation points', 'Interpretation'],
   ['interpretation', 'Interpretation'],
   ['puntos de interpretaci\u00F3n', 'Interpretation'],
   ['pontos de interpreta\u00E7\u00E3o', 'Interpretation'],
   ['\uD574\uC11D \uD3EC\uC778\uD2B8', 'Interpretation'],
   ['\u89E3\u91C8\u30DD\u30A4\u30F3\u30C8', 'Interpretation'],
+  ['\u89E3\u91C8\u306E\u8981\u70B9', 'Interpretation'],
+  ['interpretation notes', 'Interpretation'],
   ['cautions / distinctions', 'Cautions'],
   ['precauciones / distinciones', 'Cautions'],
   ['precauciones y distinciones', 'Cautions'],
@@ -192,12 +209,26 @@ const HEADING_LABELS = new Map([
   ['cuidados e diferencia\u00E7\u00E3o', 'Cautions'],
   ['\uC8FC\uC758\uC0AC\uD56D/\uAC10\uBCC4 \uAE30\uC900', 'Cautions'],
   ['\u6CE8\u610F\u4E8B\u9805/\u9451\u5225\u57FA\u6E96', 'Cautions'],
+  ['\u6CE8\u610F\u70B9\u30FB\u9451\u5225', 'Cautions'],
+  ['limits of isolated interpretation', 'Cautions'],
+  ['\uB2E8\uB3C5 \uD574\uC11D \uD55C\uACC4', 'Cautions'],
+  ['\uB192\uAC70\uB098 \uB0AE\uC744 \uB54C \uC8FC\uC758', 'Cautions'],
+  ['\uC77D\uC744 \uB54C \uC8FC\uC758', 'Cautions'],
+  ['\u5358\u72EC\u89E3\u91C8\u306E\u9650\u754C', 'Cautions'],
+  ['limites da interpreta\u00E7\u00E3o isolada', 'Cautions'],
   ['related variables', 'Related Variables'],
   ['variables relacionadas', 'Related Variables'],
   ['variables para revisar juntas', 'Related Variables'],
+  ['variables para revisar en conjunto', 'Related Variables'],
   ['vari\u00E1veis relacionadas', 'Related Variables'],
+  ['vari\u00E1veis para revisar em conjunto', 'Related Variables'],
   ['\uAD00\uB828 \uBCC0\uC218', 'Related Variables'],
+  ['\uD568\uAED8 \uBCFC \uBCC0\uC218', 'Related Variables'],
+  ['\uAD00\uB828 \uD558\uC704 \uBCC0\uC218', 'Related Variables'],
   ['\u95A2\u9023\u5909\u6570', 'Related Variables'],
+  ['\u4F75\u305B\u3066\u78BA\u8A8D\u3059\u308B\u5909\u6570', 'Related Variables'],
+  ['\u4F75\u305B\u3066\u78BA\u8A8D\u3059\u308B\u6307\u6A19', 'Related Variables'],
+  ['variables to review together', 'Related Variables'],
   ['cross references', 'Cross References'],
   ['referencias cruzadas', 'Cross References'],
   ['refer\u00EAncias cruzadas', 'Cross References'],
@@ -413,7 +444,7 @@ async function sanitizeSectionContent(args) {
 
   return {
     heading: safeHeading,
-    normalizedHeading: safeHeading,
+    normalizedHeading: NORMALIZED_SECTION_HEADINGS[sectionKind],
     markdown: safeMarkdown,
     text: safeText,
   };
@@ -515,7 +546,6 @@ async function collectLocaleDocs(locale, promotionConfig) {
         continue;
       }
       if (entry.isFile() && entry.name === 'index.md') {
-        const relative = path.relative(localeRoot, fullPath).replace(/\\/g, '/');
         const raw = await fs.readFile(fullPath, 'utf8');
         const parsed = matter(raw);
         const split = splitSections(parsed.content.trim());
@@ -574,9 +604,12 @@ async function collectLocaleDocs(locale, promotionConfig) {
             ].join('\n'),
           });
         }
+        const publicSections = sanitizedSections.filter(
+          (section) => section.normalizedHeading !== 'Evidence Note',
+        );
         const bodyMarkdown = [
           `# ${sanitizedTitle}`,
-          ...sanitizedSections.flatMap((section) => [
+          ...publicSections.flatMap((section) => [
             '',
             `## ${section.heading}`,
             '',
@@ -586,7 +619,7 @@ async function collectLocaleDocs(locale, promotionConfig) {
         const bodyText = summarizeDoc({
           title: sanitizedTitle,
           aliases,
-          sections: sanitizedSections,
+          sections: publicSections,
           status,
           runtimeReady,
           docKind: kind,
@@ -612,11 +645,9 @@ async function collectLocaleDocs(locale, promotionConfig) {
           evidenceTier: specialIndexEvidence?.tier ?? null,
           status,
           runtimeReady,
-          provenanceNote: String(parsed.data.provenanceNote ?? ''),
-          sourcePath: `docs/reference-authoring/drafts/${locale}/${relative}`,
         });
 
-        sanitizedSections.forEach((section, index) => {
+        publicSections.forEach((section, index) => {
           const chunkText = [
             `[Title] ${sanitizedTitle}`,
             `[${section.normalizedHeading}] ${section.text}`,
@@ -627,7 +658,7 @@ async function collectLocaleDocs(locale, promotionConfig) {
             .filter(Boolean)
             .join('\n');
 
-          chunks.push({
+          const chunk = {
             locale,
             canonicalRoute,
             chunkId: `${canonicalRoute}#${index + 1}`,
@@ -642,6 +673,10 @@ async function collectLocaleDocs(locale, promotionConfig) {
             evidenceTier: specialIndexEvidence?.tier ?? null,
             status,
             runtimeReady,
+          };
+          chunks.push({
+            ...chunk,
+            contentHash: buildReferenceChunkContentHash(chunk),
           });
         });
       }

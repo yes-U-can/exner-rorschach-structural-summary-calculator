@@ -53,17 +53,12 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `M-`는 중요한 경고지만, 이것만으로 망상성 사고나 정신병적 상태를 단정하지 않는다.
 - 사고 왜곡의 폭과 깊이는 `WSum6`, `Mediation`, `Processing`, `PTI`와 함께 정리해야 한다.
 
-## 근거 메모
-
+## 함께 볼 변수
 - `Mnone`
 - `WSum6`
 - `Lv2`
 - `PTI`
 - `M`
-
-## 근거 메모
-
-이 문서는 서비스 운영용 참조 코퍼스로 정리된 런타임 문서입니다.
 
 ## 근거 메모
 

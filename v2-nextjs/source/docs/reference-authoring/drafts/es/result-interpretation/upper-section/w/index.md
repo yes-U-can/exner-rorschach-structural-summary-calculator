@@ -46,7 +46,7 @@ En interpretación indica hasta que punto la persona intenta captar el campo est
 - Poco `W` no equivale por sí solo a estrechez; puede coexistir con un estilo práctico y detallista.
 - Si `W` es alto pero `Dd` también lo es mucho, puede haber amplitud con dispersión.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `W` no debe leerse separado de `D` y `Dd`.
 - Su sentido depende del patrón completo `W:D:Dd`.

@@ -46,7 +46,7 @@ Ayuda a ver si la imaginación humana tiende a representarse actuando e intervin
 - Un predominio de `Mp` no implica por sí solo fragilidad ni un predominio de `Ma` implica ajuste positivo.
 - Para valorar calidad ideacional hay que revisar también `M-` y `Mnone`.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `Ma:Mp` describe la dirección del movimiento humano imaginado, pero no basta para valorar por sí solo la calidad del pensamiento.
 - Debe leerse con `a:p`, `M-`, `Mnone` y con el contexto general de ideación.

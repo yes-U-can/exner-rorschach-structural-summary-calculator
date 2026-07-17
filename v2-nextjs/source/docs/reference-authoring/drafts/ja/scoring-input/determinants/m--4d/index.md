@@ -21,42 +21,42 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
-# Document Name: [コーディング/決定因] M
+# [コーディング/決定因] M
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - M
 - 人間運動
 - 擬人化運動
 
-## Core Definition
+## 中核的定義
 
-`M` は、人間的または擬人的な活動が知覚されているときにつける determinant です。
+`M` は、人間的または擬人的な活動が知覚されているときにつける決定因です。
 動物や空想存在でも、活動の質が本当に人間的なら `M` を使います。
 
-## Application Conditions
+## 採点・適用条件
 
-- 知覚された動きが人間的、または明確に擬人的である。
-- 戦う、考える、眠る、見る、寄りかかるなど、能動でも受動でもよい。
-- 動物がその種に固有でない人間的行為をしているなら `M` を考える。
-- 判定は受検者が述べた活動に基づいて行う。
+- 知覚された動きが人間的、または明確に擬人的です。
+- 戦う、考える、眠る、見る、寄りかかるなど、能動でも受動でもよいです。
+- 動物がその種に固有でない人間的行為をしているなら `M` を検討します。
+- 判定は受検者が述べた活動に基づいて行います。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
 - ふつうの動物運動は [`FM`](ref://scoring-input/determinants/FM) であって `M` ではありません。
 - 無生物の動きは [`m`](ref://scoring-input/determinants/m) です。
 - 人間内容があるだけでは足りません。活動知覚が必要です。
 - 協力的・攻撃的相互作用があるときは [`COP`](ref://scoring-input/special-score/COP) や [`AG`](ref://scoring-input/special-score/AG) が追加されることがあります。
 
-## Cross References
+## 相互参照
 
-- [[コーディング/決定因] Determinants](ref://scoring-input/determinants)
+- [[コーディング/決定因] 決定因](ref://scoring-input/determinants)
 - [[コーディング/決定因] FM](ref://scoring-input/determinants/FM)
 - [[コーディング/決定因] m](ref://scoring-input/determinants/m)
-- [[コーディング/Special Scores] COP](ref://scoring-input/special-score/COP)
-- [[コーディング/Special Scores] AG](ref://scoring-input/special-score/AG)
+- [[コーディング/特殊スコア] COP](ref://scoring-input/special-score/COP)
+- [[コーディング/特殊スコア] AG](ref://scoring-input/special-score/AG)
 - [[解釈/思考] M-](ref://result-interpretation/lower-section/ideation/M_minus)
 
-## Evidence Note
+## 根拠メモ
 
-- 詳細な出典比較と判断根拠は内部 provenance note に分離してあります。
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

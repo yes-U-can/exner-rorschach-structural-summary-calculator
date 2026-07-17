@@ -1,8 +1,8 @@
 {
   "app": {
-    "title": "Computing Program for Rorschach Structural Summary",
-    "version": "v2.1.3",
-    "provider": "Provided by Seoul Institute of Clinical Psychology"
+    "title": "Rorschach Structural Summary Calculator",
+    "version": "v2.2.4",
+    "provider": "Developed and maintained by MOW"
   },
   "nav": {
     "scoring": "Scoring & Structural Summary",
@@ -37,7 +37,7 @@
   },
   "modal": {
     "welcome": {
-      "title": "Computing Program for Rorschach Structural Summary",
+      "title": "Rorschach Structural Summary Calculator",
       "new": "Create New",
       "loadSample": "Start with Sample Data",
       "loadSaved": "Load Auto-saved Content",
@@ -327,7 +327,7 @@
     "summaryTitle": "Export all items calculated in the structural summary in CSV format"
   },
   "footer": {
-    "title": "Computing Program for Rorschach Structural Summary",
+    "title": "Rorschach Structural Summary Calculator",
     "copyright": "© 1997–2026 서울임상심리연구소 (Seoul Institute of Clinical Psychology, SICP). All rights reserved.",
     "scoringCanvasCopyright": "© 2026 Seoul Institute of Clinical Psychology (SICP) and MOW. All rights reserved."
   },
@@ -369,7 +369,7 @@
       "currentProviderHelp": "The interpretation assistant and coding assistant currently use {provider}.",
       "optionalProviderHelp": "Enter a {provider} key only if you want to use it.",
       "replacementNotice": "Connecting this key will replace the current {otherProvider} key.",
-      "conflictNotice": "Only one provider can be active. Connecting a new key replaces the current session key.",
+      "conflictNotice": "Connecting a new OpenAI API key replaces the current session key.",
       "saveAndReplaceButton": "Connect and replace",
       "replacedToast": "{provider} API key is connected for this session.",
       "connectedProvider": "{provider} connected",
@@ -407,7 +407,8 @@
     "billingOrQuota": "Please check your API billing or quota status. After updating it, try again and I will continue helping.",
     "invalidApiKey": "Please check the API key you entered. It may be invalid or expired.",
     "modelUnavailable": "This API key cannot access the selected AI model. Check model access in your provider account.",
-    "providerRejected": "The AI provider rejected the request. Check your API key, billing status, and model access."
+    "providerRejected": "The AI provider rejected the request. Check your API key, billing status, and model access.",
+    "appRateLimited": "Too many requests were sent in a short time. Please wait a moment and try again."
   },
   "errors": {
     "title": "Error",

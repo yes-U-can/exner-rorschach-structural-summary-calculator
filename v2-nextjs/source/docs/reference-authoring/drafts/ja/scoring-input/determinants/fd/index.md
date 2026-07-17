@@ -20,41 +20,41 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-determinants-f-fr-rf-fd-2026-03-10.md"
 ---
 
-# Document Name: [Coding/Determinants] FD
+# [Coding/Determinants] FD
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - FD
 - form dimension
 - 形態的次元
 
-## Core Definition
+## 中核的定義
 
-`FD` は、輪郭や相対的な大きさ、遠近のまとまりから、形態だけで奥行きや次元感が生じるときに付ける determinant です。  
-shading ではなく、form によって depth が作られている点が核心です。
+`FD` は、輪郭や相対的な大きさ、遠近のまとまりから、形態だけで奥行きや次元感が生じるときに付ける決定因です。
+陰影ではなく、形態によって奥行きが作られている点が核心です。
 
-## Application Conditions
+## 採点・適用条件
 
-- 被検者が「奥にある」「前後がある」「深さがある」と説明している。
-- その depth は contour や相対位置、形の配置で支えられている。
-- shading や vista の暗さが主因ではない。
-- Inquiry 後も、depth の根拠が form ベースで説明できる。
+- 被検者が「奥にある」「前後がある」「深さがある」と説明しています。
+- その奥行きは輪郭や相対位置、形の配置で支えられています。
+- 陰影やビスタの暗さが主因ではありません。
+- 質問段階後も、奥行きの根拠が形態ベースで説明できます。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
 - 暗さや見下ろし感が中心なら [`V`](ref://scoring-input/determinants/V) や [`FV`](ref://scoring-input/determinants/FV) を見直します。
 - 単なる形態だけなら [`F`](ref://scoring-input/determinants/F) です。
-- 内容コードの [`Fd`](ref://scoring-input/contents/Fd) と determinant の `FD` は別物です。
+- 内容コードの [`Fd`](ref://scoring-input/contents/Fd) と決定因の `FD` は別物です。
 - `FD` は自己観察の解釈に結びつきやすいので、後の自己知覚文脈も確認します。
 
-## Cross References
+## 相互参照
 
-- [[Coding/Determinants] Determinants](ref://scoring-input/determinants)
-- [[Coding/Determinants] F](ref://scoring-input/determinants/F)
-- [[Coding/Determinants] FV](ref://scoring-input/determinants/FV)
-- [[Coding/Determinants] V](ref://scoring-input/determinants/V)
-- [[Interpretation/Self Perception] FD](ref://result-interpretation/lower-section/selfPerception/FD)
+- [[Coding/決定因] 決定因](ref://scoring-input/determinants)
+- [[Coding/決定因] F](ref://scoring-input/determinants/F)
+- [[Coding/決定因] FV](ref://scoring-input/determinants/FV)
+- [[Coding/決定因] V](ref://scoring-input/determinants/V)
+- [[解釈/Self Perception] FD](ref://result-interpretation/lower-section/selfPerception/FD)
 
-## Evidence Note
+## 根拠メモ
 
-- Detailed source comparisons remain in the internal provenance note.
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

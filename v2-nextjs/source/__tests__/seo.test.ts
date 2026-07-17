@@ -1,6 +1,8 @@
 import { describe, expect, it, vi } from 'vitest';
 import { SUPPORTED_LANGUAGES } from '@/i18n/config';
 import {
+  PRODUCT_NAME_BY_LANGUAGE,
+  SEO_KEYWORDS_BY_LANGUAGE,
   SEO_COPY,
   SITE_NAME,
   SITE_URL,
@@ -11,9 +13,24 @@ import {
 } from '@/lib/seo';
 
 describe('localized SEO metadata', () => {
-  it('keeps the requested Korean description verbatim', () => {
+  it('uses the clinician-reviewed Korean product name in the home description', () => {
     expect(SEO_COPY.ko.home.description).toBe(
-      '회원가입, 설치, 결제가 필요 없는 Exner Rorschach 종합체계(Comprehensive System) 검사 구조요약 계산기입니다. 오픈소스이며, 본 서비스는 전문가의 임상 판단을 대체하지 않습니다.',
+      '회원가입, 설치, 결제가 필요 없는 오픈소스 Exner 로샤 종합체계(Comprehensive System, CS) 구조요약 계산기입니다. 본 서비스는 전문가의 임상 판단을 대체하지 않습니다.',
+    );
+  });
+
+  it('defines a localized formal product name and search vocabulary for every language', () => {
+    for (const language of SUPPORTED_LANGUAGES) {
+      expect(PRODUCT_NAME_BY_LANGUAGE[language].trim().length).toBeGreaterThan(10);
+      expect(SEO_KEYWORDS_BY_LANGUAGE[language].length).toBeGreaterThanOrEqual(6);
+      expect(SEO_KEYWORDS_BY_LANGUAGE[language].every((keyword) => keyword.trim().length > 0)).toBe(
+        true,
+      );
+    }
+
+    expect(PRODUCT_NAME_BY_LANGUAGE.ko).toBe('Exner 로샤 종합체계 구조요약 계산기');
+    expect(SEO_KEYWORDS_BY_LANGUAGE.ko).toEqual(
+      expect.arrayContaining(['로샤', '엑스너', '종합체계', '구조요약']),
     );
   });
 

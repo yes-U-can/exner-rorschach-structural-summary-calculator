@@ -51,7 +51,7 @@ En `Self Perception` ayuda a ver si la imagen de sí mismo y de los otros se apo
 - `Hx` no entra en la proporción formal, aunque sigue siendo útil como contexto.
 - Debe leerse con cautela frente a respuestas culturales, artísticas o muy simbólicas.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `H_ratio` no define por sí solo autoestima ni estado de ánimo.
 - Conviene leerlo junto con `MOR_self`, `HumanCont`, `GHR` y `PHR`.

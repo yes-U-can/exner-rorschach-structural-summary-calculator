@@ -58,18 +58,13 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `EB`만으로 적응 수준이나 진단을 판단하지 않는다.
 - `EB`는 "어느 채널을 더 선호하는가"를 말할 뿐, 그 채널을 실제로 충분히 쓸 자원이 있는지는 `EA`, `es`, `D`, `AdjD`를 함께 봐야 한다.
 
-## 근거 메모
-
+## 함께 볼 변수
 - `EA`
 - `EBPer`
 - `eb`
 - `es`
 - `Lambda`
 - `D`
-
-## 근거 메모
-
-이 문서는 서비스 운영용 참조 코퍼스로 정리된 런타임 문서입니다.
 
 ## 근거 메모
 

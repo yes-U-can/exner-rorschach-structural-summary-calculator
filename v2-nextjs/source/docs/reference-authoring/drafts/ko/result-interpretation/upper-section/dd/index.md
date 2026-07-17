@@ -48,17 +48,12 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `Dd` 하나만으로 창의성이나 병리성을 정하지 않는다.
 - `W:D:Dd`, `P`, `Xu%`, `Zd`를 함께 본다.
 
-## 근거 메모
-
+## 함께 볼 변수
 - `W`
 - `D`
 - `P`
 - `Xu%`
 - `W_D_Dd`
-
-## 근거 메모
-
-이 문서는 서비스 운영용 참조 코퍼스로 정리된 런타임 문서입니다.
 
 ## 근거 메모
 

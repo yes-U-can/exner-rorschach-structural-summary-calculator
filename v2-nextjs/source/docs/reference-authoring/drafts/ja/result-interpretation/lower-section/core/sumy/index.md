@@ -24,43 +24,43 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-core-sumt-sumv-sumy-2026-03-10.md"
 ---
 
-# Document Name: [Interpretation/Core] SumY
+# [Interpretation/Core] SumY
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - SumY
 - diffuse shading total
 - total diffuse shading
 - 拡散陰影総数
 
-## Core Definition
+## 中核的定義
 
-`SumY` は拡散陰影決定因の合計である。
-`core` では、漠然とした苦しさ、調整しにくい緊張、広がっていて制御しにくい負荷感を示しやすい。
+`SumY` は拡散陰影決定因の合計です。
+`core` では、漠然とした苦しさ、調整しにくい緊張、広がっていて制御しにくい負荷感を示しやすいです。
 
-## Interpretation Points
+## 解釈の要点
 
-- `SumY` が高い場合、より強いびまん性不安、情緒的圧力、過負荷感が示されやすい。
-- `SumY` は [`eb`](ref://result-interpretation/lower-section/core/eb) の陰影側を増やし、[`es`](ref://result-interpretation/lower-section/core/es) を高めることがある。
-- これは完全な構造的定式化というより、反応的または状況的な苦痛と結びつきやすい。
-- 意味は [`m`](ref://result-interpretation/lower-section/core/m)、[`D`](ref://result-interpretation/lower-section/core/D)、[`AdjEs`](ref://result-interpretation/lower-section/core/AdjEs) と比べるとより明確になる。
+- `SumY` が高い場合、より強いびまん性不安、情緒的圧力、過負荷感が示されやすいです。
+- `SumY` は [`eb`](ref://result-interpretation/lower-section/core/eb) の陰影側を増やし、[`es`](ref://result-interpretation/lower-section/core/es) を高めることがあります。
+- これは完全な構造的定式化というより、反応的または状況的な苦痛と結びつきやすいです。
+- 意味は [`m`](ref://result-interpretation/lower-section/core/m)、[`D`](ref://result-interpretation/lower-section/core/D)、[`AdjEs`](ref://result-interpretation/lower-section/core/AdjEs) と比べるとより明確になります。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
-- `SumY` が高いだけで、トラウマ、絶望、特定の診断をそのまま証明するわけではない。
-- `SumY = 0` でも苦痛がないとは限らない。他の陰影変数や [`m`](ref://result-interpretation/lower-section/core/m) が負荷を担っていることがある。
-- 固定的特性ラベルではなく、まず状態寄りの指標として扱うのがよい。
+- `SumY` が高いだけで、トラウマ、絶望、特定の診断をそのまま証明するわけではありません。
+- `SumY = 0` でも苦痛がないとは限りません。他の陰影変数や [`m`](ref://result-interpretation/lower-section/core/m) が負荷を担っていることがあります。
+- 固定的特性ラベルではなく、まず状態寄りの指標として扱うのがよいです。
 
-## Cross References
+## 相互参照
 
-- [[Interpretation/Lower Section/Core] Core](ref://result-interpretation/lower-section/core)
-- [[Interpretation/Core] eb](ref://result-interpretation/lower-section/core/eb)
-- [[Interpretation/Core] es](ref://result-interpretation/lower-section/core/es)
-- [[Interpretation/Core] D](ref://result-interpretation/lower-section/core/D)
-- [[Interpretation/Core] AdjEs](ref://result-interpretation/lower-section/core/AdjEs)
-- [[Coding/Determinants] Y](ref://scoring-input/determinants/Y)
-- [[Coding/Determinants] FY](ref://scoring-input/determinants/FY)
-- [[Coding/Determinants] YF](ref://scoring-input/determinants/YF)
+- [[解釈/下段/Core] Core](ref://result-interpretation/lower-section/core)
+- [[解釈/Core] eb](ref://result-interpretation/lower-section/core/eb)
+- [[解釈/Core] es](ref://result-interpretation/lower-section/core/es)
+- [[解釈/Core] D](ref://result-interpretation/lower-section/core/D)
+- [[解釈/Core] AdjEs](ref://result-interpretation/lower-section/core/AdjEs)
+- [[Coding/決定因] Y](ref://scoring-input/determinants/Y)
+- [[Coding/決定因] FY](ref://scoring-input/determinants/FY)
+- [[Coding/決定因] YF](ref://scoring-input/determinants/YF)
 
-## Evidence Note
-- Detailed source comparison is stored in internal provenance notes.
+## 根拠メモ
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

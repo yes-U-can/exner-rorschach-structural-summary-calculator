@@ -6,6 +6,7 @@ import {
   getReferenceDocs,
   getReferenceLocaleSummary,
   getReferenceRuntimeDocBySlug,
+  getReferenceRuntimeDocChildren,
   getReferenceRuntimeDocs,
   getReferenceRuntimeStaticSlugs,
   getReferenceRuntimeChunks,
@@ -105,6 +106,71 @@ describe('reference corpus artifacts', () => {
     expect(getReferenceRuntimeChunks('ko').length).toBeGreaterThan(0);
   });
 
+  it('uses one domain order for reference navigation in every locale', () => {
+    const expectedByParent = [
+      {
+        parent: [],
+        routes: ['scoring-input', 'result-interpretation'],
+      },
+      {
+        parent: ['scoring-input'],
+        routes: [
+          'scoring-input/card',
+          'scoring-input/location',
+          'scoring-input/dq',
+          'scoring-input/determinants',
+          'scoring-input/fq',
+          'scoring-input/pair',
+          'scoring-input/contents',
+          'scoring-input/popular',
+          'scoring-input/z',
+          'scoring-input/score',
+          'scoring-input/gphr',
+          'scoring-input/special-score',
+        ],
+      },
+      {
+        parent: ['result-interpretation'],
+        routes: [
+          'result-interpretation/upper-section',
+          'result-interpretation/lower-section',
+          'result-interpretation/special-indices',
+        ],
+      },
+      {
+        parent: ['result-interpretation', 'lower-section'],
+        routes: [
+          'result-interpretation/lower-section/core',
+          'result-interpretation/lower-section/ideation',
+          'result-interpretation/lower-section/affect',
+          'result-interpretation/lower-section/mediation',
+          'result-interpretation/lower-section/processing',
+          'result-interpretation/lower-section/interpersonal',
+          'result-interpretation/lower-section/selfPerception',
+        ],
+      },
+      {
+        parent: ['result-interpretation', 'special-indices'],
+        routes: [
+          'result-interpretation/special-indices/PTI',
+          'result-interpretation/special-indices/DEPI',
+          'result-interpretation/special-indices/CDI',
+          'result-interpretation/special-indices/SCON',
+          'result-interpretation/special-indices/HVI',
+          'result-interpretation/special-indices/OBS',
+        ],
+      },
+    ];
+
+    for (const locale of ['ko', 'en', 'ja', 'es', 'pt'] as const) {
+      for (const { parent, routes } of expectedByParent) {
+        expect(
+          getReferenceRuntimeDocChildren(locale, parent).map((doc) => doc.canonicalRoute),
+        ).toEqual(routes);
+      }
+    }
+  });
+
   it('preserves semantic section headings instead of relabeling them by position', () => {
     const route = 'result-interpretation/lower-section/affect/FC_CF_C';
     const spanishHeadings = getReferenceRuntimeChunks('es')
@@ -114,10 +180,10 @@ describe('reference corpus artifacts', () => {
       .filter((chunk) => chunk.canonicalRoute === route)
       .map((chunk) => chunk.headingPath.at(-1));
 
-    expect(spanishHeadings).toContain('Variables relacionadas');
+    expect(spanishHeadings).toContain('Variables para revisar en conjunto');
     expect(spanishHeadings).toContain('Referencias cruzadas');
-    expect(spanishHeadings).toContain('Nota de evidencia');
-    expect(koreanHeadings.filter((heading) => heading === '근거 메모')).toHaveLength(1);
+    expect(spanishHeadings).not.toContain('Nota de evidencia');
+    expect(koreanHeadings).not.toContain('근거 메모');
   });
 
   it('aligns reference document rendering with the active runtime source per locale', () => {

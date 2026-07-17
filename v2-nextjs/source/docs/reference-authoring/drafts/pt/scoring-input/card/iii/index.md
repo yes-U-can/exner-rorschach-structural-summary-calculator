@@ -56,8 +56,8 @@ Esta página funciona como lembrete de codificação para conteúdo humano, movi
 - [[Codificação/Determinantes] M](ref://scoring-input/determinants/M)
 - [[Codificação/Conteúdos] H](ref://scoring-input/contents/H)
 - [[Codificação/GHR-PHR] GHR/PHR](ref://scoring-input/gphr)
-- [[Codificação/Scores Especiais] COP](ref://scoring-input/special-score/COP)
-- [[Codificação/Scores Especiais] AG](ref://scoring-input/special-score/AG)
+- [[Codificação/Códigos Especiais] COP](ref://scoring-input/special-score/COP)
+- [[Codificação/Códigos Especiais] AG](ref://scoring-input/special-score/AG)
 - [[Codificação/Popular] Popular](ref://scoring-input/popular)
 
 ## Nota de base

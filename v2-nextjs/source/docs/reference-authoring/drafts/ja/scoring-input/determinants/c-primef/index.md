@@ -22,36 +22,36 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
-# Document Name: [コーディング/決定因] C'F
+# [コーディング/決定因] C'F
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - C'F
 - 無彩色色彩-形態
 - 無彩色優位
 
-## Core Definition
+## 中核的定義
 
-`C'F` は、無彩色が反応を主に支え、形は補助的に残っているときにつける determinant です。
+`C'F` は、無彩色が反応を主に支え、形は補助的に残っているときにつける決定因です。
 黒・白・灰を色として使う比重が、形より強い反応です。
 
-## Application Conditions
+## 採点・適用条件
 
-- 無彩色特徴が反応の主要な基盤になっている。
-- 形の支えもあるが、明らかに二次的である。
-- 形が主なら [`FC'`](ref://scoring-input/determinants/FC%27) を再検討する。
-- 形の支えが実質的にないなら [`C'`](ref://scoring-input/determinants/C%27) を考える。
+- 無彩色特徴が反応の主要な基盤になっています。
+- 形の支えもあるが、明らかに二次的です。
+- 形が主なら [`FC'`](ref://scoring-input/determinants/FC%27) を再検討します。
+- 形の支えが実質的にないなら [`C'`](ref://scoring-input/determinants/C%27) を検討します。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
 - `C'F` は [`CF`](ref://scoring-input/determinants/CF) と同じではありません。色の種類も知覚基盤も違います。
 - 黒・白・灰に言及しただけで自動的に `C'F` にはしません。
 - 距離感や奥行きが中心なら [`V`](ref://scoring-input/determinants/V) を見直します。
 - 不定でぼんやりした陰影体験なら [`Y`](ref://scoring-input/determinants/Y) を見直します。
 
-## Cross References
+## 相互参照
 
-- [[コーディング/決定因] Determinants](ref://scoring-input/determinants)
+- [[コーディング/決定因] 決定因](ref://scoring-input/determinants)
 - [[コーディング/決定因] FC'](ref://scoring-input/determinants/FC%27)
 - [[コーディング/決定因] C'](ref://scoring-input/determinants/C%27)
 - [[コーディング/決定因] CF](ref://scoring-input/determinants/CF)
@@ -59,6 +59,6 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 - [[コーディング/決定因] Y](ref://scoring-input/determinants/Y)
 - [[解釈/Core] SumCprime](ref://result-interpretation/lower-section/core/SumCprime)
 
-## Evidence Note
+## 根拠メモ
 
-- 詳細な出典比較と判断根拠は内部 provenance note に分離してあります。
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

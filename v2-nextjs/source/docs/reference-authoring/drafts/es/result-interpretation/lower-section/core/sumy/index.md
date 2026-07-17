@@ -49,7 +49,7 @@ En `core` suele reflejar malestar vago, tensión difícil de modular o una sensa
 - Un valor de 0 no excluye distress; otras variables de sombreado o `m` pueden estar captando la carga.
 - Conviene mantener la lectura como indicador de estado antes que como rasgo fijo.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `SumY` por sí solo no basta para concluir desesperanza ni colapso adaptativo.
 - Debe leerse con `eb`, `es`, `D`, `AdjEs` y `m`.

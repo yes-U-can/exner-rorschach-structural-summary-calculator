@@ -32,19 +32,24 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/loca
 
 ## 핵심 정의
 
-[채점 입력] Location은(는) 이 서비스에서 로샤 검사 채점과 해석 보조를 위해 정리한 참조 문서입니다.
+Location은 피검자가 반응을 구성할 때 사용한 잉크반점 영역을 기록하는 부호다. 전체 반점, 흔히 사용하는 세부영역, 드물게 사용하는 세부영역, 흰 여백의 관여 여부를 구분한다.
 
 ## 채점/적용 조건
 
-최종 부호화를 확정하기 전에는 이 서비스가 사용하는 채점 기준과 현재 반응의 앞뒤 맥락을 함께 검토해 주세요.
+- 전체 반점을 사용하면 [`W`](ref://scoring-input/location/W)를 검토한다.
+- 흔히 사용하는 세부영역이면 [`D`](ref://scoring-input/location/D), 드물게 사용하는 세부영역이면 [`Dd`](ref://scoring-input/location/Dd)를 검토한다.
+- 흰 여백이 반응 형성에 관여하면 실제 사용 영역에 맞추어 `S`, [`WS`](ref://scoring-input/location/WS), [`DS`](ref://scoring-input/location/DS), [`DdS`](ref://scoring-input/location/DdS)를 구분한다.
+- Location Sheet와 Inquiry에서 사용 영역을 정확히 확인한다.
 
 ## 주의사항/감별 기준
 
-이 변수만으로 단정하지 말고, 인접 변수와 다른 가능성을 함께 비교해 주세요.
+- Location은 사용 영역을 기록하며 조직화 수준이나 형태 적합성을 뜻하지 않는다. 해당 정보는 [`DQ`](ref://scoring-input/dq)와 [`FQ`](ref://scoring-input/fq)에서 별도로 부호화한다.
+- `D`와 `Dd`는 단순한 면적 크기가 아니라 해당 영역이 통상적으로 사용되는 정도에 따라 구분한다.
+- 흰 여백의 사용은 추정하지 않고 반응 형성에 실제로 관여했는지 확인한다.
 
 ## 상호 참조
 
-인접 규칙이나 연결된 해석 맥락이 필요할 때는 아래 문서를 함께 확인해 주세요.
+인접 규칙이나 연결된 해석 맥락이 필요할 때는 아래 문서를 함께 확인한다.
 
 - [scoring-input/location/W](ref://scoring-input%2Flocation%2FW)
 - [scoring-input/location/WS](ref://scoring-input%2Flocation%2FWS)
@@ -60,4 +65,4 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/loca
 
 ## 근거 메모
 
-이 문서는 서비스 운영용 참조 코퍼스로 정리된 런타임 문서입니다.
+세부 출처 비교와 판단 근거는 내부 검토 메모에서 관리한다.

@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/special-score/COP"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/special-score/COP"
-displayTitle: "[Codificação/Escores Especiais] COP"
+displayTitle: "[Codificação/Códigos Especiais] COP"
 aliases:
   - "COP"
   - "movimento cooperativo"
@@ -23,7 +23,7 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-special-score-opening-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificação/Escores Especiais] COP
+# Nome do documento: [Codificação/Códigos Especiais] COP
 
 ## Apelidos e busca
 
@@ -52,8 +52,8 @@ A ideia central é ação conjunta positiva ou coordenada.
 
 ## Referências cruzadas
 
-- [[Codificação/Escores Especiais] Special Scores](ref://scoring-input/special-score)
-- [[Codificação/Escores Especiais] AG](ref://scoring-input/special-score/AG)
+- [[Codificação/Códigos Especiais] Códigos Especiais](ref://scoring-input/special-score)
+- [[Codificação/Códigos Especiais] AG](ref://scoring-input/special-score/AG)
 - [[Codificação/Determinantes] M](ref://scoring-input/determinants/M)
 - [[Codificação/Determinantes] FM](ref://scoring-input/determinants/FM)
 - [[Codificação/Determinantes] m](ref://scoring-input/determinants/m)

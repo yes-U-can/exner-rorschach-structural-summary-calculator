@@ -38,7 +38,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-ideation-opening-2
 `Ideação` reúne variáveis que descrevem a qualidade, a direção e o estilo do pensamento no protocolo.
 Ela ajuda a separar preferência de atividade mental, grau de abstração e sinais de estranheza ideativa.
 
-## Interpretation Points
+## Pontos de interpretação
 
 - Aqui entram proporções de movimento ativo e passivo, compostos de intelectualização e os indicadores ligados a `Sum6`.
 - Algumas variáveis descrevem estilo cognitivo; outras servem mais como sinais de risco de pensamento menos convencional.

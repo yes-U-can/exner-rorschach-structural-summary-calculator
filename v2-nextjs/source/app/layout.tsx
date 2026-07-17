@@ -11,6 +11,8 @@ import ByokSessionDialog from '@/components/byok/ByokSessionDialog';
 import AppShell from '@/components/layout/AppShell';
 import { DEFAULT_LANGUAGE, SUPPORTED_LANGUAGES, normalizeLanguage } from '@/i18n/config';
 import {
+  PRODUCT_NAME_BY_LANGUAGE,
+  SEO_KEYWORDS_BY_LANGUAGE,
   SITE_NAME,
   SITE_URL,
   buildLocalizedPageMetadata,
@@ -47,22 +49,10 @@ export async function generateMetadata(): Promise<Metadata> {
       default: copy.title,
       template: `%s | ${SITE_NAME}`,
     },
-    keywords: [
-      'Rorschach',
-      'Rorschach test',
-      'Comprehensive System',
-      'Exner system',
-      'Structural Summary',
-      'Rorschach scoring',
-      'clinical psychology',
-      'psychodiagnostic tool',
-    ],
-    authors: [
-      { name: 'Seoul Institute of Clinical Psychology (SICP)' },
-      { name: 'MOW' },
-    ],
-    creator: 'Seoul Institute of Clinical Psychology (SICP) & MOW',
-    publisher: SITE_NAME,
+    keywords: SEO_KEYWORDS_BY_LANGUAGE[language],
+    authors: [{ name: 'MOW' }],
+    creator: 'MOW',
+    publisher: 'MOW',
     category: 'Clinical psychology tool',
     icons: {
       icon: [
@@ -108,13 +98,25 @@ export default async function RootLayout({
         '@id': `${SITE_URL}/#website`,
         url: `${SITE_URL}/`,
         name: SITE_NAME,
-        alternateName: ['Yes U Can', 'Exner Rorschach Structural Summary Calculator'],
+        alternateName: [
+          'Yes U Can',
+          'Exner 로샤 종합체계 구조요약 계산기',
+          '엑스너 로샤 종합체계 구조요약 계산기',
+          '로샤 구조요약 계산기',
+          'Exner Rorschach Structural Summary Calculator',
+        ],
         inLanguage: SUPPORTED_LANGUAGES,
       },
       {
         '@type': 'WebApplication',
         '@id': `${SITE_URL}/#web-application`,
-        name: seoCopy.title,
+        name:
+          PRODUCT_NAME_BY_LANGUAGE[initialLanguage],
+        alternateName: [
+          SITE_NAME,
+          'Exner CS Structural Summary Calculator',
+          '엑스너 로샤 종합체계 구조요약 계산기',
+        ],
         description: seoCopy.description,
         url: getAbsoluteUrl(buildLocalizedPath('/', initialLanguage)),
         isPartOf: { '@id': `${SITE_URL}/#website` },
@@ -127,16 +129,14 @@ export default async function RootLayout({
           price: '0',
           priceCurrency: 'USD',
         },
-        creator: [
-          {
-            '@type': 'Organization',
-            name: 'Seoul Institute of Clinical Psychology (SICP)',
-          },
-          {
-            '@type': 'Organization',
-            name: 'MOW',
-          },
-        ],
+        creator: {
+          '@type': 'Organization',
+          name: 'MOW',
+        },
+        contributor: {
+          '@type': 'Organization',
+          name: 'Seoul Institute of Clinical Psychology (SICP)',
+        },
       },
     ],
   };

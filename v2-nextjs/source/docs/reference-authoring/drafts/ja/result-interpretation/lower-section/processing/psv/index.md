@@ -20,38 +20,38 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-processing-wm-psv-dqplus-2026-03-10.md"
 ---
 
-# Document Name: [Interpretation/Processing] PSV
+# [Interpretation/Processing] PSV
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - PSV
 - Perseveration
 - processing perseveration
 - 処理 PSV
 
-## Core Definition
+## 中核的定義
 
-`PSV` は、処理の途中で同じやり方を繰り返したり、直前のパターンに固着したりしやすい傾向を示す。
-Interpretation では、rigidity、焦点の切り替えにくさ、非効率な注意制御のサインとして扱う。
+`PSV` は、処理の途中で同じやり方を繰り返したり、直前のパターンに固着したりしやすい傾向を示します。
+解釈では、硬直性、焦点の切り替えにくさ、非効率な注意制御のサインとして扱います。
 
-## Interpretation Points
+## 解釈の要点
 
-- `PSV` があるときは、戦略を切り替える柔軟性が下がっていないかを確認する価値がある。
-- 他の inefficiency 指標と一緒に出ると、硬さのある processing という読みが強まりやすい。
-- この変数は genuine perseveration を拾う意図があるため、単発でも無視しないほうがよい。
+- `PSV` があるときは、戦略を切り替える柔軟性が下がっていないかを確認する価値があります。
+- 他の非効率指標と一緒に出ると、硬さのある情報処理という読みが強まりやすいです。
+- この変数は実在的保続を拾う意図があるため、単発でも無視しないほうがよいです。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
-- `PSV` は普通の一貫性や好みと同じではない。
-- 解釈には、実際にどの形の perseveration がコード化されたかという文脈が必要である。
-- `Zd` や `DQ` など他の整理指標を見ないまま過大に読まない。
+- `PSV` は普通の一貫性や好みと同じではありません。
+- 解釈には、実際にどの形の保続がコード化されたかという文脈が必要です。
+- `Zd` や `DQ` など他の整理指標を見ないまま過大に読みません。
 
-## Limits of Isolated Interpretation
+## 単独解釈の限界
 
-- `PSV` は warning sign であって、それ自体が診断ではない。
-- `Zd`、`DQ+`、`DQv`、`WSum6`、`X-%` と一緒に読む必要がある。
+- `PSV` は注意信号手がかりであって、それ自体が診断ではありません。
+- `Zd`、`DQ+`、`DQv`、`WSum6`、`X-%` と一緒に読む必要があります。
 
-## Variables to Review Together
+## 併せて確認する変数
 
 - `Zd`
 - `DQ+`
@@ -59,13 +59,13 @@ Interpretation では、rigidity、焦点の切り替えにくさ、非効率な
 - `WSum6`
 - `X-%`
 
-## Cross References
+## 相互参照
 
-- [[Interpretation/Lower Section/Processing] Processing](ref://result-interpretation/lower-section/processing)
+- [[解釈/下段/情報処理] 情報処理](ref://result-interpretation/lower-section/processing)
 - [[Coding/Special Score] PSV](ref://scoring-input/special-score/PSV)
-- [[Interpretation/Processing] Zd](ref://result-interpretation/lower-section/processing/Zd_proc)
-- [[Interpretation/Processing] W:D:Dd](ref://result-interpretation/lower-section/processing/W_D_Dd)
+- [[解釈/情報処理] Zd](ref://result-interpretation/lower-section/processing/Zd_proc)
+- [[解釈/情報処理] W:D:Dd](ref://result-interpretation/lower-section/processing/W_D_Dd)
 
-## Evidence Note
+## 根拠メモ
 
-- Detailed source comparison is stored in internal provenance notes.
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

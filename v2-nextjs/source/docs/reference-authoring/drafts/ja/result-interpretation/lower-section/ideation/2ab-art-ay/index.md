@@ -22,41 +22,41 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-ideation-2ab-mor-sum6-2026-03-10.md"
 ---
 
-# Document Name: [Interpretation/Ideation] 2AB+Art+Ay
+# [Interpretation/Ideation] 2AB+Art+Ay
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - 2AB+Art+Ay
 - intellectualizing composite
 - 2AB Art Ay
 - 知性化複合
 
-## Core Definition
+## 中核的定義
 
-`2AB+Art+Ay` は `AB` を2倍した値に `Art` と `Ay` を加えた合成変数である。
-思考が直接的な体験からどの程度離れ、より抽象的、人工的、様式化された定式化へ移りやすいかを見積もるために使う。
+`2AB+Art+Ay` は `AB` を2倍した値に `Art` と `Ay` を加えた合成変数です。
+思考が直接的な体験からどの程度離れ、より抽象的、人工的、様式化された定式化へ移りやすいかを見積もるために使います。
 
-## Interpretation Points
+## 解釈の要点
 
-- 高い値は、抽象化、様式化、知性化を通して、目前の体験から距離を取ろうとする傾向を示しやすい。
-- あるプロトコルでは防衛的資源として働くことがあり、別のプロトコルでは、より概念的な認知スタイルを反映することがある。
-- 意味は、思考全体の質や他の ideation 指標との組み合わせで変わる。
-- 感情の薄まりや思考の奇異さを示す他の所見と一緒に出ているかを確認すると解釈しやすい。
+- 高い値は、抽象化、様式化、知性化を通して、目前の体験から距離を取ろうとする傾向を示しやすいです。
+- あるプロトコルでは防衛的資源として働くことがあり、別のプロトコルでは、より概念的な認知スタイルを反映することがあります。
+- 意味は、思考全体の質や他の思考指標との組み合わせで変わります。
+- 感情の薄まりや思考の奇異さを示す他の所見と一緒に出ているかを確認すると解釈しやすいです。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
-- 高い値を、ただちに思考障害と取り違えてはいけない。
-- `Art` と `Ay` は、文化的関心、表現スタイル、象徴的好みの影響も受けうる。
-- `AB` は特殊得点であり、`Art` と `Ay` は内容であるため、どの要素が上昇を支えているかを丁寧に分けて見る必要がある。
+- 高い値を、ただちに思考障害と取り違えてはいけません。
+- `Art` と `Ay` は、文化的関心、表現スタイル、象徴的好みの影響も受けることがあります。
+- `AB` は特殊スコアであり、`Art` と `Ay` は内容であるため、どの要素が上昇を支えているかを丁寧に分けて見る必要があります。
 
-## Cross References
+## 相互参照
 
-- [[Interpretation/Lower Section/Ideation] Ideation](ref://result-interpretation/lower-section/ideation)
+- [[解釈/下段/Ideation] Ideation](ref://result-interpretation/lower-section/ideation)
 - [[Coding/Special Score] AB](ref://scoring-input/special-score/AB)
 - [[Coding/Contents] Art](ref://scoring-input/contents/Art)
 - [[Coding/Contents] Ay](ref://scoring-input/contents/Ay)
-- [[Interpretation/Ideation] MOR](ref://result-interpretation/lower-section/ideation/MOR)
-- [[Interpretation/Special Indices] DEPI](ref://result-interpretation/special-indices/DEPI)
+- [[解釈/Ideation] MOR](ref://result-interpretation/lower-section/ideation/MOR)
+- [[解釈/特殊指標] DEPI](ref://result-interpretation/special-indices/DEPI)
 
-## Evidence Note
-- Detailed source comparison is stored in internal provenance notes.
+## 根拠メモ
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

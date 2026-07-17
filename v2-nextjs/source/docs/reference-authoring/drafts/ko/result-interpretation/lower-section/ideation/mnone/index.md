@@ -48,17 +48,12 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 
 - `Mnone`은 강한 경고지만, 사고장애의 범위와 기능 손상은 `WSum6`, `Lv2`, `PTI`, `Mediation`을 함께 봐야 한다.
 
-## 근거 메모
-
+## 함께 볼 변수
 - `M-`
 - `Ma:Mp`
 - `WSum6`
 - `PTI`
 - `SCON`
-
-## 근거 메모
-
-이 문서는 서비스 운영용 참조 코퍼스로 정리된 런타임 문서입니다.
 
 ## 근거 메모
 

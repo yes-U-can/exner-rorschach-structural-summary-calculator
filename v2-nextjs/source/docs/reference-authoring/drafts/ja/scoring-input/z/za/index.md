@@ -19,38 +19,38 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
-# Document Name: [コーディング/Z] ZA
+# [コーディング/Z] ZA
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - ZA
 - 隣接領域組織化
 - adjacent Z
 
-## Core Definition
+## 中核的定義
 
 `ZA` は、隣り合うブロット領域を意味ある形で結びつけたときにつける Z コードです。
 領域が近いだけではなく、反応の中で統合されていることが必要です。
 
-## Application Conditions
+## 採点・適用条件
 
-- 反応に form use がある。
-- 隣接する領域どうしが一つの対象やまとまりとして組み合わされている。
-- 単なる部分列挙ではなく、関係づけが明確である。
+- 反応に形態の使用があります。
+- 隣接する領域どうしが一つの対象やまとまりとして組み合わされています。
+- 単なる部分列挙ではなく、関係づけが明確です。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
 - 離れた領域を結びつけるなら [`ZD`](ref://scoring-input/z/ZD) を考えます。
 - 全体反応の組織化なら [`ZW`](ref://scoring-input/z/ZW) を優先します。
 - 隣接していても、意味ある統合がなければ `ZA` にしません。
 
-## Cross References
+## 相互参照
 
 - [[コーディング/場所] D](ref://scoring-input/location/D)
 - [[コーディング/場所] Dd](ref://scoring-input/location/Dd)
 - [[コーディング/Z] ZD](ref://scoring-input/z/ZD)
-- [[解釈/Upper Section] Zf](ref://result-interpretation/upper-section/Zf)
+- [[解釈/上段] Zf](ref://result-interpretation/upper-section/Zf)
 
-## Evidence Note
+## 根拠メモ
 
-- 詳細な出典比較と判断根拠は内部 provenance note に分離してあります。
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

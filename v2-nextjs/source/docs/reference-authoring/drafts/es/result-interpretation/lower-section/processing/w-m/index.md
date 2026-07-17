@@ -48,7 +48,7 @@ En procesamiento se usa para estimar si la amplitud del abordaje y los recursos 
 - En protocolos con muy pocas respuestas `M`, la proporción puede exagerarse.
 - Conviene diferenciar entre amplitud de abordaje y verdadera flexibilidad adaptativa.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `W:M` ofrece una pista sobre la relación entre amplitud y recurso, no un resumen total del funcionamiento.
 - Conviene leerlo junto con `W:D:Dd`, `M`, `Ma:Mp`, `AdjD` y el resto del procesamiento.

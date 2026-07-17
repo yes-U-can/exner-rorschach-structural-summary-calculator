@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/card/X"
 locale: "ja"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/card/X"
-displayTitle: "[符号化/カード] X"
+displayTitle: "[コーディング/カード] X"
 aliases:
   - "Card X"
   - "カードX"
@@ -23,43 +23,43 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-card-vi-x-2026-03-10.md"
 ---
 
-# Document Name: [符号化/カード] X
+# [コーディング/カード] X
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - Card X
 - カードX
 - カード10
 - 図版X
 
-## Core Definition
+## 中核的定義
 
-`Card X` は、多くの領域と多くの色を含み、反応の区切りを丁寧に取る必要が出やすいカードです。  
+`Card X` は、多くの領域と多くの色を含み、反応の区切りを丁寧に取る必要が出やすいカードです。
 このページは、その複雑さの中で特に見直しやすい符号化ポイントをまとめます。
 
-## Application Conditions
+## 採点・適用条件
 
 - 典型的な反応がまとまって出たら `Popular` を見直します。
 - 色が知覚に参加しているなら `FC`、`CF`、`C` を見直します。
 - 多くの断片に依存して形態が疑わしくなるなら `FQ-` を見直します。
 - カードが複雑であること自体は、実際の反応記述の代わりにはなりません。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
 - 色が多いというだけでは、自動的に色彩決定因にはなりません。
-- 視覚的に複雑というだけでは、特殊得点は付きません。
+- 視覚的に複雑というだけでは、特殊スコアは付きません。
 - 符号化は最後までカードの印象ではなく、実際の反応に従います。
 
-## Cross References
+## 相互参照
 
-- [[符号化] score](ref://scoring-input/score)
-- [[符号化/Popular] Popular](ref://scoring-input/popular)
-- [[符号化/内容] A](ref://scoring-input/contents/A)
-- [[符号化/決定因] FC](ref://scoring-input/determinants/FC)
-- [[符号化/決定因] CF](ref://scoring-input/determinants/CF)
-- [[符号化/決定因] C](ref://scoring-input/determinants/C)
-- [[符号化/FQ] -](ref://scoring-input/fq/-)
+- [[コーディング] score](ref://scoring-input/score)
+- [[コーディング/Popular] Popular](ref://scoring-input/popular)
+- [[コーディング/内容] A](ref://scoring-input/contents/A)
+- [[コーディング/決定因] FC](ref://scoring-input/determinants/FC)
+- [[コーディング/決定因] CF](ref://scoring-input/determinants/CF)
+- [[コーディング/決定因] C](ref://scoring-input/determinants/C)
+- [[コーディング/FQ] -](ref://scoring-input/fq/-)
 
-## Evidence Note
+## 根拠メモ
 
-- 詳細な出典比較は内部 provenance note に分離してあります。
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

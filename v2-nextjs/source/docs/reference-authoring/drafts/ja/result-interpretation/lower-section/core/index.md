@@ -33,52 +33,52 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-lower-section-core-opening-2026-03-10.md"
 ---
 
-# Document Name: [Interpretation/Lower Section/Core] Core
+# [Interpretation/Lower Section/Core] Core
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - core
 - core cluster
 - 基本資源と負荷
 - コアクラスター
 
-## Core Definition
+## 中核的定義
 
 `Core` は、プロトコルの基本的な資源、現在の要求水準、対処のバランス、緊張負荷をまとめて確認するクラスターです。
 ここでは `R`、`Lambda`、`EB`、`EA`、`eb`、`es`、`D`、`AdjD`、さらに `m`、`SumCprime`、`SumT`、`SumV`、`SumY` などの負荷関連変数を一つの組として読みます。
 
-## Interpretation Points
+## 解釈の要点
 
 - [`R`](ref://result-interpretation/lower-section/core/R) は、このプロトコルが安定した解釈に十分な材料を持つかを判断する出発点です。
 - [`Lambda`](ref://result-interpretation/lower-section/core/Lambda) は、処理をどれだけ単純化・節約しているかを示します。
 - `EB`、`EA`、`eb`、`es`、`D`、`AdjD` は、資源と要求の釣り合いを見積もる中心になります。
 - `FM`、`m`、`SumCprime`、`SumT`、`SumV`、`SumY` は、負荷の性質や内的緊張の質を補足します。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
 - `Core` の変数は互いに影響し合うので、一つだけで結論を出すと誤りやすくなります。
 - `R` が少ないプロトコルや `Lambda` が非常に高いプロトコルでは、このクラスター全体が縮んで見えることがあります。
 
-## Cross References
+## 相互参照
 
-- [[Interpretation/Lower Section] Lower Section](ref://result-interpretation/lower-section)
-- [[Interpretation/Core] R](ref://result-interpretation/lower-section/core/R)
-- [[Interpretation/Core] Lambda](ref://result-interpretation/lower-section/core/Lambda)
-- [[Interpretation/Core] EB](ref://result-interpretation/lower-section/core/EB)
-- [[Interpretation/Core] EA](ref://result-interpretation/lower-section/core/EA)
-- [[Interpretation/Core] EBPer](ref://result-interpretation/lower-section/core/EBPer)
-- [[Interpretation/Core] eb](ref://result-interpretation/lower-section/core/eb)
-- [[Interpretation/Core] es](ref://result-interpretation/lower-section/core/es)
-- [[Interpretation/Core] D](ref://result-interpretation/lower-section/core/D)
-- [[Interpretation/Core] AdjD](ref://result-interpretation/lower-section/core/AdjD)
-- [[Interpretation/Core] AdjEs](ref://result-interpretation/lower-section/core/AdjEs)
-- [[Interpretation/Core] FM](ref://result-interpretation/lower-section/core/FM)
-- [[Interpretation/Core] m](ref://result-interpretation/lower-section/core/m)
-- [[Interpretation/Core] SumCprime](ref://result-interpretation/lower-section/core/SumCprime)
-- [[Interpretation/Core] SumT](ref://result-interpretation/lower-section/core/SumT)
-- [[Interpretation/Core] SumV](ref://result-interpretation/lower-section/core/SumV)
-- [[Interpretation/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
+- [[解釈/下段] 下段](ref://result-interpretation/lower-section)
+- [[解釈/Core] R](ref://result-interpretation/lower-section/core/R)
+- [[解釈/Core] Lambda](ref://result-interpretation/lower-section/core/Lambda)
+- [[解釈/Core] EB](ref://result-interpretation/lower-section/core/EB)
+- [[解釈/Core] EA](ref://result-interpretation/lower-section/core/EA)
+- [[解釈/Core] EBPer](ref://result-interpretation/lower-section/core/EBPer)
+- [[解釈/Core] eb](ref://result-interpretation/lower-section/core/eb)
+- [[解釈/Core] es](ref://result-interpretation/lower-section/core/es)
+- [[解釈/Core] D](ref://result-interpretation/lower-section/core/D)
+- [[解釈/Core] AdjD](ref://result-interpretation/lower-section/core/AdjD)
+- [[解釈/Core] AdjEs](ref://result-interpretation/lower-section/core/AdjEs)
+- [[解釈/Core] FM](ref://result-interpretation/lower-section/core/FM)
+- [[解釈/Core] m](ref://result-interpretation/lower-section/core/m)
+- [[解釈/Core] SumCprime](ref://result-interpretation/lower-section/core/SumCprime)
+- [[解釈/Core] SumT](ref://result-interpretation/lower-section/core/SumT)
+- [[解釈/Core] SumV](ref://result-interpretation/lower-section/core/SumV)
+- [[解釈/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
 
-## Evidence Note
+## 根拠メモ
 
-- Detailed source comparison is stored in internal provenance notes.
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

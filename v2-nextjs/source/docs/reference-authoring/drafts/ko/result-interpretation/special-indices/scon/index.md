@@ -10,13 +10,18 @@ aliases:
   - "자살가능성 지수"
 relatedRoutes:
   - "result-interpretation/special-indices"
-  - "result-interpretation/lower-section/core/D"
-  - "result-interpretation/lower-section/core/AdjD"
-  - "result-interpretation/lower-section/core/SumV"
-  - "result-interpretation/lower-section/core/SumY"
-  - "result-interpretation/lower-section/selfPerception/SumV_self"
+  - "result-interpretation/lower-section/affect/Blends_R"
+  - "result-interpretation/lower-section/selfPerception/_3r_2_R"
   - "result-interpretation/lower-section/selfPerception/MOR_self"
-  - "result-interpretation/special-indices/DEPI"
+  - "result-interpretation/lower-section/processing/Zd_proc"
+  - "result-interpretation/lower-section/core/es"
+  - "result-interpretation/lower-section/core/EA"
+  - "result-interpretation/lower-section/affect/FC_CF_C"
+  - "result-interpretation/lower-section/mediation/X_plus_percent"
+  - "result-interpretation/lower-section/affect/S_aff"
+  - "result-interpretation/lower-section/mediation/P"
+  - "result-interpretation/lower-section/interpersonal/PureH"
+  - "result-interpretation/lower-section/core/R"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
 runtimeReady: false
@@ -41,7 +46,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `S-CON`의 양성 판정과 해석은 만 15세 이상에서만 적용한다. 만 14세 이하에서는 이 지표의 유용성이 입증되지 않았으므로 계산된 점수를 양성 또는 음성 결론으로 사용하지 않는다.
 - 점수와 관계없이 임상적 우려가 있으면 현재 자살사고, 의도, 계획, 수단 접근성, 과거 시도, 최근 변화, 보호요인을 직접 확인한다.
 - 양성은 안전평가를 서두를 이유가 되지만, 자살행동을 확정하거나 예측하지 않는다.
-- `D`, `AdjD`, `SumV`, `SumY`, `MOR_self`, `DEPI` 등 어떤 구성 변수가 판정에 기여했는지 확인한다.
+- `FV+VF+V+FD`, Color-Shading blend, `3r+(2)/R`, `MOR`, `Zd`, `es:EA`, `CF+C:FC`, `X+%`, `S`, `P`, `Pure H`, `R`의 12개 기준 중 무엇이 판정에 기여했는지 확인한다.
 - 지표 해석보다 면접, 즉각적인 안전 확보, 필요한 보호 조치를 우선한다.
 
 ## 높거나 낮을 때 주의
@@ -58,24 +63,34 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 
 ## 함께 볼 변수
 
-- `D`
-- `AdjD`
-- `SumV`
-- `SumY`
-- `SumV_self`
+- `FV+VF+V+FD`
+- `Color-Shading Blends`
+- `3r+(2)/R`
 - `MOR_self`
-- `DEPI`
+- `Zd`
+- `es`, `EA`
+- `FC`, `CF`, `C`
+- `X+%`
+- `S`
+- `P`
+- `Pure H`
+- `R`
 
 ## 상호 참조
 
 - [\[해석/특수지표\] 특수지표](ref://result-interpretation/special-indices)
-- [\[해석/중핵\] D](ref://result-interpretation/lower-section/core/D)
-- [\[해석/중핵\] AdjD](ref://result-interpretation/lower-section/core/AdjD)
-- [\[해석/중핵\] SumV](ref://result-interpretation/lower-section/core/SumV)
-- [\[해석/중핵\] SumY](ref://result-interpretation/lower-section/core/SumY)
-- [\[해석/자기지각\] SumV](ref://result-interpretation/lower-section/selfPerception/SumV_self)
+- [\[해석/정서\] Blends:R](ref://result-interpretation/lower-section/affect/Blends_R)
+- [\[해석/자기지각\] 3r+(2)/R](ref://result-interpretation/lower-section/selfPerception/_3r_2_R)
 - [\[해석/자기지각\] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
-- [\[해석/특수지표\] DEPI](ref://result-interpretation/special-indices/DEPI)
+- [\[해석/정보처리\] Zd](ref://result-interpretation/lower-section/processing/Zd_proc)
+- [\[해석/중핵\] es](ref://result-interpretation/lower-section/core/es)
+- [\[해석/중핵\] EA](ref://result-interpretation/lower-section/core/EA)
+- [\[해석/정서\] FC:CF+C](ref://result-interpretation/lower-section/affect/FC_CF_C)
+- [\[해석/인지적 매개\] X+%](ref://result-interpretation/lower-section/mediation/X_plus_percent)
+- [\[해석/정서\] S](ref://result-interpretation/lower-section/affect/S_aff)
+- [\[해석/인지적 매개\] P](ref://result-interpretation/lower-section/mediation/P)
+- [\[해석/대인관계\] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)
+- [\[해석/중핵\] R](ref://result-interpretation/lower-section/core/R)
 
 ## 근거 메모
 

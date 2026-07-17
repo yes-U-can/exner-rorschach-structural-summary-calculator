@@ -33,7 +33,7 @@ No se refiere a simple consistencia; apunta a repetición estereotipada o mecán
 ## Condiciones de aplicación
 
 - Se considera cuando la misma respuesta o un patrón muy cercano se repite de forma perseverativa.
-- Puede observarse dentro de la misma lámina o a través de varias laminas.
+- Puede observarse dentro de la misma lámina o a través de varias láminas.
 - Lo importante no es solo la semejanza, sino la cualidad de repetición rígida.
 - El significado interpretativo posterior se conecta con la ruta [`PSV`](ref://result-interpretation/lower-section/processing/PSV).
 
@@ -45,7 +45,7 @@ No se refiere a simple consistencia; apunta a repetición estereotipada o mecán
 
 ## Referencias cruzadas
 
-- [[Codificación/Puntuaciones especiales] Special Scores](ref://scoring-input/special-score)
+- [[Codificación/Puntuaciones especiales] Códigos Especiales](ref://scoring-input/special-score)
 - [[Interpretación/Processing] PSV](ref://result-interpretation/lower-section/processing/PSV)
 
 ## Nota de fundamento

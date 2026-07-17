@@ -46,7 +46,7 @@ Ele é revisto como sinal de que o afeto está se impondo à percepção de mane
 ## Cuidados e diferenciação
 
 - `CP` não é o mesmo que `Pure C`, `CF` ou `C`.
-- A codificação do special score deve ser confirmada antes da interpretação.
+- A codificação do código especial deve ser confirmada antes da interpretação.
 - A raridade aumenta o peso clínico, mas não basta, sozinha, para uma conclusão ampla.
 
 ## Referências cruzadas
@@ -55,7 +55,7 @@ Ele é revisto como sinal de que o afeto está se impondo à percepção de mane
 - [[Interpretação/Afeto] Pure C](ref://result-interpretation/lower-section/affect/PureC)
 - [[Interpretação/Afeto] S](ref://result-interpretation/lower-section/affect/S_aff)
 - [[Interpretação/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
-- [[Codificação/Special Score] CP](ref://scoring-input/special-score/CP)
+- [[Codificação/Código Especial] CP](ref://scoring-input/special-score/CP)
 - [[Codificação/Determinantes] Y](ref://scoring-input/determinants/Y)
 - [[Codificação/Determinantes] FY](ref://scoring-input/determinants/FY)
 - [[Codificação/Determinantes] YF](ref://scoring-input/determinants/YF)

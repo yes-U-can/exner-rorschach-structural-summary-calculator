@@ -47,7 +47,7 @@ Esta página resume os focos de codificação mais úteis para essa complexidade
 ## Cuidados e diferenciação
 
 - Muita cor não significa automaticamente determinante cromático.
-- Muita complexidade visual não significa automaticamente `Special Score`.
+- Muita complexidade visual não significa automaticamente `Código Especial`.
 - A codificação continua dependendo da resposta real, não da complexidade aparente da prancha.
 
 ## Referências cruzadas

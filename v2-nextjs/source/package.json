@@ -1,9 +1,9 @@
 {
   "name": "rorschach-calculator-v2",
-  "version": "2.2.3",
+  "version": "2.2.4",
   "private": true,
   "scripts": {
-    "docs:generate-corpus": "node scripts/generate-reference-corpus.mjs && node scripts/generate-reference-quality-report.mjs && node scripts/generate-reference-release-snapshot.mjs",
+    "docs:generate-corpus": "npm run docs:audit-authoring && node scripts/generate-reference-corpus.mjs && node scripts/generate-reference-quality-report.mjs && node scripts/generate-reference-release-snapshot.mjs",
     "docs:audit-authoring": "node scripts/audit-reference-authoring.mjs",
     "docs:generate-embeddings:openai": "node scripts/generate-reference-embeddings.mjs openai",
     "docs:generate-vector-release-snapshot": "node scripts/generate-reference-vector-release-snapshot.mjs",

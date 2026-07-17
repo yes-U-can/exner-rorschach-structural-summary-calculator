@@ -51,18 +51,13 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `WDA%`는 공통 영역에서의 안정성을 보여 줄 뿐, 전체 기록의 특이성이나 왜곡 양상을 다 설명하지 못한다.
 - 반드시 `XA%`, `X+%`, `X-%`, `FQ`와 함께 읽어야 한다.
 
-## 근거 메모
-
+## 함께 볼 변수
 - `XA%`
 - `X+%`
 - `X-%`
 - `P`
 - `W`
 - `D`
-
-## 근거 메모
-
-이 문서는 서비스 운영용 참조 코퍼스로 정리된 런타임 문서입니다.
 
 ## 근거 메모
 

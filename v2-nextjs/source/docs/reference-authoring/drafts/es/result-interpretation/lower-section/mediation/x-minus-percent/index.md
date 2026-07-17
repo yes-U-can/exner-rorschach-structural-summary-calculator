@@ -47,7 +47,7 @@ En mediación, funciona como una señal central de alejamiento perceptivo respec
 - Debe mirarse junto con el número total de respuestas y con la distribución de `FQ-`.
 - Un valor alto orienta, pero no explica por sí solo el origen de la distorsión.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `X-%` muestra desajuste perceptivo, pero no basta para decidir si el problema es primariamente perceptivo, ideacional o emocional.
 - Conviene leerlo junto con `S-%`, `Xu%`, `WSum6` y `PTI`.
@@ -68,7 +68,7 @@ En mediación, funciona como una señal central de alejamiento perceptivo respec
 - [[Interpretación/Mediación] Xu%](ref://result-interpretation/lower-section/mediation/Xu_percent)
 - [[Codificación/FQ] -](ref://scoring-input/fq/-)
 - [[Interpretación/Ideación] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
-- [[Interpretación/Special Indices] PTI](ref://result-interpretation/special-indices/PTI)
+- [[Interpretación/Índices Especiales] PTI](ref://result-interpretation/special-indices/PTI)
 
 ## Nota de fundamento
 

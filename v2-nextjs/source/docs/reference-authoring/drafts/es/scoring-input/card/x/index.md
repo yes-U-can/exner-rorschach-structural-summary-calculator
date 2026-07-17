@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/card/X"
 locale: "es"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/card/X"
-displayTitle: "[Codificación/Tarjetas] X"
+displayTitle: "[Codificación/Láminas] X"
 aliases:
   - "Card X"
   - "card X"
@@ -24,19 +24,19 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/card/x/index.md"
 ---
 
-# Nombre del documento: [Codificación/Tarjetas] X
+# Nombre del documento: [Codificación/Láminas] X
 
 ## Alias y búsqueda
 
 - Card X
 - card X
 - card 10
-- tarjeta X
+- lámina X
 - lámina X
 
 ## Definición central
 
-`Tarjeta X` combina muchas zonas y muchos colores, por lo que suele exigir una buena delimitación de la respuesta.
+`Lámina X` combina muchas zonas y muchos colores, por lo que suele exigir una buena delimitación de la respuesta.
 La página resume los focos de codificación más útiles para esa complejidad.
 
 ## Condiciones de aplicación
@@ -44,12 +44,12 @@ La página resume los focos de codificación más útiles para esa complejidad.
 - Conviene revisar `Popular` cuando aparece una respuesta típica claramente organizada.
 - Si el color participa en la percepción, revisa `FC`, `CF` o `C`.
 - Si la respuesta se apoya en múltiples fragmentos y la forma se vuelve dudosa, conviene revisar `FQ-`.
-- El hecho de que la tarjeta sea compleja no sustituye la necesidad de describir bien la respuesta concreta.
+- El hecho de que la lámina sea compleja no sustituye la necesidad de describir bien la respuesta concreta.
 
 ## Precauciones y distinciones
 
 - Mucho color no significa automáticamente un determinante cromático.
-- Mucha complejidad visual no significa automáticamente un special score.
+- Mucha complejidad visual no significa automáticamente un código especial.
 - La codificación debe seguir la respuesta real, no la complejidad aparente de la lámina.
 
 ## Referencias cruzadas

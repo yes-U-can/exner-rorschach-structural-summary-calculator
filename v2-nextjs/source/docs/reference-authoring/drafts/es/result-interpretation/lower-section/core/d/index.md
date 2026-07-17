@@ -51,7 +51,7 @@ Resume si los recursos disponibles alcanzan para manejar la demanda actual sin q
 - `D > 0` no equivale por sí solo a fortaleza general estable.
 - `D < 0` habla de sobrecarga actual, pero para estimar si es más situacional o más persistente hay que comparar con `AdjD`.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `D` por sí solo no distingue bien entre malestar transitorio y un patrón de sobrecarga más crónico.
 - Debe leerse junto con `EA`, `es`, `AdjD`, `m` y `SumY`.

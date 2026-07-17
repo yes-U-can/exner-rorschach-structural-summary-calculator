@@ -27,48 +27,48 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
-# Document Name: [コーディング] score
+# [コーディング] score
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - score
 - コーディング
 - 反応の採点
 - 反応コード化
 
-## Core Definition
+## 中核的定義
 
 `score` は、すぐに数字を与えることではありません。
-Comprehensive System では、各反応を正確なコードの組み合わせに変換する作業全体を指します。
+包括システムでは、各反応を正確なコードの組み合わせに変換する作業全体を指します。
 
-## Application Conditions
+## 採点・適用条件
 
-- 反応はプロトコルに出てきた順にコード化する。
-- Location, DQ, determinants, FQ, contents, 追加コードを順に確定する。
-- inquiry によって、実際に何を見たかがコードに反映されるようにする。
-- Structural Summary の正確さは、各反応のコーディング精度に依存する。
+- 反応はプロトコルに出てきた順にコード化します。
+- 領域, DQ, 決定因, FQ, 内容, 追加コードを順に確定します。
+- 質問段階によって、実際に何を見たかがコードに反映されるようにします。
+- 構造一覧表の正確さは、各反応のコーディング精度に依存します。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
 - `score` は独立した点数表ではなく、反応全体のコード化手続きです。
-- ありそうだからという理由でコードを推測してはいけません。inquiry で支えられないなら付けません。
+- ありそうだからという理由でコードを推測してはいけません。質問段階で支えられないなら付けません。
 - コーディングと解釈は別段階です。まず反応をコード化し、そのあとでプロトコル全体を解釈します。
 - 各要素は [`Location`](ref://scoring-input/location), [`DQ`](ref://scoring-input/dq), [`Determinants`](ref://scoring-input/determinants), [`FQ`](ref://scoring-input/fq), [`Contents`](ref://scoring-input/contents) など別々の規則で決まります。
 
-## Cross References
+## 相互参照
 
 - [[コーディング] scoring-input](ref://scoring-input)
-- [[コーディング/場所] Location](ref://scoring-input/location)
+- [[コーディング/場所] 領域](ref://scoring-input/location)
 - [[コーディング/発達水準] DQ](ref://scoring-input/dq)
-- [[コーディング/決定因] Determinants](ref://scoring-input/determinants)
+- [[コーディング/決定因] 決定因](ref://scoring-input/determinants)
 - [[コーディング/形態水準] FQ](ref://scoring-input/fq)
 - [[コーディング/内容] Contents](ref://scoring-input/contents)
 - [[コーディング/Pair] Pair](ref://scoring-input/pair)
 - [[コーディング/Popular] Popular](ref://scoring-input/popular)
 - [[コーディング/Z] Z](ref://scoring-input/z)
 - [[コーディング/GHR-PHR] GHR/PHR](ref://scoring-input/gphr)
-- [[コーディング/Special Scores] Special Scores](ref://scoring-input/special-score)
+- [[コーディング/特殊スコア] 特殊スコア](ref://scoring-input/special-score)
 
-## Evidence Note
+## 根拠メモ
 
-- 詳細な出典比較と判断根拠は内部 provenance note に分離してあります。
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

@@ -26,39 +26,39 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-selfperception-2026-03-10.md"
 ---
 
-# Document Name: [Interpretation/Self Perception] H Ratio
+# [Interpretation/Self Perception] H Ratio
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - H ratio
 - H:(H)+Hd+(Hd)
 - human image ratio
 - 人間表象比
 
-## Core Definition
+## 中核的定義
 
-`H_ratio` は、whole human content と partial/imaginative human content の比を見ます。  
+`H_ratio` は、全体人間内容と部分的/想像的人間内容の比を見ます。
 自己知覚では、自己や他者の人間像が、より全体的で現実的な像に支えられているか、部分的・空想的・統合の弱い像に傾くかを読む手がかりです。
 
-## Interpretation Points
+## 解釈の要点
 
 - `H` が優勢なら、人間表象が比較的まとまった基盤に支えられている可能性があります。
 - `(H)`、`Hd`、`(Hd)` が優勢なら、人間像が部分的、理想化的、断片的になりやすいです。
-- `HumanCont`、`PureH` と一緒に見ると、全体的な human representation の質を見積もりやすくなります。
+- `HumanCont`、`PureH` と一緒に見ると、全体的な人間表象の質を見積もりやすくなります。
 - `PHR` が高く `H_ratio` が不利なら、人間表象がより緊張的、損傷的に見えることがあります。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
-- 人間 content の総数が少ないと、比率は不安定になります。
-- `Hx` は正式には ratio に入りませんが、文脈としては重要です。
+- 人間内容の総数が少ないと、比率は不安定になります。
+- `Hx` は正式には比率に入りませんが、文脈としては重要です。
 - 芸術的・象徴的・文化的な反応では慎重に読みます。
 
-## Limits of Isolated Interpretation
+## 単独解釈の限界
 
-- `H_ratio` だけで self-esteem や mood を決めることはできません。
+- `H_ratio` だけで自尊感情や気分を決めることはできません。
 - `MOR_self`、`HumanCont`、`GHR`、`PHR` と一緒に読む必要があります。
 
-## Variables to Review Together
+## 併せて確認する変数
 
 - `HumanCont`
 - `PureH`
@@ -66,11 +66,11 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-selfperception-202
 - `PHR`
 - `MOR_self`
 
-## Cross References
+## 相互参照
 
-- [[Interpretation/Lower Section/Self Perception] Self Perception](ref://result-interpretation/lower-section/selfPerception)
-- [[Interpretation/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
-- [[Interpretation/Interpersonal] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)
+- [[解釈/下段/Self Perception] Self Perception](ref://result-interpretation/lower-section/selfPerception)
+- [[解釈/Interpersonal] 人間内容](ref://result-interpretation/lower-section/interpersonal/HumanCont)
+- [[解釈/Interpersonal] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)
 - [[Coding/Content] H](ref://scoring-input/contents/H)
 - [[Coding/Content] (H)](ref://scoring-input/contents/%28H%29)
 - [[Coding/Content] Hd](ref://scoring-input/contents/Hd)
@@ -79,6 +79,6 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-selfperception-202
 - [[Coding/GHR-PHR] GHR](ref://scoring-input/gphr/GHR)
 - [[Coding/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
 
-## Evidence Note
+## 根拠メモ
 
-- Detailed source comparison is stored in internal provenance notes.
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

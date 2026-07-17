@@ -57,18 +57,13 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `EBPer`만으로 적응 실패를 결론내리지 않는다.
 - 편재성이 실제로 위험한지 보려면 `EA`, `es`, `D`, 그리고 어떤 채널이 빈약한지(`M` 또는 `WSumC`)를 함께 봐야 한다.
 
-## 근거 메모
-
+## 함께 볼 변수
 - `EB`
 - `EA`
 - `es`
 - `D`
 - `M`
 - `WSumC`
-
-## 근거 메모
-
-이 문서는 서비스 운영용 참조 코퍼스로 정리된 런타임 문서입니다.
 
 ## 근거 메모
 

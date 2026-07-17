@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/card/V"
 locale: "es"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/card/V"
-displayTitle: "[Codificación/Tarjetas] V"
+displayTitle: "[Codificación/Láminas] V"
 aliases:
   - "Card V"
   - "card V"
@@ -24,32 +24,32 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/card/v/index.md"
 ---
 
-# Nombre del documento: [Codificación/Tarjetas] V
+# Nombre del documento: [Codificación/Láminas] V
 
 ## Alias y búsqueda
 
 - Card V
 - card V
 - card 5
-- tarjeta V
+- lámina V
 - lámina V
 
 ## Definición central
 
-`Tarjeta V` suele favorecer respuestas de forma relativamente clara y respuestas populares globales.
+`Lámina V` suele favorecer respuestas de forma relativamente clara y respuestas populares globales.
 La página resume puntos de codificación útiles para esa lámina.
 
 ## Condiciones de aplicación
 
 - Son frecuentes respuestas globales `W`.
 - La forma clara de la mancha hace útil revisar `F` y `FQ`.
-- Muchas respuestas populares de esta tarjeta incluyen murciélago o mariposa.
+- Muchas respuestas populares de esta lámina incluyen murciélago o mariposa.
 - Si la respuesta usa toda la mancha con buena organización, conviene revisar `Popular` junto con la decisión formal.
 
 ## Precauciones y distinciones
 
 - `Card V` no es lo mismo que el determinante `V` de vista.
-- Aunque `Tarjeta I` y `Tarjeta V` compartan algunas respuestas típicas, no deben fusionarse como si fueran la misma tarjeta.
+- Aunque `Lámina I` y `Lámina V` compartan algunas respuestas típicas, no deben fusionarse como si fueran la misma lámina.
 - No agregas un determinante solo porque la persona diga que se ve oscuro o simétrico.
 
 ## Referencias cruzadas
@@ -59,7 +59,7 @@ La página resume puntos de codificación útiles para esa lámina.
 - [[Codificación/Determinantes] F](ref://scoring-input/determinants/F)
 - [[Codificación/FQ] FQ](ref://scoring-input/fq)
 - [[Codificación/Popular] Popular](ref://scoring-input/popular)
-- [[Codificación/Tarjetas] I](ref://scoring-input/card/I)
+- [[Codificación/Láminas] I](ref://scoring-input/card/I)
 - [[Codificación/Determinantes] V](ref://scoring-input/determinants/V)
 
 ## Nota de fundamento

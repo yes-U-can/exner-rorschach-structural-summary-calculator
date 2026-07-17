@@ -47,7 +47,7 @@ Ele não é um julgamento clínico livre, mas o resultado de seguir a sequência
 ## Cuidados e diferenciação
 
 - `GHR` não é dado só porque a resposta parece socialmente agradável.
-- `H` sozinho não garante `GHR`; qualidade formal e escores especiais ainda importam.
+- `H` sozinho não garante `GHR`; qualidade formal e códigos especiais ainda importam.
 - Se houver agressão, conteúdo mórbido, forma ruim ou escores cognitivos importantes, revise [`PHR`](ref://scoring-input/gphr/PHR) primeiro.
 - A decisão é sempre feita dentro da sequência, não por uma regra solta.
 
@@ -57,7 +57,7 @@ Ele não é um julgamento clínico livre, mas o resultado de seguir a sequência
 - [[Codificação/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
 - [[Codificação/Conteúdo] H](ref://scoring-input/contents/H)
 - [[Codificação/Determinantes] M](ref://scoring-input/determinants/M)
-- [[Codificação/Escore Especial] COP](ref://scoring-input/special-score/COP)
+- [[Codificação/Código Especial] COP](ref://scoring-input/special-score/COP)
 - [[Codificação/Resposta Popular] Popular](ref://scoring-input/popular)
 - [[Interpretação/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
 - [[Interpretação/Interpersonal] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)

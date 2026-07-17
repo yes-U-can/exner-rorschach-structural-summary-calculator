@@ -49,7 +49,7 @@ En interpretación, se usa como señal de imaginación humana mal ajustada, dist
 - Un solo `M-` no basta para definir un trastorno del pensamiento.
 - Su peso cambia mucho según se combine con `Mnone`, `PTI`, mediación y procesamiento.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `M-` es una señal clínicamente importante, pero no explica por sí solo el origen del problema.
 - Debe integrarse con la cantidad total de `M`, con `a:p`, `Ma:Mp` y con el resto de los indicadores de pensamiento.
@@ -72,7 +72,7 @@ En interpretación, se usa como señal de imaginación humana mal ajustada, dist
 - [[Interpretación/Ideación] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
 - [[Interpretación/Ideación] Mnone](ref://result-interpretation/lower-section/ideation/Mnone)
 - [[Codificación/Determinantes] M](ref://scoring-input/determinants/M)
-- [[Interpretación/Special Indices] PTI](ref://result-interpretation/special-indices/PTI)
+- [[Interpretación/Índices Especiales] PTI](ref://result-interpretation/special-indices/PTI)
 
 ## Nota de fundamento
 

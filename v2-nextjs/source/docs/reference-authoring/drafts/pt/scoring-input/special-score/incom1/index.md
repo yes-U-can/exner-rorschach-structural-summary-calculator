@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/special-score/INCOM1"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/special-score/INCOM1"
-displayTitle: "[Codificação/Escores Especiais] INCOM1"
+displayTitle: "[Codificação/Códigos Especiais] INCOM1"
 aliases:
   - "INCOM1"
   - "combinação incongruente nível 1"
@@ -21,7 +21,7 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-special-score-incom-fabcom-contam-alog-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificação/Escores Especiais] INCOM1
+# Nome do documento: [Codificação/Códigos Especiais] INCOM1
 
 ## Apelidos e busca
 
@@ -31,7 +31,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-special-score-inco
 
 ## Definição central
 
-`INCOM1` é um escore especial de nível 1 para combinações incongruentes dentro da mesma resposta.
+`INCOM1` é um código especial de nível 1 para combinações incongruentes dentro da mesma resposta.
 Ele é usado quando os elementos unidos não combinam bem, mas a estranheza ainda não chega ao nível mais severo de `INCOM2`.
 
 ## Condições de aplicação
@@ -50,10 +50,10 @@ Ele é usado quando os elementos unidos não combinam bem, mas a estranheza aind
 
 ## Referências cruzadas
 
-- [[Codificação/Escores Especiais] Special Scores](ref://scoring-input/special-score)
-- [[Codificação/Escores Especiais] INCOM2](ref://scoring-input/special-score/INCOM2)
-- [[Codificação/Escores Especiais] FABCOM1](ref://scoring-input/special-score/FABCOM1)
-- [[Codificação/Escores Especiais] CONTAM](ref://scoring-input/special-score/CONTAM)
+- [[Codificação/Códigos Especiais] Códigos Especiais](ref://scoring-input/special-score)
+- [[Codificação/Códigos Especiais] INCOM2](ref://scoring-input/special-score/INCOM2)
+- [[Codificação/Códigos Especiais] FABCOM1](ref://scoring-input/special-score/FABCOM1)
+- [[Codificação/Códigos Especiais] CONTAM](ref://scoring-input/special-score/CONTAM)
 - [[Interpretação/Ideation] Sum6](ref://result-interpretation/lower-section/ideation/Sum6)
 - [[Interpretação/Ideation] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
 

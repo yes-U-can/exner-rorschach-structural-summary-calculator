@@ -45,7 +45,7 @@ En interpretación se usa como una señal de capacidad para estructurar percepto
 - Si `DQ+` es alto pero `DQv` también lo es, la organización puede ser desigual.
 - Conviene no confundir `DQ+` con `v/+`; pertenecen al mismo sistema de codificación, pero no cumplen la misma función en la lectura interpretativa.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `DQ+` muestra una señal de sofisticación del procesamiento, no un resumen total del funcionamiento.
 - Conviene leerlo junto con `DQv`, `Zd`, `PSV` y `W:M`.

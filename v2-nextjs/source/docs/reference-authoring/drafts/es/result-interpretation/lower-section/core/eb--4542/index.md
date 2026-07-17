@@ -9,6 +9,8 @@ aliases:
   - "Erlebnistypus"
   - "Experience Balance"
   - "balance experiencial"
+  - "tipo vivencial"
+  - "tipo de vivencia"
 relatedRoutes:
   - "result-interpretation/lower-section/core"
   - "result-interpretation/lower-section/core/EA"
@@ -35,18 +37,20 @@ provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretat
 - Erlebnistypus
 - Experience Balance
 - balance experiencial
+- tipo vivencial
+- tipo de vivencia
 
 ## Definición central
 
-`EB` es la relación `M : WSumC`.
-Muestra si la persona tiende a basarse más en elaboración ideacional y reflexiva o más en modulación afectiva y respuesta emocional al afrontar problemas.
+`EB` es la relación `M : WSumC` y constituye la base para describir el tipo vivencial.
+Muestra si la persona tiende a basarse más en la elaboración ideacional y reflexiva o en la modulación afectiva y la respuesta emocional al afrontar problemas.
 
 ## Puntos de interpretación
 
-- Si predomina `M`, suele hablarse de una dirección más `introversive`.
-- Si predomina `WSumC`, suele hablarse de una dirección más `extratensive`.
+- Si predomina `M`, suele hablarse de una dirección más introversiva.
+- Si predomina `WSumC`, suele hablarse de una dirección más extratensiva.
 - Si hay una dirección clara pero no extrema, puede existir un estilo preferente con cierto grado de flexibilidad.
-- Si no hay predominio claro, suele describirse como `ambitent`, lo que sugiere menor consistencia del estilo de afrontamiento.
+- Si no hay predominio claro, suele describirse como ambigual, lo que sugiere menor consistencia del estilo de afrontamiento.
 
 ## Precauciones y distinciones
 
@@ -54,7 +58,7 @@ Muestra si la persona tiende a basarse más en elaboración ideacional y reflexi
 - Si la diferencia es muy grande, conviene revisar también `EBPer`.
 - En protocolos breves, con `Lambda` alto o `EA` bajo, `EB` puede verse más rígido o más vacío de lo que realmente es.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `EB` dice cuál canal suele preferirse, no si ese canal es suficiente.
 - Para saber si el afrontamiento funciona, hay que revisar `EA`, `es`, `D` y `AdjD`.

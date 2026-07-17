@@ -42,7 +42,7 @@ Ele estima quanta sobrecarga permanece depois que parte do peso de `m` e `Y` foi
 - `AdjEs` alto sugere que a sobrecarga não é apenas momentânea e pode ser mais sustentada.
 - Se `es` está alto, mas `AdjEs` cai claramente, parte importante da tensão atual pode estar ligada a estresse situacional.
 - `AdjEs` é mais útil porque ajuda a calcular e contextualizar `AdjD`.
-- E uma variável de correção, não um rótulo diagnóstico por si só.
+- É uma variável de correção, não um rótulo diagnóstico por si só.
 
 ## Cuidados e diferenciação
 

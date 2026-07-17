@@ -123,7 +123,8 @@ function Remove-PublicMirrorPrivateArtifacts {
     "JA_Batch*.md",
     "REF_Batch*.md",
     "HANDOFF*.md",
-    "EN_Detailing_Workflow.md"
+    "EN_Detailing_Workflow.md",
+    "AGENTS.md"
   )
 
   foreach ($relativePath in $privateDirectories) {
@@ -317,7 +318,8 @@ $excludeFiles = @(
   "JA_Batch*.md",
   "REF_Batch*.md",
   "HANDOFF*.md",
-  "EN_Detailing_Workflow.md"
+  "EN_Detailing_Workflow.md",
+  "AGENTS.md"
 )
 
 if (-not $SkipVerify) {

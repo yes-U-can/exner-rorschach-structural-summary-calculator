@@ -43,11 +43,11 @@ En mediación, ayuda a estimar cuánto se aproxima la percepción a formas de le
 
 ## Precauciones y distinciones
 
-- `P` depende de listados culturales y del contexto del locale.
+- `P` debe codificarse con los criterios aplicables del Sistema Comprehensivo e interpretarse considerando el contexto cultural.
 - Un valor alto no significa automáticamente adaptación sana, ni un valor bajo implica por sí solo patología.
-- Conviene revisar también en que tarjetas aparecen o faltan las respuestas populares.
+- Conviene revisar también en qué láminas aparecen o faltan las respuestas populares.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `P` muestra frecuencia de consenso, pero no resume toda la calidad perceptiva.
 - Debe leerse junto con `X+%`, `XA%`, `Xu%` y con la codificación de `Popular`.

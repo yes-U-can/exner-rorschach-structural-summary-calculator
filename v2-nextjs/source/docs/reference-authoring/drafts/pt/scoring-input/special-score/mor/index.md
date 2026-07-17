@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/special-score/MOR"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/special-score/MOR"
-displayTitle: "[Codificação/Escores Especiais] MOR"
+displayTitle: "[Codificação/Códigos Especiais] MOR"
 aliases:
   - "MOR"
   - "conteúdo mórbido"
@@ -20,7 +20,7 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-special-score-opening-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificação/Escores Especiais] MOR
+# Nome do documento: [Codificação/Códigos Especiais] MOR
 
 ## Apelidos e busca
 
@@ -37,7 +37,7 @@ O código aponta para dano, degradação ou tonalidade patológica atribuída di
 
 - Use quando a pessoa descreve algo morto, destruído, ferido, podre, quebrado, esmagado ou claramente arruinado.
 - Ele também se aplica quando a resposta atribui qualidade diretamente mórbida ou patológica ao objeto.
-- `MOR` é acrescentado como escore especial e não substitui conteúdo nem determinante principal.
+- `MOR` é acrescentado como código especial e não substitui conteúdo nem determinante principal.
 - Pode coexistir com outros códigos se a resposta mostrar tanto conteúdo específico quanto tonalidade mórbida.
 
 ## Cuidados e diferenciação
@@ -48,9 +48,9 @@ O código aponta para dano, degradação ou tonalidade patológica atribuída di
 
 ## Referências cruzadas
 
-- [[Codificação/Escores Especiais] Special Scores](ref://scoring-input/special-score)
+- [[Codificação/Códigos Especiais] Códigos Especiais](ref://scoring-input/special-score)
 - [[Codificação/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
-- [[Codificação/Escores Especiais] AG](ref://scoring-input/special-score/AG)
+- [[Codificação/Códigos Especiais] AG](ref://scoring-input/special-score/AG)
 - [[Interpretação/Ideation] MOR](ref://result-interpretation/lower-section/ideation/MOR)
 - [[Interpretação/Autopercepção] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
 

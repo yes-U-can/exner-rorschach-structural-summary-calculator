@@ -44,7 +44,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/cont
 - `Bt`는 식물 범주이므로 동물 내용인 `A`, `Ad`와 구분해야 한다.
 - 식물의 일부도 `Bt`로 가므로, 식물은 전체/부분을 따로 나누지 않는다.
 - 색이나 질감이 아니라 식물이라는 내용이 핵심일 때만 `Bt`를 준다.
-- 한국어 자료에는 `BT`처럼 대문자로 적히기도 하지만, canonical code는 `Bt`로 맞춘다.
+- 한국어 자료에는 `BT`처럼 대문자로 적히기도 하지만, 이 웹앱에서는 종합체계 기호 `Bt`를 사용한다.
 
 ## 상호 참조
 

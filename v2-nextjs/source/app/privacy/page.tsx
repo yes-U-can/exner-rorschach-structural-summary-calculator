@@ -64,8 +64,9 @@ const CONTENT: Record<Language, PrivacyContent> = {
       {
         heading: '외부 AI 제공자에게 전송될 수 있는 정보',
         paragraphs: [
-          '사용자가 AI 응답을 요청하면, 답변 생성에 필요한 프롬프트, 현재 대화 문맥, 구조요약 수치 또는 채점 화면 맥락, 참조문서 일부가 사용자가 선택한 OpenAI로 전송될 수 있습니다.',
-          '외부 AI 제공자의 데이터 처리 방식은 각 제공자의 약관과 개인정보 정책을 따릅니다. 사용자는 본인이 선택한 API 제공자의 정책을 확인하고, 민감한 개인정보나 불필요한 식별정보를 입력하지 않도록 주의해야 합니다.',
+          '사용자가 AI 응답을 요청하면, 답변 생성에 필요한 프롬프트, 현재 대화 문맥, 구조요약 수치 또는 채점 화면 맥락, 참조문서 일부가 OpenAI로 전송될 수 있습니다.',
+          'OpenAI의 데이터 처리 방식은 OpenAI의 약관과 개인정보 정책을 따릅니다. 사용자는 해당 정책을 확인하고, 민감한 개인정보나 불필요한 식별정보를 입력하지 않도록 주의해야 합니다.',
+          'AI 채팅 요청의 과도한 반복을 제한하기 위해, 앱은 암호화된 AI 세션의 무작위 식별자에서 만든 일방향 세션 키와 최근 요청 시각만 서버 실행 메모리에 최대 1시간 동안 임시로 보관합니다. IP 주소, 대화 내용, API 키는 이 제한 기록에 포함되지 않으며 데이터베이스에도 저장되지 않습니다.',
         ],
       },
       {
@@ -118,7 +119,8 @@ const CONTENT: Record<Language, PrivacyContent> = {
         heading: 'External AI providers',
         paragraphs: [
           'When a user requests an AI response, prompt text, current chat context, relevant calculator output, and reference-document context may be sent to OpenAI.',
-          'Processing by the external provider is governed by that provider’s own terms and privacy policy. Users should review the policies of the API provider they choose.',
+          'Processing by OpenAI is governed by OpenAI’s terms and privacy policy. Users should review those policies before using the AI features.',
+          'To limit excessive repeated AI chat requests, the app temporarily keeps only a one-way session key derived from the encrypted AI session’s random identifier and recent request timestamps in server runtime memory for up to one hour. IP addresses, chat content, and API keys are not included in this record or stored in a database.',
         ],
       },
       {
@@ -170,8 +172,9 @@ const CONTENT: Record<Language, PrivacyContent> = {
       {
         heading: '外部AI提供者',
         paragraphs: [
-          'AI応答を求めると、プロンプト、現在の会話文脈、関連する計算結果、参照文書文脈が、選択されたOpenAIに送信される場合があります。',
-          '外部提供者での処理は各提供者の規約とプライバシーポリシーに従います。利用者は選択したAPI提供者の方針を確認してください。',
+          'AI応答を求めると、プロンプト、現在の会話文脈、関連する計算結果、参照文書文脈がOpenAIに送信される場合があります。',
+          'OpenAIでの処理は、OpenAIの規約とプライバシーポリシーに従います。AI機能を利用する前に、これらの方針を確認してください。',
+          'AIチャットへの過度な反復リクエストを制限するため、アプリは暗号化されたAIセッションのランダム識別子から生成した一方向セッションキーと直近のリクエスト時刻だけを、サーバーの実行メモリに最長1時間一時保持します。IPアドレス、会話内容、APIキーはこの記録に含まれず、データベースにも保存されません。',
         ],
       },
       {
@@ -224,7 +227,8 @@ const CONTENT: Record<Language, PrivacyContent> = {
         heading: 'Proveedores externos de IA',
         paragraphs: [
           'Cuando se solicita una respuesta de IA, el prompt, el contexto actual de chat, resultados relevantes de la calculadora y contexto de documentos de referencia pueden enviarse a OpenAI.',
-          'El tratamiento por el proveedor externo se rige por sus propios términos y política de privacidad. La persona usuaria debe revisar las políticas del proveedor API que elija.',
+          'El tratamiento por OpenAI se rige por sus términos y su política de privacidad. La persona usuaria debe revisar esas políticas antes de utilizar las funciones de IA.',
+          'Para limitar las solicitudes de chat de IA excesivas y repetidas, la aplicación conserva temporalmente, durante un máximo de una hora en la memoria de ejecución del servidor, solo una clave de sesión unidireccional derivada del identificador aleatorio de la sesión de IA cifrada y las marcas de tiempo recientes. Este registro no incluye direcciones IP, contenido del chat ni claves API, y no se guarda en una base de datos.',
         ],
       },
       {
@@ -277,7 +281,8 @@ const CONTENT: Record<Language, PrivacyContent> = {
         heading: 'Provedores externos de IA',
         paragraphs: [
           'Quando uma resposta de IA é solicitada, prompt, contexto atual do chat, resultados relevantes da calculadora e contexto de documentos de referência podem ser enviados a OpenAI.',
-          'O tratamento pelo provedor externo segue seus próprios termos e política de privacidade. A pessoa usuária deve revisar as políticas do provedor API escolhido.',
+          'O tratamento pela OpenAI segue seus termos e sua política de privacidade. A pessoa usuária deve revisar essas políticas antes de usar os recursos de IA.',
+          'Para limitar solicitações excessivas e repetidas ao chat de IA, o aplicativo mantém temporariamente, por no máximo uma hora na memória de execução do servidor, apenas uma chave de sessão unidirecional derivada do identificador aleatório da sessão de IA criptografada e os horários recentes das solicitações. Esse registro não inclui endereços IP, conteúdo do chat nem chaves API, e não é salvo em um banco de dados.',
         ],
       },
       {

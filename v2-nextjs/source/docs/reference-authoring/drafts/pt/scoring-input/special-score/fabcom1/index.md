@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/special-score/FABCOM1"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/special-score/FABCOM1"
-displayTitle: "[Codificação/Escores Especiais] FABCOM1"
+displayTitle: "[Codificação/Códigos Especiais] FABCOM1"
 aliases:
   - "FABCOM1"
   - "combinação fabulizada nível 1"
@@ -21,7 +21,7 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-special-score-incom-fabcom-contam-alog-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificação/Escores Especiais] FABCOM1
+# Nome do documento: [Codificação/Códigos Especiais] FABCOM1
 
 ## Apelidos e busca
 
@@ -31,7 +31,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-special-score-inco
 
 ## Definição central
 
-`FABCOM1` é um escore especial de nível 1 para relações fabulizadas ou implausíveis entre elementos da resposta.
+`FABCOM1` é um código especial de nível 1 para relações fabulizadas ou implausíveis entre elementos da resposta.
 Ele não descreve apenas uma mistura incongruente dentro de um objeto, mas uma relação distorcida entre ideias, ações ou partes da cena.
 
 ## Condições de aplicação
@@ -49,10 +49,10 @@ Ele não descreve apenas uma mistura incongruente dentro de um objeto, mas uma r
 
 ## Referências cruzadas
 
-- [[Codificação/Escores Especiais] Special Scores](ref://scoring-input/special-score)
-- [[Codificação/Escores Especiais] FABCOM2](ref://scoring-input/special-score/FABCOM2)
-- [[Codificação/Escores Especiais] INCOM1](ref://scoring-input/special-score/INCOM1)
-- [[Codificação/Escores Especiais] CONTAM](ref://scoring-input/special-score/CONTAM)
+- [[Codificação/Códigos Especiais] Códigos Especiais](ref://scoring-input/special-score)
+- [[Codificação/Códigos Especiais] FABCOM2](ref://scoring-input/special-score/FABCOM2)
+- [[Codificação/Códigos Especiais] INCOM1](ref://scoring-input/special-score/INCOM1)
+- [[Codificação/Códigos Especiais] CONTAM](ref://scoring-input/special-score/CONTAM)
 - [[Interpretação/Ideation] Sum6](ref://result-interpretation/lower-section/ideation/Sum6)
 - [[Interpretação/Ideation] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
 

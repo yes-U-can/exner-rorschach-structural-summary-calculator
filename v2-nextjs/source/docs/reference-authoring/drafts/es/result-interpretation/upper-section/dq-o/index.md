@@ -45,7 +45,7 @@ Suele funcionar como línea de base del nivel de organización habitual del prot
 - Su significado cambia según la relación con `DQ+`, `DQv/+` y `DQv`.
 - Si `DQo` domina y `DQ+` casi no aparece, puede haber poca complejidad integrativa disponible.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `DQo` no debe leerse como índice de calidad general por sí solo.
 - Siempre conviene revisar la distribución completa de `DQ`.

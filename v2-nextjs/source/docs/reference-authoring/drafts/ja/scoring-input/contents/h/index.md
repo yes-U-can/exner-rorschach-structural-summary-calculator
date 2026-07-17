@@ -24,34 +24,34 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-contents-human-2026-03-10.md"
 ---
 
-# Document Name: [コーディング/内容] H
+# [コーディング/内容] H
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - H
 - 人間
 - 全体人物
 - 現実的人物
 
-## Core Definition
+## 中核的定義
 
-`H` は、反応が現実的な全体人物を指すときに付ける内容コードです。  
+`H` は、反応が現実的な全体人物を指すときに付ける内容コードです。
 身体部分ではなく、一人の人間全体として知覚されている必要があります。
 
-## Application Conditions
+## 採点・適用条件
 
 - 主対象が人物全体として述べられている必要があります。
 - その人物は空想的存在ではなく、現実的人間として扱われていなければなりません。
 - 歴史的・文化的に特定された人物像であれば、必要に応じて [`Ay`](ref://scoring-input/contents/Ay) を二次内容として併記します。
 - 身体の一部だけなら [`Hd`](ref://scoring-input/contents/Hd) を再検討します。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
 - `H` は [`(H)`](ref://scoring-input/contents/%28H%29) と違います。`(H)` は空想的・神話的人物全体です。
 - `H` は [`Hd`](ref://scoring-input/contents/Hd) と違います。`Hd` は人物部分です。
 - 人間内容があるだけで [`GHR`](ref://scoring-input/gphr/GHR) や [`PHR`](ref://scoring-input/gphr/PHR) は決まりません。
 
-## Cross References
+## 相互参照
 
 - [[コーディング/内容] Contents](ref://scoring-input/contents)
 - [[コーディング/内容] (H)](ref://scoring-input/contents/%28H%29)
@@ -59,9 +59,9 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-contents-human-202
 - [[コーディング/内容] Ay](ref://scoring-input/contents/Ay)
 - [[コーディング/GHR-PHR] GHR](ref://scoring-input/gphr/GHR)
 - [[コーディング/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
-- [[解釈/対人関係] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
+- [[解釈/対人関係] 人間内容](ref://result-interpretation/lower-section/interpersonal/HumanCont)
 - [[解釈/対人関係] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)
 
-## Evidence Note
+## 根拠メモ
 
-- 詳細な出典比較と判断メモは内部 provenance note に分離しています.
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

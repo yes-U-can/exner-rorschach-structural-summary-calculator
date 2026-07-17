@@ -33,7 +33,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretat
 
 ## Definición central
 
-`COP` muestra con que frecuencia el protocolo incluye escenas interpersonales cooperativas o mutuamente ajustadas.
+`COP` muestra con qué frecuencia el protocolo incluye escenas interpersonales cooperativas o mutuamente ajustadas.
 En interpretación funciona como una pista de cuánto se imagina el vínculo en términos de apoyo, coordinación o reciprocidad.
 
 ## Puntos de interpretación
@@ -49,7 +49,7 @@ En interpretación funciona como una pista de cuánto se imagina el vínculo en 
 - Un `COP` bajo no equivale automáticamente a patología.
 - `COP` y `AG` pueden coexistir en el mismo protocolo.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `COP` solo ofrece una señal sobre la estructura relacional imaginada.
 - Conviene leerlo junto con `SumT_inter`, `HumanCont`, `ISO_Index` y `GHR/PHR`.
@@ -68,7 +68,7 @@ En interpretación funciona como una pista de cuánto se imagina el vínculo en 
 - [[Interpretación/Interpersonal] AG](ref://result-interpretation/lower-section/interpersonal/AG)
 - [[Interpretación/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
 - [[Interpretación/Interpersonal] SumT](ref://result-interpretation/lower-section/interpersonal/SumT_inter)
-- [[Codificación/Special Score] COP](ref://scoring-input/special-score/COP)
+- [[Codificación/Código Especial] COP](ref://scoring-input/special-score/COP)
 - [[Codificación/GHR-PHR] GHR](ref://scoring-input/gphr/GHR)
 - [[Codificación/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
 - [[Interpretación/Interpersonal] Isolation Index](ref://result-interpretation/lower-section/interpersonal/ISO_Index)

@@ -50,17 +50,12 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `S`는 맥락 의존성이 크다.
 - 위치로서의 `S`와 정서/매개 해석 변수는 분리해서 보고, 나중에 다시 연결한다.
 
-## 근거 메모
-
+## 함께 볼 변수
 - `S_aff`
 - `S_minus`
 - `AG`
 - `PER`
 - `W_D_Dd`
-
-## 근거 메모
-
-이 문서는 서비스 운영용 참조 코퍼스로 정리된 런타임 문서입니다.
 
 ## 근거 메모
 

@@ -17,36 +17,36 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-contents-cg-cl-ex-fi-2026-03-10.md"
 ---
 
-# Document Name: [コーディング/内容] Ex
+# [コーディング/内容] Ex
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - Ex
 - 爆発
 - 爆発場面
 
-## Core Definition
+## 中核的定義
 
 `Ex` は、主内容が爆発や爆発場面として知覚されたときに付ける内容コードです。  
 単なる煙や明るさではなく、「爆発している出来事」そのものが中心です。
 
-## Application Conditions
+## 採点・適用条件
 
 - 爆発、破裂、爆風、明確な爆発場面に使います。
 - 火花や破片が含まれていても、中心概念が爆発なら `Ex` を使います。
 - 主眼が火や煙であれば [`Fi`](ref://scoring-input/contents/Fi) を先に見直します。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
 - `Ex` と [`Fi`](ref://scoring-input/contents/Fi) は視覚的に重なって見えても同じコードではありません。
 - `Ex` には爆発という出来事が必要で、`Fi` には火や煙そのものが必要です。
 - 単なる勢いや動きの感じだけで `Ex` を付けてはいけません。
 
-## Cross References
+## 相互参照
 
 - [[コーディング/内容] Contents](ref://scoring-input/contents)
 - [[コーディング/内容] Fi](ref://scoring-input/contents/Fi)
 
-## Evidence Note
+## 根拠メモ
 
-- 詳細な出典比較と判断メモは内部 provenance note に分離しています.
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

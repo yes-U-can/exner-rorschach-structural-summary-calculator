@@ -46,7 +46,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/popu
 
 - `Popular`은 단순히 흔해 보이는 반응이라는 인상만으로 채점하지 않는다.
 - 문화권에 따라 인기반응 목록은 일부 차이가 날 수 있다.
-- 특히 경계선에 있는 인기반응은 locale별 문서 버전에서 다르게 설명될 수 있다.
+- 경계선에 있는 평범반응은 추측으로 정하지 않고 적용 중인 종합체계 기준을 다시 확인한다.
 - `P`가 많거나 적은 의미는 해석 단계에서 다시 본다. coding 단계에서는 목록 일치 여부가 우선이다.
 
 ## 상호 참조

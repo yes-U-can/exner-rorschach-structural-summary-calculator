@@ -48,7 +48,7 @@ En `core` suele indicar cuánto peso tiene la necesidad de cercanía, consuelo o
 - Un `SumT` de 0 no demuestra ausencia total de necesidades de apego o cercanía.
 - Conviene separar la lectura de carga actual en `core` de la lectura de estilo relacional en `interpersonal`.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `SumT` por sí solo no basta para describir apego, intimidad o funcionamiento relacional global.
 - Debe leerse con `eb`, `es` y con la página interpersonal correspondiente.

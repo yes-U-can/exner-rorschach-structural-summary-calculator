@@ -34,7 +34,7 @@ Esto ocurre cuando la forma no queda disponible como base codificable para valor
 ## Condiciones de aplicación
 
 - La respuesta no aporta un uso de forma que permita asignar `+`, `o`, `u` o `-`.
-- El registro se usa para distinguir estas respuestas de las que si reciben una FQ concreta.
+- El registro se usa para distinguir estas respuestas de las que sí reciben una FQ concreta.
 - Debe aplicarse con cautela y solo cuando realmente no corresponde una codificación formal.
 
 ## Precauciones y distinciones

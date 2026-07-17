@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/card/VI"
 locale: "es"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/card/VI"
-displayTitle: "[Codificación/Tarjetas] VI"
+displayTitle: "[Codificación/Láminas] VI"
 aliases:
   - "Card VI"
   - "card VI"
@@ -25,20 +25,20 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/card/vi/index.md"
 ---
 
-# Nombre del documento: [Codificación/Tarjetas] VI
+# Nombre del documento: [Codificación/Láminas] VI
 
 ## Alias y búsqueda
 
 - Card VI
 - card VI
 - card 6
-- tarjeta VI
+- lámina VI
 - lámina VI
 
 ## Definición central
 
-`Tarjeta VI` suele facilitar respuestas ligadas a piel, textura y forma.
-Esta página resume que conviene revisar en codificación cuando aparecen esas respuestas.
+`Lámina VI` suele facilitar respuestas ligadas a piel, textura y forma.
+Esta página resume qué conviene revisar durante la codificación cuando aparecen esas respuestas.
 
 ## Condiciones de aplicación
 
@@ -52,7 +52,7 @@ Esta página resume que conviene revisar en codificación cuando aparecen esas r
 
 - Que la respuesta mencione piel no implica automáticamente un determinante de textura.
 - Si la cualidad táctil no participa realmente en la percepción, no agregas `T`.
-- `Tarjeta VI` facilita ciertas respuestas populares, pero `Popular` debe confirmarse por criterio formal.
+- `Lámina VI` facilita ciertas respuestas populares, pero `Popular` debe confirmarse por criterio formal.
 
 ## Referencias cruzadas
 

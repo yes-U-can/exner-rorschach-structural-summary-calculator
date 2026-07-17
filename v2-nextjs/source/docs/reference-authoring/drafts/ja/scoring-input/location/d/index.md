@@ -19,38 +19,38 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
-# Document Name: [コーディング/場所] D
+# [コーディング/場所] D
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - D
 - 通常部分
 - 一般的部分
 
-## Core Definition
+## 中核的定義
 
 `D` は、ブロットの中で比較的よく使われる通常の部分を使った反応につけるコードです。
 全体ではないが、珍しい細部でもないときの標準的な部分反応です。
 
-## Application Conditions
+## 採点・適用条件
 
-- 反応が全体ではなく一部に基づいている。
-- その部分が location sheet 上で一般的に用いられる領域に入る。
-- inquiry でどの部分を使ったかが確認できる。
+- 反応が全体ではなく一部に基づいています。
+- その部分が領域図上で一般的に用いられる領域に入ります。
+- 質問段階でどの部分を使ったかが確認できます。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
 - 全体使用なら [`W`](ref://scoring-input/location/W) です。
 - 珍しい小部分なら [`Dd`](ref://scoring-input/location/Dd) を使います。
 - 白地も図として使った場合は [`DS`](ref://scoring-input/location/DS) を検討します。
 
-## Cross References
+## 相互参照
 
 - [[コーディング/場所] W](ref://scoring-input/location/W)
 - [[コーディング/場所] Dd](ref://scoring-input/location/Dd)
 - [[コーディング/場所] DS](ref://scoring-input/location/DS)
-- [[解釈/Upper Section] D](ref://result-interpretation/upper-section/D)
+- [[解釈/上段] D](ref://result-interpretation/upper-section/D)
 
-## Evidence Note
+## 根拠メモ
 
-- 詳細な出典比較と判断根拠は内部 provenance note に分離してあります。
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

@@ -1,8 +1,8 @@
 {
   "app": {
-    "title": "Computing Program for Rorschach Structural Summary",
-    "version": "v2.1.3",
-    "provider": "Fornecido pelo Instituto de Psicologia Clínica de Seul"
+    "title": "Calculadora do Sumário Estrutural de Rorschach",
+    "version": "v2.2.4",
+    "provider": "Desenvolvido e mantido pela MOW"
   },
   "nav": {
     "scoring": "Codificação e Sumário Estrutural",
@@ -37,7 +37,7 @@
   },
   "modal": {
     "welcome": {
-      "title": "Computing Program for Rorschach Structural Summary",
+      "title": "Calculadora do Sumário Estrutural de Rorschach",
       "new": "Criar Novo",
       "loadSample": "Iniciar com Dados de Exemplo",
       "loadSaved": "Carregar Conteúdo Salvo Automaticamente",
@@ -50,7 +50,7 @@
     },
     "ai": {
       "title": "Etapa de preparação: Baixe o arquivo CSV clicando nos botões verdes na tela anterior.",
-      "message": "Para usar os recursos de IA, inicie uma sessao com uma API key da OpenAI.",
+      "message": "Para usar os recursos de IA, inicie uma sessão com uma chave de API da OpenAI.",
       "open": "Abrir em Nova Janela",
       "cancel": "Voltar para Resultados"
     },
@@ -59,7 +59,7 @@
       "noticeTitle": "※ Aviso de Uso do Armazenamento do Navegador (LocalStorage)",
       "noticeText_part1": "Este aplicativo armazena temporariamente os dados inseridos na aba 'Codificação e Sumário Estrutural' no armazenamento local (LocalStorage) do navegador do seu computador para sua conveniência de codificação.",
       "noticeText_part2": "Esses dados não são transmitidos ao servidor nem acessíveis pelo operador, e são usados apenas para restaurar o conteúdo de entrada quando você revisitar o navegador.",
-      "noticeText_part3": "As API keys inseridas para recursos de IA nao sao salvas no banco de dados do servidor. Elas sao criptografadas em um cookie HttpOnly de 24 horas. O historico de chat de IA tambem nao e salvo no banco de dados e fica apenas durante a sessao do navegador."
+      "noticeText_part3": "As chaves de API inseridas para os recursos de IA não são salvas no banco de dados do servidor. Elas são criptografadas em um cookie HttpOnly de 24 horas. O histórico de chat de IA também não é salvo no banco de dados e fica apenas durante a sessão do navegador."
     }
   },
   "input": {
@@ -76,15 +76,15 @@
     "specialScores": "Pontuações Especiais",
     "score": "Pontuação",
     "gphr": "G/PHR",
-    "guideResponse": "Usado para registrar as respostas verbais do avaliado; nao entra no calculo, portanto pode ficar em branco.",
+    "guideResponse": "Usado para registrar as respostas verbais da pessoa avaliada; não entra no cálculo e, portanto, pode ficar em branco.",
     "tooltipInfo": "Apenas a linha inferior pode ser manipulada,\ne até 50 linhas são possíveis.",
     "rowOrderTip": "A ordem das linhas de resposta não afeta os resultados do cálculo. Por exemplo, você pode registrar o conteúdo do Cartão 6 na linha 8 e o conteúdo do Cartão 2 na linha 14 sem afetar o resultado.",
     "scoreTooltip": "Calculado automaticamente com base em [Card] e [Z].",
     "gphrTooltip": "Classificado automaticamente com base em [Contents], [Determinants], [FQ] e [Special Score].",
-    "noReorderTooltip": "Clique na area da alca para levantar uma linha e movela de posicao.",
+    "noReorderTooltip": "Clique na área da alça para levantar uma linha e movê-la de posição.",
     "responseNumber": "Resposta #{index}",
     "responseMemo": "Memo da resposta",
-    "pairDisabledTooltip": "Reflection (Fr/rF) ja implica simetria. Pair (2) nao pode ser registrado ao mesmo tempo.",
+    "pairDisabledTooltip": "Reflection (Fr/rF) já implica simetria. Pair (2) não pode ser registrado ao mesmo tempo.",
     "mobile": {
       "progressTitle": "Resposta {current} / {total}",
       "addRow": "Adicionar linha de resposta",
@@ -288,19 +288,19 @@
     },
     "apiKeySaved": {
       "title": "Chave API conectada",
-      "message": "A chave API da {provider} esta conectada para esta sessao."
+      "message": "A chave de API da {provider} está conectada para esta sessão."
     },
     "apiKeyError": {
       "title": "Erro",
-      "message": "Nao foi possivel conectar a chave API. Tente novamente."
+      "message": "Não foi possível conectar a chave de API. Tente novamente."
     },
     "aiInterpretLogin": {
       "title": "API key necessaria",
-      "message": "Para usar o assistente de IA, inicie uma sessao com uma API key da OpenAI."
+      "message": "Para usar o assistente de IA, inicie uma sessão com uma chave de API da OpenAI."
     },
     "aiInterpretApiKey": {
       "title": "Configuração da API key necessária",
-      "message": "Insira a chave API desta sessao para usar o assistente de IA."
+      "message": "Insira a chave de API desta sessão para usar o assistente de IA."
     }
   },
   "loader": {
@@ -327,7 +327,7 @@
     "summaryTitle": "Exportar todos os itens calculados no sumário estrutural em formato CSV"
   },
   "footer": {
-    "title": "Computing Program for Rorschach Structural Summary",
+    "title": "Calculadora do Sumário Estrutural de Rorschach",
     "copyright": "© 1997–2026 Instituto de Psicologia Clínica de Seul (Seoul Institute of Clinical Psychology, SICP). Todos os direitos reservados.",
     "scoringCanvasCopyright": "© 2026 Instituto de Psicologia Clínica de Seul (SICP) e MOW. Todos os direitos reservados."
   },
@@ -348,45 +348,45 @@
     "positive": "Positivo"
   },
   "aiSession": {
-    "title": "Sessao de IA",
-    "subtitle": "Sua API key nao e salva no banco de dados do servidor e fica apenas em um cookie de sessao de 24 horas.",
+    "title": "Sessão de IA",
+    "subtitle": "Sua chave de API não é salva no banco de dados do servidor e fica apenas em um cookie de sessão de 24 horas.",
     "apiKeys": {
-      "title": "API key da sessao de IA",
+      "title": "Chave de API da sessão de IA",
       "openai": "Chave de API da OpenAI",
       "placeholder": "Insira a chave API da {provider}",
       "openaiPlaceholder": "Insira uma API key da OpenAI que comece com sk-...",
-      "saveButton": "Conectar sessao",
+      "saveButton": "Conectar sessão",
       "setupRequired": "Chave API necessaria",
       "deleteButton": "Excluir",
       "saved": "Conectada",
-      "notSaved": "Nao conectada",
-      "storedKey": "Chave da sessao",
+      "notSaved": "Não conectada",
+      "storedKey": "Chave da sessão",
       "exclusiveTitle": "Conecte a OpenAI",
-      "exclusiveDescription": "Conecte uma API key da OpenAI para esta sessao. Uma nova chave substitui a chave anterior da sessao.",
+      "exclusiveDescription": "Conecte uma chave de API da OpenAI para esta sessão. Uma nova chave substitui a chave anterior da sessão.",
       "exclusiveNotice": "Conecte uma API key da OpenAI.",
       "loadedModel": "Modelo automatico",
       "activeProvider": "Ativo",
-      "currentProviderHelp": "O assistente de interpretacao e o assistente de codificacao usam {provider}.",
-      "optionalProviderHelp": "Insira uma chave da {provider} somente se quiser usa-la.",
-      "replacementNotice": "Esta chave substituira a chave atual da {otherProvider}.",
-      "conflictNotice": "Somente um provedor pode ficar ativo. Uma nova chave substitui a chave atual da sessao.",
+      "currentProviderHelp": "O assistente de interpretação e o assistente de codificação usam {provider}.",
+      "optionalProviderHelp": "Insira uma chave da {provider} somente se quiser usá-la.",
+      "replacementNotice": "Esta chave substituirá a chave atual da {otherProvider}.",
+      "conflictNotice": "Conectar uma nova chave de API da OpenAI substitui a chave da sessão atual.",
       "saveAndReplaceButton": "Conectar e substituir",
-      "replacedToast": "A chave API da {provider} esta conectada para esta sessao.",
+      "replacedToast": "A chave de API da {provider} está conectada para esta sessão.",
       "connectedProvider": "{provider} conectado",
       "noProviderConnected": "Nenhuma chave conectada",
       "emptyProviderHelp": "Conecte uma API key da OpenAI.",
       "inputLabel": "Chave da {provider}",
       "showKey": "Mostrar chave API",
       "hideKey": "Ocultar chave API",
-      "notConnected": "Nao conectada",
-      "sessionKey": "Chave desta sessao",
-      "sessionDescription": "A API key inserida nao e salva no banco de dados do servidor. Ela e criptografada em um cookie HttpOnly de 24 horas. Use uma API key da OpenAI para esta sessao.",
-      "promptTitle": "Iniciar sessao de IA",
-      "promptDescription": "A chave nao e salva no banco de dados do servidor.\nEla e criptografada em um cookie HttpOnly por 24 horas,\ne excluida ao encerrar a sessao de IA.",
+      "notConnected": "Não conectada",
+      "sessionKey": "Chave desta sessão",
+      "sessionDescription": "A chave de API inserida não é salva no banco de dados do servidor. Ela é criptografada em um cookie HttpOnly de 24 horas. Use uma chave de API da OpenAI para esta sessão.",
+      "promptTitle": "Iniciar sessão de IA",
+      "promptDescription": "A chave não é salva no banco de dados do servidor.\nEla é criptografada em um cookie HttpOnly por 24 horas,\ne excluída ao encerrar a sessão de IA.",
       "promptLater": "Mais tarde",
-      "connectForSession": "Iniciar sessao de IA",
-      "clearSessionKey": "Encerrar sessao de IA",
-      "providerFormatError": "Insira uma API key da OpenAI que comece com sk-."
+      "connectForSession": "Iniciar sessão de IA",
+      "clearSessionKey": "Encerrar sessão de IA",
+      "providerFormatError": "Insira uma chave de API da OpenAI que comece com sk-."
     }
   },
   "chat": {
@@ -394,20 +394,21 @@
     "placeholder": "Faça uma pergunta...",
     "errorMessage": "Desculpe, não foi possível obter uma resposta. Por favor, verifique sua chave de API e tente novamente.",
     "history": "Chat temporario",
-    "selectChat": "Esta conversa temporaria fica apenas durante a sessao atual do navegador.",
+    "selectChat": "Esta conversa temporária fica apenas durante a sessão atual do navegador.",
     "startNew": "Digite uma mensagem para iniciar uma conversa temporaria.",
     "noSessions": "Nenhuma conversa salva.",
     "loading": "Carregando...",
-    "emptyStateTitle": "Chat temporario de IA",
-    "emptyStateDescription": "O chat nao e salvo no banco de dados do servidor e fica apenas durante esta sessao do navegador.",
-    "newChat": "Reiniciar chat temporario",
+    "emptyStateTitle": "Chat temporário de IA",
+    "emptyStateDescription": "O chat não é salvo no banco de dados do servidor e fica apenas durante esta sessão do navegador.",
+    "newChat": "Reiniciar chat temporário",
     "readingResults": "Lendo os resultados da avaliação. Aguarde um momento...",
     "resultsReady": "Terminei de ler todos os resultados. Pode enviar suas perguntas.",
-    "apiKeyMissing": "Insira uma API key para iniciar uma sessao de IA.",
+    "apiKeyMissing": "Insira uma chave de API para iniciar uma sessão de IA.",
     "billingOrQuota": "Verifique o status de cobrança ou cota da sua API. Depois, tente novamente.",
     "invalidApiKey": "Verifique a API key informada. Ela pode estar inválida ou expirada.",
     "modelUnavailable": "Esta chave de API não pode acessar o modelo de IA selecionado. Verifique o acesso ao modelo na conta do provedor.",
-    "providerRejected": "O provedor de IA rejeitou a solicitação. Verifique a chave de API, o status de cobrança e o acesso ao modelo."
+    "providerRejected": "O provedor de IA rejeitou a solicitação. Verifique a chave de API, o status de cobrança e o acesso ao modelo.",
+    "appRateLimited": "Muitas solicitações foram enviadas em pouco tempo. Aguarde um momento e tente novamente."
   },
   "errors": {
     "title": "Erro",

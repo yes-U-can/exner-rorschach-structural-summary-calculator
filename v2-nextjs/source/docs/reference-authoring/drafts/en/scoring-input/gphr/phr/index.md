@@ -39,7 +39,7 @@ Like `GHR`, it is not chosen from free impression, but by moving through success
 ## Application Conditions
 
 - The response first has to qualify as a human representational response.
-- `PHR` is assigned early if there is `FQ-`, `FQ none`, `CONTAM`, or any level-2 cognitive special score.
+- `PHR` is assigned early if there is `FQ-`, `FQ none`, `ALOG`, `CONTAM`, or any level-2 cognitive special score.
 - Codes such as `FABCOM`, [`MOR`](ref://scoring-input/special-score/MOR), content [`An`](ref://scoring-input/contents/An), [`AG`](ref://scoring-input/special-score/AG), `INCOM`, `DR`, or content [`Hd`](ref://scoring-input/contents/Hd) can also push toward `PHR` at the relevant point in the sequence.
 - If a `PHR` criterion appears before a `GHR` criterion, the decision closes at `PHR`.
 

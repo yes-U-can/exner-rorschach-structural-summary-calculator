@@ -47,7 +47,7 @@ Indica cuántas veces aparece el intento de organizar relaciones entre partes de
 - Un `Zf` alto no significa por sí solo buena eficiencia.
 - Un `Zf` bajo no equivale automáticamente a deterioro; la brevedad del protocolo y la defensividad también influyen.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `Zf` habla de frecuencia, no de calidad final de la organización.
 - La lectura aislada es insuficiente sin `ZSum`, `ZEst` y `Zd`.

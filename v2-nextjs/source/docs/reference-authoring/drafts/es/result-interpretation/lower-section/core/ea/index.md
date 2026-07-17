@@ -54,7 +54,7 @@ Indica cuánta capacidad efectiva tiene la persona para manejar demandas cotidia
 - En protocolos cortos o con `Lambda` alto, la cifra puede infraestimar o simplificar el cuadro real.
 - `EA` habla de recursos potencialmente disponibles, no de su uso perfecto en toda situación.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `EA` no basta por sí solo para concluir déficit o fortaleza global.
 - El contraste importante es `EA` frente a `es`, y luego `D` y `AdjD`.

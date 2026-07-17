@@ -1,6 +1,10 @@
+import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { normalizeLanguage, SUPPORTED_LANGUAGES } from '@/i18n/config';
 import { getAppShellUi } from '@/lib/appShellUi';
+
+const languageSelectorSource = readFileSync('components/layout/LanguageSelector.tsx', 'utf8');
+const versionArchiveSource = readFileSync('components/versions/VersionArchiveList.tsx', 'utf8');
 
 describe('app shell UI copy', () => {
   it('provides complete sidebar labels in all five languages', () => {
@@ -27,5 +31,16 @@ describe('app shell UI copy', () => {
     }
     expect(normalizeLanguage('fr')).toBeNull();
     expect(normalizeLanguage(undefined)).toBeNull();
+  });
+
+  it('portals the sidebar language menu outside the collapsed rail', () => {
+    expect(languageSelectorSource).toContain("to: compact ? ('right end' as const) : ('top start' as const)");
+    expect(languageSelectorSource).toContain('portal={isSidebarVariant}');
+    expect(languageSelectorSource).toContain('modal={false}');
+  });
+
+  it('keeps both version archive groups collapsed on first render', () => {
+    expect(versionArchiveSource).toContain('const [isV2Open, setIsV2Open] = useState(false);');
+    expect(versionArchiveSource).toContain('const [isV1Open, setIsV1Open] = useState(false);');
   });
 });

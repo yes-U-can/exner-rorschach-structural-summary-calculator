@@ -36,6 +36,7 @@ try {
         embeddings: localeSnapshot.embeddedChunkCount ?? 0,
         chunkCoverage: `${localeSnapshot.embeddedChunkCount ?? 0}/${localeSnapshot.chunkCount ?? 0}`,
         stale: localeSnapshot.staleEmbeddingCount ?? 0,
+        hashMismatches: localeSnapshot.contentHashMismatchCount ?? 'unknown',
         ready: localeSnapshot.ready && corpusCurrent ? "yes" : "no",
         latestRefreshedAt: localeSnapshot.latestRefreshedAt ?? "-",
       };

@@ -44,7 +44,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretat
 ## Definición central
 
 `Upper Section` es la zona del resumen estructural donde primero se revisan `Zf`, `ZSum`, `ZEst`, `Zd`, `W`, `D`, `Dd`, `S` y la distribución de `DQ`.
-Sirve como pantalla inicial para ver cómo la persona organiza el campo estimular, donde pone el foco y con que nivel general de estructuración responde.
+Sirve como pantalla inicial para ver cómo la persona organiza el campo estimular, dónde pone el foco y con qué nivel general de estructuración responde.
 
 ## Puntos de interpretación
 
@@ -60,10 +60,10 @@ Sirve como pantalla inicial para ver cómo la persona organiza el campo estimula
 - Mucho `Dd` o `S` no debe leerse de inmediato como patología.
 - Un `DQ+` bajo puede aparecer también en protocolos breves o muy defensivos.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `Upper Section` funciona como una criba inicial, no como una conclusión clínica final.
-- La lectura segura exige integrar después los clusters de `lower-section` y los indices especiales.
+- La lectura segura exige integrar después los grupos de la sección inferior y los índices especiales.
 
 ## Variables para revisar juntas
 

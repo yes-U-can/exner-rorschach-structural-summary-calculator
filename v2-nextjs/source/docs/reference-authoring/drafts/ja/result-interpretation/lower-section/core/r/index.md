@@ -22,9 +22,9 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-lower-section-core-opening-2026-03-10.md"
 ---
 
-# Document Name: [Interpretation/Core] R
+# [Interpretation/Core] R
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - R
 - response total
@@ -32,31 +32,31 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-lower-section-core
 - 反応総数
 - 総反応数
 
-## Core Definition
+## 中核的定義
 
 `R` はプロトコル全体の反応総数です。
 解釈では、まず反応の広がり、生産性、記録の十分性を見るための指標として使います。
 
-## Interpretation Points
+## 解釈の要点
 
 - `R` が非常に少ないときは、プロトコル全体の解釈に強い慎重さが必要です。
 - 十分な `R` は、構造要約の他の変数を比較的安定して読むための土台になります。
 - `R` が高いことは、必ずしも適応的な豊かさだけを意味しません。過剰な産出や拡散性と結びつく場合もあります。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
 - 低い `R` は、防衛性、引きこもり、疲労、場面不安、検査関係の難しさなどを反映することがあります。
 - 高い `R` だけで適応的な豊かさと判断してはいけません。
 - `R` の意味は [`Lambda`](ref://result-interpretation/lower-section/core/Lambda)、`DQ`、検査中の行動と合わせて読みます。
 
-## Cross References
+## 相互参照
 
-- [[Interpretation/Lower Section/Core] Core](ref://result-interpretation/lower-section/core)
-- [[Interpretation/Core] Lambda](ref://result-interpretation/lower-section/core/Lambda)
-- [[Interpretation/Core] EA](ref://result-interpretation/lower-section/core/EA)
-- [[Interpretation/Core] EB](ref://result-interpretation/lower-section/core/EB)
+- [[解釈/下段/Core] Core](ref://result-interpretation/lower-section/core)
+- [[解釈/Core] Lambda](ref://result-interpretation/lower-section/core/Lambda)
+- [[解釈/Core] EA](ref://result-interpretation/lower-section/core/EA)
+- [[解釈/Core] EB](ref://result-interpretation/lower-section/core/EB)
 - [[Coding] score](ref://scoring-input/score)
 
-## Evidence Note
+## 根拠メモ
 
-- Detailed source comparison is stored in internal provenance notes.
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

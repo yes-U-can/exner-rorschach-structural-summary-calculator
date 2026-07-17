@@ -52,7 +52,7 @@ En interpretación ayuda a estimar cuánta necesidad de cercanía, contacto y so
 - Un valor cero no elimina toda necesidad de cercanía; depende también del uso general de sombreado.
 - Conviene distinguir `SumT` en `Core` de `SumT_inter` en su lectura relacional.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - Esta variable necesita contexto interpersonal para volverse clara.
 - Conviene leerla junto con `Food`, `COP`, `HumanCont` e `ISO_Index`.

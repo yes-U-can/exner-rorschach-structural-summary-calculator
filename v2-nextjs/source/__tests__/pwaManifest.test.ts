@@ -8,8 +8,8 @@ describe('PWA manifest', () => {
   it('defines the install metadata without related native-app prompts', () => {
     const appManifest = manifest();
 
-    expect(appManifest.name).toBe('Computing Program for Rorschach Structural Summary');
-    expect(appManifest.short_name).toBe('Rorschach SS');
+    expect(appManifest.name).toBe('Yes, U Can!');
+    expect(appManifest.short_name).toBe('Yes, U Can!');
     expect(appManifest.start_url).toBe('/');
     expect(appManifest.scope).toBe('/');
     expect(appManifest.display).toBe('standalone');

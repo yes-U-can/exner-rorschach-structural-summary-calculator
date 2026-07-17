@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/card/IV"
 locale: "ja"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/card/IV"
-displayTitle: "[符号化/カード] IV"
+displayTitle: "[コーディング/カード] IV"
 aliases:
   - "Card IV"
   - "カードIV"
@@ -22,42 +22,42 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-card-i-v-2026-03-10.md"
 ---
 
-# Document Name: [符号化/カード] IV
+# [コーディング/カード] IV
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - Card IV
 - カードIV
 - カード4
 - 図版IV
 
-## Core Definition
+## 中核的定義
 
-`Card IV` は、全体反応や、形態・質感・重さに関する言及を促しやすいカードです。  
+`Card IV` は、全体反応や、形態・質感・重さに関する言及を促しやすいカードです。
 このページは、そのような反応を符号化するときに見直しやすい点をまとめます。
 
-## Application Conditions
+## 採点・適用条件
 
 - `W` 反応が出やすいです。
 - 質感や触覚的性質を述べたら、形の関わり方に応じて `T` や `TF` を見直します。
 - 反応が主に形態でまとまっているなら `F` と `FQ` を確認します。
 - カードが重そう、陰影が強そうに見えるというだけでは陰影決定因を加えません。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
 - 粗い、重いという言葉が出ただけでは不十分で、その性質が知覚形成に実際に使われている必要があります。
 - このページはカードの象徴意味を解釈するものではなく、符号化の焦点を示す補助です。
 - `Card IV` と決定因 `V` は別物なので混同しません。
 
-## Cross References
+## 相互参照
 
-- [[符号化] score](ref://scoring-input/score)
-- [[符号化/位置] W](ref://scoring-input/location/W)
-- [[符号化/決定因] F](ref://scoring-input/determinants/F)
-- [[符号化/決定因] T](ref://scoring-input/determinants/T)
-- [[符号化/決定因] TF](ref://scoring-input/determinants/TF)
-- [[符号化/FQ] FQ](ref://scoring-input/fq)
+- [[コーディング] score](ref://scoring-input/score)
+- [[コーディング/位置] W](ref://scoring-input/location/W)
+- [[コーディング/決定因] F](ref://scoring-input/determinants/F)
+- [[コーディング/決定因] T](ref://scoring-input/determinants/T)
+- [[コーディング/決定因] TF](ref://scoring-input/determinants/TF)
+- [[コーディング/FQ] FQ](ref://scoring-input/fq)
 
-## Evidence Note
+## 根拠メモ
 
-- 詳細な出典比較は内部 provenance note に分離してあります。
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

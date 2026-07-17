@@ -46,7 +46,7 @@ En `Self Perception` funciona como una pista de preocupación por el cuerpo, por
 - `Xy` no siempre suma exactamente igual que `An` en cada respuesta, por eso conviene volver al contexto del protocolo.
 - Un valor bajo no elimina toda preocupación corporal.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - La variable señala foco corporal, pero no decide sola si ese foco es hipocondríaco, traumático o situacional.
 - Conviene leerla junto con `MOR_self`, `SumV_self` y `HVI`.
@@ -65,7 +65,7 @@ En `Self Perception` funciona como una pista de preocupación por el cuerpo, por
 - [[Interpretación/Self Perception] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
 - [[Codificación/Contenido] An](ref://scoring-input/contents/An)
 - [[Codificación/Contenido] Xy](ref://scoring-input/contents/Xy)
-- [[Interpretación/Special Indices] Hypervigilance Index](ref://result-interpretation/special-indices/HVI)
+- [[Interpretación/Índices Especiales] Hypervigilance Index](ref://result-interpretation/special-indices/HVI)
 
 ## Nota de fundamento
 

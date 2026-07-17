@@ -20,39 +20,39 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
-# Document Name: [コーディング/決定因] V
+# [コーディング/決定因] V
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - V
 - 純Vista
 - pure vista
 
-## Core Definition
+## 中核的定義
 
-`V` は、反応が奥行き・距離・立体感そのものに依存し、形の支えが十分でないときにつける determinant です。
+`V` は、反応が奥行き・距離・立体感そのものに依存し、形の支えが十分でないときにつける決定因です。
 深さや遠近感が中心で、形は主要な基盤になっていません。
 
-## Application Conditions
+## 採点・適用条件
 
-- Vista が反応の主要基盤になっている。
-- `FV` や `VF` に必要な形の支えが足りない。
-- 深さ・距離・浮き出し感が明確に述べられている。
+- ビスタが反応の主要基盤になっています。
+- `FV` や `VF` に必要な形の支えが足りません。
+- 深さ・距離・浮き出し感が明確に述べられています。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
 - 形の支えがあるなら [`VF`](ref://scoring-input/determinants/VF) や [`FV`](ref://scoring-input/determinants/FV) を再検討します。
 - 無彩色が色として働いているだけなら `FC'`, `C'F`, `C'` の方が適切なことがあります。
 - `V` の意味づけはあとで [`SumV`](ref://result-interpretation/lower-section/core/SumV) や [`SumV_self`](ref://result-interpretation/lower-section/selfPerception/SumV_self) で見直します。
 
-## Cross References
+## 相互参照
 
-- [[コーディング/決定因] Determinants](ref://scoring-input/determinants)
+- [[コーディング/決定因] 決定因](ref://scoring-input/determinants)
 - [[コーディング/決定因] FV](ref://scoring-input/determinants/FV)
 - [[コーディング/決定因] VF](ref://scoring-input/determinants/VF)
 - [[解釈/Core] SumV](ref://result-interpretation/lower-section/core/SumV)
 - [[解釈/自己知覚] SumV](ref://result-interpretation/lower-section/selfPerception/SumV_self)
 
-## Evidence Note
+## 根拠メモ
 
-- 詳細な出典比較と判断根拠は内部 provenance note に分離してあります。
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

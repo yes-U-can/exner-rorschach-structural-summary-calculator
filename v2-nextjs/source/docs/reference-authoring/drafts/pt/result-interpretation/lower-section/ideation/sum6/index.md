@@ -34,12 +34,12 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-ideation-mor-sum6-
 ## Apelidos e busca
 
 - Sum6
-- soma dos seis escores especiais
-- total dos seis escores especiais
+- soma dos seis códigos especiais
+- total dos seis códigos especiais
 
 ## Definição central
 
-`Sum6` é o total simples de respostas contadas dentro dos seis escores especiais ligados ao pensamento.
+`Sum6` é o total simples de respostas contadas dentro dos seis códigos especiais ligados ao pensamento.
 Ele ajuda a estimar com que frequência peculiaridades cognitivas, desvios verbais ou combinações ideativas problemáticas aparecem no protocolo.
 
 ## Pontos de interpretação
@@ -51,7 +51,7 @@ Ele ajuda a estimar com que frequência peculiaridades cognitivas, desvios verba
 
 ## Cuidados e diferenciação
 
-- Se `R` for alto, parte do aumento pode refletir simplesmente mais oportunidades de acumular escores especiais.
+- Se `R` for alto, parte do aumento pode refletir simplesmente mais oportunidades de acumular códigos especiais.
 - `Sum6` alto com respostas majoritariamente de nível 1 não tem o mesmo peso de perfil com vários marcadores de nível 2.
 - Se `Lv2`, `CONTAM` ou `M-` também estiverem presentes, a interpretação deve ficar mais cautelosa.
 
@@ -60,17 +60,17 @@ Ele ajuda a estimar com que frequência peculiaridades cognitivas, desvios verba
 - [[Interpretação/Seção Inferior/Ideação] Ideação](ref://result-interpretation/lower-section/ideation)
 - [[Interpretação/Ideação] Lv2](ref://result-interpretation/lower-section/ideation/Lv2)
 - [[Interpretação/Ideação] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
-- [[Codificação/Special Score] Special Scores](ref://scoring-input/special-score)
-- [[Codificação/Special Score] DV1](ref://scoring-input/special-score/DV1)
-- [[Codificação/Special Score] DV2](ref://scoring-input/special-score/DV2)
-- [[Codificação/Special Score] INCOM1](ref://scoring-input/special-score/INCOM1)
-- [[Codificação/Special Score] INCOM2](ref://scoring-input/special-score/INCOM2)
-- [[Codificação/Special Score] DR1](ref://scoring-input/special-score/DR1)
-- [[Codificação/Special Score] DR2](ref://scoring-input/special-score/DR2)
-- [[Codificação/Special Score] FABCOM1](ref://scoring-input/special-score/FABCOM1)
-- [[Codificação/Special Score] FABCOM2](ref://scoring-input/special-score/FABCOM2)
-- [[Codificação/Special Score] ALOG](ref://scoring-input/special-score/ALOG)
-- [[Codificação/Special Score] CONTAM](ref://scoring-input/special-score/CONTAM)
+- [[Codificação/Código Especial] Códigos Especiais](ref://scoring-input/special-score)
+- [[Codificação/Código Especial] DV1](ref://scoring-input/special-score/DV1)
+- [[Codificação/Código Especial] DV2](ref://scoring-input/special-score/DV2)
+- [[Codificação/Código Especial] INCOM1](ref://scoring-input/special-score/INCOM1)
+- [[Codificação/Código Especial] INCOM2](ref://scoring-input/special-score/INCOM2)
+- [[Codificação/Código Especial] DR1](ref://scoring-input/special-score/DR1)
+- [[Codificação/Código Especial] DR2](ref://scoring-input/special-score/DR2)
+- [[Codificação/Código Especial] FABCOM1](ref://scoring-input/special-score/FABCOM1)
+- [[Codificação/Código Especial] FABCOM2](ref://scoring-input/special-score/FABCOM2)
+- [[Codificação/Código Especial] ALOG](ref://scoring-input/special-score/ALOG)
+- [[Codificação/Código Especial] CONTAM](ref://scoring-input/special-score/CONTAM)
 
 ## Nota de base
 

@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/card/II"
 locale: "es"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/card/II"
-displayTitle: "[Codificación/Tarjetas] II"
+displayTitle: "[Codificación/Láminas] II"
 aliases:
   - "Card II"
   - "card II"
@@ -23,20 +23,20 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/card/ii/index.md"
 ---
 
-# Nombre del documento: [Codificación/Tarjetas] II
+# Nombre del documento: [Codificación/Láminas] II
 
 ## Alias y búsqueda
 
 - Card II
 - card II
 - card 2
-- tarjeta II
+- lámina II
 - lámina II
 
 ## Definición central
 
-`Tarjeta II` introduce de forma temprana zonas rojas llamativas.
-Esta página resume cómo esa presencia cromática puede influir en la codificación, sin convertir la tarjeta en una regla automática.
+`Lámina II` introduce de forma temprana zonas rojas llamativas.
+Esta página resume cómo esa presencia cromática puede influir en la codificación, sin convertir la lámina en una regla automática.
 
 ## Condiciones de aplicación
 
@@ -48,7 +48,7 @@ Esta página resume cómo esa presencia cromática puede influir en la codificac
 ## Precauciones y distinciones
 
 - Ver rojo no basta para asignar un código de color.
-- La tarjeta puede facilitar varias partes perceptivas; por eso conviene confirmar si la respuesta es una unidad o varias respuestas separadas.
+- La lámina puede facilitar varias partes perceptivas; por eso conviene confirmar si la respuesta es una unidad o varias respuestas separadas.
 - La simple presencia de dos figuras no crea por sí sola `COP` ni `AG`.
 
 ## Referencias cruzadas

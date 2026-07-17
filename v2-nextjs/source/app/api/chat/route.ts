@@ -23,7 +23,8 @@ import {
 import { buildSafeApiErrorResponse, logApiError, logApiEvent } from '@/lib/apiError';
 import { parseJsonWithSizeLimit, REQUEST_BODY_SIZE_POLICIES } from '@/lib/requestBodyGuard';
 import { normalizeEphemeralChatContext } from '@/lib/chatEphemeralContext';
-import { readByokSessionFromRequest } from '@/lib/byokSession';
+import { getByokChatRateLimitKey, readByokSessionFromRequest } from '@/lib/byokSession';
+import { consumeChatRateLimit } from '@/lib/chatRateLimit';
 import { BYOK_SESSION_MISSING_CODE } from '@/lib/chatApiErrors';
 import { detectChatSafetyAssessment } from '@/lib/chatSafety';
 import { detectChatDomainBoundary } from '@/lib/chatDomainBoundary';
@@ -222,6 +223,23 @@ export async function POST(req: Request) {
           code: BYOK_SESSION_MISSING_CODE,
         },
         { status: 401 },
+      );
+    }
+
+    const rateLimit = consumeChatRateLimit(getByokChatRateLimitKey(byokSession));
+    if (!rateLimit.allowed) {
+      return NextResponse.json(
+        {
+          error: 'Too many AI requests were sent from this session. Please wait and try again.',
+          code: 'chat_app_rate_limited',
+        },
+        {
+          status: 429,
+          headers: {
+            'Cache-Control': 'no-store',
+            'Retry-After': String(rateLimit.retryAfterSeconds),
+          },
+        },
       );
     }
 

@@ -20,39 +20,39 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
-# Document Name: [コーディング/Z] ZS
+# [コーディング/Z] ZS
 
-## Aliases / Search Terms
+## 別名・検索語
 
 - ZS
 - 白地組織化
 - white space Z
 
-## Core Definition
+## 中核的定義
 
 `ZS` は、白地を実際に組み込みながら組織化活動が起きているときにつける Z コードです。
 白地が見えているだけではなく、反応の構成に積極的に参加している必要があります。
 
-## Application Conditions
+## 採点・適用条件
 
-- 反応に form use がある。
-- 白地が対象の構成要素として使われている。
-- 白地を含む組織化が意味ある形で成立している。
+- 反応に形態の使用があります。
+- 白地が対象の構成要素として使われています。
+- 白地を含む組織化が意味ある形で成立しています。
 
-## Cautions / Distinctions
+## 注意点・鑑別
 
 - 白地利用が場所コードだけの問題なら [`S`](ref://scoring-input/location/S) 系列で止まり、必ずしも `ZS` にはなりません。
 - 白地が統合に参加していないなら `ZS` にしません。
 - 白地を含まない組織化なら `ZW`, `ZA`, `ZD` のどれかを検討します。
 
-## Cross References
+## 相互参照
 
 - [[コーディング/場所] S](ref://scoring-input/location/S)
 - [[コーディング/場所] WS](ref://scoring-input/location/WS)
 - [[コーディング/場所] DS](ref://scoring-input/location/DS)
 - [[コーディング/場所] DdS](ref://scoring-input/location/DdS)
-- [[解釈/Upper Section] Zf](ref://result-interpretation/upper-section/Zf)
+- [[解釈/上段] Zf](ref://result-interpretation/upper-section/Zf)
 
-## Evidence Note
+## 根拠メモ
 
-- 詳細な出典比較と判断根拠は内部 provenance note に分離してあります。
+- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

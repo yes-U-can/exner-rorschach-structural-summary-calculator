@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/special-score/PER"
 locale: "pt"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/special-score/PER"
-displayTitle: "[Codificação/Escores Especiais] PER"
+displayTitle: "[Codificação/Códigos Especiais] PER"
 aliases:
   - "PER"
   - "resposta personalizada"
@@ -18,7 +18,7 @@ runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-special-score-ab-psv-per-cp-2026-03-11.md"
 ---
 
-# Nome do documento: [Codificação/Escores Especiais] PER
+# Nome do documento: [Codificação/Códigos Especiais] PER
 
 ## Apelidos e busca
 
@@ -46,7 +46,7 @@ O importante é que a informação pessoal funcione como apoio direto para a cod
 
 ## Referências cruzadas
 
-- [[Codificação/Escores Especiais] Special Scores](ref://scoring-input/special-score)
+- [[Codificação/Códigos Especiais] Códigos Especiais](ref://scoring-input/special-score)
 - [[Interpretação/Interpersonal] PER](ref://result-interpretation/lower-section/interpersonal/PER)
 - [[Interpretação/Mediation] Xu%](ref://result-interpretation/lower-section/mediation/Xu_percent)
 

@@ -46,7 +46,7 @@ Na codificação, `P` é atribuído quando a resposta corresponde a um popular d
 - Um quase-popular não deve receber `P` se conteúdo ou localização mudam de modo significativo.
 - A orientação da cartão pode importar, porque alguns populares exigem que a área superior ou da cabeça permaneça na posição esperada.
 - A frequência ou ausência de `P` é interpretada depois; na codificação, a única pergunta é se a resposta satisfaz o critério.
-- Diferenças culturais podem alterar como certas respostas são discutidas entre locais, mas a decisão de codificação continua seguindo a regra ativa do manual daquele locale.
+- O contexto cultural pode afetar a interpretação, mas a decisão de codificação deve seguir o critério aplicável do Sistema Compreensivo.
 
 ## Referências cruzadas
 

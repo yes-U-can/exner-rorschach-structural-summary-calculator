@@ -48,7 +48,7 @@ En la lectura `core` suele funcionar como un componente del lado izquierdo de `e
 - `FM` no debe confundirse con `M`; aquí no habla de elaboración ideacional madura sino de presión más básica o menos integrada.
 - El impacto clínico cambia según el equilibrio con `m`, `es` y el margen que muestran `D` y `AdjD`.
 
-## Limites de interpretación aislada
+## Límites de interpretación aislada
 
 - `FM` por sí solo no basta para concluir problemas de control de impulsos o agitación.
 - Debe leerse con `eb`, `es`, `m`, `D` y `AdjD`.

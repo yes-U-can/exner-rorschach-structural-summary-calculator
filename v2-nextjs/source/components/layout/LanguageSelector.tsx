@@ -55,6 +55,14 @@ export default function LanguageSelector({
 
   const selectLabel = SELECT_LABELS[language] ?? SELECT_LABELS.en;
   const isSidebarVariant = variant === 'sidebar' || variant === 'compact';
+  const menuAnchor = isSidebarVariant
+    ? {
+        to: compact ? ('right end' as const) : ('top start' as const),
+        gap: 8,
+        padding: 8,
+      }
+    : undefined;
+
   return (
     <Listbox value={language} onChange={handleLanguageChange}>
       <div className={`ui-language-root ui-language-root-${variant} ${compact ? 'is-compact' : ''}`}>
@@ -72,6 +80,8 @@ export default function LanguageSelector({
         </ListboxButton>
 
         <ListboxOptions
+          anchor={menuAnchor}
+          portal={isSidebarVariant}
           modal={false}
           className={`ui-language-menu ui-language-menu-${variant}`}
         >
