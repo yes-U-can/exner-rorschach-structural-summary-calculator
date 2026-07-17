@@ -1,6 +1,6 @@
 {
   "name": "rorschach-calculator-v2",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "private": true,
   "scripts": {
     "docs:generate-corpus": "node scripts/generate-reference-corpus.mjs && node scripts/generate-reference-quality-report.mjs && node scripts/generate-reference-release-snapshot.mjs",
@@ -28,6 +28,7 @@
     "ai:release-gate": "node scripts/run-ai-release-gate.mjs",
     "db:verify-fresh-replay": "node scripts/verify-prisma-fresh-replay.mjs",
     "feedback:db:migrate": "prisma migrate deploy --config prisma.feedback.config.ts",
+    "feedback:db:migrate:deploy": "node scripts/migrate-feedback-for-deploy.mjs",
     "feedback:db:status": "prisma migrate status --config prisma.feedback.config.ts",
     "feedback:db:verify-fresh-replay": "node scripts/verify-feedback-fresh-replay.mjs",
     "feedback:config:check": "node scripts/validate-feedback-config.mjs",
@@ -37,7 +38,7 @@
     "ai:evaluate-live:batch": "node scripts/run-openai-live-eval-batch.mjs",
     "i18n:audit": "node scripts/audit-i18n-copy.mjs",
     "dev": "npm run docs:generate-corpus && prisma generate && next dev",
-    "build": "npm run i18n:audit && npm run docs:generate-corpus && npm run docs:assert-runtime-ready && npm run feedback:config:check && prisma generate && next build",
+    "build": "npm run i18n:audit && npm run docs:generate-corpus && npm run docs:assert-runtime-ready && npm run feedback:config:check && npm run feedback:db:migrate:deploy && prisma generate && next build",
     "start": "next start",
     "lint": "npm run i18n:audit && eslint",
     "test": "npm run docs:generate-corpus && npm run docs:assert-runtime-ready && prisma generate && vitest run",

@@ -1,4 +1,11 @@
-import { createCipheriv, createDecipheriv, createHash, randomBytes } from 'crypto';
+import {
+  createCipheriv,
+  createDecipheriv,
+  createHash,
+  createHmac,
+  randomBytes,
+  randomUUID,
+} from 'crypto';
 import { NextResponse } from 'next/server';
 import type { Provider } from '@/lib/aiModels';
 import { hasValidByokApiKeyFormat } from '@/lib/byokApiKeyFormat';
@@ -9,8 +16,10 @@ const COOKIE_NAME_PROD = '__Host-sicp-byok';
 const COOKIE_NAME_DEV = 'sicp-byok-dev';
 const COOKIE_VERSION = 'v1';
 const MAX_API_KEY_LENGTH = 2048;
+const SESSION_ID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 
 export type ByokSession = {
+  sessionId: string;
   provider: Provider;
   apiKey: string;
   createdAt: number;
@@ -63,6 +72,18 @@ function getEncryptionKey() {
   return createHash('sha256').update(getSecretMaterial(), 'utf8').digest();
 }
 
+function deriveLegacySessionId(provider: Provider, createdAt: number, expiresAt: number) {
+  return createHmac('sha256', getSecretMaterial())
+    .update(`legacy-byok-session:${provider}:${createdAt}:${expiresAt}`, 'utf8')
+    .digest('base64url');
+}
+
+export function getByokFeedbackRateLimitKey(session: ByokSession) {
+  return createHmac('sha256', getSecretMaterial())
+    .update(`ai-feedback-session:${session.sessionId}`, 'utf8')
+    .digest('base64url');
+}
+
 function encode(value: Buffer) {
   return value.toString('base64url');
 }
@@ -101,8 +122,11 @@ export function decryptByokSession(cookieValue: string | null | undefined): Byok
     const createdAt = typeof parsed.createdAt === 'number' ? parsed.createdAt : 0;
     const expiresAt = typeof parsed.expiresAt === 'number' ? parsed.expiresAt : 0;
     if (!createdAt || !expiresAt || expiresAt <= Date.now()) return null;
+    const sessionId = typeof parsed.sessionId === 'string' && SESSION_ID_PATTERN.test(parsed.sessionId)
+      ? parsed.sessionId
+      : deriveLegacySessionId(provider, createdAt, expiresAt);
 
-    return { provider, apiKey, createdAt, expiresAt };
+    return { sessionId, provider, apiKey, createdAt, expiresAt };
   } catch {
     return null;
   }
@@ -150,6 +174,7 @@ export function toByokSessionStatus(session: ByokSession | null): ByokSessionSta
 export function createByokSession(provider: Provider, apiKey: string): ByokSession {
   const now = Date.now();
   return {
+    sessionId: randomUUID(),
     provider,
     apiKey,
     createdAt: now,

@@ -6,6 +6,8 @@ config({ path: '.env.local' });
 
 const enabled = process.env.NEXT_PUBLIC_AI_FEEDBACK_ENABLED === '1';
 const feedbackUrl = process.env.AI_FEEDBACK_DATABASE_URL?.trim() ?? '';
+const edgeRateLimitReady = process.env.AI_FEEDBACK_EDGE_RATE_LIMIT_READY === '1';
+const isVercelBuild = process.env.VERCEL === '1';
 
 function databaseIdentity(rawUrl, variableName) {
   let parsed;
@@ -23,13 +25,19 @@ function databaseIdentity(rawUrl, variableName) {
 }
 
 if (!enabled) {
-  console.log(JSON.stringify({ status: 'pass', feedbackEnabled: false }));
+  console.log(JSON.stringify({ status: 'pass', feedbackEnabled: false, edgeRateLimitReady }));
   process.exit(0);
 }
 
 if (!feedbackUrl) {
   throw new Error(
     'AI_FEEDBACK_DATABASE_URL is required when NEXT_PUBLIC_AI_FEEDBACK_ENABLED=1.',
+  );
+}
+
+if (isVercelBuild && !edgeRateLimitReady) {
+  throw new Error(
+    'AI_FEEDBACK_EDGE_RATE_LIMIT_READY=1 is required on Vercel when AI response feedback is enabled. Publish the documented Firewall rule before setting it.',
   );
 }
 
@@ -46,4 +54,5 @@ console.log(JSON.stringify({
   status: 'pass',
   feedbackEnabled: true,
   dedicatedDatabaseBoundary: true,
+  edgeRateLimitReady,
 }));

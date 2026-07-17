@@ -1,6 +1,18 @@
 # Computing Program for Rorschach Structural Summary (v2-nextjs)
 
-Next.js-based web application for Exner structural summary scoring, documentation browsing, and AI-assisted interpretation.
+Exner 종합체계 구조요약 계산, 참조 문서 검색, 선택형 AI 도우미를 제공하는 웹앱의 공개 가능한 소스입니다.
+
+## 비개발자 독자가 먼저 알아야 할 점
+
+- 계산기는 OpenAI API 키가 없어도 사용할 수 있습니다.
+- AI 도우미는 부호화와 해석을 보조하지만 임상가의 판단을 대신하지 않습니다.
+- 사용자가 입력한 OpenAI API 키는 서버 데이터베이스에 저장하지 않습니다.
+- 대화 원문은 서버 데이터베이스에 저장하지 않습니다.
+- AI 답변 평가는 질문·답변 원문 없이 미리 정한 이유와 최소한의 요약 정보만 별도 데이터베이스에 보관할 수 있습니다. 과도한 반복 요청을 막기 위한 일방향 세션 식별값과 짧은 횟수 기록은 최대 24시간만 유지합니다.
+- 아래 내용은 앱을 직접 실행하거나 코드를 검토하려는 개발자를 위한 기술 정보입니다.
+
+<details>
+<summary><strong>Developer setup and repository details</strong></summary>
 
 ## Stack
 
@@ -62,3 +74,5 @@ types/          Shared TypeScript types
 - Do not reintroduce Google OAuth, NextAuth, account pages, server-stored API keys, or chat-history persistence unless the product model intentionally changes.
 - RAG runtime credentials should be read-only and scoped to the public corpus tables. Optional feedback writes must use a separate database and credential.
 - Keep PWA support manifest-only unless service worker caching gets a separate privacy and security review.
+
+</details>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import VersionArchiveList from '@/components/versions/VersionArchiveList';
 import { v1GasVersions, v2NextVersions } from '@/lib/versionArchive';
+import { buildLocalizedPageMetadata, getSeoCopy } from '@/lib/seo';
 import type { Language } from '@/types';
 
 type VersionsPageProps = {
@@ -19,10 +20,12 @@ function normalizeLang(lang?: string): Language {
   return lang === 'ko' || lang === 'ja' || lang === 'es' || lang === 'pt' ? lang : 'en';
 }
 
-export const metadata: Metadata = {
-  title: 'Version Archive',
-  description: 'Version archive for the Rorschach Structural Summary web app and the v1 GAS releases.',
-};
+export async function generateMetadata({ searchParams }: VersionsPageProps): Promise<Metadata> {
+  const { lang } = await searchParams;
+  const language = normalizeLang(lang);
+  const copy = getSeoCopy('versions', language);
+  return buildLocalizedPageMetadata({ language, pathname: '/versions', ...copy });
+}
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;

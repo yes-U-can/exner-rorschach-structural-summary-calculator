@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { buildLanguageAlternates } from '@/lib/seo';
+import { buildLocalizedPageMetadata, getSeoCopy } from '@/lib/seo';
 import type { Language } from '@/types';
 
 type PrivacyPageProps = {
@@ -22,19 +22,17 @@ function normalizeLang(lang?: string): Language {
   return lang === 'ko' || lang === 'ja' || lang === 'es' || lang === 'pt' ? lang : 'en';
 }
 
-export const metadata: Metadata = {
-  title: 'Privacy Policy',
-  description: 'Privacy policy for using this website.',
-  alternates: {
-    canonical: '/privacy',
-    languages: buildLanguageAlternates('/privacy'),
-  },
-};
+export async function generateMetadata({ searchParams }: PrivacyPageProps): Promise<Metadata> {
+  const { lang } = await searchParams;
+  const language = normalizeLang(lang);
+  const copy = getSeoCopy('privacy', language);
+  return buildLocalizedPageMetadata({ language, pathname: '/privacy', ...copy });
+}
 
 const CONTENT: Record<Language, PrivacyContent> = {
   ko: {
     title: '개인정보처리방침',
-    effectiveDate: '시행일: 2026년 7월 13일',
+    effectiveDate: '시행일: 2026년 7월 18일',
     intro:
       '이 문서는 현재 서비스가 어떤 데이터를 처리하고, 어떤 데이터를 서버에 저장하지 않는지 설명합니다. 이 서비스의 기본 원칙은 사용자 계정, API 키, AI 대화 기록, 구조요약 계산 데이터를 서버 DB에 지속적으로 저장하지 않는 것입니다.',
     sections: [
@@ -57,8 +55,10 @@ const CONTENT: Record<Language, PrivacyContent> = {
         heading: '선택적 AI 응답 피드백',
         paragraphs: [
           '완료된 AI 답변 옆의 좋아요 또는 싫어요 버튼을 누르면 평가값과 선택한 사전 정의 이유 코드, 도우미 종류, 언어, 고정 모델·하네스 식별자, 완료 상태, 대략적인 답변 길이 구간, 무작위 응답 식별자가 별도의 피드백 DB로 전송됩니다. 평가와 이유 선택은 모두 선택 사항입니다.',
-          '질문, AI 답변 원문, 자유 서술 의견, 반응 메모, 구조요약 수치, API 키, 사용자 식별자, IP 주소, 사용자 에이전트는 피드백 요청이나 DB 행에 포함하지 않습니다.',
-          '현재 브라우저 세션에서 선택한 버튼을 다시 누르면 해당 평가와 이유 코드를 삭제합니다. 피드백 메타데이터는 최대 180일 뒤 만료되며 이후 피드백 처리 과정에서 정리됩니다.',
+          '질문, AI 답변 원문, 자유 서술 의견, 반응 메모, 구조요약 수치, API 키, 계정 식별자, IP 주소, 사용자 에이전트는 피드백 요청이나 피드백 DB 행에 포함하지 않습니다.',
+          '반복 요청으로 인한 남용을 막기 위해, 암호화된 AI 세션 안의 무작위 식별자를 서버 비밀키로 일방향 변환한 세션 키와 요청 횟수만 별도 피드백 DB에 최대 24시간 보관합니다. 평가의 저장·변경·삭제 요청은 분당 10회, 한 AI 세션당 60회로 제한됩니다.',
+          '호스팅 단계의 자동 남용 방지는 짧은 시간의 요청 횟수를 제한하기 위해 IP 주소나 연결 특성을 일시적으로 사용할 수 있습니다. 앱은 이 정보를 피드백 DB에 저장하지 않습니다.',
+          '현재 브라우저 세션에서 선택한 버튼을 다시 누르면 해당 평가와 이유 코드를 삭제합니다. 피드백 메타데이터는 최대 180일 뒤 만료되며, 만료된 기록은 제한된 묶음 단위로 정리됩니다.',
         ],
       },
       {
@@ -85,7 +85,7 @@ const CONTENT: Record<Language, PrivacyContent> = {
   },
   en: {
     title: 'Privacy Policy',
-    effectiveDate: 'Effective Date: July 13, 2026',
+    effectiveDate: 'Effective Date: July 18, 2026',
     intro:
       'This policy explains what data is processed in the current BYOK-only architecture. The core principle is that user accounts, API keys, chat history, and calculator data are not stored in the server database.',
     sections: [
@@ -108,8 +108,10 @@ const CONTENT: Record<Language, PrivacyContent> = {
         heading: 'Optional AI response feedback',
         paragraphs: [
           'If a user presses the helpful or not-helpful button beside a completed AI answer, the service sends the rating and any selected predefined reason codes, assistant workflow, locale, fixed model and harness identifiers, completion class, coarse response-length range, and a random response identifier to a separate feedback database. Both the rating and reason selection are optional.',
-          'The feedback request and database row do not include the question, answer text, free-form comments, response memo, Structural Summary values, API key, user identifier, IP address, or user agent.',
-          'Pressing the selected button again during the current browser session removes that rating and its reason codes. Feedback metadata expires after no more than 180 days and is purged during later feedback processing.',
+          'The feedback request and feedback database row do not include the question, answer text, free-form comments, response memo, Structural Summary values, API key, account identifier, IP address, or user agent.',
+          'To limit repeated-request abuse, the service stores only a one-way session key derived with a server secret from the random identifier inside the encrypted AI session, together with request counters. These records expire within 24 hours. Rating save, change, and delete requests are limited to 10 per minute and 60 per AI session.',
+          'Automated abuse protection at the hosting edge may temporarily use an IP address or connection characteristics to limit short bursts of requests. The application does not store that information in the feedback database.',
+          'Pressing the selected button again during the current browser session removes that rating and its reason codes. Feedback metadata expires after no more than 180 days, and expired records are removed in bounded batches.',
         ],
       },
       {
@@ -136,7 +138,7 @@ const CONTENT: Record<Language, PrivacyContent> = {
   },
   ja: {
     title: 'プライバシーポリシー',
-    effectiveDate: '施行日: 2026年7月13日',
+    effectiveDate: '施行日: 2026年7月18日',
     intro:
       '本ポリシーは、現在のBYOK-only構成で処理されるデータと保存場所を説明します。基本原則は、ユーザーアカウント、APIキー、チャット履歴、計算データをサーバーDBに保存しないことです。',
     sections: [
@@ -159,8 +161,10 @@ const CONTENT: Record<Language, PrivacyContent> = {
         heading: '任意のAI応答フィードバック',
         paragraphs: [
           '完了したAI回答の横にある「役に立った」または「役に立たなかった」ボタンを押すと、評価と選択した定型理由コード、アシスタントの種類、言語、固定のモデル・ハーネス識別子、完了状態、回答長のおおまかな区分、ランダムな応答識別子が専用フィードバックデータベースに送信されます。評価と理由の選択はいずれも任意です。',
-          '質問、AI回答本文、自由記述の意見、応答メモ、構造一覧表の数値、APIキー、ユーザー識別子、IPアドレス、ユーザーエージェントは、フィードバック要求やデータベース行に含まれません。',
-          '現在のブラウザセッション中に選択済みのボタンをもう一度押すと、その評価と理由コードは削除されます。フィードバックのメタデータは最長180日後に期限切れとなり、その後のフィードバック処理時に削除されます。',
+          '質問、AI回答本文、自由記述の意見、応答メモ、構造一覧表の数値、APIキー、アカウント識別子、IPアドレス、ユーザーエージェントは、フィードバック要求やフィードバックデータベース行に含まれません。',
+          '反復要求による不正利用を抑えるため、暗号化されたAIセッション内のランダムな識別子からサーバー秘密鍵で一方向変換したセッションキーと要求回数だけを、専用フィードバックデータベースに最長24時間保存します。評価の保存・変更・削除は1分あたり10回、1つのAIセッションあたり60回に制限されます。',
+          'ホスティング段階の自動不正利用防止は、短時間の要求回数を制限するためIPアドレスや接続特性を一時的に使用する場合があります。アプリはその情報をフィードバックデータベースに保存しません。',
+          '現在のブラウザセッション中に選択済みのボタンをもう一度押すと、その評価と理由コードは削除されます。フィードバックのメタデータは最長180日後に期限切れとなり、期限切れの記録は件数を制限した単位で削除されます。',
         ],
       },
       {
@@ -187,7 +191,7 @@ const CONTENT: Record<Language, PrivacyContent> = {
   },
   es: {
     title: 'Política de Privacidad',
-    effectiveDate: 'Fecha de entrada en vigor: 13 de julio de 2026',
+    effectiveDate: 'Fecha de entrada en vigor: 18 de julio de 2026',
     intro:
       'Esta política explica qué datos se procesan en la arquitectura BYOK-only actual. El principio central es no guardar cuentas, claves API, historial de chat ni datos de cálculo en la base de datos del servidor.',
     sections: [
@@ -210,8 +214,10 @@ const CONTENT: Record<Language, PrivacyContent> = {
         heading: 'Feedback opcional sobre respuestas de IA',
         paragraphs: [
           'Si se pulsa el botón de respuesta útil o no útil junto a una respuesta de IA terminada, el servicio envía la valoración y los códigos de motivos predefinidos seleccionados, el tipo de asistente, el idioma, los identificadores fijos del modelo y del arnés, el estado de finalización, un intervalo aproximado de longitud y un identificador aleatorio de respuesta a una base de datos de feedback independiente. Tanto la valoración como los motivos son opcionales.',
-          'La solicitud y la fila de la base de datos no incluyen la pregunta, el texto de la respuesta, comentarios de texto libre, la nota de respuesta, valores del Resumen Estructural, la clave API, identificadores de usuario, la dirección IP ni el agente de usuario.',
-          'Al pulsar de nuevo el botón seleccionado durante la sesión actual del navegador se eliminan esa valoración y sus códigos de motivos. Los metadatos caducan en un máximo de 180 días y se purgan durante un procesamiento posterior de feedback.',
+          'La solicitud y la fila de la base de datos de feedback no incluyen la pregunta, el texto de la respuesta, comentarios de texto libre, la nota de respuesta, valores del Resumen Estructural, la clave API, identificadores de cuenta, la dirección IP ni el agente de usuario.',
+          'Para limitar el abuso por solicitudes repetidas, el servicio guarda solo una clave de sesión unidireccional derivada con un secreto del servidor del identificador aleatorio de la sesión de IA cifrada, junto con contadores de solicitudes. Estos registros caducan en un máximo de 24 horas. Las solicitudes para guardar, cambiar o eliminar una valoración se limitan a 10 por minuto y 60 por sesión de IA.',
+          'La protección automatizada contra abusos en el alojamiento puede usar temporalmente la dirección IP o características de la conexión para limitar ráfagas breves de solicitudes. La aplicación no guarda esa información en la base de datos de feedback.',
+          'Al pulsar de nuevo el botón seleccionado durante la sesión actual del navegador se eliminan esa valoración y sus códigos de motivos. Los metadatos caducan en un máximo de 180 días y los registros vencidos se eliminan en lotes limitados.',
         ],
       },
       {
@@ -238,7 +244,7 @@ const CONTENT: Record<Language, PrivacyContent> = {
   },
   pt: {
     title: 'Política de Privacidade',
-    effectiveDate: 'Data de entrada em vigor: 13 de julho de 2026',
+    effectiveDate: 'Data de entrada em vigor: 18 de julho de 2026',
     intro:
       'Esta política explica quais dados são processados na arquitetura BYOK-only atual. O princípio central é não salvar contas, chaves API, histórico de chat nem dados de cálculo no banco de dados do servidor.',
     sections: [
@@ -261,8 +267,10 @@ const CONTENT: Record<Language, PrivacyContent> = {
         heading: 'Feedback opcional sobre respostas de IA',
         paragraphs: [
           'Ao pressionar o botão de resposta útil ou não útil ao lado de uma resposta de IA concluída, o serviço envia a avaliação e os códigos de motivos predefinidos selecionados, o tipo de assistente, o idioma, os identificadores fixos do modelo e do harness, o estado de conclusão, uma faixa aproximada de tamanho e um identificador aleatório da resposta para um banco de dados de feedback separado. Tanto a avaliação quanto os motivos são opcionais.',
-          'A solicitação e a linha do banco de dados não incluem a pergunta, o texto da resposta, comentários em texto livre, a nota de resposta, valores do Resumo Estrutural, a chave API, identificadores de usuário, o endereço IP nem o agente de usuário.',
-          'Pressionar novamente o botão selecionado durante a sessão atual do navegador remove a avaliação e seus códigos de motivos. Os metadados expiram em no máximo 180 dias e são eliminados durante um processamento posterior de feedback.',
+          'A solicitação e a linha do banco de dados de feedback não incluem a pergunta, o texto da resposta, comentários em texto livre, a nota de resposta, valores do Resumo Estrutural, a chave API, identificadores de conta, o endereço IP nem o agente de usuário.',
+          'Para limitar abusos por solicitações repetidas, o serviço salva apenas uma chave de sessão unidirecional derivada com um segredo do servidor a partir do identificador aleatório da sessão de IA criptografada, junto com contadores de solicitações. Esses registros expiram em até 24 horas. Solicitações para salvar, alterar ou excluir uma avaliação são limitadas a 10 por minuto e 60 por sessão de IA.',
+          'A proteção automatizada contra abusos na hospedagem pode usar temporariamente o endereço IP ou características da conexão para limitar rajadas curtas de solicitações. O aplicativo não salva essas informações no banco de dados de feedback.',
+          'Pressionar novamente o botão selecionado durante a sessão atual do navegador remove a avaliação e seus códigos de motivos. Os metadados expiram em no máximo 180 dias e os registros expirados são removidos em lotes limitados.',
         ],
       },
       {

@@ -1,19 +1,17 @@
 import { MetadataRoute } from 'next';
+import { SITE_URL } from '@/lib/seo';
 
 export default function robots(): MetadataRoute.Robots {
-  const rawSiteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://exnersicp.vercel.app';
-  const siteUrl = rawSiteUrl.replace(/\s+/g, '').replace(/\/+$/, '');
-
   return {
     rules: [
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/'],
+        disallow: ['/api/', '/chat'],
       },
     ],
-    host: siteUrl,
-    sitemap: `${siteUrl}/sitemap.xml`,
+    host: SITE_URL,
+    sitemap: `${SITE_URL}/sitemap.xml`,
   };
 }
 

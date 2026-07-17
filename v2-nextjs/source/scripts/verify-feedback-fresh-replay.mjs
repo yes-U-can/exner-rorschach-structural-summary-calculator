@@ -73,6 +73,13 @@ try {
       AND table_name = 'AiResponseFeedback'
     ORDER BY column_name
   `);
+  const rateLimitColumnsResult = await client.query(`
+    SELECT column_name
+    FROM information_schema.columns
+    WHERE table_schema = 'public'
+      AND table_name = 'AiFeedbackRateLimit'
+    ORDER BY column_name
+  `);
   const ragTableResult = await client.query(`
     SELECT COUNT(*)::int AS count
     FROM information_schema.tables
@@ -82,6 +89,7 @@ try {
 
   const actualMigrationCount = migrationResult.rows[0]?.count ?? 0;
   const columns = columnsResult.rows.map((row) => row.column_name);
+  const rateLimitColumns = rateLimitColumnsResult.rows.map((row) => row.column_name);
   const expectedColumns = [
     'completion',
     'createdAt',
@@ -98,6 +106,14 @@ try {
     'updatedAt',
     'workflow',
   ].sort();
+  const expectedRateLimitColumns = [
+    'expiresAt',
+    'sessionCount',
+    'sessionKey',
+    'updatedAt',
+    'windowCount',
+    'windowStartedAt',
+  ].sort();
 
   if (actualMigrationCount !== expectedMigrationCount) {
     throw new Error(
@@ -106,6 +122,9 @@ try {
   }
   if (columns.join(',') !== expectedColumns.join(',')) {
     throw new Error(`Unexpected AI feedback columns: ${columns.join(', ')}`);
+  }
+  if (rateLimitColumns.join(',') !== expectedRateLimitColumns.join(',')) {
+    throw new Error(`Unexpected AI feedback rate-limit columns: ${rateLimitColumns.join(', ')}`);
   }
   if ((ragTableResult.rows[0]?.count ?? -1) !== 0) {
     throw new Error('The dedicated feedback database must not contain the RAG vector table.');
@@ -141,13 +160,40 @@ try {
   if (retentionResult.rows[0]?.reasonSchemaVersion !== 1) {
     throw new Error('Expected a new feedback row to use reason-schema version 1.');
   }
+
+  const rateLimitProbeKey = `migration-replay-${randomUUID()}`;
+  await client.query(
+    `
+      INSERT INTO "AiFeedbackRateLimit" (
+        "sessionKey", "windowStartedAt", "windowCount", "sessionCount",
+        "expiresAt", "updatedAt"
+      ) VALUES (
+        $1, CURRENT_TIMESTAMP, 1, 1,
+        CURRENT_TIMESTAMP + INTERVAL '24 hours', CURRENT_TIMESTAMP
+      )
+    `,
+    [rateLimitProbeKey],
+  );
+  const rateLimitResult = await client.query(
+    `
+      SELECT "windowCount", "sessionCount"
+      FROM "AiFeedbackRateLimit"
+      WHERE "sessionKey" = $1
+    `,
+    [rateLimitProbeKey],
+  );
+  if (rateLimitResult.rows[0]?.windowCount !== 1 || rateLimitResult.rows[0]?.sessionCount !== 1) {
+    throw new Error('Expected the feedback session counter probe to be stored without user content.');
+  }
   await client.query('DELETE FROM "AiResponseFeedback" WHERE "id" = $1', [probeId]);
+  await client.query('DELETE FROM "AiFeedbackRateLimit" WHERE "sessionKey" = $1', [rateLimitProbeKey]);
 
   console.log(JSON.stringify({
     status: 'pass',
     migrations: actualMigrationCount,
     aggregateOnlyColumns: true,
     structuredReasonDefaults: true,
+    sessionRateLimitTable: true,
     ragDatabaseBoundaryPreserved: true,
     retentionDays: 180,
   }));

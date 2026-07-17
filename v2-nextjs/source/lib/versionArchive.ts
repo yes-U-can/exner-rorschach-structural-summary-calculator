@@ -21,6 +21,18 @@ const v2SourceUrl = `${exhibitionRepoUrl}/tree/main/v2-nextjs/source`;
 
 export const v2NextVersions: VersionArchiveEntry[] = [
   {
+    version: 'v2.2.3',
+    title: 'Version 2.2.3',
+    series: 'v2-nextjs',
+    publishedAt: '2026-07-18',
+    releaseKind: 'bugfix',
+    releaseLabel: '버그 패치',
+    summary:
+      '임상심리사가 먼저 이해할 수 있도록 공개 문서의 설명 방식을 정리하고, 다섯 언어 검색·링크 미리보기 정보와 선택형 AI 응답 피드백의 과도한 요청 방어를 보강한 패치입니다. 계산식과 화면 배치는 변경하지 않았습니다.',
+    sourceUrl: v2SourceUrl,
+    releaseUrl: v2ReleaseUrl('v2.2.3'),
+  },
+  {
     version: 'v2.2.2',
     title: 'Version 2.2.2',
     series: 'v2-nextjs',
@@ -48,7 +60,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     version: 'v2.2.0',
     title: 'Version 2.2.0',
     series: 'v2-nextjs',
-    publishedAt: '2026-07-16',
+    publishedAt: '2026-07-15',
     releaseKind: 'minor',
     releaseLabel: '마이너 패치',
     summary:
@@ -60,7 +72,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     version: 'v2.1.10',
     title: 'Version 2.1.10',
     series: 'v2-nextjs',
-    publishedAt: '2026-07-13',
+    publishedAt: '2026-07-14',
     releaseKind: 'bugfix',
     releaseLabel: '버그 패치',
     summary:
@@ -96,7 +108,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     version: 'v2.1.7',
     title: 'Version 2.1.7',
     series: 'v2-nextjs',
-    publishedAt: '2026-07-04',
+    publishedAt: '2026-07-05',
     releaseKind: 'bugfix',
     releaseLabel: '버그 패치',
     summary:
@@ -132,7 +144,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     version: 'v2.1.4',
     title: 'Version 2.1.4',
     series: 'v2-nextjs',
-    publishedAt: '2026-07-03',
+    publishedAt: '2026-07-02',
     releaseKind: 'bugfix',
     releaseLabel: '버그 패치',
     summary:
@@ -168,7 +180,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     version: 'v2.1.1',
     title: 'Version 2.1.1',
     series: 'v2-nextjs',
-    publishedAt: '2026-06-28',
+    publishedAt: '2026-06-27',
     releaseKind: 'bugfix',
     releaseLabel: '버그 패치',
     summary:
@@ -253,7 +265,7 @@ export const v1GasVersions: VersionArchiveEntry[] = [
     version: 'v1.0.1',
     title: 'v1.0.1',
     series: 'v1-gas',
-    publishedAt: '2025-10-18',
+    publishedAt: '2025-10-17',
     releaseKind: 'hotfix',
     releaseLabel: '핫픽스',
     summary: 'HVI/OBS 판단 지원과 계산 과정에서 확인된 오류를 빠르게 수정한 버전입니다.',
@@ -275,7 +287,7 @@ export const v1GasVersions: VersionArchiveEntry[] = [
     version: 'v1.0.3',
     title: 'v1.0.3',
     series: 'v1-gas',
-    publishedAt: '2025-10-19',
+    publishedAt: '2025-10-18',
     releaseKind: 'bugfix',
     releaseLabel: '버그 패치',
     summary: 'SCORING_CONFIG 리팩터링과 M- 관련 계산 오류 수정을 반영한 버전입니다.',
@@ -369,7 +381,7 @@ export const v1GasVersions: VersionArchiveEntry[] = [
     summary: '인쇄 화면, 자동저장 작업 불러오기, 행 삭제 관련 버그를 수정하고 사용법 영상을 추가한 버전입니다.',
     gasUrl: 'https://script.google.com/macros/s/AKfycbwOQ61Y34-iVRKB0T3isOVRzFP9xhxtQMrLZoRvVbS6PwSfEaFYzWvjuTF8IItY2p-T/exec',
     sourceUrl: v1ArchiveUrl('v1.3.1'),
-    videoUrl: 'https://youtu.be/GH145Wwh-YA?si=eDeXBKX1fufPxcJY',
+    videoUrl: 'https://youtu.be/GH145Wwh-YA',
   },
   {
     version: 'v1.3.2',

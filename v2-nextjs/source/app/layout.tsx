@@ -9,7 +9,15 @@ import { ToastProvider } from '@/components/ui/Toast';
 import GoogleAnalyticsPageView from '@/components/analytics/GoogleAnalyticsPageView';
 import ByokSessionDialog from '@/components/byok/ByokSessionDialog';
 import AppShell from '@/components/layout/AppShell';
-import { DEFAULT_LANGUAGE, normalizeLanguage } from '@/i18n/config';
+import { DEFAULT_LANGUAGE, SUPPORTED_LANGUAGES, normalizeLanguage } from '@/i18n/config';
+import {
+  SITE_NAME,
+  SITE_URL,
+  buildLocalizedPageMetadata,
+  buildLocalizedPath,
+  getAbsoluteUrl,
+  getSeoCopy,
+} from '@/lib/seo';
 import './globals.css';
 
 const inter = Inter({
@@ -17,78 +25,68 @@ const inter = Inter({
   variable: '--font-inter',
 });
 
-const rawSiteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://exner.yesucan.co.kr';
-const siteUrl = rawSiteUrl.replace(/\s+/g, '').replace(/\/+$/, '');
 const googleSiteVerification =
   process.env.GOOGLE_SITE_VERIFICATION ?? 'RNxcEfQGpSUiWQhUoTpaiS1UU0UPB9vLwZ1QUurRLMY';
 
-export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-  title: {
-    default: 'Computing Program for Rorschach Structural Summary | Free Online Tool',
-    template: '%s | Rorschach Structural Summary',
-  },
-  description:
-    'Free online Rorschach (Comprehensive System) structural summary calculator for clinical practice and training.',
-  keywords: [
-    'Rorschach',
-    'Rorschach test',
-    'Comprehensive System',
-    'Exner system',
-    'Structural Summary',
-    'Rorschach scoring',
-    'clinical psychology',
-    'psychodiagnostic tool',
-  ],
-  authors: [{ name: 'Seoul Institute of Clinical Psychology (SICP)' }],
-  creator: 'Seoul Institute of Clinical Psychology (SICP)',
-  publisher: 'SICP',
-  icons: {
-    icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/sicp-icon-192.png', type: 'image/png', sizes: '192x192' },
-      { url: '/sicp-icon.png', type: 'image/png', sizes: '512x512' },
+export async function generateMetadata(): Promise<Metadata> {
+  const requestHeaders = await headers();
+  const language = normalizeLanguage(requestHeaders.get('x-language')) ?? DEFAULT_LANGUAGE;
+  const copy = getSeoCopy('home', language);
+  const localizedMetadata = buildLocalizedPageMetadata({
+    language,
+    pathname: '/',
+    title: copy.title,
+    description: copy.description,
+  });
+
+  return {
+    ...localizedMetadata,
+    metadataBase: new URL(SITE_URL),
+    applicationName: SITE_NAME,
+    title: {
+      default: copy.title,
+      template: `%s | ${SITE_NAME}`,
+    },
+    keywords: [
+      'Rorschach',
+      'Rorschach test',
+      'Comprehensive System',
+      'Exner system',
+      'Structural Summary',
+      'Rorschach scoring',
+      'clinical psychology',
+      'psychodiagnostic tool',
     ],
-    apple: [{ url: '/apple-icon.png', type: 'image/png', sizes: '180x180' }],
-  },
-  verification: {
-    google: googleSiteVerification,
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    authors: [
+      { name: 'Seoul Institute of Clinical Psychology (SICP)' },
+      { name: 'MOW' },
+    ],
+    creator: 'Seoul Institute of Clinical Psychology (SICP) & MOW',
+    publisher: SITE_NAME,
+    category: 'Clinical psychology tool',
+    icons: {
+      icon: [
+        { url: '/favicon.ico', sizes: 'any' },
+        { url: '/sicp-icon-192.png', type: 'image/png', sizes: '192x192' },
+        { url: '/sicp-icon.png', type: 'image/png', sizes: '512x512' },
+      ],
+      apple: [{ url: '/apple-icon.png', type: 'image/png', sizes: '180x180' }],
+    },
+    verification: {
+      google: googleSiteVerification,
+    },
+    robots: {
       index: true,
       follow: true,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  openGraph: {
-    type: 'website',
-    url: '/',
-    siteName: '로샤 구조요약 계산 도우미',
-    locale: 'ko_KR',
-    title: 'Exner(CS) 체계 로샤 구조요약 계산기',
-    description:
-      '서울임상심리연구소와 모오가 함께 제공하는 구조요약 계산 및 BYOK 기반 AI 보조 웹 도구입니다.',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Exner(CS) 체계 로샤 구조요약 계산기',
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
       },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Exner(CS) 체계 로샤 구조요약 계산기',
-    description:
-      '서울임상심리연구소와 모오가 함께 제공하는 구조요약 계산 및 BYOK 기반 AI 보조 웹 도구입니다.',
-    images: ['/og-image.png'],
-  },
-};
+    },
+  };
+}
 
 export default async function RootLayout({
   children,
@@ -100,27 +98,47 @@ export default async function RootLayout({
   const initialLanguage = normalizeLanguage(requestHeaders.get('x-language')) ?? DEFAULT_LANGUAGE;
   const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
   const cookieYesScriptUrl = process.env.NEXT_PUBLIC_COOKIEYES_SCRIPT_URL;
+  const seoCopy = getSeoCopy('home', initialLanguage);
 
   const structuredData = {
     '@context': 'https://schema.org',
-    '@type': 'WebApplication',
-    name: 'Computing Program for Rorschach Structural Summary',
-    description:
-      'Free online Rorschach (Comprehensive System) structural summary calculator for clinicians and trainees.',
-    url: siteUrl,
-    applicationCategory: 'MedicalApplication',
-    operatingSystem: 'Web Browser',
-    inLanguage: ['en', 'ko', 'ja', 'es', 'pt'],
-    offers: {
-      '@type': 'Offer',
-      price: '0',
-      priceCurrency: 'USD',
-    },
-    creator: {
-      '@type': 'Organization',
-      name: 'Seoul Institute of Clinical Psychology (SICP)',
-      url: siteUrl,
-    },
+    '@graph': [
+      {
+        '@type': 'WebSite',
+        '@id': `${SITE_URL}/#website`,
+        url: `${SITE_URL}/`,
+        name: SITE_NAME,
+        alternateName: ['Yes U Can', 'Exner Rorschach Structural Summary Calculator'],
+        inLanguage: SUPPORTED_LANGUAGES,
+      },
+      {
+        '@type': 'WebApplication',
+        '@id': `${SITE_URL}/#web-application`,
+        name: seoCopy.title,
+        description: seoCopy.description,
+        url: getAbsoluteUrl(buildLocalizedPath('/', initialLanguage)),
+        isPartOf: { '@id': `${SITE_URL}/#website` },
+        applicationCategory: 'MedicalApplication',
+        operatingSystem: 'Web Browser',
+        inLanguage: initialLanguage,
+        isAccessibleForFree: true,
+        offers: {
+          '@type': 'Offer',
+          price: '0',
+          priceCurrency: 'USD',
+        },
+        creator: [
+          {
+            '@type': 'Organization',
+            name: 'Seoul Institute of Clinical Psychology (SICP)',
+          },
+          {
+            '@type': 'Organization',
+            name: 'MOW',
+          },
+        ],
+      },
+    ],
   };
 
   return (

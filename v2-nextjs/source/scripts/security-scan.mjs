@@ -29,7 +29,7 @@ const patterns = [
   },
   {
     name: 'Committed env secret assignment',
-    regex: /^(?:BYOK_COOKIE_SECRET|RAG_DATABASE_URL|RAG_WRITE_DATABASE_URL|DATABASE_URL|OPENAI_API_KEY|GOOGLE_API_KEY|REFERENCE_EMBEDDING_OPENAI_API_KEY|REFERENCE_EMBEDDING_GOOGLE_API_KEY)[^\S\r\n]*=[^\S\r\n]*(.*)$/gm,
+    regex: /^(?:BYOK_COOKIE_SECRET|AI_FEEDBACK_DATABASE_URL|RAG_DATABASE_URL|RAG_WRITE_DATABASE_URL|DATABASE_URL|OPENAI_API_KEY|GOOGLE_API_KEY|REFERENCE_EMBEDDING_OPENAI_API_KEY|REFERENCE_EMBEDDING_GOOGLE_API_KEY)[^\S\r\n]*=[^\S\r\n]*(.*)$/gm,
     validate(match) {
       const value = String(match[1] ?? '').trim();
       return value && !ALLOWED_PLACEHOLDERS.has(value) && !value.startsWith('<') && !value.includes('CHANGE_ME');

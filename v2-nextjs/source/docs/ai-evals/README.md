@@ -1,16 +1,31 @@
-# AI Eval Artifacts
+# AI 답변 검사 기록 / AI Answer-Quality Records
 
-This directory stores release evidence for the BYOK OpenAI assistant harness.
+이 폴더에는 코딩 도우미와 해석 도우미가 정해 둔 답변 기준을 지키는지 확인한 기록을 보관합니다.
 
-The eval artifacts are not meant to prove clinical correctness. They are engineering evidence that the assistant layer follows product boundaries:
+이 검사는 AI 답변의 **임상적 정확성을 인증하지 않습니다.** 다음과 같은 프로그램 동작을 확인합니다.
 
-- answers are not empty or visibly cut off
-- coding suggestions stay candidate-level until a clinician reviews them
-- interpretation answers stay provisional and data-grounded
-- diagnosis, treatment planning, legal, and forensic claims stay bounded
-- reference retrieval remains connected to the knowledge layer
+- 답변이 비어 있거나 눈에 띄게 중간에서 끊기지 않는가
+- 코딩 제안을 임상가가 검토하기 전까지 후보 수준으로 제시하는가
+- 해석을 확정하지 않고 입력된 자료와 참조 문서에 근거해 설명하는가
+- 진단, 치료계획, 법적·법정 판단으로 답변 범위를 넓히지 않는가
+- 질문과 관련된 참조 문서를 실제로 찾아 답변에 사용하는가
 
-## v2.2.0 Chat UX And Streaming
+English summary: these records check whether the optional OpenAI assistants follow predefined product and privacy boundaries. They do not certify clinical validity or guarantee every future model response.
+
+## 개인정보 보호 범위
+
+공개 검사 기록에는 검사 항목 번호, 언어, 모델, 검색 방식, 완료 상태, 발견된 문제 종류, 사용량, 답변 길이, 추정 비용 같은 요약 정보가 포함될 수 있습니다.
+
+다음 정보는 저장하지 않습니다.
+
+- API 키
+- 질문과 답변 원문
+- 대화 원문
+- 비공개 평가 자료
+
+이 원칙 때문에 공개 저장소는 대화 기록 보관소가 되지 않으면서도, 어떤 검사를 했는지는 확인할 수 있습니다.
+
+## 주요 보고서와 검사 결과
 
 - [`2026-07-15-v2.2.0-cultural-validity-report.md`](./2026-07-15-v2.2.0-cultural-validity-report.md)
 - [`2026-07-15-v2.2.0-cultural-validity-final-production-parity-2x.jsonl`](./2026-07-15-v2.2.0-cultural-validity-final-production-parity-2x.jsonl)
@@ -22,6 +37,9 @@ The eval artifacts are not meant to prove clinical correctness. They are enginee
 - [`2026-07-14-v2.2.0-chat-cancellation-continuity.jsonl`](./2026-07-14-v2.2.0-chat-cancellation-continuity.jsonl)
 - [`v2.2.0-chat-ux-baseline.jsonl`](./v2.2.0-chat-ux-baseline.jsonl)
 - [`v2.2.0-chat-ux-after.jsonl`](./v2.2.0-chat-ux-after.jsonl)
+
+<details>
+<summary><strong>개발자가 검사를 다시 실행하는 방법 / Reproduction details</strong></summary>
 
 ## Local Commands
 
@@ -92,7 +110,7 @@ Run the explicit production-like `/api/chat` path with a synthetic validated Str
 npm run ai:evaluate-live:openai:route -- --output docs/ai-evals/route-eval.jsonl
 ```
 
-The route eval keeps model output in process memory only and writes a sanitized JSONL artifact containing aggregate status, contract metadata, app version, source commit, and dirty-tree state. It does not persist the raw response.
+The route eval keeps model output in process memory only and writes a sanitized JSONL artifact containing aggregate status, contract metadata, and the public app version. It does not persist the raw response, private source identifier, or working-tree state.
 
 Audit the saved JSONL artifacts:
 
@@ -119,20 +137,6 @@ Human review record scoring checks:
 - blocking failures force a `fail` decision
 - optional release gates can require every reviewed record to pass
 
-## Privacy Boundary
-
-Saved JSONL logs may include fixture ID, locale, model, retrieval mode, status, issue type, token usage, output length, and estimated cost.
-
-Saved JSONL logs must not include:
-
-- API keys
-- raw model output
-- raw prompts
-- raw chat messages
-- private assessment payloads
-
-This keeps the eval evidence useful for release review and public showcase documentation without turning the repository into a chat transcript store.
-
 ## Reading The Results
 
 `issue-bearing fixture results` means the fixture either reported one or more issue types or did not complete normally. Historical tuning logs can contain issue-bearing results. Final-pass logs should have zero issue-bearing results.
@@ -140,3 +144,12 @@ This keeps the eval evidence useful for release review and public showcase docum
 `estimated cost` is computed from the local script's price table and usage metadata. It is a development estimate, not an official billing record.
 
 `failed runs` counts live eval subprocess exits that returned a non-zero exit code. Historical tuning logs can include failed runs. Files named `final-pass` are treated as release-candidate evidence and must stay clean.
+
+</details>
+
+## 결과를 해석할 때의 한계
+
+- `issue-bearing`은 준비한 질문에서 한 가지 이상의 문제를 발견했거나 답변이 정상 완료되지 않았다는 뜻입니다.
+- `estimated cost`는 API 사용량을 바탕으로 계산한 개발용 추정치이며 OpenAI의 공식 청구서가 아닙니다.
+- `failed run`은 검사 프로그램이 정상 종료되지 않았다는 뜻입니다.
+- 최종 검사 통과는 준비한 질문과 기준을 통과했다는 뜻일 뿐, 모든 임상 질문과 미래 답변을 보증하지 않습니다.

@@ -6,7 +6,7 @@ import { redirect } from 'next/navigation';
 import ReferenceSearchForm from '@/components/ref/ReferenceSearchForm';
 import { buildReferenceDocHref, searchReferenceRuntimeDocs } from '@/lib/referenceCorpus';
 import { buildReferenceSearchExcerpt } from '@/lib/referenceSearchExcerpt';
-import { buildLanguageAlternates } from '@/lib/seo';
+import { buildLocalizedPageMetadata, getSeoCopy } from '@/lib/seo';
 
 type Language = 'en' | 'ko' | 'ja' | 'es' | 'pt';
 
@@ -72,14 +72,12 @@ const COPY: Record<Language, RefCopy> = {
   },
 };
 
-export const metadata: Metadata = {
-  title: 'Reference Documents',
-  description: 'Searchable documentation for Rorschach scoring items and structural summary variables.',
-  alternates: {
-    canonical: '/ref',
-    languages: buildLanguageAlternates('/ref'),
-  },
-};
+export async function generateMetadata({ searchParams }: RefPageProps): Promise<Metadata> {
+  const { lang } = await searchParams;
+  const language = normalizeLang(lang);
+  const copy = getSeoCopy('reference', language);
+  return buildLocalizedPageMetadata({ language, pathname: '/ref', ...copy });
+}
 
 function buildSearchResultHref(canonicalRoute: string, language: Language, query: string) {
   return `${buildReferenceDocHref(canonicalRoute, language)}&q=${encodeURIComponent(query)}`;

@@ -9,7 +9,7 @@
 | Release type | 메이저 패치 |
 | GAS deployment | [Open GAS app](https://script.google.com/macros/s/AKfycbxYTxqKcmRNJhpE8eCGTBZPyUFVJIRQiUTbyW48lJKg2E7Bgc5RKSitdDTVcE3bzk07JA/exec) |
 
-> **2026-07-17 계보 보충:** 초기 v1 구현은 공개 배포된 2019 Excel scoring workbook의 셀 수식과 Jeremy Leader의 [RorScore](https://github.com/jleader/RorScore)를 학습 참고 자료로 삼았습니다. 이 파일들은 코드를 만들 수 있다는 출발점과 계산 구조를 이해하는 데 도움을 주었지만 단독 정답으로 복사하지 않았습니다. 이후 확인된 Excel·RorScore·v1·v2 사이의 차이와 교정 범위는 [Acknowledgements](../../../ACKNOWLEDGEMENTS.md)와 [v2.2.2 계산 정확성 재감사](../../../v2-nextjs/releases/v2.2.2/)에 공개했습니다. 아래 내용과 소스는 당시 기록으로 보존합니다.
+> **2026-07-17 개발 계보 보충:** 초기 v1을 만들 때 공개 배포된 2019 Excel scoring workbook의 셀 수식과 Jeremy Leader의 [RorScore](https://github.com/jleader/RorScore)를 참고했습니다. 두 자료를 보며 구조요약 계산을 웹 프로그램으로 옮길 수 있겠다는 아이디어를 얻었고, 실제 계산 구조를 이해하는 데에도 큰 도움을 받았습니다. 이후 항목별 수식을 다시 검산하면서 Excel, RorScore, v1, v2 사이에 같은 부분과 다른 부분을 나누어 확인했습니다. 자세한 감사 인사와 교정 범위는 [Acknowledgements](../../../ACKNOWLEDGEMENTS.md)와 [v2.2.2 계산 정확성 핫픽스](../../../v2-nextjs/releases/v2.2.2/)에 정리했습니다. 아래의 안내문과 소스는 v1.0.0을 처음 공개했을 당시의 기록으로 남겨둡니다.
 
 ## Patch Notes
 

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { buildLanguageAlternates } from '@/lib/seo';
+import { buildLocalizedPageMetadata, getSeoCopy } from '@/lib/seo';
 import type { Language } from '@/types';
 
 type AboutPageProps = {
@@ -21,20 +21,18 @@ type AboutContent = {
   principles: PrincipleBlock[];
 };
 
-const WORKSHOP_URL = 'https://youtu.be/eDTxkJNUAHc?si=elrhVjFgQP0ZRggi';
+const WORKSHOP_URL = 'https://youtu.be/eDTxkJNUAHc';
 
 function normalizeLang(lang?: string): Language {
   return lang === 'ko' || lang === 'ja' || lang === 'es' || lang === 'pt' ? lang : 'en';
 }
 
-export const metadata: Metadata = {
-  title: 'About',
-  description: 'About this service and its purpose.',
-  alternates: {
-    canonical: '/about',
-    languages: buildLanguageAlternates('/about'),
-  },
-};
+export async function generateMetadata({ searchParams }: AboutPageProps): Promise<Metadata> {
+  const { lang } = await searchParams;
+  const language = normalizeLang(lang);
+  const copy = getSeoCopy('about', language);
+  return buildLocalizedPageMetadata({ language, pathname: '/about', ...copy });
+}
 
 const CONTENT: Record<Language, AboutContent> = {
   ko: {

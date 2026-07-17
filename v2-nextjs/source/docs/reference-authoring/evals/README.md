@@ -1,16 +1,16 @@
-# Reference Retrieval Evals
+# 참조 문서 검색 검사 / Reference Retrieval Checks
 
-이 폴더는 locale별 참조 코퍼스의 retrieval 품질을 점검하기 위한 curated query set을 둔다.
+이 폴더에는 다섯 언어의 질문이 알맞은 참조 문서를 찾는지 확인하기 위한 질문 모음을 둡니다. 계산식의 정확성이나 AI 답변의 임상적 타당성을 검사하는 자료가 아니라, 검색 기능이 예상한 문서를 찾는지 확인하는 자료입니다.
 
 원칙:
 
-- query set은 locale별로 별도 관리한다.
-- `targetCount`는 go-live 전 충족해야 하는 목표 문항 수다.
-- 지금 단계의 seed query set은 운영 전 최종본이 아니라, retrieval 품질을 조기 점검하기 위한 시작점이다.
-- runtime promotion은 query set coverage, graph integrity, source-priority QA가 모두 통과한 뒤에만 허용한다.
+- 질문 모음은 언어별로 따로 관리합니다.
+- `targetCount`는 실제 검색에 사용하기 전에 준비해야 하는 목표 질문 수입니다.
+- 초기 질문 모음은 최종 성능 연구가 아니라 검색 문제를 일찍 찾기 위한 시작점입니다.
+- 질문 수, 문서 간 연결, 우선해야 할 문서 순서를 모두 통과한 언어만 실제 검색에 사용합니다.
 
 평가 세트 역할은 구분해서 기록한다.
 
-- locale별 `*-curated-query-set.json`은 기존 동작이 다시 깨지지 않는지 확인하는 회귀 계약이다. alias와 정답 route가 밀접하므로 실제 사용자 정확도의 독립 추정치로 해석하지 않는다.
-- `hybrid-retrieval-dev-v1.json`은 실제 OpenAI query embedding과 runtime vector DB를 함께 시험하는 개발용 challenge set이다. 구현 조정에 사용했으므로 blind held-out이라고 부르지 않는다.
-- 향후 blind held-out 세트는 retrieval 구현과 개발 세트를 보지 않은 별도 작성·검수 절차로 만들고, 최초 최종 평가 전까지 동결해야 한다.
+- 언어별 `*-curated-query-set.json`은 이전에 고친 검색 문제가 다시 생기지 않는지 확인합니다. 정답 표현을 미리 알고 만든 질문이 많으므로 실제 임상가 질문의 정확도를 독립적으로 추정하는 자료는 아닙니다.
+- `hybrid-retrieval-dev-v1.json`은 단어 검색과 OpenAI 의미 검색을 함께 시험하는 개발용 질문 모음입니다. 검색 방식을 고치는 데 사용했으므로, 수정 과정에서 한 번도 보지 않은 독립 시험이라고 부르지 않습니다.
+- 향후 독립 시험용 질문 모음은 검색 구현과 개발용 질문을 보지 않은 별도 작성·검수 절차로 만들고, 최종 평가 전까지 수정하지 않아야 합니다.

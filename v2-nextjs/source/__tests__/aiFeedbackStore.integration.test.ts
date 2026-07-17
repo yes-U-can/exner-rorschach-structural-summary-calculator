@@ -2,6 +2,8 @@ import { randomUUID } from 'node:crypto';
 import pg from 'pg';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 import {
+  AI_FEEDBACK_RATE_WINDOW_LIMIT,
+  consumeAiFeedbackRateLimit,
   deleteAiResponseFeedback,
   disconnectAiFeedbackStore,
   saveAiResponseFeedback,
@@ -112,6 +114,36 @@ describe.runIf(shouldRun)('AI feedback store PostgreSQL integration', () => {
       [feedbackKey],
     );
     expect(deleted.rows[0]?.count).toBe(0);
+  });
+
+  it('atomically limits repeated writes from one encrypted AI session', async () => {
+    const sessionKey = `integration-${randomUUID()}`;
+    const attempts = await Promise.all(
+      Array.from({ length: AI_FEEDBACK_RATE_WINDOW_LIMIT + 1 }, () =>
+        consumeAiFeedbackRateLimit({
+          sessionKey,
+          sessionExpiresAt: Date.now() + 60 * 60 * 1000,
+        }),
+      ),
+    );
+
+    expect(attempts.filter((attempt) => attempt.allowed)).toHaveLength(AI_FEEDBACK_RATE_WINDOW_LIMIT);
+    expect(attempts.filter((attempt) => !attempt.allowed)).toHaveLength(1);
+
+    const stored = await client.query(
+      `
+        SELECT "windowCount", "sessionCount"
+        FROM "AiFeedbackRateLimit"
+        WHERE "sessionKey" = $1
+      `,
+      [sessionKey],
+    );
+    expect(stored.rows).toEqual([{
+      windowCount: AI_FEEDBACK_RATE_WINDOW_LIMIT + 1,
+      sessionCount: AI_FEEDBACK_RATE_WINDOW_LIMIT + 1,
+    }]);
+
+    await client.query('DELETE FROM "AiFeedbackRateLimit" WHERE "sessionKey" = $1', [sessionKey]);
   });
 });
 

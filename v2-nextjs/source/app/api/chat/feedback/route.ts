@@ -4,12 +4,17 @@ import { SUPPORTED_LANGUAGES, type Language } from '@/i18n/config';
 import { AI_HARNESS_VERSION } from '@/lib/ai/harness';
 import { FIXED_OPENAI_MODEL_ID } from '@/lib/aiModels';
 import {
+  consumeAiFeedbackRateLimit,
   deleteAiResponseFeedback,
   saveAiResponseFeedback,
 } from '@/lib/aiFeedbackStore';
 import { parseAiFeedbackReasonCodes } from '@/lib/aiFeedbackReasons';
 import { logApiError } from '@/lib/apiError';
-import { readByokSessionFromRequest } from '@/lib/byokSession';
+import {
+  getByokFeedbackRateLimitKey,
+  readByokSessionFromRequest,
+} from '@/lib/byokSession';
+import { parseJsonWithSizeLimit, REQUEST_BODY_SIZE_POLICIES } from '@/lib/requestBodyGuard';
 import type {
   AiFeedbackLengthBucket,
   AiFeedbackRating,
@@ -17,7 +22,6 @@ import type {
   ChatWorkflowMode,
 } from '@/types';
 
-const MAX_FEEDBACK_REQUEST_BYTES = 2_048;
 const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 const VALID_WORKFLOWS = new Set<ChatWorkflowMode>(['interpretation', 'coding_assist']);
 const VALID_COMPLETION_STATES = new Set<AiMessageCompletionState>([
@@ -59,7 +63,9 @@ function isLanguage(value: unknown): value is Language {
   return typeof value === 'string' && SUPPORTED_LANGUAGES.includes(value as Language);
 }
 
-function parseFeedbackRequest(body: FeedbackRequestBody) {
+function parseFeedbackRequest(input: unknown) {
+  if (!input || typeof input !== 'object' || Array.isArray(input)) return null;
+  const body = input as FeedbackRequestBody;
   if (Object.keys(body).some((key) => !ALLOWED_FEEDBACK_FIELDS.has(key))) return null;
   if (typeof body.feedbackId !== 'string' || !UUID_PATTERN.test(body.feedbackId)) return null;
   if (body.rating !== null && (
@@ -104,32 +110,50 @@ export async function POST(request: Request) {
       );
     }
 
-    if (!readByokSessionFromRequest(request)) {
+    const session = readByokSessionFromRequest(request);
+    if (!session) {
       return NextResponse.json(
         { error: 'An active AI session is required.', code: 'byok_session_missing' },
         { status: 401, headers },
       );
     }
 
-    const rawBody = await request.text();
-    if (new TextEncoder().encode(rawBody).byteLength > MAX_FEEDBACK_REQUEST_BYTES) {
-      return NextResponse.json(
-        { error: 'Feedback request is too large.', code: 'feedback_request_too_large' },
-        { status: 413, headers },
-      );
+    const parsedBody = await parseJsonWithSizeLimit<FeedbackRequestBody>(
+      request,
+      REQUEST_BODY_SIZE_POLICIES.feedback,
+    );
+    if (!parsedBody.ok) {
+      for (const [name, value] of Object.entries(headers)) {
+        parsedBody.response.headers.set(name, value);
+      }
+      return parsedBody.response;
     }
 
-    let body: FeedbackRequestBody;
-    try {
-      body = JSON.parse(rawBody) as FeedbackRequestBody;
-    } catch {
-      body = {};
-    }
-    const parsed = parseFeedbackRequest(body);
+    const parsed = parseFeedbackRequest(parsedBody.value);
     if (!parsed) {
       return NextResponse.json(
         { error: 'Invalid feedback request.', code: 'invalid_feedback_request' },
         { status: 400, headers },
+      );
+    }
+
+    const rateLimit = await consumeAiFeedbackRateLimit({
+      sessionKey: getByokFeedbackRateLimitKey(session),
+      sessionExpiresAt: session.expiresAt,
+    });
+    if (!rateLimit.allowed) {
+      return NextResponse.json(
+        {
+          error: 'Too many feedback changes. Please try again later.',
+          code: 'feedback_rate_limited',
+        },
+        {
+          status: 429,
+          headers: {
+            ...headers,
+            'Retry-After': String(rateLimit.retryAfterSeconds),
+          },
+        },
       );
     }
 

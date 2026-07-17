@@ -10,6 +10,10 @@ export const REQUEST_BODY_SIZE_POLICIES = {
     maxBytes: 128 * 1024,
     publicMessage: 'Chat request is too large. Please send a smaller message.',
   },
+  feedback: {
+    maxBytes: 2 * 1024,
+    publicMessage: 'Feedback request is too large.',
+  },
 } as const satisfies Record<string, RequestBodySizePolicy>;
 
 function isJsonContentType(contentType: string | null) {

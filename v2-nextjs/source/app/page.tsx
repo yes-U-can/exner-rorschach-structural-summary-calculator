@@ -934,7 +934,7 @@ export default function HomePage() {
     <div className="min-h-screen relative bg-[var(--brand-page)]">
       {/* Main Content */}
       <div className="relative z-10">
-        <main className={`ui-scoring-page-main ${showResult ? 'max-w-7xl px-4 sm:px-6 lg:px-8' : 'max-w-[112rem] px-3 sm:px-4 lg:pl-2 lg:pr-1 2xl:px-8'} mx-auto py-6`}>
+        <main data-nosnippet className={`ui-scoring-page-main ${showResult ? 'max-w-7xl px-4 sm:px-6 lg:px-8' : 'max-w-[112rem] px-3 sm:px-4 lg:pl-2 lg:pr-1 2xl:px-8'} mx-auto py-6`}>
           {!showResult ? (
             // Input Section
             <div className="space-y-6">

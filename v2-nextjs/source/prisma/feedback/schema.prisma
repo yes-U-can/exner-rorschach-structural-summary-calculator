@@ -46,3 +46,14 @@ model AiResponseFeedback {
   @@index([modelId, createdAt])
   @@index([expiresAt])
 }
+
+model AiFeedbackRateLimit {
+  sessionKey      String   @id
+  windowStartedAt DateTime @default(now())
+  windowCount     Int      @default(0)
+  sessionCount    Int      @default(0)
+  expiresAt       DateTime
+  updatedAt       DateTime @updatedAt
+
+  @@index([expiresAt])
+}

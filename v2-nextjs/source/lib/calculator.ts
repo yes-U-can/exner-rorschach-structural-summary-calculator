@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /**
- * Computing Program for Rorschach Structural Summary v2.2.2
+ * Computing Program for Rorschach Structural Summary v2.2.3
  * Main Calculation Logic
  * 
  * Code.gs의 calculateRorschach 함수를 TypeScript로 이전

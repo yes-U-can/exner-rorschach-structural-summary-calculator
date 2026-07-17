@@ -5,7 +5,7 @@
 | Field | Value |
 | --- | --- |
 | Version | `v1.0.1` |
-| Release date | 2025-10-18 |
+| Release date | 2025-10-17 |
 | Release type | 핫픽스 |
 | GAS deployment | [Open GAS app](https://script.google.com/macros/s/AKfycbwNNeJsgRx0sEnZO4X9XxEUEthQlVS3Ttk6k_OSmIj8aTPlpdBQV1653hmBtzLnVX8Q/exec) |
 

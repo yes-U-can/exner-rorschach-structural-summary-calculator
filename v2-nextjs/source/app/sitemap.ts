@@ -1,33 +1,51 @@
-﻿import { MetadataRoute } from 'next';
+import type { MetadataRoute } from 'next';
+import { SUPPORTED_LANGUAGES } from '@/i18n/config';
 import { getReferenceRuntimeDocs } from '@/lib/referenceCorpus';
+import {
+  buildAbsoluteLanguageAlternates,
+  buildLocalizedPath,
+  getAbsoluteUrl,
+} from '@/lib/seo';
 
-const rawSiteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://exnersicp.vercel.app';
-const siteUrl = rawSiteUrl.replace(/\s+/g, '').replace(/\/+$/, '');
+type SitemapPolicy = Pick<MetadataRoute.Sitemap[number], 'changeFrequency' | 'priority'>;
 
-function absolute(pathname: string) {
-  const normalized = pathname.startsWith('/') ? pathname : `/${pathname}`;
-  return new URL(normalized, `${siteUrl}/`).toString();
+const STATIC_ROUTES: Array<{ pathname: string; policy: SitemapPolicy }> = [
+  { pathname: '/', policy: { changeFrequency: 'weekly', priority: 1 } },
+  { pathname: '/ref', policy: { changeFrequency: 'weekly', priority: 0.9 } },
+  { pathname: '/about', policy: { changeFrequency: 'monthly', priority: 0.6 } },
+  { pathname: '/terms', policy: { changeFrequency: 'monthly', priority: 0.6 } },
+  { pathname: '/privacy', policy: { changeFrequency: 'monthly', priority: 0.6 } },
+  { pathname: '/versions', policy: { changeFrequency: 'monthly', priority: 0.55 } },
+];
+
+function localizedEntries(
+  pathname: string,
+  lastModified: Date,
+  policy: SitemapPolicy,
+): MetadataRoute.Sitemap {
+  const languages = buildAbsoluteLanguageAlternates(pathname);
+  return SUPPORTED_LANGUAGES.map((language) => ({
+    url: getAbsoluteUrl(buildLocalizedPath(pathname, language)),
+    lastModified,
+    ...policy,
+    alternates: { languages },
+  }));
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  const staticRoutes: MetadataRoute.Sitemap = [
-    { url: absolute('/'), lastModified: now, changeFrequency: 'weekly', priority: 1 },
-    { url: absolute('/ref'), lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
-    { url: absolute('/chat'), lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
-    { url: absolute('/about'), lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
-    { url: absolute('/terms'), lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
-    { url: absolute('/privacy'), lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
-  ];
+  const staticRoutes = STATIC_ROUTES.flatMap(({ pathname, policy }) =>
+    localizedEntries(pathname, now, policy),
+  );
 
   const docRoutes = getReferenceRuntimeDocs('en')
     .filter((item) => item.kind === 'entry')
-    .map((item) => ({
-      url: absolute(`/ref/${item.slug.join('/')}`),
-      lastModified: now,
-      changeFrequency: 'monthly' as const,
-      priority: 0.65,
-    }));
+    .flatMap((item) =>
+      localizedEntries(`/ref/${item.slug.join('/')}`, now, {
+        changeFrequency: 'monthly',
+        priority: 0.65,
+      }),
+    );
 
   return [...staticRoutes, ...docRoutes];
 }

@@ -13,7 +13,7 @@ import {
   getReferenceRuntimeDocChildren,
   getReferenceRuntimeStaticSlugs,
 } from '@/lib/referenceCorpus';
-import { buildLanguageAlternates } from '@/lib/seo';
+import { buildLocalizedPageMetadata, getSeoCopy } from '@/lib/seo';
 import type { Language } from '@/types';
 
 type PageProps = {
@@ -53,6 +53,11 @@ function normalizeHeadingText(value: string) {
   return value.replace(/\s+/g, ' ').trim();
 }
 
+function buildSeoDescription(value: string) {
+  const normalized = value.replace(/\s+/g, ' ').trim();
+  return normalized.length <= 180 ? normalized : `${normalized.slice(0, 177).trimEnd()}...`;
+}
+
 function stripDuplicateTitleHeading(markdown: string, title: string) {
   const lines = markdown.split(/\r?\n/);
   const firstContentIndex = lines.findIndex((line) => line.trim().length > 0);
@@ -90,38 +95,35 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   const { lang } = await searchParams;
   const activeLang = normalizeLang(lang);
   const docsLabel = getTranslation(activeLang, 'reference.title');
+  const referenceSeo = getSeoCopy('reference', activeLang);
 
   if (!slug?.length) {
-    return {
+    return buildLocalizedPageMetadata({
+      language: activeLang,
+      pathname: '/ref',
       title: docsLabel,
-      alternates: {
-        canonical: '/ref',
-        languages: buildLanguageAlternates('/ref'),
-      },
-    };
+      description: referenceSeo.description,
+    });
   }
 
   const doc = getReferenceRuntimeDocBySlug(activeLang, slug);
   if (!doc) {
-    return {
+    return buildLocalizedPageMetadata({
+      language: activeLang,
+      pathname: '/ref',
       title: docsLabel,
-      alternates: {
-        canonical: '/ref',
-        languages: buildLanguageAlternates('/ref'),
-      },
-    };
+      description: referenceSeo.description,
+    });
   }
 
   const canonicalPath = `/ref/${doc.slug.map((segment) => encodeURIComponent(segment)).join('/')}`;
 
-  return {
+  return buildLocalizedPageMetadata({
+    language: activeLang,
+    pathname: canonicalPath,
     title: `${doc.title} | ${docsLabel}`,
-    description: doc.excerpt || doc.bodyText,
-    alternates: {
-      canonical: canonicalPath,
-      languages: buildLanguageAlternates(canonicalPath),
-    },
-  };
+    description: buildSeoDescription(doc.excerpt || doc.bodyText),
+  });
 }
 
 export default async function DocDetailPage({ params, searchParams }: PageProps) {

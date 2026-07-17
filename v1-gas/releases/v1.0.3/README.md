@@ -5,7 +5,7 @@
 | Field | Value |
 | --- | --- |
 | Version | `v1.0.3` |
-| Release date | 2025-10-19 |
+| Release date | 2025-10-18 |
 | Release type | 버그 패치 |
 | GAS deployment | [Open GAS app](https://script.google.com/macros/s/AKfycbzoiaofs_I5Ue4p7Eo5XQp0OmUtmbbqkpJuwD-FQ1R4PLscULJB_AHVBb-VylICEKJB1A/exec) |
 

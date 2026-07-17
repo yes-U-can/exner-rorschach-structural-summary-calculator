@@ -109,7 +109,7 @@
         - 배율: 100px → 110px (10% 증가)
         - 위치: `background-position: 3% bottom` (유지)
     - **링크 변경**
-        - URL: `https://youtu.be/GH145Wwh-YA?si=eDeXBKX1fufPxcJY`
+        - URL: `https://youtu.be/GH145Wwh-YA`
         - 유튜브 영상 링크 직접 삽입이 아닌,
 
             GitHub 아카이브에서는 프로그램 사용법 유튜브 영상으로 바로 이동하도록 함

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { buildLanguageAlternates } from '@/lib/seo';
+import { buildLocalizedPageMetadata, getSeoCopy } from '@/lib/seo';
 import type { Language } from '@/types';
 
 type TermsPageProps = {
@@ -22,14 +22,12 @@ function normalizeLang(lang?: string): Language {
   return lang === 'ko' || lang === 'ja' || lang === 'es' || lang === 'pt' ? lang : 'en';
 }
 
-export const metadata: Metadata = {
-  title: 'Terms',
-  description: 'Terms of service for using this website.',
-  alternates: {
-    canonical: '/terms',
-    languages: buildLanguageAlternates('/terms'),
-  },
-};
+export async function generateMetadata({ searchParams }: TermsPageProps): Promise<Metadata> {
+  const { lang } = await searchParams;
+  const language = normalizeLang(lang);
+  const copy = getSeoCopy('terms', language);
+  return buildLocalizedPageMetadata({ language, pathname: '/terms', ...copy });
+}
 
 const CONTENT: Record<Language, TermsContent> = {
   ko: {

@@ -1,6 +1,7 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 const mocks = vi.hoisted(() => ({
+  consumeAiFeedbackRateLimit: vi.fn(),
   saveAiResponseFeedback: vi.fn(),
   deleteAiResponseFeedback: vi.fn(),
 }));
@@ -43,8 +44,15 @@ function buildFeedbackRequest(overrides: Record<string, unknown> = {}, withSessi
 describe('chat response feedback route', () => {
   beforeEach(() => {
     vi.stubEnv('NEXT_PUBLIC_AI_FEEDBACK_ENABLED', '1');
+    mocks.consumeAiFeedbackRateLimit.mockReset();
     mocks.saveAiResponseFeedback.mockReset();
     mocks.deleteAiResponseFeedback.mockReset();
+    mocks.consumeAiFeedbackRateLimit.mockResolvedValue({
+      allowed: true,
+      retryAfterSeconds: 1,
+      windowCount: 1,
+      sessionCount: 1,
+    });
     mocks.saveAiResponseFeedback.mockResolvedValue(undefined);
     mocks.deleteAiResponseFeedback.mockResolvedValue(undefined);
   });
@@ -99,6 +107,32 @@ describe('chat response feedback route', () => {
 
     expect(response.status).toBe(400);
     expect(mocks.saveAiResponseFeedback).not.toHaveBeenCalled();
+  });
+
+  it('stops oversized bodies while streaming before any feedback database query', async () => {
+    const response = await POST(buildFeedbackRequest({
+      response: 'x'.repeat(3_000),
+    }));
+
+    expect(response.status).toBe(413);
+    expect(mocks.consumeAiFeedbackRateLimit).not.toHaveBeenCalled();
+    expect(mocks.saveAiResponseFeedback).not.toHaveBeenCalled();
+  });
+
+  it('returns 429 with Retry-After when the encrypted session exceeds its write budget', async () => {
+    mocks.consumeAiFeedbackRateLimit.mockResolvedValueOnce({
+      allowed: false,
+      retryAfterSeconds: 42,
+      windowCount: 11,
+      sessionCount: 11,
+    });
+
+    const response = await POST(buildFeedbackRequest());
+
+    expect(response.status).toBe(429);
+    expect(response.headers.get('Retry-After')).toBe('42');
+    expect(mocks.saveAiResponseFeedback).not.toHaveBeenCalled();
+    expect(mocks.deleteAiResponseFeedback).not.toHaveBeenCalled();
   });
 
   it('rejects unknown, duplicate, or rating-incompatible reason codes', async () => {
