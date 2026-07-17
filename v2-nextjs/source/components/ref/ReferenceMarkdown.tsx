@@ -53,7 +53,7 @@ export default function ReferenceMarkdown({
           li: ({ children }) => <li className="leading-7">{children}</li>,
           strong: ({ children }) => <strong className="font-semibold text-[var(--text-strong)]">{children}</strong>,
           code: ({ children }) => (
-            <code className="rounded bg-[var(--surface-muted)] px-1.5 py-0.5 text-[0.95em] text-[var(--text-strong)]">{children}</code>
+            <code className="rounded bg-[var(--danger-hover-bg)] px-1.5 py-0.5 text-[0.95em] font-semibold text-[var(--danger-text)]">{children}</code>
           ),
           a: ({ href, children }) => {
             if (!href) return <span>{children}</span>;

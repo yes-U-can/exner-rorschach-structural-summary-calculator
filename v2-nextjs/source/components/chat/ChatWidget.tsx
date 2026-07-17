@@ -556,7 +556,7 @@ export default function ChatWidget({
           </button>
         </div>
 
-        <div className="relative min-h-0 flex-1 overflow-hidden">
+        <div className="ui-coding-chat-scroll-region relative min-h-0 flex-1 overflow-hidden">
           <div
             ref={scrollContainerRef}
             {...scrollHandlers}

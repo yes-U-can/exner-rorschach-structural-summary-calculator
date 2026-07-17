@@ -2080,6 +2080,10 @@ html.theme-switching [data-theme-allow-transition]::after {
     color: var(--brand-700);
   }
 
+  .ui-coding-chat-scroll-region .ui-chat-scroll-latest {
+    bottom: 0.75rem;
+  }
+
   .ui-chat-system-row {
     @apply flex justify-center;
   }

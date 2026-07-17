@@ -24,7 +24,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     version: 'v2.2.4',
     title: 'Version 2.2.4',
     series: 'v2-nextjs',
-    publishedAt: '2026-07-19',
+    publishedAt: '2026-07-18',
     releaseKind: 'bugfix',
     releaseLabel: '버그 패치',
     summary:
@@ -36,7 +36,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     version: 'v2.2.3',
     title: 'Version 2.2.3',
     series: 'v2-nextjs',
-    publishedAt: '2026-07-18',
+    publishedAt: '2026-07-17',
     releaseKind: 'bugfix',
     releaseLabel: '버그 패치',
     summary:
@@ -48,7 +48,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     version: 'v2.2.2',
     title: 'Version 2.2.2',
     series: 'v2-nextjs',
-    publishedAt: '2026-07-17',
+    publishedAt: '2026-07-16',
     releaseKind: 'hotfix',
     releaseLabel: '핫픽스',
     summary:
@@ -60,7 +60,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     version: 'v2.2.1',
     title: 'Version 2.2.1',
     series: 'v2-nextjs',
-    publishedAt: '2026-07-16',
+    publishedAt: '2026-07-15',
     releaseKind: 'hotfix',
     releaseLabel: '핫픽스',
     summary:
@@ -72,7 +72,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     version: 'v2.2.0',
     title: 'Version 2.2.0',
     series: 'v2-nextjs',
-    publishedAt: '2026-07-15',
+    publishedAt: '2026-07-14',
     releaseKind: 'minor',
     releaseLabel: '마이너 패치',
     summary:
@@ -84,7 +84,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     version: 'v2.1.10',
     title: 'Version 2.1.10',
     series: 'v2-nextjs',
-    publishedAt: '2026-07-14',
+    publishedAt: '2026-07-13',
     releaseKind: 'bugfix',
     releaseLabel: '버그 패치',
     summary:
@@ -96,7 +96,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     version: 'v2.1.9',
     title: 'Version 2.1.9',
     series: 'v2-nextjs',
-    publishedAt: '2026-07-13',
+    publishedAt: '2026-07-12',
     releaseKind: 'bugfix',
     releaseLabel: '버그 패치',
     summary:
@@ -108,7 +108,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     version: 'v2.1.8',
     title: 'Version 2.1.8',
     series: 'v2-nextjs',
-    publishedAt: '2026-07-12',
+    publishedAt: '2026-07-11',
     releaseKind: 'bugfix',
     releaseLabel: '버그 패치',
     summary:

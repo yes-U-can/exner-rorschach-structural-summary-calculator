@@ -49,6 +49,8 @@ v2.2.4 does not change Structural Summary formulas or scoring-table input behavi
 
 The release rebuilds 1,015 reference documents and 5,589 current vector-search chunks, with zero missing, stale, or content-hash-mismatched vectors. It also strengthens the assistants' exact Exner CS scope, prompt-injection refusal, and per-session request limits. The final GPT-5.5 checks passed 66 of 66 single-turn and multi-turn coding and interpretation scenarios across all five languages. The [Korean canonical release note](./v2-nextjs/releases/v2.2.4/) contains the detailed evidence and limitations.
 
+A follow-up restores the start-choice dialog whenever the scoring workspace is entered, gives code-styled key phrases a higher-contrast red treatment in both light and dark themes, and keeps the coding assistant's jump-to-latest button immediately above its composer instead of in the middle of a long response.
+
 ## v2.2.3
 
 v2.2.3 does not change Structural Summary formulas or the visible interface layout, so existing results do not need to be recalculated. It rewrites the public documentation with clinical psychologists as the primary readers, adds consistent five-language search and link-preview metadata, and limits excessive writes to the optional AI response-feedback database.

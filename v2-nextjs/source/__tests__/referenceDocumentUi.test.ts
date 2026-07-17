@@ -1,7 +1,10 @@
+import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 
 import { SUPPORTED_LANGUAGES } from '@/i18n/config';
 import { getReferenceDocumentUi } from '@/lib/referenceDocumentUi';
+
+const referenceMarkdownSource = readFileSync('components/ref/ReferenceMarkdown.tsx', 'utf8');
 
 describe('reference document UI copy', () => {
   it('provides complete copy feedback for every supported language', () => {
@@ -22,5 +25,10 @@ describe('reference document UI copy', () => {
       copiedTitle: '복사됨',
       copiedMessage: '참조 문서를 클립보드에 복사했습니다.',
     });
+  });
+
+  it('uses the theme-aware red palette for inline reference code', () => {
+    expect(referenceMarkdownSource).toContain('bg-[var(--danger-hover-bg)]');
+    expect(referenceMarkdownSource).toContain('text-[var(--danger-text)]');
   });
 });

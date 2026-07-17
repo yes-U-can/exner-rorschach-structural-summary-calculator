@@ -731,18 +731,11 @@ export default function HomePage() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Show welcome modal on first load OR if there's saved data to restore
+  // Every entry to the scoring workspace starts with an explicit data-source choice.
   useEffect(() => {
-    const hasSeenWelcome = sessionStorage.getItem('rorschach_welcome_seen');
-    const hasSaved = hasSavedData();
-
-    // Always show modal if there's saved data (so user can choose to restore)
-    // Or show on first visit
-    if (!hasSeenWelcome || hasSaved) {
-      const timer = window.setTimeout(() => setShowWelcomeModal(true), 0);
-      return () => window.clearTimeout(timer);
-    }
-  }, [hasSavedData]);
+    const timer = window.setTimeout(() => setShowWelcomeModal(true), 0);
+    return () => window.clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     const handleHomeLinkClick = (event: MouseEvent) => {
@@ -757,25 +750,23 @@ export default function HomePage() {
       }
 
       const url = new URL(link.href, window.location.href);
-      if (url.origin === window.location.origin && url.pathname === '/' && hasSavedData()) {
+      if (url.origin === window.location.origin && url.pathname === '/') {
         setShowWelcomeModal(true);
       }
     };
 
     document.addEventListener('click', handleHomeLinkClick, true);
     return () => document.removeEventListener('click', handleHomeLinkClick, true);
-  }, [hasSavedData]);
+  }, []);
 
   // Handle welcome modal actions
   const handleNewStart = () => {
     setShowWelcomeModal(false);
-    sessionStorage.setItem('rorschach_welcome_seen', 'true');
   };
 
   const handleLoadSample = () => {
     loadSampleData();
     setShowWelcomeModal(false);
-    sessionStorage.setItem('rorschach_welcome_seen', 'true');
   };
 
   const handleLoadSaved = () => {
@@ -784,7 +775,6 @@ export default function HomePage() {
       loadData(savedData);
     }
     setShowWelcomeModal(false);
-    sessionStorage.setItem('rorschach_welcome_seen', 'true');
   };
 
   // Handle reset
