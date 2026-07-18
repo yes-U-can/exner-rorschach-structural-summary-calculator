@@ -34,6 +34,10 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 `M` is used when the response implies human or anthropomorphic activity.
 It also applies to animals or fictional figures if they are acting in a genuinely human way.
 
+## Input Code Rule
+
+`M` is the family label used in Structural Summary totals. For an individual response, enter `Ma`, `Mp`, or `Ma-p` according to its active/passive quality. Bare `M` is not a complete response code.
+
 ## Application Conditions
 
 - The perceived action must be human or clearly anthropomorphic.

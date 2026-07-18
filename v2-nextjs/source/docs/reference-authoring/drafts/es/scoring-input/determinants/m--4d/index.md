@@ -34,6 +34,10 @@ provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/dete
 `M` se usa cuando la respuesta implica actividad humana o actividad antropomórfica.
 También se aplica a animales o personajes ficticios si actúan de manera propiamente humana.
 
+## Regla del código de entrada
+
+`M` es la etiqueta de familia utilizada en los totales del Sumario Estructural. En una respuesta individual se registra `Ma`, `Mp` o `Ma-p`, según la cualidad activa o pasiva del movimiento. `M` sin sufijo no es un código completo para una respuesta individual.
+
 ## Condiciones de aplicación
 
 - La acción percibida debe ser humana o claramente antropomórfica.

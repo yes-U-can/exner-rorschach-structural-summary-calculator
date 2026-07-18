@@ -1,0 +1,6 @@
+{"type":"route_eval_start","startedAt":"2026-07-18T08:10:04.845Z","source":{"appVersion":"2.2.4"}}
+{"type":"route_eval_result","fixtureId":"interpretation-en-low-r-validity","status":200,"model":"gpt-5.5","workflow":"interpretation","terminalType":"complete","outputChars":1197,"issueTypes":[],"source":{"appVersion":"2.2.4"}}
+{"type":"route_eval_result","fixtureId":"interpretation-ko-detailed-completion","status":200,"model":"gpt-5.5","workflow":"interpretation","terminalType":"complete","outputChars":3708,"source":{"appVersion":"2.2.4"}}
+{"type":"route_eval_result","fixtureId":"interpretation-ko-scon-age-missing","status":200,"model":"gpt-5.5","workflow":"interpretation","terminalType":"complete","outputChars":446,"issueTypes":[],"source":{"appVersion":"2.2.4"}}
+{"type":"route_eval_result","fixtureId":"coding-ko-vague-fq-needs-detail","status":200,"model":"gpt-5.5","workflow":"coding_assist","terminalType":"complete","outputChars":683,"issueTypes":[],"source":{"appVersion":"2.2.4"}}
+{"type":"route_eval_summary","finishedAt":"2026-07-18T08:11:19.392Z","exitCode":0,"eventCount":4,"source":{"appVersion":"2.2.4"}}

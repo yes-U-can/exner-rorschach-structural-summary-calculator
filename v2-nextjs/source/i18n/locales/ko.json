@@ -1,7 +1,7 @@
 {
   "app": {
     "title": "Exner 로샤 종합체계 구조요약 계산기",
-    "version": "v2.2.4",
+    "version": "v2.2.5",
     "provider": "MOW 제작·유지보수"
   },
   "nav": {
@@ -257,6 +257,10 @@
     "validity": {
       "title": "타당도 주의",
       "message": "반응 수가 14개 미만이면 프로파일의 타당도가 낮아져 해석의 신뢰도가 떨어질 수 있습니다."
+    },
+    "invalidDeterminants": {
+      "title": "운동 결정인 재확인",
+      "message": "행 {rows}에 더 이상 개별 반응 입력코드로 사용하지 않는 {codes}가 있습니다. 각 운동 결정인을 a, p 또는 a-p가 포함된 코드로 다시 선택해 주세요. 수정하기 전에는 계산할 수 없습니다."
     },
     "resetComplete": {
       "title": "초기화 완료",

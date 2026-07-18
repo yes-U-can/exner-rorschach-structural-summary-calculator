@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /**
- * Computing Program for Rorschach Structural Summary v2.2.4
+ * Computing Program for Rorschach Structural Summary v2.2.5
  * Main Calculation Logic
  * 
  * Code.gs의 calculateRorschach 함수를 TypeScript로 이전
@@ -9,6 +9,7 @@
 import { SCORING_CONFIG } from './constants';
 import { val, fix1, fix2, zestFromZf, dTable } from './utils';
 import { classifyGPHR } from './gphr';
+import { findInvalidDeterminantInputs } from './determinantInput';
 import type { RorschachResponse, CalculationResult, StructuralSummary } from '@/types';
 
 /**
@@ -66,6 +67,17 @@ export function calculateStructuralSummary(
 ): CalculationResult {
   try {
     const validResponses = responses;
+    const invalidDeterminants = findInvalidDeterminantInputs(validResponses);
+    if (invalidDeterminants.length > 0) {
+      return {
+        success: false,
+        errors: invalidDeterminants.map(({ responseIndex, code }) => ({
+          field: `responses.${responseIndex}.determinants`,
+          message: `Invalid determinant code at row ${responseIndex + 1}: ${code}`,
+        })),
+      };
+    }
+
     const R = validResponses.length;
     
     if (R === 0) {

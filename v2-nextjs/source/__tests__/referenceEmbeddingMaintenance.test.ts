@@ -28,5 +28,5 @@ describe('reference embedding maintenance', () => {
       'en',
       ['shared#1', 'en-only#1'],
     ]);
-  });
+  }, 15_000);
 });

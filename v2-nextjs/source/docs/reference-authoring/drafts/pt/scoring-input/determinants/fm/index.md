@@ -28,7 +28,11 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-determinants-movem
 ## Definição central
 
 `FM` é usado quando a resposta implica movimento próprio de animal.
-O ponto central é que a ação permanece apropriada a espécie ou ao tipo de criatura descrita.
+O ponto central é que a ação permanece apropriada à espécie ou ao tipo de criatura descrita.
+
+## Regra do código de entrada
+
+`FM` é o rótulo de família usado nos totais do Sumário Estrutural. Em uma resposta individual, registre `FMa`, `FMp` ou `FMa-p`, conforme a qualidade ativa ou passiva do movimento. `FM` sem sufixo não é um código completo para uma resposta individual.
 
 ## Condições de aplicação
 

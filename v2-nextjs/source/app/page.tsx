@@ -17,6 +17,10 @@ import { exportToCSV, exportSummaryToCSV, generateSummaryCsv } from '@/lib/csv';
 import { exportToPdf } from '@/lib/pdf';
 import { buildPrintResponseMemoGroups } from '@/lib/printResponseMemos';
 import {
+  findInvalidDeterminantInputs,
+  summarizeInvalidDeterminantInputs,
+} from '@/lib/determinantInput';
+import {
   fetchByokSessionStatus,
   openByokSessionDialog,
   subscribeByokSessionChange,
@@ -773,6 +777,14 @@ export default function HomePage() {
     const savedData = load();
     if (savedData) {
       loadData(savedData);
+      const issues = findInvalidDeterminantInputs(savedData);
+      if (issues.length > 0) {
+        showToast({
+          type: 'warning',
+          title: t('toast.invalidDeterminants.title'),
+          message: t('toast.invalidDeterminants.message', summarizeInvalidDeterminantInputs(issues)),
+        });
+      }
     }
     setShowWelcomeModal(false);
   };
@@ -792,6 +804,19 @@ export default function HomePage() {
   // Handle calculate
   const handleCalculate = () => {
     if (isCalculating) return;
+
+    const invalidDeterminants = findInvalidDeterminantInputs(responses);
+    if (invalidDeterminants.length > 0) {
+      showToast({
+        type: 'warning',
+        title: t('toast.invalidDeterminants.title'),
+        message: t(
+          'toast.invalidDeterminants.message',
+          summarizeInvalidDeterminantInputs(invalidDeterminants),
+        ),
+      });
+      return;
+    }
 
     if (validResponseCount < 14) {
       showToast({

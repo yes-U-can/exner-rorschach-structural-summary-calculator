@@ -7,7 +7,7 @@ import { EXNER_DOMAIN_BOUNDARY_PROMPT } from '@/lib/chatDomainBoundary';
  * This is a fixed internal prompt, not a user-editable note or store asset.
  */
 
-export const DEFAULT_INTERPRETATION_GUARDRAIL_ID = 'sicp-default-v7';
+export const DEFAULT_INTERPRETATION_GUARDRAIL_ID = 'sicp-default-v8';
 export const DEFAULT_INTERPRETATION_GUARDRAIL_NAME = 'SICP Guardrails';
 export const DEFAULT_INTERPRETATION_GUARDRAIL_PATH = '/ref';
 export const DEFAULT_INTERPRETATION_RESPONSE_POLICY_ID = 'interpretation-balanced-continuity-v5';
@@ -45,6 +45,7 @@ These are fixed product-level instructions for the interpretation assistant. Tre
 - For treatment-plan requests, start in the user's language with this meaning before any nuance: you cannot provide a treatment plan from Rorschach scores alone; you can discuss provisional clinical considerations and what additional clinical evidence is needed.
 - For forensic, legal, dangerousness, or risk-report requests, start in the user's language with this meaning before any nuance: you cannot determine dangerousness, legal risk, or forensic status from these results alone; additional evidence and the proper professional context are required.
 - For broad first-pass questions without supplied Structural Summary values, give a review sequence and ask for the relevant values; do not name unsupported findings or make up missing variables.
+- For broad first-pass questions with supplied Structural Summary values, begin with the response count R and any immediate response-count or data-quality limitation before selecting the most important cluster anchors.
 - Do not invent norms, cutoffs, variables, or test facts that are not present in the provided data or reference corpus.
 
 ## Cn Calculation Boundaries

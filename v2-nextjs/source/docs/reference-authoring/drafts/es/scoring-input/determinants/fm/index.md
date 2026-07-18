@@ -32,6 +32,10 @@ provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/dete
 `FM` se usa cuando la respuesta implica actividad animal adecuada a la especie identificada.
 La acción puede ser activa o pasiva, pero debe seguir siendo movimiento propio de animal.
 
+## Regla del código de entrada
+
+`FM` es la etiqueta de familia utilizada en los totales del Sumario Estructural. En una respuesta individual se registra `FMa`, `FMp` o `FMa-p`, según la cualidad activa o pasiva del movimiento. `FM` sin sufijo no es un código completo para una respuesta individual.
+
 ## Condiciones de aplicación
 
 - La respuesta incluye un animal en movimiento o actividad.

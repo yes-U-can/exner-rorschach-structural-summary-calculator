@@ -31,6 +31,10 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 `m` is used when the response implies movement of an inanimate object or passive movement not coded as human or animal movement.
 It reflects mechanical, driven, or object-based movement.
 
+## Input Code Rule
+
+`m` is the family label used in Structural Summary totals. For an individual response, enter `ma`, `mp`, or `ma-p` according to its active/passive quality. Bare `m` is not a complete response code.
+
 ## Application Conditions
 
 - The perceived action is movement.

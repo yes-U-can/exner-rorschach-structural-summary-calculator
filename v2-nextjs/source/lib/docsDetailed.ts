@@ -43,6 +43,7 @@ function sectionForResult(slug: string[]): string {
 const DETERMINANT_DETAILS_EN: Record<string, string> = {
   M: [
     'Definition: Human movement determinant; perceived movement of a human or human-like figure.',
+    'Input code rule: M is a Structural Summary family label. For an individual response, use Ma, Mp, or Ma-p; never bare M.',
     'Assign when: The response includes intentional human action (thinking, reaching, dancing, looking).',
     'Do not assign when: Motion is only animal-like (use FM) or inanimate force (use m).',
     'Boundary: M vs FM/m is based on movement class, not response quality.',
@@ -50,13 +51,15 @@ const DETERMINANT_DETAILS_EN: Record<string, string> = {
   ].join('\n'),
   FM: [
     'Definition: Animal movement determinant; movement typical of an animal species.',
+    'Input code rule: FM is a Structural Summary family label. For an individual response, use FMa, FMp, or FMa-p; never bare FM.',
     'Assign when: The action is animal-consistent (flying, crawling, biting, running as animal).',
     'Do not assign when: Movement is human-intentional (M) or mechanical/natural force (m).',
     'Boundary: FM codes movement class, not emotional valence.',
-    'Caution: If both active and passive tones are explicit, consider FMa/FM p variants in interpretation context.',
+    'Caution: If both active and passive tones are explicit, use FMa-p after confirming both qualities.',
   ].join('\n'),
   m: [
     'Definition: Inanimate movement determinant; movement of objects, forces, or non-living phenomena.',
+    'Input code rule: m is a Structural Summary family label. For an individual response, use ma, mp, or ma-p; never bare m.',
     'Assign when: Motion is attributed to pressure, pull, falling, exploding, drifting, etc.',
     'Do not assign when: Clear human agency (M) or animal movement (FM) is primary.',
     'Boundary: m captures perceived external force/pressure quality.',
@@ -1105,9 +1108,9 @@ const GPHR_DETAILS_JA: Record<string, string> = {
 };
 
 const DETERMINANT_DETAILS_ES: Record<string, string> = {
-  M: ['Definition: Movimiento humano (M).', 'Assign when: La accion percibida es intencionalmente humana.', 'Do not assign when: Predomina movimiento animal (FM) o inanimado (m).', 'Boundary: M/FM/m se distingue por clase de movimiento.', 'Caution: Anclar en lenguaje explicito de respuesta/inquiry.'].join('\n'),
-  FM: ['Definition: Movimiento animal (FM).', 'Assign when: El movimiento corresponde a conducta tipica de animal.', 'Do not assign when: La agencia principal es humana (M) o inanimada (m).', 'Boundary: FM codifica clase de movimiento, no valencia afectiva.', 'Caution: Verificar sujeto de la accion, no solo verbo de movimiento.'].join('\n'),
-  m: ['Definition: Movimiento inanimado (m).', 'Assign when: El movimiento se atribuye a objeto/fuerza/fenomeno no vivo.', 'Do not assign when: Predomina agencia humana (M) o animal (FM).', 'Boundary: m refleja cualidad de presion/fuerza externa.', 'Caution: Exigir percepcion de movimiento explicitada.'].join('\n'),
+  M: ['Definition: Movimiento humano (M).', 'Input code rule: M es una etiqueta de familia del Sumario Estructural. En una respuesta individual se usa Ma, Mp o Ma-p; nunca M sin sufijo.', 'Assign when: La accion percibida es intencionalmente humana.', 'Do not assign when: Predomina movimiento animal (FM) o inanimado (m).', 'Boundary: M/FM/m se distingue por clase de movimiento.', 'Caution: Anclar en lenguaje explicito de respuesta/inquiry.'].join('\n'),
+  FM: ['Definition: Movimiento animal (FM).', 'Input code rule: FM es una etiqueta de familia del Sumario Estructural. En una respuesta individual se usa FMa, FMp o FMa-p; nunca FM sin sufijo.', 'Assign when: El movimiento corresponde a conducta tipica de animal.', 'Do not assign when: La agencia principal es humana (M) o inanimada (m).', 'Boundary: FM codifica clase de movimiento, no valencia afectiva.', 'Caution: Verificar sujeto de la accion, no solo verbo de movimiento.'].join('\n'),
+  m: ['Definition: Movimiento inanimado (m).', 'Input code rule: m es una etiqueta de familia del Sumario Estructural. En una respuesta individual se usa ma, mp o ma-p; nunca m sin sufijo.', 'Assign when: El movimiento se atribuye a objeto/fuerza/fenomeno no vivo.', 'Do not assign when: Predomina agencia humana (M) o animal (FM).', 'Boundary: m refleja cualidad de presion/fuerza externa.', 'Caution: Exigir percepcion de movimiento explicitada.'].join('\n'),
   FC: ['Definition: Forma-Color (FC).', 'Assign when: La forma organiza y el color cromatico modula secundariamente.', 'Do not assign when: El color es primario (CF/C).', 'Boundary: FC suele implicar mayor modulacion que CF/C.', 'Caution: Determine prioridad por inquiry, no por preferencia del evaluador.'].join('\n'),
   CF: ['Definition: Color-Forma (CF).', 'Assign when: El color cromatico es primario y la forma secundaria.', 'Do not assign when: La forma es primaria (FC) o esta ausente (C).', 'Boundary: CF es intermedio entre FC y C en control formal.', 'Caution: No codificar CF por mera mencion de color.'].join('\n'),
   C: ['Definition: Color cromatico puro (C).', 'Assign when: La respuesta se sostiene en color sin base formal utilizable.', 'Do not assign when: Existe organizacion formal significativa (FC/CF).', "App rule: Determinantes puros no formales fuerzan FQ 'none'.", 'Caution: Diferencie adjetivo de color de percepto por color.'].join('\n'),
@@ -1122,9 +1125,9 @@ const DETERMINANT_DETAILS_ES: Record<string, string> = {
 };
 
 const DETERMINANT_DETAILS_PT: Record<string, string> = {
-  M: ['Definition: Movimento humano (M).', 'Assign when: A acao percebida e intencionalmente humana.', 'Do not assign when: Predomina movimento animal (FM) ou inanimado (m).', 'Boundary: M/FM/m se distingue por classe de movimento.', 'Caution: Ancorar em linguagem explicita de resposta/inquerito.'].join('\n'),
-  FM: ['Definition: Movimento animal (FM).', 'Assign when: O movimento corresponde a conduta tipica de animal.', 'Do not assign when: A agencia principal e humana (M) ou inanimada (m).', 'Boundary: FM codifica classe de movimento, nao valencia afetiva.', 'Caution: Verificar sujeito da acao, nao apenas verbo.'].join('\n'),
-  m: ['Definition: Movimento inanimado (m).', 'Assign when: O movimento e atribuido a objeto/forca/fenomeno nao vivo.', 'Do not assign when: Predomina agencia humana (M) ou animal (FM).', 'Boundary: m reflete qualidade de pressao/forca externa.', 'Caution: Exigir percepcao de movimento explicitada.'].join('\n'),
+  M: ['Definition: Movimento humano (M).', 'Input code rule: M e um rotulo de familia do Sumario Estrutural. Em uma resposta individual, use Ma, Mp ou Ma-p; nunca M sem sufixo.', 'Assign when: A acao percebida e intencionalmente humana.', 'Do not assign when: Predomina movimento animal (FM) ou inanimado (m).', 'Boundary: M/FM/m se distingue por classe de movimento.', 'Caution: Ancorar em linguagem explicita de resposta/inquerito.'].join('\n'),
+  FM: ['Definition: Movimento animal (FM).', 'Input code rule: FM e um rotulo de familia do Sumario Estrutural. Em uma resposta individual, use FMa, FMp ou FMa-p; nunca FM sem sufixo.', 'Assign when: O movimento corresponde a conduta tipica de animal.', 'Do not assign when: A agencia principal e humana (M) ou inanimada (m).', 'Boundary: FM codifica classe de movimento, nao valencia afetiva.', 'Caution: Verificar sujeito da acao, nao apenas verbo.'].join('\n'),
+  m: ['Definition: Movimento inanimado (m).', 'Input code rule: m e um rotulo de familia do Sumario Estrutural. Em uma resposta individual, use ma, mp ou ma-p; nunca m sem sufixo.', 'Assign when: O movimento e atribuido a objeto/forca/fenomeno nao vivo.', 'Do not assign when: Predomina agencia humana (M) ou animal (FM).', 'Boundary: m reflete qualidade de pressao/forca externa.', 'Caution: Exigir percepcao de movimento explicitada.'].join('\n'),
   FC: ['Definition: Forma-Cor (FC).', 'Assign when: A forma organiza e a cor cromatica modula secundariamente.', 'Do not assign when: A cor e primaria (CF/C).', 'Boundary: FC tende a indicar maior modulacao que CF/C.', 'Caution: Definir prioridade via inquerito, nao por preferencia do avaliador.'].join('\n'),
   CF: ['Definition: Cor-Forma (CF).', 'Assign when: A cor cromatica e primaria e a forma secundaria.', 'Do not assign when: A forma e primaria (FC) ou ausente (C).', 'Boundary: CF e intermediario entre FC e C em controle formal.', 'Caution: Nao codificar CF por mera mencao de cor.'].join('\n'),
   C: ['Definition: Cor cromatica pura (C).', 'Assign when: A resposta se sustenta na cor sem base formal utilizavel.', 'Do not assign when: Existe organizacao formal significativa (FC/CF).', "App rule: Determinantes puros nao formais forcam FQ 'none'.", 'Caution: Diferenciar adjetivo de cor de percepto baseado em cor.'].join('\n'),
@@ -1139,9 +1142,9 @@ const DETERMINANT_DETAILS_PT: Record<string, string> = {
 };
 
 const DETERMINANT_DETAILS_JA: Record<string, string> = {
-  M: ['Definition: 人間運動決定因(M)です。', 'Assign when: 意図性をもつ人間的行為が知覚される場合に付与します。', 'Do not assign when: 動物運動(FM)または無生物運動(m)が主である場合。', 'Boundary: M/FM/mの区別は運動クラスで行います。', 'Caution: 反応・質問段階の逐語運動表現を根拠にします。'].join('\n'),
-  FM: ['Definition: 動物運動決定因(FM)です。', 'Assign when: 動物種に典型的な運動が知覚される場合に付与します。', 'Do not assign when: 人間意図運動(M)または無生物運動(m)が妥当な場合。', 'Boundary: FMは運動クラス指標で情動価指標ではありません。', 'Caution: 行為主体を明確に同定します。'].join('\n'),
-  m: ['Definition: 無生物運動決定因(m)です。', 'Assign when: 力・圧・落下・漂流など無生物的運動が知覚される場合に付与します。', 'Do not assign when: 人間運動(M)または動物運動(FM)が主である場合。', 'Boundary: mは外的力学感の知覚を反映します。', 'Caution: 暗示ではなく運動知覚の明示を要件とします。'].join('\n'),
+  M: ['Definition: 人間運動決定因(M)です。', 'Input code rule: Mは構造一覧表の集計ラベルです。個々の反応にはMa、Mp、Ma-pのいずれかを用い、添字のないMは入力しません。', 'Assign when: 意図性をもつ人間的行為が知覚される場合に付与します。', 'Do not assign when: 動物運動(FM)または無生物運動(m)が主である場合。', 'Boundary: M/FM/mの区別は運動クラスで行います。', 'Caution: 反応・質問段階の逐語運動表現を根拠にします。'].join('\n'),
+  FM: ['Definition: 動物運動決定因(FM)です。', 'Input code rule: FMは構造一覧表の集計ラベルです。個々の反応にはFMa、FMp、FMa-pのいずれかを用い、添字のないFMは入力しません。', 'Assign when: 動物種に典型的な運動が知覚される場合に付与します。', 'Do not assign when: 人間意図運動(M)または無生物運動(m)が妥当な場合。', 'Boundary: FMは運動クラス指標で情動価指標ではありません。', 'Caution: 行為主体を明確に同定します。'].join('\n'),
+  m: ['Definition: 無生物運動決定因(m)です。', 'Input code rule: mは構造一覧表の集計ラベルです。個々の反応にはma、mp、ma-pのいずれかを用い、添字のないmは入力しません。', 'Assign when: 力・圧・落下・漂流など無生物的運動が知覚される場合に付与します。', 'Do not assign when: 人間運動(M)または動物運動(FM)が主である場合。', 'Boundary: mは外的力学感の知覚を反映します。', 'Caution: 暗示ではなく運動知覚の明示を要件とします。'].join('\n'),
   FC: ['Definition: 形態-色彩(FC)です。', 'Assign when: 形態が主で色彩が副次的に寄与する場合に付与します。', 'Do not assign when: 色彩主導(CF/C)である場合。', 'Boundary: FCはCF/Cより高い統制を示すことが多いです。', 'Caution: 優先判定は質問段階の知覚順序に基づきます。'].join('\n'),
   CF: ['Definition: 色彩-形態(CF)です。', 'Assign when: 色彩が主で形態が副次的に寄与する場合に付与します。', 'Do not assign when: 形態主導(FC)または形態不在(C)である場合。', 'Boundary: CFはFCとCの中間統制水準です。', 'Caution: 色語の出現だけでCFを付与しません。'].join('\n'),
   C: ['Definition: 純色彩決定因(C)です。', 'Assign when: 形態基盤なしで色彩体験が反応を主導する場合に付与します。', 'Do not assign when: 有意な形態組織が存在する場合。', "App rule: 純非形態決定因ではFQは自動的に'none'となります。", 'Caution: 色形容詞と色彩知覚主導を区別します。'].join('\n'),
@@ -1265,9 +1268,9 @@ const GPHR_DETAILS_KO: Record<string, string> = {
 };
 
 const DETERMINANT_DETAILS_KO: Record<string, string> = {
-  M: ['Definition: 인간운동 결정인(M)입니다.', 'Assign when: 의도성을 가진 인간적 행위가 지각될 때 부여합니다.', 'Do not assign when: 동물운동(FM) 또는 무생물운동(m)이 주된 경우.', 'Boundary: M/FM/m 구분은 움직임의 종류로 판단합니다.', 'Caution: 반응 및 탐문에서 명시된 운동 언어를 근거로 코딩합니다.'].join('\n'),
-  FM: ['Definition: 동물운동 결정인(FM)입니다.', 'Assign when: 동물 종 특성에 맞는 움직임이 지각될 때 부여합니다.', 'Do not assign when: 인간 의도운동(M) 또는 무생물운동(m)이 타당한 경우.', 'Boundary: FM은 운동 분류 코드이며 정서가 코드가 아닙니다.', 'Caution: 동작 주체를 명확히 확인합니다.'].join('\n'),
-  m: ['Definition: 무생물운동 결정인(m)입니다.', 'Assign when: 압력·당김·낙하·표류 등 비생물적 움직임이 지각될 때 부여합니다.', 'Do not assign when: 인간운동(M) 또는 동물운동(FM)이 주된 경우.', 'Boundary: m은 외적 힘/압박의 지각 특성을 반영합니다.', 'Caution: 암시가 아닌 실제 운동 지각의 명시가 필요합니다.'].join('\n'),
+  M: ['Definition: 인간운동 결정인(M)입니다.', 'Input code rule: M은 구조요약의 집계 라벨입니다. 개별 반응은 능동형 Ma, 수동형 Mp, 능동-수동형 Ma-p 중 하나로 구분하며, 능동형·수동형 표기가 없는 M은 입력하지 않습니다.', 'Assign when: 의도성을 가진 인간적 행위가 지각될 때 부여합니다.', 'Do not assign when: 동물운동(FM) 또는 무생물운동(m)이 주된 경우.', 'Boundary: M/FM/m 구분은 움직임의 종류로 판단합니다.', 'Caution: 반응 및 탐문에서 명시된 운동 언어를 근거로 코딩합니다.'].join('\n'),
+  FM: ['Definition: 동물운동 결정인(FM)입니다.', 'Input code rule: FM은 구조요약의 집계 라벨입니다. 개별 반응은 능동형 FMa, 수동형 FMp, 능동-수동형 FMa-p 중 하나로 구분하며, 능동형·수동형 표기가 없는 FM은 입력하지 않습니다.', 'Assign when: 동물 종 특성에 맞는 움직임이 지각될 때 부여합니다.', 'Do not assign when: 인간 의도운동(M) 또는 무생물운동(m)이 타당한 경우.', 'Boundary: FM은 운동 분류 코드이며 정서가 코드가 아닙니다.', 'Caution: 동작 주체를 명확히 확인합니다.'].join('\n'),
+  m: ['Definition: 무생물운동 결정인(m)입니다.', 'Input code rule: m은 구조요약의 집계 라벨입니다. 개별 반응은 능동형 ma, 수동형 mp, 능동-수동형 ma-p 중 하나로 구분하며, 능동형·수동형 표기가 없는 m은 입력하지 않습니다.', 'Assign when: 압력·당김·낙하·표류 등 비생물적 움직임이 지각될 때 부여합니다.', 'Do not assign when: 인간운동(M) 또는 동물운동(FM)이 주된 경우.', 'Boundary: m은 외적 힘/압박의 지각 특성을 반영합니다.', 'Caution: 암시가 아닌 실제 운동 지각의 명시가 필요합니다.'].join('\n'),
   FC: ['Definition: 형태-색채(FC)입니다.', 'Assign when: 형태가 주이고 색채가 부차적으로 기여할 때 부여합니다.', 'Do not assign when: 색채가 주도적(CF/C)인 경우.', 'Boundary: FC는 일반적으로 CF/C보다 더 높은 통제를 시사합니다.', 'Caution: 우선순위는 탐문에서의 지각 순서로 판단합니다.'].join('\n'),
   CF: ['Definition: 색채-형태(CF)입니다.', 'Assign when: 색채가 주이고 형태가 부차적으로 기여할 때 부여합니다.', 'Do not assign when: 형태가 주도적(FC) 또는 형태 부재(C)인 경우.', 'Boundary: CF는 FC와 C 사이의 통제 수준입니다.', 'Caution: 색 단어 언급만으로 CF를 부여하지 않습니다.'].join('\n'),
   C: ['Definition: 순수 색채 결정인(C)입니다.', 'Assign when: 형태 근거 없이 색채 경험이 반응을 주도할 때 부여합니다.', 'Do not assign when: 유의미한 형태 조직이 존재할 때.', "App rule: 순수 비형태 결정인에서는 FQ가 자동으로 'none' 처리됩니다.", 'Caution: 색 형용사 언급과 색채 주도 지각을 구분합니다.'].join('\n'),

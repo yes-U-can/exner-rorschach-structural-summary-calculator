@@ -34,6 +34,10 @@ provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/dete
 `m` se usa cuando la respuesta implica movimiento de objetos inorgánicos, inanimados o sin capacidad de sentir.
 La idea central es que algo se mueve sin tratarse de acción humana ni animal.
 
+## Regla del código de entrada
+
+`m` es la etiqueta de familia utilizada en los totales del Sumario Estructural. En una respuesta individual se registra `ma`, `mp` o `ma-p`, según la cualidad activa o pasiva del movimiento. `m` sin sufijo no es un código completo para una respuesta individual.
+
 ## Condiciones de aplicación
 
 - La respuesta describe desplazamiento, elevación, caída, ondulación, giro u otra acción de objeto inanimado.

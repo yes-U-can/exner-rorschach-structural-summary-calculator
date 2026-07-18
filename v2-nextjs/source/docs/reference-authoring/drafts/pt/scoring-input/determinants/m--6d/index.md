@@ -32,6 +32,10 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-determinants-movem
 `m` é usado quando a resposta implica movimento de objeto, força ou evento inanimado.
 O movimento não é humano nem animal, mas mecânico, físico ou impelido por alguma força.
 
+## Regra do código de entrada
+
+`m` é o rótulo de família usado nos totais do Sumário Estrutural. Em uma resposta individual, registre `ma`, `mp` ou `ma-p`, conforme a qualidade ativa ou passiva do movimento. `m` sem sufixo não é um código completo para uma resposta individual.
+
 ## Condições de aplicação
 
 - A atividade percebida deve envolver algo inanimado.

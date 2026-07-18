@@ -31,6 +31,10 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 `FM` is used when the response implies ordinary animal movement.
 It covers movement that fits the expected action pattern of the animal or nonhuman creature.
 
+## Input Code Rule
+
+`FM` is the family label used in Structural Summary totals. For an individual response, enter `FMa`, `FMp`, or `FMa-p` according to its active/passive quality. Bare `FM` is not a complete response code.
+
 ## Application Conditions
 
 - The perceived action is movement.

@@ -1,7 +1,7 @@
 import { Category, InfoCategory, InfoNode } from '@/types';
 
 /**
- * Computing Program for Rorschach Structural Summary v2.2.4
+ * Computing Program for Rorschach Structural Summary v2.2.5
  * Constants and Configuration
  * 
  * Code.gs의 SCORING_CONFIG를 TypeScript로 이전
@@ -77,7 +77,8 @@ export const SCORING_CONFIG = {
    * A. 코드 그룹 (CODES)
    */
   CODES: {
-    // 결정인(Determinants) 그룹
+    // 결정인 집계 그룹입니다. Bare M/FM/m은 구조요약 family 라벨로 유지하며,
+    // 개별 반응 입력 허용 여부는 options.ts의 DETERMINANT_INPUT_CODES가 관리합니다.
     HUMAN_MOVEMENT: ['M', 'Ma', 'Mp', 'Ma-p'],
     ANIMAL_MOVEMENT: ['FM', 'FMa', 'FMp', 'FMa-p'],
     INANIMATE_MOVEMENT: ['m', 'ma', 'mp', 'ma-p'],

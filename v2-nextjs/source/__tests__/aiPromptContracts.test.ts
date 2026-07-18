@@ -48,6 +48,7 @@ describe('AI prompt contracts', () => {
     expect(prompt).toContain('the data alone cannot diagnose, confirm, or determine the condition');
     expect(prompt).toContain('you cannot provide a treatment plan from Rorschach scores alone');
     expect(prompt).toContain('you cannot determine dangerousness, legal risk, or forensic status');
+    expect(prompt).toContain('begin with the response count R');
     expect(prompt).toContain('Never substitute assumed, invented, hypothetical, or user-suggested values');
     expect(prompt).toContain('Do not transplant a norm statement or interpretive conclusion mechanically');
     expect(prompt).toContain("The calculator itself does not require or collect the examinee's age.");
@@ -150,6 +151,9 @@ describe('AI prompt contracts', () => {
     expect(prompt).toContain('Cultural or linguistic familiarity does not replace a coding criterion.');
     expect(prompt).toContain('culture and language are context only');
     expect(prompt).toContain('For severe special scores such as FABCOM2');
+    expect(prompt).toContain('Every movement determinant for an individual response must include');
+    expect(prompt).toContain('Ma, Mp, or Ma-p');
+    expect(prompt).toContain('Never present bare M, FM, or m as a complete response code');
     expect(prompt).toContain('For Popular/P and FQ questions, require the specific percept');
     expect(prompt).toContain('I cannot directly or automatically edit the scoring sheet');
     expect(prompt).toContain('Candidate codes require clinician confirmation.');

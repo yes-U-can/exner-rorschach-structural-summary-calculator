@@ -83,7 +83,7 @@ describe('AI multi-turn eval fixtures', () => {
     expect(fixture).toBeDefined();
     const result = evaluateAiMultiTurnTranscript(fixture!, [
       'Human content alone does not establish M. The response must include action; without it M is not supported, so inquiry should ask what the people were doing.',
-      'For this new row, dancing supplies human movement, so M is well supported. I cannot edit the sheet; the final code must be entered after checking the row.',
+      'For this new row, dancing supplies human movement, so Ma is a strong candidate if the movement is active. M is only the aggregate family label; the complete response code needs an active/passive suffix such as Ma, Mp, or Ma-p. I cannot edit the sheet; the final code must be entered after checking the row.',
     ]);
 
     expect(result).toEqual({ passed: true, issues: [] });

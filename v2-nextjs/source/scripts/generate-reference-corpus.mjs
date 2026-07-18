@@ -108,6 +108,7 @@ const SECTION_LABELS = {
   en: {
     aliases: 'Aliases',
     definition: 'Definition',
+    inputCodeRule: 'Input Code Rule',
     conditions: 'Conditions',
     interpretation: 'Interpretation',
     cautions: 'Cautions',
@@ -118,6 +119,7 @@ const SECTION_LABELS = {
   ko: {
     aliases: '\uBCC4\uCE6D/\uAC80\uC0C9\uC5B4',
     definition: '\uD575\uC2EC \uC815\uC758',
+    inputCodeRule: '\uC785\uB825 \uCF54\uB4DC \uADDC\uCE59',
     conditions: '\uCC44\uC810/\uC801\uC6A9 \uC870\uAC74',
     interpretation: '\uD574\uC11D \uD3EC\uC778\uD2B8',
     cautions: '\uC8FC\uC758\uC0AC\uD56D/\uAC10\uBCC4 \uAE30\uC900',
@@ -128,6 +130,7 @@ const SECTION_LABELS = {
   ja: {
     aliases: '\u5225\u540D\u30FB\u691C\u7D22\u8A9E',
     definition: '\u4E2D\u6838\u7684\u5B9A\u7FA9',
+    inputCodeRule: '\u5165\u529B\u30B3\u30FC\u30C9\u306E\u898F\u5247',
     conditions: '\u63A1\u70B9\u30FB\u9069\u7528\u6761\u4EF6',
     interpretation: '\u89E3\u91C8\u306E\u8981\u70B9',
     cautions: '\u6CE8\u610F\u70B9\u30FB\u9451\u5225',
@@ -138,6 +141,7 @@ const SECTION_LABELS = {
   es: {
     aliases: 'Alias / t\u00E9rminos de b\u00FAsqueda',
     definition: 'Definici\u00F3n central',
+    inputCodeRule: 'Regla del c\u00F3digo de entrada',
     conditions: 'Condiciones de aplicaci\u00F3n',
     interpretation: 'Puntos de interpretaci\u00F3n',
     cautions: 'Precauciones / distinciones',
@@ -148,6 +152,7 @@ const SECTION_LABELS = {
   pt: {
     aliases: 'Aliases / termos de busca',
     definition: 'Defini\u00E7\u00E3o central',
+    inputCodeRule: 'Regra do c\u00F3digo de entrada',
     conditions: 'Condi\u00E7\u00F5es de aplica\u00E7\u00E3o',
     interpretation: 'Pontos de interpreta\u00E7\u00E3o',
     cautions: 'Cuidados / distin\u00E7\u00F5es',
@@ -160,6 +165,7 @@ const SECTION_LABELS = {
 const NORMALIZED_SECTION_HEADINGS = {
   aliases: 'Aliases',
   definition: 'Definition',
+  inputCodeRule: 'Input Code Rule',
   conditions: 'Conditions',
   interpretation: 'Interpretation',
   cautions: 'Cautions',
@@ -185,6 +191,11 @@ const HEADING_LABELS = new Map([
   ['\uD575\uC2EC \uC815\uC758', 'Definition'],
   ['\u6838\u5FC3\u5B9A\u7FA9', 'Definition'],
   ['\u4E2D\u6838\u7684\u5B9A\u7FA9', 'Definition'],
+  ['input code rule', 'Input Code Rule'],
+  ['regla del c\u00F3digo de entrada', 'Input Code Rule'],
+  ['regra do c\u00F3digo de entrada', 'Input Code Rule'],
+  ['\uC785\uB825 \uCF54\uB4DC \uADDC\uCE59', 'Input Code Rule'],
+  ['\u5165\u529B\u30B3\u30FC\u30C9\u306E\u898F\u5247', 'Input Code Rule'],
   ['application conditions', 'Conditions'],
   ['conditions', 'Conditions'],
   ['condiciones de aplicaci\u00F3n', 'Conditions'],
@@ -332,6 +343,8 @@ function inferSectionKind({ normalizedHeading, docKind, sectionIndex }) {
       return 'aliases';
     case 'Definition':
       return 'definition';
+    case 'Input Code Rule':
+      return 'inputCodeRule';
     case 'Conditions':
       return 'conditions';
     case 'Interpretation':
@@ -384,6 +397,7 @@ function buildFallbackSectionMarkdown({ locale, sectionKind, canonicalRoute, san
 
   const fallbackCopyEn = {
     definition: `${sanitizedTitle} is a curated reference entry used by this service for Rorschach scoring and interpretation support.`,
+    inputCodeRule: `Use only a complete response-level code accepted by the scoring input. Keep Structural Summary family labels separate from response-level input codes.`,
     conditions: `Review this item with the service's coding rules and the surrounding response context before finalizing a code.`,
     interpretation: `Interpret this item together with the surrounding Structural Summary context rather than as a stand-alone conclusion.`,
     cautions: `Do not rely on this item in isolation. Check adjacent variables, alternative explanations, and the full response context.`,

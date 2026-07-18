@@ -1,7 +1,7 @@
 {
   "app": {
     "title": "Rorschach Structural Summary Calculator",
-    "version": "v2.2.4",
+    "version": "v2.2.5",
     "provider": "Developed and maintained by MOW"
   },
   "nav": {
@@ -257,6 +257,10 @@
     "validity": {
       "title": "Validity Warning",
       "message": "If the number of responses is less than 14, the profile validity may be low, reducing the reliability of interpretation."
+    },
+    "invalidDeterminants": {
+      "title": "Review Movement Determinants",
+      "message": "Rows {rows} contain {codes}, which are no longer valid codes for an individual response. Re-select each movement determinant with an a, p, or a-p suffix. Calculation is blocked until these rows are corrected."
     },
     "resetComplete": {
       "title": "Reset Complete",

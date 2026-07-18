@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 
 import { calculateStructuralSummary } from '@/lib/calculator';
+import { DETERMINANT_INPUT_CODES } from '@/lib/options';
 import type { RorschachResponse } from '@/types';
 
 const CARDS = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'] as const;
@@ -8,11 +9,7 @@ const LOCATIONS = ['W', 'WS', 'D', 'DS', 'Dd', 'DdS'] as const;
 const DQ = ['+', 'o', 'v/+', 'v'] as const;
 const FQ = ['+', 'o', 'u', '-', 'none'] as const;
 type ZCode = '' | 'ZW' | 'ZA' | 'ZD' | 'ZS';
-const DETERMINANTS = [
-  'Ma', 'Mp', 'Ma-p', 'FMa', 'FMp', 'FMa-p',
-  'ma', 'mp', 'ma-p', 'FC', 'CF', 'C', 'Cn', "FC'", "C'F", "C'",
-  'FT', 'TF', 'T', 'FV', 'VF', 'V', 'FY', 'YF', 'Y', 'Fr', 'rF', 'FD', 'F',
-] as const;
+const DETERMINANTS = DETERMINANT_INPUT_CODES;
 const CONTENTS = [
   'H', '(H)', 'Hd', '(Hd)', 'Hx', 'A', '(A)', 'Ad', '(Ad)', 'An', 'Art',
   'Ay', 'Bl', 'Bt', 'Cg', 'Cl', 'Ex', 'Fd', 'Fi', 'Ge', 'Hh', 'Ls', 'Na',

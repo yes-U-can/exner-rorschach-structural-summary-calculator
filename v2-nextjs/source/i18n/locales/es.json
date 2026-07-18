@@ -1,7 +1,7 @@
 {
   "app": {
     "title": "Calculadora del Sumario Estructural de Rorschach",
-    "version": "v2.2.4",
+    "version": "v2.2.5",
     "provider": "Desarrollado y mantenido por MOW"
   },
   "nav": {
@@ -257,6 +257,10 @@
     "validity": {
       "title": "Advertencia de Validez",
       "message": "Si el número de respuestas es menor que 14, la validez del perfil puede ser baja, reduciendo la confiabilidad de la interpretación."
+    },
+    "invalidDeterminants": {
+      "title": "Revisar los determinantes de movimiento",
+      "message": "Las filas {rows} contienen {codes}, que ya no son códigos válidos para una respuesta individual. Vuelva a seleccionar cada determinante de movimiento con el sufijo a, p o a-p. El cálculo permanecerá bloqueado hasta corregir esas filas."
     },
     "resetComplete": {
       "title": "Reinicio Completo",

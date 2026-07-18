@@ -37,7 +37,7 @@ npm run build
 git diff --check
 ```
 
-AI release gate는 다음 6개 필수 단계를 모두 통과했습니다.
+릴리즈 전 AI 종합 점검은 다음 6개 필수 단계를 모두 통과했습니다.
 
 1. `npm run docs:evaluate-rag:all`
 2. `npm run ai:evaluate-contracts`

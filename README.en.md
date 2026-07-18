@@ -21,7 +21,7 @@ The detailed public release documentation standard is kept at [`v2-nextjs/source
 
 ## Current Archive
 
-- Latest v2 release note: [`v2-nextjs/releases/v2.2.4`](./v2-nextjs/releases/v2.2.4/)
+- Latest v2 release note: [`v2-nextjs/releases/v2.2.5`](./v2-nextjs/releases/v2.2.5/)
 - v2 public source snapshot: [`v2-nextjs/source`](./v2-nextjs/source/)
 - AI answer-quality checks: [`v2-nextjs/source/docs/ai-evals/README.md`](./v2-nextjs/source/docs/ai-evals/README.md)
 - Human review criteria for AI answers: [`v2-nextjs/source/docs/ai-evals/HUMAN_RUBRIC.md`](./v2-nextjs/source/docs/ai-evals/HUMAN_RUBRIC.md)
@@ -42,6 +42,12 @@ The v2.1.x patches improved the optional AI assistants in stages: completing ans
 - **v2.1.10:** corrected remaining Japanese-code recognition, broad-interpretation routing, and clean-database setup problems.
 
 Each release note states what that version completed and points to the later release that addressed any remaining issue.
+
+## v2.2.5
+
+v2.2.5 separates response-level movement input codes from the `M`, `FM`, and `m` family totals shown in the Structural Summary. The scoring table now accepts only complete movement codes such as `Ma`, `Mp`, and `Ma-p`; the family totals and calculations that depend on them remain unchanged.
+
+Existing protocols that already use complete movement codes do not need to be recalculated. If an older browser autosave contains a bare family label, the app preserves the original record, blocks calculation, and identifies the row and code that need clinical review. The release rebuilds all 5,604 OpenAI embeddings and rechecks 365 retrieval queries plus representative GPT-5.5 boundary questions in all five supported languages. The [Korean canonical release note](./v2-nextjs/releases/v2.2.5/) explains the affected conditions and the minimal CDI boundary example.
 
 ## v2.2.4
 

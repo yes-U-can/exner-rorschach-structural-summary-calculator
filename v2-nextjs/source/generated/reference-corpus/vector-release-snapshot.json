@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-07-17T13:38:57.517Z",
+  "generatedAt": "2026-07-18T10:42:51.199Z",
   "providers": [
     "openai"
   ],
   "corpus": {
-    "generatedAt": "2026-07-17T13:33:12.335Z",
-    "fingerprint": "f00d5d6075214bd11c2ca303895b1fae0c250efd513afe43b6d97d66d95e365c",
+    "generatedAt": "2026-07-18T10:25:16.019Z",
+    "fingerprint": "12a314e857b160cffd592b5ed9cc1b99587200f014f800744ddb05334d1ac912",
     "chunkCounts": {
-      "ko": 1175,
-      "en": 1080,
-      "ja": 1080,
-      "es": 1202,
-      "pt": 1052
+      "ko": 1178,
+      "en": 1083,
+      "ja": 1083,
+      "es": 1205,
+      "pt": 1055
     }
   },
   "totals": {
@@ -34,58 +34,58 @@
       "provider": "openai",
       "embeddingModel": "text-embedding-3-large",
       "dimensions": 3072,
-      "totalEmbeddings": 5589,
-      "latestRefreshedAt": "2026-07-17T13:38:24.394Z",
+      "totalEmbeddings": 5604,
+      "latestRefreshedAt": "2026-07-18T10:29:58.704Z",
       "locales": {
         "ko": {
           "locale": "ko",
-          "chunkCount": 1175,
-          "embeddedChunkCount": 1175,
+          "chunkCount": 1178,
+          "embeddedChunkCount": 1178,
           "dimensions": 3072,
           "staleEmbeddingCount": 0,
           "contentHashMismatchCount": 0,
           "ready": true,
-          "latestRefreshedAt": "2026-07-17T13:35:58.661Z"
+          "latestRefreshedAt": "2026-07-18T10:28:08.228Z"
         },
         "en": {
           "locale": "en",
-          "chunkCount": 1080,
-          "embeddedChunkCount": 1080,
+          "chunkCount": 1083,
+          "embeddedChunkCount": 1083,
           "dimensions": 3072,
           "staleEmbeddingCount": 0,
           "contentHashMismatchCount": 0,
           "ready": true,
-          "latestRefreshedAt": "2026-07-17T13:36:38.660Z"
+          "latestRefreshedAt": "2026-07-18T10:28:35.311Z"
         },
         "ja": {
           "locale": "ja",
-          "chunkCount": 1080,
-          "embeddedChunkCount": 1080,
+          "chunkCount": 1083,
+          "embeddedChunkCount": 1083,
           "dimensions": 3072,
           "staleEmbeddingCount": 0,
           "contentHashMismatchCount": 0,
           "ready": true,
-          "latestRefreshedAt": "2026-07-17T13:37:10.342Z"
+          "latestRefreshedAt": "2026-07-18T10:29:01.552Z"
         },
         "es": {
           "locale": "es",
-          "chunkCount": 1202,
-          "embeddedChunkCount": 1202,
+          "chunkCount": 1205,
+          "embeddedChunkCount": 1205,
           "dimensions": 3072,
           "staleEmbeddingCount": 0,
           "contentHashMismatchCount": 0,
           "ready": true,
-          "latestRefreshedAt": "2026-07-17T13:37:45.158Z"
+          "latestRefreshedAt": "2026-07-18T10:29:32.431Z"
         },
         "pt": {
           "locale": "pt",
-          "chunkCount": 1052,
-          "embeddedChunkCount": 1052,
+          "chunkCount": 1055,
+          "embeddedChunkCount": 1055,
           "dimensions": 3072,
           "staleEmbeddingCount": 0,
           "contentHashMismatchCount": 0,
           "ready": true,
-          "latestRefreshedAt": "2026-07-17T13:38:24.394Z"
+          "latestRefreshedAt": "2026-07-18T10:29:58.704Z"
         }
       }
     }

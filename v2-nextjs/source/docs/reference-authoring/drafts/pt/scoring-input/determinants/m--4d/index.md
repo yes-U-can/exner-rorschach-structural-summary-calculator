@@ -34,6 +34,10 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-determinants-movem
 `M` é usado quando a resposta implica atividade humana ou antropomórfica.
 Também vale para animais ou figuras fictícias quando estão agindo de modo genuinamente humano.
 
+## Regra do código de entrada
+
+`M` é o rótulo de família usado nos totais do Sumário Estrutural. Em uma resposta individual, registre `Ma`, `Mp` ou `Ma-p`, conforme a qualidade ativa ou passiva do movimento. `M` sem sufixo não é um código completo para uma resposta individual.
+
 ## Condições de aplicação
 
 - A ação percebida deve ser humana ou claramente antropomórfica.

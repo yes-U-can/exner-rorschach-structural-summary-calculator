@@ -21,6 +21,18 @@ const v2SourceUrl = `${exhibitionRepoUrl}/tree/main/v2-nextjs/source`;
 
 export const v2NextVersions: VersionArchiveEntry[] = [
   {
+    version: 'v2.2.5',
+    title: 'Version 2.2.5',
+    series: 'v2-nextjs',
+    publishedAt: '2026-07-19',
+    releaseKind: 'bugfix',
+    releaseLabel: '버그 패치',
+    summary:
+      '개별 반응에 필요한 능동형·수동형 구분 없이 M, FM, m을 입력할 수 있었던 문제를 수정하고, 과거 자동저장 자료의 무효 부호를 원본 보존 방식으로 차단했습니다. 구조요약의 M, FM, m 합계와 관련 계산은 그대로 유지합니다.',
+    sourceUrl: v2SourceUrl,
+    releaseUrl: v2ReleaseUrl('v2.2.5'),
+  },
+  {
     version: 'v2.2.4',
     title: 'Version 2.2.4',
     series: 'v2-nextjs',

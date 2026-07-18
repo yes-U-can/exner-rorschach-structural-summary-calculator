@@ -186,6 +186,32 @@ describe('reference corpus artifacts', () => {
     expect(koreanHeadings).not.toContain('근거 메모');
   });
 
+  it('preserves the response input-code rule for all movement families and locales', () => {
+    const routes = [
+      'scoring-input/determinants/M',
+      'scoring-input/determinants/FM',
+      'scoring-input/determinants/m',
+    ];
+    const expectedHeadings = {
+      ko: { inputCodeRule: '입력 코드 규칙', conditions: '채점/적용 조건' },
+      en: { inputCodeRule: 'Input Code Rule', conditions: 'Conditions' },
+      ja: { inputCodeRule: '入力コードの規則', conditions: '採点・適用条件' },
+      es: { inputCodeRule: 'Regla del código de entrada', conditions: 'Condiciones de aplicación' },
+      pt: { inputCodeRule: 'Regra do código de entrada', conditions: 'Condições de aplicação' },
+    } as const;
+
+    for (const [locale, expected] of Object.entries(expectedHeadings)) {
+      for (const route of routes) {
+        const headings = getReferenceRuntimeChunks(locale as keyof typeof expectedHeadings)
+          .filter((chunk) => chunk.canonicalRoute === route)
+          .map((chunk) => chunk.headingPath.at(-1));
+
+        expect(headings.filter((heading) => heading === expected.inputCodeRule)).toHaveLength(1);
+        expect(headings.filter((heading) => heading === expected.conditions)).toHaveLength(1);
+      }
+    }
+  });
+
   it('aligns reference document rendering with the active runtime source per locale', () => {
     const route = findDocRouteByCanonicalRoute('scoring-input/dq/+');
     expect(route).toBeDefined();

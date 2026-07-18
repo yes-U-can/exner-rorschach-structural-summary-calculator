@@ -239,7 +239,7 @@
     {
       "id": "ja-interpretation-processing-zf",
       "bucket": "interpretation",
-      "query": "processing section Zf interpretation ??????",
+      "query": "processing section の Zf はどのように解釈しますか。",
       "expectedTopRoute": "result-interpretation/lower-section/processing/Zf_proc"
     },
     {
@@ -299,7 +299,7 @@
     {
       "id": "ja-graph-dqplus-processing",
       "bucket": "graph-navigation",
-      "query": "DQ+ coding page ?????? interpretation page ???????",
+      "query": "DQ+ の coding page と interpretation page を確認したいです。",
       "expectedTopRoute": "scoring-input/dq/+",
       "expectedIncludedRoutes": [
         "result-interpretation/lower-section/processing/DQ_plus_proc"
@@ -308,7 +308,7 @@
     {
       "id": "ja-graph-fm-link",
       "bucket": "graph-navigation",
-      "query": "FM coding page ?? core FM interpretation page ? m page ??????",
+      "query": "FM の coding page、core の FM interpretation page、m の page をまとめて確認したいです。",
       "expectedTopRoute": "scoring-input/determinants/FM",
       "expectedIncludedRoutes": [
         "result-interpretation/lower-section/core/FM",
@@ -327,7 +327,7 @@
     {
       "id": "ja-graph-mor-link",
       "bucket": "graph-navigation",
-      "query": "MOR coding page ?? ideation MOR interpretation page ? self-perception MOR_self page ??????",
+      "query": "MOR の coding page、ideation の MOR interpretation page、self-perception の MOR_self page をまとめて確認したいです。",
       "expectedTopRoute": "scoring-input/special-score/MOR",
       "expectedIncludedRoutes": [
         "result-interpretation/lower-section/ideation/MOR",
