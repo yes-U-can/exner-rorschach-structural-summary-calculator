@@ -274,6 +274,41 @@ function Assert-NoPublicGitMetadata {
   }
 }
 
+function Assert-NoPublicEditorialLeak {
+  param(
+    [Parameter(Mandatory = $true)]
+    [string]$Root
+  )
+
+  $patterns = @(
+    '\ube44\uac1c\ubc1c\uc790(?:\s*\ub3c5\uc790)?',
+    '\uc608\uc0c1\s*\ub3c5\uc790',
+    '\ub3c5\uc790\uac00\s*\uba3c\uc800\s*\uc54c\uc544\uc57c\s*\ud560',
+    '\uc784\uc0c1\uc2ec\ub9ac\uc0ac\uac00\s*\uba3c\uc800\s*\uc774\ud574',
+    '\uc784\uc0c1\uac00\uac00\s*\uba3c\uc800\s*\uc54c\uc544\uc57c\s*\ud560',
+    '\bWho These Documents Are For\b',
+    '\bnon-developer(?:s)?\b',
+    '\bprimary readers?\b',
+    '\btarget reader\b',
+    '\bintended readers?\b',
+    '\bclinician-first\b',
+    '\breader-first\b'
+  )
+
+  $leaks = @()
+  foreach ($file in Get-ChildItem -LiteralPath $Root -File -Filter '*.md' -Recurse -ErrorAction SilentlyContinue) {
+    foreach ($pattern in $patterns) {
+      foreach ($match in Select-String -LiteralPath $file.FullName -Pattern $pattern -CaseSensitive:$false) {
+        $leaks += "$($file.FullName):$($match.LineNumber): $($match.Line.Trim())"
+      }
+    }
+  }
+
+  if ($leaks.Count -gt 0) {
+    throw "Internal audience or editorial labels remain in public Markdown:`n$($leaks -join "`n")"
+  }
+}
+
 $excludeDirs = @(
   ".git",
   ".next",
@@ -435,6 +470,7 @@ Remove-PublicMirrorPrivateArtifacts -Root $targetRoot -WhatIf:$DryRun
 Remove-PublicEvalPrivateMetadata -Root $targetRoot -WhatIf:$DryRun
 if (-not $DryRun) {
   Assert-NoPublicGitMetadata -Root $targetRoot
+  Assert-NoPublicEditorialLeak -Root $resolvedPublishRoot
 }
 
 if ($DryRun) {

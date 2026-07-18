@@ -6,21 +6,22 @@ This repository publishes curated release notes and source snapshots for the pro
 
 MOW plans, builds, deploys, operates, and maintains the web app. The Seoul Institute of Clinical Psychology (SICP) reviews the initial transfer of calculation logic, compares calculated results, and provides clinical review from real-use experience.
 
-## Who These Documents Are For
+Credits and the initial learning references are collected in [ACKNOWLEDGEMENTS.md](./ACKNOWLEDGEMENTS.md).
 
-The human-readable documents in this archive are written first for clinical psychologists, including readers who do not write software. A calculation change should explain the affected condition, whether an existing result needs to be recalculated, and the evidence used to verify the correction before presenting engineering details.
+## Documentation And Languages
+
+Release notes record which conditions are affected, whether existing results need to be recalculated, and the evidence used to verify each correction. Reproducible commands and source-level details remain available in technical reports and appendices.
 
 - Korean is the official language for release notes and CHANGELOG entries.
 - This English overview exists so global GitHub visitors can quickly understand the repository.
 - The deployed web app supports five user-facing languages: Korean, English, Japanese, Spanish, and Portuguese.
 - Release notes are not duplicated into all five languages by default, because separately maintained translations can diverge over time.
 - Command names, file paths, API names, and model IDs retain their exact identifiers, with a plain-language explanation when first introduced.
-- Developer evidence under `v2-nextjs/source/` may retain exact commands and identifiers, but its human-readable introduction should still explain the purpose in ordinary language.
-
-The detailed public release documentation standard is kept at [`v2-nextjs/source/docs/ops/PUBLIC_RELEASE_DOCUMENTATION.md`](./v2-nextjs/source/docs/ops/PUBLIC_RELEASE_DOCUMENTATION.md).
+- Developer evidence under `v2-nextjs/source/` retains exact commands and identifiers while introducing its purpose in ordinary language.
 
 ## Current Archive
 
+- Live web app: [exner.yesucan.co.kr](https://exner.yesucan.co.kr)
 - Latest v2 release note: [`v2-nextjs/releases/v2.2.5`](./v2-nextjs/releases/v2.2.5/)
 - v2 public source snapshot: [`v2-nextjs/source`](./v2-nextjs/source/)
 - AI answer-quality checks: [`v2-nextjs/source/docs/ai-evals/README.md`](./v2-nextjs/source/docs/ai-evals/README.md)
@@ -47,7 +48,7 @@ Each release note states what that version completed and points to the later rel
 
 v2.2.5 separates response-level movement input codes from the `M`, `FM`, and `m` family totals shown in the Structural Summary. The scoring table now accepts only complete movement codes such as `Ma`, `Mp`, and `Ma-p`; the family totals and calculations that depend on them remain unchanged.
 
-Existing protocols that already use complete movement codes do not need to be recalculated. If an older browser autosave contains a bare family label, the app preserves the original record, blocks calculation, and identifies the row and code that need clinical review. The release rebuilds all 5,604 OpenAI embeddings and rechecks 365 retrieval queries plus representative GPT-5.5 boundary questions in all five supported languages. The [Korean canonical release note](./v2-nextjs/releases/v2.2.5/) explains the affected conditions and the minimal CDI boundary example.
+Existing protocols that already use complete movement codes do not need to be recalculated. If an older browser autosave contains a bare family label, the app preserves the original record, blocks calculation, and identifies the row and code that need clinical review. The release rebuilds all 5,604 OpenAI embeddings and rechecks 365 retrieval queries plus representative GPT-5.5 boundary questions in all five supported languages. The [Korean canonical release note](./v2-nextjs/releases/v2.2.5/) explains the affected conditions and a hypothetical CDI boundary example.
 
 ## v2.2.4
 
@@ -55,11 +56,11 @@ v2.2.4 does not change Structural Summary formulas or scoring-table input behavi
 
 The release rebuilds 1,015 reference documents and 5,589 current vector-search chunks, with zero missing, stale, or content-hash-mismatched vectors. It also strengthens the assistants' exact Exner CS scope, prompt-injection refusal, and per-session request limits. The final GPT-5.5 checks passed 66 of 66 single-turn and multi-turn coding and interpretation scenarios across all five languages. The [Korean canonical release note](./v2-nextjs/releases/v2.2.4/) contains the detailed evidence and limitations.
 
-A follow-up restores the start-choice dialog whenever the scoring workspace is entered, gives code-styled key phrases a higher-contrast red treatment in both light and dark themes, and keeps the coding assistant's jump-to-latest button immediately above its composer instead of in the middle of a long response.
+A follow-up also refined the scoring start-choice dialog, reference-document readability, and the coding assistant's scroll control.
 
 ## v2.2.3
 
-v2.2.3 does not change Structural Summary formulas or the visible interface layout, so existing results do not need to be recalculated. It rewrites the public documentation with clinical psychologists as the primary readers, adds consistent five-language search and link-preview metadata, and limits excessive writes to the optional AI response-feedback database.
+v2.2.3 does not change Structural Summary formulas or the visible interface layout, so existing results do not need to be recalculated. It reorganizes the public documentation around calculation impact and recalculation needs, adds consistent five-language search and link-preview metadata, and limits excessive writes to the optional AI response-feedback database.
 
 The home-page search and sharing title is `Yes, U Can!` in every supported language. Each localized description explains that the open-source Exner Rorschach Comprehensive System Structural Summary calculator requires no registration, installation, or payment and does not replace professional clinical judgment. Feedback still stores no question text, answer text, API key, assessment payload, IP address, or user-agent string. The application now limits body size and per-session write frequency; an outer Vercel Firewall rule remains a deployment requirement for stronger protection against repeated session creation.
 
@@ -80,18 +81,6 @@ The release documents how the 2019 Excel workbook informed the early v1 implemen
 v2.2.2 checks where Cn is included and excluded within the exact **Upper Section, Lower Section, and Special Indices** rendered by this application. The conventional display label `FC:CF+C` uses `FC:(CF+C+Cn)`, while this application's WSumC, S-CON criterion 7, and Color-Shading calculations exclude Cn. **Completed v2.2.1 protocols do not need to be recalculated for this reason because their displayed Cn value was already correct.** The update also prevents an unfinished row with blank Form Quality (FQ) from receiving a temporary GHR or PHR classification.
 
 The 2019 Excel workbook, RorScore, v1 GAS, the current v2 code, CHESSSS, RAP3, and RIAP5 each reveal different parts of the calculation history, so no single program was treated as the sole authority. The release passed 376 calculation and feature checks, 101 AI-answer checks, and 222 deployment-page checks. It also passed 10 direct Cn questions and 5 representative questions using real GPT-5.5 calls across the five supported languages. The only interface change is a fully opaque sidebar; dedicated mobile refinement remains later v2.2.x work.
-
-## v2.1.10
-
-v2.1.10 corrects four problems that remained after v2.1.9, without changing the app UI/UX. It keeps fallback search results consistent with the displayed evidence, preserves Rorschach codes attached to Japanese text, sends broad interpretation questions to the proper reference material, and restores every setup step needed to create a fresh database.
-
-The four reported problems were reproduced in the application before they were corrected. Public evidence contains only summary information about search and request handling; it contains no API key, full prompt, full model answer, private assessment material, or database credential.
-
-## v2.1.9
-
-v2.1.9 improves how the AI assistants search the five-language reference library, without changing the app UI/UX. It combines exact-word and meaning-based search results more reliably, handles short Rorschach codes and multilingual questions more carefully, and reduces unnecessary search queries. Release validation now fails if data from a discontinued AI provider remains. The cleanup removed 6,597 old Google-generated search records while preserving all 6,632 current OpenAI-generated records.
-
-Validation used recorded search results and aggregate metadata. It does not represent clinical validation or vendor certification.
 
 ## Privacy Boundary
 

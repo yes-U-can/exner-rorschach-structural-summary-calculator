@@ -58,7 +58,7 @@ Use this checklist before deploying the BYOK-only RAG build to production.
 
 1. `docs/ops/PUBLIC_RELEASE_DOCUMENTATION.md` is reviewed before writing public-facing release notes.
 2. Public-facing README, CHANGELOG, release notes, and companion summaries follow the language coverage policy.
-3. Human-readable public documents treat non-developer clinical psychologists as the primary readers and explain clinical impact before engineering details.
+3. Human-readable public documents explain clinical impact and recalculation needs before engineering details.
 4. Public prose uses the project team's voice. It does not read like an AI reporting to its owner and does not call the project owner "the user".
 5. The note follows the v1 writing pattern: visible problem, relevant Rorschach concept, triggering condition, correction, and verification.
 6. The public narrative describes released behavior only. It does not recount rejected drafts, changing internal hypotheses, agent roles, worktree state, or approval dialogue.

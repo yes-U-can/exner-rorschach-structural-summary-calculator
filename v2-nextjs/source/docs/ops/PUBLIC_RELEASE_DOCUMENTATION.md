@@ -2,7 +2,7 @@
 
 Status: Active
 Owner: Product + Engineering
-Last Updated: 2026-07-17
+Last Updated: 2026-07-18
 
 ## Purpose
 
@@ -10,7 +10,7 @@ This project keeps a private production repository and a public showcase archive
 
 This standard exists so release notes, README files, version archive entries, and public evidence documents stay consistent across releases.
 
-The primary readers are clinical psychologists who may use the calculator without having software-development knowledge. Public prose must therefore explain the clinical and practical meaning first. Developers and automated readers remain expected secondary readers, so reproducible engineering details should follow after the plain-language explanation instead of being removed.
+Public prose starts with the clinical and practical meaning of a change. Reproducible engineering details follow in a technical section so the same document also supports independent verification.
 
 ## Scope
 
@@ -21,17 +21,17 @@ This standard applies to:
 3. app version archive entries in `lib/versionArchive.ts`
 4. release evidence summaries that are intended for public showcase use
 
-This standard does not require source code or machine-readable artifacts under `v2-nextjs/source/` to be rewritten. Test names, command names, JSON keys, model IDs, and API names may keep their original English form when that preserves technical accuracy. Human-readable README files and public reports under `source/` still follow the reader and voice rules below.
+This standard does not require source code or machine-readable artifacts under `v2-nextjs/source/` to be rewritten. Test names, command names, JSON keys, model IDs, and API names may keep their original English form when that preserves technical accuracy. Human-readable README files and public reports under `source/` still follow the voice and structure rules below.
 
-## Primary Reader And Voice
+## Public Voice And Structure
 
-Every human-readable public document must be understandable to a clinical psychologist who does not write software.
+Every human-readable public document must explain product and calculation changes in clear professional language.
 
 The original v1 GAS patch notes are the project's writing reference. Their strongest pattern is simple: name the visible problem first, explain the relevant Rorschach concept in ordinary language, show when the problem appears, and then explain what was corrected. The v2 notes should preserve that human, first-hand tone while improving consistency and technical precision.
 
 1. Write in the voice of the project or development team. Natural phrases such as "수정했습니다", "확인했습니다", and "다시 계산할 필요는 없습니다" are preferred over detached audit-report language.
 2. Do not write as an AI assistant reporting to its owner, and do not refer to the project owner as "the user".
-3. Begin with what readers need to know: where the problem appeared, what changed, which protocols can be affected, whether recalculation is necessary, and what action readers should take.
+3. Begin with the released change: where the problem appeared, what changed, which protocols can be affected, whether recalculation is necessary, and what action is needed.
 4. Follow the v1 explanatory order: visible symptom or affected card -> relevant scoring concept -> exact triggering condition -> correction -> verification and limitations.
 5. Explain calculation changes with a concrete response or coding example whenever that helps a clinician recognize the affected condition. Make clear that the example is illustrative and that coding remains a clinician's responsibility.
 6. Keep the main explanation in ordinary professional language. Terms such as `uncommitted draft`, `Git history`, `runtime`, `regression test`, `fixture`, `contract`, `guardrail`, `workflow`, `production parity`, and `release gate` belong in a technical appendix unless the term itself is essential.
@@ -39,9 +39,9 @@ The original v1 GAS patch notes are the project's writing reference. Their stron
 8. Verification tools are not the protagonists of a release note. Name an AI model only when the release actually changes or tests that model-facing feature and the fact helps readers understand the result. Never narrate agent-to-agent work allocation, internal approval dialogue, intermediate worktree state, rejected drafts, or changing internal hypotheses.
 9. Describe corrections at release level. Write "v2.2.1 corrected X, and v2.2.2 added Y" instead of recounting who first believed, rejected, or rediscovered a claim during development.
 10. Preserve historical facts, declared release dates, measurements, failures, and limitations. Improve the explanation without silently rewriting released behavior.
-11. Use headings and tables to help readers find the clinical impact first. Detailed commands, file paths, hashes, and reproducibility notes may follow under a clearly labeled technical appendix.
+11. Use headings and tables to put the clinical impact first. Detailed commands, file paths, hashes, and reproducibility notes may follow under a clearly labeled technical appendix.
 
-Reader-facing rewrites should follow these examples:
+Public rewrites should follow these examples:
 
 | Avoid | Prefer |
 | --- | --- |
@@ -53,7 +53,7 @@ Reader-facing rewrites should follow these examples:
 
 ## Language Coverage Policy
 
-The language policy is based on the reader and maintenance cost, not on a single preferred language.
+The language policy balances global access, technical accuracy, and the risk of translation drift.
 
 1. App-facing user experience can be localized into the five supported app languages: Korean, English, Japanese, Spanish, and Portuguese.
 2. Public release notes and CHANGELOG entries use Korean as the canonical record because release decisions and operational review for this project happen in Korean.
@@ -106,7 +106,7 @@ Use this structure for the Korean canonical public v2 Next.js release note. The 
 
 ## 테스트 및 검증
 
-검산에 사용한 근거와 반복 확인 결과를 비개발자도 이해할 수 있는 말로 설명합니다. 명령어와 파일 경로는 필요한 경우 기술 부록에 적습니다.
+검산에 사용한 근거와 반복 확인 결과를 먼저 설명합니다. 명령어와 파일 경로는 필요한 경우 기술 부록에 적습니다.
 
 ## 공개 범위와 보안 경계
 
@@ -117,7 +117,7 @@ Use this structure for the Korean canonical public v2 Next.js release note. The 
 재현에 필요한 명령어, 파일, 수치와 같은 개발 세부 사항을 적습니다.
 ```
 
-Patch notes can add a short extra section when needed, but the reader-first order above is the default.
+Patch notes can add a short extra section when needed, but the order above is the default.
 
 ## Required Content
 
@@ -125,7 +125,7 @@ Every public-facing release record must answer these questions:
 
 1. What changed?
 2. Which completed or incomplete protocols can be affected?
-3. Does a reader need to recalculate an existing result or take any other action?
+3. Do existing results need to be recalculated, or is any other action required?
 4. Why was it worth a release?
 5. Did the app UI/UX, data collection, or privacy behavior change?
 6. What evidence and checks support the conclusion, expressed first in plain language?
@@ -156,7 +156,7 @@ When preparing a release:
 6. Update the English companion overview when the public repo's positioning, latest release, or key evidence links change.
 7. Ensure public-facing release text follows the language coverage policy and stays technically precise.
 8. Ensure public source mirror excludes `.env*`, `.vercel/`, `node_modules/`, runtime logs, local caches, private work notes, API keys, and raw model output.
-9. Read the final public prose as a non-developer clinical psychologist: the impact, affected condition, need for recalculation, and limitations must be clear before technical details appear.
+9. Confirm that the impact, affected condition, need for recalculation, and limitations are clear before technical details appear.
 10. Remove AI-to-owner reporting language and unexplained internal engineering terms from the main narrative.
 
 ## Agent Rule

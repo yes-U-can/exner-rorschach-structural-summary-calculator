@@ -27,6 +27,8 @@ English summary: these records check whether the optional OpenAI assistants foll
 
 ## 주요 보고서와 검사 결과
 
+아래는 대표 보고서와 검사 기록이며, 각 버전의 전체 검사 자료는 이 폴더에서 확인할 수 있습니다.
+
 - [`2026-07-15-v2.2.0-cultural-validity-report.md`](./2026-07-15-v2.2.0-cultural-validity-report.md)
 - [`2026-07-15-v2.2.0-cultural-validity-final-production-parity-2x.jsonl`](./2026-07-15-v2.2.0-cultural-validity-final-production-parity-2x.jsonl)
 - [`2026-07-15-v2.2.0-exner-domain-boundary-report.md`](./2026-07-15-v2.2.0-exner-domain-boundary-report.md)
