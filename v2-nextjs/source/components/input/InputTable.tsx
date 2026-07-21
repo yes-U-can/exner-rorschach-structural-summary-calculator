@@ -223,6 +223,7 @@ export default function InputTable({
     y: 0,
     zoom: SCORING_CANVAS_DEFAULT_ZOOM,
   });
+  const isAltKeyPressedRef = useRef(false);
   const canvasHasInteractedRef = useRef(false);
   const canvasPanRef = useRef<CanvasPanState | null>(null);
   const canvasPanRafRef = useRef<number | null>(null);
@@ -294,8 +295,42 @@ export default function InputTable({
     const viewport = tableScrollRef.current;
     if (!viewport) return;
 
+    const handleAltKeyDown = (event: KeyboardEvent) => {
+      if (
+        event.key === 'Alt' ||
+        event.key === 'AltGraph' ||
+        event.code === 'AltLeft' ||
+        event.code === 'AltRight' ||
+        event.altKey
+      ) {
+        isAltKeyPressedRef.current = true;
+      }
+    };
+
+    const handleAltKeyUp = (event: KeyboardEvent) => {
+      if (
+        event.key === 'Alt' ||
+        event.key === 'AltGraph' ||
+        event.code === 'AltLeft' ||
+        event.code === 'AltRight' ||
+        !event.altKey
+      ) {
+        isAltKeyPressedRef.current = false;
+      }
+    };
+
+    const clearAltKeyState = () => {
+      isAltKeyPressedRef.current = false;
+    };
+
     const handleCanvasWheel = (event: WheelEvent) => {
-      if (event.ctrlKey || event.metaKey) return;
+      const isZoomGesture = shouldHandleScoringZoomGesture(
+        event,
+        isAltKeyPressedRef.current ||
+          event.getModifierState('Alt') ||
+          event.getModifierState('AltGraph')
+      );
+      if ((event.ctrlKey || event.metaKey) && !isZoomGesture) return;
 
       const stage = tableStageRef.current;
       if (!stage) return;
@@ -304,7 +339,7 @@ export default function InputTable({
       event.stopPropagation();
       canvasHasInteractedRef.current = true;
 
-      if (shouldHandleScoringZoomGesture(event)) {
+      if (isZoomGesture) {
         const nextZoom = getNextScoringZoom(
           canvasTransformRef.current.zoom,
           event.deltaY,
@@ -347,8 +382,14 @@ export default function InputTable({
       applyScoringCanvasTransform(stage, viewport, nextTransform, 'smooth');
     };
 
+    window.addEventListener('keydown', handleAltKeyDown);
+    window.addEventListener('keyup', handleAltKeyUp);
+    window.addEventListener('blur', clearAltKeyState);
     viewport.addEventListener('wheel', handleCanvasWheel, { passive: false });
     return () => {
+      window.removeEventListener('keydown', handleAltKeyDown);
+      window.removeEventListener('keyup', handleAltKeyUp);
+      window.removeEventListener('blur', clearAltKeyState);
       viewport.removeEventListener('wheel', handleCanvasWheel);
     };
   }, []);

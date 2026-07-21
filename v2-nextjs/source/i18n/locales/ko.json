@@ -1,7 +1,7 @@
 {
   "app": {
     "title": "Exner 로샤 종합체계 구조요약 계산기",
-    "version": "v2.2.5",
+    "version": "v2.2.6",
     "provider": "MOW 제작·유지보수"
   },
   "nav": {
@@ -80,7 +80,7 @@
     "tooltipInfo": "맨 아래 행만 조작할 수 있으며,\n최대 50행까지 입력할 수 있습니다.",
     "rowOrderTip": "반응 행의 순서는 결과 계산에 영향을 미치지 않습니다. 예를 들어, 8번째 행에 6번 카드 내용을 14번째 행에 2번 카드 내용을 기록해도 문제 없습니다.",
     "scoreTooltip": "[Card]와 [Z] 선택에 따라 자동 계산됩니다.",
-    "gphrTooltip": "Contents, Determinants, FQ, Special Score를 바탕으로 자동 분류됩니다.",
+    "gphrTooltip": "[Contents], [Determinants], [FQ], [Special Score]를 바탕으로 자동 분류됩니다.",
     "responseNumber": "반응 #{index}",
     "responseMemo": "반응 메모",
     "pairDisabledTooltip": "Reflection (Fr/rF)은 이미 대칭성을 포함하므로 Pair (2)와 동시 기록할 수 없습니다.",

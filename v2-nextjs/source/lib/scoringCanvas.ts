@@ -68,8 +68,11 @@ function getBoundedCanvasOffset(
   return Math.min(maximumOffset, Math.max(minimumOffset, offset));
 }
 
-export function shouldHandleScoringZoomGesture(modifiers: ScoringZoomModifiers) {
-  return modifiers.altKey && !modifiers.ctrlKey && !modifiers.metaKey;
+export function shouldHandleScoringZoomGesture(
+  modifiers: ScoringZoomModifiers,
+  isAltKeyPressed = false
+) {
+  return (modifiers.altKey || isAltKeyPressed) && !modifiers.metaKey;
 }
 
 export function getNextScoringZoom(currentZoom: number, deltaY: number, deltaMode = 0) {

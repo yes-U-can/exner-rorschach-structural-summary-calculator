@@ -1,8 +1,10 @@
 # v2 Next.js
 
+[한국어](./README.md) | [English](./README.en.md) | [日本語](./README.ja.md) | [Español](./README.es.md) | [Português (Brasil)](./README.pt-BR.md)
+
 이 폴더에는 로샤 구조요약 계산기 v2의 릴리즈 기록과 공개 가능한 소스코드가 있습니다. 최신 변경 내용은 패치노트에서, 검산과 구현 자료는 공개 소스에서 확인할 수 있습니다.
 
-- 최신 패치노트: [releases/v2.2.5](./releases/v2.2.5/)
+- 최신 패치노트: [releases/v2.2.6](./releases/v2.2.6/)
 - 계산 정확성 재감사: [source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md](./source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md)
 - 최초 v2 릴리즈 패치노트: [releases/v2.0.0](./releases/v2.0.0/)
 - 공개 소스코드: [source](./source/)

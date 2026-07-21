@@ -1,7 +1,7 @@
 {
   "app": {
     "title": "ロールシャッハ構造一覧表計算ツール",
-    "version": "v2.2.5",
+    "version": "v2.2.6",
     "provider": "MOWが制作・保守"
   },
   "nav": {
@@ -80,7 +80,7 @@
     "tooltipInfo": "一番下の行のみ操作でき、\n最大50行まで入力できます。",
     "rowOrderTip": "反応行の順序は結果計算に影響しません。例えば8行目に6番カードの内容を記録し、14行目に2番カードの内容を記録しても問題ありません。",
     "scoreTooltip": "[Card]と[Z]の選択に基づいて自動計算されます。",
-    "gphrTooltip": "Contents, Determinants, FQ, Special Score をもとに自動分類されます。",
+    "gphrTooltip": "[Contents]、[Determinants]、[FQ]、[Special Score]をもとに自動分類されます。",
     "responseNumber": "反応 #{index}",
     "responseMemo": "反応メモ",
     "pairDisabledTooltip": "Reflection (Fr/rF)はすでに対称性を含むため、Pair (2)と同時に記録できません。",

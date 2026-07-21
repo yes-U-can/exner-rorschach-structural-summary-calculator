@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import VersionArchiveList from '@/components/versions/VersionArchiveList';
+import { resolveLanguage } from '@/i18n/config';
 import { v1GasVersions, v2NextVersions } from '@/lib/versionArchive';
 import { buildLocalizedPageMetadata, getSeoCopy } from '@/lib/seo';
 import type { Language } from '@/types';
@@ -17,7 +18,7 @@ const TITLES: Record<Language, string> = {
 };
 
 function normalizeLang(lang?: string): Language {
-  return lang === 'ko' || lang === 'ja' || lang === 'es' || lang === 'pt' ? lang : 'en';
+  return resolveLanguage(lang);
 }
 
 export async function generateMetadata({ searchParams }: VersionsPageProps): Promise<Metadata> {

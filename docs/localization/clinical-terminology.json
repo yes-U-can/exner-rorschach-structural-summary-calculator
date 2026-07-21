@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "version": "2026-07-21.1",
+  "reviewStatus": "reviewed",
+  "evidenceRegister": "docs/localization/TERMINOLOGY_SOURCES.md",
+  "localePolicy": {
+    "ko": "Korean clinical usage",
+    "en": "Professional English",
+    "ja": "Professional Japanese",
+    "es": "Neutral professional Spanish",
+    "pt-BR": "Professional Brazilian Portuguese"
+  },
+  "protectedIdentifiers": [
+    "M",
+    "FM",
+    "m",
+    "Ma",
+    "Mp",
+    "Ma-p",
+    "FMa",
+    "FMp",
+    "FMa-p",
+    "ma",
+    "mp",
+    "ma-p",
+    "EB",
+    "MQual",
+    "W:M",
+    "a:p",
+    "Ma:Mp",
+    "CDI",
+    "GPT-5.5",
+    "BYOK"
+  ],
+  "terms": [
+    {
+      "id": "project-name",
+      "ko": "Exner 로샤 종합체계 구조요약 계산기",
+      "en": "Exner Rorschach Comprehensive System Structural Summary Calculator",
+      "ja": "エクスナー・ロールシャッハ包括システム構造一覧表計算機",
+      "es": "Calculadora del Sumario Estructural del Sistema Comprehensivo de Rorschach de Exner",
+      "pt-BR": "Calculadora do Sumário Estrutural do Sistema Compreensivo de Rorschach de Exner"
+    },
+    {
+      "id": "comprehensive-system",
+      "ko": "종합체계",
+      "en": "Comprehensive System",
+      "ja": "包括システム",
+      "es": "Sistema Comprehensivo",
+      "pt-BR": "Sistema Compreensivo"
+    },
+    {
+      "id": "structural-summary",
+      "ko": "구조요약",
+      "en": "Structural Summary",
+      "ja": "構造一覧表",
+      "es": "Sumario Estructural",
+      "pt-BR": "Sumário Estrutural"
+    },
+    {
+      "id": "determinant",
+      "ko": "결정인",
+      "en": "determinant",
+      "ja": "決定因",
+      "es": "determinante",
+      "pt-BR": "determinante"
+    },
+    {
+      "id": "human-movement",
+      "ko": "사람운동",
+      "en": "human movement",
+      "ja": "人間運動",
+      "es": "movimiento humano",
+      "pt-BR": "movimento humano"
+    },
+    {
+      "id": "animal-movement",
+      "ko": "동물운동",
+      "en": "animal movement",
+      "ja": "動物運動",
+      "es": "movimiento animal",
+      "pt-BR": "movimento animal"
+    },
+    {
+      "id": "inanimate-movement",
+      "ko": "무생물운동",
+      "en": "inanimate movement",
+      "ja": "無生物運動",
+      "es": "movimiento inanimado",
+      "pt-BR": "movimento inanimado"
+    },
+    {
+      "id": "active-passive-quality",
+      "ko": "능동형·수동형",
+      "en": "active/passive quality",
+      "ja": "運動の活動性（能動・受動）",
+      "es": "superíndice activo o pasivo",
+      "pt-BR": "classificação como ativo ou passivo"
+    },
+    {
+      "id": "inquiry",
+      "ko": "질문단계(Inquiry)",
+      "en": "Inquiry",
+      "ja": "質問段階",
+      "es": "encuesta",
+      "pt-BR": "inquérito"
+    },
+    {
+      "id": "coding",
+      "ko": "부호화",
+      "en": "coding",
+      "ja": "符号化",
+      "es": "codificación",
+      "pt-BR": "codificação"
+    },
+    {
+      "id": "response-record",
+      "ko": "반응기록",
+      "en": "response record",
+      "ja": "反応記録",
+      "es": "registro de respuestas",
+      "pt-BR": "registro de respostas"
+    },
+    {
+      "id": "recalculation",
+      "ko": "다시 계산",
+      "en": "recalculate",
+      "ja": "再計算",
+      "es": "volver a calcular",
+      "pt-BR": "recalcular"
+    },
+    {
+      "id": "clinical-judgment",
+      "ko": "임상 판단",
+      "en": "clinical judgment",
+      "ja": "臨床判断",
+      "es": "juicio clínico",
+      "pt-BR": "julgamento clínico"
+    }
+  ],
+  "lexicalEvidence": [
+    "v2-nextjs/source/docs/reference-authoring/drafts/en/scoring-input/determinants/",
+    "v2-nextjs/source/docs/reference-authoring/drafts/ja/scoring-input/determinants/",
+    "v2-nextjs/source/docs/reference-authoring/drafts/es/scoring-input/determinants/",
+    "v2-nextjs/source/docs/reference-authoring/drafts/pt/scoring-input/determinants/"
+  ]
+}

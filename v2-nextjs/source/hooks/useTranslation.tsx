@@ -4,6 +4,7 @@ import { createContext, useContext, useState, useCallback, ReactNode, useEffect,
 import {
   DEFAULT_LANGUAGE,
   STORAGE_KEY,
+  getDocumentLanguageTag,
   normalizeLanguage,
   type Language,
 } from '@/i18n/config';
@@ -56,7 +57,7 @@ export function TranslationProvider({
       }
 
       const resolvedLanguage = readUrlLanguage() ?? savedLanguage ?? initialLanguage;
-      document.documentElement.lang = resolvedLanguage;
+      document.documentElement.lang = getDocumentLanguageTag(resolvedLanguage);
       try {
         localStorage.setItem(STORAGE_KEY, resolvedLanguage);
       } catch {
@@ -69,7 +70,7 @@ export function TranslationProvider({
       return;
     }
 
-    document.documentElement.lang = language;
+    document.documentElement.lang = getDocumentLanguageTag(language);
     try {
       localStorage.setItem(STORAGE_KEY, language);
     } catch {

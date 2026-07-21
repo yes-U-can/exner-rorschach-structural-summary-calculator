@@ -21,6 +21,18 @@ const v2SourceUrl = `${exhibitionRepoUrl}/tree/main/v2-nextjs/source`;
 
 export const v2NextVersions: VersionArchiveEntry[] = [
   {
+    version: 'v2.2.6',
+    title: 'Version 2.2.6',
+    series: 'v2-nextjs',
+    publishedAt: '2026-07-20',
+    releaseKind: 'bugfix',
+    releaseLabel: '버그 패치',
+    summary:
+      '다섯 언어 검색 정보의 기본 언어와 브라질 포르투갈어 표기를 바로잡고, Alt+마우스 휠 조작이 일부 브라우저 입력 경로에서 화면 이동으로 처리되던 문제를 수정했습니다. 구조요약 계산식, 입력값, 개인정보 처리 방식은 변경하지 않았습니다.',
+    sourceUrl: v2SourceUrl,
+    releaseUrl: v2ReleaseUrl('v2.2.6'),
+  },
+  {
     version: 'v2.2.5',
     title: 'Version 2.2.5',
     series: 'v2-nextjs',

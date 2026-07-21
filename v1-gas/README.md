@@ -1,5 +1,7 @@
 # v1 GAS Archive
 
+[한국어](./README.md) | [English](./README.en.md) | [日本語](./README.ja.md) | [Español](./README.es.md) | [Português (Brasil)](./README.pt-BR.md)
+
 이 폴더는 로샤 구조요약 계산 도우미의 Google Apps Script 버전 1 릴리즈를 보존합니다.
 
 - `current/`: 최종 v1 실행본인 `v1.4.1` 소스입니다.

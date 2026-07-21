@@ -3,13 +3,16 @@ import { SUPPORTED_LANGUAGES } from '@/i18n/config';
 import {
   PRODUCT_NAME_BY_LANGUAGE,
   SEO_KEYWORDS_BY_LANGUAGE,
+  SEO_LANGUAGE_TAG_BY_LANGUAGE,
   SEO_COPY,
   SITE_NAME,
   SITE_URL,
   buildAbsoluteLanguageAlternates,
   buildLanguageAlternates,
   buildLocalizedAlternates,
+  buildLocalizedPageMetadata,
   buildLocalizedPath,
+  getSeoLanguageTag,
 } from '@/lib/seo';
 
 describe('localized SEO metadata', () => {
@@ -74,9 +77,21 @@ describe('localized SEO metadata', () => {
       en: '/ref?lang=en',
       ja: '/ref?lang=ja',
       es: '/ref?lang=es',
-      pt: '/ref?lang=pt',
+      'pt-BR': '/ref?lang=pt',
       'x-default': '/ref',
     });
+  });
+
+  it('uses a Brazilian Portuguese search tag without changing the existing app URL', () => {
+    expect(SEO_LANGUAGE_TAG_BY_LANGUAGE).toEqual({
+      ko: 'ko',
+      en: 'en',
+      ja: 'ja',
+      es: 'es',
+      pt: 'pt-BR',
+    });
+    expect(getSeoLanguageTag('pt')).toBe('pt-BR');
+    expect(buildLocalizedPath('/about', 'pt')).toBe('/about?lang=pt');
   });
 
   it('uses a self-canonical URL while advertising all five language alternatives', () => {
@@ -87,5 +102,30 @@ describe('localized SEO metadata', () => {
     expect(buildAbsoluteLanguageAlternates('/privacy').en).toBe(
       'https://exner.yesucan.co.kr/privacy?lang=en',
     );
+  });
+
+  it('keeps canonical, Open Graph, Twitter, and language metadata aligned', () => {
+    const metadata = buildLocalizedPageMetadata({
+      language: 'pt',
+      pathname: '/versions',
+      title: SEO_COPY.pt.versions.title,
+      description: SEO_COPY.pt.versions.description,
+    });
+
+    expect(metadata.alternates?.canonical).toBe('/versions?lang=pt');
+    expect(metadata.alternates?.languages).toMatchObject({
+      'pt-BR': '/versions?lang=pt',
+      'x-default': '/versions',
+    });
+    expect(metadata.openGraph).toMatchObject({
+      url: '/versions?lang=pt',
+      locale: 'pt_BR',
+      title: SEO_COPY.pt.versions.title,
+      description: SEO_COPY.pt.versions.description,
+    });
+    expect(metadata.twitter).toMatchObject({
+      title: SEO_COPY.pt.versions.title,
+      description: SEO_COPY.pt.versions.description,
+    });
   });
 });

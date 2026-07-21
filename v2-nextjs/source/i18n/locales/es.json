@@ -1,7 +1,7 @@
 {
   "app": {
     "title": "Calculadora del Sumario Estructural de Rorschach",
-    "version": "v2.2.5",
+    "version": "v2.2.6",
     "provider": "Desarrollado y mantenido por MOW"
   },
   "nav": {
@@ -79,8 +79,8 @@
     "guideResponse": "Se usa para anotar las respuestas verbales del evaluado; no se usa en los calculos, por lo que puede dejarse en blanco.",
     "tooltipInfo": "Solo se puede manipular la fila inferior,\ny hasta 50 filas son posibles.",
     "rowOrderTip": "El orden de las filas de respuesta no afecta los resultados del cálculo. Por ejemplo, puede registrar contenido de la Lámina 6 en la fila 8 y contenido de la Lámina 2 en la fila 14 sin afectar el resultado.",
-    "scoreTooltip": "Se calcula automaticamente segun [Card] y [Z].",
-    "gphrTooltip": "Clasificado automaticamente segun [Contents], [Determinants], [FQ] y [Special Score].",
+    "scoreTooltip": "Se calcula automáticamente según [Card] y [Z].",
+    "gphrTooltip": "Se clasifica automáticamente según [Contents], [Determinants], [FQ] y [Special Score].",
     "noReorderTooltip": "Haz clic en el área del controlador para levantar una fila y moverla de posición.",
     "responseNumber": "Respuesta #{index}",
     "responseMemo": "Memo de respuesta",

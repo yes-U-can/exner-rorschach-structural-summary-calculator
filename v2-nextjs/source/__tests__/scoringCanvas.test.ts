@@ -19,10 +19,13 @@ import {
 } from '@/lib/scoringCanvas';
 
 describe('scoring canvas gestures', () => {
-  it('reserves Ctrl+wheel and trackpad pinch for browser zoom', () => {
+  it('handles Alt and AltGraph-style wheel input while leaving Ctrl-only zoom to the browser', () => {
     expect(shouldHandleScoringZoomGesture({ altKey: true, ctrlKey: false, metaKey: false })).toBe(true);
     expect(shouldHandleScoringZoomGesture({ altKey: false, ctrlKey: true, metaKey: false })).toBe(false);
-    expect(shouldHandleScoringZoomGesture({ altKey: true, ctrlKey: true, metaKey: false })).toBe(false);
+    expect(shouldHandleScoringZoomGesture({ altKey: true, ctrlKey: true, metaKey: false })).toBe(true);
+    expect(shouldHandleScoringZoomGesture({ altKey: false, ctrlKey: true, metaKey: false }, true)).toBe(true);
+    expect(shouldHandleScoringZoomGesture({ altKey: false, ctrlKey: false, metaKey: false }, true)).toBe(true);
+    expect(shouldHandleScoringZoomGesture({ altKey: true, ctrlKey: false, metaKey: true })).toBe(false);
   });
 
   it('steps and clamps scoring-canvas zoom', () => {

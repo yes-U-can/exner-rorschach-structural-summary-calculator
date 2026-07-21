@@ -19,6 +19,7 @@ import {
   buildLocalizedPath,
   getAbsoluteUrl,
   getSeoCopy,
+  getSeoLanguageTag,
 } from '@/lib/seo';
 import './globals.css';
 
@@ -105,7 +106,7 @@ export default async function RootLayout({
           '로샤 구조요약 계산기',
           'Exner Rorschach Structural Summary Calculator',
         ],
-        inLanguage: SUPPORTED_LANGUAGES,
+        inLanguage: SUPPORTED_LANGUAGES.map(getSeoLanguageTag),
       },
       {
         '@type': 'WebApplication',
@@ -122,7 +123,7 @@ export default async function RootLayout({
         isPartOf: { '@id': `${SITE_URL}/#website` },
         applicationCategory: 'MedicalApplication',
         operatingSystem: 'Web Browser',
-        inLanguage: initialLanguage,
+        inLanguage: getSeoLanguageTag(initialLanguage),
         isAccessibleForFree: true,
         offers: {
           '@type': 'Offer',
@@ -142,7 +143,7 @@ export default async function RootLayout({
   };
 
   return (
-    <html lang={initialLanguage} suppressHydrationWarning>
+    <html lang={getSeoLanguageTag(initialLanguage)} suppressHydrationWarning>
       <head>
         <script
           id="theme-init"

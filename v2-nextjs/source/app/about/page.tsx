@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { resolveLanguage } from '@/i18n/config';
 import { buildLocalizedPageMetadata, getSeoCopy } from '@/lib/seo';
 import type { Language } from '@/types';
 
@@ -24,7 +25,7 @@ type AboutContent = {
 const WORKSHOP_URL = 'https://youtu.be/eDTxkJNUAHc';
 
 function normalizeLang(lang?: string): Language {
-  return lang === 'ko' || lang === 'ja' || lang === 'es' || lang === 'pt' ? lang : 'en';
+  return resolveLanguage(lang);
 }
 
 export async function generateMetadata({ searchParams }: AboutPageProps): Promise<Metadata> {

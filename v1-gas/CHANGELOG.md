@@ -1,5 +1,7 @@
 # CHANGELOG
 
+[한국어](./CHANGELOG.md) | [English](./CHANGELOG.en.md) | [日本語](./CHANGELOG.ja.md) | [Español](./CHANGELOG.es.md) | [Português (Brasil)](./CHANGELOG.pt-BR.md)
+
 이 문서는 v1 Google Apps Script 릴리즈 기록을 최신순으로 정리합니다.
 
 | Date | Version | Type | Run | Archive |

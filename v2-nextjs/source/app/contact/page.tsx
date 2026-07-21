@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { redirect } from 'next/navigation';
+import { resolveLanguage } from '@/i18n/config';
 import { buildLanguageAlternates } from '@/lib/seo';
 import type { Language } from '@/types';
 
@@ -8,7 +9,7 @@ type ContactPageProps = {
 };
 
 function normalizeLang(lang?: string): Language {
-  return lang === 'ko' || lang === 'ja' || lang === 'es' || lang === 'pt' ? lang : 'en';
+  return resolveLanguage(lang);
 }
 
 export const metadata: Metadata = {

@@ -7,6 +7,7 @@ import ReferenceMarkdown from '@/components/ref/ReferenceMarkdown';
 import ReferenceRelatedPanel from '@/components/ref/ReferenceRelatedPanel';
 import ReferenceSearchForm from '@/components/ref/ReferenceSearchForm';
 import { getTranslation } from '@/i18n/client';
+import { resolveLanguage } from '@/i18n/config';
 import {
   buildReferenceDocHref,
   getReferenceRuntimeDocBySlug,
@@ -29,7 +30,7 @@ type NavRow = {
 };
 
 function normalizeLang(lang?: string): Language {
-  return lang === 'ko' || lang === 'ja' || lang === 'es' || lang === 'pt' ? lang : 'en';
+  return resolveLanguage(lang);
 }
 
 function buildNavRows(language: Language, slug: string[]): NavRow[] {

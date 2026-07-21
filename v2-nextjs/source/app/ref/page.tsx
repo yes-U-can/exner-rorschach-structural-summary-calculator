@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { redirect } from 'next/navigation';
 
 import ReferenceSearchForm from '@/components/ref/ReferenceSearchForm';
+import { resolveLanguage } from '@/i18n/config';
 import { buildReferenceDocHref, searchReferenceRuntimeDocs } from '@/lib/referenceCorpus';
 import { buildReferenceSearchExcerpt } from '@/lib/referenceSearchExcerpt';
 import {
@@ -30,7 +31,7 @@ type RefCopy = {
 };
 
 function normalizeLang(lang?: string): Language {
-  return lang === 'ko' || lang === 'ja' || lang === 'es' || lang === 'pt' ? lang : 'en';
+  return resolveLanguage(lang);
 }
 
 const COPY: Record<Language, RefCopy> = {

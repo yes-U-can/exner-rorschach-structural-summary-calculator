@@ -2,7 +2,7 @@
 
 Status: Active
 Owner: Product + Engineering
-Last Updated: 2026-07-18
+Last Updated: 2026-07-20
 
 ## Purpose
 
@@ -53,15 +53,64 @@ Public rewrites should follow these examples:
 
 ## Language Coverage Policy
 
-The language policy balances global access, technical accuracy, and the risk of translation drift.
+The public documentation has a five-language reader-facing layer and an original-language technical-evidence layer. This makes the project accessible in every supported app language without turning raw engineering evidence into separately maintained paraphrases.
 
-1. App-facing user experience can be localized into the five supported app languages: Korean, English, Japanese, Spanish, and Portuguese.
-2. Public release notes and CHANGELOG entries use Korean as the canonical record because release decisions and operational review for this project happen in Korean.
-3. The top-level public showcase entry point should provide an English companion summary when the repository is meant to be understandable to global GitHub visitors.
-4. Machine-generated evidence may preserve English. A human-readable introduction or README for that evidence must still explain its purpose in plain language.
-5. Do not maintain five-language release notes by default. That creates avoidable drift unless the localized documents are themselves part of the product deliverable.
-6. Technical identifiers keep their original English names.
-7. Dates must be absolute dates in `YYYY-MM-DD` format. Use the date explicitly declared for the release in Asia/Seoul after accounting for work that crossed midnight locally. A Git commit or push timestamp is supporting evidence, not an automatic replacement for the declared release date.
+1. Korean is the canonical source for reader-facing public documentation. The supported companion locales are English, Japanese, Spanish, and Brazilian Portuguese.
+2. Every reader-facing document group listed in the public localization manifest must provide all five locale files. This includes public entry README files, CHANGELOG files, acknowledgements, current release notes, and clinician-readable calculation explanations selected for publication.
+3. Historical Korean release notes remain unchanged as records of their released wording. Their companion translations may be added in controlled backfill batches without rewriting the Korean originals.
+4. Raw AI evaluation reports, machine-generated evidence, deployment checklists, architecture rules, commands, and source-level technical records may remain in their original technical language. A reader-facing README or summary that introduces those records must be available in all five locales when it is listed in the manifest.
+5. Keep one prose language per file. Use separate locale files rather than placing several complete translations in one Markdown document.
+6. Translation is not a literal substitution task. Use the approved locale glossary, the existing five-language reference corpus, and professional target-language sources. Preserve Exner notation and explicitly review any term whose established target-language usage is uncertain.
+7. Each managed translation records the canonical Korean source hash, glossary version, and review state in the localization manifest. A canonical change makes every companion stale until it is updated and checked again.
+8. Technical identifiers, formulas, code symbols, commands, file paths, model IDs, URLs, bibliographic titles, and direct quotations keep their exact original form unless the quotation is separately identified as a translation.
+9. Dates must be absolute dates in `YYYY-MM-DD` format. Use the date explicitly declared for the release in Asia/Seoul after accounting for work that crossed midnight locally. A Git commit or push timestamp is supporting evidence, not an automatic replacement for the declared release date.
+
+### Locale Voice Rules
+
+- Korean public prose uses natural professional `~합니다` style. The compact Korean reference corpus may retain `~다` style.
+- English uses direct professional prose and avoids audit-report narration in the reader-facing sections.
+- Japanese uses consistent professional `です・ます` style.
+- Spanish uses neutral professional Spanish and avoids region-specific colloquialisms.
+- Portuguese uses professional Brazilian Portuguese. Do not mix European and Brazilian terminology within one document set.
+
+### Translation Workflow
+
+1. Finalize the Korean canonical document and its release-level facts.
+2. Apply the approved terminology glossary before drafting companion files.
+3. Draft English, Japanese, Spanish, and Brazilian Portuguese versions without changing dates, numbers, formulas, links, privacy boundaries, or recalculation guidance.
+4. Run structural parity checks for headings, links, numeric tokens, inline-code identifiers, and the canonical source hash.
+5. Review tone and target-language clinical terminology separately. Model-assisted review is useful, but it does not replace the project's factual source checks or final human approval.
+6. Mark the translation set reviewed only after every locale passes both structural and editorial review.
+
+### Cross-Language Release Gate
+
+The public archive keeps the executable localization contract in `docs/localization/`:
+
+- `manifest.json` lists every managed five-language document group and stores the Korean source hash.
+- `clinical-terminology.json` protects recurring clinical terms and Exner identifiers.
+- `TERMINOLOGY_SOURCES.md` records the target-language sources used to settle recurring terminology.
+- `RELEASE_DOCUMENT_WORKFLOW.md` provides the repeatable authoring and independent-review checklist.
+- `scripts/verify-public-document-locales.ps1` checks file coverage, source freshness, headings, links, numbers, code identifiers, and review state.
+
+Links between managed reader-facing documents must stay in the reader's current locale. Links to raw evidence and untranslated historical documents keep their canonical target.
+
+For every new public README, changelog, or release note:
+
+1. Finish the Korean facts before translation.
+2. Register all five paths with `reviewStatus` set to `draft`.
+3. Draft each companion directly from Korean rather than through another translation.
+4. Run the checker with `-UpdateHashes -AllowDraft`, then without `-UpdateHashes`.
+5. Obtain an independent terminology and prose review based on authoritative sources in each target language.
+6. Change the group to `reviewed` only after factual parity and editorial review are both complete.
+7. Run the strict checker without `-AllowDraft`. Publication is blocked until it passes.
+
+A changed Korean source hash invalidates the publication batch. Machine checks do not prove that the clinical terminology or prose is natural; that judgment remains a separate review step.
+
+## Search Language Contract
+
+The app keeps its existing `?lang=` URL values (`ko`, `en`, `ja`, `es`, and `pt`) so saved links and in-app navigation remain stable. Search and accessibility metadata use the corresponding language tags `ko`, `en`, `ja`, `es`, and `pt-BR`; Brazilian Portuguese must not be published as generic `pt` in `lang`, `hreflang`, sitemap alternates, or structured data.
+
+The queryless URL is the Korean canonical page. Every indexable page must identify itself as canonical, list all five localized alternatives plus `x-default`, and use the same alternate set in page metadata and the sitemap. Redirect-only compatibility routes and private AI routes must not become separate search results.
 
 ## Release History Boundary
 
@@ -79,13 +128,24 @@ Public history begins at the released state, not at every draft considered while
 2. A hotfix is an urgent patch release, not a fourth numeric level.
 3. Existing Korean archive labels such as `메이저 패치`, `마이너 패치`, and `버그 패치` may remain for historical continuity, provided their numeric version changes follow the rules above.
 
+Managed companion documents use the following fixed labels:
+
+| Category | Korean | English | Japanese | Spanish | Brazilian Portuguese |
+| --- | --- | --- | --- | --- | --- |
+| Major | `메이저 패치` | `major release` | `メジャーリリース` | `versión mayor` | `versão principal` |
+| Minor | `마이너 패치` | `minor release` | `マイナーリリース` | `versión menor` | `versão menor` |
+| Bug fix | `버그 패치` | `bug-fix release` | `バグ修正` | `corrección de errores` | `correção de erros` |
+| Urgent fix | `핫픽스` | `hotfix` | `ホットフィックス` | `hotfix` | `hotfix` |
+
+The public archive stores the executable mapping in `docs/localization/manifest.json`. Its locale verifier checks release headings, archive lists, and changelog rows against the Korean canonical entries.
+
 The default public archive language model is therefore:
 
-- Korean canonical release notes
-- Korean CHANGELOG
-- Korean root README plus an English companion overview when useful
-- original-language technical artifacts under `source/`
-- five-language localization only for app user-facing content
+- Korean canonical reader-facing documents
+- English, Japanese, Spanish, and Brazilian Portuguese companion documents for every managed public document group
+- unchanged Korean historical originals with controlled companion-translation backfill
+- original-language technical evidence under `source/`, introduced through localized reader-facing summaries
+- automated source-hash and structural-parity checks before publication
 
 ## Release Note Shape
 
@@ -153,11 +213,12 @@ When preparing a release:
 3. Add the new release row at the top of the public `CHANGELOG.md` table.
 4. Update `v2-nextjs/README.md` so the latest patch note points to the new release.
 5. Add `v2-nextjs/releases/vX.Y.Z/README.md`.
-6. Update the English companion overview when the public repo's positioning, latest release, or key evidence links change.
-7. Ensure public-facing release text follows the language coverage policy and stays technically precise.
-8. Ensure public source mirror excludes `.env*`, `.vercel/`, `node_modules/`, runtime logs, local caches, private work notes, API keys, and raw model output.
-9. Confirm that the impact, affected condition, need for recalculation, and limitations are clear before technical details appear.
-10. Remove AI-to-owner reporting language and unexplained internal engineering terms from the main narrative.
+6. Update all four companion locales when a managed Korean canonical document changes.
+7. Run the public documentation localization check and resolve stale hashes, missing files, or structural drift.
+8. Ensure public-facing release text follows the language coverage policy and stays technically precise.
+9. Ensure public source mirror excludes `.env*`, `.vercel/`, `node_modules/`, runtime logs, local caches, private work notes, API keys, and raw model output.
+10. Confirm that the impact, affected condition, need for recalculation, and limitations are clear before technical details appear.
+11. Remove AI-to-owner reporting language and unexplained internal engineering terms from the main narrative.
 
 ## Agent Rule
 

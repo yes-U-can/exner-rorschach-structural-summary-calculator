@@ -1,5 +1,7 @@
 # [2026-07-19] v2.2.5 버그 패치
 
+[한국어](./README.md) | [English](./README.en.md) | [日本語](./README.ja.md) | [Español](./README.es.md) | [Português (Brasil)](./README.pt-BR.md)
+
 ## 주요 수정사항
 
 ### 개요

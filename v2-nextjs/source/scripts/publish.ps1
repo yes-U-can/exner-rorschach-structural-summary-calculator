@@ -486,6 +486,21 @@ if ($SyncOnly) {
   exit 0
 }
 
+$localizationCheck = Join-Path $resolvedPublishRoot "scripts\verify-public-document-locales.ps1"
+if (-not (Test-Path -LiteralPath $localizationCheck)) {
+  throw "Public document localization check not found: $localizationCheck"
+}
+$powerShellHost = if (Get-Command pwsh -ErrorAction SilentlyContinue) {
+  "pwsh"
+} else {
+  "powershell.exe"
+}
+Write-Host "[docs] strict five-language public document check"
+& $powerShellHost -NoProfile -ExecutionPolicy Bypass -File $localizationCheck
+if ($LASTEXITCODE -ne 0) {
+  throw "Public document localization check failed with exit code $LASTEXITCODE."
+}
+
 Write-Host "[git] commit + push in $targetRoot"
 $env:HOME = $sourceRoot
 $env:GIT_CONFIG_NOSYSTEM = "1"

@@ -1,5 +1,7 @@
 # Acknowledgements
 
+[한국어](./ACKNOWLEDGEMENTS.md) | [English](./ACKNOWLEDGEMENTS.en.md) | [日本語](./ACKNOWLEDGEMENTS.ja.md) | [Español](./ACKNOWLEDGEMENTS.es.md) | [Português (Brasil)](./ACKNOWLEDGEMENTS.pt-BR.md)
+
 ## RorScore
 
 심리학 지식을 바탕으로 처음 프로그래밍을 익혀가던 초기 개발 과정에서,

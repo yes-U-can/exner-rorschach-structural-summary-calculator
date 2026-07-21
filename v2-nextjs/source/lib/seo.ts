@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import {
   DEFAULT_LANGUAGE,
+  DOCUMENT_LANGUAGE_TAG_BY_LANGUAGE,
   SUPPORTED_LANGUAGES,
+  getDocumentLanguageTag,
   type Language,
 } from '@/i18n/config';
 
@@ -9,6 +11,7 @@ import {
 // must never replace it in canonical, hreflang, Open Graph, or sitemap URLs.
 export const SITE_URL = 'https://exner.yesucan.co.kr';
 export const SITE_NAME = 'Yes, U Can!';
+export const SEO_LANGUAGE_TAG_BY_LANGUAGE = DOCUMENT_LANGUAGE_TAG_BY_LANGUAGE;
 export const PRODUCT_NAME_BY_LANGUAGE: Record<Language, string> = {
   ko: 'Exner 로샤 종합체계 구조요약 계산기',
   en: 'Exner Rorschach Comprehensive System Structural Summary Calculator',
@@ -212,10 +215,17 @@ export function buildLocalizedPath(pathname: string, language: Language) {
   return `${normalized}?lang=${language}`;
 }
 
+export function getSeoLanguageTag(language: Language) {
+  return getDocumentLanguageTag(language);
+}
+
 export function buildLanguageAlternates(pathname: string) {
   const normalized = normalizePathname(pathname);
   const languages = Object.fromEntries(
-    SUPPORTED_LANGUAGES.map((language) => [language, buildLocalizedPath(normalized, language)]),
+    SUPPORTED_LANGUAGES.map((language) => [
+      getSeoLanguageTag(language),
+      buildLocalizedPath(normalized, language),
+    ]),
   );
 
   return {

@@ -54,6 +54,21 @@ describe('scoring select geometry', () => {
     }
   });
 
+  it('marks every referenced scoring-table header consistently in all five tooltip locales', () => {
+    for (const localeCode of localeCodes) {
+      const locale = JSON.parse(readFileSync(`i18n/locales/${localeCode}.json`, 'utf8')) as {
+        input: { scoreTooltip: string; gphrTooltip: string };
+      };
+
+      expect(locale.input.scoreTooltip).toContain('[Card]');
+      expect(locale.input.scoreTooltip).toContain('[Z]');
+      expect(locale.input.gphrTooltip).toContain('[Contents]');
+      expect(locale.input.gphrTooltip).toContain('[Determinants]');
+      expect(locale.input.gphrTooltip).toContain('[FQ]');
+      expect(locale.input.gphrTooltip).toContain('[Special Score]');
+    }
+  });
+
   it('finishes the scoring table with a readable header-colored bottom cap', () => {
     expect(inputTableSource).toContain('<tfoot>');
     expect(inputTableSource).toContain('ui-scoring-table-footer-cap min-h-16 rounded-b-xl border-t-2');
@@ -87,6 +102,10 @@ describe('scoring select geometry', () => {
     expect(inputTableSource).toContain('getPointerAnchoredScoringTransform');
     expect(inputTableSource).toContain('getInitialScoringCanvasTransform');
     expect(inputTableSource).toContain('const canvasHasInteractedRef = useRef(false);');
+    expect(inputTableSource).toContain('const isAltKeyPressedRef = useRef(false);');
+    expect(inputTableSource).toContain("window.addEventListener('keydown', handleAltKeyDown);");
+    expect(inputTableSource).toContain("window.addEventListener('keyup', handleAltKeyUp);");
+    expect(inputTableSource).toContain('isAltKeyPressedRef.current');
     expect(inputTableSource).not.toContain('zoom: tableZoom');
     expect(globalStyles).toContain(".ui-scoring-table-stage[data-scoring-motion='direct']");
     expect(globalStyles).toContain('transition: transform 110ms cubic-bezier(0.22, 1, 0.36, 1);');

@@ -3,10 +3,11 @@ import { describe, expect, it } from 'vitest';
 import { v2NextVersions } from '@/lib/versionArchive';
 
 describe('version archive dates', () => {
-  it('keeps the corrected release dates from v2.1.8 through v2.2.5', () => {
+  it('keeps the corrected release dates from v2.1.8 through v2.2.6', () => {
     const dates = Object.fromEntries(
       v2NextVersions
         .filter(({ version }) => [
+          'v2.2.6',
           'v2.2.5',
           'v2.2.4',
           'v2.2.3',
@@ -21,6 +22,7 @@ describe('version archive dates', () => {
     );
 
     expect(dates).toEqual({
+      'v2.2.6': '2026-07-20',
       'v2.2.5': '2026-07-19',
       'v2.2.4': '2026-07-18',
       'v2.2.3': '2026-07-17',
