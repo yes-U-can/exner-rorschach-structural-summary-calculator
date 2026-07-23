@@ -2,7 +2,7 @@
 
 import SlotSelect from './SlotSelect';
 import { OPTIONS } from '@/lib/options';
-import { getDisabledMovementCodes } from '@/lib/scoringInputValidation';
+import { getDisabledDeterminantCodes } from '@/lib/scoringInputValidation';
 
 interface DeterminantSlotsProps {
   values: string[];
@@ -26,7 +26,7 @@ export default function DeterminantSlots({ values, onChange, maxSlots = 6 }: Det
           value={values[index] || ''}
           onChange={(value) => handleChange(index, value)}
           options={OPTIONS.DETERMINANTS}
-          disabledOptions={getDisabledMovementCodes(values, index)}
+          disabledOptions={getDisabledDeterminantCodes(values, index)}
           className="w-14"
           gridCols={6}
           placeholder=""

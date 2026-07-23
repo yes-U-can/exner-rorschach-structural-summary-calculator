@@ -301,6 +301,13 @@ export default function HomePage() {
         message: t('toast.movementConflict.message', { rows: summary.movementConflictRows }),
       });
     }
+    if (summary.duplicateDeterminants.rows) {
+      showToast({
+        type: 'warning',
+        title: t('toast.duplicateDeterminant.title'),
+        message: t('toast.duplicateDeterminant.message', summary.duplicateDeterminants),
+      });
+    }
     if (summary.missingFormQualityRows) {
       showToast({
         type: 'warning',

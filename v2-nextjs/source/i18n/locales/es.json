@@ -266,6 +266,10 @@
       "title": "Revisar la localización en espacio blanco",
       "message": "Las filas {rows} usan S como código de localización independiente. Seleccione WS, DS o DdS según la localización básica utilizada en la respuesta. El cálculo permanecerá bloqueado hasta corregir esas filas."
     },
+    "duplicateDeterminant": {
+      "title": "Revisar los determinantes duplicados",
+      "message": "Las filas {rows} contienen el mismo determinante {codes} más de una vez. Registre cada determinante solo una vez por respuesta. El cálculo permanecerá bloqueado hasta corregir esas filas."
+    },
     "movementConflict": {
       "title": "Revisar los códigos de movimiento duplicados",
       "message": "Las filas {rows} contienen más de un código de la misma familia de movimiento. En cada respuesta, seleccione solo una opción a, p o a-p para cada familia de movimiento humano, animal o inanimado. Revise el registro y la encuesta antes de corregirlo. El cálculo permanecerá bloqueado hasta corregir esas filas."

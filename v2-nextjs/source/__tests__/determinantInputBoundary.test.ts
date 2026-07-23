@@ -5,6 +5,7 @@ import { calculateStructuralSummary } from '@/lib/calculator';
 import { findInvalidDeterminantInputs } from '@/lib/determinantInput';
 import {
   findScoringInputIssues,
+  getDisabledDeterminantCodes,
   getDisabledMovementCodes,
 } from '@/lib/scoringInputValidation';
 import { SCORING_CONFIG } from '@/lib/constants';
@@ -97,6 +98,45 @@ describe('movement determinant input boundary', () => {
     expect(getDisabledMovementCodes(['Ma', 'FC'], 0)).toEqual([]);
   });
 
+  it('disables a code already selected in another slot for every determinant', () => {
+    expect(getDisabledDeterminantCodes(['FC', '', ''], 1)).toEqual(['FC']);
+    expect(getDisabledDeterminantCodes(['Ma', 'FC'], 0)).toEqual(['FC']);
+    expect(getDisabledDeterminantCodes(['Ma', 'FC'], 1)).toEqual([
+      'Ma',
+      'Mp',
+      'Ma-p',
+    ]);
+  });
+
+  it.each([
+    [['FC', 'FC']],
+    [['F', 'F']],
+    [['Ma', 'Ma']],
+  ] as const)(
+    'blocks the identical determinant entered twice: %j',
+    (determinants) => {
+      const issues = findScoringInputIssues([response([...determinants])]);
+      expect(issues).toContainEqual({
+        type: 'duplicate_determinant',
+        responseIndex: 0,
+        code: determinants[0],
+      });
+
+      const result = calculateStructuralSummary([response([...determinants])]);
+      expect(result.success).toBe(false);
+      expect(result.errors).toContainEqual({
+        field: 'responses.0.determinants',
+        message: expect.stringContaining('Duplicate determinant code'),
+      });
+    },
+  );
+
+  it('keeps valid blends with distinct determinants unaffected', () => {
+    const result = calculateStructuralSummary([response(['FC', "C'F"])]);
+    expect(result.success).toBe(true);
+    expect(result.data?.upper_section.blends).toContainEqual(['FC', "C'F"]);
+  });
+
   it.each([
     ['M', ['Ma', 'Mp']],
     ['FM', ['FMa', 'FMa-p']],
@@ -170,6 +210,10 @@ describe('movement determinant input boundary', () => {
             title?: string;
             message?: string;
           };
+          duplicateDeterminant?: {
+            title?: string;
+            message?: string;
+          };
           missingFormQuality?: {
             title?: string;
             message?: string;
@@ -194,6 +238,14 @@ describe('movement determinant input boundary', () => {
         expect(boundaryWarning?.message?.trim()).toBeTruthy();
         expect(boundaryWarning?.message?.match(/\{[^}]+\}/g)).toEqual(['{rows}']);
       }
+
+      const duplicateWarning = messages.toast.duplicateDeterminant;
+      expect(duplicateWarning?.title?.trim()).toBeTruthy();
+      expect(duplicateWarning?.message?.trim()).toBeTruthy();
+      expect(duplicateWarning?.message?.match(/\{[^}]+\}/g)).toEqual([
+        '{rows}',
+        '{codes}',
+      ]);
     }
   });
 });

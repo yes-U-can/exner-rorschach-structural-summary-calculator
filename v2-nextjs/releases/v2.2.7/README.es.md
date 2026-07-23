@@ -9,7 +9,7 @@
 Se corrigió un problema por el que tres tipos de entradas incompletas de la tabla de codificación podían pasar directamente al cálculo.
 
 - En **[Location]** era posible seleccionar una respuesta de espacio en blanco como `S` aislada. Ahora las opciones de localización ofrecen únicamente `W`, `WS`, `D`, `DS`, `Dd` y `DdS`.
-- En **[Determinants]** era posible introducir dos o más códigos de la misma familia de movimiento en una sola respuesta (por ejemplo, `Ma` y `Mp`). Ahora, al elegir un código de una familia, los demás códigos de la misma familia dejan de estar disponibles.
+- En **[Determinants]** era posible introducir dos o más códigos de la misma familia de movimiento en una sola respuesta (por ejemplo, `Ma` y `Mp`). Ahora, al elegir un código de una familia, los demás códigos de la misma familia dejan de estar disponibles. La introducción del mismo determinante repetido en dos casillas también se bloquea (por ejemplo, `FC` dos veces).
 - Era posible calcular con **[FQ]** en blanco. Ahora es necesario seleccionar uno de `+`, `o`, `u`, `-` o `none` para poder calcular.
 
 En los registros en los que todas las respuestas son de forma pura (`F`), Lambda se informa como el número de respuestas de F pura en lugar del símbolo de infinito (`∞`).
@@ -20,7 +20,7 @@ Los protocolos existentes en los que la localización, los determinantes de movi
 
 **`S` aislada.** En el Sistema Comprehensivo de Exner, el uso del espacio en blanco no es una localización independiente, sino una notación que se añade a la localización básica, y la respuesta se registra siempre como `WS`, `DS` o `DdS`. En versiones anteriores, si la localización se introducía únicamente como `S`, se contabilizaba en la frecuencia de espacio en blanco pero no en ninguna de las localizaciones básicas `W`, `D` o `Dd`, por lo que los valores que utilizan la localización básica, como `W:D:Dd` y `WDA%`, podían calcularse por debajo de sus valores reales.
 
-**Duplicados de la misma familia de movimiento.** El determinante de movimiento de una respuesta individual se registra, en cada familia, con una de tres formas: activa `a`, pasiva `p` o activa-pasiva `a-p`. Si dos objetos distintos muestran movimientos activo y pasivo respectivamente, no se introducen `Ma` y `Mp` por separado, sino que se registra un único `Ma-p`. En versiones anteriores, si `Ma` y `Mp` se introducían juntos en campos separados, la frecuencia de movimiento humano se contaba dos veces, por lo que el valor izquierdo de EB, EA, `a:p`, `Ma:Mp` y otros valores podían calcularse por encima de sus valores reales. Que un mismo objeto muestre ambos tipos de movimiento no convierte el código automáticamente en `a-p`; qué movimiento determina la codificación se confirma con el registro de respuestas y la encuesta (Inquiry).
+**Duplicados de la misma familia de movimiento.** El determinante de movimiento de una respuesta individual se registra, en cada familia, con una de tres formas: activa `a`, pasiva `p` o activa-pasiva `a-p`. Si dos objetos distintos muestran movimientos activo y pasivo respectivamente, no se introducen `Ma` y `Mp` por separado, sino que se registra un único `Ma-p`. En versiones anteriores, si `Ma` y `Mp` se introducían juntos en campos separados, la frecuencia de movimiento humano se contaba dos veces, por lo que el valor izquierdo de EB, EA, `a:p`, `Ma:Mp` y otros valores podían calcularse por encima de sus valores reales. Que un mismo objeto muestre ambos tipos de movimiento no convierte el código automáticamente en `a-p`; qué movimiento determina la codificación se confirma con el registro de respuestas y la encuesta (Inquiry). Cuando el mismo determinante se introducía dos veces, el valor correspondiente también podía contarse dos veces, por lo que ahora se exige registrar cada determinante solo una vez por respuesta.
 
 **Calidad formal en blanco.** `none` es una categoría oficial de calidad formal que se utiliza para las respuestas que no se puntúan sobre la base de la forma, mientras que un campo en blanco es una entrada cuya codificación aún no se ha completado. En versiones anteriores, si la calidad formal se dejaba en blanco, esa respuesta no se contabilizaba en ningún total de calidad formal pero sí en el número total de respuestas, por lo que valores como `XA%`, `X+%` y `WDA%` podían calcularse por debajo de sus valores reales. Si la forma no es la base de la puntuación de una respuesta, ahora debe seleccionarse `none` de forma explícita.
 
@@ -48,6 +48,7 @@ El bloqueo de entradas y los avisos en cinco idiomas también se comprobaron en 
 
 - La `S` aislada no aparece entre las opciones de localización.
 - Al elegir un código de una familia de movimiento, los demás códigos de la misma familia se muestran como no seleccionables.
+- Para cualquier determinante, un código ya seleccionado se muestra como no seleccionable en las demás casillas.
 - Si la calidad formal está en blanco, el cálculo se detiene y se indican las filas que requieren revisión. Los textos de aviso de los cinco idiomas se comprobaron uno por uno en la pantalla real.
 - Las `S` aisladas, los códigos de movimiento duplicados y la calidad formal en blanco que permanecen en datos antiguos guardados automáticamente se señalan de la misma manera, sin modificar el original.
 
@@ -57,7 +58,7 @@ También se comprobaron los datos de búsqueda en cinco idiomas y los asistentes
 - Se reconstruyeron los 5,604 embeddings de OpenAI a partir del texto nuevo; las discrepancias en el hash del contenido y los embeddings obsoletos fueron 0.
 - En la búsqueda híbrida con embeddings reales, la tasa de acierto del primer documento fue del 100% tanto para preguntas amplias como para preguntas con nombre explícito.
 - Se realizaron llamadas reales en cinco idiomas con preguntas representativas sobre la `S` aislada, los códigos de movimiento duplicados y la calidad formal en blanco, y se comprobó que ninguna de las 15 llamadas produjo respuestas contrarias a las reglas.
-- En el conjunto automatizado completo se superaron 471 comprobaciones de 83 archivos de prueba y 7 se omitieron porque no se cumplían sus condiciones de ejecución. También se superaron la compilación de producción, el análisis estático del código, la auditoría de textos en cinco idiomas y la detección de secretos.
+- En el conjunto automatizado completo se superaron 476 comprobaciones de 83 archivos de prueba y 7 se omitieron porque no se cumplían sus condiciones de ejecución. También se superaron la compilación de producción, el análisis estático del código, la auditoría de textos en cinco idiomas y la detección de secretos.
 
 La notación de Lambda como número de respuestas de F pura es una forma de informe de software en la que coinciden varios materiales públicos, pero aún no se ha localizado la página de la obra original que la establezca de forma explícita. El alcance comprobado y las limitaciones pendientes se registraron tal cual en la documentación de verificación.
 

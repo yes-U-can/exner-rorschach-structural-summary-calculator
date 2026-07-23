@@ -1,161 +1,161 @@
 {
-  "schemaVersion": 1,
-  "canonicalLocale": "ko",
-  "companionLocales": [
-    "en",
-    "ja",
-    "es",
-    "pt-BR"
-  ],
-  "glossary": "docs/localization/clinical-terminology.json",
-  "glossaryVersion": "2026-07-21.1",
-  "releaseTypeLabels": {
-    "ko": {
-      "major": "메이저 패치",
-      "minor": "마이너 패치",
-      "bug": "버그 패치",
-      "hotfix": "핫픽스"
-    },
-    "en": {
-      "major": "major release",
-      "minor": "minor release",
-      "bug": "bug-fix release",
-      "hotfix": "hotfix"
-    },
-    "ja": {
-      "major": "メジャーリリース",
-      "minor": "マイナーリリース",
-      "bug": "バグ修正",
-      "hotfix": "ホットフィックス"
-    },
-    "es": {
-      "major": "versión mayor",
-      "minor": "versión menor",
-      "bug": "corrección de errores",
-      "hotfix": "hotfix"
-    },
-    "pt-BR": {
-      "major": "versão principal",
-      "minor": "versão menor",
-      "bug": "correção de erros",
-      "hotfix": "hotfix"
-    }
-  },
-  "pilotStatus": "reviewed",
-  "documentGroups": [
-    {
-      "id": "root-readme",
-      "canonical": "README.md",
-      "canonicalSha256": "78fc665fa616a2c66f52e5174f823d461a9f65ab0fb9bff21ef2aa472bd80a43",
-      "reviewStatus": "reviewed",
-      "translations": {
-        "en": "README.en.md",
-        "ja": "README.ja.md",
-        "es": "README.es.md",
-        "pt-BR": "README.pt-BR.md"
-      }
-    },
-    {
-      "id": "root-changelog",
-      "canonical": "CHANGELOG.md",
-      "canonicalSha256": "121da5158a2d56132bb99ba6a58b06f1efd9ca009e92629e58b39cafcd2ae88a",
-      "reviewStatus": "reviewed",
-      "translations": {
-        "en": "CHANGELOG.en.md",
-        "ja": "CHANGELOG.ja.md",
-        "es": "CHANGELOG.es.md",
-        "pt-BR": "CHANGELOG.pt-BR.md"
-      }
-    },
-    {
-      "id": "acknowledgements",
-      "canonical": "ACKNOWLEDGEMENTS.md",
-      "canonicalSha256": "9a988ff6a59477350e0fc79d065a2f513636f59b2aedc2861d14f050fccfd4cc",
-      "reviewStatus": "reviewed",
-      "translations": {
-        "en": "ACKNOWLEDGEMENTS.en.md",
-        "ja": "ACKNOWLEDGEMENTS.ja.md",
-        "es": "ACKNOWLEDGEMENTS.es.md",
-        "pt-BR": "ACKNOWLEDGEMENTS.pt-BR.md"
-      }
-    },
-    {
-      "id": "v1-readme",
-      "canonical": "v1-gas/README.md",
-      "canonicalSha256": "a541688bed63ec4a32ac8e759c6bb21a13b89d9403df35ca97316575a3769eb8",
-      "reviewStatus": "reviewed",
-      "translations": {
-        "en": "v1-gas/README.en.md",
-        "ja": "v1-gas/README.ja.md",
-        "es": "v1-gas/README.es.md",
-        "pt-BR": "v1-gas/README.pt-BR.md"
-      }
-    },
-    {
-      "id": "v1-changelog",
-      "canonical": "v1-gas/CHANGELOG.md",
-      "canonicalSha256": "6184a6d39b2cdb12bd4d1eb6a073f8b14dd1f44952a314324c4faf5e7c8558b0",
-      "reviewStatus": "reviewed",
-      "translations": {
-        "en": "v1-gas/CHANGELOG.en.md",
-        "ja": "v1-gas/CHANGELOG.ja.md",
-        "es": "v1-gas/CHANGELOG.es.md",
-        "pt-BR": "v1-gas/CHANGELOG.pt-BR.md"
-      }
-    },
-    {
-      "id": "v2-readme",
-      "canonical": "v2-nextjs/README.md",
-      "canonicalSha256": "ed1ef159be8207485a808dc79fb84b5def993109a6c2eed1db63aed991f0c35f",
-      "reviewStatus": "reviewed",
-      "translations": {
-        "en": "v2-nextjs/README.en.md",
-        "ja": "v2-nextjs/README.ja.md",
-        "es": "v2-nextjs/README.es.md",
-        "pt-BR": "v2-nextjs/README.pt-BR.md"
-      }
-    },
-    {
-      "id": "v2.2.5-release-note",
-      "canonical": "v2-nextjs/releases/v2.2.5/README.md",
-      "canonicalSha256": "4847ab5dc9ebb164f03ad9d6880925075f9348053717255685ddf60efa0033a8",
-      "reviewStatus": "reviewed",
-      "translations": {
-        "en": "v2-nextjs/releases/v2.2.5/README.en.md",
-        "ja": "v2-nextjs/releases/v2.2.5/README.ja.md",
-        "es": "v2-nextjs/releases/v2.2.5/README.es.md",
-        "pt-BR": "v2-nextjs/releases/v2.2.5/README.pt-BR.md"
-      }
-    },
-    {
-      "id": "v2.2.7-release-note",
-      "canonical": "v2-nextjs/releases/v2.2.7/README.md",
-      "canonicalSha256": "95aa6b2d9856835b947b47409c7e4c0b3e5f86466c10fec5775780ed4b075c5b",
-      "reviewStatus": "reviewed",
-      "translations": {
-        "en": "v2-nextjs/releases/v2.2.7/README.en.md",
-        "ja": "v2-nextjs/releases/v2.2.7/README.ja.md",
-        "es": "v2-nextjs/releases/v2.2.7/README.es.md",
-        "pt-BR": "v2-nextjs/releases/v2.2.7/README.pt-BR.md"
-      }
-    },
-    {
-      "id": "v2.2.6-release-note",
-      "canonical": "v2-nextjs/releases/v2.2.6/README.md",
-      "canonicalSha256": "0be5c6cc94942e8e55eec76786061dfea522b7ea10b8799887671fad5b885bf9",
-      "reviewStatus": "reviewed",
-      "translations": {
-        "en": "v2-nextjs/releases/v2.2.6/README.en.md",
-        "ja": "v2-nextjs/releases/v2.2.6/README.ja.md",
-        "es": "v2-nextjs/releases/v2.2.6/README.es.md",
-        "pt-BR": "v2-nextjs/releases/v2.2.6/README.pt-BR.md"
-      }
-    }
-  ],
-  "historicalBackfill": {
-    "v1ReleaseNotes": "pending-pilot-review",
-    "v2ReleaseNotesBefore2.2.5": "pending-pilot-review",
-    "clinicianReadableCalculationReports": "pending-pilot-review",
-    "technicalCollectionReadmes": "pending-pilot-review"
-  }
+    "schemaVersion":  1,
+    "canonicalLocale":  "ko",
+    "companionLocales":  [
+                             "en",
+                             "ja",
+                             "es",
+                             "pt-BR"
+                         ],
+    "glossary":  "docs/localization/clinical-terminology.json",
+    "glossaryVersion":  "2026-07-21.1",
+    "releaseTypeLabels":  {
+                              "ko":  {
+                                         "major":  "메이저 패치",
+                                         "minor":  "마이너 패치",
+                                         "bug":  "버그 패치",
+                                         "hotfix":  "핫픽스"
+                                     },
+                              "en":  {
+                                         "major":  "major release",
+                                         "minor":  "minor release",
+                                         "bug":  "bug-fix release",
+                                         "hotfix":  "hotfix"
+                                     },
+                              "ja":  {
+                                         "major":  "メジャーリリース",
+                                         "minor":  "マイナーリリース",
+                                         "bug":  "バグ修正",
+                                         "hotfix":  "ホットフィックス"
+                                     },
+                              "es":  {
+                                         "major":  "versión mayor",
+                                         "minor":  "versión menor",
+                                         "bug":  "corrección de errores",
+                                         "hotfix":  "hotfix"
+                                     },
+                              "pt-BR":  {
+                                            "major":  "versão principal",
+                                            "minor":  "versão menor",
+                                            "bug":  "correção de erros",
+                                            "hotfix":  "hotfix"
+                                        }
+                          },
+    "pilotStatus":  "reviewed",
+    "documentGroups":  [
+                           {
+                               "id":  "root-readme",
+                               "canonical":  "README.md",
+                               "canonicalSha256":  "5aceaafc7ed3374fb69c2d87a68d1cac025040645ee109b69248556eb76d7e86",
+                               "reviewStatus":  "reviewed",
+                               "translations":  {
+                                                    "en":  "README.en.md",
+                                                    "ja":  "README.ja.md",
+                                                    "es":  "README.es.md",
+                                                    "pt-BR":  "README.pt-BR.md"
+                                                }
+                           },
+                           {
+                               "id":  "root-changelog",
+                               "canonical":  "CHANGELOG.md",
+                               "canonicalSha256":  "121da5158a2d56132bb99ba6a58b06f1efd9ca009e92629e58b39cafcd2ae88a",
+                               "reviewStatus":  "reviewed",
+                               "translations":  {
+                                                    "en":  "CHANGELOG.en.md",
+                                                    "ja":  "CHANGELOG.ja.md",
+                                                    "es":  "CHANGELOG.es.md",
+                                                    "pt-BR":  "CHANGELOG.pt-BR.md"
+                                                }
+                           },
+                           {
+                               "id":  "acknowledgements",
+                               "canonical":  "ACKNOWLEDGEMENTS.md",
+                               "canonicalSha256":  "9a988ff6a59477350e0fc79d065a2f513636f59b2aedc2861d14f050fccfd4cc",
+                               "reviewStatus":  "reviewed",
+                               "translations":  {
+                                                    "en":  "ACKNOWLEDGEMENTS.en.md",
+                                                    "ja":  "ACKNOWLEDGEMENTS.ja.md",
+                                                    "es":  "ACKNOWLEDGEMENTS.es.md",
+                                                    "pt-BR":  "ACKNOWLEDGEMENTS.pt-BR.md"
+                                                }
+                           },
+                           {
+                               "id":  "v1-readme",
+                               "canonical":  "v1-gas/README.md",
+                               "canonicalSha256":  "a541688bed63ec4a32ac8e759c6bb21a13b89d9403df35ca97316575a3769eb8",
+                               "reviewStatus":  "reviewed",
+                               "translations":  {
+                                                    "en":  "v1-gas/README.en.md",
+                                                    "ja":  "v1-gas/README.ja.md",
+                                                    "es":  "v1-gas/README.es.md",
+                                                    "pt-BR":  "v1-gas/README.pt-BR.md"
+                                                }
+                           },
+                           {
+                               "id":  "v1-changelog",
+                               "canonical":  "v1-gas/CHANGELOG.md",
+                               "canonicalSha256":  "6184a6d39b2cdb12bd4d1eb6a073f8b14dd1f44952a314324c4faf5e7c8558b0",
+                               "reviewStatus":  "reviewed",
+                               "translations":  {
+                                                    "en":  "v1-gas/CHANGELOG.en.md",
+                                                    "ja":  "v1-gas/CHANGELOG.ja.md",
+                                                    "es":  "v1-gas/CHANGELOG.es.md",
+                                                    "pt-BR":  "v1-gas/CHANGELOG.pt-BR.md"
+                                                }
+                           },
+                           {
+                               "id":  "v2-readme",
+                               "canonical":  "v2-nextjs/README.md",
+                               "canonicalSha256":  "ed1ef159be8207485a808dc79fb84b5def993109a6c2eed1db63aed991f0c35f",
+                               "reviewStatus":  "reviewed",
+                               "translations":  {
+                                                    "en":  "v2-nextjs/README.en.md",
+                                                    "ja":  "v2-nextjs/README.ja.md",
+                                                    "es":  "v2-nextjs/README.es.md",
+                                                    "pt-BR":  "v2-nextjs/README.pt-BR.md"
+                                                }
+                           },
+                           {
+                               "id":  "v2.2.5-release-note",
+                               "canonical":  "v2-nextjs/releases/v2.2.5/README.md",
+                               "canonicalSha256":  "4847ab5dc9ebb164f03ad9d6880925075f9348053717255685ddf60efa0033a8",
+                               "reviewStatus":  "reviewed",
+                               "translations":  {
+                                                    "en":  "v2-nextjs/releases/v2.2.5/README.en.md",
+                                                    "ja":  "v2-nextjs/releases/v2.2.5/README.ja.md",
+                                                    "es":  "v2-nextjs/releases/v2.2.5/README.es.md",
+                                                    "pt-BR":  "v2-nextjs/releases/v2.2.5/README.pt-BR.md"
+                                                }
+                           },
+                           {
+                               "id":  "v2.2.7-release-note",
+                               "canonical":  "v2-nextjs/releases/v2.2.7/README.md",
+                               "canonicalSha256":  "b0764beb1a610657215494e9889b2b17cd65e5ea6d042d675a144e29f8b8da3e",
+                               "reviewStatus":  "reviewed",
+                               "translations":  {
+                                                    "en":  "v2-nextjs/releases/v2.2.7/README.en.md",
+                                                    "ja":  "v2-nextjs/releases/v2.2.7/README.ja.md",
+                                                    "es":  "v2-nextjs/releases/v2.2.7/README.es.md",
+                                                    "pt-BR":  "v2-nextjs/releases/v2.2.7/README.pt-BR.md"
+                                                }
+                           },
+                           {
+                               "id":  "v2.2.6-release-note",
+                               "canonical":  "v2-nextjs/releases/v2.2.6/README.md",
+                               "canonicalSha256":  "0be5c6cc94942e8e55eec76786061dfea522b7ea10b8799887671fad5b885bf9",
+                               "reviewStatus":  "reviewed",
+                               "translations":  {
+                                                    "en":  "v2-nextjs/releases/v2.2.6/README.en.md",
+                                                    "ja":  "v2-nextjs/releases/v2.2.6/README.ja.md",
+                                                    "es":  "v2-nextjs/releases/v2.2.6/README.es.md",
+                                                    "pt-BR":  "v2-nextjs/releases/v2.2.6/README.pt-BR.md"
+                                                }
+                           }
+                       ],
+    "historicalBackfill":  {
+                               "v1ReleaseNotes":  "pending-pilot-review",
+                               "v2ReleaseNotesBefore2.2.5":  "pending-pilot-review",
+                               "clinicianReadableCalculationReports":  "pending-pilot-review",
+                               "technicalCollectionReadmes":  "pending-pilot-review"
+                           }
 }

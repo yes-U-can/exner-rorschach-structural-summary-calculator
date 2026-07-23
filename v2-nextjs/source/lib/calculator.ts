@@ -91,6 +91,12 @@ export function calculateStructuralSummary(
               message: `Multiple ${issue.family} movement codes at row ${row}: ${issue.codes.join(', ')}`,
             };
           }
+          if (issue.type === 'duplicate_determinant') {
+            return {
+              field: `responses.${issue.responseIndex}.determinants`,
+              message: `Duplicate determinant code at row ${row}: ${issue.code}`,
+            };
+          }
           return {
             field: `responses.${issue.responseIndex}.fq`,
             message: `Form Quality is missing at row ${row}; select +, o, u, -, or none.`,

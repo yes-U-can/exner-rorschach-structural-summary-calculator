@@ -51,7 +51,7 @@ The connected work from v2.1.8 through v2.1.10 is documented across the correspo
 
 ## v2.2.7
 
-v2.2.7 is a bug-fix release that prevents three kinds of incomplete scoring-table input from passing into calculation. The standalone `S` was removed from the location options so that white-space responses are always recorded as `WS`, `DS`, or `DdS`; duplicate codes from the same movement family can no longer be entered for one response; and calculation can no longer run with blank Form Quality. In records where every response is pure form (`F`), Lambda is reported as the pure F count instead of the infinity symbol.
+v2.2.7 is a bug-fix release that prevents three kinds of incomplete scoring-table input from passing into calculation. The standalone `S` was removed from the location options so that white-space responses are always recorded as `WS`, `DS`, or `DdS`; the same determinant or duplicate codes from the same movement family can no longer be entered for one response; and calculation can no longer run with blank Form Quality. In records where every response is pure form (`F`), Lambda is reported as the pure F count instead of the infinity symbol.
 
 Existing protocols entered by the rules do not need to be recalculated. If an older autosave still contains one of these values, the app preserves the original, stops calculation, and identifies the rows to review in all five languages. The release also introduces a rule list that automatically checks whether the five-language reference documents state the same clinical rules. See the [v2.2.7 patch note](./v2-nextjs/releases/v2.2.7/README.en.md) for details.
 

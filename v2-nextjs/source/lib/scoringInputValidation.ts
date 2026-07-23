@@ -26,6 +26,11 @@ export type ScoringInputIssue =
       codes: string[];
     }
   | {
+      type: 'duplicate_determinant';
+      responseIndex: number;
+      code: string;
+    }
+  | {
       type: 'missing_form_quality';
       responseIndex: number;
     };
@@ -54,6 +59,24 @@ export function getDisabledMovementCodes(
   return [...familiesUsedElsewhere].flatMap((family) => [
     ...MOVEMENT_CODE_FAMILIES[family],
   ]);
+}
+
+/**
+ * A blend never repeats the same determinant, so a code selected in one slot
+ * is disabled in every other slot, alongside the movement-family disables.
+ */
+export function getDisabledDeterminantCodes(
+  values: readonly string[],
+  currentIndex: number,
+): string[] {
+  const selectedElsewhere = values.filter(
+    (value, index) => index !== currentIndex && value.length > 0,
+  );
+
+  return [...new Set([
+    ...getDisabledMovementCodes(values, currentIndex),
+    ...selectedElsewhere,
+  ])];
 }
 
 /**
@@ -90,17 +113,28 @@ export function findScoringInputIssues(
     }
 
     for (const [family, familyCodes] of Object.entries(MOVEMENT_CODE_FAMILIES)) {
-      const selectedCodes = response.determinants.filter((code) =>
-        (familyCodes as readonly string[]).includes(code),
-      );
-      if (selectedCodes.length > 1) {
+      const distinctFamilyCodes = [...new Set(
+        response.determinants.filter((code) =>
+          (familyCodes as readonly string[]).includes(code),
+        ),
+      )];
+      if (distinctFamilyCodes.length > 1) {
         issues.push({
           type: 'movement_family_conflict',
           responseIndex,
           family: family as MovementFamily,
-          codes: selectedCodes,
+          codes: distinctFamilyCodes,
         });
       }
+    }
+
+    const seenCodes = new Set<string>();
+    for (const code of response.determinants) {
+      if (code.length === 0) continue;
+      if (seenCodes.has(code)) {
+        issues.push({ type: 'duplicate_determinant', responseIndex, code });
+      }
+      seenCodes.add(code);
     }
 
     if (response.fq.trim().length === 0) {
@@ -123,6 +157,10 @@ export function summarizeScoringInputIssues(issues: readonly ScoringInputIssue[]
     (issue): issue is Extract<ScoringInputIssue, { type: 'invalid_determinant' }> =>
       issue.type === 'invalid_determinant',
   );
+  const duplicateDeterminants = issues.filter(
+    (issue): issue is Extract<ScoringInputIssue, { type: 'duplicate_determinant' }> =>
+      issue.type === 'duplicate_determinant',
+  );
 
   return {
     invalidDeterminants: {
@@ -131,6 +169,10 @@ export function summarizeScoringInputIssues(issues: readonly ScoringInputIssue[]
     },
     standaloneSpaceRows: rowsFor('standalone_space'),
     movementConflictRows: rowsFor('movement_family_conflict'),
+    duplicateDeterminants: {
+      rows: rowsFor('duplicate_determinant'),
+      codes: [...new Set(duplicateDeterminants.map((issue) => issue.code))].join(', '),
+    },
     missingFormQualityRows: rowsFor('missing_form_quality'),
   };
 }

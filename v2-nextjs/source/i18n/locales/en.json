@@ -266,6 +266,10 @@
       "title": "Review White-Space Location",
       "message": "Rows {rows} use S as a stand-alone location code. Select WS, DS, or DdS according to the basic location used in the response. Calculation is blocked until these rows are corrected."
     },
+    "duplicateDeterminant": {
+      "title": "Review Duplicate Determinants",
+      "message": "Rows {rows} contain the same determinant {codes} more than once. Record each determinant only once per response. Calculation is blocked until these rows are corrected."
+    },
     "movementConflict": {
       "title": "Review Duplicate Movement Codes",
       "message": "Rows {rows} contain more than one code from the same movement family. For each human, animal, or inanimate movement family in a response, select only one of a, p, or a-p. Review the response record and inquiry before correcting it. Calculation is blocked until these rows are corrected."
