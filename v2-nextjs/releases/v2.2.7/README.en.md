@@ -60,9 +60,9 @@ The five-language search data and AI assistants were also checked.
 - Representative questions about a standalone `S`, duplicate movement codes, and blank Form Quality were called live in all five languages; none of the 15 calls produced an answer that violated the rules.
 - In the full automated suite, 83 test files passed all 476 checks; 7 checks were skipped because their run conditions were unavailable. The production build, static code checks, five-language copy audit, and secret scanning also passed.
 
-Reporting Lambda as the pure F count is a software reporting convention on which several public sources agree, but a source-text page that states it explicitly has not yet been obtained. What was verified and what remains open are recorded as-is in the verification documents.
+Reporting Lambda as the pure F count is a software reporting convention on which several public sources agree. The scope of evidence confirmed through public sources and the remaining limits are recorded as-is in the verification documents.
 
-OpenAI Codex was used for implementation and repeated testing, and Claude Fable 5 was used to review the documentation and calculation evidence before publication. Agreement between tools was not treated as proof; public professional references and reproducible calculation results were the standard.
+OpenAI Codex and Claude Fable 5 were both used for implementation and repeated testing, and Claude Fable 5 was used to review the documentation and calculation evidence before publication. Agreement between tools was not treated as proof; public professional references and reproducible calculation results were the standard.
 
 ## UI/UX, privacy, and calculation scope
 

@@ -60,9 +60,9 @@ También se comprobaron los datos de búsqueda en cinco idiomas y los asistentes
 - Se realizaron llamadas reales en cinco idiomas con preguntas representativas sobre la `S` aislada, los códigos de movimiento duplicados y la calidad formal en blanco, y se comprobó que ninguna de las 15 llamadas produjo respuestas contrarias a las reglas.
 - En el conjunto automatizado completo se superaron 476 comprobaciones de 83 archivos de prueba y 7 se omitieron porque no se cumplían sus condiciones de ejecución. También se superaron la compilación de producción, el análisis estático del código, la auditoría de textos en cinco idiomas y la detección de secretos.
 
-La notación de Lambda como número de respuestas de F pura es una forma de informe de software en la que coinciden varios materiales públicos, pero aún no se ha localizado la página de la obra original que la establezca de forma explícita. El alcance comprobado y las limitaciones pendientes se registraron tal cual en la documentación de verificación.
+La notación de Lambda como número de respuestas de F pura es una forma de informe de software en la que coinciden varios materiales públicos. El alcance de la evidencia comprobada por vías públicas y las limitaciones pendientes se registraron tal cual en la documentación de verificación.
 
-OpenAI Codex se utilizó para la implementación y las pruebas repetidas, y Claude Fable 5 para revisar la documentación y los fundamentos de cálculo antes de la publicación. La coincidencia entre herramientas no se consideró una prueba; el criterio fueron las fuentes profesionales públicas y los resultados de cálculo reproducibles.
+OpenAI Codex y Claude Fable 5 se utilizaron para la implementación y las pruebas repetidas, y Claude Fable 5 para revisar la documentación y los fundamentos de cálculo antes de la publicación. La coincidencia entre herramientas no se consideró una prueba; el criterio fueron las fuentes profesionales públicas y los resultados de cálculo reproducibles.
 
 ## UI/UX, privacidad y alcance del cálculo
 

@@ -130,7 +130,7 @@
                            {
                                "id":  "v2.2.7-release-note",
                                "canonical":  "v2-nextjs/releases/v2.2.7/README.md",
-                               "canonicalSha256":  "b0764beb1a610657215494e9889b2b17cd65e5ea6d042d675a144e29f8b8da3e",
+                               "canonicalSha256":  "d3862236553bbf518ce563501a714039b7af194a8b51b13b33dfe7e10521d416",
                                "reviewStatus":  "reviewed",
                                "translations":  {
                                                     "en":  "v2-nextjs/releases/v2.2.7/README.en.md",

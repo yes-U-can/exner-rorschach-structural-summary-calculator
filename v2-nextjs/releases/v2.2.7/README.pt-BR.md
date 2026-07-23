@@ -60,9 +60,9 @@ Os dados de busca nos cinco idiomas e os assistentes de IA também foram verific
 - Perguntas representativas sobre o `S` isolado, a duplicação de códigos de movimento e a Qualidade Formal em branco foram chamadas de fato nos cinco idiomas; nas 15 chamadas, foi confirmado que nenhuma resposta violou as regras.
 - No conjunto automatizado completo, 476 verificações em 83 arquivos de teste passaram e 7 foram ignoradas porque suas condições de execução não estavam disponíveis. A compilação de produção, a análise estática do código, a auditoria de textos nos cinco idiomas e a verificação de segredos também passaram.
 
-A notação do Lambda como número de respostas de F pura é uma forma de relatório de software na qual vários materiais públicos coincidem, mas a página da obra original que a declare explicitamente ainda não foi obtida. O alcance verificado e as limitações restantes foram registrados tal como estão no documento de verificação.
+A notação do Lambda como número de respostas de F pura é uma forma de relatório de software na qual vários materiais públicos coincidem. O alcance da evidência verificada por vias públicas e as limitações restantes foram registrados tal como estão no documento de verificação.
 
-O OpenAI Codex foi usado para a implementação e os testes repetidos, e o Claude Fable 5 para a revisão da documentação e das evidências dos cálculos antes da publicação. A concordância entre as ferramentas não foi tratada como gabarito; os critérios foram materiais profissionais públicos e resultados de cálculo reproduzíveis.
+O OpenAI Codex e o Claude Fable 5 foram usados para a implementação e os testes repetidos, e o Claude Fable 5 para a revisão da documentação e das evidências dos cálculos antes da publicação. A concordância entre as ferramentas não foi tratada como gabarito; os critérios foram materiais profissionais públicos e resultados de cálculo reproduzíveis.
 
 ## UI/UX, privacidade e escopo do cálculo
 

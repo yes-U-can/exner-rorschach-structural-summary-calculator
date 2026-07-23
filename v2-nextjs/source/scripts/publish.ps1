@@ -292,7 +292,16 @@ function Assert-NoPublicEditorialLeak {
     '\btarget reader\b',
     '\bintended readers?\b',
     '\bclinician-first\b',
-    '\breader-first\b'
+    '\breader-first\b',
+    '\uC6D0\uC804[^\r\n]*\uD655\uBCF4',
+    '\uC6D0\uC804[^\r\n]*\uC785\uC218',
+    '\uC6D0\uBB38[^\r\n]*\uD655\uBCF4',
+    '\uC804\uBB38\s*\uBBF8\uD655\uBCF4',
+    '\uC804\uBB38\uC744\s*\uD655\uBCF4',
+    '\u539F\u5178\u306E?\u30DA\u30FC\u30B8.*\u78BA\u4FDD',
+    '\bsource-text page\b.*\bobtained\b',
+    'p\u00E1gina de la obra original',
+    'p\u00E1gina da obra original'
   )
 
   $leaks = @()
