@@ -20,7 +20,6 @@ relatedRoutes:
   - "scoring-input/special-score/CONTAM"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/ideation/lv2/index.md"
 ---
 

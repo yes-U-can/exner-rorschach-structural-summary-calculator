@@ -548,6 +548,24 @@
         "result-interpretation/lower-section/interpersonal/COP",
         "result-interpretation/lower-section/interpersonal/ISO_Index"
       ]
+    },
+    {
+      "id": "es-coding-space-standalone-boundary",
+      "bucket": "coding",
+      "query": "¿Puedo introducir S como única localización cuando la respuesta usa espacio blanco?",
+      "expectedTopRoute": "scoring-input/location/S"
+    },
+    {
+      "id": "es-coding-movement-family-conflict",
+      "bucket": "coding",
+      "query": "¿Puedo introducir Ma y Mp en casillas separadas de determinantes para una misma respuesta?",
+      "expectedTopRoute": "scoring-input/determinants"
+    },
+    {
+      "id": "es-coding-fq-blank-boundary",
+      "bucket": "coding",
+      "query": "¿Dejar FQ vacío significa lo mismo que FQnone?",
+      "expectedTopRoute": "scoring-input/fq/none"
     }
   ]
 }

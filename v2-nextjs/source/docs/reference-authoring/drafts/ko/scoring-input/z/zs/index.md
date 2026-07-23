@@ -17,7 +17,6 @@ relatedRoutes:
   - "result-interpretation/upper-section/Zd"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/z/zs/index.md"
 ---
 

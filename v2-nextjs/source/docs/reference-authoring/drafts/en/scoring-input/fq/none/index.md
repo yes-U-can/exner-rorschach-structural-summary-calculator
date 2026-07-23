@@ -14,7 +14,6 @@ relatedRoutes:
   - "scoring-input/special-score/AB"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
@@ -30,6 +29,7 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 
 `none` is used when the response does not receive a form quality code.
 This means form is not available as a codable basis for judging form fit.
+A blank field is unfinished coding, not `FQnone`; select `none` explicitly when it applies.
 
 ## Application Conditions
 

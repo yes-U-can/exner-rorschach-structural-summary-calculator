@@ -14,7 +14,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/mediation/x-minus-percent"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/fq/minus/index.md"
 ---
 

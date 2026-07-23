@@ -53,7 +53,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/selfPerception/FD"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
@@ -65,6 +64,7 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 - determinant coding
 - movement
 - chromatic color
+- duplicate movement-family input
 
 ## Core Definition
 
@@ -75,6 +75,7 @@ They do not code what the person sees, but why it appears that way: form, moveme
 
 - The coding decision must be based on the person's words and inquiry, not on free examiner inference.
 - A response may contain more than one determinant if the person actually uses more than one blot feature.
+- Multiple determinants may coexist, but active and passive codes from the same movement family are not entered in separate slots. Record only one of `a`, `p`, or `a-p` for each human, animal, or inanimate movement family.
 - When a complex response combines determinants, code them in the order they appear in the response phase.
 - The main determinant families are movement [`M`](ref://scoring-input/determinants/M), [`FM`](ref://scoring-input/determinants/FM), [`m`](ref://scoring-input/determinants/m); chromatic color [`FC`](ref://scoring-input/determinants/FC), [`CF`](ref://scoring-input/determinants/CF), [`C`](ref://scoring-input/determinants/C), [`Cn`](ref://scoring-input/determinants/Cn); achromatic color [`FC'`](ref://scoring-input/determinants/FC%27), [`C'F`](ref://scoring-input/determinants/C%27F), [`C'`](ref://scoring-input/determinants/C%27); texture [`FT`](ref://scoring-input/determinants/FT), [`TF`](ref://scoring-input/determinants/TF), [`T`](ref://scoring-input/determinants/T); vista [`FV`](ref://scoring-input/determinants/FV), [`VF`](ref://scoring-input/determinants/VF), [`V`](ref://scoring-input/determinants/V); diffuse shading [`FY`](ref://scoring-input/determinants/FY), [`YF`](ref://scoring-input/determinants/YF), [`Y`](ref://scoring-input/determinants/Y); pure form [`F`](ref://scoring-input/determinants/F); reflection [`Fr`](ref://scoring-input/determinants/Fr), [`rF`](ref://scoring-input/determinants/rF); and form-based dimension [`FD`](ref://scoring-input/determinants/FD).
 

@@ -21,6 +21,18 @@ const v2SourceUrl = `${exhibitionRepoUrl}/tree/main/v2-nextjs/source`;
 
 export const v2NextVersions: VersionArchiveEntry[] = [
   {
+    version: 'v2.2.7',
+    title: 'Version 2.2.7',
+    series: 'v2-nextjs',
+    publishedAt: '2026-07-23',
+    releaseKind: 'bugfix',
+    releaseLabel: '버그 패치',
+    summary:
+      '채점 입력에서 단독 S 위치, 같은 운동 계열 부호의 중복 입력, 비어 있는 형태질이 계산으로 이어지지 않도록 다섯 언어 안내와 함께 차단했습니다. 모든 반응이 순수 F인 기록의 Lambda는 무한대 기호 대신 순수 F 개수로 보고합니다. 유효한 기존 프로토콜의 계산 결과는 변하지 않습니다.',
+    sourceUrl: v2SourceUrl,
+    releaseUrl: v2ReleaseUrl('v2.2.7'),
+  },
+  {
     version: 'v2.2.6',
     title: 'Version 2.2.6',
     series: 'v2-nextjs',

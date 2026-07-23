@@ -19,7 +19,6 @@ relatedRoutes:
   - "scoring-input/determinants/YF"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/core/sumy/index.md"
 ---
 

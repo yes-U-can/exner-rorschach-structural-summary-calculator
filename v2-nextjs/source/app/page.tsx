@@ -17,9 +17,9 @@ import { exportToCSV, exportSummaryToCSV, generateSummaryCsv } from '@/lib/csv';
 import { exportToPdf } from '@/lib/pdf';
 import { buildPrintResponseMemoGroups } from '@/lib/printResponseMemos';
 import {
-  findInvalidDeterminantInputs,
-  summarizeInvalidDeterminantInputs,
-} from '@/lib/determinantInput';
+  findScoringInputIssues,
+  summarizeScoringInputIssues,
+} from '@/lib/scoringInputValidation';
 import {
   fetchByokSessionStatus,
   openByokSessionDialog,
@@ -37,7 +37,7 @@ import {
   subscribeSessionUiPreferencesClear,
   writeSessionUiPreferences,
 } from '@/lib/sessionUiPreferencesStorage';
-import type { CodingAssistContext } from '@/types';
+import type { CodingAssistContext, RorschachResponse } from '@/types';
 
 // Lazy-loaded heavy components (only loaded when actually needed)
 const UpperSection = lazy(() => import('@/components/result/UpperSection'));
@@ -275,6 +275,43 @@ export default function HomePage() {
   const showCodingAssistLauncher = Boolean(hasAiSession && !showChatWidget && !showResult);
 
   const pageUi = useMemo(() => homeUiByLanguage[language] ?? homeUiByLanguage.en, [language]);
+  const showScoringInputWarnings = useCallback((inputResponses: RorschachResponse[]) => {
+    const issues = findScoringInputIssues(inputResponses);
+    if (issues.length === 0) return false;
+
+    const summary = summarizeScoringInputIssues(issues);
+    if (summary.invalidDeterminants.rows) {
+      showToast({
+        type: 'warning',
+        title: t('toast.invalidDeterminants.title'),
+        message: t('toast.invalidDeterminants.message', summary.invalidDeterminants),
+      });
+    }
+    if (summary.standaloneSpaceRows) {
+      showToast({
+        type: 'warning',
+        title: t('toast.standaloneSpace.title'),
+        message: t('toast.standaloneSpace.message', { rows: summary.standaloneSpaceRows }),
+      });
+    }
+    if (summary.movementConflictRows) {
+      showToast({
+        type: 'warning',
+        title: t('toast.movementConflict.title'),
+        message: t('toast.movementConflict.message', { rows: summary.movementConflictRows }),
+      });
+    }
+    if (summary.missingFormQualityRows) {
+      showToast({
+        type: 'warning',
+        title: t('toast.missingFormQuality.title'),
+        message: t('toast.missingFormQuality.message', { rows: summary.missingFormQualityRows }),
+      });
+    }
+
+    return true;
+  }, [showToast, t]);
+
   useEffect(() => {
     const root = document.documentElement;
 
@@ -777,14 +814,7 @@ export default function HomePage() {
     const savedData = load();
     if (savedData) {
       loadData(savedData);
-      const issues = findInvalidDeterminantInputs(savedData);
-      if (issues.length > 0) {
-        showToast({
-          type: 'warning',
-          title: t('toast.invalidDeterminants.title'),
-          message: t('toast.invalidDeterminants.message', summarizeInvalidDeterminantInputs(issues)),
-        });
-      }
+      showScoringInputWarnings(savedData);
     }
     setShowWelcomeModal(false);
   };
@@ -805,18 +835,7 @@ export default function HomePage() {
   const handleCalculate = () => {
     if (isCalculating) return;
 
-    const invalidDeterminants = findInvalidDeterminantInputs(responses);
-    if (invalidDeterminants.length > 0) {
-      showToast({
-        type: 'warning',
-        title: t('toast.invalidDeterminants.title'),
-        message: t(
-          'toast.invalidDeterminants.message',
-          summarizeInvalidDeterminantInputs(invalidDeterminants),
-        ),
-      });
-      return;
-    }
+    if (showScoringInputWarnings(responses)) return;
 
     if (validResponseCount < 14) {
       showToast({

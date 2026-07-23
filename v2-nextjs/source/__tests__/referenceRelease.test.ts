@@ -56,7 +56,7 @@ describe('reference release snapshot', () => {
     expect(quality.brokenInlineRefTargetsCount).toBe(0);
     expect(quality.publicBodySourceHitsCount).toBe(0);
     expect(quality.queryBuckets).toEqual([
-      { bucket: 'coding', currentCount: 40, minimumCount: 40, pass: true },
+      { bucket: 'coding', currentCount: 43, minimumCount: 40, pass: true },
       { bucket: 'interpretation', currentCount: 40, minimumCount: 40, pass: true },
       { bucket: 'graph-navigation', currentCount: 20, minimumCount: 20, pass: true },
     ]);

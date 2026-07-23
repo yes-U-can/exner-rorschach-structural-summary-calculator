@@ -23,7 +23,7 @@ Cada nota de atualização registra o que mudou, as condições que podem ser af
 ## Conteúdo publicado
 
 - [Next.js] Aplicativo web: [exner.yesucan.co.kr](https://exner.yesucan.co.kr)
-- [Next.js] Versão 2 mais recente: [v2-nextjs/releases/v2.2.6](./v2-nextjs/releases/v2.2.6/README.pt-BR.md)
+- [Next.js] Versão 2 mais recente: [v2-nextjs/releases/v2.2.7](./v2-nextjs/releases/v2.2.7/README.pt-BR.md)
 - [Next.js] Nova verificação da precisão de cálculo da v2.2.2: [v2-nextjs/source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md](./v2-nextjs/source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md)
 - [Next.js] Explicação de Cn da v2.2.2 e chamadas reais ao GPT-5.5 em 5 idiomas: [v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md](./v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md)
 - [Next.js] Validação da interface da v2.2.0: [v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md](./v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md)
@@ -48,6 +48,12 @@ Na série v2.1.x, os assistentes de IA foram aprimorados em etapas para concluir
 - **v2.1.10:** foram corrigidos os problemas restantes de reconhecimento de códigos em japonês, perguntas amplas de interpretação e configuração de um banco de dados novo.
 
 O trabalho relacionado da v2.1.8 à v2.1.10 está registrado nas respectivas notas de atualização.
+
+## v2.2.7
+
+A v2.2.7 é um patch de correção de erros que impede que três entradas incompletas da tabela de codificação sigam para o cálculo. O `S` isolado foi removido das opções de localização, de modo que as respostas de espaço em branco sejam sempre registradas como `WS`, `DS` ou `DdS`; códigos da mesma família de movimento não podem mais ser inseridos em duplicidade em uma mesma resposta; e não é mais possível calcular com a Qualidade Formal em branco. Nos registros em que todas as respostas são de forma pura (`F`), o Lambda é informado como o número de respostas de F pura em vez do símbolo de infinito.
+
+Os protocolos existentes inseridos conforme as regras não precisam ser recalculados. Se dados antigos salvos automaticamente contiverem esses valores, o aplicativo preserva o original, interrompe o cálculo e indica nos cinco idiomas as linhas que precisam de revisão. Também foi introduzida uma lista de regras que verifica automaticamente se os documentos de referência nos cinco idiomas declaram as mesmas regras clínicas. Consulte a [nota da v2.2.7](./v2-nextjs/releases/v2.2.7/README.pt-BR.md) para mais detalhes.
 
 ## v2.2.6
 
@@ -95,6 +101,7 @@ Os assistentes GPT-5.5 foram restringidos para não ampliar as respostas além d
 
 ## [Next.js] Histórico de versões 2
 
+- **[2026-07-23] v2.2.7 (correção de erros)** [Nota da versão](./v2-nextjs/releases/v2.2.7/README.pt-BR.md) [Código-fonte](./v2-nextjs/source/)
 - **[2026-07-20] v2.2.6 (correção de erros)** [Nota da versão](./v2-nextjs/releases/v2.2.6/README.pt-BR.md) [Código-fonte](./v2-nextjs/source/)
 - **[2026-07-19] v2.2.5 (correção de erros)** [Nota da versão](./v2-nextjs/releases/v2.2.5/README.pt-BR.md) [Código-fonte](./v2-nextjs/source/)
 - **[2026-07-18] v2.2.4 (correção de erros)** [Nota da versão](./v2-nextjs/releases/v2.2.4/) [Código-fonte](./v2-nextjs/source/)

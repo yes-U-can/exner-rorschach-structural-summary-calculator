@@ -19,7 +19,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/interpersonal/HumanCont"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/special-score/cop/index.md"
 ---
 

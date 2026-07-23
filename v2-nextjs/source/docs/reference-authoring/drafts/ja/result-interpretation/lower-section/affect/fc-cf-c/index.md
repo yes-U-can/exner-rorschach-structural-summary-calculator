@@ -25,7 +25,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/EA"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-affect-opening-fccfc-2026-03-10.md"
 ---
 

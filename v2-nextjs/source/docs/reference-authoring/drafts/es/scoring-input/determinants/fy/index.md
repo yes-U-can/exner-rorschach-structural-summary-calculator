@@ -18,7 +18,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/SumY"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/determinants/fy/index.md"
 ---
 

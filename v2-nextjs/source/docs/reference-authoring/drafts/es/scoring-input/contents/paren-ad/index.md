@@ -15,7 +15,6 @@ relatedRoutes:
   - "scoring-input/contents/Hd"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/contents/paren-ad/index.md"
 ---
 

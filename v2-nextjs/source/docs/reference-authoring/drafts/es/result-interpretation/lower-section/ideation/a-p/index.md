@@ -19,7 +19,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/interpersonal/a_p_inter"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/ideation/a-p/index.md"
 ---
 

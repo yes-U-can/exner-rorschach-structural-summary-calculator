@@ -16,7 +16,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/mediation/S_minus"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-location-2026-03-10.md"
 ---
 
@@ -43,7 +42,8 @@ Ele não é um código básico independente; modifica outra decisão de localiza
 
 - Mencionar fundo, sozinho, não basta. O espaço branco precisa funcionar como parte do percepto.
 - `S` não deve ser codificado sozinho como se fosse decisão completa de localização.
-- A interpretação de `S` pertence ao padrão do Structural Summary, não apenas a codificação de localização.
+- No Sumário Estrutural, `S` é o código que totaliza o uso de espaço branco; na entrada de cada resposta, registre sempre `WS`, `DS` ou `DdS`.
+- A interpretação de `S` pertence ao padrão do Sumário Estrutural, não apenas à codificação de localização.
 
 ## Referências cruzadas
 

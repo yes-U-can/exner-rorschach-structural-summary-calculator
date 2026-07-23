@@ -14,7 +14,6 @@ relatedRoutes:
   - "scoring-input/contents/Art"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/contents/id/index.md"
 ---
 

@@ -14,7 +14,6 @@ relatedRoutes:
   - "scoring-input/special-score/AB"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
@@ -30,6 +29,7 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 
 `none` は、その反応に形態水準コードを与えないときに使います。
 これは「形態適合が悪い」という意味ではなく、FQ を付与する前提が成り立たないことを示します。
+空欄は `FQnone` ではなく未完了の入力です。該当する場合は `none` を明示的に選択します。
 
 ## 採点・適用条件
 

@@ -16,7 +16,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/selfPerception/An_Xy"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/contents/an/index.md"
 ---
 

@@ -17,7 +17,6 @@ relatedRoutes:
   - "scoring-input/dq"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
@@ -48,6 +47,7 @@ It is about formal fit, not about the organizational level of the response.
 - `FQ+` is uncommon. A response is not `+` just because it sounds rich or clever.
 - The most delicate distinction outside the table is often between [`u`](ref://scoring-input/fq/u) and [`-`](ref://scoring-input/fq/-).
 - `none` does not mean poor form. It means no form quality code should be assigned.
+- A blank input is unfinished coding, not `none`; select `none` explicitly when it applies.
 
 ## Cross References
 

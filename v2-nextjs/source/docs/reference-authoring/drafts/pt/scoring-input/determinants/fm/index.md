@@ -14,7 +14,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/FM"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-determinants-movement-chromatic-2026-03-11.md"
 ---
 
@@ -33,6 +32,7 @@ O ponto central é que a ação permanece apropriada à espécie ou ao tipo de c
 ## Regra do código de entrada
 
 `FM` é o rótulo de família usado nos totais do Sumário Estrutural. Em uma resposta individual, registre `FMa`, `FMp` ou `FMa-p`, conforme a qualidade ativa ou passiva do movimento. `FM` sem sufixo não é um código completo para uma resposta individual.
+Em uma resposta, registre apenas um código de movimento animal. Se animais distintos mostrarem movimento ativo e passivo, registre `FMa-p` uma vez, em vez de inserir `FMa` e `FMp` em campos separados. Um único objeto que mostre ambos os movimentos não recebe `FMa-p` automaticamente; é preciso verificar qual movimento determina a codificação.
 
 ## Condições de aplicação
 

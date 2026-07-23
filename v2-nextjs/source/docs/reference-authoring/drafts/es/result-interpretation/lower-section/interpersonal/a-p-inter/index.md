@@ -18,7 +18,6 @@ relatedRoutes:
   - "scoring-input/determinants/M"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/interpersonal/a-p-inter/index.md"
 ---
 

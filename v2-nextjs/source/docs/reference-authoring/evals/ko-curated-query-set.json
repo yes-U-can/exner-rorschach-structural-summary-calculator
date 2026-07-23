@@ -745,6 +745,24 @@
         "scoring-input/determinants/M",
         "scoring-input/determinants/FC"
       ]
+    },
+    {
+      "id": "ko-coding-space-standalone-boundary",
+      "bucket": "coding",
+      "query": "흰 여백을 쓴 반응의 위치를 S 하나만 입력해도 돼?",
+      "expectedTopRoute": "scoring-input/location/S"
+    },
+    {
+      "id": "ko-coding-movement-family-conflict",
+      "bucket": "coding",
+      "query": "한 반응에 Ma와 Mp를 서로 다른 결정인 칸에 같이 넣어도 돼?",
+      "expectedTopRoute": "scoring-input/determinants"
+    },
+    {
+      "id": "ko-coding-fq-blank-boundary",
+      "bucket": "coding",
+      "query": "FQ를 비워 두는 것과 FQnone은 같은 뜻이야?",
+      "expectedTopRoute": "scoring-input/fq/none"
     }
   ]
 }

@@ -18,7 +18,6 @@ relatedRoutes:
   - "scoring-input/dq"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/fq/index.md"
 ---
 
@@ -33,7 +32,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/fq/i
 
 ## Definición central
 
-FQ registra que tan bien encaja el objeto descrito con los contornos de la mancha.
+FQ registra qué tan bien encaja el objeto descrito con los contornos de la mancha.
 No describe organización de la respuesta; describe ajuste formal entre percepción y área usada.
 
 ## Condiciones de aplicación
@@ -50,6 +49,7 @@ No describe organización de la respuesta; describe ajuste formal entre percepci
 - `FQ+` es raro. No basta con que la respuesta sea buena; debe mostrar una articulación formal más elaborada que la ordinaria.
 - La distinción más delicada fuera de tabla suele ser entre [`u`](ref://scoring-input/fq/u) y [`-`](ref://scoring-input/fq/-): si se ve rápido y sin forzar demasiado, tiende a `u`; si exige contornos arbitrarios o distorsión fuerte, tiende a `-`.
 - `none` no significa mala forma; significa que no corresponde asignar un código de calidad formal en esa respuesta.
+- Un campo vacío indica una codificación incompleta, no `none`; seleccione `none` de forma explícita cuando corresponda.
 
 ## Referencias cruzadas
 

@@ -15,7 +15,6 @@ relatedRoutes:
   - "result-interpretation/upper-section/W"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/location/w/index.md"
 ---
 

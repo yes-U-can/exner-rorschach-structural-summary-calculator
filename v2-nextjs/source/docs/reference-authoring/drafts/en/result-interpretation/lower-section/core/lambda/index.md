@@ -19,7 +19,6 @@ relatedRoutes:
   - "scoring-input/determinants/F"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 

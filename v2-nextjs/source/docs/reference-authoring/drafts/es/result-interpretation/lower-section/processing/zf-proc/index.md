@@ -18,7 +18,6 @@ relatedRoutes:
   - "scoring-input/z"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/processing/zf-proc/index.md"
 ---
 

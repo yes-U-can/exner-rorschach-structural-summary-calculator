@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /**
- * Computing Program for Rorschach Structural Summary v2.2.6
+ * Computing Program for Rorschach Structural Summary v2.2.7
  * Main Calculation Logic
  * 
  * Code.gs의 calculateRorschach 함수를 TypeScript로 이전
@@ -9,7 +9,7 @@
 import { SCORING_CONFIG } from './constants';
 import { val, fix1, fix2, zestFromZf, dTable } from './utils';
 import { classifyGPHR } from './gphr';
-import { findInvalidDeterminantInputs } from './determinantInput';
+import { findScoringInputIssues } from './scoringInputValidation';
 import type { RorschachResponse, CalculationResult, StructuralSummary } from '@/types';
 
 /**
@@ -67,14 +67,35 @@ export function calculateStructuralSummary(
 ): CalculationResult {
   try {
     const validResponses = responses;
-    const invalidDeterminants = findInvalidDeterminantInputs(validResponses);
-    if (invalidDeterminants.length > 0) {
+    const scoringInputIssues = findScoringInputIssues(validResponses);
+    if (scoringInputIssues.length > 0) {
       return {
         success: false,
-        errors: invalidDeterminants.map(({ responseIndex, code }) => ({
-          field: `responses.${responseIndex}.determinants`,
-          message: `Invalid determinant code at row ${responseIndex + 1}: ${code}`,
-        })),
+        errors: scoringInputIssues.map((issue) => {
+          const row = issue.responseIndex + 1;
+          if (issue.type === 'invalid_determinant') {
+            return {
+              field: `responses.${issue.responseIndex}.determinants`,
+              message: `Invalid determinant code at row ${row}: ${issue.code}`,
+            };
+          }
+          if (issue.type === 'standalone_space') {
+            return {
+              field: `responses.${issue.responseIndex}.location`,
+              message: `Standalone S location is incomplete at row ${row}; use WS, DS, or DdS.`,
+            };
+          }
+          if (issue.type === 'movement_family_conflict') {
+            return {
+              field: `responses.${issue.responseIndex}.determinants`,
+              message: `Multiple ${issue.family} movement codes at row ${row}: ${issue.codes.join(', ')}`,
+            };
+          }
+          return {
+            field: `responses.${issue.responseIndex}.fq`,
+            message: `Form Quality is missing at row ${row}; select +, o, u, -, or none.`,
+          };
+        }),
       };
     }
 
@@ -179,7 +200,12 @@ export function calculateStructuralSummary(
       r.determinants.length === 1 && r.determinants[0] === 'F'
     ).length;
     const lambdaDenominator = R - F_pure;
-    const Lambda = lambdaDenominator === 0 ? '∞' : (F_pure / lambdaDenominator);
+    // All-pure-F records make Lambda mathematically infinite (Meyer, Viglione,
+    // & Exner, 2001, doi:10.1207/S15327752JPA7601_4). This app never prints an
+    // infinity marker as a clinical value; it reports the pure-F count as a
+    // documented software convention. Evidence status:
+    // docs/ops/2026-07-23-authoritative-calculation-rule-audit.md.
+    const Lambda = lambdaDenominator === 0 ? F_pure : (F_pure / lambdaDenominator);
 
     // EBPer is reported only when the record has a marked, interpretable EB style.
     let EBPer: string | number = '-';

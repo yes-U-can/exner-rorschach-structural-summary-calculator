@@ -14,7 +14,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/m"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
@@ -34,6 +33,7 @@ It reflects mechanical, driven, or object-based movement.
 ## Input Code Rule
 
 `m` is the family label used in Structural Summary totals. For an individual response, enter `ma`, `mp`, or `ma-p` according to its active/passive quality. Bare `m` is not a complete response code.
+Use only one inanimate-movement code in a response. If separate inanimate objects show active and passive movement, enter `ma-p` once rather than entering `ma` and `mp` in separate slots. One object showing both is not automatically `ma-p`; review which movement governs the coding.
 
 ## Application Conditions
 

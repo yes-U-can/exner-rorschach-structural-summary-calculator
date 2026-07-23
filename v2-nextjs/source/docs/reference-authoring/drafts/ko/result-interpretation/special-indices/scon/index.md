@@ -24,7 +24,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/R"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/special-indices/scon/index.md"
 ---
 

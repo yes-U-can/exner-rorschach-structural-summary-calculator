@@ -17,7 +17,6 @@ relatedRoutes:
   - "scoring-input/dq"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
@@ -48,6 +47,7 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 - `FQ+` は珍しい区分です。豊かに聞こえる反応だからといって自動的に `+` にはしません。
 - 表にない反応では、[`u`](ref://scoring-input/fq/u) と [`-`](ref://scoring-input/fq/-) の区別が特に重要です。
 - `none` は「形態が悪い」という意味ではなく、「FQ を付けない」という意味です。
+- 空欄は `none` ではなく未完了の入力です。FQ を付けない反応では `none` を明示的に選択します。
 
 ## 相互参照
 

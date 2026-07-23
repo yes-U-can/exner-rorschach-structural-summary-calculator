@@ -17,7 +17,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/m"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/determinants/m--6d/index.md"
 ---
 
@@ -37,12 +36,13 @@ La idea central es que algo se mueve sin tratarse de acción humana ni animal.
 ## Regla del código de entrada
 
 `m` es la etiqueta de familia utilizada en los totales del Sumario Estructural. En una respuesta individual se registra `ma`, `mp` o `ma-p`, según la cualidad activa o pasiva del movimiento. `m` sin sufijo no es un código completo para una respuesta individual.
+En una respuesta se registra un solo código de movimiento inanimado. Si distintos objetos inanimados muestran movimiento activo y pasivo, se registra `ma-p` una vez, en lugar de introducir `ma` y `mp` en casillas separadas. Un solo objeto que muestre ambos movimientos no recibe `ma-p` automáticamente; debe revisarse qué movimiento determina la codificación.
 
 ## Condiciones de aplicación
 
 - La respuesta describe desplazamiento, elevación, caída, ondulación, giro u otra acción de objeto inanimado.
 - El movimiento puede aparecer en nubes, agua, fuego, humo, banderas, balas u otros objetos sin facultad de sentir.
-- La codificación depende de que el movimiento este realmente articulado por el sujeto.
+- La codificación depende de que el movimiento esté realmente articulado por el sujeto.
 - Si la acción corresponde a un animal, debe revisarse como [`FM`](ref://scoring-input/determinants/FM); si es antropomórfica, como [`M`](ref://scoring-input/determinants/M).
 
 ## Precauciones y distinciones

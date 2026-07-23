@@ -18,7 +18,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/FM"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
@@ -38,6 +37,7 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ## 入力コードの規則
 
 `FM` は構造一覧表で用いる動物運動の集計ラベルです。個々の反応には、運動の能動・受動の性質に応じて `FMa`、`FMp`、`FMa-p` のいずれかを入力します。添字のない `FM` は、個々の反応の完全な入力コードとして使用しません。
+一つの反応には動物運動コードを一つだけ入力します。別々の動物がそれぞれ能動運動と受動運動を示す場合は、`FMa` と `FMp` を別の欄に入力せず、`FMa-p` を一度入力します。一つの対象が両方の動きを示すだけで自動的に `FMa-p` とはせず、どの運動がコーディングを決めるかを確認します。
 
 ## 採点・適用条件
 

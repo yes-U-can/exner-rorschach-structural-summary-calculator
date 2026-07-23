@@ -146,7 +146,10 @@ describe('AI prompt contracts', () => {
     expect(prompt).toContain('Do not imply that the app can apply your suggestion automatically.');
     expect(prompt).toContain('If the memo lacks needed observation context, ask targeted follow-up questions');
     expect(prompt).toContain('When observation evidence is thin, use candidate/provisional language');
+    expect(prompt).toContain('S is not a complete stand-alone response location');
+    expect(prompt).toContain('WS, DS, or DdS');
     expect(prompt).toContain('FQnone is only for responses where form is not a codable basis');
+    expect(prompt).toContain('A blank FQ field is incomplete input');
     expect(prompt).toContain('For Popular/P specifically, a familiar content label');
     expect(prompt).toContain('Cultural or linguistic familiarity does not replace a coding criterion.');
     expect(prompt).toContain('culture and language are context only');
@@ -154,6 +157,8 @@ describe('AI prompt contracts', () => {
     expect(prompt).toContain('Every movement determinant for an individual response must include');
     expect(prompt).toContain('Ma, Mp, or Ma-p');
     expect(prompt).toContain('Never present bare M, FM, or m as a complete response code');
+    expect(prompt).toContain('Use only one code from each movement family in a response');
+    expect(prompt).toContain('one object showing both is not automatically a-p');
     expect(prompt).toContain('For Popular/P and FQ questions, require the specific percept');
     expect(prompt).toContain('I cannot directly or automatically edit the scoring sheet');
     expect(prompt).toContain('Candidate codes require clinician confirmation.');

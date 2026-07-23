@@ -16,7 +16,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/processing/W_D_Dd"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/upper-section/d/index.md"
 ---
 

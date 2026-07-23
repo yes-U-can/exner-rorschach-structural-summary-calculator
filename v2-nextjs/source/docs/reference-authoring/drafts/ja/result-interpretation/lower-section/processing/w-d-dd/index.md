@@ -20,7 +20,6 @@ relatedRoutes:
   - "scoring-input/location/Dd"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-processing-zf-zd-wddd-2026-03-10.md"
 ---
 

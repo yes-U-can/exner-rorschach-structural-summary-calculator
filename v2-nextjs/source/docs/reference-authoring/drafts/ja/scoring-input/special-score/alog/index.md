@@ -16,7 +16,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/WSum6"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-score-incom-fabcom-contam-alog-2026-03-10.md"
 ---
 

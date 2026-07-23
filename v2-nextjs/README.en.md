@@ -4,7 +4,7 @@
 
 This directory contains the release history and publicly shareable source code for v2 of the Rorschach Structural Summary calculator. The patch notes describe the latest changes, while the public source contains calculation-verification and implementation materials.
 
-- Latest patch note: [releases/v2.2.6](./releases/v2.2.6/README.en.md)
+- Latest patch note: [releases/v2.2.7](./releases/v2.2.7/README.en.md)
 - Calculation-accuracy re-audit: [source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md](./source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md)
 - Initial v2 release note: [releases/v2.0.0](./releases/v2.0.0/)
 - Public source code: [source](./source/)

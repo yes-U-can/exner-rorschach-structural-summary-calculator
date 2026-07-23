@@ -27,7 +27,6 @@ relatedRoutes:
   - "scoring-input/dq"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-upper-section-overview-2026-03-10.md"
 ---
 

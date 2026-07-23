@@ -19,7 +19,6 @@ relatedRoutes:
   - "result-interpretation/special-indices/HVI"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-mediation-xminus-sminus-p-2026-03-10.md"
 ---
 

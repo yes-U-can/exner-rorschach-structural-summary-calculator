@@ -16,7 +16,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/selfPerception/SumV_self"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-determinants-shading-2026-03-11.md"
 ---
 

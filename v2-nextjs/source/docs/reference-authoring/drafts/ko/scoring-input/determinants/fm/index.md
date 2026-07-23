@@ -16,7 +16,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/FM"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/determinants/fm/index.md"
 ---
 
@@ -34,6 +33,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/dete
 ## 입력 코드 규칙
 
 `FM`은 구조요약에서 동물운동의 전체 빈도를 표시하는 합계 항목이다. 개별 반응은 능동형 `FMa`, 수동형 `FMp`, 능동-수동형 `FMa-p` 중 하나로 구분해 입력한다. 능동형·수동형 표기가 없는 `FM`은 개별 반응에 넣는 완전한 부호로 사용하지 않는다.
+한 반응에는 동물운동 부호를 하나만 입력한다. 서로 다른 동물 대상이 각각 능동운동과 수동운동을 보이면 `FMa`와 `FMp`를 다른 칸에 나누어 넣지 않고 `FMa-p`를 한 번 입력한다. 한 대상이 두 움직임을 함께 보인다는 이유만으로 자동으로 `FMa-p`를 주지 않고, 어떤 움직임이 부호화를 결정하는지 확인한다.
 
 ## 채점/적용 조건
 

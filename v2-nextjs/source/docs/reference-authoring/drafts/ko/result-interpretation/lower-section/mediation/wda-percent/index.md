@@ -18,7 +18,6 @@ relatedRoutes:
   - "scoring-input/fq"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/mediation/wda-percent/index.md"
 ---
 

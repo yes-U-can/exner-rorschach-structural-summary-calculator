@@ -17,7 +17,6 @@ relatedRoutes:
   - "scoring-input/dq"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-fq-2026-03-10.md"
 ---
 
@@ -48,6 +47,7 @@ Ela trata do ajuste formal, não do nível de organização da resposta.
 - `FQ+` é incomum. Uma resposta não vira `+` apenas por soar rica ou inteligente.
 - A distinção mais delicada fora da tabela costuma ser entre [`u`](ref://scoring-input/fq/u) e [`-`](ref://scoring-input/fq/-).
 - `none` não significa mau ajuste. Significa que nenhum código FQ deve ser dado.
+- Um campo em branco indica codificação incompleta, não `none`; selecione `none` explicitamente quando for aplicável.
 
 ## Referências cruzadas
 
@@ -56,7 +56,7 @@ Ela trata do ajuste formal, não do nível de organização da resposta.
 - [[Codificação/Qualidade Formal] u](ref://scoring-input/fq/u)
 - [[Codificação/Qualidade Formal] -](ref://scoring-input/fq/-)
 - [[Codificação/Qualidade Formal] none](ref://scoring-input/fq/none)
-- [[Codificação/Qualidade Desenvolvimental] DQ](ref://scoring-input/dq)
+- [[Codificação/Qualidade Evolutiva] DQ](ref://scoring-input/dq)
 
 ## Nota de base
 

@@ -96,7 +96,7 @@ describe('published RIAP v5 calculation oracle', () => {
     expect(Object.is(dTable(-0.1), -0)).toBe(false);
   });
 
-  it('continues the half-step D conversion beyond the printed table and keeps all-F Lambda infinite', () => {
+  it('continues the half-step D conversion and applies the CS software convention for all-F Lambda', () => {
     const expectedD = (value: number) => {
       if (value >= -2.5 && value <= 2.5) return 0;
       return value > 2.5
@@ -111,11 +111,13 @@ describe('published RIAP v5 calculation oracle', () => {
     expect(dTable(-15.5)).toBe(-6);
     expect(dTable(15.5)).toBe(6);
 
-    const allPureF = PUBLISHED_RIAP_CASE.map((response) => ({
+    const allPureF = PUBLISHED_RIAP_CASE.slice(0, 17).map((response) => ({
       ...response,
       determinants: ['F'],
     }));
-    expect(calculateStructuralSummary(allPureF).data?.lower_section.Lambda).toBe('∞');
+    expect(calculateStructuralSummary(allPureF).data?.lower_section.Lambda).toBe(
+      allPureF.length.toFixed(2),
+    );
   });
 });
 

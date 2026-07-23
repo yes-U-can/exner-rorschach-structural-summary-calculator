@@ -18,7 +18,6 @@ relatedRoutes:
   - "result-interpretation/special-indices/HVI"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/affect/s-aff/index.md"
 ---
 

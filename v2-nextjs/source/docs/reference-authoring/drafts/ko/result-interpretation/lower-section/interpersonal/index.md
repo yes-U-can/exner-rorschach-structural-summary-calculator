@@ -24,7 +24,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/selfPerception"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/interpersonal/index.md"
 ---
 

@@ -16,7 +16,6 @@ relatedRoutes:
   - "result-interpretation/upper-section/Zf"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/z/za/index.md"
 ---
 

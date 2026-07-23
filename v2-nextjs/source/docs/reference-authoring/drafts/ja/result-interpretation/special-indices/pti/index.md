@@ -17,7 +17,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/mediation/XA_percent"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-indices-2026-03-10.md"
 ---
 

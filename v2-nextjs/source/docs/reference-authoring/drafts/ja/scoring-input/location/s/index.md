@@ -16,7 +16,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/mediation/S_minus"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
@@ -36,7 +35,8 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ## 採点・適用条件
 
 - 白地が対象の形成に実際に使われています。
-- どの範囲を使ったかに応じて `WS`, `DS`, `DdS`, `S` のどれかに整理できます。
+- `S` は構造一覧表で白地使用を集計する符号ですが、個々の反応の完全な位置コードとして単独入力しません。
+- 使用した基本位置に応じて `WS`、`DS`、`DdS` のいずれかで記録します。
 - 質問段階で白地利用が明確に確認できます。
 
 ## 注意点・鑑別

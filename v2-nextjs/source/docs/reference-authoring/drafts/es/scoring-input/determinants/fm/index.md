@@ -16,7 +16,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/FM"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/determinants/fm/index.md"
 ---
 
@@ -35,6 +34,7 @@ La acción puede ser activa o pasiva, pero debe seguir siendo movimiento propio 
 ## Regla del código de entrada
 
 `FM` es la etiqueta de familia utilizada en los totales del Sumario Estructural. En una respuesta individual se registra `FMa`, `FMp` o `FMa-p`, según la cualidad activa o pasiva del movimiento. `FM` sin sufijo no es un código completo para una respuesta individual.
+En una respuesta se registra un solo código de movimiento animal. Si distintos animales muestran movimiento activo y pasivo, se registra `FMa-p` una vez, en lugar de introducir `FMa` y `FMp` en casillas separadas. Un solo objeto que muestre ambos movimientos no recibe `FMa-p` automáticamente; debe revisarse qué movimiento determina la codificación.
 
 ## Condiciones de aplicación
 

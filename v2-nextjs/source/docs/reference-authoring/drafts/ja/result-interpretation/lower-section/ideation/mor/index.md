@@ -17,7 +17,6 @@ relatedRoutes:
   - "result-interpretation/special-indices/DEPI"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-ideation-2ab-mor-sum6-2026-03-10.md"
 ---
 

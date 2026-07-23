@@ -49,7 +49,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/selfPerception/FD"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
@@ -61,6 +60,8 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 - 決定因
 - 運動
 - 色彩
+- 運動決定因入力
+- 同じ運動系列の重複入力
 
 ## 中核的定義
 
@@ -71,8 +72,9 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 
 - 判定は受検者の言葉と質問段階に基づき、検査者の自由推測だけで決めません。
 - 一つの反応に複数の決定因が実際に含まれるなら複合的にコード化できます。
+- 複数の決定因が共存しても、同じ運動系列の能動コードと受動コードを別々の欄に重複入力しません。人間運動、動物運動、無生物運動の各系列ごとに `a`、`p`、`a-p` のいずれか一つを記録します。
 - 複合反応では、反応段階で現れた順序に従って決定因を並べます。
-- 主な決定因には、運動 [`M`](ref://scoring-input/determinants/M)、[`FM`](ref://scoring-input/determinants/FM)、[`m`](ref://scoring-input/determinants/m) と、色彩 [`FC`](ref://scoring-input/determinants/FC)、[`CF`](ref://scoring-input/determinants/CF)、[`C`](ref://scoring-input/determinants/C) があります。
+- 主な決定因の系列は、運動 [`M`](ref://scoring-input/determinants/M)、[`FM`](ref://scoring-input/determinants/FM)、[`m`](ref://scoring-input/determinants/m)、色彩 [`FC`](ref://scoring-input/determinants/FC)、[`CF`](ref://scoring-input/determinants/CF)、[`C`](ref://scoring-input/determinants/C)、[`Cn`](ref://scoring-input/determinants/Cn)、無彩色 [`FC'`](ref://scoring-input/determinants/FC%27)、[`C'F`](ref://scoring-input/determinants/C%27F)、[`C'`](ref://scoring-input/determinants/C%27)、質感 [`FT`](ref://scoring-input/determinants/FT)、[`TF`](ref://scoring-input/determinants/TF)、[`T`](ref://scoring-input/determinants/T)、ビスタ [`FV`](ref://scoring-input/determinants/FV)、[`VF`](ref://scoring-input/determinants/VF)、[`V`](ref://scoring-input/determinants/V)、拡散陰影 [`FY`](ref://scoring-input/determinants/FY)、[`YF`](ref://scoring-input/determinants/YF)、[`Y`](ref://scoring-input/determinants/Y)、純粋形態 [`F`](ref://scoring-input/determinants/F)、反射 [`Fr`](ref://scoring-input/determinants/Fr)、[`rF`](ref://scoring-input/determinants/rF)、形態的次元 [`FD`](ref://scoring-input/determinants/FD) です。
 
 ## 注意点・鑑別
 

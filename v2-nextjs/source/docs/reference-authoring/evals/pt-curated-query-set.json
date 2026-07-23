@@ -408,6 +408,24 @@
       "expectedIncludedRoutes": [
         "result-interpretation/lower-section/interpersonal/a_p_inter"
       ]
+    },
+    {
+      "id": "pt-coding-space-standalone-boundary",
+      "bucket": "coding",
+      "query": "Posso inserir S como única localização quando a resposta usa espaço branco?",
+      "expectedTopRoute": "scoring-input/location/S"
+    },
+    {
+      "id": "pt-coding-movement-family-conflict",
+      "bucket": "coding",
+      "query": "Posso inserir Ma e Mp em campos separados de determinantes para a mesma resposta?",
+      "expectedTopRoute": "scoring-input/determinants"
+    },
+    {
+      "id": "pt-coding-fq-blank-boundary",
+      "bucket": "coding",
+      "query": "Deixar FQ em branco significa o mesmo que FQnone?",
+      "expectedTopRoute": "scoring-input/fq/none"
     }
   ]
 }

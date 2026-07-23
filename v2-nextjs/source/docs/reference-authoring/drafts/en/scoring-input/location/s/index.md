@@ -16,7 +16,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/mediation/S_minus"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
@@ -43,6 +42,7 @@ It is not a stand-alone basic location code; it modifies another location decisi
 
 - Mentioning background alone is not enough. White space has to function as part of the percept.
 - `S` should not be coded by itself as if it were a complete location decision.
+- In the Structural Summary, `S` is the code that tallies white-space use; each individual response is recorded as `WS`, `DS`, or `DdS`.
 - Interpretation of `S` belongs to the Structural Summary pattern, not to location coding alone.
 
 ## Cross References

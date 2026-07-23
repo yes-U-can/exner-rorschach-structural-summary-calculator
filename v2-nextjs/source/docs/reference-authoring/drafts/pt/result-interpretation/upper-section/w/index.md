@@ -17,7 +17,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/processing/W_M"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-upper-section-family-2026-03-11.md"
 ---
 

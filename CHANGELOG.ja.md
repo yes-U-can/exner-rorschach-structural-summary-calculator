@@ -10,6 +10,7 @@
 
 | 日付 | バージョン | 種別 | パッチノート | ソース |
 | --- | --- | --- | --- | --- |
+| 2026-07-23 | v2.2.7 | バグ修正 | [パッチノート](./v2-nextjs/releases/v2.2.7/README.ja.md) | [ソースコード](./v2-nextjs/source/) |
 | 2026-07-20 | v2.2.6 | バグ修正 | [パッチノート](./v2-nextjs/releases/v2.2.6/README.ja.md) | [ソースコード](./v2-nextjs/source/) |
 | 2026-07-19 | v2.2.5 | バグ修正 | [パッチノート](./v2-nextjs/releases/v2.2.5/README.ja.md) | [ソースコード](./v2-nextjs/source/) |
 | 2026-07-18 | v2.2.4 | バグ修正 | [パッチノート](./v2-nextjs/releases/v2.2.4/) | [ソースコード](./v2-nextjs/source/) |

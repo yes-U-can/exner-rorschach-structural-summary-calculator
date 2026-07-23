@@ -16,7 +16,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/_2AB_Art_Ay"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/special-score/ab/index.md"
 ---
 

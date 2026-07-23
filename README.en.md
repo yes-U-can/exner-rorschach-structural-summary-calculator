@@ -23,7 +23,7 @@ Each patch note records what changed, the conditions that may be affected, wheth
 ## What is available
 
 - [Next.js] Live web app: [exner.yesucan.co.kr](https://exner.yesucan.co.kr)
-- [Next.js] Latest version 2 release: [v2-nextjs/releases/v2.2.6](./v2-nextjs/releases/v2.2.6/README.en.md)
+- [Next.js] Latest version 2 release: [v2-nextjs/releases/v2.2.7](./v2-nextjs/releases/v2.2.7/README.en.md)
 - [Next.js] v2.2.2 calculation accuracy recheck: [v2-nextjs/source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md](./v2-nextjs/source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md)
 - [Next.js] v2.2.2 Cn explanation and live GPT-5.5 checks in 5 languages: [v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md](./v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md)
 - [Next.js] v2.2.0 UI validation: [v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md](./v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md)
@@ -48,6 +48,12 @@ The v2.1.x series improved the AI assistants in stages: completing answers, find
 - **v2.1.10:** corrected remaining Japanese code recognition, broad interpretation questions, and new-database setup.
 
 The connected work from v2.1.8 through v2.1.10 is documented across the corresponding patch notes.
+
+## v2.2.7
+
+v2.2.7 is a bug-fix release that prevents three kinds of incomplete scoring-table input from passing into calculation. The standalone `S` was removed from the location options so that white-space responses are always recorded as `WS`, `DS`, or `DdS`; duplicate codes from the same movement family can no longer be entered for one response; and calculation can no longer run with blank Form Quality. In records where every response is pure form (`F`), Lambda is reported as the pure F count instead of the infinity symbol.
+
+Existing protocols entered by the rules do not need to be recalculated. If an older autosave still contains one of these values, the app preserves the original, stops calculation, and identifies the rows to review in all five languages. The release also introduces a rule list that automatically checks whether the five-language reference documents state the same clinical rules. See the [v2.2.7 patch note](./v2-nextjs/releases/v2.2.7/README.en.md) for details.
 
 ## v2.2.6
 
@@ -95,6 +101,7 @@ The GPT-5.5 assistants were restricted from expanding beyond the Exner Comprehen
 
 ## [Next.js] Version 2 release history
 
+- **[2026-07-23] v2.2.7 (bug-fix release)** [Patch note](./v2-nextjs/releases/v2.2.7/README.en.md) [Source](./v2-nextjs/source/)
 - **[2026-07-20] v2.2.6 (bug-fix release)** [Patch note](./v2-nextjs/releases/v2.2.6/README.en.md) [Source](./v2-nextjs/source/)
 - **[2026-07-19] v2.2.5 (bug-fix release)** [Patch note](./v2-nextjs/releases/v2.2.5/README.en.md) [Source](./v2-nextjs/source/)
 - **[2026-07-18] v2.2.4 (bug-fix release)** [Patch note](./v2-nextjs/releases/v2.2.4/) [Source](./v2-nextjs/source/)

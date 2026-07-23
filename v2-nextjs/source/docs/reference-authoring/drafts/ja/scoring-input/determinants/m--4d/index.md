@@ -17,7 +17,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/M_minus"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
@@ -37,6 +36,7 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ## 入力コードの規則
 
 `M` は構造一覧表で用いる人間運動の集計ラベルです。個々の反応には、運動の能動・受動の性質に応じて `Ma`、`Mp`、`Ma-p` のいずれかを入力します。添字のない `M` は、個々の反応の完全な入力コードとして使用しません。
+一つの反応には人間運動コードを一つだけ入力します。別々の人物がそれぞれ能動運動と受動運動を示す場合は、`Ma` と `Mp` を別の欄に入力せず、`Ma-p` を一度入力します。一人の対象が両方の動きを示すだけで自動的に `Ma-p` とはせず、どの運動がコーディングを決めるかを確認します。
 
 ## 採点・適用条件
 

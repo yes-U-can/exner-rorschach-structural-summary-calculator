@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-17T13:33:12.927Z",
+  "generatedAt": "2026-07-23T06:26:46.867Z",
   "locales": [
     "ko",
     "en",
@@ -31,14 +31,14 @@
       "querySet": {
         "filePath": "docs/reference-authoring/evals/ko-curated-query-set.json",
         "targetCount": 100,
-        "currentCount": 100,
+        "currentCount": 103,
         "minimums": {
           "coding": 40,
           "interpretation": 40,
           "graph-navigation": 20
         },
         "bucketCounts": {
-          "coding": 40,
+          "coding": 43,
           "interpretation": 40,
           "graph-navigation": 20
         },
@@ -76,14 +76,14 @@
       "querySet": {
         "filePath": "docs/reference-authoring/evals/en-curated-query-set.json",
         "targetCount": 60,
-        "currentCount": 60,
+        "currentCount": 63,
         "minimums": {
           "coding": 24,
           "interpretation": 24,
           "graph-navigation": 12
         },
         "bucketCounts": {
-          "coding": 24,
+          "coding": 27,
           "interpretation": 24,
           "graph-navigation": 12
         },
@@ -106,7 +106,7 @@
         "pass": true
       },
       "inlineRefs": {
-        "count": 1922,
+        "count": 1939,
         "brokenTargets": [],
         "pass": true
       },
@@ -121,14 +121,14 @@
       "querySet": {
         "filePath": "docs/reference-authoring/evals/ja-curated-query-set.json",
         "targetCount": 60,
-        "currentCount": 60,
+        "currentCount": 63,
         "minimums": {
           "coding": 24,
           "interpretation": 24,
           "graph-navigation": 12
         },
         "bucketCounts": {
-          "coding": 24,
+          "coding": 27,
           "interpretation": 24,
           "graph-navigation": 12
         },
@@ -166,14 +166,14 @@
       "querySet": {
         "filePath": "docs/reference-authoring/evals/es-curated-query-set.json",
         "targetCount": 80,
-        "currentCount": 80,
+        "currentCount": 83,
         "minimums": {
           "coding": 32,
           "interpretation": 32,
           "graph-navigation": 16
         },
         "bucketCounts": {
-          "coding": 32,
+          "coding": 35,
           "interpretation": 32,
           "graph-navigation": 16
         },
@@ -211,14 +211,14 @@
       "querySet": {
         "filePath": "docs/reference-authoring/evals/pt-curated-query-set.json",
         "targetCount": 60,
-        "currentCount": 60,
+        "currentCount": 63,
         "minimums": {
           "coding": 24,
           "interpretation": 24,
           "graph-navigation": 12
         },
         "bucketCounts": {
-          "coding": 24,
+          "coding": 27,
           "interpretation": 24,
           "graph-navigation": 12
         },

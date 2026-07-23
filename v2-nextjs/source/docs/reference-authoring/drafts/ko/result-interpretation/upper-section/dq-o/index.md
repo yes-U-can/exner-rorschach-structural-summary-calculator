@@ -16,7 +16,6 @@ relatedRoutes:
   - "scoring-input/dq/o"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/upper-section/dq-o/index.md"
 ---
 

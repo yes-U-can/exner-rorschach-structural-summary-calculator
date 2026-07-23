@@ -14,7 +14,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/FM"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
@@ -34,6 +33,7 @@ It covers movement that fits the expected action pattern of the animal or nonhum
 ## Input Code Rule
 
 `FM` is the family label used in Structural Summary totals. For an individual response, enter `FMa`, `FMp`, or `FMa-p` according to its active/passive quality. Bare `FM` is not a complete response code.
+Use only one animal-movement code in a response. If separate animal objects show active and passive movement, enter `FMa-p` once rather than entering `FMa` and `FMp` in separate slots. One object showing both is not automatically `FMa-p`; review which movement governs the coding.
 
 ## Application Conditions
 

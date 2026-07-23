@@ -20,7 +20,6 @@ relatedRoutes:
   - "scoring-input/determinants/C'F"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-core-burden-qualities-2026-03-10.md"
 ---
 

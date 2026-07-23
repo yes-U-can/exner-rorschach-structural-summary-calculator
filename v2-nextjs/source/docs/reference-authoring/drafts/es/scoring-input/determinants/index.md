@@ -50,7 +50,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/M_minus"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/determinants/index.md"
 ---
 
@@ -62,6 +61,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/dete
 - determinantes
 - movimiento
 - color cromático
+- entrada duplicada de la misma familia de movimiento
 
 ## Definición central
 
@@ -72,6 +72,7 @@ No indican qué ve la persona, sino por qué lo percibe de esa manera: forma, mo
 
 - La decisión de codificación debe basarse en las palabras del sujeto y en la encuesta, no en una inferencia libre del examinador.
 - Una respuesta puede contener más de un determinante si el sujeto realmente usa más de una característica de la mancha.
+- Pueden coexistir varios determinantes, pero los códigos activo y pasivo de una misma familia de movimiento no se introducen en casillas separadas. Registre solo una opción `a`, `p` o `a-p` para cada familia de movimiento humano, animal o inanimado.
 - Cuando una respuesta compleja combina determinantes, se codifican en el orden en que aparecen en la fase de respuesta.
 - Los determinantes se organizan en movimiento [`M`](ref://scoring-input/determinants/M), [`FM`](ref://scoring-input/determinants/FM), [`m`](ref://scoring-input/determinants/m); color cromático [`FC`](ref://scoring-input/determinants/FC), [`CF`](ref://scoring-input/determinants/CF), [`C`](ref://scoring-input/determinants/C), [`Cn`](ref://scoring-input/determinants/Cn); color acromático [`FC'`](ref://scoring-input/determinants/FC%27), [`C'F`](ref://scoring-input/determinants/C%27F), [`C'`](ref://scoring-input/determinants/C%27); sombreado de textura [`FT`](ref://scoring-input/determinants/FT), [`TF`](ref://scoring-input/determinants/TF), [`T`](ref://scoring-input/determinants/T); vista [`FV`](ref://scoring-input/determinants/FV), [`VF`](ref://scoring-input/determinants/VF), [`V`](ref://scoring-input/determinants/V); sombreado difuso [`FY`](ref://scoring-input/determinants/FY), [`YF`](ref://scoring-input/determinants/YF), [`Y`](ref://scoring-input/determinants/Y); reflejo [`Fr`](ref://scoring-input/determinants/Fr), [`rF`](ref://scoring-input/determinants/rF); dimensión por forma [`FD`](ref://scoring-input/determinants/FD); y forma pura [`F`](ref://scoring-input/determinants/F).
 

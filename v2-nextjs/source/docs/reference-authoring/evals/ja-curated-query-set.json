@@ -408,6 +408,24 @@
       "expectedIncludedRoutes": [
         "result-interpretation/lower-section/interpersonal/a_p_inter"
       ]
+    },
+    {
+      "id": "ja-coding-space-standalone-boundary",
+      "bucket": "coding",
+      "query": "白地を使った反応の位置を S だけで入力してよいですか。",
+      "expectedTopRoute": "scoring-input/location/S"
+    },
+    {
+      "id": "ja-coding-movement-family-conflict",
+      "bucket": "coding",
+      "query": "個々の反応の運動決定因を入力するとき、同じ運動系列の Ma と Mp を別々の欄に入力してよいですか。",
+      "expectedTopRoute": "scoring-input/determinants"
+    },
+    {
+      "id": "ja-coding-fq-blank-boundary",
+      "bucket": "coding",
+      "query": "FQ の空欄と FQnone は同じ意味ですか。",
+      "expectedTopRoute": "scoring-input/fq/none"
     }
   ]
 }

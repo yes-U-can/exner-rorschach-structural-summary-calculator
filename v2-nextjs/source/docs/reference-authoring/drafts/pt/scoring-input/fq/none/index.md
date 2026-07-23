@@ -14,7 +14,6 @@ relatedRoutes:
   - "scoring-input/special-score/AB"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-fq-2026-03-10.md"
 ---
 
@@ -30,6 +29,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-fq-2026-03-10.md"
 
 `none` é usado quando a resposta não recebe código de qualidade formal.
 Isso significa que a forma não está disponível como base codificável para julgar ajuste formal.
+Um campo em branco indica codificação incompleta, não `FQnone`; selecione `none` explicitamente quando for aplicável.
 
 ## Condições de aplicação
 
@@ -40,7 +40,7 @@ Isso significa que a forma não está disponível como base codificável para ju
 ## Cuidados e diferenciação
 
 - `none` não é o mesmo que [`FQ-`](ref://scoring-input/fq/-). `-` significa ajuste ruim; `none` significa que nenhum FQ se aplica.
-- Não transforme resposta de ajuste ruim em `none` apenas porque e difícil.
+- Não transforme resposta de ajuste ruim em `none` apenas porque é difícil.
 - Confira os determinantes envolvidos antes de decidir que não existe FQ codificável.
 
 ## Referências cruzadas

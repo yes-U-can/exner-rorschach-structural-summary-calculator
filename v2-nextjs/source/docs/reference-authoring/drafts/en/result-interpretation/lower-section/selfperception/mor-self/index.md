@@ -18,7 +18,6 @@ relatedRoutes:
   - "result-interpretation/special-indices/DEPI"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 # Document Name: [Interpretation/Self Perception] MOR

@@ -51,7 +51,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/selfPerception/FD"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-determinants-form-reflection-fd-2026-03-11.md"
 ---
 
@@ -62,6 +61,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-determinants-form-
 - Determinantes
 - determinantes
 - movimento
+- entrada duplicada da mesma família de movimento
 - cor cromática
 - cor acromática
 - textura
@@ -77,6 +77,7 @@ Eles não dizem o que a pessoa viu, mas por que aquilo parece assim: movimento, 
 
 - A decisão deve se apoiar na resposta e no inquérito, não em inferência livre do examinador.
 - Uma resposta pode receber mais de um determinante quando a pessoa realmente usa mais de um aspecto da mancha.
+- Vários determinantes podem coexistir, mas os códigos ativo e passivo da mesma família de movimento não são inseridos em campos separados. Registre apenas uma opção `a`, `p` ou `a-p` para cada família de movimento humano, animal ou inanimado.
 - No conjunto atualmente redigido em PT, os grupos principais são movimento [`M`](ref://scoring-input/determinants/M), [`FM`](ref://scoring-input/determinants/FM), [`m`](ref://scoring-input/determinants/m), cor cromática [`FC`](ref://scoring-input/determinants/FC), [`CF`](ref://scoring-input/determinants/CF), [`C`](ref://scoring-input/determinants/C), nomeação de cor [`Cn`](ref://scoring-input/determinants/Cn), cor acromática [`FC'`](ref://scoring-input/determinants/FC%27), [`C'F`](ref://scoring-input/determinants/C%27F), [`C'`](ref://scoring-input/determinants/C%27), textura [`FT`](ref://scoring-input/determinants/FT), [`TF`](ref://scoring-input/determinants/TF), [`T`](ref://scoring-input/determinants/T), vista [`FV`](ref://scoring-input/determinants/FV), [`VF`](ref://scoring-input/determinants/VF), [`V`](ref://scoring-input/determinants/V), sombreamento difuso [`FY`](ref://scoring-input/determinants/FY), [`YF`](ref://scoring-input/determinants/YF), [`Y`](ref://scoring-input/determinants/Y), forma pura [`F`](ref://scoring-input/determinants/F), reflexo [`Fr`](ref://scoring-input/determinants/Fr), [`rF`](ref://scoring-input/determinants/rF), e dimensão baseada em forma [`FD`](ref://scoring-input/determinants/FD).
 - O papel da forma continua sendo avaliado separadamente em [`FQ`](ref://scoring-input/fq).
 

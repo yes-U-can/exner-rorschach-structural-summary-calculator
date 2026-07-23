@@ -1,0 +1,79 @@
+{
+  "version": "2026-07-23-input-boundary-v1",
+  "description": "Locale-independent clinical-rule invariants. Every rule statement listed here must be asserted by all five locale drafts of the referenced routes, so a rule fix can never land in a subset of locales again. Patterns are JavaScript regular expressions matched against the raw draft markdown.",
+  "locales": ["ko", "en", "ja", "es", "pt"],
+  "invariants": [
+    {
+      "id": "location-s-never-standalone",
+      "description": "White space S attaches to a basic location (WS, DS, DdS) and is never a complete stand-alone response location. RIAP v5 sequences print WS/DS/DdS only.",
+      "paths": ["scoring-input/location/s/index.md"],
+      "allLocalesMustMatch": ["`WS`", "`DS`", "`DdS`"],
+      "mustMatch": {
+        "ko": ["단독 입력하지 않는다"],
+        "en": ["not a stand-alone basic location code"],
+        "ja": ["単独入力しません"],
+        "es": ["No se codifica solo"],
+        "pt": ["não é um código básico independente"]
+      },
+      "mustNotMatch": {
+        "all": ["`S`\\s*[,、]\\s*`WS`", "`DdS`\\s*[,、]\\s*`S`"]
+      }
+    },
+    {
+      "id": "movement-bare-family-label-not-input",
+      "description": "Bare M / FM / m are Structural Summary family labels. An individual response requires the active/passive suffix (Xa, Xp, Xa-p).",
+      "paths": [
+        "scoring-input/determinants/fm/index.md",
+        "scoring-input/determinants/m--4d/index.md",
+        "scoring-input/determinants/m--6d/index.md"
+      ],
+      "mustMatch": {
+        "ko": ["완전한 부호로 사용하지 않는다"],
+        "en": ["is not a complete response code"],
+        "ja": ["完全な入力コードとして使用しません"],
+        "es": ["no es un código completo"],
+        "pt": ["não é um código completo"]
+      }
+    },
+    {
+      "id": "movement-one-code-per-family",
+      "description": "One movement code per family per response. Active and passive codes from the same family are never entered as separate determinants.",
+      "paths": ["scoring-input/determinants/index.md"],
+      "mustMatch": {
+        "ko": ["중복 입력하지 않는다", "`a`, `p`, `a-p` 중 하나만"],
+        "en": ["not entered in separate slots", "only one of `a`, `p`, or `a-p`"],
+        "ja": ["重複入力しません", "`a`、`p`、`a-p` のいずれか一つ"],
+        "es": ["no se introducen en casillas separadas", "solo una opción `a`, `p` o `a-p`"],
+        "pt": ["não são inseridos em campos separados", "apenas uma opção `a`, `p` ou `a-p`"]
+      }
+    },
+    {
+      "id": "movement-a-p-separate-objects-once",
+      "description": "When separate objects in one family show active and passive movement, the a-p code is entered once. One object showing both is not automatically a-p.",
+      "paths": [
+        "scoring-input/determinants/fm/index.md",
+        "scoring-input/determinants/m--4d/index.md",
+        "scoring-input/determinants/m--6d/index.md"
+      ],
+      "mustMatch": {
+        "ko": ["한 번 입력한다", "자동으로"],
+        "en": ["once rather than entering", "not automatically"],
+        "ja": ["一度入力します", "自動的に"],
+        "es": ["una vez, en lugar de introducir", "automáticamente"],
+        "pt": ["uma vez, em vez de inserir", "automaticamente"]
+      }
+    },
+    {
+      "id": "fq-blank-is-not-none",
+      "description": "A blank FQ field is unfinished input, not the FQnone category. FQnone must be selected explicitly.",
+      "paths": ["scoring-input/fq/index.md", "scoring-input/fq/none/index.md"],
+      "mustMatch": {
+        "ko": ["미완성 입력"],
+        "en": ["unfinished coding"],
+        "ja": ["未完了の入力"],
+        "es": ["codificación incompleta"],
+        "pt": ["codificação incompleta"]
+      }
+    }
+  ]
+}

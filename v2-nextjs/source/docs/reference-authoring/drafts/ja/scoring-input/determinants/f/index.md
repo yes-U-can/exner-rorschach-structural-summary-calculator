@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/determinants/F"
 locale: "ja"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/determinants/F"
-displayTitle: "[Coding/Determinants] F"
+displayTitle: "[コーディング/決定因] F"
 aliases:
   - "F"
   - "純粋形態"
@@ -19,11 +19,10 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/Lambda"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-determinants-f-fr-rf-fd-2026-03-10.md"
 ---
 
-# [Coding/Determinants] F
+# [コーディング/決定因] F
 
 ## 別名・検索語
 

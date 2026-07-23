@@ -15,7 +15,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/processing/DQ_v_proc"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/dq/v-plus/index.md"
 ---
 

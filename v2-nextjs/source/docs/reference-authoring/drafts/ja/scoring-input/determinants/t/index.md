@@ -16,7 +16,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/interpersonal/SumT_inter"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 

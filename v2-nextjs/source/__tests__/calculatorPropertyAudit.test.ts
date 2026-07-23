@@ -20,6 +20,9 @@ const SPECIAL_SCORES = [
   'CONTAM', 'ALOG', 'PSV', 'AB', 'AG', 'COP', 'MOR', 'PER', 'CP',
 ] as const;
 const SINGLE_SCORE_DETERMINANT_FAMILIES = [
+  ['Ma', 'Mp', 'Ma-p'],
+  ['FMa', 'FMp', 'FMa-p'],
+  ['ma', 'mp', 'ma-p'],
   ['FC', 'CF', 'C'],
   ["FC'", "C'F", "C'"],
   ['FT', 'TF', 'T'],
@@ -237,7 +240,7 @@ function auditExpected(protocol: RorschachResponse[]) {
   const pureF = protocol.filter((response) => (
     response.determinants.length === 1 && response.determinants[0] === 'F'
   )).length;
-  const lambda = R === pureF ? null : pureF / (R - pureF);
+  const lambda = R === pureF ? pureF : pureF / (R - pureF);
   const ebDifference = Math.abs(M - WSumC);
   const ebRequiredDifference = EA <= 10 ? 2 : 2.5;
   const EBPer = (
@@ -410,7 +413,7 @@ function auditExpected(protocol: RorschachResponse[]) {
     },
     lower: {
       R,
-      Lambda: lambda === null ? '∞' : fixed2(lambda),
+      Lambda: fixed2(lambda),
       EB: `${M}:${fixed1(WSumC)}`,
       EA: fixed1(EA),
       EBPer,

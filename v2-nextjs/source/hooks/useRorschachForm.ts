@@ -3,6 +3,7 @@
 import { useState, useCallback, useMemo, useRef, useEffect } from 'react';
 import type { RorschachResponse, CalculationResult } from '@/types';
 import { calculateStructuralSummary } from '@/lib/calculator';
+import { isParticipatingResponse } from '@/lib/scoringInputValidation';
 import { SAMPLE_DATA } from '@/lib/sampleData';
 
 const MAX_HISTORY_ENTRIES = 80;
@@ -98,8 +99,8 @@ export function useRorschachForm(initialResponses?: RorschachResponse[]) {
   const calculate = useCallback(() => {
     setIsCalculating(true);
 
-    // Filter out empty responses
-    const validResponses = responses.filter(r => r.card);
+    // Filter out empty responses with the same predicate the validators use.
+    const validResponses = responses.filter(isParticipatingResponse);
 
     if (validResponses.length === 0) {
       setResult({
@@ -175,7 +176,7 @@ export function useRorschachForm(initialResponses?: RorschachResponse[]) {
 
   // Get valid response count
   const validResponseCount = useMemo(() => {
-    return responses.filter(r => r.card).length;
+    return responses.filter(isParticipatingResponse).length;
   }, [responses]);
 
   return {

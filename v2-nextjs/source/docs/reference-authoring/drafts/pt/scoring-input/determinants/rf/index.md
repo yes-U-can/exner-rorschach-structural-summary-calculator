@@ -16,7 +16,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/selfPerception/Fr_rF"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-determinants-form-reflection-fd-2026-03-11.md"
 ---
 

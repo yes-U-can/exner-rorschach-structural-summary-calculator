@@ -11,10 +11,9 @@ aliases:
 relatedRoutes:
   - "scoring-input/fq"
   - "scoring-input/determinants/M"
-  - "scoring-input/special-score/ab"
+  - "scoring-input/special-score/AB"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/fq/none/index.md"
 ---
 
@@ -30,6 +29,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/fq/n
 
 `none` se usa cuando la respuesta no recibe código de calidad formal.
 Esto ocurre cuando la forma no queda disponible como base codificable para valorar el ajuste formal.
+Un campo vacío indica una codificación incompleta, no `FQnone`; seleccione `none` de forma explícita cuando corresponda.
 
 ## Condiciones de aplicación
 

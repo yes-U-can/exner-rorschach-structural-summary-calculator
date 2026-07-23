@@ -16,7 +16,6 @@ relatedRoutes:
   - "scoring-input/z/ZS"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/location/s/index.md"
 ---
 
@@ -43,6 +42,7 @@ No se codifica solo; siempre acompaña a un código básico de localización.
 
 - No codifique `S` cuando el sujeto solo señala un área que contiene blanco, pero sin darle un papel propio.
 - `S` es un modificador de localización, no una localización autónoma.
+- En el Sumario Estructural, `S` es el código que totaliza el uso de espacio blanco; cada respuesta individual se registra como `WS`, `DS` o `DdS`.
 - La presencia de `S` puede relacionarse después con [`ZS`](ref://scoring-input/z/ZS), pero no son el mismo código.
 
 ## Referencias cruzadas

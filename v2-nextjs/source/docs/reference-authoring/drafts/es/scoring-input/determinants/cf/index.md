@@ -17,7 +17,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/affect/PureC"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/determinants/cf/index.md"
 ---
 

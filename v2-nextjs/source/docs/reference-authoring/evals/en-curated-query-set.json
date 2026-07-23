@@ -408,6 +408,24 @@
       "expectedIncludedRoutes": [
         "result-interpretation/lower-section/interpersonal/a_p_inter"
       ]
+    },
+    {
+      "id": "en-coding-space-standalone-boundary",
+      "bucket": "coding",
+      "query": "Can I enter S alone as the location when a response uses white space?",
+      "expectedTopRoute": "scoring-input/location/S"
+    },
+    {
+      "id": "en-coding-movement-family-conflict",
+      "bucket": "coding",
+      "query": "Can I enter Ma and Mp in separate determinant slots for one response?",
+      "expectedTopRoute": "scoring-input/determinants"
+    },
+    {
+      "id": "en-coding-fq-blank-boundary",
+      "bucket": "coding",
+      "query": "Does leaving FQ blank mean the same thing as FQnone?",
+      "expectedTopRoute": "scoring-input/fq/none"
     }
   ]
 }

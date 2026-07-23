@@ -17,7 +17,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/M_minus"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-determinants-movement-chromatic-2026-03-11.md"
 ---
 
@@ -37,6 +36,7 @@ Também vale para animais ou figuras fictícias quando estão agindo de modo gen
 ## Regra do código de entrada
 
 `M` é o rótulo de família usado nos totais do Sumário Estrutural. Em uma resposta individual, registre `Ma`, `Mp` ou `Ma-p`, conforme a qualidade ativa ou passiva do movimento. `M` sem sufixo não é um código completo para uma resposta individual.
+Em uma resposta, registre apenas um código de movimento humano. Se figuras humanas distintas mostrarem movimento ativo e passivo, registre `Ma-p` uma vez, em vez de inserir `Ma` e `Mp` em campos separados. Um único objeto que mostre ambos os movimentos não recebe `Ma-p` automaticamente; é preciso verificar qual movimento determina a codificação.
 
 ## Condições de aplicação
 
@@ -47,8 +47,8 @@ Também vale para animais ou figuras fictícias quando estão agindo de modo gen
 
 ## Cuidados e diferenciação
 
-- Movimento animal comum e [`FM`](ref://scoring-input/determinants/FM), não `M`.
-- Movimento de objetos inanimados e [`m`](ref://scoring-input/determinants/m), não `M`.
+- Movimento animal comum é [`FM`](ref://scoring-input/determinants/FM), não `M`.
+- Movimento de objetos inanimados é [`m`](ref://scoring-input/determinants/m), não `M`.
 - Conteúdo humano sozinho não basta. Precisa haver atividade percebida.
 - Se a resposta também envolve cooperação ou agressão, pode receber [`COP`](ref://scoring-input/special-score/COP) ou [`AG`](ref://scoring-input/special-score/AG).
 

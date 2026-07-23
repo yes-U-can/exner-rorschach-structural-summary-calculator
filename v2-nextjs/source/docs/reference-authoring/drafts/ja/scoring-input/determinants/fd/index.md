@@ -3,7 +3,7 @@ canonicalRoute: "scoring-input/determinants/FD"
 locale: "ja"
 docKind: "coding-entry"
 canonicalTitle: "scoring-input/determinants/FD"
-displayTitle: "[Coding/Determinants] FD"
+displayTitle: "[コーディング/決定因] FD"
 aliases:
   - "FD"
   - "form dimension"
@@ -16,11 +16,10 @@ relatedRoutes:
   - "result-interpretation/lower-section/selfPerception/FD"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-determinants-f-fr-rf-fd-2026-03-10.md"
 ---
 
-# [Coding/Determinants] FD
+# [コーディング/決定因] FD
 
 ## 別名・検索語
 

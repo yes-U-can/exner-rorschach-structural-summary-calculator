@@ -8,7 +8,7 @@ export const LEGACY_BARE_MOVEMENT_INPUT_CODES = ['M', 'FM', 'm'] as const;
 
 export const OPTIONS = {
   CARDS: ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'],
-  LOCATIONS: ['W', 'WS', 'D', 'DS', 'Dd', 'DdS', 'S'],
+  LOCATIONS: ['W', 'WS', 'D', 'DS', 'Dd', 'DdS'],
   DQ: ['+', 'o', 'v/+', 'v'],
   FQ: ['+', 'o', 'u', '-', 'none'],
   PAIR: ['(2)', 'none'],

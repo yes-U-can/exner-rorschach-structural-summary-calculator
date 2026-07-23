@@ -25,7 +25,6 @@ relatedRoutes:
   - "scoring-input/location/S"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/mediation/index.md"
 ---
 

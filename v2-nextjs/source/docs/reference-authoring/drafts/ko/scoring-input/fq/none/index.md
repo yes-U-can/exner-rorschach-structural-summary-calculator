@@ -16,7 +16,6 @@ relatedRoutes:
   - "scoring-input/determinants/Y"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/fq/none/index.md"
 ---
 
@@ -32,6 +31,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/fq/n
 
 FQnone은 반응에 대해 형태질을 부여할 수 없을 때 쓰는 표기다.  
 즉, 형태가 나쁘다는 뜻이 아니라 `형태를 근거로 채점하지 않는 반응`이라는 뜻이다.
+공란은 `FQnone`이 아니라 미완성 입력이다. 해당되는 경우 `none`을 직접 선택한다.
 
 ## 채점/적용 조건
 

@@ -4,7 +4,7 @@
 
 Esta carpeta contiene el historial de versiones y el código fuente que puede hacerse público de la v2 de la calculadora del Sumario Estructural de Rorschach. Las notas del parche describen los cambios más recientes, mientras que el código público contiene materiales de verificación de los cálculos y de implementación.
 
-- Notas del parche más reciente: [releases/v2.2.6](./releases/v2.2.6/README.es.md)
+- Notas del parche más reciente: [releases/v2.2.7](./releases/v2.2.7/README.es.md)
 - Nueva auditoría de la exactitud del cálculo: [source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md](./source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md)
 - Notas de la primera versión v2: [releases/v2.0.0](./releases/v2.0.0/)
 - Código fuente público: [source](./source/)

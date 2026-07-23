@@ -18,7 +18,6 @@ relatedRoutes:
   - "scoring-input/dq"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/fq/index.md"
 ---
 
@@ -53,6 +52,7 @@ FQ는 피검자가 지각한 대상이 반점의 실제 윤곽과 얼마나 잘 
 - `FQ+`는 드물며, 단순히 내용이 복잡하거나 좋아 보인다고 부여하지 않는다.
 - `FQu`와 `FQ-`의 핵심 차이는 `쉽고 빠르게 볼 수 있는가`와 `윤곽 사용이 적절한가`에 있다.
 - `FQnone`은 형태가 나쁘다는 뜻이 아니라, 애초에 형태질을 줄 수 없는 반응이라는 뜻이다.
+- 공란은 `FQnone`이 아니라 미완성 입력이다. 형태질을 줄 수 없는 반응이라면 `none`을 직접 선택한다.
 
 ## 상호 참조
 

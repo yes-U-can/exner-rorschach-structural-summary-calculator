@@ -14,7 +14,6 @@ relatedRoutes:
   - "scoring-input/contents/Ls"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/contents/ge/index.md"
 ---
 

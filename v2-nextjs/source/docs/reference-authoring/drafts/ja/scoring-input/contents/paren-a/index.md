@@ -16,7 +16,6 @@ relatedRoutes:
   - "scoring-input/contents/(Ad)"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-contents-animal-2026-03-10.md"
 ---
 

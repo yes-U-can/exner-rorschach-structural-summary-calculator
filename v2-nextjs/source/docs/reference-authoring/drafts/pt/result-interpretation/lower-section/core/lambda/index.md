@@ -19,7 +19,6 @@ relatedRoutes:
   - "scoring-input/determinants/F"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-lower-section-core-opening-2026-03-11.md"
 ---
 

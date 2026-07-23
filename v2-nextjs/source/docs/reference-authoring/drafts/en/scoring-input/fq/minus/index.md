@@ -14,7 +14,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/mediation/X_minus_percent"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 

@@ -18,7 +18,6 @@ relatedRoutes:
   - "result-interpretation/special-indices/DEPI"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/special-indices/cdi/index.md"
 ---
 

@@ -15,7 +15,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/m"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-determinants-movement-chromatic-2026-03-11.md"
 ---
 
@@ -35,6 +34,7 @@ O movimento não é humano nem animal, mas mecânico, físico ou impelido por al
 ## Regra do código de entrada
 
 `m` é o rótulo de família usado nos totais do Sumário Estrutural. Em uma resposta individual, registre `ma`, `mp` ou `ma-p`, conforme a qualidade ativa ou passiva do movimento. `m` sem sufixo não é um código completo para uma resposta individual.
+Em uma resposta, registre apenas um código de movimento inanimado. Se objetos inanimados distintos mostrarem movimento ativo e passivo, registre `ma-p` uma vez, em vez de inserir `ma` e `mp` em campos separados. Um único objeto que mostre ambos os movimentos não recebe `ma-p` automaticamente; é preciso verificar qual movimento determina a codificação.
 
 ## Condições de aplicação
 

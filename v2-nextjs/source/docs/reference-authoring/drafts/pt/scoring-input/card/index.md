@@ -24,7 +24,6 @@ relatedRoutes:
   - "scoring-input/card/X"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-card-vi-x-2026-03-11.md"
 ---
 

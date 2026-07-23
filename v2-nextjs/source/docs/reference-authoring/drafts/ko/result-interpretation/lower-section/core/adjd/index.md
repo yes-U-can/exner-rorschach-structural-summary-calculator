@@ -20,7 +20,6 @@ relatedRoutes:
   - "result-interpretation/special-indices/CDI"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/core/adjd/index.md"
 ---
 

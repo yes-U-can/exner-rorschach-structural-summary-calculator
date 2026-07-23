@@ -18,7 +18,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/mediation/S_minus"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-upper-section-location-dq-2026-03-10.md"
 ---
 

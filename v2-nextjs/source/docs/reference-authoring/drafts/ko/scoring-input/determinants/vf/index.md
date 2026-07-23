@@ -19,7 +19,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/selfPerception/SumV_self"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/determinants/vf/index.md"
 ---
 

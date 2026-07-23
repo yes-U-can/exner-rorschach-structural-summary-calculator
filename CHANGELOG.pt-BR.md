@@ -10,6 +10,7 @@ Este documento apresenta as versões públicas de `exner-rorschach-structural-su
 
 | Data | Versão | Tipo | Notas | Código-fonte |
 | --- | --- | --- | --- | --- |
+| 2026-07-23 | v2.2.7 | Correção de erros | [Notas do patch](./v2-nextjs/releases/v2.2.7/README.pt-BR.md) | [Código-fonte](./v2-nextjs/source/) |
 | 2026-07-20 | v2.2.6 | Correção de erros | [Notas do patch](./v2-nextjs/releases/v2.2.6/README.pt-BR.md) | [Código-fonte](./v2-nextjs/source/) |
 | 2026-07-19 | v2.2.5 | Correção de erros | [Notas do patch](./v2-nextjs/releases/v2.2.5/README.pt-BR.md) | [Código-fonte](./v2-nextjs/source/) |
 | 2026-07-18 | v2.2.4 | Correção de erros | [Notas do patch](./v2-nextjs/releases/v2.2.4/) | [Código-fonte](./v2-nextjs/source/) |

@@ -19,7 +19,6 @@ relatedRoutes:
   - "scoring-input/popular"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/mediation/x-plus-percent/index.md"
 ---
 

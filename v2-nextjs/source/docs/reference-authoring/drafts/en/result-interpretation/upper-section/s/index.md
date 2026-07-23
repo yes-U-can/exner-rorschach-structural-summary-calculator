@@ -18,7 +18,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/mediation/S_minus"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 

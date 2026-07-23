@@ -1,7 +1,7 @@
 {
   "app": {
     "title": "Calculadora do Sumário Estrutural de Rorschach",
-    "version": "v2.2.6",
+    "version": "v2.2.7",
     "provider": "Desenvolvido e mantido pela MOW"
   },
   "nav": {
@@ -261,6 +261,18 @@
     "invalidDeterminants": {
       "title": "Revisar os determinantes de movimento",
       "message": "As linhas {rows} contêm {codes}, que não são mais códigos válidos para uma resposta individual. Selecione novamente cada determinante de movimento com o sufixo a, p ou a-p. O cálculo ficará bloqueado até que essas linhas sejam corrigidas."
+    },
+    "standaloneSpace": {
+      "title": "Revisar a localização no espaço branco",
+      "message": "As linhas {rows} usam S como código de localização isolado. Selecione WS, DS ou DdS de acordo com a localização básica usada na resposta. O cálculo ficará bloqueado até que essas linhas sejam corrigidas."
+    },
+    "movementConflict": {
+      "title": "Revisar os códigos de movimento duplicados",
+      "message": "As linhas {rows} contêm mais de um código da mesma família de movimento. Em cada resposta, selecione apenas uma opção a, p ou a-p para cada família de movimento humano, animal ou inanimado. Revise o registro e o inquérito antes de corrigir. O cálculo ficará bloqueado até que essas linhas sejam corrigidas."
+    },
+    "missingFormQuality": {
+      "title": "Revisar a qualidade formal",
+      "message": "A qualidade formal está em branco nas linhas {rows}. Selecione +, o, u, - ou none. Um campo em branco não equivale a FQnone. O cálculo ficará bloqueado até que essas linhas sejam corrigidas."
     },
     "resetComplete": {
       "title": "Redefinição Completa",

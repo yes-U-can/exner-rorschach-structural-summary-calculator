@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-17T13:33:12.996Z",
+  "generatedAt": "2026-07-23T06:26:46.954Z",
   "version": "2026-03-11-all-locales-go-live-v1",
   "locales": [
     "ko",
@@ -45,11 +45,11 @@
       },
       "querySet": {
         "filePath": "docs/reference-authoring/evals/ko-curated-query-set.json",
-        "currentCount": 100,
+        "currentCount": 103,
         "targetCount": 100,
         "coveragePass": true,
         "bucketCounts": {
-          "coding": 40,
+          "coding": 43,
           "interpretation": 40,
           "graph-navigation": 20
         }
@@ -100,11 +100,11 @@
       },
       "querySet": {
         "filePath": "docs/reference-authoring/evals/en-curated-query-set.json",
-        "currentCount": 60,
+        "currentCount": 63,
         "targetCount": 60,
         "coveragePass": true,
         "bucketCounts": {
-          "coding": 24,
+          "coding": 27,
           "interpretation": 24,
           "graph-navigation": 12
         }
@@ -155,17 +155,17 @@
       },
       "querySet": {
         "filePath": "docs/reference-authoring/evals/ja-curated-query-set.json",
-        "currentCount": 60,
+        "currentCount": 63,
         "targetCount": 60,
         "coveragePass": true,
         "bucketCounts": {
-          "coding": 24,
+          "coding": 27,
           "interpretation": 24,
           "graph-navigation": 12
         }
       },
       "inlineRefs": {
-        "count": 1922,
+        "count": 1939,
         "brokenTargetsCount": 0,
         "pass": true
       },
@@ -210,11 +210,11 @@
       },
       "querySet": {
         "filePath": "docs/reference-authoring/evals/es-curated-query-set.json",
-        "currentCount": 80,
+        "currentCount": 83,
         "targetCount": 80,
         "coveragePass": true,
         "bucketCounts": {
-          "coding": 32,
+          "coding": 35,
           "interpretation": 32,
           "graph-navigation": 16
         }
@@ -265,11 +265,11 @@
       },
       "querySet": {
         "filePath": "docs/reference-authoring/evals/pt-curated-query-set.json",
-        "currentCount": 60,
+        "currentCount": 63,
         "targetCount": 60,
         "coveragePass": true,
         "bucketCounts": {
-          "coding": 24,
+          "coding": 27,
           "interpretation": 24,
           "graph-navigation": 12
         }

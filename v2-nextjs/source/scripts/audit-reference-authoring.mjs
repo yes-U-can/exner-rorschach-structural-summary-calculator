@@ -3,11 +3,16 @@ import path from "node:path";
 
 import matter from "gray-matter";
 
+import { findRuleParityViolations } from "./lib/referenceRuleInvariants.mjs";
+
 const root = process.cwd();
 const authoringDir = path.join(root, "docs", "reference-authoring");
 const draftsDir = path.join(authoringDir, "drafts");
 const notesDir = path.join(authoringDir, "notes");
+const ruleInvariantsPath = path.join(authoringDir, "rule-invariants.json");
+const runtimePromotionPath = path.join(authoringDir, "runtime-promotion.json");
 const locales = new Set(["ko", "en", "ja", "es", "pt"]);
+const allowedStatusValues = new Set(["stub", "draft", "reviewed", "locked"]);
 const runtimeFiles = [
   path.join(root, "generated", "reference-corpus", "route-docs.json"),
   path.join(root, "generated", "reference-corpus", "chunks.json"),
@@ -312,7 +317,58 @@ function scanDraftMetadata(filePath) {
     );
   }
 
+  const status = String(parsed.data.status ?? "");
+  if (!allowedStatusValues.has(status)) {
+    findings.push(
+      createMetadataFinding(
+        filePath,
+        "invalid-status-value",
+        status,
+        "status must be one of stub, draft, reviewed, locked. Anything except stub is served once the locale is promoted in runtime-promotion.json.",
+      ),
+    );
+  }
+
+  if (Object.prototype.hasOwnProperty.call(parsed.data, "runtimeReady")) {
+    findings.push(
+      createMetadataFinding(
+        filePath,
+        "dead-runtime-ready-frontmatter",
+        String(parsed.data.runtimeReady),
+        "Per-file runtimeReady is never read by the pipeline; runtime promotion is locale-level in runtime-promotion.json. Remove the field.",
+      ),
+    );
+  }
+
   return findings;
+}
+
+function scanRuleParity() {
+  if (!fs.existsSync(ruleInvariantsPath)) {
+    return [
+      {
+        file: path.relative(root, ruleInvariantsPath),
+        label: "missing-rule-invariants-registry",
+        line: 1,
+        match: "",
+        runtimeHits: 0,
+        excerpt: "docs/reference-authoring/rule-invariants.json is required for the cross-locale rule parity gate.",
+      },
+    ];
+  }
+
+  return findRuleParityViolations({
+    draftsDir,
+    registryPath: ruleInvariantsPath,
+    promotionPath: runtimePromotionPath,
+  }).map((violation) => ({
+    file: violation.file,
+    label: `rule-parity-${violation.kind}`,
+    line: 1,
+    match: `${violation.invariantId} [${violation.locale}] ${violation.pattern}`,
+    runtimeHits: 0,
+    excerpt: violation.description,
+  }));
 }
 
 function isIgnoredFinding(finding) {
@@ -339,6 +395,7 @@ try {
     return locales.has(locale);
   });
   findings.push(...draftFiles.flatMap((filePath) => scanDraftMetadata(filePath)));
+  findings.push(...scanRuleParity());
   const blockingFindings = findings.filter((finding) => !isIgnoredFinding(finding));
   const nonBlockingFindings = findings.filter((finding) => isIgnoredFinding(finding));
 

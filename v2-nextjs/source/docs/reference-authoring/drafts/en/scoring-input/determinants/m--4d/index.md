@@ -17,7 +17,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/M_minus"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
@@ -37,6 +36,7 @@ It also applies to animals or fictional figures if they are acting in a genuinel
 ## Input Code Rule
 
 `M` is the family label used in Structural Summary totals. For an individual response, enter `Ma`, `Mp`, or `Ma-p` according to its active/passive quality. Bare `M` is not a complete response code.
+Use only one human-movement code in a response. If separate human objects show active and passive movement, enter `Ma-p` once rather than entering `Ma` and `Mp` in separate slots. One object showing both is not automatically `Ma-p`; review which movement governs the coding.
 
 ## Application Conditions
 

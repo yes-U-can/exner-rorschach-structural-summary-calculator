@@ -16,7 +16,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/selfPerception/_3r_2_R"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/pair/index.md"
 ---
 

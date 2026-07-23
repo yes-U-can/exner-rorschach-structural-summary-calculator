@@ -16,7 +16,6 @@ relatedRoutes:
   - "scoring-input/contents/Ge"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-ja-contents-ls-na-sc-sx-xy-id-2026-03-10.md"
 ---
 

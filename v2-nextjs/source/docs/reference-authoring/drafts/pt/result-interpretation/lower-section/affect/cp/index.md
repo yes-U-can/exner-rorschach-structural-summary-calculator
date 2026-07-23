@@ -20,7 +20,6 @@ relatedRoutes:
   - "result-interpretation/special-indices/DEPI"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-affect-s-blends-cp-2026-03-11.md"
 ---
 

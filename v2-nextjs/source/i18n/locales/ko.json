@@ -1,7 +1,7 @@
 {
   "app": {
     "title": "Exner 로샤 종합체계 구조요약 계산기",
-    "version": "v2.2.6",
+    "version": "v2.2.7",
     "provider": "MOW 제작·유지보수"
   },
   "nav": {
@@ -261,6 +261,18 @@
     "invalidDeterminants": {
       "title": "운동 결정인 재확인",
       "message": "행 {rows}에 더 이상 개별 반응 입력코드로 사용하지 않는 {codes}가 있습니다. 각 운동 결정인을 a, p 또는 a-p가 포함된 코드로 다시 선택해 주세요. 수정하기 전에는 계산할 수 없습니다."
+    },
+    "standaloneSpace": {
+      "title": "흰 여백 위치 재확인",
+      "message": "행 {rows}의 S는 단독 위치코드로 입력할 수 없습니다. 반응에서 사용한 기본 위치에 따라 WS, DS, DdS 중 하나를 선택해 주세요. 수정하기 전에는 계산할 수 없습니다."
+    },
+    "movementConflict": {
+      "title": "운동 결정인 중복 재확인",
+      "message": "행 {rows}에 같은 운동군의 부호가 둘 이상 입력되어 있습니다. 같은 반응의 사람운동, 동물운동, 무생물운동은 각 운동군마다 a, p, a-p 중 하나만 선택해 주세요. 반응기록과 질문단계를 확인해 수정하기 전에는 계산할 수 없습니다."
+    },
+    "missingFormQuality": {
+      "title": "형태질 재확인",
+      "message": "행 {rows}의 FQ가 비어 있습니다. +, o, u, -, none 중 하나를 선택해 주세요. 공란은 FQnone과 같지 않으며, 수정하기 전에는 계산할 수 없습니다."
     },
     "resetComplete": {
       "title": "초기화 완료",

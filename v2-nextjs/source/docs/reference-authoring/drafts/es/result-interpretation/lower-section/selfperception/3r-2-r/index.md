@@ -19,7 +19,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/R"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/selfperception/3r-2-r/index.md"
 ---
 

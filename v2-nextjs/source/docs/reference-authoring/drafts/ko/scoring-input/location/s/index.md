@@ -21,7 +21,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/affect/S_aff"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/location/s/index.md"
 ---
 
@@ -41,7 +40,8 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/loca
 
 - 흰 여백이 단순한 배경이 아니라 지각 대상의 일부로 사용된다.
 - Inquiry에서 흰 여백이 반응 형성에 어떤 역할을 했는지 확인한다.
-- 실제 사용 영역에 맞추어 `S`, `WS`, `DS`, `DdS`를 구분한다.
+- `S`는 구조요약에서 흰 여백 사용을 집계하는 부호이지만, 개별 반응의 완성 위치코드로 단독 입력하지 않는다.
+- 실제 사용 영역에 맞추어 `WS`, `DS`, `DdS` 중 하나로 기록한다.
 
 ## 주의사항/감별 기준
 

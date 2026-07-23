@@ -1,7 +1,7 @@
 {
   "app": {
     "title": "Rorschach Structural Summary Calculator",
-    "version": "v2.2.6",
+    "version": "v2.2.7",
     "provider": "Developed and maintained by MOW"
   },
   "nav": {
@@ -261,6 +261,18 @@
     "invalidDeterminants": {
       "title": "Review Movement Determinants",
       "message": "Rows {rows} contain {codes}, which are no longer valid codes for an individual response. Re-select each movement determinant with an a, p, or a-p suffix. Calculation is blocked until these rows are corrected."
+    },
+    "standaloneSpace": {
+      "title": "Review White-Space Location",
+      "message": "Rows {rows} use S as a stand-alone location code. Select WS, DS, or DdS according to the basic location used in the response. Calculation is blocked until these rows are corrected."
+    },
+    "movementConflict": {
+      "title": "Review Duplicate Movement Codes",
+      "message": "Rows {rows} contain more than one code from the same movement family. For each human, animal, or inanimate movement family in a response, select only one of a, p, or a-p. Review the response record and inquiry before correcting it. Calculation is blocked until these rows are corrected."
+    },
+    "missingFormQuality": {
+      "title": "Review Form Quality",
+      "message": "Form Quality is blank in rows {rows}. Select +, o, u, -, or none. A blank field is not FQnone. Calculation is blocked until these rows are corrected."
     },
     "resetComplete": {
       "title": "Reset Complete",

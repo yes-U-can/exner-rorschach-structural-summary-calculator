@@ -22,7 +22,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance-pt-mediation-xplus-xu-processing-2026-03-11.md"
 ---
 

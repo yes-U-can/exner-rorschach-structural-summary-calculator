@@ -17,7 +17,6 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/M_minus"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/determinants/m--4d/index.md"
 ---
 
@@ -37,6 +36,7 @@ También se aplica a animales o personajes ficticios si actúan de manera propia
 ## Regla del código de entrada
 
 `M` es la etiqueta de familia utilizada en los totales del Sumario Estructural. En una respuesta individual se registra `Ma`, `Mp` o `Ma-p`, según la cualidad activa o pasiva del movimiento. `M` sin sufijo no es un código completo para una respuesta individual.
+En una respuesta se registra un solo código de movimiento humano. Si distintas figuras humanas muestran movimiento activo y pasivo, se registra `Ma-p` una vez, en lugar de introducir `Ma` y `Mp` en casillas separadas. Un solo objeto que muestre ambos movimientos no recibe `Ma-p` automáticamente; debe revisarse qué movimiento determina la codificación.
 
 ## Condiciones de aplicación
 

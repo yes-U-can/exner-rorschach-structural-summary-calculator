@@ -19,7 +19,6 @@ relatedRoutes:
   - "scoring-input/determinants/TF"
 authorityPolicy: "curated-internal-reference"
 status: "draft"
-runtimeReady: false
 provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/interpersonal/sumt-inter/index.md"
 ---
 
