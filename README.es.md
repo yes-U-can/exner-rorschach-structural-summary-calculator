@@ -71,13 +71,13 @@ También corrige un problema de algunos navegadores en Windows por el que `Alt+r
 
 v2.2.5 separa la entrada de determinantes de movimiento de cada respuesta de los totales de familia mostrados en el Sumario Estructural. La tabla de codificación deja de ofrecer `M`, `FM` y `m` sin sufijo activo o pasivo; en su lugar se utilizan códigos completos como `Ma`, `Mp` y `Ma-p`. Los totales `M`, `FM` y `m` del Sumario Estructural y los cálculos de EB, MQual y W:M no cambian.
 
-Los protocolos existentes que ya usan códigos completos no necesitan volver a calcularse. Si un guardado automático antiguo contiene un código de movimiento sin sufijo activo o pasivo, la aplicación conserva la entrada original, detiene el cálculo e indica la fila y el código que requieren revisión. Se volvieron a comprobar los documentos de referencia en cinco idiomas, 5,604 vectores de búsqueda, 365 preguntas de recuperación y preguntas límite con llamadas reales a GPT-5.5. La [nota del parche v2.2.5](./v2-nextjs/releases/v2.2.5/README.es.md) explica las condiciones afectadas y el ejemplo hipotético en el límite del CDI.
+Los protocolos existentes que ya usan códigos completos no necesitan volver a calcularse. Si un guardado automático antiguo contiene un código de movimiento sin sufijo activo o pasivo, la aplicación conserva la entrada original, detiene el cálculo e indica la fila y el código que requieren revisión. Se volvieron a comprobar los documentos de referencia en cinco idiomas, 5604 vectores de búsqueda, 365 preguntas de recuperación y preguntas límite con llamadas reales a GPT-5.5. La [nota del parche v2.2.5](./v2-nextjs/releases/v2.2.5/README.es.md) explica las condiciones afectadas y el ejemplo hipotético en el límite del CDI.
 
 ## v2.2.4
 
 v2.2.4 reorganizó los documentos de referencia destinados a personas y el material que consultan los asistentes de IA opcionales, sin cambiar las fórmulas del Sumario Estructural ni la entrada de la tabla de codificación. No es necesario volver a calcular resultados existentes.
 
-Los términos y la redacción de los cinco idiomas se contrastaron con fuentes profesionales de cada idioma, y los títulos y el orden de los documentos se ajustaron al flujo real de codificación e interpretación. Se actualizaron 1,015 documentos de referencia y 5,589 vectores de búsqueda; hubo 0 documentos ausentes, vectores obsoletos o discrepancias de hash. También se reforzaron el límite exacto del sistema Exner CS, el rechazo de inyecciones de prompt y los límites de solicitudes. Se aprobaron 66 conversaciones reales, de un turno y de varios turnos, con GPT-5.5 en los cinco idiomas. La [nota del parche v2.2.4](./v2-nextjs/releases/v2.2.4/) contiene los detalles y las evidencias públicas.
+Los términos y la redacción de los cinco idiomas se contrastaron con fuentes profesionales de cada idioma, y los títulos y el orden de los documentos se ajustaron al flujo real de codificación e interpretación. Se actualizaron 1015 documentos de referencia y 5589 vectores de búsqueda; hubo 0 documentos ausentes, vectores obsoletos o discrepancias de hash. También se reforzaron el límite exacto del sistema Exner CS, el rechazo de inyecciones de prompt y los límites de solicitudes. Se aprobaron 66 conversaciones reales, de un turno y de varios turnos, con GPT-5.5 en los cinco idiomas. La [nota del parche v2.2.4](./v2-nextjs/releases/v2.2.4/) contiene los detalles y las evidencias públicas.
 
 Una revisión posterior también mejoró el diálogo para elegir cómo iniciar la codificación, la legibilidad de los documentos de referencia y el control de desplazamiento del asistente de codificación.
 
@@ -97,7 +97,7 @@ El Excel de 2019, el programa original RorScore, v1 GAS, el código actual de v2
 
 v2.2.1 corrigió los cálculos de **Upper Section, Lower Section y Special Indices** que muestra la aplicación, sin cambiar la UI/UX ni añadir campos de entrada. Se corrigieron los valores extremos de D/AdjD, las condiciones de visualización de EBPer, el orden de las reglas GHR/PHR, los denominadores iguales a 0 de WDA% y Afr, y la inclusión de Cn en el valor derecho de `FC:CF+C`.
 
-La versión también indicó por primera vez la ubicación pública y la función del Excel de 2019 consultado durante el desarrollo inicial de v1. La comprobación incluyó 25 cálculos con los mismos códigos y notas en distintos idiomas, 2,000 protocolos sintéticos reproducibles y llamadas reales a GPT-5.5 para codificación e interpretación.
+La versión también indicó por primera vez la ubicación pública y la función del Excel de 2019 consultado durante el desarrollo inicial de v1. La comprobación incluyó 25 cálculos con los mismos códigos y notas en distintos idiomas, 2000 protocolos sintéticos reproducibles y llamadas reales a GPT-5.5 para codificación e interpretación.
 
 ## v2.2.0
 
@@ -166,6 +166,6 @@ El repositorio público no contiene variables de entorno de producción, configu
 - **[2025-10-23] v1.1.0 (versión menor)** [Despliegue](https://script.google.com/macros/s/AKfycbw2J6gd4Sf_Tjx6s9GdQrWu4b_tOtqwFLtKJCs-vSFRR0c4NZ0Mlb5UFm7-V9zkBPzitg/exec) [Nota del parche/código fuente](./v1-gas/releases/v1.1.0/)
 - **[2025-10-20] v1.0.4 (hotfix)** [Despliegue](https://script.google.com/macros/s/AKfycbw1GLfIvehoz4wAzC4LicjD_oB0Dpy_sLJ30da9qobx5X4wa3nJr0pLewV0lVPPv1ptGw/exec) [Nota del parche/código fuente](./v1-gas/releases/v1.0.4/)
 - **[2025-10-18] v1.0.3 (corrección de errores)** [Despliegue](https://script.google.com/macros/s/AKfycbzoiaofs_I5Ue4p7Eo5XQp0OmUtmbbqkpJuwD-FQ1R4PLscULJB_AHVBb-VylICEKJB1A/exec) [Nota del parche/código fuente](./v1-gas/releases/v1.0.3/)
-- **[2025-10-19] v1.0.2 (hotfix)** [Despliegue](https://script.google.com/macros/s/AKfycbwtBFge9jPS03Mz4QD5IlUDfHOetaVGsIe48y9dZESkfWtsJ-dnYv9S5iZ_4wxx4dCOUw/exec) [Nota del parche/código fuente](./v1-gas/releases/v1.0.2/)
+- **[2025-10-18] v1.0.2 (hotfix)** [Despliegue](https://script.google.com/macros/s/AKfycbwtBFge9jPS03Mz4QD5IlUDfHOetaVGsIe48y9dZESkfWtsJ-dnYv9S5iZ_4wxx4dCOUw/exec) [Nota del parche/código fuente](./v1-gas/releases/v1.0.2/)
 - **[2025-10-17] v1.0.1 (hotfix)** [Despliegue](https://script.google.com/macros/s/AKfycbwNNeJsgRx0sEnZO4X9XxEUEthQlVS3Ttk6k_OSmIj8aTPlpdBQV1653hmBtzLnVX8Q/exec) [Nota del parche/código fuente](./v1-gas/releases/v1.0.1/)
 - **[2025-10-16] v1.0.0 (versión mayor)** [Despliegue](https://script.google.com/macros/s/AKfycbxYTxqKcmRNJhpE8eCGTBZPyUFVJIRQiUTbyW48lJKg2E7Bgc5RKSitdDTVcE3bzk07JA/exec) [Nota del parche/código fuente](./v1-gas/releases/v1.0.0/)

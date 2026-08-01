@@ -64,6 +64,7 @@ The public documentation has a five-language reader-facing layer and an original
 7. Each managed translation records the canonical Korean source hash, glossary version, and review state in the localization manifest. A canonical change makes every companion stale until it is updated and checked again.
 8. Technical identifiers, formulas, code symbols, commands, file paths, model IDs, URLs, bibliographic titles, and direct quotations keep their exact original form unless the quotation is separately identified as a translation.
 9. Dates must be absolute dates in `YYYY-MM-DD` format. Use the date explicitly declared for the release in Asia/Seoul after accounting for work that crossed midnight locally. A Git commit or push timestamp is supporting evidence, not an automatic replacement for the declared release date.
+10. Write exact four-digit technical counts without a thousands separator in every managed locale (for example, `5604`). This prevents a comma from being read as a decimal marker in Spanish or Portuguese while preserving literal cross-locale verification. Do not apply this rule to decimal measurements, dates, versions, formulas, or direct quotations.
 
 ### Locale Voice Rules
 

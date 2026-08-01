@@ -39,6 +39,7 @@ The same suffix rule applies to other managed Markdown files, such as `CHANGELOG
 9. Lead with the clinical effect in ordinary professional language. Put implementation details, test counts, and file-level evidence after the reader can understand what changed and whether recalculation is needed.
 10. Never expose local paths, private file names, API keys, raw prompts, unpublished source materials, or labels that describe the intended audience.
 11. When one managed reader-facing document links to another, each companion must link to the matching locale file. Raw evidence and untranslated historical documents keep the canonical target.
+12. Write exact four-digit technical counts without a thousands separator in every managed locale (for example, `5604`). This prevents a comma from being read as a decimal marker in Spanish or Portuguese while preserving literal cross-locale verification. Do not apply this rule to decimal measurements, dates, versions, formulas, or direct quotations.
 
 ## Locale Voice
 

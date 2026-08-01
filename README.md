@@ -71,13 +71,13 @@ v2.2.6은 다섯 언어 페이지의 검색 제목, 설명, 대표 주소와 대
 
 v2.2.5는 개별 반응의 운동 결정인 입력과 구조요약의 합계 항목을 다시 분리한 버그 패치입니다. 채점표에서는 능동형·수동형 구분이 빠진 `M`, `FM`, `m`을 더 이상 선택할 수 없으며, `Ma`, `Mp`, `Ma-p`처럼 운동의 방향이 포함된 완성 부호를 사용합니다. 구조요약 결과의 `M`, `FM`, `m` 합계와 EB, MQual, W:M 등의 계산은 그대로 유지됩니다.
 
-올바른 완성 부호를 사용한 기존 프로토콜은 다시 계산할 필요가 없습니다. 과거 자동저장 자료에 능동형·수동형 구분이 없는 값이 남아 있으면 앱이 원본을 임의로 바꾸지 않고 계산을 멈춘 뒤 확인할 행과 부호를 알려줍니다. 다섯 언어 참조 문서, 검색 벡터 5,604개, 검색 질문 365개와 실제 GPT-5.5 경계 질문을 다시 확인했습니다. 자세한 영향 범위와 가상 CDI 경계 예시는 [v2.2.5 패치노트](./v2-nextjs/releases/v2.2.5/)에서 확인할 수 있습니다.
+올바른 완성 부호를 사용한 기존 프로토콜은 다시 계산할 필요가 없습니다. 과거 자동저장 자료에 능동형·수동형 구분이 없는 값이 남아 있으면 앱이 원본을 임의로 바꾸지 않고 계산을 멈춘 뒤 확인할 행과 부호를 알려줍니다. 다섯 언어 참조 문서, 검색 벡터 5604개, 검색 질문 365개와 실제 GPT-5.5 경계 질문을 다시 확인했습니다. 자세한 영향 범위와 가상 CDI 경계 예시는 [v2.2.5 패치노트](./v2-nextjs/releases/v2.2.5/)에서 확인할 수 있습니다.
 
 ## v2.2.4
 
 v2.2.4는 구조요약 계산식과 채점표 입력 방식을 바꾸지 않고, 사람이 읽는 참조 문서와 선택형 AI가 검색하는 자료를 함께 다시 정리한 버그 패치입니다. 기존 구조요약 결과를 다시 계산할 필요는 없습니다.
 
-다섯 언어의 용어와 문체를 각 언어권의 전문 자료에 대조하고, 화면 제목과 문서 순서를 실제 채점·해석 흐름에 맞췄습니다. 참조 문서 1,015개와 검색 벡터 5,589개를 갱신했으며, 누락·오래된 벡터·본문 해시 불일치는 모두 0개였습니다. 코딩·해석 도우미의 Exner CS 범위, 프롬프트 인젝션 거절, 요청 횟수 제한을 보강하고 실제 GPT-5.5 단일·여러 차례 대화 66회를 다섯 언어에서 확인했습니다. 자세한 내용과 공개 검사 자료는 [v2.2.4 패치노트](./v2-nextjs/releases/v2.2.4/)에서 확인할 수 있습니다.
+다섯 언어의 용어와 문체를 각 언어권의 전문 자료에 대조하고, 화면 제목과 문서 순서를 실제 채점·해석 흐름에 맞췄습니다. 참조 문서 1015개와 검색 벡터 5589개를 갱신했으며, 누락·오래된 벡터·본문 해시 불일치는 모두 0개였습니다. 코딩·해석 도우미의 Exner CS 범위, 프롬프트 인젝션 거절, 요청 횟수 제한을 보강하고 실제 GPT-5.5 단일·여러 차례 대화 66회를 다섯 언어에서 확인했습니다. 자세한 내용과 공개 검사 자료는 [v2.2.4 패치노트](./v2-nextjs/releases/v2.2.4/)에서 확인할 수 있습니다.
 
 후속 점검에서는 채점 시작 방식 선택, 참조 문서의 가독성, 코딩 도우미의 스크롤 표시도 함께 다듬었습니다.
 
@@ -97,7 +97,7 @@ v2.2.2는 Cn이 들어가는 계산과 들어가지 않는 계산을 다시 나�
 
 v2.2.1은 UI/UX나 입력 항목을 바꾸지 않고, 앱이 표시하는 **Upper Section, Lower Section, Special Indices**의 계산을 바로잡은 핫픽스입니다. D/AdjD의 극단값, EBPer 표시 조건, GHR/PHR의 판정 순서, WDA%와 Afr의 0분모 처리를 수정했고, 화면의 `FC:CF+C` 오른쪽 값에는 Cn을 포함하도록 고쳤습니다.
 
-초기 v1 개발에 참고한 2019 Excel의 공개 배포 위치와 역할도 처음 밝혔습니다. 같은 계산 입력에 다섯 언어 메모를 바꿔 넣은 검사 25회, 같은 조건에서 반복 가능한 가상 프로토콜 2,000개, 실제 GPT-5.5 해석·코딩 호출을 사용해 수정 결과를 확인했습니다.
+초기 v1 개발에 참고한 2019 Excel의 공개 배포 위치와 역할도 처음 밝혔습니다. 같은 계산 입력에 다섯 언어 메모를 바꿔 넣은 검사 25회, 같은 조건에서 반복 가능한 가상 프로토콜 2000개, 실제 GPT-5.5 해석·코딩 호출을 사용해 수정 결과를 확인했습니다.
 
 ## v2.2.0
 
@@ -166,6 +166,6 @@ GPT-5.5 도우미는 Exner 종합체계 밖의 질문에 답변 범위를 넓히
 - **[2025-10-23] v1.1.0 (마이너 패치)** [배포링크](https://script.google.com/macros/s/AKfycbw2J6gd4Sf_Tjx6s9GdQrWu4b_tOtqwFLtKJCs-vSFRR0c4NZ0Mlb5UFm7-V9zkBPzitg/exec) [패치노트/소스코드](./v1-gas/releases/v1.1.0/)
 - **[2025-10-20] v1.0.4 (핫픽스)** [배포링크](https://script.google.com/macros/s/AKfycbw1GLfIvehoz4wAzC4LicjD_oB0Dpy_sLJ30da9qobx5X4wa3nJr0pLewV0lVPPv1ptGw/exec) [패치노트/소스코드](./v1-gas/releases/v1.0.4/)
 - **[2025-10-18] v1.0.3 (버그 패치)** [배포링크](https://script.google.com/macros/s/AKfycbzoiaofs_I5Ue4p7Eo5XQp0OmUtmbbqkpJuwD-FQ1R4PLscULJB_AHVBb-VylICEKJB1A/exec) [패치노트/소스코드](./v1-gas/releases/v1.0.3/)
-- **[2025-10-19] v1.0.2 (핫픽스)** [배포링크](https://script.google.com/macros/s/AKfycbwtBFge9jPS03Mz4QD5IlUDfHOetaVGsIe48y9dZESkfWtsJ-dnYv9S5iZ_4wxx4dCOUw/exec) [패치노트/소스코드](./v1-gas/releases/v1.0.2/)
+- **[2025-10-18] v1.0.2 (핫픽스)** [배포링크](https://script.google.com/macros/s/AKfycbwtBFge9jPS03Mz4QD5IlUDfHOetaVGsIe48y9dZESkfWtsJ-dnYv9S5iZ_4wxx4dCOUw/exec) [패치노트/소스코드](./v1-gas/releases/v1.0.2/)
 - **[2025-10-17] v1.0.1 (핫픽스)** [배포링크](https://script.google.com/macros/s/AKfycbwNNeJsgRx0sEnZO4X9XxEUEthQlVS3Ttk6k_OSmIj8aTPlpdBQV1653hmBtzLnVX8Q/exec) [패치노트/소스코드](./v1-gas/releases/v1.0.1/)
 - **[2025-10-16] v1.0.0 (메이저 패치)** [배포링크](https://script.google.com/macros/s/AKfycbxYTxqKcmRNJhpE8eCGTBZPyUFVJIRQiUTbyW48lJKg2E7Bgc5RKSitdDTVcE3bzk07JA/exec) [패치노트/소스코드](./v1-gas/releases/v1.0.0/)

@@ -71,13 +71,13 @@ v2.2.6では、五言語ページの検索タイトル、説明、正規URL、�
 
 v2.2.5では、個々の反応に入力する運動決定因と、構造一覧表に表示する運動群の合計を明確に分けました。採点表では、能動・受動の区別がない`M`、`FM`、`m`を選択できなくし、代わりに`Ma`、`Mp`、`Ma-p`などの完全な符号を使用します。構造一覧表の`M`、`FM`、`m`合計と、EB、MQual、W:Mなどの計算は変わりません。
 
-すでに完全な符号を使っている既存プロトコルは再計算する必要がありません。過去の自動保存データに能動・受動の区別がない運動符号が残っている場合、アプリは元の入力を保存したまま計算を止め、確認が必要な行と符号を示します。五言語の参照文書、5,604個の検索ベクトル、365件の検索質問、GPT-5.5の実際の境界質問を再確認しました。影響条件と仮想的なCDI境界例は、[v2.2.5パッチノート](./v2-nextjs/releases/v2.2.5/README.ja.md)で確認できます。
+すでに完全な符号を使っている既存プロトコルは再計算する必要がありません。過去の自動保存データに能動・受動の区別がない運動符号が残っている場合、アプリは元の入力を保存したまま計算を止め、確認が必要な行と符号を示します。五言語の参照文書、5604個の検索ベクトル、365件の検索質問、GPT-5.5の実際の境界質問を再確認しました。影響条件と仮想的なCDI境界例は、[v2.2.5パッチノート](./v2-nextjs/releases/v2.2.5/README.ja.md)で確認できます。
 
 ## v2.2.4
 
 v2.2.4では、構造一覧表の計算式や採点表の入力方式を変更せず、人が読む参照文書と任意のAIアシスタントが検索する資料を整理し直しました。既存の構造一覧表結果を再計算する必要はありません。
 
-五言語の用語と文体を各言語の専門資料に照合し、画面タイトルと文書順序を実際の符号化・解釈の流れに合わせました。1,015件の参照文書と5,589個の検索ベクトルを更新し、欠落、古いベクトル、本文ハッシュ不一致はいずれも0件でした。AIアシスタントのExner CS範囲、プロンプトインジェクション拒否、リクエスト回数制限も強化し、五言語で実際のGPT-5.5単一会話・複数会話66件を確認しました。詳細と公開検査資料は、[v2.2.4パッチノート](./v2-nextjs/releases/v2.2.4/)で確認できます。
+五言語の用語と文体を各言語の専門資料に照合し、画面タイトルと文書順序を実際の符号化・解釈の流れに合わせました。1015件の参照文書と5589個の検索ベクトルを更新し、欠落、古いベクトル、本文ハッシュ不一致はいずれも0件でした。AIアシスタントのExner CS範囲、プロンプトインジェクション拒否、リクエスト回数制限も強化し、五言語で実際のGPT-5.5単一会話・複数会話66件を確認しました。詳細と公開検査資料は、[v2.2.4パッチノート](./v2-nextjs/releases/v2.2.4/)で確認できます。
 
 その後の点検では、採点開始方法の選択、参照文書の読みやすさ、符号化アシスタントのスクロール表示も調整しました。
 
@@ -97,7 +97,7 @@ v2.2.2では、Cnを含める計算と含めない計算を分けて再確認し
 
 v2.2.1では、UI/UXや入力項目を変えず、アプリが表示する**Upper Section, Lower Section, Special Indices**の計算を修正しました。D/AdjDの極端値、EBPer表示条件、GHR/PHRの判定順序、WDA%とAfrの0除算処理、`FC:CF+C`右辺へのCn算入を修正しました。
 
-初期v1開発で参照した2019年Excelの公開配布場所と役割も初めて明記しました。同じ符号に異なる言語のメモを入れた計算25件、同一条件で繰り返せる仮想プロトコル2,000件、実際のGPT-5.5符号化・解釈呼び出しで修正結果を確認しました。
+初期v1開発で参照した2019年Excelの公開配布場所と役割も初めて明記しました。同じ符号に異なる言語のメモを入れた計算25件、同一条件で繰り返せる仮想プロトコル2000件、実際のGPT-5.5符号化・解釈呼び出しで修正結果を確認しました。
 
 ## v2.2.0
 
@@ -166,6 +166,6 @@ GPT-5.5アシスタントがエクスナー包括システム以外へ回答範�
 - **[2025-10-23] v1.1.0（マイナーリリース）** [デプロイ](https://script.google.com/macros/s/AKfycbw2J6gd4Sf_Tjx6s9GdQrWu4b_tOtqwFLtKJCs-vSFRR0c4NZ0Mlb5UFm7-V9zkBPzitg/exec) [パッチノート/ソースコード](./v1-gas/releases/v1.1.0/)
 - **[2025-10-20] v1.0.4（ホットフィックス）** [デプロイ](https://script.google.com/macros/s/AKfycbw1GLfIvehoz4wAzC4LicjD_oB0Dpy_sLJ30da9qobx5X4wa3nJr0pLewV0lVPPv1ptGw/exec) [パッチノート/ソースコード](./v1-gas/releases/v1.0.4/)
 - **[2025-10-18] v1.0.3（バグ修正）** [デプロイ](https://script.google.com/macros/s/AKfycbzoiaofs_I5Ue4p7Eo5XQp0OmUtmbbqkpJuwD-FQ1R4PLscULJB_AHVBb-VylICEKJB1A/exec) [パッチノート/ソースコード](./v1-gas/releases/v1.0.3/)
-- **[2025-10-19] v1.0.2（ホットフィックス）** [デプロイ](https://script.google.com/macros/s/AKfycbwtBFge9jPS03Mz4QD5IlUDfHOetaVGsIe48y9dZESkfWtsJ-dnYv9S5iZ_4wxx4dCOUw/exec) [パッチノート/ソースコード](./v1-gas/releases/v1.0.2/)
+- **[2025-10-18] v1.0.2（ホットフィックス）** [デプロイ](https://script.google.com/macros/s/AKfycbwtBFge9jPS03Mz4QD5IlUDfHOetaVGsIe48y9dZESkfWtsJ-dnYv9S5iZ_4wxx4dCOUw/exec) [パッチノート/ソースコード](./v1-gas/releases/v1.0.2/)
 - **[2025-10-17] v1.0.1（ホットフィックス）** [デプロイ](https://script.google.com/macros/s/AKfycbwNNeJsgRx0sEnZO4X9XxEUEthQlVS3Ttk6k_OSmIj8aTPlpdBQV1653hmBtzLnVX8Q/exec) [パッチノート/ソースコード](./v1-gas/releases/v1.0.1/)
 - **[2025-10-16] v1.0.0（メジャーリリース）** [デプロイ](https://script.google.com/macros/s/AKfycbxYTxqKcmRNJhpE8eCGTBZPyUFVJIRQiUTbyW48lJKg2E7Bgc5RKSitdDTVcE3bzk07JA/exec) [パッチノート/ソースコード](./v1-gas/releases/v1.0.0/)

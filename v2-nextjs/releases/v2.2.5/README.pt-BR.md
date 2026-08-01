@@ -64,7 +64,7 @@ Primeiro, foi verificado se os códigos de entrada e os campos de resultados man
 As páginas de referência nos cinco idiomas e os assistentes opcionais de IA também foram verificados.
 
 - As 365 perguntas de busca nos documentos recuperaram o material correspondente.
-- Todos os 5,604 embeddings da OpenAI foram reconstruídos a partir do texto revisado, com 0 embeddings desatualizados ou divergências no hash do conteúdo.
+- Todos os 5604 embeddings da OpenAI foram reconstruídos a partir do texto revisado, com 0 embeddings desatualizados ou divergências no hash do conteúdo.
 - Na busca híbrida com embeddings reais da OpenAI, tanto a taxa de acerto do primeiro documento quanto a cobertura do conjunto relevante foram de 100% para perguntas amplas e perguntas com nome explícito. Nenhuma pergunta ampla trouxe como primeiro resultado um documento de outra área de trabalho.
 - Em 62 chamadas reais de turno único ao GPT-5.5, todas as perguntas sobre codificação ativa-passiva do movimento respeitaram o limite pretendido. Em 1 resposta interpretativa longa, sem relação com os códigos de movimento, foi identificado que o número de respostas e as limitações dos dados não eram explicados primeiro; a ordem foi corrigida e a mesma condição passou em 3 verificações consecutivas.
 - As conversas sobre codificação do movimento passaram em 9 chamadas de vários turnos. Outra verificação em inglês falhou 1 vez porque o avaliador não reconheceu uma expressão equivalente; depois da correção da expressão aceita, a pergunta relacionada passou em 2 verificações consecutivas.

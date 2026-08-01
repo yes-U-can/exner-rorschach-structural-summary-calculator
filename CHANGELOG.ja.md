@@ -6,6 +6,8 @@
 
 > **リリース日表記の整理（2026-07-18）：** 深夜の作業が日付をまたいだ一部のバージョンについて、コミット時刻ではなく、当時の運用上宣言したAsia/Seoulの日付を基準にアーカイブ表記を統一しました。v2.2.3で整理を始め、v2.2.4ではv2.1.8-v2.2.4の連続区間を当時の作業日に合わせてそれぞれ一日前へ移しました。ソース履歴と検査報告書の作成日は変更していません。
 
+> **追加訂正（2026-08-01）：** v1.0.2とv1.0.3のリリース順を再確認し、v1.0.2のアーカイブ日もv1.0.3と同じAsia/Seoul基準の2025-10-18に統一しました。当時の計算コードとデプロイ済みバージョンは変更していません。
+
 ## [Next.js] バージョン2のリリース履歴
 
 | 日付 | バージョン | 種別 | パッチノート | ソース |
@@ -52,6 +54,6 @@
 | 2025-10-23 | v1.1.0 | マイナーリリース | [実行](https://script.google.com/macros/s/AKfycbw2J6gd4Sf_Tjx6s9GdQrWu4b_tOtqwFLtKJCs-vSFRR0c4NZ0Mlb5UFm7-V9zkBPzitg/exec) | [パッチノート／ソースコード](./v1-gas/releases/v1.1.0/) |
 | 2025-10-20 | v1.0.4 | ホットフィックス | [実行](https://script.google.com/macros/s/AKfycbw1GLfIvehoz4wAzC4LicjD_oB0Dpy_sLJ30da9qobx5X4wa3nJr0pLewV0lVPPv1ptGw/exec) | [パッチノート／ソースコード](./v1-gas/releases/v1.0.4/) |
 | 2025-10-18 | v1.0.3 | バグ修正 | [実行](https://script.google.com/macros/s/AKfycbzoiaofs_I5Ue4p7Eo5XQp0OmUtmbbqkpJuwD-FQ1R4PLscULJB_AHVBb-VylICEKJB1A/exec) | [パッチノート／ソースコード](./v1-gas/releases/v1.0.3/) |
-| 2025-10-19 | v1.0.2 | ホットフィックス | [実行](https://script.google.com/macros/s/AKfycbwtBFge9jPS03Mz4QD5IlUDfHOetaVGsIe48y9dZESkfWtsJ-dnYv9S5iZ_4wxx4dCOUw/exec) | [パッチノート／ソースコード](./v1-gas/releases/v1.0.2/) |
+| 2025-10-18 | v1.0.2 | ホットフィックス | [実行](https://script.google.com/macros/s/AKfycbwtBFge9jPS03Mz4QD5IlUDfHOetaVGsIe48y9dZESkfWtsJ-dnYv9S5iZ_4wxx4dCOUw/exec) | [パッチノート／ソースコード](./v1-gas/releases/v1.0.2/) |
 | 2025-10-17 | v1.0.1 | ホットフィックス | [実行](https://script.google.com/macros/s/AKfycbwNNeJsgRx0sEnZO4X9XxEUEthQlVS3Ttk6k_OSmIj8aTPlpdBQV1653hmBtzLnVX8Q/exec) | [パッチノート／ソースコード](./v1-gas/releases/v1.0.1/) |
 | 2025-10-16 | v1.0.0 | メジャーリリース | [実行](https://script.google.com/macros/s/AKfycbxYTxqKcmRNJhpE8eCGTBZPyUFVJIRQiUTbyW48lJKg2E7Bgc5RKSitdDTVcE3bzk07JA/exec) | [パッチノート／ソースコード](./v1-gas/releases/v1.0.0/) |

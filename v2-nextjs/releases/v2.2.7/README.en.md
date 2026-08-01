@@ -55,7 +55,7 @@ Input blocking and the five-language guidance were also checked on the actual sc
 The five-language search data and AI assistants were also checked.
 
 - All 380 reference-search questions retrieved the relevant document.
-- All 5,604 OpenAI embeddings were rebuilt from the revised text, with 0 body-hash mismatches or stale embeddings.
+- All 5604 OpenAI embeddings were rebuilt from the revised text, with 0 body-hash mismatches or stale embeddings.
 - In hybrid retrieval using real embeddings, top-document hit rates were 100% for both broad and explicitly named questions.
 - Representative questions about a standalone `S`, duplicate movement codes, and blank Form Quality were called live in all five languages; none of the 15 calls produced an answer that violated the rules.
 - In the full automated suite, 83 test files passed all 476 checks; 7 checks were skipped because their run conditions were unavailable. The production build, static code checks, five-language copy audit, and secret scanning also passed.

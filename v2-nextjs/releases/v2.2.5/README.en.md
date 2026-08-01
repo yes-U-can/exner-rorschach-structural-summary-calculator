@@ -64,7 +64,7 @@ The first checks confirmed that input codes and result fields retained their dif
 The five-language reference pages and optional AI assistants were checked as well.
 
 - All 365 reference-search questions retrieved the relevant document.
-- All 5,604 OpenAI embeddings were rebuilt from the revised text, with 0 stale embeddings or body-hash mismatches.
+- All 5604 OpenAI embeddings were rebuilt from the revised text, with 0 stale embeddings or body-hash mismatches.
 - In hybrid retrieval using real OpenAI embeddings, top-document hit rate and relevant-set coverage were both 100% for broad and explicitly named questions. No broad question returned a document from another work area as its first result.
 - In 62 live single-turn GPT-5.5 calls, every question about active-passive movement coding respected the intended boundary. In 1 unrelated long interpretation, the response count and data limitations were not explained first; the response order was corrected and the same condition then passed 3 consecutive checks.
 - Movement-coding conversations passed in 9 multi-turn calls. A separate English check failed 1 time because the evaluator did not recognize an equivalent expression; after the accepted expression was corrected, the related question passed 2 consecutive checks.

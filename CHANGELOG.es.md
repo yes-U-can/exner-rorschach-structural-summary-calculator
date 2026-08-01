@@ -6,6 +6,8 @@ Este documento presenta las versiones públicas de `exner-rorschach-structural-s
 
 > **Unificación de las fechas de publicación (2026-07-18):** algunas sesiones de trabajo nocturnas cruzaron la medianoche. En esas versiones, el archivo emplea de forma coherente la fecha de Asia/Seoul declarada operativamente en aquel momento, no la hora del commit. La corrección comenzó en v2.2.3 y, en v2.2.4, el tramo continuo v2.1.8-v2.2.4 se adelantó un día para corresponder con las fechas de trabajo de entonces. No se modificaron el historial del código fuente ni las fechas de los informes de verificación.
 
+> **Corrección adicional (2026-08-01):** tras volver a comprobar el orden de publicación de v1.0.2 y v1.0.3, la fecha de archivo de v1.0.2 se unificó con la misma fecha de Asia/Seoul que v1.0.3: 2025-10-18. No se modificaron el código de cálculo ni las versiones desplegadas en aquel momento.
+
 ## [Next.js] Historial de versiones de la versión 2
 
 | Fecha | Versión | Tipo | Notas | Código fuente |
@@ -52,6 +54,6 @@ Este documento presenta las versiones públicas de `exner-rorschach-structural-s
 | 2025-10-23 | v1.1.0 | Versión menor | [Ejecutar](https://script.google.com/macros/s/AKfycbw2J6gd4Sf_Tjx6s9GdQrWu4b_tOtqwFLtKJCs-vSFRR0c4NZ0Mlb5UFm7-V9zkBPzitg/exec) | [Notas/código fuente](./v1-gas/releases/v1.1.0/) |
 | 2025-10-20 | v1.0.4 | Hotfix | [Ejecutar](https://script.google.com/macros/s/AKfycbw1GLfIvehoz4wAzC4LicjD_oB0Dpy_sLJ30da9qobx5X4wa3nJr0pLewV0lVPPv1ptGw/exec) | [Notas/código fuente](./v1-gas/releases/v1.0.4/) |
 | 2025-10-18 | v1.0.3 | Corrección de errores | [Ejecutar](https://script.google.com/macros/s/AKfycbzoiaofs_I5Ue4p7Eo5XQp0OmUtmbbqkpJuwD-FQ1R4PLscULJB_AHVBb-VylICEKJB1A/exec) | [Notas/código fuente](./v1-gas/releases/v1.0.3/) |
-| 2025-10-19 | v1.0.2 | Hotfix | [Ejecutar](https://script.google.com/macros/s/AKfycbwtBFge9jPS03Mz4QD5IlUDfHOetaVGsIe48y9dZESkfWtsJ-dnYv9S5iZ_4wxx4dCOUw/exec) | [Notas/código fuente](./v1-gas/releases/v1.0.2/) |
+| 2025-10-18 | v1.0.2 | Hotfix | [Ejecutar](https://script.google.com/macros/s/AKfycbwtBFge9jPS03Mz4QD5IlUDfHOetaVGsIe48y9dZESkfWtsJ-dnYv9S5iZ_4wxx4dCOUw/exec) | [Notas/código fuente](./v1-gas/releases/v1.0.2/) |
 | 2025-10-17 | v1.0.1 | Hotfix | [Ejecutar](https://script.google.com/macros/s/AKfycbwNNeJsgRx0sEnZO4X9XxEUEthQlVS3Ttk6k_OSmIj8aTPlpdBQV1653hmBtzLnVX8Q/exec) | [Notas/código fuente](./v1-gas/releases/v1.0.1/) |
 | 2025-10-16 | v1.0.0 | Versión mayor | [Ejecutar](https://script.google.com/macros/s/AKfycbxYTxqKcmRNJhpE8eCGTBZPyUFVJIRQiUTbyW48lJKg2E7Bgc5RKSitdDTVcE3bzk07JA/exec) | [Notas/código fuente](./v1-gas/releases/v1.0.0/) |

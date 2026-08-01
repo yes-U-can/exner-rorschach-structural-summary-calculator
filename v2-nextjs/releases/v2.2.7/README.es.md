@@ -55,7 +55,7 @@ El bloqueo de entradas y los avisos en cinco idiomas también se comprobaron en 
 También se comprobaron los datos de búsqueda en cinco idiomas y los asistentes de IA.
 
 - Las 380 preguntas de búsqueda de documentos de referencia recuperaron el documento correspondiente.
-- Se reconstruyeron los 5,604 embeddings de OpenAI a partir del texto nuevo; las discrepancias en el hash del contenido y los embeddings obsoletos fueron 0.
+- Se reconstruyeron los 5604 embeddings de OpenAI a partir del texto nuevo; las discrepancias en el hash del contenido y los embeddings obsoletos fueron 0.
 - En la búsqueda híbrida con embeddings reales, la tasa de acierto del primer documento fue del 100% tanto para preguntas amplias como para preguntas con nombre explícito.
 - Se realizaron llamadas reales en cinco idiomas con preguntas representativas sobre la `S` aislada, los códigos de movimiento duplicados y la calidad formal en blanco, y se comprobó que ninguna de las 15 llamadas produjo respuestas contrarias a las reglas.
 - En el conjunto automatizado completo se superaron 476 comprobaciones de 83 archivos de prueba y 7 se omitieron porque no se cumplían sus condiciones de ejecución. También se superaron la compilación de producción, el análisis estático del código, la auditoría de textos en cinco idiomas y la detección de secretos.

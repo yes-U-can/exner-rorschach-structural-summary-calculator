@@ -6,6 +6,8 @@ This document lists the public releases of `exner-rorschach-structural-summary-c
 
 > **Release-date notation aligned (2026-07-18):** Some work sessions crossed midnight. For those releases, the archive now consistently uses the Asia/Seoul date declared for operations at the time rather than the commit timestamp. v2.2.3 began this correction, and v2.2.4 moved the continuous v2.1.8-v2.2.4 range one day earlier to match the corresponding work dates. Source history and the dates of verification reports were not changed.
 
+> **Additional correction (2026-08-01):** After rechecking the release order of v1.0.2 and v1.0.3, the archive date for v1.0.2 was aligned to the same Asia/Seoul date as v1.0.3: 2025-10-18. The calculation code and deployed versions from that time were not changed.
+
 ## [Next.js] Version 2 release history
 
 | Date | Version | Type | Patch Note | Source |
@@ -52,6 +54,6 @@ This document lists the public releases of `exner-rorschach-structural-summary-c
 | 2025-10-23 | v1.1.0 | Minor release | [Run](https://script.google.com/macros/s/AKfycbw2J6gd4Sf_Tjx6s9GdQrWu4b_tOtqwFLtKJCs-vSFRR0c4NZ0Mlb5UFm7-V9zkBPzitg/exec) | [Patch notes/source code](./v1-gas/releases/v1.1.0/) |
 | 2025-10-20 | v1.0.4 | Hotfix | [Run](https://script.google.com/macros/s/AKfycbw1GLfIvehoz4wAzC4LicjD_oB0Dpy_sLJ30da9qobx5X4wa3nJr0pLewV0lVPPv1ptGw/exec) | [Patch notes/source code](./v1-gas/releases/v1.0.4/) |
 | 2025-10-18 | v1.0.3 | Bug-fix release | [Run](https://script.google.com/macros/s/AKfycbzoiaofs_I5Ue4p7Eo5XQp0OmUtmbbqkpJuwD-FQ1R4PLscULJB_AHVBb-VylICEKJB1A/exec) | [Patch notes/source code](./v1-gas/releases/v1.0.3/) |
-| 2025-10-19 | v1.0.2 | Hotfix | [Run](https://script.google.com/macros/s/AKfycbwtBFge9jPS03Mz4QD5IlUDfHOetaVGsIe48y9dZESkfWtsJ-dnYv9S5iZ_4wxx4dCOUw/exec) | [Patch notes/source code](./v1-gas/releases/v1.0.2/) |
+| 2025-10-18 | v1.0.2 | Hotfix | [Run](https://script.google.com/macros/s/AKfycbwtBFge9jPS03Mz4QD5IlUDfHOetaVGsIe48y9dZESkfWtsJ-dnYv9S5iZ_4wxx4dCOUw/exec) | [Patch notes/source code](./v1-gas/releases/v1.0.2/) |
 | 2025-10-17 | v1.0.1 | Hotfix | [Run](https://script.google.com/macros/s/AKfycbwNNeJsgRx0sEnZO4X9XxEUEthQlVS3Ttk6k_OSmIj8aTPlpdBQV1653hmBtzLnVX8Q/exec) | [Patch notes/source code](./v1-gas/releases/v1.0.1/) |
 | 2025-10-16 | v1.0.0 | Major release | [Run](https://script.google.com/macros/s/AKfycbxYTxqKcmRNJhpE8eCGTBZPyUFVJIRQiUTbyW48lJKg2E7Bgc5RKSitdDTVcE3bzk07JA/exec) | [Patch notes/source code](./v1-gas/releases/v1.0.0/) |

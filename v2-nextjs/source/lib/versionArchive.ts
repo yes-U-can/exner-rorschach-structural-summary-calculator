@@ -336,7 +336,7 @@ export const v1GasVersions: VersionArchiveEntry[] = [
     version: 'v1.0.2',
     title: 'v1.0.2',
     series: 'v1-gas',
-    publishedAt: '2025-10-19',
+    publishedAt: '2025-10-18',
     releaseKind: 'hotfix',
     releaseLabel: '핫픽스',
     summary: 'MQual/Form Quality 관련 로직 문제를 수정한 버전입니다.',

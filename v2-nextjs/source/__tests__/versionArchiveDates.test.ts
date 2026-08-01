@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { v2NextVersions } from '@/lib/versionArchive';
+import { v1GasVersions, v2NextVersions } from '@/lib/versionArchive';
 
 describe('version archive dates', () => {
   it('keeps the corrected release dates from v2.1.8 through v2.2.8', () => {
@@ -36,6 +36,26 @@ describe('version archive dates', () => {
       'v2.1.10': '2026-07-13',
       'v2.1.9': '2026-07-12',
       'v2.1.8': '2026-07-11',
+    });
+  });
+
+  it('keeps the corrected early v1 release chronology', () => {
+    const dates = Object.fromEntries(
+      v1GasVersions
+        .filter(({ version }) => [
+          'v1.0.1',
+          'v1.0.2',
+          'v1.0.3',
+          'v1.0.4',
+        ].includes(version))
+        .map(({ version, publishedAt }) => [version, publishedAt]),
+    );
+
+    expect(dates).toEqual({
+      'v1.0.1': '2025-10-17',
+      'v1.0.2': '2025-10-18',
+      'v1.0.3': '2025-10-18',
+      'v1.0.4': '2025-10-20',
     });
   });
 });

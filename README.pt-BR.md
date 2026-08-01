@@ -71,13 +71,13 @@ Também foi corrigido um problema de alguns navegadores no Windows em que `Alt+r
 
 A v2.2.5 separa a entrada do determinante de movimento de cada resposta dos totais de família exibidos no Sumário Estrutural. A tabela de codificação deixa de oferecer `M`, `FM` e `m` sem sufixo ativo ou passivo; em seu lugar, são usados códigos completos como `Ma`, `Mp` e `Ma-p`. Os totais `M`, `FM` e `m` do Sumário Estrutural e os cálculos de EB, MQual e W:M permanecem inalterados.
 
-Protocolos existentes que já usam códigos completos não precisam ser recalculados. Se um salvamento automático antigo contiver um código de movimento sem o sufixo ativo ou passivo, o aplicativo preserva a entrada original, interrompe o cálculo e identifica a linha e o código que precisam de revisão. Foram verificados novamente os documentos de referência em cinco idiomas, 5,604 vetores de busca, 365 perguntas de recuperação e perguntas de limite com chamadas reais ao GPT-5.5. A [nota da v2.2.5](./v2-nextjs/releases/v2.2.5/README.pt-BR.md) explica as condições afetadas e o exemplo hipotético no limite do CDI.
+Protocolos existentes que já usam códigos completos não precisam ser recalculados. Se um salvamento automático antigo contiver um código de movimento sem o sufixo ativo ou passivo, o aplicativo preserva a entrada original, interrompe o cálculo e identifica a linha e o código que precisam de revisão. Foram verificados novamente os documentos de referência em cinco idiomas, 5604 vetores de busca, 365 perguntas de recuperação e perguntas de limite com chamadas reais ao GPT-5.5. A [nota da v2.2.5](./v2-nextjs/releases/v2.2.5/README.pt-BR.md) explica as condições afetadas e o exemplo hipotético no limite do CDI.
 
 ## v2.2.4
 
 A v2.2.4 reorganizou os documentos de referência destinados às pessoas e o material pesquisado pelos assistentes de IA opcionais, sem alterar as fórmulas do Sumário Estrutural nem a entrada da tabela de codificação. Não é necessário recalcular resultados existentes.
 
-Os termos e a redação dos cinco idiomas foram comparados com fontes profissionais de cada idioma, e os títulos e a ordem dos documentos foram alinhados ao fluxo real de codificação e interpretação. Foram atualizados 1,015 documentos de referência e 5,589 vetores de busca, com 0 documentos ausentes, vetores desatualizados ou divergências de hash. Também foram reforçados o limite exato do sistema Exner CS, a recusa de injeções de prompt e os limites de solicitações. Foram aprovadas 66 conversas reais, de uma ou várias etapas, com GPT-5.5 nos cinco idiomas. A [nota da v2.2.4](./v2-nextjs/releases/v2.2.4/) apresenta os detalhes e as evidências públicas.
+Os termos e a redação dos cinco idiomas foram comparados com fontes profissionais de cada idioma, e os títulos e a ordem dos documentos foram alinhados ao fluxo real de codificação e interpretação. Foram atualizados 1015 documentos de referência e 5589 vetores de busca, com 0 documentos ausentes, vetores desatualizados ou divergências de hash. Também foram reforçados o limite exato do sistema Exner CS, a recusa de injeções de prompt e os limites de solicitações. Foram aprovadas 66 conversas reais, de uma ou várias etapas, com GPT-5.5 nos cinco idiomas. A [nota da v2.2.4](./v2-nextjs/releases/v2.2.4/) apresenta os detalhes e as evidências públicas.
 
 Uma revisão posterior também aperfeiçoou a escolha da forma de iniciar a codificação, a legibilidade dos documentos de referência e o controle de rolagem do assistente de codificação.
 
@@ -97,7 +97,7 @@ A planilha Excel de 2019, o programa original RorScore, a v1 GAS, o código atua
 
 A v2.2.1 corrigiu os cálculos de **Upper Section, Lower Section e Special Indices** exibidos pelo aplicativo, sem alterar a UI/UX nem acrescentar campos de entrada. Foram corrigidos os valores extremos de D/AdjD, as condições de exibição de EBPer, a ordem das regras GHR/PHR, os denominadores iguais a 0 de WDA% e Afr e a inclusão de Cn no valor à direita de `FC:CF+C`.
 
-A versão também informou pela primeira vez a localização pública e a função da planilha Excel de 2019 consultada no desenvolvimento inicial da v1. A verificação incluiu 25 cálculos com os mesmos códigos e notas em diferentes idiomas, 2,000 protocolos sintéticos reproduzíveis e chamadas reais ao GPT-5.5 para codificação e interpretação.
+A versão também informou pela primeira vez a localização pública e a função da planilha Excel de 2019 consultada no desenvolvimento inicial da v1. A verificação incluiu 25 cálculos com os mesmos códigos e notas em diferentes idiomas, 2000 protocolos sintéticos reproduzíveis e chamadas reais ao GPT-5.5 para codificação e interpretação.
 
 ## v2.2.0
 
@@ -166,6 +166,6 @@ O repositório público não contém variáveis de ambiente de produção, confi
 - **[2025-10-23] v1.1.0 (versão menor)** [Implantação](https://script.google.com/macros/s/AKfycbw2J6gd4Sf_Tjx6s9GdQrWu4b_tOtqwFLtKJCs-vSFRR0c4NZ0Mlb5UFm7-V9zkBPzitg/exec) [Nota da versão/código-fonte](./v1-gas/releases/v1.1.0/)
 - **[2025-10-20] v1.0.4 (hotfix)** [Implantação](https://script.google.com/macros/s/AKfycbw1GLfIvehoz4wAzC4LicjD_oB0Dpy_sLJ30da9qobx5X4wa3nJr0pLewV0lVPPv1ptGw/exec) [Nota da versão/código-fonte](./v1-gas/releases/v1.0.4/)
 - **[2025-10-18] v1.0.3 (correção de erros)** [Implantação](https://script.google.com/macros/s/AKfycbzoiaofs_I5Ue4p7Eo5XQp0OmUtmbbqkpJuwD-FQ1R4PLscULJB_AHVBb-VylICEKJB1A/exec) [Nota da versão/código-fonte](./v1-gas/releases/v1.0.3/)
-- **[2025-10-19] v1.0.2 (hotfix)** [Implantação](https://script.google.com/macros/s/AKfycbwtBFge9jPS03Mz4QD5IlUDfHOetaVGsIe48y9dZESkfWtsJ-dnYv9S5iZ_4wxx4dCOUw/exec) [Nota da versão/código-fonte](./v1-gas/releases/v1.0.2/)
+- **[2025-10-18] v1.0.2 (hotfix)** [Implantação](https://script.google.com/macros/s/AKfycbwtBFge9jPS03Mz4QD5IlUDfHOetaVGsIe48y9dZESkfWtsJ-dnYv9S5iZ_4wxx4dCOUw/exec) [Nota da versão/código-fonte](./v1-gas/releases/v1.0.2/)
 - **[2025-10-17] v1.0.1 (hotfix)** [Implantação](https://script.google.com/macros/s/AKfycbwNNeJsgRx0sEnZO4X9XxEUEthQlVS3Ttk6k_OSmIj8aTPlpdBQV1653hmBtzLnVX8Q/exec) [Nota da versão/código-fonte](./v1-gas/releases/v1.0.1/)
 - **[2025-10-16] v1.0.0 (versão principal)** [Implantação](https://script.google.com/macros/s/AKfycbxYTxqKcmRNJhpE8eCGTBZPyUFVJIRQiUTbyW48lJKg2E7Bgc5RKSitdDTVcE3bzk07JA/exec) [Nota da versão/código-fonte](./v1-gas/releases/v1.0.0/)

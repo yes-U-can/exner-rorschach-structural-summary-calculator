@@ -71,13 +71,13 @@ It also fixes cases in some Windows browsers where `Alt+mouse wheel` on the scor
 
 v2.2.5 separates movement determinant input for an individual response from the family totals shown in the Structural Summary. The scoring table no longer offers `M`, `FM`, or `m` without an active/passive suffix; complete codes such as `Ma`, `Mp`, and `Ma-p` are used instead. The `M`, `FM`, and `m` totals in the Structural Summary and calculations such as EB, MQual, and W:M remain unchanged.
 
-Existing protocols that already use complete codes do not need to be recalculated. If an older browser autosave contains a movement code without its active/passive suffix, the app preserves the original entry, stops calculation, and identifies the row and code that need review. The release rechecked the five-language reference documents, 5,604 search vectors, 365 retrieval questions, and live GPT-5.5 boundary questions. See the [v2.2.5 patch note](./v2-nextjs/releases/v2.2.5/README.en.md) for the affected conditions and the hypothetical CDI boundary example.
+Existing protocols that already use complete codes do not need to be recalculated. If an older browser autosave contains a movement code without its active/passive suffix, the app preserves the original entry, stops calculation, and identifies the row and code that need review. The release rechecked the five-language reference documents, 5604 search vectors, 365 retrieval questions, and live GPT-5.5 boundary questions. See the [v2.2.5 patch note](./v2-nextjs/releases/v2.2.5/README.en.md) for the affected conditions and the hypothetical CDI boundary example.
 
 ## v2.2.4
 
 v2.2.4 reorganized the human-readable reference documents and the material searched by the optional AI assistants without changing Structural Summary formulas or scoring-table input. Existing Structural Summary results do not need to be recalculated.
 
-Terminology and prose in all five languages were checked against professional target-language sources, and page titles and document order were aligned with the actual coding and interpretation sequence. The release refreshed 1,015 reference documents and 5,589 search vectors, with 0 missing, stale, or content-hash-mismatched vectors. It also strengthened the assistants' Exner CS scope, prompt-injection refusal, and request limits, and passed 66 live GPT-5.5 single-turn and multi-turn scenarios across all five languages. See the [v2.2.4 patch note](./v2-nextjs/releases/v2.2.4/) for details and public evidence.
+Terminology and prose in all five languages were checked against professional target-language sources, and page titles and document order were aligned with the actual coding and interpretation sequence. The release refreshed 1015 reference documents and 5589 search vectors, with 0 missing, stale, or content-hash-mismatched vectors. It also strengthened the assistants' Exner CS scope, prompt-injection refusal, and request limits, and passed 66 live GPT-5.5 single-turn and multi-turn scenarios across all five languages. See the [v2.2.4 patch note](./v2-nextjs/releases/v2.2.4/) for details and public evidence.
 
 A follow-up also refined the scoring start-choice dialog, reference-document readability, and the coding assistant's scroll control.
 
@@ -97,7 +97,7 @@ The 2019 Excel workbook, the original RorScore program, v1 GAS, the current v2 c
 
 v2.2.1 corrected calculations in the **Upper Section, Lower Section, and Special Indices** displayed by the app without changing the UI/UX or adding input fields. It corrected extreme D/AdjD values, EBPer display conditions, the ordered GHR/PHR rules, denominator handling when WDA% or Afr equals 0, and the Cn-inclusive right-hand value of `FC:CF+C`.
 
-The release also disclosed for the first time the public location and role of the 2019 Excel workbook consulted during early v1 development. Verification included 25 calculations using the same codes with notes in different languages, 2,000 repeatable synthetic protocols, and live GPT-5.5 coding and interpretation calls.
+The release also disclosed for the first time the public location and role of the 2019 Excel workbook consulted during early v1 development. Verification included 25 calculations using the same codes with notes in different languages, 2000 repeatable synthetic protocols, and live GPT-5.5 coding and interpretation calls.
 
 ## v2.2.0
 
@@ -166,6 +166,6 @@ The public repository does not include production environment variables, Vercel 
 - **[2025-10-23] v1.1.0 (minor release)** [Deployment](https://script.google.com/macros/s/AKfycbw2J6gd4Sf_Tjx6s9GdQrWu4b_tOtqwFLtKJCs-vSFRR0c4NZ0Mlb5UFm7-V9zkBPzitg/exec) [Patch note/source](./v1-gas/releases/v1.1.0/)
 - **[2025-10-20] v1.0.4 (hotfix)** [Deployment](https://script.google.com/macros/s/AKfycbw1GLfIvehoz4wAzC4LicjD_oB0Dpy_sLJ30da9qobx5X4wa3nJr0pLewV0lVPPv1ptGw/exec) [Patch note/source](./v1-gas/releases/v1.0.4/)
 - **[2025-10-18] v1.0.3 (bug-fix release)** [Deployment](https://script.google.com/macros/s/AKfycbzoiaofs_I5Ue4p7Eo5XQp0OmUtmbbqkpJuwD-FQ1R4PLscULJB_AHVBb-VylICEKJB1A/exec) [Patch note/source](./v1-gas/releases/v1.0.3/)
-- **[2025-10-19] v1.0.2 (hotfix)** [Deployment](https://script.google.com/macros/s/AKfycbwtBFge9jPS03Mz4QD5IlUDfHOetaVGsIe48y9dZESkfWtsJ-dnYv9S5iZ_4wxx4dCOUw/exec) [Patch note/source](./v1-gas/releases/v1.0.2/)
+- **[2025-10-18] v1.0.2 (hotfix)** [Deployment](https://script.google.com/macros/s/AKfycbwtBFge9jPS03Mz4QD5IlUDfHOetaVGsIe48y9dZESkfWtsJ-dnYv9S5iZ_4wxx4dCOUw/exec) [Patch note/source](./v1-gas/releases/v1.0.2/)
 - **[2025-10-17] v1.0.1 (hotfix)** [Deployment](https://script.google.com/macros/s/AKfycbwNNeJsgRx0sEnZO4X9XxEUEthQlVS3Ttk6k_OSmIj8aTPlpdBQV1653hmBtzLnVX8Q/exec) [Patch note/source](./v1-gas/releases/v1.0.1/)
 - **[2025-10-16] v1.0.0 (major release)** [Deployment](https://script.google.com/macros/s/AKfycbxYTxqKcmRNJhpE8eCGTBZPyUFVJIRQiUTbyW48lJKg2E7Bgc5RKSitdDTVcE3bzk07JA/exec) [Patch note/source](./v1-gas/releases/v1.0.0/)
