@@ -74,6 +74,14 @@ As chamadas reais de IA são verificações amostrais de limites representativos
 
 Esta versão modificou apenas os itens com respaldo suficientemente estabelecido. Não foi alterado o tratamento da repetição do mesmo Special Score que não tenha distinção entre Level 1 e Level 2. Também não foi estabelecida uma nova regra clínica para atribuir FQ a determinantes sem forma; o comportamento de normalização já usado na interface de computador foi aplicado à interface móvel apenas para eliminar a diferença entre as duas. Os pontos que ainda exigem fontes adicionais ou uma decisão de produto serão revistos quando houver evidência suficiente.
 
+## Correção documental posterior de 2026-08-01
+
+A data de arquivo da v1.0.2 aparecia depois da data da versão seguinte, a v1.0.3. As duas versões agora ficam registradas com a mesma data no fuso Asia/Seoul, 2025-10-18, e as listas desse dia apresentam a v1.0.3 antes da v1.0.2.
+
+As contagens técnicas exatas de quatro dígitos nos documentos públicos em cinco idiomas agora são escritas sem separador de milhares, como `5604`, `1015`, `5589` e `2000`. Isso evita que uma vírgula seja interpretada como separador decimal em espanhol ou português.
+
+Esta correção posterior altera apenas a notação de datas e números na nota da v2.2.8 e no arquivo público. Ela não muda as fórmulas, a interface de entrada, o conteúdo dos documentos de referência nem o comportamento da IA. Resultados anteriores não precisam ser recalculados.
+
 ## Escopo público e limite de segurança
 
 O código público inclui validação de entrada, recuperação do salvamento automático, verificações dos limites de S-CON e OBS, documentos de referência em cinco idiomas, ferramentas de avaliação de respostas de IA e resultados reproduzíveis.

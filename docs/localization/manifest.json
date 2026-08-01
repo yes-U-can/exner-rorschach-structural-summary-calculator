@@ -142,7 +142,7 @@
                            {
                                "id":  "v2.2.8-release-note",
                                "canonical":  "v2-nextjs/releases/v2.2.8/README.md",
-                               "canonicalSha256":  "af635702e0b5c0b321a96b0b6772e5b7b7dcd878d330ebb89e52338ceb014c1e",
+                               "canonicalSha256":  "7644d7b7cb884a3923b337b2c6ea31da7a8558ef095152f6b540ae522455392b",
                                "reviewStatus":  "reviewed",
                                "translations":  {
                                                     "en":  "v2-nextjs/releases/v2.2.8/README.en.md",

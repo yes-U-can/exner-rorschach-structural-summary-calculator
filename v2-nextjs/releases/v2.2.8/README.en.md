@@ -74,6 +74,14 @@ Live AI calls are sample checks of representative answer boundaries. They do not
 
 Only items with sufficiently established support were changed in this release. The handling of a repeated Special Score that has no Level 1 or Level 2 distinction remains unchanged. No new clinical rule for assigning FQ to formless determinants was established; the existing desktop cleanup behavior was applied to mobile only to remove the difference between the two interfaces. Items that still require additional source support or a product decision will be reconsidered when adequate evidence is available.
 
+## Follow-up documentation correction on 2026-08-01
+
+The archive date for v1.0.2 had appeared later than the date for the next release, v1.0.3. Both releases are now recorded under the same Asia/Seoul date, 2025-10-18, and same-date lists place v1.0.3 before v1.0.2.
+
+Exact four-digit technical counts in the five public-document locales are now written without a thousands separator, such as `5604`, `1015`, `5589`, and `2000`. This avoids confusion in Spanish and Portuguese, where a comma may be read as a decimal marker.
+
+This follow-up changes only the date and numeric notation in the v2.2.8 patch note and public archive. It does not change calculation formulas, the input UI, reference-document content, or AI behavior. Existing results do not need to be recalculated.
+
 ## Public scope and security boundary
 
 The public source includes input validation, autosave recovery, S-CON and OBS boundary checks, the five-language reference documents, AI-answer evaluation tools, and reproducible results.
