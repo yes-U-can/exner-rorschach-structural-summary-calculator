@@ -151,6 +151,7 @@ const InputRow = memo(function InputRow({
       <td className="px-1 py-2">
         <DeterminantSlots
           values={response.determinants}
+          specialScores={response.specialScores}
           onChange={(v) => updateField('determinants', v)}
         />
       </td>
@@ -233,6 +234,7 @@ const InputRow = memo(function InputRow({
       <td className="px-1 py-2">
         <SpecialScoreSlots
           values={response.specialScores}
+          determinants={response.determinants}
           onChange={(v) => updateField('specialScores', v)}
         />
       </td>

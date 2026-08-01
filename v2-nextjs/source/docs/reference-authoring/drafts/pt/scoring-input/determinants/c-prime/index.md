@@ -34,6 +34,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-determinants-cn-ac
 - O apoio formal deve estar ausente ou ser muito fraco.
 - Se ainda houver forma secundária clara, reconsidere [`C'F`](ref://scoring-input/determinants/C%27F).
 - Se a forma dominar mais, reconsidere [`FC'`](ref://scoring-input/determinants/FC%27).
+- Como `C'` é um determinante acromático puro sem forma, registre a qualidade formal como `FQnone`.
 
 ## Cuidados e diferenciação
 

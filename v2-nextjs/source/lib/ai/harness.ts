@@ -91,7 +91,7 @@ type OpenAIResponseLike = {
   } | null;
 };
 
-export const AI_HARNESS_VERSION = 'sicp-openai-harness-v4';
+export const AI_HARNESS_VERSION = 'sicp-openai-harness-v5';
 export const OPENAI_GENERATION_TIMEOUT_MS = 3 * 60 * 1000;
 export const OPENAI_GENERATION_MAX_RETRIES = 1;
 

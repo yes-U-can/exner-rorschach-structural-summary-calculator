@@ -38,8 +38,13 @@ describe('official Comprehensive System workbook fixture', () => {
       AdjEs: '3.0',
       D: 3,
       AdjD: 3,
+      W_D_Dd: '10:5:2',
+      W_M: '10:7',
+      Mnone: 1,
       FC_CF_C: '3 : 2',
       _3r_2_R: '0.35',
+      An_Xy: 0,
+      H_ratio: '2 : 6',
       Afr: '0.55',
       WDA_percent: '0.80',
     });

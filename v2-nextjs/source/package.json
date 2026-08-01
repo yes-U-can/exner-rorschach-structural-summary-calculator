@@ -1,6 +1,6 @@
 {
   "name": "rorschach-calculator-v2",
-  "version": "2.2.7",
+  "version": "2.2.8",
   "private": true,
   "scripts": {
     "docs:generate-corpus": "npm run docs:audit-authoring && node scripts/generate-reference-corpus.mjs && node scripts/generate-reference-quality-report.mjs && node scripts/generate-reference-release-snapshot.mjs",
@@ -43,23 +43,26 @@
     "lint": "npm run i18n:audit && eslint",
     "test": "npm run docs:generate-corpus && npm run docs:assert-runtime-ready && prisma generate && vitest run",
     "security:secrets": "node scripts/security-scan.mjs",
-    "security:audit": "npm audit --omit=dev --audit-level=moderate && npm audit --audit-level=moderate",
-    "security:check": "npm run security:secrets && npm run security:audit",
+    "security:audit": "npm audit --omit=dev --audit-level=moderate",
+    "security:audit:dev": "node scripts/security-dev-audit.mjs",
+    "security:check": "npm run security:secrets && npm run security:audit && npm run security:audit:dev",
     "ops:smoke-reference": "node scripts/smoke-reference-release.mjs",
     "ops:smoke-release": "npm run ops:smoke-reference",
     "ops:publish:direct-dry-run": "powershell -ExecutionPolicy Bypass -File scripts/publish.ps1 -UseCurrentRepo -DryRun",
     "ops:publish:mirror-dry-run": "powershell -ExecutionPolicy Bypass -File scripts/publish.ps1 -DryRun"
   },
   "overrides": {
-    "@hono/node-server": "1.19.14",
-    "postcss": "8.5.12"
+    "@hono/node-server": "2.0.12",
+    "fast-uri": "4.1.1",
+    "postcss": "8.5.25",
+    "sharp": "0.35.0"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.9",
     "@heroicons/react": "^2.2.0",
-    "@prisma/client": "^7.8.0",
+    "@prisma/client": "^7.9.1",
     "gray-matter": "^4.0.3",
-    "next": "^16.2.4",
+    "next": "^16.2.12",
     "openai": "^6.21.0",
     "pg": "^8.18.0",
     "react": "^19.2.5",
@@ -71,15 +74,15 @@
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.11",
-    "@tailwindcss/postcss": "^4",
+    "@tailwindcss/postcss": "^4.3.3",
     "@types/node": "^20",
     "@types/pg": "^8.18.0",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "^16.2.4",
-    "prisma": "^7.8.0",
-    "tailwindcss": "^4",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.2.12",
+    "prisma": "^7.9.1",
+    "tailwindcss": "^4.3.3",
     "typescript": "^5",
     "vitest": "^4.1.5"
   }

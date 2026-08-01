@@ -33,11 +33,11 @@ The response points to "nature" as a whole rather than to one isolated object.
 
 ## Application Conditions
 
-- Use it for sky, sea, water, snow, rain, distant mountains, broad vegetation, or another response understood as general nature.
+- Use it for the sun, moon, a planet, sky, water, ocean, lake, river, ice, snow, rain, fog, mist, rainbow, storm, tornado, night, or a raindrop.
 - The focus has to stay on the natural setting or phenomenon itself.
 - If `Na` appears together with [`Bt`](ref://scoring-input/contents/Bt) or [`Ls`](ref://scoring-input/contents/Ls), code `Na` only; do not also code `Bt` or `Ls`.
 - If `Na` is absent but both `Bt` and `Ls` apply, choose only the one that best represents the response.
-- If the person describes a cloud as an isolated object, first reconsider [`Cl`](ref://scoring-input/contents/Cl); if the person describes a broad natural environment, reconsider `Na`.
+- If the person describes a cloud, first reconsider [`Cl`](ref://scoring-input/contents/Cl); fog and mist are coded `Na`.
 
 ## Cautions / Distinctions
 

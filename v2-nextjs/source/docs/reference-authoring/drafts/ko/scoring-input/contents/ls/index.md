@@ -41,7 +41,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/cont
 
 - `Ls`는 실제 풍경이고 `Ge`는 지도다.
 - `Na`가 함께 들어가면 `Na`가 `Ls`보다 우선한다.
-- `Bt`와 `Ls`가 함께 보이고 `Na`가 없으면 둘 중 하나만 채점한다.
+- `Na`가 없고 `Bt`와 `Ls`가 함께 해당되면 둘 중 하나만 채점한다.
 
 ## 상호 참조
 

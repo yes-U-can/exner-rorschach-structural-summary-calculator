@@ -4,12 +4,14 @@ import { buildSafeApiErrorResponse, logApiError } from '@/lib/apiError';
 import {
   clearByokSessionCookie,
   createByokSession,
+  getByokNetworkRateLimitKey,
   normalizeByokApiKey,
   normalizeByokProvider,
   readByokSessionFromRequest,
   setByokSessionCookie,
   toByokSessionStatus,
 } from '@/lib/byokSession';
+import { consumeByokSessionRateLimit } from '@/lib/byokSessionRateLimit';
 import { hasValidByokApiKeyFormat } from '@/lib/byokApiKeyFormat';
 import { parseJsonWithSizeLimit } from '@/lib/requestBodyGuard';
 
@@ -28,12 +30,46 @@ export async function POST(request: Request) {
   const requestId = randomUUID();
 
   try {
+    const rateLimit = consumeByokSessionRateLimit(
+      getByokNetworkRateLimitKey(request, 'session'),
+    );
+    if (!rateLimit.allowed) {
+      return NextResponse.json(
+        {
+          error: 'Too many AI session attempts. Please wait and try again.',
+          code: 'byok_session_rate_limited',
+        },
+        {
+          status: 429,
+          headers: {
+            'Cache-Control': 'no-store',
+            'Retry-After': String(rateLimit.retryAfterSeconds),
+            'X-Request-Id': requestId,
+          },
+        },
+      );
+    }
+
     const parsedBody = await parseJsonWithSizeLimit<{
       provider?: unknown;
       apiKey?: unknown;
     }>(request, BYOK_BODY_POLICY);
     if (!parsedBody.ok) {
       return parsedBody.response;
+    }
+
+    if (
+      !parsedBody.value
+      || typeof parsedBody.value !== 'object'
+      || Array.isArray(parsedBody.value)
+    ) {
+      return NextResponse.json(
+        {
+          error: 'Invalid JSON request body.',
+          code: 'invalid_byok_request',
+        },
+        { status: 400 },
+      );
     }
 
     const provider = normalizeByokProvider(parsedBody.value.provider);

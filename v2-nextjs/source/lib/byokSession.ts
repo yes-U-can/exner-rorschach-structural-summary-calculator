@@ -90,6 +90,18 @@ export function getByokChatRateLimitKey(session: ByokSession) {
     .digest('base64url');
 }
 
+export function getByokNetworkRateLimitKey(request: Request, scope: 'chat' | 'session') {
+  const forwardedFor = request.headers.get('x-vercel-forwarded-for')
+    ?? request.headers.get('x-forwarded-for')
+    ?? request.headers.get('x-real-ip')
+    ?? 'unknown';
+  const clientIp = forwardedFor.split(',')[0]?.trim().slice(0, 128) || 'unknown';
+
+  return createHmac('sha256', getSecretMaterial())
+    .update(`ai-${scope}-network:${clientIp}`, 'utf8')
+    .digest('base64url');
+}
+
 function encode(value: Buffer) {
   return value.toString('base64url');
 }
@@ -111,9 +123,10 @@ export function decryptByokSession(cookieValue: string | null | undefined): Byok
   if (!cookieValue) return null;
   const [version, ivPart, tagPart, ciphertextPart] = cookieValue.split('.');
   if (version !== COOKIE_VERSION || !ivPart || !tagPart || !ciphertextPart) return null;
+  const encryptionKey = getEncryptionKey();
 
   try {
-    const decipher = createDecipheriv('aes-256-gcm', getEncryptionKey(), decode(ivPart));
+    const decipher = createDecipheriv('aes-256-gcm', encryptionKey, decode(ivPart));
     decipher.setAuthTag(decode(tagPart));
     const plaintext = Buffer.concat([
       decipher.update(decode(ciphertextPart)),
@@ -146,12 +159,14 @@ export function readByokSessionFromRequest(request: Request): ByokSession | null
   for (const segment of cookieHeader.split(';')) {
     const [rawName, ...rawValueParts] = segment.trim().split('=');
     if (rawName !== cookieName) continue;
+    let cookieValue: string;
     try {
-      return decryptByokSession(decodeURIComponent(rawValueParts.join('=')));
+      cookieValue = decodeURIComponent(rawValueParts.join('='));
     } catch {
       // Malformed percent-encoding in the cookie value; treat as no session.
       return null;
     }
+    return decryptByokSession(cookieValue);
   }
 
   return null;

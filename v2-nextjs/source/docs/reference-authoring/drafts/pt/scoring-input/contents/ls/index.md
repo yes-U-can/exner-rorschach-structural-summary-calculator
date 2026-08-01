@@ -38,13 +38,15 @@ O foco principal é a configuração de ambiente, não apenas um objeto isolado 
 
 - Use quando a pessoa diz paisagem, montanhas, horizonte, vale, campo ou cena ambiental extensa.
 - O código cabe quando vários elementos formam uma cena unificada de ambiente.
-- Se a resposta nomeia apenas vegetação ou elemento natural isolado, revise primeiro [`Na`](ref://scoring-input/contents/Na) ou [`Bt`](ref://scoring-input/contents/Bt).
+- Se `Na` for aplicável junto com `Ls`, registre apenas `Na` e não acrescente `Ls`.
+- Se não houver `Na`, mas [`Bt`](ref://scoring-input/contents/Bt) e `Ls` forem aplicáveis, registre somente o código que melhor represente o centro da resposta.
 - Se a forma é lida como mapa ou contorno geográfico, revise primeiro [`Ge`](ref://scoring-input/contents/Ge).
 
 ## Cuidados e diferenciação
 
 - `Ls` se diferencia de [`Na`](ref://scoring-input/contents/Na) porque exige cena ou paisagem, não apenas natureza em geral.
 - `Ls` se diferencia de [`Bt`](ref://scoring-input/contents/Bt) porque não precisa focar em elemento botânico específico.
+- Sempre que `Na` for aplicável, ele tem prioridade sobre `Ls`.
 - Em algumas leituras esse conteúdo conversa com variáveis de isolamento, como [`Índice de Isolamento`](ref://result-interpretation/lower-section/interpersonal/ISO_Index), mas isso e etapa posterior.
 
 ## Referências cruzadas

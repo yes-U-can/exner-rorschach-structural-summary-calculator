@@ -38,6 +38,7 @@ It does not describe only an odd mixture, but an impossible integration within o
 - The key point is that the final product is presented as one fused perception, not as two ideas simply being compared.
 - The response should sound impossible or internally contradictory because of the fusion itself.
 - `CONTAM` represents a particularly severe form of distortion and later carries weight in `Sum6` and `WSum6`.
+- When `CONTAM` is scored, do not also record `DV`, `DR`, `INCOM`, `FABCOM`, or `ALOG`.
 
 ## Cautions / Distinctions
 

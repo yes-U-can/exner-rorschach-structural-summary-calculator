@@ -66,6 +66,7 @@ Eles não explicam por que aquilo pareceu daquele jeito; isso pertence aos deter
 
 - O conteúdo é atribuído a partir do objeto ou da classe de objeto nomeado pela pessoa.
 - Uma resposta pode receber mais de um código de conteúdo quando a pessoa realmente descreve mais de uma classe de objeto.
+- Cada código de conteúdo é registrado apenas uma vez em cada resposta.
 - Em PT, o bloco humano inclui [`H`](ref://scoring-input/contents/H), [`(H)`](ref://scoring-input/contents/%28H%29), [`Hd`](ref://scoring-input/contents/Hd), [`(Hd)`](ref://scoring-input/contents/%28Hd%29) e [`Hx`](ref://scoring-input/contents/Hx).
 - O bloco animal inclui [`A`](ref://scoring-input/contents/A), [`(A)`](ref://scoring-input/contents/%28A%29), [`Ad`](ref://scoring-input/contents/Ad), [`(Ad)`](ref://scoring-input/contents/%28Ad%29) e [`An`](ref://scoring-input/contents/An).
 - O bloco artístico e cultural inclui [`Art`](ref://scoring-input/contents/Art), [`Ay`](ref://scoring-input/contents/Ay), [`Cg`](ref://scoring-input/contents/Cg), [`Sc`](ref://scoring-input/contents/Sc) e, em último recurso, [`Id`](ref://scoring-input/contents/Id).
@@ -79,6 +80,8 @@ Eles não explicam por que aquilo pareceu daquele jeito; isso pertence aos deter
 - O bloco humano precisa separar pessoa inteira realista, figura inteira imaginária, detalhe humano, detalhe humano imaginário e experiência humana.
 - O bloco animal precisa separar animal inteiro realista, animal inteiro fantástico, detalhe animal realista, detalhe animal fantástico e foco anatômico.
 - Alguns contrastes pedem atenção constante: `Art` versus `Ay`, `Bt` versus `Na`, `Ls` versus `Ge`, `Cl` versus `Fi`, `Fd` versus `FD`, `Sc` versus `Id`.
+- Se `Na` for aplicável junto com `Bt` ou `Ls`, registra-se apenas `Na`. Se não houver `Na`, mas `Bt` e `Ls` forem aplicáveis, registra-se somente o código que melhor represente o centro da resposta.
+- Quando `Xy` é registrado, `An` não é acrescentado na mesma resposta.
 - `Hx` não codifica pessoa inteira. Ele codifica experiência, estado ou sentimento humano claramente atribuído.
 - `An` não é apenas "parte de animal". Ele exige foco anatômico ou estrutural.
 - Conteúdo humano sozinho não decide [`GHR`](ref://scoring-input/gphr/GHR) ou [`PHR`](ref://scoring-input/gphr/PHR); isso exige uma etapa adicional.

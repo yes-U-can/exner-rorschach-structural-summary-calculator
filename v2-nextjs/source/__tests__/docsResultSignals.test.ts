@@ -9,9 +9,15 @@ describe('docs result-entry structure (English)', () => {
     );
     const failures: Array<{ id: string; slug: string; reason: string }> = [];
 
+    expect(resultEntries.length).toBeGreaterThan(0);
+
     for (const route of resultEntries) {
       const { description } = resolveDocContent(route, 'en');
 
+      if (!description.trim()) {
+        failures.push({ id: route.id, slug: route.slug.join('/'), reason: 'empty_description' });
+        continue;
+      }
       if (!description.includes('[Interpretive Preconditions]')) {
         failures.push({ id: route.id, slug: route.slug.join('/'), reason: 'missing_interpretive_preconditions' });
       }

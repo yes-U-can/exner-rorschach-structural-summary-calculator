@@ -1,7 +1,7 @@
 {
   "app": {
     "title": "Exner 로샤 종합체계 구조요약 계산기",
-    "version": "v2.2.7",
+    "version": "v2.2.8",
     "provider": "MOW 제작·유지보수"
   },
   "nav": {
@@ -270,9 +270,37 @@
       "title": "운동 결정인 중복 재확인",
       "message": "행 {rows}에 같은 운동군의 부호가 둘 이상 입력되어 있습니다. 같은 반응의 사람운동, 동물운동, 무생물운동은 각 운동군마다 a, p, a-p 중 하나만 선택해 주세요. 반응기록과 질문단계를 확인해 수정하기 전에는 계산할 수 없습니다."
     },
+    "determinantConflict": {
+      "title": "결정인 조합 재확인",
+      "message": "행 {rows}에 함께 기록할 수 없는 결정인 {codes}가 입력되어 있습니다. 같은 결정인의 형태 관여 수준은 한 반응에서 하나만 기록해 주세요. 반응기록과 질문단계를 확인해 수정하기 전에는 계산할 수 없습니다."
+    },
+    "criticalSpecialScoreConflict": {
+      "title": "특수점수 조합 재확인",
+      "message": "행 {rows}에 함께 기록할 수 없는 특수점수 {codes}가 입력되어 있습니다. CONTAM이 부여된 반응에는 DV, DR, INCOM, FABCOM, ALOG를 함께 기록하지 않습니다. 수정하기 전에는 계산할 수 없습니다."
+    },
+    "specialScoreLevelConflict": {
+      "title": "특수점수 수준 재확인",
+      "message": "행 {rows}에 같은 특수점수의 Level 1과 Level 2가 함께 입력되어 있습니다: {codes}. 한 반응에서는 두 수준 중 하나만 기록해 주세요. 수정하기 전에는 계산할 수 없습니다."
+    },
+    "colorProjectionConflict": {
+      "title": "색채투사 부호 재확인",
+      "message": "행 {rows}에 함께 기록할 수 없는 부호 {codes}가 입력되어 있습니다. CP는 무채색 영역을 유채색으로 지각한 반응에 부여하므로 FC, CF, C와 함께 기록하지 않습니다. 수정하기 전에는 계산할 수 없습니다."
+    },
     "duplicateDeterminant": {
       "title": "결정인 중복 재확인",
       "message": "행 {rows}에 같은 결정인 {codes}가 두 번 이상 입력되어 있습니다. 한 반응에서 같은 결정인은 한 번만 기록해 주세요. 수정하기 전에는 계산할 수 없습니다."
+    },
+    "duplicateContent": {
+      "title": "내용 부호 중복 재확인",
+      "message": "행 {rows}에 같은 내용 부호 {codes}가 두 번 이상 입력되어 있습니다. 한 반응에서 같은 내용 부호는 한 번만 기록해 주세요. 수정하기 전에는 계산할 수 없습니다."
+    },
+    "contentConflict": {
+      "title": "내용 부호 조합 재확인",
+      "message": "행 {rows}에 함께 기록할 수 없는 내용 부호 {codes}가 입력되어 있습니다. Na가 해당되면 Bt와 Ls를 함께 기록하지 않고, Na 없이 Bt와 Ls가 모두 해당되면 둘 중 하나만 기록합니다. Xy를 기록한 반응에는 An을 추가하지 않습니다. 수정하기 전에는 계산할 수 없습니다."
+    },
+    "invalidZ": {
+      "title": "Z 부호 재확인",
+      "message": "행 {rows}에 사용할 수 없는 Z 부호 {codes}가 입력되어 있습니다. ZW, ZA, ZD, ZS 중 하나를 선택하거나 비워 주세요. 수정하기 전에는 계산할 수 없습니다."
     },
     "missingFormQuality": {
       "title": "형태질 재확인",

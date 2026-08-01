@@ -7,10 +7,16 @@ import { getDisabledDeterminantCodes } from '@/lib/scoringInputValidation';
 interface DeterminantSlotsProps {
   values: string[];
   onChange: (values: string[]) => void;
+  specialScores?: readonly string[];
   maxSlots?: number;
 }
 
-export default function DeterminantSlots({ values, onChange, maxSlots = 6 }: DeterminantSlotsProps) {
+export default function DeterminantSlots({
+  values,
+  onChange,
+  specialScores = [],
+  maxSlots = 6,
+}: DeterminantSlotsProps) {
   const handleChange = (index: number, value: string) => {
     const full = Array.from({ length: maxSlots }, (_, i) => values[i] || '');
     full[index] = value;
@@ -26,7 +32,7 @@ export default function DeterminantSlots({ values, onChange, maxSlots = 6 }: Det
           value={values[index] || ''}
           onChange={(value) => handleChange(index, value)}
           options={OPTIONS.DETERMINANTS}
-          disabledOptions={getDisabledDeterminantCodes(values, index)}
+          disabledOptions={getDisabledDeterminantCodes(values, index, specialScores)}
           className="w-14"
           gridCols={6}
           placeholder=""

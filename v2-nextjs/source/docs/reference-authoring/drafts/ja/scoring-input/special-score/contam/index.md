@@ -38,6 +38,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-score-inco
 - 重要なのは、比較や並置ではなく「ひとつの融合した知覚」として語られていることです。
 - その融合自体のために、反応が不可能または自己矛盾的に聞こえる必要があります。
 - `CONTAM` はかなり重い歪みで、後の解釈では [`Sum6`](ref://result-interpretation/lower-section/ideation/Sum6) や [`WSum6`](ref://result-interpretation/lower-section/ideation/WSum6) に重く影響します。
+- `CONTAM` を付与した反応には、`DV`、`DR`、`INCOM`、`FABCOM`、`ALOG` を併記しません。
 
 ## 注意点・鑑別
 

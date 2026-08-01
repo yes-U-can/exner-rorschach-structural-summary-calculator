@@ -71,6 +71,7 @@ Determinants는 피검자가 무엇 때문에 그 대상을 보았는지를 기�
 - Determinants는 Location, DQ, FQ, Content와 별개의 축이므로 섞어 쓰지 않는다.
 - 같은 반응에 여러 결정인이 확인되면 혼합 결정인으로 기록하되, 말로 드러난 요소만 포함한다.
 - 여러 결정인이 함께 있어도 같은 운동군의 능동형과 수동형을 별도 칸에 중복 입력하지 않는다. 사람운동, 동물운동, 무생물운동은 각 운동군마다 `a`, `p`, `a-p` 중 하나만 기록한다.
+- 같은 결정인의 형태 관여 수준은 한 반응에 둘 이상 기록하지 않는다. 예를 들어 `FC/CF/C`, `FC'/C'F/C'`, `FT/TF/T`, `FV/VF/V`, `FY/YF/Y`, `Fr/rF` 중 같은 계열에서는 하나만 기록하며, 둘 이상이 해당되면 형태 관여가 가장 적은 부호를 선택한다. 서로 다른 말이나 반점 특징에 근거한 서로 다른 음영 계열은 함께 기록할 수 있다.
 - 현재 이 개요 문서에서는 순수 형태(`F`), movement(`M`, `FM`, `m`), chromatic color(`FC`, `CF`, `C`, `Cn`), achromatic color(`FC'`, `C'F`, `C'`), texture shading(`FT`, `TF`, `T`), vista shading(`FV`, `VF`, `V`), diffuse shading(`FY`, `YF`, `Y`), reflection/형태차원(`Fr`, `rF`, `FD`)을 우선 정리한다.
 
 ## 주의사항/감별 기준

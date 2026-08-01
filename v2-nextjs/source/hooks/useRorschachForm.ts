@@ -131,9 +131,10 @@ export function useRorschachForm(initialResponses?: RorschachResponse[]) {
 
   // Load sample data
   const loadSampleData = useCallback(() => {
-    commitResponses(SAMPLE_DATA, { resetHistory: true });
+    const sample = commitResponses(SAMPLE_DATA, { resetHistory: true });
     setResult(null);
     setShowResult(false);
+    return sample;
   }, [commitResponses]);
 
   // Load custom data

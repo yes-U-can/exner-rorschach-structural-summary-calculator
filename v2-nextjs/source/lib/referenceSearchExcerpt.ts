@@ -16,6 +16,8 @@ export function buildReferenceSearchExcerpt(text: string, maxLength = 240): stri
     .replace(/\s+/g, ' ')
     .trim();
 
-  if (cleanText.length <= maxLength) return cleanText;
-  return `${cleanText.slice(0, Math.max(0, maxLength - 3)).trimEnd()}...`;
+  const codePoints = Array.from(cleanText);
+  if (codePoints.length <= maxLength) return cleanText;
+  if (maxLength <= 3) return '.'.repeat(Math.max(0, maxLength));
+  return `${codePoints.slice(0, maxLength - 3).join('').trimEnd()}...`;
 }

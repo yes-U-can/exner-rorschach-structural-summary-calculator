@@ -25,6 +25,7 @@ describe('AI release gate runner', () => {
       'human_records',
       'secret_scan',
       'dependency_audit',
+      'dependency_audit_dev',
     ]);
     expect(result.steps.every((step: { status: string }) => step.status === 'planned')).toBe(true);
   });
@@ -100,6 +101,63 @@ describe('AI release gate runner', () => {
       'contracts',
       'secret_scan',
       'dependency_audit',
+      'dependency_audit_dev',
     ]);
+  });
+
+  it('fails and records evidence when a required step is skipped', async () => {
+    const gate = await import(modulePath);
+    const runCalls: string[] = [];
+    const result = await gate.runAiReleaseGate({
+      root: process.cwd(),
+      version: '2.1.5-test',
+      steps: gate.DEFAULT_AI_RELEASE_GATE_STEPS,
+      skip: new Set(['secret_scan']),
+      now: () => new Date('2026-07-03T00:00:00.000Z'),
+      runCommand: async (step: { id: string }) => {
+        runCalls.push(step.id);
+        return { exitCode: 0 };
+      },
+    });
+    const markdown = gate.renderAiReleaseGateMarkdown(result, { cwd: process.cwd() });
+
+    expect(runCalls).toEqual([]);
+    expect(result.status).toBe('fail');
+    expect(result.skippedSteps).toEqual([
+      expect.objectContaining({ id: 'secret_scan', required: true }),
+    ]);
+    expect(result.findings).toContainEqual(
+      expect.objectContaining({
+        type: 'required_step_skipped',
+        stepId: 'secret_scan',
+      }),
+    );
+    expect(markdown).toContain('Skipped Steps');
+    expect(markdown).toContain('Release-candidate secret scan');
+  });
+
+  it('fails before running commands when a skip id is unknown', async () => {
+    const gate = await import(modulePath);
+    const runCalls: string[] = [];
+    const result = await gate.runAiReleaseGate({
+      root: process.cwd(),
+      version: '2.1.5-test',
+      steps: gate.DEFAULT_AI_RELEASE_GATE_STEPS,
+      skip: new Set(['dependency_aduit']),
+      now: () => new Date('2026-07-03T00:00:00.000Z'),
+      runCommand: async (step: { id: string }) => {
+        runCalls.push(step.id);
+        return { exitCode: 0 };
+      },
+    });
+
+    expect(runCalls).toEqual([]);
+    expect(result.status).toBe('fail');
+    expect(result.findings).toContainEqual(
+      expect.objectContaining({
+        type: 'unknown_step_skipped',
+        stepId: 'dependency_aduit',
+      }),
+    );
   });
 });

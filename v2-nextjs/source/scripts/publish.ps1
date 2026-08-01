@@ -6,6 +6,7 @@ param(
   [string]$PublishTargetRelativePath = "v2-nextjs",
   [switch]$SyncOnly,
   [switch]$UseCurrentRepo,
+  [string]$SanitizeOnlyRoot,
   [string]$SmokeBaseUrl,
   [string]$SmokeCronSecret
 )
@@ -13,6 +14,19 @@ param(
 $ErrorActionPreference = "Stop"
 
 $sourceRoot = (Resolve-Path ".").Path
+
+function Assert-NativeCommandSucceeded {
+  param(
+    [Parameter(Mandatory = $true)]
+    [int]$ExitCode,
+    [Parameter(Mandatory = $true)]
+    [string]$Operation
+  )
+
+  if ($ExitCode -ne 0) {
+    throw "$Operation failed with exit code $ExitCode."
+  }
+}
 
 function Invoke-ReleaseSmoke {
   param(
@@ -99,6 +113,7 @@ function Remove-PublicMirrorPrivateArtifacts {
     "docs\admin",
     "docs\adr",
     "docs\chat",
+    "docs\ai-evals\private-runs",
     "docs\reference-authoring\incoming",
     "docs\reference-authoring\notes",
     "prisma\migrations",
@@ -141,7 +156,7 @@ function Remove-PublicMirrorPrivateArtifacts {
     }
   }
 
-  foreach ($file in Get-ChildItem -LiteralPath $resolvedRoot -File -Recurse -ErrorAction SilentlyContinue) {
+  foreach ($file in Get-ChildItem -LiteralPath $resolvedRoot -File -Recurse -Force -ErrorAction SilentlyContinue) {
     if (-not ($privateFilePatterns | Where-Object { $file.Name -like $_ })) {
       continue
     }
@@ -164,7 +179,15 @@ function Remove-PrivateGitMetadataProperties {
     [string[]]$FieldNames
   )
 
-  if ($null -eq $Value -or $Value -is [string] -or $Value.GetType().IsPrimitive) {
+  if (
+    $null -eq $Value -or
+    $Value -is [string] -or
+    $Value -is [datetime] -or
+    $Value -is [datetimeoffset] -or
+    $Value -is [guid] -or
+    $Value -is [decimal] -or
+    $Value.GetType().IsPrimitive
+  ) {
     return 0
   }
 
@@ -202,9 +225,9 @@ function Remove-PublicEvalPrivateMetadata {
 
   $privateGitMetadataFields = @("gitCommit", "baseCommit", "commitSha", "sourceCommit", "commit", "gitDirty")
 
-  foreach ($file in Get-ChildItem -LiteralPath $evalRoot -File -Filter "*.jsonl" -Recurse) {
+  foreach ($file in Get-ChildItem -LiteralPath $evalRoot -File -Filter "*.jsonl" -Recurse -Force) {
     $changed = $false
-    $sanitizedLines = foreach ($line in [IO.File]::ReadAllLines($file.FullName)) {
+    $sanitizedLines = @(foreach ($line in [IO.File]::ReadAllLines($file.FullName)) {
       if ([string]::IsNullOrWhiteSpace($line)) {
         continue
       }
@@ -215,7 +238,7 @@ function Remove-PublicEvalPrivateMetadata {
         $changed = $true
       }
       $record | ConvertTo-Json -Compress -Depth 100
-    }
+    })
 
     if (-not $changed) {
       continue
@@ -234,8 +257,10 @@ function Remove-PublicEvalPrivateMetadata {
     [IO.File]::WriteAllText($file.FullName, $content, [Text.UTF8Encoding]::new($false))
   }
 
-  foreach ($file in Get-ChildItem -LiteralPath $evalRoot -File -Filter "*.json" -Recurse) {
-    $record = Get-Content -LiteralPath $file.FullName -Raw -Encoding UTF8 | ConvertFrom-Json
+  foreach ($file in Get-ChildItem -LiteralPath $evalRoot -File -Filter "*.json" -Recurse -Force) {
+    $rawJson = Get-Content -LiteralPath $file.FullName -Raw -Encoding UTF8
+    $isJsonArray = $rawJson.TrimStart().StartsWith("[", [StringComparison]::Ordinal)
+    $record = $rawJson | ConvertFrom-Json
     $changed = (Remove-PrivateGitMetadataProperties -Value $record -FieldNames $privateGitMetadataFields) -gt 0
 
     if (-not $changed) {
@@ -247,7 +272,11 @@ function Remove-PublicEvalPrivateMetadata {
       continue
     }
 
-    $content = ($record | ConvertTo-Json -Depth 100) + "`n"
+    $content = if ($isJsonArray) {
+      (ConvertTo-Json -InputObject @($record) -Depth 100) + "`n"
+    } else {
+      (ConvertTo-Json -InputObject $record -Depth 100) + "`n"
+    }
     [IO.File]::WriteAllText($file.FullName, $content, [Text.UTF8Encoding]::new($false))
   }
 }
@@ -260,7 +289,7 @@ function Assert-NoPublicGitMetadata {
 
   $fieldPattern = '"(?:gitCommit|baseCommit|commitSha|sourceCommit|commit|gitDirty)"\s*:'
   $leaks = @()
-  foreach ($file in Get-ChildItem -LiteralPath $Root -File -Recurse -ErrorAction SilentlyContinue) {
+  foreach ($file in Get-ChildItem -LiteralPath $Root -File -Recurse -Force -ErrorAction SilentlyContinue) {
     if ($file.Extension -notin @('.json', '.jsonl')) {
       continue
     }
@@ -305,7 +334,7 @@ function Assert-NoPublicEditorialLeak {
   )
 
   $leaks = @()
-  foreach ($file in Get-ChildItem -LiteralPath $Root -File -Filter '*.md' -Recurse -ErrorAction SilentlyContinue) {
+  foreach ($file in Get-ChildItem -LiteralPath $Root -File -Filter '*.md' -Recurse -Force -ErrorAction SilentlyContinue) {
     foreach ($pattern in $patterns) {
       foreach ($match in Select-String -LiteralPath $file.FullName -Pattern $pattern -CaseSensitive:$false) {
         $leaks += "$($file.FullName):$($match.LineNumber): $($match.Line.Trim())"
@@ -316,6 +345,42 @@ function Assert-NoPublicEditorialLeak {
   if ($leaks.Count -gt 0) {
     throw "Internal audience or editorial labels remain in public Markdown:`n$($leaks -join "`n")"
   }
+}
+
+if ($SanitizeOnlyRoot) {
+  $resolvedSanitizeRoot = (Resolve-Path -LiteralPath $SanitizeOnlyRoot).Path
+  $normalizedSourceRoot = [IO.Path]::GetFullPath($sourceRoot).TrimEnd(
+    [IO.Path]::DirectorySeparatorChar,
+    [IO.Path]::AltDirectorySeparatorChar
+  )
+  $normalizedSanitizeRoot = [IO.Path]::GetFullPath($resolvedSanitizeRoot).TrimEnd(
+    [IO.Path]::DirectorySeparatorChar,
+    [IO.Path]::AltDirectorySeparatorChar
+  )
+  $sourcePrefix = $normalizedSourceRoot + [IO.Path]::DirectorySeparatorChar
+  $sanitizePrefix = $normalizedSanitizeRoot + [IO.Path]::DirectorySeparatorChar
+  $rootsOverlap = (
+    [string]::Equals(
+      $normalizedSanitizeRoot,
+      $normalizedSourceRoot,
+      [StringComparison]::OrdinalIgnoreCase
+    ) -or
+    $normalizedSourceRoot.StartsWith($sanitizePrefix, [StringComparison]::OrdinalIgnoreCase) -or
+    $normalizedSanitizeRoot.StartsWith($sourcePrefix, [StringComparison]::OrdinalIgnoreCase)
+  )
+  if ($rootsOverlap) {
+    throw "Refusing to sanitize a path that overlaps the private source root."
+  }
+  Remove-PublicMirrorPrivateArtifacts -Root $resolvedSanitizeRoot -WhatIf:$DryRun
+  Remove-PublicEvalPrivateMetadata -Root $resolvedSanitizeRoot -WhatIf:$DryRun
+  if ($DryRun) {
+    Write-Host "[dry-run] sanitize-only simulation completed."
+  } else {
+    Assert-NoPublicGitMetadata -Root $resolvedSanitizeRoot
+    Assert-NoPublicEditorialLeak -Root $resolvedSanitizeRoot
+    Write-Host "[sanitize-only] public mirror boundary verified."
+  }
+  exit 0
 }
 
 $excludeDirs = @(
@@ -333,6 +398,7 @@ $excludeDirs = @(
   "docs\admin",
   "docs\adr",
   "docs\chat",
+  "docs\ai-evals\private-runs",
   "docs\reference-authoring\incoming",
   "docs\reference-authoring\notes",
   "prisma\migrations",
@@ -398,6 +464,7 @@ if ($UseCurrentRepo) {
   if ($DryRun) {
     Write-Host "[dry-run] showing direct publish scope"
     git -C $gitRoot status --short -- $relativePath
+    Assert-NativeCommandSucceeded -ExitCode $LASTEXITCODE -Operation "git status"
     if ($SmokeBaseUrl) {
       Write-Host "[dry-run] post-publish smoke target would be $SmokeBaseUrl"
     }
@@ -405,18 +472,28 @@ if ($UseCurrentRepo) {
   }
 
   git -C $gitRoot add --all -- $relativePath
-  try {
+  Assert-NativeCommandSucceeded -ExitCode $LASTEXITCODE -Operation "git add"
+
+  git -C $gitRoot diff --cached --quiet -- $relativePath
+  $stagedDiffExitCode = $LASTEXITCODE
+  if ($stagedDiffExitCode -eq 1) {
     git -C $gitRoot commit --only -m $Message -- $relativePath | Out-Host
-  } catch {
-    Write-Host "[git] nothing to commit for path $relativePath (or commit failed)."
+    Assert-NativeCommandSucceeded -ExitCode $LASTEXITCODE -Operation "git commit"
+  } elseif ($stagedDiffExitCode -eq 0) {
+    Write-Host "[git] nothing to commit for path $relativePath."
+  } else {
+    throw "git diff --cached failed with exit code $stagedDiffExitCode."
   }
 
-  $currentBranch = (git -C $gitRoot branch --show-current).Trim()
+  $currentBranchOutput = git -C $gitRoot branch --show-current
+  Assert-NativeCommandSucceeded -ExitCode $LASTEXITCODE -Operation "git branch --show-current"
+  $currentBranch = ($currentBranchOutput | Out-String).Trim()
   if (-not $currentBranch) {
     throw "Current branch could not be resolved."
   }
 
   git -C $gitRoot push origin $currentBranch
+  Assert-NativeCommandSucceeded -ExitCode $LASTEXITCODE -Operation "git push"
   if ($SmokeBaseUrl) {
     Invoke-ReleaseSmoke -BaseUrl $SmokeBaseUrl -CronSecret $SmokeCronSecret
   } else {
@@ -516,13 +593,21 @@ $env:GIT_CONFIG_NOSYSTEM = "1"
 $safe = "safe.directory=$publishRoot"
 
 git -c $safe -C $targetRoot add .
-try {
+Assert-NativeCommandSucceeded -ExitCode $LASTEXITCODE -Operation "public mirror git add"
+
+git -c $safe -C $targetRoot diff --cached --quiet
+$publicStagedDiffExitCode = $LASTEXITCODE
+if ($publicStagedDiffExitCode -eq 1) {
   git -c $safe -C $targetRoot commit -m $Message | Out-Host
-} catch {
-  Write-Host "[git] nothing to commit (or commit failed)."
+  Assert-NativeCommandSucceeded -ExitCode $LASTEXITCODE -Operation "public mirror git commit"
+} elseif ($publicStagedDiffExitCode -eq 0) {
+  Write-Host "[git] nothing to commit."
+} else {
+  throw "public mirror git diff --cached failed with exit code $publicStagedDiffExitCode."
 }
 
 git -c $safe -C $targetRoot push origin main
+Assert-NativeCommandSucceeded -ExitCode $LASTEXITCODE -Operation "public mirror git push"
 if ($SmokeBaseUrl) {
   Invoke-ReleaseSmoke -BaseUrl $SmokeBaseUrl -CronSecret $SmokeCronSecret
 } else {

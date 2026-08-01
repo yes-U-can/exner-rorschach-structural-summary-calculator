@@ -5,11 +5,15 @@ export function escapeCsvCell(cell: any): string {
   if (cell === null || cell === undefined) return '';
   let str = String(cell);
   const leftTrimmed = str.replace(/^[\t\r\n ]+/, '');
-  if (/^[=+\-@]/.test(leftTrimmed)) {
+  const safeSignedValue =
+    /^[+-](?:(?:\d+(?:\.\d*)?)|(?:\.\d+))(?:[eE][+-]?\d+)?$/u.test(leftTrimmed)
+    || leftTrimmed === '+'
+    || leftTrimmed === '-';
+  if (/^[=+\-@]/u.test(leftTrimmed) && !safeSignedValue) {
     str = "'" + str;
   }
   str = str.replace(/"/g, '""');
-  if (str.includes(',') || str.includes('\n') || str.includes('"')) {
+  if (str.includes(',') || str.includes('\r') || str.includes('\n') || str.includes('"')) {
     str = '"' + str + '"';
   }
   return str;
@@ -276,6 +280,13 @@ export function downloadCsv(content: string, filename: string) {
   document.body.removeChild(link);
 }
 
+export function formatLocalDateForFilename(date = new Date()) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
 export function generateSummaryCsv(results: StructuralSummary): string {
   const headers = SUMMARY_CSV_COLUMNS.map((column) => escapeCsvCell(column.header));
   const values = SUMMARY_CSV_COLUMNS.map((column) => escapeCsvCell(column.value(results)));
@@ -307,13 +318,13 @@ export function generateRawDataCsv(responses: RorschachResponse[]): string {
 
 export function exportToCSV(responses: RorschachResponse[]) {
   const csv = generateRawDataCsv(responses);
-  const timestamp = new Date().toISOString().slice(0, 10);
+  const timestamp = formatLocalDateForFilename();
   downloadCsv(csv, `rorschach_rawdata_${timestamp}.csv`);
 }
 
 export function exportSummaryToCSV(results: StructuralSummary) {
   const csv = generateSummaryCsv(results);
-  const timestamp = new Date().toISOString().slice(0, 10);
+  const timestamp = formatLocalDateForFilename();
   downloadCsv(csv, `rorschach_summary_${timestamp}.csv`);
 }
 

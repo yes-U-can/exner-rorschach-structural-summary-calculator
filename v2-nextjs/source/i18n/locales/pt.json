@@ -1,7 +1,7 @@
 {
   "app": {
     "title": "Calculadora do Sumário Estrutural de Rorschach",
-    "version": "v2.2.7",
+    "version": "v2.2.8",
     "provider": "Desenvolvido e mantido pela MOW"
   },
   "nav": {
@@ -270,9 +270,37 @@
       "title": "Revisar os determinantes duplicados",
       "message": "As linhas {rows} contêm o mesmo determinante {codes} mais de uma vez. Registre cada determinante apenas uma vez por resposta. O cálculo ficará bloqueado até que essas linhas sejam corrigidas."
     },
+    "duplicateContent": {
+      "title": "Revisar os conteúdos duplicados",
+      "message": "As linhas {rows} contêm o mesmo código de conteúdo {codes} mais de uma vez. Registre cada código de conteúdo apenas uma vez por resposta. O cálculo ficará bloqueado até que essas linhas sejam corrigidas."
+    },
+    "contentConflict": {
+      "title": "Revisar a combinação de conteúdos",
+      "message": "As linhas {rows} contêm códigos de conteúdo que não podem ser registrados juntos: {codes}. Quando Na se aplica, não se acrescentam Bt nem Ls; sem Na, registra-se apenas um entre Bt e Ls. Em uma resposta codificada Xy, não se acrescenta An. O cálculo ficará bloqueado até que essas linhas sejam corrigidas."
+    },
+    "invalidZ": {
+      "title": "Revisar o código Z",
+      "message": "As linhas {rows} contêm um código Z não aceito: {codes}. Selecione ZW, ZA, ZD ou ZS, ou deixe o campo em branco. O cálculo ficará bloqueado até que essas linhas sejam corrigidas."
+    },
     "movementConflict": {
       "title": "Revisar os códigos de movimento duplicados",
       "message": "As linhas {rows} contêm mais de um código da mesma família de movimento. Em cada resposta, selecione apenas uma opção a, p ou a-p para cada família de movimento humano, animal ou inanimado. Revise o registro e o inquérito antes de corrigir. O cálculo ficará bloqueado até que essas linhas sejam corrigidas."
+    },
+    "determinantConflict": {
+      "title": "Revisar a combinação de determinantes",
+      "message": "As linhas {rows} contêm determinantes que não podem ser registrados juntos: {codes}. Registre apenas uma categoria de predomínio formal para o mesmo determinante em cada resposta. Revise o registro e o inquérito antes de corrigir. O cálculo ficará bloqueado até que essas linhas sejam corrigidas."
+    },
+    "criticalSpecialScoreConflict": {
+      "title": "Revisar a combinação de escores especiais",
+      "message": "As linhas {rows} contêm escores especiais que não podem ser registrados juntos: {codes}. Quando CONTAM é codificado, não se registram também DV, DR, INCOM, FABCOM ou ALOG. O cálculo ficará bloqueado até que essas linhas sejam corrigidas."
+    },
+    "specialScoreLevelConflict": {
+      "title": "Revisar o nível do escore especial",
+      "message": "As linhas {rows} contêm ao mesmo tempo o Nível 1 e o Nível 2 do mesmo escore especial: {codes}. Em uma resposta, registre apenas um dos dois níveis. O cálculo ficará bloqueado até que essas linhas sejam corrigidas."
+    },
+    "colorProjectionConflict": {
+      "title": "Revisar a codificação de projeção de cor",
+      "message": "As linhas {rows} contêm códigos que não podem ser registrados juntos: {codes}. CP identifica cor cromática projetada em uma área acromática, por isso não é registrado junto com FC, CF ou C. O cálculo ficará bloqueado até que essas linhas sejam corrigidas."
     },
     "missingFormQuality": {
       "title": "Revisar a qualidade formal",

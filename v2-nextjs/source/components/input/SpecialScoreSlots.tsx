@@ -2,14 +2,21 @@
 
 import SlotSelect from './SlotSelect';
 import { OPTIONS } from '@/lib/options';
+import { getDisabledSpecialScoreCodes } from '@/lib/scoringInputValidation';
 
 interface SpecialScoreSlotsProps {
   values: string[];
   onChange: (values: string[]) => void;
+  determinants?: readonly string[];
   maxSlots?: number;
 }
 
-export default function SpecialScoreSlots({ values, onChange, maxSlots = 8 }: SpecialScoreSlotsProps) {
+export default function SpecialScoreSlots({
+  values,
+  onChange,
+  determinants = [],
+  maxSlots = 8,
+}: SpecialScoreSlotsProps) {
   const handleChange = (index: number, value: string) => {
     const full = Array.from({ length: maxSlots }, (_, i) => values[i] || '');
     full[index] = value;
@@ -25,6 +32,7 @@ export default function SpecialScoreSlots({ values, onChange, maxSlots = 8 }: Sp
           value={values[index] || ''}
           onChange={(value) => handleChange(index, value)}
           options={OPTIONS.SPECIAL_SCORES}
+          disabledOptions={getDisabledSpecialScoreCodes(values, index, determinants)}
           className="w-[4.5rem]"
           gridCols={4}
           placeholder=""

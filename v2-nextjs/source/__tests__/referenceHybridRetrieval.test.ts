@@ -524,44 +524,385 @@ describe('referenceHybridRetrieval', () => {
   });
 
   it.each([
-    ['ko' as const, 'Na, Bt, Ls가 함께 해당되면 어떻게 부호화해?'],
-    ['en' as const, 'How should Na, Bt, and Ls be coded when they overlap?'],
-    ['ja' as const, 'Na、Bt、Ls が重なる場合はどう符号化しますか。'],
-    ['es' as const, '¿Cómo se codifican Na, Bt y Ls cuando coinciden?'],
-    ['pt' as const, 'Como codificar Na, Bt e Ls quando coincidem?'],
-  ])('anchors the explicit %s Na-Bt-Ls boundary query to the Na rule', async (lang, responseMemo) => {
-    const result = await getHybridCodingRuleChunks({
-      context: {
-        rowIndex: 0,
-        focusRowIndex: 0,
-        selectedRowIndices: [0],
-        card: 'I',
-        responseMemo,
-        existingCodes: {
-          location: '',
-          dq: '',
-          determinants: [],
-          fq: '',
-          pair: '',
-          contents: ['Na', 'Bt', 'Ls'],
-          popular: false,
-          z: '',
-          specialScores: [],
+    [
+      'ko' as const,
+      'Na, Bt, Ls가 함께 해당되면 어떻게 부호화해?',
+      /Na[\s\S]*(?:Bt|Ls)[\s\S]*(?:Na만|우선)/u,
+      /Na[\s\S]*없[\s\S]*Bt[\s\S]*Ls[\s\S]*(?:하나만|둘 중 하나)/u,
+    ],
+    [
+      'en' as const,
+      'How should Na, Bt, and Ls be coded when they overlap?',
+      /Na[\s\S]*(?:Bt|Ls)[\s\S]*(?:Na only|takes priority)/iu,
+      /Na is absent[\s\S]*Bt[\s\S]*Ls[\s\S]*(?:only one|one that)/iu,
+    ],
+    [
+      'ja' as const,
+      'Na、Bt、Ls が重なる場合はどう符号化しますか。',
+      /Na[\s\S]*(?:Bt|Ls)[\s\S]*(?:Naだけ|優先)/u,
+      /Naがなく[\s\S]*Bt[\s\S]*Ls[\s\S]*一方だけ/u,
+    ],
+    [
+      'es' as const,
+      '¿Cómo se codifican Na, Bt y Ls cuando coinciden?',
+      /Na[\s\S]*(?:Bt|Ls)[\s\S]*(?:solo Na|prioridad)/iu,
+      /(?:Na no está presente|no hay Na)[\s\S]*Bt[\s\S]*Ls[\s\S]*(?:solo|únicamente)/iu,
+    ],
+    [
+      'pt' as const,
+      'Como codificar Na, Bt e Ls quando coincidem?',
+      /Na[\s\S]*(?:Bt|Ls)[\s\S]*(?:apenas Na|prioridade)/iu,
+      /não houver Na[\s\S]*Bt[\s\S]*Ls[\s\S]*(?:somente|apenas)/iu,
+    ],
+  ])(
+    'anchors the explicit %s Na-Bt-Ls boundary query to both content rules',
+    async (lang, responseMemo, priorityPattern, noNaPattern) => {
+      const result = await getHybridCodingRuleChunks({
+        context: {
+          rowIndex: 0,
+          focusRowIndex: 0,
+          selectedRowIndices: [0],
+          card: 'I',
+          responseMemo,
+          existingCodes: {
+            location: '',
+            dq: '',
+            determinants: [],
+            fq: '',
+            pair: '',
+            contents: ['Na', 'Bt', 'Ls'],
+            popular: false,
+            z: '',
+            specialScores: [],
+          },
+          sheetRows: [],
         },
-        sheetRows: [],
-      },
-      lang,
-      provider: 'openai',
-      apiKey: 'unused-in-lexical-fallback',
-      limit: 6,
-    });
+        lang,
+        provider: 'openai',
+        apiKey: 'unused-in-lexical-fallback',
+        limit: 6,
+      });
 
-    expect(result.mode).toBe('lexical');
-    expect(result.items[0]?.canonicalRoute).toBe('scoring-input/contents/Na');
-    expect(result.items[0]?.text).toMatch(/Na/u);
-    expect(result.items[0]?.text).toMatch(/Bt/u);
-    expect(result.items[0]?.text).toMatch(/Ls/u);
-  });
+      expect(result.mode).toBe('lexical');
+      expect(result.items[0]?.canonicalRoute).toBe('scoring-input/contents/Na');
+      const naEvidence = result.items
+        .filter((item) => item.canonicalRoute === 'scoring-input/contents/Na')
+        .map((item) => item.text)
+        .join('\n');
+      expect(naEvidence).toMatch(priorityPattern);
+      expect(naEvidence).toMatch(noNaPattern);
+    },
+  );
+
+  it.each([
+    [
+      'ko' as const,
+      'Xy를 부호화할 때 An도 함께 적어야 해?',
+      /Xy[\s\S]*An[\s\S]*(?:더하지|추가하지|함께.*않)/u,
+    ],
+    [
+      'en' as const,
+      'Should An also be coded when Xy is coded?',
+      /Xy[\s\S]*(?:do not add|excludes)[\s\S]*An/iu,
+    ],
+    [
+      'ja' as const,
+      'Xyを付けるとき、Anも一緒に記録しますか。',
+      /Xy[\s\S]*An[\s\S]*(?:併記しません|加えません)/u,
+    ],
+    [
+      'es' as const,
+      '¿Se añade An cuando se codifica Xy?',
+      /Xy[\s\S]*(?:no se añade|excluye)[\s\S]*An/iu,
+    ],
+    [
+      'pt' as const,
+      'An também é registrado quando se codifica Xy?',
+      /Xy[\s\S]*An[\s\S]*(?:não é acrescentado|exclui)/iu,
+    ],
+  ])(
+    'anchors the explicit %s Xy-An boundary query to the Xy exclusion rule',
+    async (lang, responseMemo, rulePattern) => {
+      const result = await getHybridCodingRuleChunks({
+        context: {
+          rowIndex: 0,
+          focusRowIndex: 0,
+          selectedRowIndices: [0],
+          card: 'I',
+          responseMemo,
+          existingCodes: {
+            location: '',
+            dq: '',
+            determinants: [],
+            fq: '',
+            pair: '',
+            contents: ['Xy', 'An'],
+            popular: false,
+            z: '',
+            specialScores: [],
+          },
+          sheetRows: [],
+        },
+        lang,
+        provider: 'openai',
+        apiKey: 'unused-in-lexical-fallback',
+        limit: 6,
+      });
+
+      expect(result.mode).toBe('lexical');
+      expect(result.items[0]?.canonicalRoute).toBe('scoring-input/contents/Xy');
+      const xyEvidence = result.items
+        .filter((item) => item.canonicalRoute === 'scoring-input/contents/Xy')
+        .map((item) => item.text)
+        .join('\n');
+      expect(xyEvidence).toMatch(rulePattern);
+    },
+  );
+
+  it.each([
+    [
+      'ko' as const,
+      '같은 반응에 FC와 CF를 함께 결정인으로 입력해도 돼?',
+      /FC\/CF\/C[\s\S]*(?:하나만|둘 이상.*않)[\s\S]*(?:형태 관여가 가장 적은|형태 관여.*적은)/u,
+    ],
+    [
+      'en' as const,
+      'Can FC and CF both be recorded as determinants in the same response?',
+      /FC\/CF\/C[\s\S]*(?:only one|do not record more than one)[\s\S]*(?:least form emphasis)/iu,
+    ],
+    [
+      'ja' as const,
+      '同じ反応に FC と CF を両方の決定因として記録できますか。',
+      /FC\/CF\/C[\s\S]*(?:一つだけ|複数記録しません)[\s\S]*形態の関与が最も少ない/u,
+    ],
+    [
+      'es' as const,
+      '¿Se pueden registrar FC y CF juntos como determinantes en una misma respuesta?',
+      /FC\/CF\/C[\s\S]*(?:un solo código|más de una)[\s\S]*menor predominio formal/iu,
+    ],
+    [
+      'pt' as const,
+      'FC e CF podem ser registrados juntos como determinantes na mesma resposta?',
+      /FC\/CF\/C[\s\S]*(?:apenas um código|mais de uma)[\s\S]*menor predomínio formal/iu,
+    ],
+  ])(
+    'anchors the explicit %s same-determinant form-emphasis query to the determinant overview',
+    async (lang, responseMemo, rulePattern) => {
+      const result = await getHybridCodingRuleChunks({
+        context: {
+          rowIndex: 0,
+          focusRowIndex: 0,
+          selectedRowIndices: [0],
+          card: 'II',
+          responseMemo,
+          existingCodes: {
+            location: '',
+            dq: '',
+            determinants: ['FC', 'CF'],
+            fq: '',
+            pair: '',
+            contents: [],
+            popular: false,
+            z: '',
+            specialScores: [],
+          },
+          sheetRows: [],
+        },
+        lang,
+        provider: 'openai',
+        apiKey: 'unused-in-lexical-fallback',
+        limit: 6,
+      });
+
+      expect(result.mode).toBe('lexical');
+      expect(result.items[0]?.canonicalRoute).toBe('scoring-input/determinants');
+      const evidence = result.items
+        .filter((item) => item.canonicalRoute === 'scoring-input/determinants')
+        .map((item) => item.text)
+        .join('\n');
+      expect(evidence).toMatch(rulePattern);
+    },
+  );
+
+  it.each([
+    ['ko' as const, 'CONTAM과 DV2를 같은 반응에 함께 기록해도 돼?', /CONTAM[\s\S]*DV[\s\S]*함께 기록하지/u],
+    ['en' as const, 'Can CONTAM and DV2 both be scored in the same response?', /CONTAM[\s\S]*do not also record[\s\S]*DV/iu],
+    ['ja' as const, '同じ反応に CONTAM と DV2 を併記できますか。', /CONTAM[\s\S]*DV[\s\S]*併記しません/u],
+    ['es' as const, '¿Se pueden codificar CONTAM y DV2 en la misma respuesta?', /CONTAM[\s\S]*no se añaden[\s\S]*DV/iu],
+    ['pt' as const, 'CONTAM e DV2 podem ser codificados na mesma resposta?', /CONTAM[\s\S]*não se registram[\s\S]*DV/iu],
+  ])(
+    'anchors the explicit %s CONTAM exclusion query to the CONTAM rule',
+    async (lang, responseMemo, rulePattern) => {
+      const result = await getHybridCodingRuleChunks({
+        context: {
+          rowIndex: 0,
+          focusRowIndex: 0,
+          selectedRowIndices: [0],
+          card: 'III',
+          responseMemo,
+          existingCodes: {
+            location: '',
+            dq: '',
+            determinants: [],
+            fq: '',
+            pair: '',
+            contents: [],
+            popular: false,
+            z: '',
+            specialScores: ['CONTAM', 'DV2'],
+          },
+          sheetRows: [],
+        },
+        lang,
+        provider: 'openai',
+        apiKey: 'unused-in-lexical-fallback',
+        limit: 6,
+      });
+
+      expect(result.mode).toBe('lexical');
+      expect(result.items[0]?.canonicalRoute).toBe('scoring-input/special-score/CONTAM');
+      const evidence = result.items
+        .filter((item) => item.canonicalRoute === 'scoring-input/special-score/CONTAM')
+        .map((item) => item.text)
+        .join('\n');
+      expect(evidence).toMatch(rulePattern);
+    },
+  );
+
+  it.each([
+    ['ko' as const, "순수 무채색 C'의 형태질은 무엇으로 기록해?", /C'[\s\S]*FQnone/u],
+    ['en' as const, "What Form Quality should be recorded for pure achromatic C'?", /C'[\s\S]*FQnone/iu],
+    ['ja' as const, "純粋な無彩色 C' の形態質は何を記録しますか。", /C'[\s\S]*FQnone/u],
+    ['es' as const, "¿Qué calidad formal se registra para el C' acromático puro?", /C'[\s\S]*FQnone/iu],
+    ['pt' as const, "Qual qualidade formal se registra para o C' acromático puro?", /C'[\s\S]*FQnone/iu],
+  ])(
+    "anchors the explicit %s C' Form Quality query to the pure achromatic rule",
+    async (lang, responseMemo, rulePattern) => {
+      const result = await getHybridCodingRuleChunks({
+        context: {
+          rowIndex: 0,
+          focusRowIndex: 0,
+          selectedRowIndices: [0],
+          card: 'I',
+          responseMemo,
+          existingCodes: {
+            location: '',
+            dq: '',
+            determinants: ["C'"],
+            fq: '',
+            pair: '',
+            contents: [],
+            popular: false,
+            z: '',
+            specialScores: [],
+          },
+          sheetRows: [],
+        },
+        lang,
+        provider: 'openai',
+        apiKey: 'unused-in-lexical-fallback',
+        limit: 6,
+      });
+
+      expect(result.mode).toBe('lexical');
+      expect(result.items[0]?.canonicalRoute).toBe("scoring-input/determinants/C'");
+      const evidence = result.items
+        .filter((item) => item.canonicalRoute === "scoring-input/determinants/C'")
+        .map((item) => item.text)
+        .join('\n');
+      expect(evidence).toMatch(rulePattern);
+    },
+  );
+
+  it.each([
+    ['ko' as const, '같은 반응에 DV1과 DV2를 함께 기록해도 돼?', /DV1\/DV2[\s\S]*각 쌍 중 하나만[\s\S]*Level 1/u],
+    ['en' as const, 'Can DV1 and DV2 both be recorded in the same response?', /DV1\/DV2[\s\S]*only one level[\s\S]*Level 1/iu],
+    ['ja' as const, '同じ反応に DV1 と DV2 を両方記録できますか。', /DV1\/DV2[\s\S]*どちらか一方だけ[\s\S]*Level 1/u],
+    ['es' as const, '¿Se pueden registrar DV1 y DV2 en una misma respuesta?', /DV1\/DV2[\s\S]*un solo nivel[\s\S]*Nivel 1/iu],
+    ['pt' as const, 'DV1 e DV2 podem ser registrados na mesma resposta?', /DV1\/DV2[\s\S]*apenas um nível[\s\S]*Nível 1/iu],
+  ])(
+    'anchors the explicit %s Level 1-Level 2 query to the special-score overview',
+    async (lang, responseMemo, rulePattern) => {
+      const result = await getHybridCodingRuleChunks({
+        context: {
+          rowIndex: 0,
+          focusRowIndex: 0,
+          selectedRowIndices: [0],
+          card: 'I',
+          responseMemo,
+          existingCodes: {
+            location: '',
+            dq: '',
+            determinants: [],
+            fq: '',
+            pair: '',
+            contents: [],
+            popular: false,
+            z: '',
+            specialScores: ['DV1', 'DV2'],
+          },
+          sheetRows: [],
+        },
+        lang,
+        provider: 'openai',
+        apiKey: 'unused-in-lexical-fallback',
+        limit: 6,
+      });
+
+      expect(result.mode).toBe('lexical');
+      expect(result.items[0]?.canonicalRoute).toBe('scoring-input/special-score');
+      const evidence = result.items
+        .filter((item) => item.canonicalRoute === 'scoring-input/special-score')
+        .map((item) => item.text)
+        .join('\n');
+      expect(evidence).toMatch(rulePattern);
+    },
+  );
+
+  it.each([
+    ['ko' as const, '같은 표현이 INCOM1과 FABCOM1 기준에 겹치면 둘 다 기록해?', /독립된 표현[\s\S]*같은 표현[\s\S]*WSum6/u],
+    ['en' as const, 'If the same wording meets both INCOM1 and FABCOM1, should both be recorded?', /discrete wording[\s\S]*same wording[\s\S]*WSum6/iu],
+    ['ja' as const, '同じ表現が INCOM1 と FABCOM1 の両基準に重なる場合、両方を記録しますか。', /独立した表現[\s\S]*同じ表現[\s\S]*WSum6/u],
+    ['es' as const, 'Si la misma expresión cumple INCOM1 y FABCOM1, ¿se registran ambos?', /expresión independiente[\s\S]*misma expresión[\s\S]*WSum6/iu],
+    ['pt' as const, 'Se a mesma formulação satisfizer INCOM1 e FABCOM1, ambos são registrados?', /formulação independente[\s\S]*mesma formulação[\s\S]*WSum6/iu],
+  ])(
+    'anchors the explicit %s overlapping critical-score query to the discrete-wording rule',
+    async (lang, responseMemo, rulePattern) => {
+      const result = await getHybridCodingRuleChunks({
+        context: {
+          rowIndex: 0,
+          focusRowIndex: 0,
+          selectedRowIndices: [0],
+          card: 'I',
+          responseMemo,
+          existingCodes: {
+            location: '',
+            dq: '',
+            determinants: [],
+            fq: '',
+            pair: '',
+            contents: [],
+            popular: false,
+            z: '',
+            specialScores: ['INCOM1', 'FABCOM1'],
+          },
+          sheetRows: [],
+        },
+        lang,
+        provider: 'openai',
+        apiKey: 'unused-in-lexical-fallback',
+        limit: 6,
+      });
+
+      expect(result.mode).toBe('lexical');
+      expect(result.items[0]?.canonicalRoute).toBe('scoring-input/special-score');
+      const evidence = result.items
+        .filter((item) => item.canonicalRoute === 'scoring-input/special-score')
+        .map((item) => item.text)
+        .join('\n');
+      expect(evidence).toMatch(rulePattern);
+    },
+  );
 
   it('reports lexical mode when coding vector retrieval has no usable hits', async () => {
     retrievalMocks.runtimeReady.mockReturnValue(true);

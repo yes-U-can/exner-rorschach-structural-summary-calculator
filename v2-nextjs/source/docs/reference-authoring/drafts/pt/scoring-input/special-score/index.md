@@ -73,6 +73,8 @@ Cada código descreve um aspecto específico da resposta e deve ser aplicado pel
 
 - Os Códigos Especiais são acrescentados à codificação principal; eles não substituem Localização, Determinantes nem Conteúdos.
 - Devem ser usados somente quando a qualidade especial estiver claramente presente na resposta.
+- Em `DV1/DV2`, `DR1/DR2`, `INCOM1/INCOM2` e `FABCOM1/FABCOM2`, registre apenas um nível de cada par dentro de uma resposta. Se houver dúvida sobre o nível, use conservadoramente o Nível 1.
+- Diferentes Códigos Especiais críticos podem ser registrados juntos somente quando cada um se baseia em uma formulação independente. Se a mesma formulação ou o mesmo caso de confusão cognitiva satisfizer critérios sobrepostos, registre apenas o código com maior peso no `WSum6`.
 - Cada código deve ser conferido em seu documento específico antes de ser atribuído.
 - `COP` e `AG` dependem de movimento, em geral [`M`](ref://scoring-input/determinants/M), [`FM`](ref://scoring-input/determinants/FM) ou [`m`](ref://scoring-input/determinants/m).
 - `MOR` é acrescentado quando o objeto aparece morto, danificado, arruinado, deteriorado ou claramente mórbido.

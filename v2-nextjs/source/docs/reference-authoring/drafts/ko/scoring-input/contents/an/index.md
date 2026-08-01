@@ -37,12 +37,14 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/cont
 - skeletal, muscular, internal anatomy가 핵심 기준이다.
 - 해부학적 내부 구조가 아니라 동물의 외부 부분이면 `Ad`를 먼저 검토한다.
 - 조직 슬라이드나 현미경 절편이 반응에 포함되면 `Art`를 2차 내용으로 추가한다.
+- 반응을 X-ray나 방사선 영상으로 본 경우에는 `An` 대신 `Xy`를 기록한다.
 
 ## 주의사항/감별 기준
 
 - `An`과 `Ad`는 둘 다 몸 일부처럼 보일 수 있지만, `Ad`는 외부 부분이고 `An`은 내부 해부 구조다.
 - `An`과 `Hd`도 모두 부분처럼 보일 수 있지만, `Hd`는 인간 부분 형상이고 `An`은 해부학적 구조다.
 - 단순히 사람 또는 동물을 본 것이 아니라, 내부 기관이나 골격을 보았을 때만 `An`을 준다.
+- 같은 반응에 `Xy`를 기록했다면 `An`을 함께 기록하지 않는다.
 - `An`은 이후 `PHR`, `An_Xy` 같은 해석 route와 연결되므로 범주를 느슨하게 쓰지 않는다.
 
 ## 상호 참조

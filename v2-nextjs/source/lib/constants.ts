@@ -1,7 +1,7 @@
 import { Category, InfoCategory, InfoNode } from '@/types';
 
 /**
- * Computing Program for Rorschach Structural Summary v2.2.7
+ * Computing Program for Rorschach Structural Summary v2.2.8
  * Constants and Configuration
  * 
  * Code.gs의 SCORING_CONFIG를 TypeScript로 이전
@@ -294,4 +294,3 @@ export const SCORING_CONFIG = {
     FQ_TYPES: ['+', 'o', 'u', '-', 'none']
   }
 } as const;
-

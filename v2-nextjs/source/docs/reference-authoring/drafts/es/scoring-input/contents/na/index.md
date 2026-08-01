@@ -32,11 +32,11 @@ La respuesta apunta a "naturaleza" como conjunto más que a un objeto singular.
 
 ## Condiciones de aplicación
 
-- Se aplica a cielo, mar, agua, nieve, lluvia, montes lejanos, vegetación amplia u otros escenarios entendidos como naturaleza general.
+- Se aplica a sol, luna, planeta, cielo, agua, océano, lago, río, hielo, nieve, lluvia, niebla, bruma, arcoíris, tormenta, tornado, noche o gota de lluvia.
 - El foco debe estar en el ambiente natural o en el fenómeno natural como tal.
 - Si `Na` aparece junto con [`Bt`](ref://scoring-input/contents/Bt) o [`Ls`](ref://scoring-input/contents/Ls), se codifica solo `Na`; no se añaden `Bt` ni `Ls`.
 - Si `Na` no está presente pero se aplican tanto `Bt` como `Ls`, se elige solo el código que represente mejor la respuesta.
-- Si el sujeto describe una nube como objeto aislado, primero se considera [`Cl`](ref://scoring-input/contents/Cl); si describe un entorno natural amplio, se considera `Na`.
+- Si el sujeto describe una nube, primero se considera [`Cl`](ref://scoring-input/contents/Cl); la niebla y la bruma se codifican `Na`.
 
 ## Precauciones y distinciones
 

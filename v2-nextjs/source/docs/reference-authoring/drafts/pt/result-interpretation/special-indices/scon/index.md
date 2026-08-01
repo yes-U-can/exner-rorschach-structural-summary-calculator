@@ -38,6 +38,7 @@ Ela não substitui a avaliação clínica imediata, mas indica quando esse tema 
 ## Pontos de interpretação
 
 - Aplique o limiar e a interpretação do `S-CON` somente a pessoas com 15 anos ou mais. Sua utilidade não foi demonstrada para menores de 15 anos, portanto a pontuação calculada não deve ser usada como conclusão positiva ou negativa nesse grupo.
+- O resultado é calculado como positivo quando pelo menos 8 destes 12 critérios são atendidos: `FV+VF+V+FD > 2`, blends Color-Shading `> 0`, `3r+(2)/R < .31` ou `> .44`, `MOR > 3`, `Zd < -3.5` ou `> +3.5`, `es > EA`, `CF+C > FC`, `X+% < .70`, `S > 3`, `P < 3` ou `> 8`, `Pure H < 2` e `R < 17`.
 - Se `S-CON` atinge o limiar, avalie imediatamente ideação suicida, intenção, plano, acesso a meios, tentativas prévias, mudanças recentes e fatores protetivos.
 - A constelação integra sinais de estresse, autocrítica, dor emocional e controle reduzido.
 - Seu peso aumenta quando aparece com `D` baixo, `AdjD` baixo, `SumV`, `SumY`, `MOR_self` e `DEPI`.

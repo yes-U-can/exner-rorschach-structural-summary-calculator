@@ -36,15 +36,17 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-contents-animal-20
 
 ## 採点・適用条件
 
-- 骨、器官、筋肉、X 線像、内部構造などに使います。
+- 骨、器官、筋肉、内部構造などに使います。
 - 判断の中心は、外的な動物部分ではなく、解剖学的構造に焦点があるかどうかです。
 - 外側の動物部分だけなら [`Ad`](ref://scoring-input/contents/Ad) を先に検討します。
 - 図解的・図示的な解剖表現になっているときは、必要に応じて [`Art`](ref://scoring-input/contents/Art) の併記も検討します。
+- X線写真やレントゲン画像として把握された場合は、`An`ではなく[`Xy`](ref://scoring-input/contents/Xy)を記録します。
 
 ## 注意点・鑑別
 
 - `An` と [`Ad`](ref://scoring-input/contents/Ad) は似て見えても、`An` には解剖学的焦点が必要です。
 - 身体部分が出たというだけでは `An` にはしません。内部・構造・生物学的観点が表れている必要があります。
+- `Xy`を記録した場合は、同じ反応に`An`を併記しません。
 - このコードは後で [`PHR`](ref://scoring-input/gphr/PHR) や [`An + Xy`](ref://result-interpretation/lower-section/selfPerception/An_Xy) と関わることがありますが、それ自体でそれらを決めるわけではありません。
 
 ## 相互参照

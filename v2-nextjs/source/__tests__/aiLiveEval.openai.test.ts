@@ -405,9 +405,7 @@ function buildMessages(fixture: AiHarnessEvalFixture) {
 }
 
 function requiresRuntimeVectorEvidence(fixture: AiHarnessEvalFixture): boolean {
-  return !fixture.expectedTags.some(
-    (tag) => tag === 'out-of-scope-refusal' || tag === 'no-internal-disclosure',
-  );
+  return fixture.expectedTags.includes('reference-grounded');
 }
 
 async function readStream(stream: ReadableStream<Uint8Array>) {
@@ -461,6 +459,10 @@ describe.runIf(apiKey && liveFixtures.length > 0)('OpenAI live AI harness eval',
       const output = await readStream(result.stream);
       const completion = await result.completion;
       const contract = evaluateAiHarnessOutput(fixture, output);
+
+      if (process.env.OPENAI_LIVE_EVAL_DEBUG_OUTPUT === '1') {
+        console.info(JSON.stringify({ fixtureId: fixture.id, output }));
+      }
 
       console.info(
         JSON.stringify({

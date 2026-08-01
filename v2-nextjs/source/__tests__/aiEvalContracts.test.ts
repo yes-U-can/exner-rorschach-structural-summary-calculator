@@ -420,6 +420,20 @@ describe('AI eval contract evaluator', () => {
     expect(negated.issues.map((issue) => issue.type)).toContain('forbidden_phrase');
   });
 
+  it('accepts a Japanese level-pair prohibition that repeats the question wording', () => {
+    const fixture = AI_HARNESS_EVAL_FIXTURES.find(
+      (item) => item.id === 'coding-ja-special-score-level-pair-boundary',
+    );
+    expect(fixture).toBeDefined();
+
+    const output = [
+      'DV1 と DV2 を両方記録することはできません。',
+      '同じ特殊スコアでは、Level 1 または Level 2 のどちらか一方だけを記録します。',
+    ].join('');
+
+    expect(evaluateAiHarnessOutput(fixture!, output)).toEqual({ passed: true, issues: [] });
+  });
+
   it('accepts a natural Portuguese operational-only OBS boundary', () => {
     const fixture = AI_HARNESS_EVAL_FIXTURES.find(
       (item) => item.id === 'interpretation-pt-obs-evidence-boundary',

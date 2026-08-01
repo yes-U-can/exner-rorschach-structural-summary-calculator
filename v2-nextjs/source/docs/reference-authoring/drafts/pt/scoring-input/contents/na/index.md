@@ -32,21 +32,21 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-completio
 
 ## Definição central
 
-`Na` é usado quando a resposta nomeia natureza em geral ou um elemento natural sem organizá-lo como paisagem ampla.
-O código indica referência natural, não cartografia nem cena ambiental completa.
+`Na` é usado para conteúdos do ambiente natural que não são codificados como `Bt` ou `Ls`.
+O foco precisa recair no ambiente ou fenômeno natural, e não em cartografia, vegetação isolada ou paisagem específica.
 
 ## Condições de aplicação
 
-- Use para sol, nuvem, água, rocha, montanha isolada, fogo, chuva ou outro elemento natural.
-- O código também cabe quando a resposta diz simplesmente natureza ou algo natural sem maior especificação.
-- Se a leitura se organiza como paisagem ou cenário amplo, revise primeiro [`Ls`](ref://scoring-input/contents/Ls).
-- Se o foco principal for elemento botânico, revise primeiro [`Bt`](ref://scoring-input/contents/Bt).
+- Use para sol, lua, planeta, céu, água, oceano, lago, rio, gelo, neve, chuva, neblina, névoa, arco-íris, tempestade, tornado, noite ou gota de chuva.
+- Se `Na` for aplicável junto com [`Bt`](ref://scoring-input/contents/Bt) ou [`Ls`](ref://scoring-input/contents/Ls), registre apenas `Na`; não acrescente `Bt` nem `Ls`.
+- Se não houver `Na`, mas `Bt` e `Ls` forem aplicáveis, registre somente o código que melhor represente o centro da resposta.
+- Para nuvem, revise primeiro [`Cl`](ref://scoring-input/contents/Cl); neblina e névoa são codificadas `Na`.
 - Se a forma for lida como mapa ou desenho geográfico, revise primeiro [`Ge`](ref://scoring-input/contents/Ge).
 
 ## Cuidados e diferenciação
 
-- `Na` é categoria mais geral do que [`Bt`](ref://scoring-input/contents/Bt), que exige botânica ou vegetação.
-- `Na` é diferente de [`Cl`](ref://scoring-input/contents/Cl), que pede fenômeno atmosférico nomeado como nuvem, neblina ou fumaça.
+- `Na` tem prioridade sobre [`Bt`](ref://scoring-input/contents/Bt) e [`Ls`](ref://scoring-input/contents/Ls); os três códigos não são combinados em uma mesma resposta.
+- `Na` é diferente de [`Cl`](ref://scoring-input/contents/Cl), que é usado especificamente para nuvem, e de [`Fi`](ref://scoring-input/contents/Fi), que é usado para fogo ou fumaça.
 - `Na` pode aparecer em protocolos que depois também elevam [`Índice de Isolamento`](ref://result-interpretation/lower-section/interpersonal/ISO_Index), mas a codificação continua sendo decidida no nível do conteúdo.
 
 ## Referências cruzadas

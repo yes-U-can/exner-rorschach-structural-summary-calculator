@@ -1,7 +1,7 @@
 {
   "app": {
     "title": "Rorschach Structural Summary Calculator",
-    "version": "v2.2.7",
+    "version": "v2.2.8",
     "provider": "Developed and maintained by MOW"
   },
   "nav": {
@@ -270,9 +270,37 @@
       "title": "Review Duplicate Determinants",
       "message": "Rows {rows} contain the same determinant {codes} more than once. Record each determinant only once per response. Calculation is blocked until these rows are corrected."
     },
+    "duplicateContent": {
+      "title": "Review Duplicate Contents",
+      "message": "Rows {rows} contain the same content code {codes} more than once. Record each content code only once per response. Calculation is blocked until these rows are corrected."
+    },
+    "contentConflict": {
+      "title": "Review Content Combination",
+      "message": "Rows {rows} contain content codes that cannot be recorded together: {codes}. When Na applies, do not also record Bt or Ls; without Na, record only one of Bt or Ls. Do not add An to a response coded Xy. Calculation is blocked until these rows are corrected."
+    },
+    "invalidZ": {
+      "title": "Review Z Code",
+      "message": "Rows {rows} contain an unsupported Z code: {codes}. Select ZW, ZA, ZD, or ZS, or leave the field blank. Calculation is blocked until these rows are corrected."
+    },
     "movementConflict": {
       "title": "Review Duplicate Movement Codes",
       "message": "Rows {rows} contain more than one code from the same movement family. For each human, animal, or inanimate movement family in a response, select only one of a, p, or a-p. Review the response record and inquiry before correcting it. Calculation is blocked until these rows are corrected."
+    },
+    "determinantConflict": {
+      "title": "Review Determinant Combination",
+      "message": "Rows {rows} contain determinant codes that cannot be recorded together: {codes}. Record only one form-emphasis category for the same determinant in a response. Review the response record and inquiry before correcting it. Calculation is blocked until these rows are corrected."
+    },
+    "criticalSpecialScoreConflict": {
+      "title": "Review Special Score Combination",
+      "message": "Rows {rows} contain special scores that cannot be recorded together: {codes}. When CONTAM is scored, do not also record DV, DR, INCOM, FABCOM, or ALOG. Calculation is blocked until these rows are corrected."
+    },
+    "specialScoreLevelConflict": {
+      "title": "Review Special Score Level",
+      "message": "Rows {rows} contain both Level 1 and Level 2 of the same special score: {codes}. Record only one of the two levels within a response. Calculation is blocked until these rows are corrected."
+    },
+    "colorProjectionConflict": {
+      "title": "Review Color Projection Coding",
+      "message": "Rows {rows} contain codes that cannot be recorded together: {codes}. CP identifies chromatic color projected onto an achromatic area, so it is not recorded with FC, CF, or C. Calculation is blocked until these rows are corrected."
     },
     "missingFormQuality": {
       "title": "Review Form Quality",

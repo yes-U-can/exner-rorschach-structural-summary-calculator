@@ -57,6 +57,9 @@ describe('AI prompt contracts', () => {
     expect(prompt).toContain("Ask a direct question that explicitly requests the examinee's exact age");
     expect(prompt).toContain('do not stop at saying that age is needed');
     expect(prompt).toContain('do not request it routinely for age-independent calculations');
+    expect(prompt).toContain("If an S-CON score is provided without the examinee's age");
+    expect(prompt).toContain('report only the raw criterion count and ask for the exact age');
+    expect(prompt).toContain('do not call the result positive or negative');
     expect(prompt).toContain('Some reference indices have age-limited applicability.');
     expect(prompt).toContain('do not label the index positive or negative');
     expect(prompt).toContain('For S-CON specifically, when the examinee is younger than 15');
@@ -146,6 +149,9 @@ describe('AI prompt contracts', () => {
     expect(prompt).toContain('Do not imply that the app can apply your suggestion automatically.');
     expect(prompt).toContain('If the memo lacks needed observation context, ask targeted follow-up questions');
     expect(prompt).toContain('When observation evidence is thin, use candidate/provisional language');
+    expect(prompt).toContain('state both the exclusion and the resolution rule');
+    expect(prompt).toContain('states only the exclusion is incomplete');
+    expect(prompt).toContain('Do not omit the resolution rule or invent a different tie-breaker');
     expect(prompt).toContain('S is not a complete stand-alone response location');
     expect(prompt).toContain('WS, DS, or DdS');
     expect(prompt).toContain('FQnone is only for responses where form is not a codable basis');

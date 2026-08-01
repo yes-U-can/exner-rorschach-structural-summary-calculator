@@ -25,10 +25,20 @@ interface SpecialIndicesProps {
 
 type IndexCriterion = { label: string; met: boolean; primary?: boolean };
 
-function Checkbox({ checked, compact = false }: { checked: boolean; compact?: boolean }) {
+function Checkbox({
+  checked,
+  compact = false,
+  alignWithSummary = false,
+}: {
+  checked: boolean;
+  compact?: boolean;
+  alignWithSummary?: boolean;
+}) {
   return (
     <div
-      className={`flex-shrink-0 rounded-sm border flex items-center justify-center mt-0.5 ${
+      className={`flex flex-shrink-0 items-center justify-center rounded-sm border ${
+        alignWithSummary ? (compact ? 'mt-1' : 'mt-1.5') : 'mt-0.5'
+      } ${
         compact ? 'w-3 h-3 mr-1.5' : 'w-4 h-4 mr-2'
       } ${
         checked
@@ -98,7 +108,7 @@ function IndexCard({
       </h3>
 
       <div className={`flex items-start border-b border-[var(--border-subtle)] ${compact ? 'mb-2 pb-1' : 'mb-3 pb-2'}`}>
-        <Checkbox checked={isPositive} compact={compact} />
+        <Checkbox checked={isPositive} compact={compact} alignWithSummary />
         <div>
           <span className={`${compact ? 'text-[9px] leading-snug' : 'text-[11px] leading-relaxed'} ${isPositive ? 'font-bold text-[var(--danger-text)]' : 'text-[var(--text-body)]'}`}>
             {thresholdLabel}

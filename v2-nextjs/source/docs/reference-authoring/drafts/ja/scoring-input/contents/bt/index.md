@@ -36,6 +36,8 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-contents-art-ay-bl
 
 - 木、花、葉、枝、サボテンなど、明確に植物としてまとまる形に使います。
 - 植物全体でも、はっきりした植物部分でも使えます。
+- `Na`が`Bt`とともに該当する場合は、`Na`だけを記録し、`Bt`を加えません。
+- `Na`がなく、`Bt`と`Ls`の両方が該当する場合は、反応の中心をよりよく表す一方だけを記録します。
 - 動物や動物部分なら [`A`](ref://scoring-input/contents/A) やその派生コードを先に見直します。
 - 血や生体損傷の焦点に変わるなら [`Bl`](ref://scoring-input/contents/Bl) を先に見直します。
 
@@ -43,6 +45,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-contents-art-ay-bl
 
 - `Bt` は植物内容であり、色彩、質感、形態判断のコードではありません。
 - 有機的に見えるというだけでは足りません。植物としてまとまって答えられている必要があります。
+- `Bt`、`Ls`、`Na`はいずれも孤立指標に含まれるため、一つの反応で重ねて数えません。
 - 文献によっては `BT` と表記されることがありますが、このアプリでは包括システムのコード `Bt` を使用します。
 
 ## 相互参照

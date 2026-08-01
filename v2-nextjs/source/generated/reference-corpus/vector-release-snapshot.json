@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-23T06:35:02.154Z",
+  "generatedAt": "2026-08-01T08:22:03.337Z",
   "providers": [
     "openai"
   ],
   "corpus": {
-    "generatedAt": "2026-07-23T06:26:46.116Z",
-    "fingerprint": "1c1a63af444d536638b0d6dd19384812e4bc45c567b29f978804ef208ce2baab",
+    "generatedAt": "2026-08-01T07:47:10.728Z",
+    "fingerprint": "3f82b4f1ce27620f75006290c990543cbe564559af67f702837269327e795125",
     "chunkCounts": {
       "ko": 1178,
       "en": 1083,
@@ -35,7 +35,7 @@
       "embeddingModel": "text-embedding-3-large",
       "dimensions": 3072,
       "totalEmbeddings": 5604,
-      "latestRefreshedAt": "2026-07-23T06:34:43.467Z",
+      "latestRefreshedAt": "2026-08-01T08:21:50.916Z",
       "locales": {
         "ko": {
           "locale": "ko",
@@ -45,7 +45,7 @@
           "staleEmbeddingCount": 0,
           "contentHashMismatchCount": 0,
           "ready": true,
-          "latestRefreshedAt": "2026-07-23T06:32:56.202Z"
+          "latestRefreshedAt": "2026-08-01T08:19:46.175Z"
         },
         "en": {
           "locale": "en",
@@ -55,7 +55,7 @@
           "staleEmbeddingCount": 0,
           "contentHashMismatchCount": 0,
           "ready": true,
-          "latestRefreshedAt": "2026-07-23T06:33:22.418Z"
+          "latestRefreshedAt": "2026-08-01T08:20:16.903Z"
         },
         "ja": {
           "locale": "ja",
@@ -65,7 +65,7 @@
           "staleEmbeddingCount": 0,
           "contentHashMismatchCount": 0,
           "ready": true,
-          "latestRefreshedAt": "2026-07-23T06:33:49.799Z"
+          "latestRefreshedAt": "2026-08-01T08:20:45.637Z"
         },
         "es": {
           "locale": "es",
@@ -75,7 +75,7 @@
           "staleEmbeddingCount": 0,
           "contentHashMismatchCount": 0,
           "ready": true,
-          "latestRefreshedAt": "2026-07-23T06:34:19.518Z"
+          "latestRefreshedAt": "2026-08-01T08:21:18.570Z"
         },
         "pt": {
           "locale": "pt",
@@ -85,7 +85,7 @@
           "staleEmbeddingCount": 0,
           "contentHashMismatchCount": 0,
           "ready": true,
-          "latestRefreshedAt": "2026-07-23T06:34:43.467Z"
+          "latestRefreshedAt": "2026-08-01T08:21:50.916Z"
         }
       }
     }

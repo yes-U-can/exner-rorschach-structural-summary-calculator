@@ -535,6 +535,14 @@ const result = {
   total: aggregate(fileSummaries),
 };
 
+if (args.requirePass && result.total.records === 0) {
+  result.total.findings.push({
+    file: basename(resolve(args.input)),
+    type: 'no_review_records',
+    message: 'Release gate requires at least one human review record.',
+  });
+}
+
 if (args.json) {
   console.log(JSON.stringify(result, null, 2));
 } else {

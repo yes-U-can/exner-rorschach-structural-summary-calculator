@@ -39,11 +39,13 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-contents-ls-na-sc-
 - 個別の対象ではなく、空間的に広がる場面として見られている必要があります。
 - 地図や地理図として読んでいるなら、まず[`Ge`](ref://scoring-input/contents/Ge)を再検討します。
 - 一般的な自然環境や自然現象として語られているなら、[`Na`](ref://scoring-input/contents/Na)を再検討します。
+- `Na`も該当する場合は`Na`だけを記録し、`Ls`を加えません。
+- `Na`がなく、`Bt`と`Ls`の両方が該当する場合は、反応の中心をよりよく表す一方だけを記録します。
 
 ## 注意点・鑑別
 
 - `Ls`は[`Ge`](ref://scoring-input/contents/Ge)とは違い、地図ではなく風景です。
-- 広い自然環境が中心なら、[`Na`](ref://scoring-input/contents/Na)が優先されることがあります。
+- `Na`が該当する場合は、[`Ls`](ref://scoring-input/contents/Ls)より常に`Na`を優先します。
 - 特定の植物や枝葉が中心なら、まず[`Bt`](ref://scoring-input/contents/Bt)を再検討します。
 
 ## 相互参照

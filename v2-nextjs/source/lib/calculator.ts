@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /**
- * Computing Program for Rorschach Structural Summary v2.2.7
+ * Computing Program for Rorschach Structural Summary v2.2.8
  * Main Calculation Logic
  * 
  * Code.gs의 calculateRorschach 함수를 TypeScript로 이전
@@ -91,10 +91,52 @@ export function calculateStructuralSummary(
               message: `Multiple ${issue.family} movement codes at row ${row}: ${issue.codes.join(', ')}`,
             };
           }
+          if (issue.type === 'determinant_conflict') {
+            return {
+              field: `responses.${issue.responseIndex}.determinants`,
+              message: `Mutually exclusive determinant codes at row ${row}: ${issue.codes.join(', ')}`,
+            };
+          }
           if (issue.type === 'duplicate_determinant') {
             return {
               field: `responses.${issue.responseIndex}.determinants`,
               message: `Duplicate determinant code at row ${row}: ${issue.code}`,
+            };
+          }
+          if (issue.type === 'duplicate_content') {
+            return {
+              field: `responses.${issue.responseIndex}.contents`,
+              message: `Duplicate content code at row ${row}: ${issue.code}`,
+            };
+          }
+          if (issue.type === 'content_conflict') {
+            return {
+              field: `responses.${issue.responseIndex}.contents`,
+              message: `Mutually exclusive content codes at row ${row}: ${issue.codes.join(', ')}`,
+            };
+          }
+          if (issue.type === 'critical_special_score_conflict') {
+            return {
+              field: `responses.${issue.responseIndex}.specialScores`,
+              message: `CONTAM cannot be combined with other critical special scores at row ${row}: ${issue.codes.join(', ')}`,
+            };
+          }
+          if (issue.type === 'special_score_level_conflict') {
+            return {
+              field: `responses.${issue.responseIndex}.specialScores`,
+              message: `Level 1 and Level 2 of the same special score cannot be combined at row ${row}: ${issue.codes.join(', ')}`,
+            };
+          }
+          if (issue.type === 'color_projection_conflict') {
+            return {
+              field: `responses.${issue.responseIndex}.specialScores`,
+              message: `CP cannot be combined with chromatic color determinants at row ${row}: ${issue.codes.join(', ')}`,
+            };
+          }
+          if (issue.type === 'invalid_z') {
+            return {
+              field: `responses.${issue.responseIndex}.z`,
+              message: `Invalid Z code at row ${row}: ${issue.code}`,
             };
           }
           return {
@@ -618,4 +660,3 @@ export function calculateStructuralSummary(
     };
   }
 }
-

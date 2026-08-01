@@ -36,6 +36,8 @@ Incluye plantas, flores, arboles, hojas o partes vegetales reconocidas como tale
 
 - Se aplica a árbol, flor, hoja, rama, cactus u otras formas vegetales.
 - Puede usarse tanto para la planta completa como para una parte vegetal clara.
+- Si `Na` corresponde junto con `Bt`, se registra solo `Na` y no se añade `Bt`.
+- Si no hay `Na` pero corresponden `Bt` y `Ls`, se registra únicamente el código que mejor represente el centro de la respuesta.
 - Si la respuesta describe animal o detalle animal, primero se consideran [`A`](ref://scoring-input/contents/A) o sus variantes.
 - Si el foco se desplaza a sangre o lesión biológica, primero se considera [`Bl`](ref://scoring-input/contents/Bl).
 
@@ -43,6 +45,7 @@ Incluye plantas, flores, arboles, hojas o partes vegetales reconocidas como tale
 
 - `Bt` es contenido botánico, no un juicio sobre color, textura o forma.
 - No se debe usar solo porque algo parezca orgánico; tiene que percibirse específicamente como planta.
+- `Bt`, `Ls` y `Na` forman parte del Índice de Aislamiento, por lo que no se cuentan juntos dentro de una misma respuesta.
 - Algunas fuentes escriben `BT`; esta aplicación utiliza el código canónico `Bt`.
 
 ## Referencias cruzadas

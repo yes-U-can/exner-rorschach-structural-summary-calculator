@@ -38,6 +38,7 @@ No describe solo una mezcla rara, sino una integración imposible dentro de un m
 - La clave es que el producto final se presenta como una sola percepción fusionada, no como dos ideas simplemente comparadas.
 - La respuesta debe resultar imposible o internamente contradictoria por la propia fusión.
 - `CONTAM` representa una forma especialmente grave de distorsión y luego pesa en `Sum6` y `WSum6`.
+- Cuando se codifica `CONTAM`, no se añaden `DV`, `DR`, `INCOM`, `FABCOM` ni `ALOG`.
 
 ## Precauciones y distinciones
 

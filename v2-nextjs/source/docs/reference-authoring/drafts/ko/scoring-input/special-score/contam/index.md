@@ -37,6 +37,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/spec
 - 각각 따로 말하면 성립할 수 있는 두 인상이, 융합 과정에서 서로의 적절성을 손상시키면 `CONTAM` 가능성이 높다.
 - 핵심은 `두 인상의 오염적 융합`이지, 단순히 이상한 조합 자체가 아니다.
 - 신조어나 매우 독특한 언어를 통해 오염된 대상을 기술하는 경우가 함께 나타날 수 있다.
+- `CONTAM`을 부여한 반응에는 `DV`, `DR`, `INCOM`, `FABCOM`, `ALOG`를 함께 기록하지 않는다.
 
 ## 주의사항/감별 기준
 

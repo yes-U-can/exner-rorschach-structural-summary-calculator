@@ -23,7 +23,7 @@ Cada nota de versión registra los cambios, las condiciones que podrían verse a
 ## Contenido publicado
 
 - [Next.js] Aplicación web: [exner.yesucan.co.kr](https://exner.yesucan.co.kr)
-- [Next.js] Versión 2 más reciente: [v2-nextjs/releases/v2.2.7](./v2-nextjs/releases/v2.2.7/README.es.md)
+- [Next.js] Versión 2 más reciente: [v2-nextjs/releases/v2.2.8](./v2-nextjs/releases/v2.2.8/README.es.md)
 - [Next.js] Revisión de la exactitud de cálculo en v2.2.2: [v2-nextjs/source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md](./v2-nextjs/source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md)
 - [Next.js] Explicación de Cn en v2.2.2 y llamadas reales a GPT-5.5 en 5 idiomas: [v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md](./v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md)
 - [Next.js] Validación de la interfaz de v2.2.0: [v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md](./v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md)
@@ -48,6 +48,12 @@ En v2.1.x se mejoró por etapas que los asistentes de IA completaran sus respues
 - **v2.1.10:** se corrigieron los problemas restantes de reconocimiento de códigos japoneses, preguntas amplias de interpretación y configuración de una base de datos nueva.
 
 El trabajo relacionado de v2.1.8 a v2.1.10 se documenta en las notas de cada parche.
+
+## v2.2.8
+
+v2.2.8 es una corrección de errores que impide que el mismo código de Contenido se contabilice dos veces en una respuesta y unifica las reglas de normalización de las interfaces de escritorio y móvil. Los datos de ejemplo ya no sobrescriben un autoguardado existente, y se reforzaron el guardado de la última edición y la validación de datos dañados.
+
+Las fórmulas del Sumario Estructural no cambiaron. Los protocolos existentes introducidos conforme a las reglas no necesitan volver a calcularse. Deben revisarse con el material original y recalcularse solo los registros que contengan un código de Contenido duplicado en una respuesta; que hayan guardado resultados distintos entre las interfaces de escritorio y móvil para los Special Scores Level 1 y Level 2; que hayan guardado en la interfaz móvil únicamente determinantes sin forma (`C`, `C'`, `T`, `V`, `Y` o `Cn`) con un valor de [FQ] distinto de `none`; o que conserven un código Z no admitido o una puntuación Z que no corresponda a la lámina. Los documentos de S-CON y las reglas de respuesta de IA incluyen ahora los 12 criterios y el límite de 8 criterios en los cinco idiomas; no se añadió un campo de edad. OpenAI Codex y Claude Opus 5 realizaron por separado llamadas de pago a GPT-5.5, y el registro incluye tanto un resultado de contrato que no volvió a reproducirse como las comprobaciones posteriores. Consulte la [nota de v2.2.8](./v2-nextjs/releases/v2.2.8/README.es.md) para obtener más información.
 
 ## v2.2.7
 
@@ -101,6 +107,7 @@ Se restringió a los asistentes GPT-5.5 para que no ampliaran sus respuestas fue
 
 ## [Next.js] Historial de versiones 2
 
+- **[2026-07-31] v2.2.8 (corrección de errores)** [Nota del parche](./v2-nextjs/releases/v2.2.8/README.es.md) [Código fuente](./v2-nextjs/source/)
 - **[2026-07-23] v2.2.7 (corrección de errores)** [Nota del parche](./v2-nextjs/releases/v2.2.7/README.es.md) [Código fuente](./v2-nextjs/source/)
 - **[2026-07-20] v2.2.6 (corrección de errores)** [Nota del parche](./v2-nextjs/releases/v2.2.6/README.es.md) [Código fuente](./v2-nextjs/source/)
 - **[2026-07-19] v2.2.5 (corrección de errores)** [Nota del parche](./v2-nextjs/releases/v2.2.5/README.es.md) [Código fuente](./v2-nextjs/source/)
@@ -133,7 +140,7 @@ Se restringió a los asistentes GPT-5.5 para que no ampliaran sus respuestas fue
 3. Cree un archivo local de variables de entorno a partir de `.env.example`.
 4. Compruebe la aplicación con `npm run build` o `npm run dev`.
 
-El repositorio público no contiene las variables de entorno de producción, la configuración de Vercel, registros locales, cachés ni notas de trabajo privadas.
+El repositorio público no contiene variables de entorno de producción, configuración de Vercel, registros locales, cachés, notas de trabajo privadas, claves de API, respuestas originales del modelo ni datos de evaluación privados.
 
 </details>
 

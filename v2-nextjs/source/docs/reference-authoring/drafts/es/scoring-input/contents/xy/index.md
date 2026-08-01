@@ -34,7 +34,7 @@ Si la respuesta se codifica como `Xy`, el foco está en la imagen radiográfica 
 
 - Se aplica a radiografía, placa de rayos X, imagen interna vista explícitamente como rayos X o estudio radiográfico.
 - El sujeto debe indicar que lo ve como radiografía o imagen de rayos X.
-- Cuando se codifica `Xy`, no se agrega [`An`](ref://scoring-input/contents/An) como contenido secundario.
+- Cuando se registra `Xy`, no se añade [`An`](ref://scoring-input/contents/An) como contenido secundario.
 - Esta codificación se conecta después con la ruta interpretativa [`An + Xy`](ref://result-interpretation/lower-section/selfPerception/An_Xy).
 
 ## Precauciones y distinciones

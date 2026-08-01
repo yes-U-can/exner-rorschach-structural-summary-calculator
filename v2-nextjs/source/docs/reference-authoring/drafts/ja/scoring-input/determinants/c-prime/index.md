@@ -40,6 +40,7 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 - `FC'` や `C'F` に必要な形の支えが足りません。
 - 質問段階で二次的形態が確認できるなら `C'F` を再検討します。
 - 無彩色の使用が明確で疑いないことが必要です。
+- `C'` は形態を含まない純粋な無彩色決定因なので、形態質は `FQnone` として記録します。
 
 ## 注意点・鑑別
 

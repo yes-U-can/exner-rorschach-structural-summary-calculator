@@ -9,6 +9,7 @@ import { useToast } from '@/components/ui/Toast';
 import { SCORING_CONFIG } from '@/lib/constants';
 import { classifyGPHR } from '@/lib/gphr';
 import { OPTIONS } from '@/lib/options';
+import { applyScoringResponseRules } from '@/lib/scoringResponseRules';
 import {
   SCORING_CANVAS_DEFAULT_ZOOM,
   SCORING_CANVAS_VERTICAL_EDGE_PADDING,
@@ -28,8 +29,6 @@ import Button from '@/components/ui/Button';
 import Tooltip from '@/components/ui/Tooltip';
 import { InformationCircleIcon, XMarkIcon, PencilSquareIcon, BarsArrowUpIcon } from '@heroicons/react/24/outline';
 
-// Determinants with NO form component (Pure C, T, V, Y, Cn)
-const FORMLESS_DETERMINANTS = ['C', 'T', 'V', 'Y', 'Cn'];
 const DRAG_START_THRESHOLD = 6;
 const RESPONSE_MEMO_MAX_BYTES = 1200;
 const utf8Encoder = new TextEncoder();
@@ -77,14 +76,6 @@ const TABLE_COPY = {
     responseByteLimitReached: 'O memo RESPONSE pode ter até 1200 bytes.',
   },
 } as const;
-
-// Special score level pairs (Level 1 / Level 2)
-const LEVEL_PAIRS: [string, string][] = [
-  ['DV1', 'DV2'],
-  ['DR1', 'DR2'],
-  ['INCOM1', 'INCOM2'],
-  ['FABCOM1', 'FABCOM2'],
-];
 
 interface InputTableProps {
   responses: RorschachResponse[];
@@ -513,66 +504,31 @@ export default function InputTable({
   const handleResponseChange = useCallback((index: number, response: RorschachResponse) => {
     const currentResponses = responsesRef.current;
     const prev = currentResponses[index];
-    const r = { ...response };
-    const activeDets = r.determinants.filter(d => d !== '');
+    const { response: normalized, appliedRules } = applyScoringResponseRules(response, prev);
 
-    // Rule 1: Reflection-Pair Mutual Exclusion
-    const hasReflection = activeDets.some(d => d === 'Fr' || d === 'rF');
-    if (hasReflection && r.pair === '(2)') {
-      r.pair = 'none';
-      if (prev.pair === '(2)' || (!prev.determinants.some(d => d === 'Fr' || d === 'rF'))) {
-        showToast({ type: 'info', title: t('toast.reflectionPair.title'), message: t('toast.reflectionPair.message') });
-      }
+    if (appliedRules.includes('reflection_pair')) {
+      showToast({ type: 'info', title: t('toast.reflectionPair.title'), message: t('toast.reflectionPair.message') });
     }
 
-    // Rule 2: DQ 'v' prohibits FQ '+'
-    if (r.dq === 'v' && r.fq === '+') {
-      r.fq = '';
-      if (prev.dq !== 'v' || prev.fq !== '+') {
-        showToast({ type: 'info', title: t('toast.dqVagueFq.title'), message: t('toast.dqVagueFq.message') });
-      }
+    if (appliedRules.includes('dq_vague_fq')) {
+      showToast({ type: 'info', title: t('toast.dqVagueFq.title'), message: t('toast.dqVagueFq.message') });
     }
 
     // Rule 3: DQ 'v' → Z must be empty
-    if (r.dq === 'v' && r.z !== '') {
-      r.z = '';
-      if (prev.dq !== 'v' || prev.z !== '') {
-        showToast({ type: 'info', title: t('toast.dqVagueZ.title'), message: t('toast.dqVagueZ.message') });
-      }
+    if (appliedRules.includes('dq_vague_z')) {
+      showToast({ type: 'info', title: t('toast.dqVagueZ.title'), message: t('toast.dqVagueZ.message') });
     }
 
-    // Rule 4: Pure Determinant FQ Handling
-    if (activeDets.length > 0 && activeDets.every(d => FORMLESS_DETERMINANTS.includes(d))) {
-      if (r.fq !== 'none') {
-        r.fq = 'none';
-        const prevActiveDets = prev.determinants.filter(d => d !== '');
-        const wasPrevAllFormless = prevActiveDets.length > 0 && prevActiveDets.every(d => FORMLESS_DETERMINANTS.includes(d));
-        if (!wasPrevAllFormless) {
-          showToast({ type: 'info', title: t('toast.pureDeterminantFq.title'), message: t('toast.pureDeterminantFq.message') });
-        }
-      }
+    if (appliedRules.includes('formless_fq')) {
+      showToast({ type: 'info', title: t('toast.pureDeterminantFq.title'), message: t('toast.pureDeterminantFq.message') });
     }
 
-    // Rule 5: Special Score Integrity
-    const activeScores = r.specialScores.filter(s => s !== '');
-    let levelConflict = false;
-    for (const [lv1, lv2] of LEVEL_PAIRS) {
-      const hasLv1 = activeScores.includes(lv1);
-      const hasLv2 = activeScores.includes(lv2);
-      if (hasLv1 && hasLv2) {
-        levelConflict = true;
-        const prevScores = prev.specialScores.filter(s => s !== '');
-        const prevHadLv2 = prevScores.includes(lv2);
-        const removeTarget = (!prevHadLv2 && hasLv2) ? lv1 : lv2;
-        r.specialScores = r.specialScores.map(s => s === removeTarget ? '' : s);
-      }
-    }
-    if (levelConflict) {
+    if (appliedRules.includes('special_score_level')) {
       showToast({ type: 'info', title: t('toast.specialScoreLevel.title'), message: t('toast.specialScoreLevel.message') });
     }
 
     const newResponses = [...currentResponses];
-    newResponses[index] = r;
+    newResponses[index] = normalized;
     responsesRef.current = newResponses;
     onChange(newResponses);
   }, [onChange, showToast, t]);

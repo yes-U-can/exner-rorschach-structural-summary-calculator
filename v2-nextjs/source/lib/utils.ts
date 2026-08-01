@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /**
- * Rorschach Calculator v2.2.7
+ * Rorschach Calculator v2.2.8
  * Utility Functions
  * 
  * Code.gs의 유틸리티 함수들을 TypeScript로 이전
@@ -55,4 +55,3 @@ export function dTable(
     ? Math.ceil((x - divisor) / divisor)
     : -Math.ceil((Math.abs(x) - divisor) / divisor);
 }
-

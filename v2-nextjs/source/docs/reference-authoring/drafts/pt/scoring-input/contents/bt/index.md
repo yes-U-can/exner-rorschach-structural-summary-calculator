@@ -34,14 +34,15 @@ O foco precisa recair no objeto vegetal, não no ambiente natural amplo.
 
 - Use para folhas, flores, pétalas, galhos, árvore ou outra forma vegetal reconhecível.
 - O código pede que a resposta organize a forma como planta ou parte vegetal.
-- Se o foco estiver em natureza geral ou ambiente natural, revise primeiro [`Na`](ref://scoring-input/contents/Na).
-- Se a resposta descrever uma cena paisagística ampla, revise primeiro [`Ls`](ref://scoring-input/contents/Ls).
+- Se `Na` for aplicável junto com `Bt`, registre apenas `Na` e não acrescente `Bt`.
+- Se não houver `Na`, mas `Bt` e [`Ls`](ref://scoring-input/contents/Ls) forem aplicáveis, registre somente o código que melhor represente o centro da resposta.
 
 ## Cuidados e diferenciação
 
 - `Bt` não vale para qualquer cenário natural.
 - `Bt` e [`Na`](ref://scoring-input/contents/Na) separam objeto vegetal de ambiente natural geral.
 - `Bt` e [`Ls`](ref://scoring-input/contents/Ls) separam elemento botânico específico de paisagem extensa.
+- `Bt`, `Ls` e `Na` compõem o Índice de Isolamento, por isso não são contados juntos dentro de uma mesma resposta.
 
 ## Referências cruzadas
 

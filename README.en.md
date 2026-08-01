@@ -23,7 +23,7 @@ Each patch note records what changed, the conditions that may be affected, wheth
 ## What is available
 
 - [Next.js] Live web app: [exner.yesucan.co.kr](https://exner.yesucan.co.kr)
-- [Next.js] Latest version 2 release: [v2-nextjs/releases/v2.2.7](./v2-nextjs/releases/v2.2.7/README.en.md)
+- [Next.js] Latest version 2 release: [v2-nextjs/releases/v2.2.8](./v2-nextjs/releases/v2.2.8/README.en.md)
 - [Next.js] v2.2.2 calculation accuracy recheck: [v2-nextjs/source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md](./v2-nextjs/source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md)
 - [Next.js] v2.2.2 Cn explanation and live GPT-5.5 checks in 5 languages: [v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md](./v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md)
 - [Next.js] v2.2.0 UI validation: [v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md](./v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md)
@@ -48,6 +48,12 @@ The v2.1.x series improved the AI assistants in stages: completing answers, find
 - **v2.1.10:** corrected remaining Japanese code recognition, broad interpretation questions, and new-database setup.
 
 The connected work from v2.1.8 through v2.1.10 is documented across the corresponding patch notes.
+
+## v2.2.8
+
+v2.2.8 is a bug-fix release that prevents the same Content code from being counted twice in one response and gives the desktop and mobile interfaces one shared set of response-cleanup rules. Sample data no longer overwrites an existing autosave, and final-edit saving and damaged-autosave validation are more robust.
+
+The Structural Summary formulas did not change. Existing protocols entered according to the rules do not need to be recalculated. Review the original material and recalculate only when a record contains a duplicate Content code in one response; desktop and mobile stored different cleanup results for Level 1 and Level 2 Special Scores; the mobile interface stored only formless determinants (`C`, `C'`, `T`, `V`, `Y`, or `Cn`) with an [FQ] value other than `none`; or an unsupported Z code or a Z score that does not belong to the card remains in the record. The S-CON documents and AI-answer rules now state all 12 criteria and the 8-criterion boundary in all five languages; no age field was added. OpenAI Codex and Claude Opus 5 each ran independent paid GPT-5.5 calls, and the record includes both one non-reproducing contract-check result and the follow-up checks. See the [v2.2.8 patch note](./v2-nextjs/releases/v2.2.8/README.en.md) for details.
 
 ## v2.2.7
 
@@ -101,6 +107,7 @@ The GPT-5.5 assistants were restricted from expanding beyond the Exner Comprehen
 
 ## [Next.js] Version 2 release history
 
+- **[2026-07-31] v2.2.8 (bug-fix release)** [Patch note](./v2-nextjs/releases/v2.2.8/README.en.md) [Source](./v2-nextjs/source/)
 - **[2026-07-23] v2.2.7 (bug-fix release)** [Patch note](./v2-nextjs/releases/v2.2.7/README.en.md) [Source](./v2-nextjs/source/)
 - **[2026-07-20] v2.2.6 (bug-fix release)** [Patch note](./v2-nextjs/releases/v2.2.6/README.en.md) [Source](./v2-nextjs/source/)
 - **[2026-07-19] v2.2.5 (bug-fix release)** [Patch note](./v2-nextjs/releases/v2.2.5/README.en.md) [Source](./v2-nextjs/source/)

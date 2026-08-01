@@ -389,6 +389,15 @@ try {
   const runtimeText = loadRuntimeText();
   const files = walkFiles(authoringDir);
   const findings = files.flatMap((filePath) => scanFile(filePath, runtimeText));
+  const topLevelDraftFiles = fs.readdirSync(draftsDir, { withFileTypes: true })
+    .filter((entry) => entry.isFile() && path.extname(entry.name).toLowerCase() === ".md")
+    .map((entry) => path.join(draftsDir, entry.name));
+  findings.push(...topLevelDraftFiles.map((filePath) => createMetadataFinding(
+    filePath,
+    "orphan_top_level_draft",
+    path.basename(filePath),
+    "Draft Markdown must live under a supported locale directory or under reference-authoring/notes.",
+  )));
   const draftFiles = walkFiles(draftsDir).filter((filePath) => {
     if (path.extname(filePath).toLowerCase() !== ".md") return false;
     const locale = path.relative(draftsDir, filePath).split(path.sep)[0];

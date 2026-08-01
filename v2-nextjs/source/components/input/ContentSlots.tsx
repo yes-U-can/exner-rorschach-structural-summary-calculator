@@ -2,6 +2,7 @@
 
 import SlotSelect from './SlotSelect';
 import { OPTIONS } from '@/lib/options';
+import { getDisabledContentCodes } from '@/lib/scoringInputValidation';
 
 interface ContentSlotsProps {
   values: string[];
@@ -25,6 +26,7 @@ export default function ContentSlots({ values, onChange, maxSlots = 6 }: Content
           value={values[index] || ''}
           onChange={(value) => handleChange(index, value)}
           options={OPTIONS.CONTENTS}
+          disabledOptions={getDisabledContentCodes(values, index)}
           className="w-12"
           gridCols={6}
           placeholder=""

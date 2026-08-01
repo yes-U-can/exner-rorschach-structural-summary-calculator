@@ -39,7 +39,7 @@ export const DEFAULT_AI_RELEASE_GATE_STEPS = [
   },
   {
     id: 'secret_scan',
-    label: 'Committed secret scan',
+    label: 'Release-candidate secret scan',
     command: 'npm',
     args: ['run', 'security:secrets'],
     required: true,
@@ -49,6 +49,13 @@ export const DEFAULT_AI_RELEASE_GATE_STEPS = [
     label: 'Dependency audit',
     command: 'npm',
     args: ['run', 'security:audit'],
+    required: true,
+  },
+  {
+    id: 'dependency_audit_dev',
+    label: 'Development dependency audit',
+    command: 'npm',
+    args: ['run', 'security:audit:dev'],
     required: true,
   },
 ];
@@ -127,17 +134,31 @@ function normalizeExitCode(result) {
 
 export async function runAiReleaseGate(options) {
   const root = resolve(options.root ?? process.cwd());
-  const steps = selectAiReleaseGateSteps(
-    options.steps ?? DEFAULT_AI_RELEASE_GATE_STEPS,
-    options.skip ?? new Set(),
-  );
+  const allSteps = options.steps ?? DEFAULT_AI_RELEASE_GATE_STEPS;
+  const skip = options.skip ?? new Set();
+  const knownStepIds = new Set(allSteps.map((step) => step.id));
+  const unknownSkippedStepIds = [...skip]
+    .filter((stepId) => !knownStepIds.has(stepId))
+    .sort();
+  const steps = selectAiReleaseGateSteps(allSteps, skip);
+  const skippedSteps = allSteps
+    .filter((step) => skip.has(step.id))
+    .map((step) => ({
+      id: step.id,
+      label: step.label,
+      required: Boolean(step.required),
+    }));
+  const requiredSkippedSteps = skippedSteps.filter((step) => step.required);
   const now = options.now ?? (() => new Date());
   const startedAt = now().toISOString();
   const version = options.version ?? getPackageVersion(root);
   const stepResults = [];
-  let status = options.dryRun ? 'planned' : 'pass';
+  const hasInvalidSkip = requiredSkippedSteps.length > 0 || unknownSkippedStepIds.length > 0;
+  let status = hasInvalidSkip
+    ? 'fail'
+    : options.dryRun ? 'planned' : 'pass';
 
-  for (const step of steps) {
+  for (const step of hasInvalidSkip ? [] : steps) {
     const startedMs = Date.now();
 
     if (options.dryRun) {
@@ -180,16 +201,26 @@ export async function runAiReleaseGate(options) {
     startedAt,
     finishedAt,
     steps: stepResults,
-    findings:
-      status === 'fail'
-        ? stepResults
-            .filter((step) => step.status === 'fail')
-            .map((step) => ({
-              type: 'required_step_failed',
-              stepId: step.id,
-              message: `Required AI release gate step failed: ${step.label}`,
-            }))
-        : [],
+    skippedSteps,
+    findings: [
+      ...requiredSkippedSteps.map((step) => ({
+        type: 'required_step_skipped',
+        stepId: step.id,
+        message: `Required AI release gate step was skipped: ${step.label}`,
+      })),
+      ...unknownSkippedStepIds.map((stepId) => ({
+        type: 'unknown_step_skipped',
+        stepId,
+        message: `Unknown AI release gate step cannot be skipped: ${stepId}`,
+      })),
+      ...stepResults
+        .filter((step) => step.status === 'fail')
+        .map((step) => ({
+          type: 'required_step_failed',
+          stepId: step.id,
+          message: `Required AI release gate step failed: ${step.label}`,
+        })),
+    ],
   };
 }
 
@@ -217,6 +248,17 @@ export function renderAiReleaseGateMarkdown(result, options = {}) {
     lines.push(
       `| ${step.label} | ${step.status} | ${step.required ? 'yes' : 'no'} | \`${step.commandText}\` |`,
     );
+  }
+
+  lines.push('', '## Skipped Steps', '');
+
+  if (result.skippedSteps.length === 0) {
+    lines.push('No steps skipped.');
+  } else {
+    lines.push('| Step | Required |', '| --- | --- |');
+    for (const step of result.skippedSteps) {
+      lines.push(`| ${step.label} | ${step.required ? 'yes' : 'no'} |`);
+    }
   }
 
   lines.push('', '## Findings', '');

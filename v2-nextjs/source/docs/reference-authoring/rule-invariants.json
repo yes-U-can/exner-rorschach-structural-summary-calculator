@@ -1,5 +1,5 @@
 {
-  "version": "2026-07-23-input-boundary-v1",
+  "version": "2026-08-01-multiselect-boundaries-v2",
   "description": "Locale-independent clinical-rule invariants. Every rule statement listed here must be asserted by all five locale drafts of the referenced routes, so a rule fix can never land in a subset of locales again. Patterns are JavaScript regular expressions matched against the raw draft markdown.",
   "locales": ["ko", "en", "ja", "es", "pt"],
   "invariants": [
@@ -73,6 +73,177 @@
         "ja": ["未完了の入力"],
         "es": ["codificación incompleta"],
         "pt": ["codificação incompleta"]
+      }
+    },
+    {
+      "id": "content-code-once-per-response",
+      "description": "Each distinct content code is recorded at most once within one response.",
+      "paths": ["scoring-input/contents/index.md"],
+      "mustMatch": {
+        "ko": ["같은 내용 부호는 한 번만 기록한다"],
+        "en": ["Each content code is recorded only once within a response"],
+        "ja": ["同じ内容コードを一度だけ記録します"],
+        "es": ["Cada código de contenido se registra una sola vez dentro de una respuesta"],
+        "pt": ["Cada código de conteúdo é registrado apenas uma vez em cada resposta"]
+      }
+    },
+    {
+      "id": "contents-na-bt-ls-exclusive",
+      "description": "Na takes priority over Bt and Ls. Without Na, only one of Bt or Ls is recorded within a response.",
+      "paths": [
+        "scoring-input/contents/index.md",
+        "scoring-input/contents/na/index.md",
+        "scoring-input/contents/bt/index.md",
+        "scoring-input/contents/ls/index.md"
+      ],
+      "mustMatch": {
+        "ko": [
+          "`Na`.*(?:`Bt`|`Ls`).*(?:우선|`Na`만)",
+          "`Na`.*없.*`Bt`.*`Ls`.*하나만"
+        ],
+        "en": [
+          "`Na`.*(?:`Bt`|`Ls`).*(?:priority|record `Na` only|code `Na` only)",
+          "If `Na` is absent.*`Bt`.*`Ls`.*(?:one|only)"
+        ],
+        "ja": [
+          "`Na`.*(?:`Bt`|`Ls`).*(?:優先|`Na`だけ)",
+          "`Na`がなく.*`Bt`.*`Ls`.*一方だけ"
+        ],
+        "es": [
+          "`Na`.*(?:`Bt`|`Ls`).*(?:prioridad|solo `Na`)",
+          "(?:`Na` no está presente|no hay `Na`).*`Bt`.*`Ls`.*(?:solo|únicamente)"
+        ],
+        "pt": [
+          "`Na`.*(?:`Bt`|`Ls`).*(?:prioridade|apenas `Na`)",
+          "não houver `Na`.*`Bt`.*`Ls`.*(?:somente|apenas)"
+        ]
+      }
+    },
+    {
+      "id": "contents-xy-excludes-an",
+      "description": "When Xy is recorded for a response, An is not added as a secondary content code.",
+      "paths": [
+        "scoring-input/contents/an/index.md",
+        "scoring-input/contents/xy/index.md"
+      ],
+      "mustMatch": {
+        "ko": ["`Xy`.*`An`.*(?:함께 기록하지|더하지|추가하지|대신)"],
+        "en": ["`Xy`.*(?:do not add|instead of).*`An`"],
+        "ja": ["`Xy`.*`An`.*(?:併記しません|加えません|ではなく)"],
+        "es": ["`Xy`.*(?:no se añade|en lugar de).*`An`"],
+        "pt": ["`Xy`.*`An`.*(?:não (?:é )?acrescentado|não acrescente|exclui)"]
+      }
+    },
+    {
+      "id": "determinant-one-form-emphasis-per-family",
+      "description": "Only one form-emphasis category is recorded for the same determinant in one response. Distinct shading kinds may coexist when supported by distinct wording.",
+      "paths": ["scoring-input/determinants/index.md"],
+      "allLocalesMustMatch": [
+        "`FC/CF/C`",
+        "`FC'/C'F/C'`",
+        "`FT/TF/T`",
+        "`FV/VF/V`",
+        "`FY/YF/Y`",
+        "`Fr/rF`"
+      ],
+      "mustMatch": {
+        "ko": ["같은 결정인의 형태 관여 수준", "형태 관여가 가장 적은"],
+        "en": ["Do not record more than one form-emphasis category", "least form emphasis"],
+        "ja": ["同じ決定因について形態の関与度", "形態の関与が最も少ない"],
+        "es": ["No registre más de una categoría de predominio formal", "menor predominio formal"],
+        "pt": ["Não registre mais de uma categoria de predomínio formal", "menor predomínio formal"]
+      }
+    },
+    {
+      "id": "pure-c-prime-uses-fqnone",
+      "description": "Pure achromatic C-prime has no form and therefore uses the explicit FQnone category.",
+      "paths": ["scoring-input/determinants/c-prime/index.md"],
+      "allLocalesMustMatch": ["`C'`", "`FQnone`"]
+    },
+    {
+      "id": "special-score-level-pairs-are-exclusive",
+      "description": "DV, DR, INCOM, and FABCOM Level 1/2 pairs are alternatives within one response. When the level is uncertain, Level 1 is used conservatively.",
+      "paths": ["scoring-input/special-score/index.md"],
+      "allLocalesMustMatch": [
+        "`DV1/DV2`",
+        "`DR1/DR2`",
+        "`INCOM1/INCOM2`",
+        "`FABCOM1/FABCOM2`"
+      ],
+      "mustMatch": {
+        "ko": ["각 쌍 중 하나만", "모호하면.*Level 1"],
+        "en": ["only one level from each pair", "uncertain.*Level 1"],
+        "ja": ["各組のどちらか一方だけ", "曖昧な場合.*Level 1"],
+        "es": ["un solo nivel de cada par", "dudoso.*Nivel 1"],
+        "pt": ["apenas um nível de cada par", "dúvida.*Nível 1"]
+      }
+    },
+    {
+      "id": "critical-special-score-overlap-uses-higher-weight",
+      "description": "Different critical Special Scores may coexist only for discrete wording. Overlapping wording receives only the higher WSum6-weighted score.",
+      "paths": ["scoring-input/special-score/index.md"],
+      "allLocalesMustMatch": ["`WSum6`"],
+      "mustMatch": {
+        "ko": ["독립된 표현", "가중치가 더 높은 하나만"],
+        "en": ["discrete wording", "higher `WSum6` weight"],
+        "ja": ["独立した表現", "重みが高い一つだけ"],
+        "es": ["expresión independiente", "mayor peso en `WSum6`"],
+        "pt": ["formulação independente", "maior peso no `WSum6`"]
+      }
+    },
+    {
+      "id": "contam-excludes-other-critical-special-scores",
+      "description": "A response scored CONTAM does not also receive DV, DR, INCOM, FABCOM, or ALOG.",
+      "paths": ["scoring-input/special-score/contam/index.md"],
+      "allLocalesMustMatch": ["`CONTAM`", "`DV`", "`DR`", "`INCOM`", "`FABCOM`", "`ALOG`"],
+      "mustMatch": {
+        "ko": ["함께 기록하지 않는다"],
+        "en": ["do not also record"],
+        "ja": ["併記しません"],
+        "es": ["no se añaden"],
+        "pt": ["não se registram"]
+      }
+    },
+    {
+      "id": "cp-excludes-chromatic-color-determinants",
+      "description": "Color Projection CP is not combined with FC, CF, or C for the same achromatic color projection.",
+      "paths": ["scoring-input/special-score/cp/index.md"],
+      "allLocalesMustMatch": ["`CP`", "`FC`", "`CF`", "`C`"],
+      "mustMatch": {
+        "ko": ["함께 주지 않는다"],
+        "en": ["should not be mixed with"],
+        "ja": ["混ぜて扱いません"],
+        "es": ["no se combina con"],
+        "pt": ["não deve ser misturado com"]
+      }
+    },
+    {
+      "id": "scon-twelve-criteria-threshold",
+      "description": "S-CON is positive when at least 8 of its 12 criteria are met. Every locale must state the complete calculation boundary.",
+      "paths": ["result-interpretation/special-indices/scon/index.md"],
+      "allLocalesMustMatch": [
+        "`FV\\+VF\\+V\\+FD > 2`",
+        "(?:Color-Shading blends?|blends? Color-Shading) `> 0`",
+        "`3r\\+\\(2\\)/R < \\.31`",
+        "`> \\.44`",
+        "`MOR > 3`",
+        "`Zd < -3\\.5`",
+        "`> \\+3\\.5`",
+        "`es > EA`",
+        "`CF\\+C > FC`",
+        "`X\\+% < \\.70`",
+        "`S > 3`",
+        "`P < 3`",
+        "`> 8`",
+        "`Pure H < 2`",
+        "`R < 17`"
+      ],
+      "mustMatch": {
+        "ko": ["12개 기준 중 8개 이상"],
+        "en": ["at least 8 of these 12 criteria"],
+        "ja": ["12基準のうち8つ以上"],
+        "es": ["al menos 8 de estos 12 criterios"],
+        "pt": ["pelo menos 8 destes 12 critérios"]
       }
     }
   ]

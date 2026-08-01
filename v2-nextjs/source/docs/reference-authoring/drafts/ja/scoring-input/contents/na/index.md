@@ -35,14 +35,15 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-contents-ls-na-sc-
 
 ## 採点・適用条件
 
-- 空、海、水、雪、雨、遠景の山、広い植生など、自然環境全体として見ているときに使います。
+- 太陽、月、惑星、空、水、海、湖、川、氷、雪、雨、霧、霞、虹、嵐、竜巻、夜、雨滴などに使います。
 - 反応の中心が自然の場や自然現象そのものである必要があります。
-- [`Bt`](ref://scoring-input/contents/Bt)や[`Ls`](ref://scoring-input/contents/Ls)と迷う場合でも、全体として自然環境を指しているなら`Na`が優先されることがあります。
-- 雲を孤立した物として見ているなら[`Cl`](ref://scoring-input/contents/Cl)を再検討します。
+- `Na`が[`Bt`](ref://scoring-input/contents/Bt)または[`Ls`](ref://scoring-input/contents/Ls)とともに該当する場合は、`Na`だけを記録し、`Bt`や`Ls`を併記しません。
+- `Na`がなく、`Bt`と`Ls`の両方が該当する場合は、反応の中心をよりよく表す一方だけを記録します。
+- 雲は[`Cl`](ref://scoring-input/contents/Cl)を検討し、霧や霞は`Na`として扱います。
 
 ## 注意点・鑑別
 
-- `Na`は[`Bt`](ref://scoring-input/contents/Bt)や[`Ls`](ref://scoring-input/contents/Ls)より広い自然環境に重心があります。
+- `Na`は[`Bt`](ref://scoring-input/contents/Bt)や[`Ls`](ref://scoring-input/contents/Ls)より優先し、この三つを同じ反応に併記しません。
 - 地図なら[`Ge`](ref://scoring-input/contents/Ge)であり、`Na`にはしません。
 - 単なる植物の一部や単独物体だけでは、`Na`にはなりません。
 

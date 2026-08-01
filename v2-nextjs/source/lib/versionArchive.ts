@@ -21,6 +21,18 @@ const v2SourceUrl = `${exhibitionRepoUrl}/tree/main/v2-nextjs/source`;
 
 export const v2NextVersions: VersionArchiveEntry[] = [
   {
+    version: 'v2.2.8',
+    title: 'Version 2.2.8',
+    series: 'v2-nextjs',
+    publishedAt: '2026-07-31',
+    releaseKind: 'bugfix',
+    releaseLabel: '버그 패치',
+    summary:
+      '구조요약 계산식은 유지하면서, 한 반응 안의 중복 내용 부호와 잘못된 Z 점수를 계산 전에 차단하고 데스크톱·모바일의 부호화 규칙을 같은 기준으로 통합했습니다. 자동저장 복구, AI 세션 요청 제한과 대화 맥락 방어, 피드백 시간대, 공개 자료 생성·배포 검증도 보강했습니다.',
+    sourceUrl: v2SourceUrl,
+    releaseUrl: v2ReleaseUrl('v2.2.8'),
+  },
+  {
     version: 'v2.2.7',
     title: 'Version 2.2.7',
     series: 'v2-nextjs',

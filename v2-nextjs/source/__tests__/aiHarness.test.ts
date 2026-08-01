@@ -19,12 +19,12 @@ describe('AI harness profiles', () => {
 
     expect(interpretation).toMatchObject({
       harnessVersion: AI_HARNESS_VERSION,
-      promptProfileId: 'sicp-default-v8',
+      promptProfileId: 'sicp-default-v9',
       responsePolicyId: 'interpretation-balanced-continuity-v5',
     });
     expect(codingAssist).toMatchObject({
       harnessVersion: AI_HARNESS_VERSION,
-      promptProfileId: 'sicp-coding-assist-v3',
+      promptProfileId: 'sicp-coding-assist-v4',
       responsePolicyId: 'coding-assist-balanced-continuity-v5',
     });
   });
@@ -50,7 +50,7 @@ describe('AI harness profiles', () => {
     applyAiHarnessHeaders(headers, profile);
 
     expect(headers.get('X-Chat-AI-Harness-Version')).toBe(AI_HARNESS_VERSION);
-    expect(headers.get('X-Chat-Prompt-Profile-Id')).toBe('sicp-default-v8');
+    expect(headers.get('X-Chat-Prompt-Profile-Id')).toBe('sicp-default-v9');
     expect(headers.get('X-Chat-Response-Policy-Id')).toBe('interpretation-balanced-continuity-v5');
   });
 
@@ -129,7 +129,7 @@ describe('OpenAI response summaries', () => {
 
     expect(metadata).toEqual({
       aiHarnessVersion: AI_HARNESS_VERSION,
-      promptProfileId: 'sicp-coding-assist-v3',
+      promptProfileId: 'sicp-coding-assist-v4',
       responsePolicyId: 'coding-assist-balanced-continuity-v5',
       provider: 'openai',
       modelId: 'gpt-5.5',

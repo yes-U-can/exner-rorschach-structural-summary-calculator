@@ -37,11 +37,13 @@ El foco debe recaer en la escena o el entorno, no solo en una planta u objeto ai
 - Requiere que el sujeto vea un escenario o una extensión espacial, no solo un detalle botánico.
 - Si la respuesta describe un mapa o una representación cartográfica, primero se considera [`Ge`](ref://scoring-input/contents/Ge).
 - Si la respuesta apunta a naturaleza general o ambiente natural más que a un paisaje delimitado, primero se considera [`Na`](ref://scoring-input/contents/Na).
+- Si `Na` corresponde junto con `Ls`, se registra solo `Na` y no se añade `Ls`.
+- Si no hay `Na` pero corresponden `Bt` y `Ls`, se registra únicamente el código que mejor represente el centro de la respuesta.
 
 ## Precauciones y distinciones
 
 - `Ls` no es lo mismo que [`Ge`](ref://scoring-input/contents/Ge), que se reserva para mapa o referencia cartográfica.
-- Si aparece un entorno natural amplio con componentes botánicos, `Na` puede tener prioridad sobre `Ls`.
+- Siempre que corresponda `Na`, tiene prioridad sobre `Ls`.
 - Si el foco recae en una planta, rama o forma botánica puntual, primero se considera [`Bt`](ref://scoring-input/contents/Bt).
 
 ## Referencias cruzadas

@@ -39,6 +39,10 @@ function printHumanReport(result) {
     console.log(`- ${step.status.toUpperCase()} ${step.id}:${exitCode} ${step.commandText}`);
   }
 
+  for (const step of result.skippedSteps) {
+    console.log(`- SKIPPED ${step.id}: required=${step.required ? 'yes' : 'no'}`);
+  }
+
   if (result.findings.length) {
     console.log('\nFindings:');
     for (const finding of result.findings) {

@@ -12,6 +12,7 @@ describe('public mirror privacy boundary', () => {
     expect(script).toContain('docs\\admin');
     expect(script).toContain('docs\\adr');
     expect(script).toContain('docs\\chat');
+    expect(script).toContain('docs\\ai-evals\\private-runs');
     expect(script).toContain('prisma\\migrations');
     expect(script).toContain('.vercel');
     expect(script).toContain('.npm-cache');
@@ -30,6 +31,9 @@ describe('public mirror privacy boundary', () => {
     expect(script).toContain('Remove-PublicMirrorPrivateArtifacts');
     expect(script).toContain('Remove-PrivateGitMetadataProperties');
     expect(script).toContain('Assert-NoPublicGitMetadata');
+    expect(script).toContain('-Recurse -Force');
+    expect(script).toContain('$sanitizedLines = @(foreach');
+    expect(script).toContain('ConvertTo-Json -InputObject @($record)');
     expect(script).toContain('"gitCommit", "baseCommit", "commitSha", "sourceCommit", "commit", "gitDirty"');
     expect(script).toContain('Refusing to remove path outside publish root');
     expect(script).toContain('Refusing to publish outside publish root');

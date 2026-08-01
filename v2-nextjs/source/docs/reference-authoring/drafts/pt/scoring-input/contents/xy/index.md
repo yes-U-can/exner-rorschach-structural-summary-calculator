@@ -36,13 +36,14 @@ O foco principal é a leitura radiográfica, não apenas anatomia comum.
 
 - Use quando a pessoa fala em raio-x, radiografia, chapa, ossos vistos por dentro ou imagem interna semelhante.
 - O código pede organização como visão radiográfica, não apenas nomeação de parte corporal.
-- Se a resposta e anatômica sem referência a raio-x ou transparência interna, revise primeiro [`An`](ref://scoring-input/contents/An).
+- Se a resposta é anatômica sem referência a raio X ou imagem radiográfica, revise primeiro [`An`](ref://scoring-input/contents/An).
+- Quando `Xy` é registrado, `An` não é acrescentado na mesma resposta.
 - O agrupamento posterior com [`An+Xy`](ref://result-interpretation/lower-section/selfPerception/An_Xy) pertence a interpretação, não a decisão inicial de codificação.
 
 ## Cuidados e diferenciação
 
 - `Xy` é diferente de [`An`](ref://scoring-input/contents/An): um marca radiografia, o outro anatomia.
-- A resposta pode receber ambos quando a pessoa descreve ao mesmo tempo estrutura anatômica e visual radiográfico.
+- `Xy` exclui `An` como código acompanhante na mesma resposta.
 - O fato de depois existir a combinação [`An+Xy`](ref://result-interpretation/lower-section/selfPerception/An_Xy) não dispensa codificar corretamente o conteúdo base.
 
 ## Referências cruzadas

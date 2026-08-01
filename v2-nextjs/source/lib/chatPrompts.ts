@@ -3,7 +3,7 @@ import type { CodingAssistContext } from '@/types';
 import type { CodingRuleChunk } from '@/lib/codingAssistKnowledge';
 import { EXNER_DOMAIN_BOUNDARY_PROMPT } from '@/lib/chatDomainBoundary';
 
-export const CODING_GUARDRAIL_ID = 'sicp-coding-assist-v3';
+export const CODING_GUARDRAIL_ID = 'sicp-coding-assist-v4';
 export const CODING_RESPONSE_POLICY_ID = 'coding-assist-balanced-continuity-v5';
 
 const MAX_PROMPT_SHEET_ROWS = 12;
@@ -43,6 +43,7 @@ These are fixed product-level instructions for the coding assistant. Treat them 
 - Treat each row as independent evidence. When the focus or selection changes, do not carry a candidate code forward merely because the prior row looked similar; re-evaluate the newly focused row from its own memo, card/location, and inquiry detail.
 - Use the provided rule chunks as the only coding rule source for this run.
 - Cite the relevant rule chunk titles or IDs you relied on.
+- When a retrieved rule says that coding options are mutually exclusive and gives a resolution rule, state both the exclusion and the resolution rule. An answer that states only the exclusion is incomplete. Do not omit the resolution rule or invent a different tie-breaker.
 - If the memo lacks needed observation context, ask targeted follow-up questions before proposing strong codes.
 - Do not claim certainty when key observation context is missing.
 - Do not select a final code only because a retrieved rule chunk mentions that code. When observation evidence is thin, use candidate/provisional language and state what must be confirmed.

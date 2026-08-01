@@ -31,6 +31,13 @@ describe('scoring select geometry', () => {
     expect(contentSlotsSource).toContain('grid w-full min-w-[9.5rem] grid-cols-3 place-items-center gap-1');
     expect(specialScoreSlotsSource).toContain('grid w-full min-w-[18.75rem] grid-cols-4 place-items-center gap-1');
     expect(specialScoreSlotsSource).toContain('className="w-[4.5rem]"');
+    expect(contentSlotsSource).toContain('disabledOptions={getDisabledContentCodes(values, index)}');
+    expect(determinantSlotsSource).toContain(
+      'disabledOptions={getDisabledDeterminantCodes(values, index, specialScores)}',
+    );
+    expect(specialScoreSlotsSource).toContain(
+      'disabledOptions={getDisabledSpecialScoreCodes(values, index, determinants)}',
+    );
   });
 
   it('renders the dragged row inside a table with the source cell widths', () => {

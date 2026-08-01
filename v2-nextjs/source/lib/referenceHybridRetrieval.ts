@@ -83,6 +83,12 @@ const BROAD_INTERPRETATION_ANCHOR_BONUS = 0.02;
 const EXPLICIT_CODING_INTENT_BONUS = 0.04;
 const EXPLICIT_CN_BOUNDARY_INTENT_BONUS = 0.05;
 const EXPLICIT_NATURE_CONTENT_BOUNDARY_BONUS = 0.05;
+const EXPLICIT_XY_AN_CONTENT_BOUNDARY_BONUS = 0.05;
+const EXPLICIT_SAME_DETERMINANT_BOUNDARY_BONUS = 0.06;
+const EXPLICIT_CONTAM_EXCLUSION_BOUNDARY_BONUS = 0.06;
+const EXPLICIT_C_PRIME_FQ_BOUNDARY_BONUS = 0.06;
+const EXPLICIT_SPECIAL_SCORE_LEVEL_PAIR_BONUS = 0.06;
+const EXPLICIT_CRITICAL_SCORE_OVERLAP_BONUS = 0.06;
 
 const POPULAR_QUERY_PATTERNS = [
   /\bpopular(?:\s+response)?\b/iu,
@@ -118,6 +124,170 @@ function isExplicitCnCalculationBoundaryQuery(query: string): boolean {
 
 function isExplicitNatureContentBoundaryQuery(query: string): boolean {
   return ['na', 'bt', 'ls'].every((code) => hasAsciiCodeToken(query, code));
+}
+
+function isExplicitXyAnContentBoundaryQuery(query: string): boolean {
+  return ['xy', 'an'].every((code) => hasAsciiCodeToken(query, code));
+}
+
+const SAME_DETERMINANT_FORM_EMPHASIS_GROUPS = [
+  ['fc', 'cf', 'c'],
+  ["fc'", "c'f", "c'"],
+  ['ft', 'tf', 't'],
+  ['fv', 'vf', 'v'],
+  ['fy', 'yf', 'y'],
+  ['fr', 'rf'],
+] as const;
+
+function isExplicitSameDeterminantFormEmphasisQuery(query: string): boolean {
+  if (isExplicitCnCalculationBoundaryQuery(query)) return false;
+  return SAME_DETERMINANT_FORM_EMPHASIS_GROUPS.some(
+    (group) => group.filter((code) => hasAsciiCodeToken(query, code)).length >= 2,
+  );
+}
+
+const CONTAM_EXCLUDED_QUERY_CODES = [
+  'dv',
+  'dv1',
+  'dv2',
+  'dr',
+  'dr1',
+  'dr2',
+  'incom',
+  'incom1',
+  'incom2',
+  'fabcom',
+  'fabcom1',
+  'fabcom2',
+  'alog',
+] as const;
+
+function isExplicitContamExclusionQuery(query: string): boolean {
+  return (
+    hasAsciiCodeToken(query, 'contam') &&
+    CONTAM_EXCLUDED_QUERY_CODES.some((code) => hasAsciiCodeToken(query, code))
+  );
+}
+
+const SPECIAL_SCORE_LEVEL_PAIRS = [
+  ['dv1', 'dv2'],
+  ['dr1', 'dr2'],
+  ['incom1', 'incom2'],
+  ['fabcom1', 'fabcom2'],
+] as const;
+
+function isExplicitSpecialScoreLevelPairQuery(query: string): boolean {
+  return SPECIAL_SCORE_LEVEL_PAIRS.some((pair) =>
+    pair.every((code) => hasAsciiCodeToken(query, code)),
+  );
+}
+
+const CRITICAL_SPECIAL_SCORE_QUERY_CODES = [
+  'dv1',
+  'dv2',
+  'dr1',
+  'dr2',
+  'incom1',
+  'incom2',
+  'fabcom1',
+  'fabcom2',
+  'alog',
+] as const;
+
+const CRITICAL_SCORE_OVERLAP_QUERY_PATTERNS = [
+  /same\s+(?:wording|expression)/iu,
+  /overlap(?:ped|ping|s)?/iu,
+  /같은\s*(?:표현|문구)|겹치/u,
+  /同じ(?:表現|文言)|重な/u,
+  /misma\s+expresi[oó]n|superpuest/iu,
+  /mesma\s+(?:formula[cç][aã]o|express[aã]o)|sobrepost/iu,
+];
+
+function isExplicitCriticalSpecialScoreOverlapQuery(query: string): boolean {
+  const mentionedCodes = CRITICAL_SPECIAL_SCORE_QUERY_CODES.filter((code) =>
+    hasAsciiCodeToken(query, code),
+  );
+
+  return (
+    mentionedCodes.length >= 2 &&
+    CRITICAL_SCORE_OVERLAP_QUERY_PATTERNS.some((pattern) => pattern.test(query))
+  );
+}
+
+function isExplicitCPrimeFormQualityQuery(query: string): boolean {
+  if (!hasAsciiCodeToken(query, "c'")) return false;
+  return [
+    /\bfq(?:none)?\b/iu,
+    /형태질/u,
+    /形態質/u,
+    /calidad\s+formal/iu,
+    /qualidade\s+formal/iu,
+    /form\s+quality/iu,
+  ].some((pattern) => pattern.test(query));
+}
+
+const NATURE_CONTENT_RULE_TEXT_PATTERNS: Record<Language, RegExp[]> = {
+  ko: [/Na만/u, /Na.*없/u, /(?:하나만|둘 중 하나)/u],
+  en: [/Na only/iu, /Na is absent/iu, /(?:only one|one that)/iu],
+  ja: [/Naだけ/u, /Naがなく/u, /一方だけ/u],
+  es: [/solo Na/iu, /Na no está presente/iu, /(?:solo|únicamente).*(?:código|uno)/iu],
+  pt: [/apenas Na/iu, /não houver Na/iu, /(?:somente|apenas).*(?:código|um)/iu],
+};
+
+const XY_AN_CONTENT_RULE_TEXT_PATTERNS: Record<Language, RegExp[]> = {
+  ko: [/Xy/u, /An/u, /(?:더하지|추가하지|함께.*않)/u],
+  en: [/Xy/iu, /An/iu, /(?:do not add|excludes)/iu],
+  ja: [/Xy/u, /An/u, /(?:併記しません|加えません)/u],
+  es: [/Xy/iu, /An/iu, /(?:no se añade|excluye)/iu],
+  pt: [/Xy/iu, /An/iu, /(?:não é acrescentado|exclui)/iu],
+};
+
+const SAME_DETERMINANT_RULE_TEXT_PATTERNS: Record<Language, RegExp[]> = {
+  ko: [/FC\/CF\/C/u, /(?:하나만|둘 이상.*않)/u, /형태 관여가 가장 적은/u],
+  en: [/FC\/CF\/C/iu, /(?:only one|do not record more than one)/iu, /least form emphasis/iu],
+  ja: [/FC\/CF\/C/u, /(?:一つだけ|複数記録しません)/u, /形態の関与が最も少ない/u],
+  es: [/FC\/CF\/C/iu, /(?:un solo código|más de una)/iu, /menor predominio formal/iu],
+  pt: [/FC\/CF\/C/iu, /(?:apenas um código|mais de uma)/iu, /menor predomínio formal/iu],
+};
+
+const CONTAM_EXCLUSION_RULE_TEXT_PATTERNS: Record<Language, RegExp[]> = {
+  ko: [/CONTAM/u, /DV/u, /함께 기록하지/u],
+  en: [/CONTAM/iu, /DV/iu, /do not also record/iu],
+  ja: [/CONTAM/u, /DV/u, /併記しません/u],
+  es: [/CONTAM/iu, /DV/iu, /no se añaden/iu],
+  pt: [/CONTAM/iu, /DV/iu, /não se registram/iu],
+};
+
+const C_PRIME_FQ_RULE_TEXT_PATTERNS: Record<Language, RegExp[]> = {
+  ko: [/C'/u, /FQnone/u],
+  en: [/C'/iu, /FQnone/iu],
+  ja: [/C'/u, /FQnone/u],
+  es: [/C'/iu, /FQnone/iu],
+  pt: [/C'/iu, /FQnone/iu],
+};
+
+const SPECIAL_SCORE_LEVEL_PAIR_RULE_TEXT_PATTERNS: Record<Language, RegExp[]> = {
+  ko: [/DV1\/DV2/u, /각 쌍 중 하나만/u, /Level 1/u],
+  en: [/DV1\/DV2/iu, /only one level/iu, /Level 1/iu],
+  ja: [/DV1\/DV2/u, /どちらか一方だけ/u, /Level 1/u],
+  es: [/DV1\/DV2/iu, /un solo nivel/iu, /Nivel 1/iu],
+  pt: [/DV1\/DV2/iu, /apenas um nível/iu, /Nível 1/iu],
+};
+
+const CRITICAL_SCORE_OVERLAP_RULE_TEXT_PATTERNS: Record<Language, RegExp[]> = {
+  ko: [/독립된 표현/u, /같은 표현/u, /WSum6/u],
+  en: [/discrete wording/iu, /same wording/iu, /WSum6/iu],
+  ja: [/独立した表現/u, /同じ表現/u, /WSum6/u],
+  es: [/expresión independiente/iu, /misma expresión/iu, /WSum6/iu],
+  pt: [/formulação independente/iu, /mesma formulação/iu, /WSum6/iu],
+};
+
+function matchesLocaleRuleText(
+  text: string,
+  lang: Language,
+  patternsByLocale: Record<Language, RegExp[]>,
+): boolean {
+  return patternsByLocale[lang].every((pattern) => pattern.test(text));
 }
 
 type MergeAccumulator<TItem> = {
@@ -275,6 +445,36 @@ function scoreCodingRerankBonus(query: string, item: CodingRuleChunk): number {
     isExplicitNatureContentBoundaryQuery(query)
       ? EXPLICIT_NATURE_CONTENT_BOUNDARY_BONUS
       : 0;
+  const xyAnContentBoundaryBonus =
+    item.canonicalRoute?.toLowerCase() === 'scoring-input/contents/xy' &&
+    isExplicitXyAnContentBoundaryQuery(query)
+      ? EXPLICIT_XY_AN_CONTENT_BOUNDARY_BONUS
+      : 0;
+  const sameDeterminantBoundaryBonus =
+    item.canonicalRoute?.toLowerCase() === 'scoring-input/determinants' &&
+    isExplicitSameDeterminantFormEmphasisQuery(query)
+      ? EXPLICIT_SAME_DETERMINANT_BOUNDARY_BONUS
+      : 0;
+  const contamExclusionBoundaryBonus =
+    item.canonicalRoute?.toLowerCase() === 'scoring-input/special-score/contam' &&
+    isExplicitContamExclusionQuery(query)
+      ? EXPLICIT_CONTAM_EXCLUSION_BOUNDARY_BONUS
+      : 0;
+  const cPrimeFqBoundaryBonus =
+    item.canonicalRoute?.toLowerCase() === "scoring-input/determinants/c'" &&
+    isExplicitCPrimeFormQualityQuery(query)
+      ? EXPLICIT_C_PRIME_FQ_BOUNDARY_BONUS
+      : 0;
+  const specialScoreLevelPairBonus =
+    item.canonicalRoute?.toLowerCase() === 'scoring-input/special-score' &&
+    isExplicitSpecialScoreLevelPairQuery(query)
+      ? EXPLICIT_SPECIAL_SCORE_LEVEL_PAIR_BONUS
+      : 0;
+  const criticalScoreOverlapBonus =
+    item.canonicalRoute?.toLowerCase() === 'scoring-input/special-score' &&
+    isExplicitCriticalSpecialScoreOverlapQuery(query)
+      ? EXPLICIT_CRITICAL_SCORE_OVERLAP_BONUS
+      : 0;
 
   return (
     titleBonus +
@@ -282,7 +482,13 @@ function scoreCodingRerankBonus(query: string, item: CodingRuleChunk): number {
     routeTagBonus +
     intentBonus +
     cnBoundaryBonus +
-    natureContentBoundaryBonus
+    natureContentBoundaryBonus +
+    xyAnContentBoundaryBonus +
+    sameDeterminantBoundaryBonus +
+    contamExclusionBoundaryBonus +
+    cPrimeFqBoundaryBonus +
+    specialScoreLevelPairBonus +
+    criticalScoreOverlapBonus
   );
 }
 
@@ -634,15 +840,86 @@ export async function getHybridCodingRuleChunks(params: {
     ? codingChunks.filter(
         (item) =>
           item.canonicalRoute?.toLowerCase() === 'scoring-input/contents/na' &&
-          /(^|[^a-z0-9_])na(?=$|[^a-z0-9_])/iu.test(item.text) &&
-          /(^|[^a-z0-9_])bt(?=$|[^a-z0-9_])/iu.test(item.text) &&
-          /(^|[^a-z0-9_])ls(?=$|[^a-z0-9_])/iu.test(item.text),
+          matchesLocaleRuleText(
+            item.text,
+            params.lang,
+            NATURE_CONTENT_RULE_TEXT_PATTERNS,
+          ),
+      )
+    : [];
+  const explicitXyAnContentBoundaryItems = isExplicitXyAnContentBoundaryQuery(query)
+    ? codingChunks.filter(
+        (item) =>
+          item.canonicalRoute?.toLowerCase() === 'scoring-input/contents/xy' &&
+          matchesLocaleRuleText(
+            item.text,
+            params.lang,
+            XY_AN_CONTENT_RULE_TEXT_PATTERNS,
+          ),
+      )
+    : [];
+  const explicitSameDeterminantBoundaryItems =
+    isExplicitSameDeterminantFormEmphasisQuery(query)
+      ? codingChunks.filter(
+          (item) =>
+            item.canonicalRoute?.toLowerCase() === 'scoring-input/determinants' &&
+            matchesLocaleRuleText(
+              item.text,
+              params.lang,
+              SAME_DETERMINANT_RULE_TEXT_PATTERNS,
+            ),
+        )
+      : [];
+  const explicitContamExclusionBoundaryItems = isExplicitContamExclusionQuery(query)
+    ? codingChunks.filter(
+        (item) =>
+          item.canonicalRoute?.toLowerCase() === 'scoring-input/special-score/contam' &&
+          matchesLocaleRuleText(
+            item.text,
+            params.lang,
+            CONTAM_EXCLUSION_RULE_TEXT_PATTERNS,
+          ),
+      )
+    : [];
+  const explicitCPrimeFqBoundaryItems = isExplicitCPrimeFormQualityQuery(query)
+    ? codingChunks.filter(
+        (item) =>
+          item.canonicalRoute?.toLowerCase() === "scoring-input/determinants/c'" &&
+          matchesLocaleRuleText(item.text, params.lang, C_PRIME_FQ_RULE_TEXT_PATTERNS),
+      )
+    : [];
+  const explicitSpecialScoreLevelPairItems = isExplicitSpecialScoreLevelPairQuery(query)
+    ? codingChunks.filter(
+        (item) =>
+          item.canonicalRoute?.toLowerCase() === 'scoring-input/special-score' &&
+          matchesLocaleRuleText(
+            item.text,
+            params.lang,
+            SPECIAL_SCORE_LEVEL_PAIR_RULE_TEXT_PATTERNS,
+          ),
+      )
+    : [];
+  const explicitCriticalScoreOverlapItems = isExplicitCriticalSpecialScoreOverlapQuery(query)
+    ? codingChunks.filter(
+        (item) =>
+          item.canonicalRoute?.toLowerCase() === 'scoring-input/special-score' &&
+          matchesLocaleRuleText(
+            item.text,
+            params.lang,
+            CRITICAL_SCORE_OVERLAP_RULE_TEXT_PATTERNS,
+          ),
       )
     : [];
   const lexicalItems = deduplicateByKey(
     [
+      ...explicitSpecialScoreLevelPairItems,
+      ...explicitCriticalScoreOverlapItems,
+      ...explicitSameDeterminantBoundaryItems,
+      ...explicitContamExclusionBoundaryItems,
+      ...explicitCPrimeFqBoundaryItems,
       ...explicitCnBoundaryItems,
       ...explicitNatureContentBoundaryItems,
+      ...explicitXyAnContentBoundaryItems,
       ...explicitPopularItems,
       ...selectCodingRuleChunks(params.context, params.lang, limit),
     ],

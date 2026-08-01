@@ -37,11 +37,13 @@ The focus has to be on the scene or setting, not just on a single plant or objec
 - It requires that the person see a scene or spatial expanse, not just an isolated botanical detail.
 - If the response describes a map or cartographic representation, first reconsider [`Ge`](ref://scoring-input/contents/Ge).
 - If the response points to general nature or natural environment rather than a bounded landscape, first reconsider [`Na`](ref://scoring-input/contents/Na).
+- If `Na` applies with `Ls`, record `Na` only and do not add `Ls`.
+- If `Na` is absent but both `Bt` and `Ls` apply, record only the one that best represents the response.
 
 ## Cautions / Distinctions
 
 - `Ls` is not the same as [`Ge`](ref://scoring-input/contents/Ge), which is reserved for maps or cartographic reference.
-- If a broad natural setting is described with botanical elements, `Na` may take priority over `Ls`.
+- `Na` takes priority whenever it applies with `Ls`.
 - If the focus falls on a specific plant, branch, or botanical form, first reconsider [`Bt`](ref://scoring-input/contents/Bt).
 
 ## Cross References

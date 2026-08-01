@@ -246,7 +246,7 @@ export default function HomePage() {
     redo,
   } = useRorschachForm();
 
-  const { load, hasSavedData, clear } = useAutoSave(responses);
+  const { load, hasSavedData, clear, preserveSavedDataFor } = useAutoSave(responses);
 
   const [showWelcomeModal, setShowWelcomeModal] = useState(false);
   const [showResetModal, setShowResetModal] = useState(false);
@@ -301,11 +301,66 @@ export default function HomePage() {
         message: t('toast.movementConflict.message', { rows: summary.movementConflictRows }),
       });
     }
+    if (summary.determinantConflicts.rows) {
+      showToast({
+        type: 'warning',
+        title: t('toast.determinantConflict.title'),
+        message: t('toast.determinantConflict.message', summary.determinantConflicts),
+      });
+    }
     if (summary.duplicateDeterminants.rows) {
       showToast({
         type: 'warning',
         title: t('toast.duplicateDeterminant.title'),
         message: t('toast.duplicateDeterminant.message', summary.duplicateDeterminants),
+      });
+    }
+    if (summary.duplicateContents.rows) {
+      showToast({
+        type: 'warning',
+        title: t('toast.duplicateContent.title'),
+        message: t('toast.duplicateContent.message', summary.duplicateContents),
+      });
+    }
+    if (summary.contentConflicts.rows) {
+      showToast({
+        type: 'warning',
+        title: t('toast.contentConflict.title'),
+        message: t('toast.contentConflict.message', summary.contentConflicts),
+      });
+    }
+    if (summary.criticalSpecialScoreConflicts.rows) {
+      showToast({
+        type: 'warning',
+        title: t('toast.criticalSpecialScoreConflict.title'),
+        message: t(
+          'toast.criticalSpecialScoreConflict.message',
+          summary.criticalSpecialScoreConflicts,
+        ),
+      });
+    }
+    if (summary.specialScoreLevelConflicts.rows) {
+      showToast({
+        type: 'warning',
+        title: t('toast.specialScoreLevelConflict.title'),
+        message: t(
+          'toast.specialScoreLevelConflict.message',
+          summary.specialScoreLevelConflicts,
+        ),
+      });
+    }
+    if (summary.colorProjectionConflicts.rows) {
+      showToast({
+        type: 'warning',
+        title: t('toast.colorProjectionConflict.title'),
+        message: t('toast.colorProjectionConflict.message', summary.colorProjectionConflicts),
+      });
+    }
+    if (summary.invalidZ.rows) {
+      showToast({
+        type: 'warning',
+        title: t('toast.invalidZ.title'),
+        message: t('toast.invalidZ.message', summary.invalidZ),
       });
     }
     if (summary.missingFormQualityRows) {
@@ -813,7 +868,8 @@ export default function HomePage() {
   };
 
   const handleLoadSample = () => {
-    loadSampleData();
+    const sample = loadSampleData();
+    preserveSavedDataFor(sample);
     setShowWelcomeModal(false);
   };
 
@@ -1029,15 +1085,15 @@ export default function HomePage() {
 
               {/* Result Tabs */}
               <div className="print:hidden overflow-x-auto">
-                <div className="inline-flex min-w-max rounded-lg border border-[var(--border-subtle)] bg-[var(--surface-base)] p-1 shadow-sm">
+                <div className="inline-flex min-w-max gap-1 rounded-lg border border-[var(--border-subtle)] bg-[var(--surface-base)] p-1 shadow-sm">
                   {(['upper', 'lower', 'special'] as const).map((tab) => (
                     <button
                       key={tab}
                       onClick={() => setActiveTab(tab)}
-                      className={`px-4 sm:px-6 py-2 sm:py-2.5 text-sm font-medium rounded-md transition-colors whitespace-nowrap ${
+                      className={`rounded-md border px-4 py-2 text-sm font-medium whitespace-nowrap transition-colors sm:px-6 sm:py-2.5 ${
                         activeTab === tab
-                          ? 'bg-[var(--brand-700)] text-[var(--on-brand)] shadow-sm'
-                          : 'text-[var(--text-body)] hover:bg-[var(--surface-muted)] hover:text-[var(--brand-700)]'
+                          ? 'border-[var(--brand-700)] bg-[var(--brand-700)] text-[var(--on-brand)] shadow-sm'
+                          : 'border-[var(--border-subtle)] bg-[var(--surface-base)] text-[var(--text-body)] hover:border-[var(--brand-500)] hover:bg-[var(--surface-muted)] hover:text-[var(--brand-700)]'
                       }`}
                     >
                       {t(`result.tabs.${tab}`)}

@@ -40,6 +40,7 @@ There is not enough formal support, and black, white, or gray clearly function a
 - There is not enough formal organization for `FC'` or `C'F`.
 - If inquiry shows real secondary form, reconsider `C'F`.
 - The decision requires clear and unmistakable achromatic color use.
+- Because `C'` is a pure achromatic determinant without form, record its Form Quality as `FQnone`.
 
 ## Cautions / Distinctions
 

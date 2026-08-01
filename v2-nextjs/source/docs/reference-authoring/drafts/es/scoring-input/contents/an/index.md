@@ -34,15 +34,17 @@ No basta con que parezca un fragmento de animal; la idea principal tiene que ser
 
 ## Condiciones de aplicación
 
-- Se aplica a huesos, órganos, musculatura, rayos X o estructura corporal interna.
+- Se aplica a huesos, órganos, musculatura o estructura corporal interna.
 - El criterio principal es que la respuesta apunte a anatomía y no solo a una parte externa del animal.
 - Si la figura es solo una parte animal externa, primero se considera [`Ad`](ref://scoring-input/contents/Ad).
 - Si la respuesta convierte la figura en un esquema o ilustración anatómica, puede agregarse también [`Art`](ref://scoring-input/contents/Art) cuando corresponda.
+- Si la respuesta se percibe como radiografía o imagen de rayos X, se registra [`Xy`](ref://scoring-input/contents/Xy) en lugar de `An`.
 
 ## Precauciones y distinciones
 
 - `An` y [`Ad`](ref://scoring-input/contents/Ad) pueden parecer cercanos, pero `An` exige foco anatómico.
 - `An` no se usa solo porque el sujeto mencione una parte corporal; la respuesta debe sonar a estructura interna o biológica.
+- Cuando se registra `Xy`, no se añade `An` en la misma respuesta.
 - Este contenido suele ser relevante más tarde para rutas como [`PHR`](ref://scoring-input/gphr/PHR) o [`An + Xy`](ref://result-interpretation/lower-section/selfPerception/An_Xy), pero no las determina por sí mismo.
 
 ## Referencias cruzadas

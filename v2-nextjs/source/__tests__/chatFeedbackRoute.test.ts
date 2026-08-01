@@ -84,7 +84,7 @@ describe('chat response feedback route', () => {
       workflow: 'interpretation',
       locale: 'ko',
       modelId: 'gpt-5.5',
-      harnessVersion: 'sicp-openai-harness-v4',
+      harnessVersion: 'sicp-openai-harness-v5',
       completion: 'completed',
       lengthBucket: 'from_1500_to_2999',
       reasonCodes: ['accurate', 'clear'],

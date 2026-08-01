@@ -38,11 +38,13 @@ Não basta soar como fragmento de animal; a ideia principal precisa ser anatômi
 - O critério principal é foco anatômico, não apenas "parte de animal".
 - Se a resposta for apenas uma parte externa de animal, verifique primeiro [`Ad`](ref://scoring-input/contents/Ad).
 - Se a resposta virar imagem ilustrativa ou diagramatica de anatomia, [`Art`](ref://scoring-input/contents/Art) pode ser acrescentado quando fizer sentido.
+- Se a resposta for percebida como raio X ou radiografia, registre [`Xy`](ref://scoring-input/contents/Xy) em vez de `An`.
 
 ## Cuidados e diferenciação
 
 - `An` e [`Ad`](ref://scoring-input/contents/Ad) podem parecer próximos, mas `An` exige foco estrutural ou biológico.
 - `An` não é dado só porque a pessoa mencionou uma parte do corpo; a resposta precisa soar interna, anatômica ou orgânica.
+- Quando `Xy` é registrado, `An` não é acrescentado na mesma resposta.
 - Esse conteúdo costuma importar mais tarde em rotas como [`PHR`](ref://scoring-input/gphr/PHR) ou [`An + Xy`](ref://result-interpretation/lower-section/selfPerception/An_Xy), mas não as decide sozinho.
 
 ## Referências cruzadas

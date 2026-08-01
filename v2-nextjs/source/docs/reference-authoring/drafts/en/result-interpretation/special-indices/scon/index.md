@@ -32,6 +32,7 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 It does not replace immediate clinical assessment, but indicates when the issue needs high priority attention.
 ## Interpretation Points
 - Apply the S-CON threshold and interpretation only to examinees age 15 or older. Its usefulness has not been demonstrated for age 14 or younger, so do not treat a computed score as a positive or negative conclusion in that group.
+- The result is positive when at least 8 of these 12 criteria are met: `FV+VF+V+FD > 2`, Color-Shading blends `> 0`, `3r+(2)/R < .31` or `> .44`, `MOR > 3`, `Zd < -3.5` or `> +3.5`, `es > EA`, `CF+C > FC`, `X+% < .70`, `S > 3`, `P < 3` or `> 8`, `Pure H < 2`, and `R < 17`.
 - If `S-CON` reaches threshold, directly assess suicidal ideation, intent, plan, access to means, prior attempts, recent changes, and protective factors immediately.
 - The constellation integrates signs of stress, self-criticism, emotional pain, and reduced control.
 - Its weight increases when it appears with low `D`, low `AdjD`, `SumV`, `SumY`, `MOR_self`, and `DEPI`.

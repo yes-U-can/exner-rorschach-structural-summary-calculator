@@ -36,6 +36,8 @@ It includes plants, flowers, trees, leaves, or recognizable plant parts.
 
 - Use it for tree, flower, leaf, branch, cactus, or another clearly plant-like form.
 - It may be used for either the full plant or a clear plant part.
+- If `Na` applies with `Bt`, record `Na` only and do not add `Bt`.
+- If `Na` is absent but both `Bt` and `Ls` apply, record only the one that best represents the response.
 - If the response describes an animal or animal detail, first reconsider [`A`](ref://scoring-input/contents/A) or its variants.
 - If the focus shifts to blood or biological injury, first reconsider [`Bl`](ref://scoring-input/contents/Bl).
 
@@ -43,6 +45,7 @@ It includes plants, flowers, trees, leaves, or recognizable plant parts.
 
 - `Bt` is botanical content, not a judgment about color, texture, or shape.
 - Do not use it just because something looks organic; the response has to organize it specifically as plant material.
+- `Bt`, `Ls`, and `Na` all contribute to the Isolation Index, so they are not counted together within one response.
 - Some sources write `BT`; this application uses the Comprehensive System code `Bt`.
 
 ## Cross References

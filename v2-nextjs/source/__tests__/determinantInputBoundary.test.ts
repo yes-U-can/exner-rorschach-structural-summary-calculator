@@ -5,8 +5,10 @@ import { calculateStructuralSummary } from '@/lib/calculator';
 import { findInvalidDeterminantInputs } from '@/lib/determinantInput';
 import {
   findScoringInputIssues,
+  getDisabledContentCodes,
   getDisabledDeterminantCodes,
   getDisabledMovementCodes,
+  getDisabledSpecialScoreCodes,
 } from '@/lib/scoringInputValidation';
 import { SCORING_CONFIG } from '@/lib/constants';
 import {
@@ -19,6 +21,7 @@ import type { RorschachResponse } from '@/types';
 function response(
   determinants: string[],
   contents: string[] = ['A'],
+  specialScores: string[] = [],
 ): RorschachResponse {
   return {
     card: 'I',
@@ -31,7 +34,7 @@ function response(
     contents,
     popular: false,
     z: '',
-    specialScores: [],
+    specialScores,
   };
 }
 
@@ -99,8 +102,16 @@ describe('movement determinant input boundary', () => {
   });
 
   it('disables a code already selected in another slot for every determinant', () => {
-    expect(getDisabledDeterminantCodes(['FC', '', ''], 1)).toEqual(['FC']);
-    expect(getDisabledDeterminantCodes(['Ma', 'FC'], 0)).toEqual(['FC']);
+    expect(getDisabledDeterminantCodes(['FC', '', ''], 1)).toEqual([
+      'FC',
+      'CF',
+      'C',
+    ]);
+    expect(getDisabledDeterminantCodes(['Ma', 'FC'], 0)).toEqual([
+      'FC',
+      'CF',
+      'C',
+    ]);
     expect(getDisabledDeterminantCodes(['Ma', 'FC'], 1)).toEqual([
       'Ma',
       'Mp',
@@ -135,6 +146,184 @@ describe('movement determinant input boundary', () => {
     const result = calculateStructuralSummary([response(['FC', "C'F"])]);
     expect(result.success).toBe(true);
     expect(result.data?.upper_section.blends).toContainEqual(['FC', "C'F"]);
+  });
+
+  it.each([
+    ['chromaticColor', ['FC', 'CF'], ['FC', 'CF', 'C']],
+    ['achromaticColor', ["FC'", "C'"], ["FC'", "C'F", "C'"]],
+    ['texture', ['FT', 'T'], ['FT', 'TF', 'T']],
+    ['vista', ['FV', 'VF'], ['FV', 'VF', 'V']],
+    ['diffuseShading', ['FY', 'Y'], ['FY', 'YF', 'Y']],
+    ['reflection', ['Fr', 'rF'], ['Fr', 'rF']],
+  ] as const)(
+    'blocks multiple form-emphasis codes from the %s determinant family',
+    (rule, determinants, disabledCodes) => {
+      expect(getDisabledDeterminantCodes([determinants[0], '', ''], 1)).toEqual(
+        [...disabledCodes],
+      );
+
+      const issues = findScoringInputIssues([response([...determinants])]);
+      expect(issues).toContainEqual({
+        type: 'determinant_conflict',
+        responseIndex: 0,
+        rule,
+        codes: [...determinants],
+      });
+
+      expect(calculateStructuralSummary([response([...determinants])])).toMatchObject({
+        success: false,
+        errors: [{
+          field: 'responses.0.determinants',
+          message: expect.stringContaining('Mutually exclusive determinant codes'),
+        }],
+      });
+    },
+  );
+
+  it('keeps different shading families and a separately justified F available in blends', () => {
+    expect(calculateStructuralSummary([
+      response(['FV', 'FT', 'FY']),
+      response(['F', 'FC']),
+    ]).success).toBe(true);
+  });
+
+  it('blocks an identical content code entered twice in one response', () => {
+    const saved = [response(['F'], ['Bt', 'Bt'])];
+
+    expect(getDisabledContentCodes(['Bt', '', ''], 1)).toEqual(
+      expect.arrayContaining(['Na', 'Bt', 'Ls']),
+    );
+    expect(findScoringInputIssues(saved)).toContainEqual({
+      type: 'duplicate_content',
+      responseIndex: 0,
+      code: 'Bt',
+    });
+    expect(calculateStructuralSummary(saved)).toMatchObject({
+      success: false,
+      errors: [{
+        field: 'responses.0.contents',
+        message: expect.stringContaining('Duplicate content code'),
+      }],
+    });
+  });
+
+  it.each([
+    [['Na', 'Bt'], ['Na', 'Bt', 'Ls']],
+    [['Na', 'Ls'], ['Na', 'Bt', 'Ls']],
+    [['Bt', 'Ls'], ['Na', 'Bt', 'Ls']],
+    [['An', 'Xy'], ['An', 'Xy']],
+  ] as const)(
+    'blocks mutually exclusive content codes %j without silently rewriting them',
+    (contents, disabledCodes) => {
+      const saved = [response(['F'], [...contents])];
+      const before = JSON.stringify(saved);
+
+      const actualDisabledCodes = getDisabledContentCodes([contents[0], '', ''], 1);
+      expect(actualDisabledCodes).toHaveLength(disabledCodes.length);
+      expect(actualDisabledCodes).toEqual(expect.arrayContaining([...disabledCodes]));
+      expect(findScoringInputIssues(saved)).toContainEqual({
+        type: 'content_conflict',
+        responseIndex: 0,
+        rule: (contents as readonly string[]).some((code) =>
+          ['Na', 'Bt', 'Ls'].includes(code))
+          ? 'nature'
+          : 'xrayAnatomy',
+        codes: [...contents],
+      });
+      expect(calculateStructuralSummary(saved)).toMatchObject({
+        success: false,
+        errors: [{
+          field: 'responses.0.contents',
+          message: expect.stringContaining('Mutually exclusive content codes'),
+        }],
+      });
+      expect(JSON.stringify(saved)).toBe(before);
+    },
+  );
+
+  it('keeps unrelated multiple content codes available', () => {
+    expect(getDisabledContentCodes(['A', 'Cg', ''], 2)).toEqual(['A', 'Cg']);
+    expect(calculateStructuralSummary([
+      response(['F'], ['Art', 'H', 'Cg', 'Bt']),
+    ]).success).toBe(true);
+  });
+
+  it('prevents CONTAM from coexisting with the other critical special scores', () => {
+    const criticalScores = ['DV1', 'DV2', 'DR1', 'DR2', 'INCOM1', 'INCOM2', 'FABCOM1', 'FABCOM2', 'ALOG'];
+
+    expect(getDisabledSpecialScoreCodes(['CONTAM', '', ''], 1)).toEqual(criticalScores);
+    expect(getDisabledSpecialScoreCodes(['DV1', '', ''], 1)).toEqual(['CONTAM']);
+
+    const invalid = response(['F'], ['A'], ['CONTAM', 'DR2', 'ALOG']);
+    expect(findScoringInputIssues([invalid])).toContainEqual({
+      type: 'critical_special_score_conflict',
+      responseIndex: 0,
+      codes: ['CONTAM', 'DR2', 'ALOG'],
+    });
+    expect(calculateStructuralSummary([invalid])).toMatchObject({
+      success: false,
+      errors: [{
+        field: 'responses.0.specialScores',
+        message: expect.stringContaining('CONTAM cannot be combined'),
+      }],
+    });
+  });
+
+  it.each([
+    ['DV1', 'DV2'],
+    ['DR1', 'DR2'],
+    ['INCOM1', 'INCOM2'],
+    ['FABCOM1', 'FABCOM2'],
+  ])(
+    'blocks a saved response that contains both %s and %s',
+    (level1, level2) => {
+      const saved = response(['F'], ['A'], [level1, level2]);
+
+      expect(findScoringInputIssues([saved])).toContainEqual({
+        type: 'special_score_level_conflict',
+        responseIndex: 0,
+        codes: [level1, level2],
+      });
+      expect(calculateStructuralSummary([saved])).toMatchObject({
+        success: false,
+        errors: [{
+          field: 'responses.0.specialScores',
+          message: expect.stringContaining('Level 1 and Level 2'),
+        }],
+      });
+    },
+  );
+
+  it('prevents CP from coexisting with chromatic color determinants', () => {
+    expect(getDisabledSpecialScoreCodes(['', ''], 1, ['CF'])).toEqual(['CP']);
+    expect(getDisabledDeterminantCodes(['F', '', ''], 1, ['CP'])).toEqual([
+      'F',
+      'FC',
+      'CF',
+      'C',
+    ]);
+
+    const invalid = response(['CF'], ['A'], ['CP']);
+    expect(findScoringInputIssues([invalid])).toContainEqual({
+      type: 'color_projection_conflict',
+      responseIndex: 0,
+      codes: ['CP', 'CF'],
+    });
+    expect(calculateStructuralSummary([invalid])).toMatchObject({
+      success: false,
+      errors: [{
+        field: 'responses.0.specialScores',
+        message: expect.stringContaining('CP cannot be combined'),
+      }],
+    });
+  });
+
+  it('keeps valid special-score combinations and CP shading determinants available', () => {
+    expect(calculateStructuralSummary([
+      response(['FY'], ['A'], ['CP', 'MOR']),
+      response(['F'], ['A'], ['CONTAM', 'MOR']),
+      response(['F'], ['A'], ['INCOM1', 'FABCOM1']),
+    ]).success).toBe(true);
   });
 
   it.each([
@@ -210,7 +399,35 @@ describe('movement determinant input boundary', () => {
             title?: string;
             message?: string;
           };
+          determinantConflict?: {
+            title?: string;
+            message?: string;
+          };
           duplicateDeterminant?: {
+            title?: string;
+            message?: string;
+          };
+          duplicateContent?: {
+            title?: string;
+            message?: string;
+          };
+          contentConflict?: {
+            title?: string;
+            message?: string;
+          };
+          criticalSpecialScoreConflict?: {
+            title?: string;
+            message?: string;
+          };
+          specialScoreLevelConflict?: {
+            title?: string;
+            message?: string;
+          };
+          colorProjectionConflict?: {
+            title?: string;
+            message?: string;
+          };
+          invalidZ?: {
             title?: string;
             message?: string;
           };
@@ -239,10 +456,55 @@ describe('movement determinant input boundary', () => {
         expect(boundaryWarning?.message?.match(/\{[^}]+\}/g)).toEqual(['{rows}']);
       }
 
+      const determinantConflictWarning = messages.toast.determinantConflict;
+      expect(determinantConflictWarning?.title?.trim()).toBeTruthy();
+      expect(determinantConflictWarning?.message?.trim()).toBeTruthy();
+      expect(determinantConflictWarning?.message?.match(/\{[^}]+\}/g)).toEqual([
+        '{rows}',
+        '{codes}',
+      ]);
+
       const duplicateWarning = messages.toast.duplicateDeterminant;
       expect(duplicateWarning?.title?.trim()).toBeTruthy();
       expect(duplicateWarning?.message?.trim()).toBeTruthy();
       expect(duplicateWarning?.message?.match(/\{[^}]+\}/g)).toEqual([
+        '{rows}',
+        '{codes}',
+      ]);
+
+      const duplicateContentWarning = messages.toast.duplicateContent;
+      expect(duplicateContentWarning?.title?.trim()).toBeTruthy();
+      expect(duplicateContentWarning?.message?.trim()).toBeTruthy();
+      expect(duplicateContentWarning?.message?.match(/\{[^}]+\}/g)).toEqual([
+        '{rows}',
+        '{codes}',
+      ]);
+
+      const contentConflictWarning = messages.toast.contentConflict;
+      expect(contentConflictWarning?.title?.trim()).toBeTruthy();
+      expect(contentConflictWarning?.message?.trim()).toBeTruthy();
+      expect(contentConflictWarning?.message?.match(/\{[^}]+\}/g)).toEqual([
+        '{rows}',
+        '{codes}',
+      ]);
+
+      for (const specialScoreWarning of [
+        messages.toast.criticalSpecialScoreConflict,
+        messages.toast.specialScoreLevelConflict,
+        messages.toast.colorProjectionConflict,
+      ]) {
+        expect(specialScoreWarning?.title?.trim()).toBeTruthy();
+        expect(specialScoreWarning?.message?.trim()).toBeTruthy();
+        expect(specialScoreWarning?.message?.match(/\{[^}]+\}/g)).toEqual([
+          '{rows}',
+          '{codes}',
+        ]);
+      }
+
+      const invalidZWarning = messages.toast.invalidZ;
+      expect(invalidZWarning?.title?.trim()).toBeTruthy();
+      expect(invalidZWarning?.message?.trim()).toBeTruthy();
+      expect(invalidZWarning?.message?.match(/\{[^}]+\}/g)).toEqual([
         '{rows}',
         '{codes}',
       ]);
@@ -281,6 +543,23 @@ describe('location and Form Quality input boundaries', () => {
     });
     expect(calculateStructuralSummary(blank).success).toBe(false);
     expect(calculateStructuralSummary(explicitNone).success).toBe(true);
+  });
+
+  it('blocks a Z token that has no card-specific score', () => {
+    const invalid = [{ ...response(['F']), z: 'ZZ' }];
+
+    expect(findScoringInputIssues(invalid)).toContainEqual({
+      type: 'invalid_z',
+      responseIndex: 0,
+      code: 'ZZ',
+    });
+    expect(calculateStructuralSummary(invalid)).toMatchObject({
+      success: false,
+      errors: [{
+        field: 'responses.0.z',
+        message: expect.stringContaining('Invalid Z code'),
+      }],
+    });
   });
 
   it('ignores untouched rows that do not participate in calculation', () => {

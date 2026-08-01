@@ -74,6 +74,8 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-score-dv-d
 
 - 特殊スコアは主符号に追加して記録するもので、領域、決定因、反応内容の代わりにはなりません。
 - 反応の中にその特殊な性質が明確に見えるときだけ付与します。
+- `DV1/DV2`、`DR1/DR2`、`INCOM1/INCOM2`、`FABCOM1/FABCOM2` は、一つの反応で各組のどちらか一方だけを記録します。レベル判断が曖昧な場合は、保守的に Level 1 を用います。
+- 異なる重要特殊スコアは、それぞれが独立した表現に基づく場合だけ併記できます。同じ表現または同じ思考混乱が複数の基準に重なる場合は、`WSum6` の重みが高い一つだけを記録します。
 - 各特殊スコアの個別基準は、この索引から開く個別文書で確認します。
 - `COP` と `AG` は多くの場合 [`M`](ref://scoring-input/determinants/M)、[`FM`](ref://scoring-input/determinants/FM)、[`m`](ref://scoring-input/determinants/m) のような運動内容と一緒に確認します。
 - `MOR` は損傷、死、腐敗、破壊、著しく病的な質が対象に付与されたときに加えます。

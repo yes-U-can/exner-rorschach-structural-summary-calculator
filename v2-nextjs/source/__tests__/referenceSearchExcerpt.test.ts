@@ -22,4 +22,12 @@ describe('reference search excerpts', () => {
     expect(excerpt).toHaveLength(80);
     expect(excerpt.endsWith('...')).toBe(true);
   });
+
+  it('never cuts a Unicode surrogate pair at the excerpt boundary', () => {
+    const excerpt = buildReferenceSearchExcerpt(`12345${'😀'.repeat(20)}`, 12);
+
+    expect(Array.from(excerpt)).toHaveLength(12);
+    expect(excerpt).not.toContain('\uFFFD');
+    expect(excerpt).toBe('12345😀😀😀😀...');
+  });
 });

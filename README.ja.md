@@ -23,7 +23,7 @@ MOW（モオ）は、ウェブアプリの企画、制作、配布、運用、�
 ## 公開している内容
 
 - [Next.js] 公開ウェブアプリ: [exner.yesucan.co.kr](https://exner.yesucan.co.kr)
-- [Next.js] バージョン2の最新リリース: [v2-nextjs/releases/v2.2.7](./v2-nextjs/releases/v2.2.7/README.ja.md)
+- [Next.js] バージョン2の最新リリース: [v2-nextjs/releases/v2.2.8](./v2-nextjs/releases/v2.2.8/README.ja.md)
 - [Next.js] v2.2.2の計算精度再点検: [v2-nextjs/source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md](./v2-nextjs/source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md)
 - [Next.js] v2.2.2のCn説明と5言語でのGPT-5.5実呼び出し検査: [v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md](./v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md)
 - [Next.js] v2.2.0のUI検証: [v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md](./v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md)
@@ -48,6 +48,12 @@ v2.1.xでは、AIアシスタントが回答を最後まで作成するか、質
 - **v2.1.10:** 残っていた日本語の符号認識、広い解釈質問、新規データベース設定の問題を修正しました。
 
 v2.1.8からv2.1.10までの関連作業は、各パッチノートに分けて記録しています。
+
+## v2.2.8
+
+v2.2.8は、一つの反応で同じ内容コードが二重に集計される問題を防ぎ、デスクトップとモバイルの反応整理規則を共通化したバグ修正です。サンプルデータが既存の自動保存を上書きしないようにし、最後の編集の保存と壊れた自動保存の検査も強化しました。
+
+構造一覧表の計算式は変更していません。規則どおり入力された既存プロトコルを再計算する必要はありません。一つの反応に同じ内容コードを重複して入力した記録、デスクトップとモバイルでLevel 1・Level 2のSpecial Scoreの整理結果が異なって保存された記録、モバイル画面で無形態決定因（`C`、`C'`、`T`、`V`、`Y`、`Cn`）だけを入力したにもかかわらず、[FQ]が`none`以外の値として保存された記録、未対応のZコードまたはカードに属さないZ得点が残っている記録は、原資料を確認してから再計算します。S-CONの12基準と8項目の境界を五言語の文書とAI回答規則にそろえ、年齢入力欄は追加していません。OpenAI CodexとClaude Opus 5は、それぞれ独立して有料のGPT-5.5呼び出しを実行し、一度だけ再現しなかった契約検査結果と、その後の再検査結果もあわせて記録しました。詳細は[v2.2.8パッチノート](./v2-nextjs/releases/v2.2.8/README.ja.md)で確認できます。
 
 ## v2.2.7
 
@@ -101,6 +107,7 @@ GPT-5.5アシスタントがエクスナー包括システム以外へ回答範�
 
 ## [Next.js] バージョン2リリース記録
 
+- **[2026-07-31] v2.2.8（バグ修正）** [パッチノート](./v2-nextjs/releases/v2.2.8/README.ja.md) [ソースコード](./v2-nextjs/source/)
 - **[2026-07-23] v2.2.7（バグ修正）** [パッチノート](./v2-nextjs/releases/v2.2.7/README.ja.md) [ソースコード](./v2-nextjs/source/)
 - **[2026-07-20] v2.2.6（バグ修正）** [パッチノート](./v2-nextjs/releases/v2.2.6/README.ja.md) [ソースコード](./v2-nextjs/source/)
 - **[2026-07-19] v2.2.5（バグ修正）** [パッチノート](./v2-nextjs/releases/v2.2.5/README.ja.md) [ソースコード](./v2-nextjs/source/)
@@ -133,7 +140,7 @@ GPT-5.5アシスタントがエクスナー包括システム以外へ回答範�
 3. `.env.example`を参照してローカル環境変数ファイルを作成します。
 4. `npm run build`または`npm run dev`でアプリを確認します。
 
-公開リポジトリには、実際の運用環境変数、Vercel設定、ローカルログ、キャッシュ、非公開作業ノートは含まれていません。
+公開リポジトリには、実際の運用環境変数、Vercel設定、ローカルログ、キャッシュ、非公開作業ノート、APIキー、モデル応答の原文、非公開の検査資料は含まれていません。
 
 </details>
 

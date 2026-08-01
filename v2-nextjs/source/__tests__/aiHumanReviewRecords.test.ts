@@ -128,4 +128,14 @@ describe('AI human review record scorer', () => {
     expect(result.status).toBe(1);
     expect(result.stdout).toContain('non_passing_review_record');
   });
+
+  it('fails a required release gate when the input contains zero review records', () => {
+    const dir = makeTempDir();
+    writeJsonl(dir, []);
+
+    const result = runScorer(dir, ['--require-pass']);
+
+    expect(result.status).toBe(1);
+    expect(result.stdout).toContain('no_review_records');
+  });
 });

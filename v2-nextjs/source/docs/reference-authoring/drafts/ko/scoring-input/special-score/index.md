@@ -59,6 +59,8 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/spec
 
 - 특수점수는 기본 coding을 대신하지 않고 추가로 붙는다.
 - 반응 안에 해당 특징이 명확하게 드러날 때만 부여한다.
+- `DV1/DV2`, `DR1/DR2`, `INCOM1/INCOM2`, `FABCOM1/FABCOM2`는 한 반응에서 각 쌍 중 하나만 기록한다. 수준 판단이 모호하면 보수적으로 Level 1을 기록한다.
+- 서로 다른 비판적 특수점수는 각각 독립된 표현에 근거할 때만 함께 기록한다. 같은 표현이나 같은 사고 혼란이 두 기준에 겹치면 `WSum6` 가중치가 더 높은 하나만 기록한다.
 - 이번 개요 문서는 현재 우선 작성이 끝난 `DV1`, `DV2`, `DR1`, `DR2`, `INCOM1`, `INCOM2`, `FABCOM1`, `FABCOM2`, `ALOG`, `CONTAM`, `COP`, `AG`, `MOR`, `AB`, `PER`, `CP`, `PSV`를 중심으로 정리한다.
 - `COP`, `AG`는 모두 운동 반응(`M`, `FM`, `m`)과 함께 검토한다.
 - 특수점수는 나중 해석과 연결되지만, coding 단계에서는 먼저 정의와 적용 조건을 정확히 고정해야 한다.

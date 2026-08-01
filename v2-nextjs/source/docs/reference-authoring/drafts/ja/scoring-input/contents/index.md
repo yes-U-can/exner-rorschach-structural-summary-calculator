@@ -66,6 +66,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-contents-ls-na-sc-
 ## 採点・適用条件
 
 - 内容コードは、反応が何として把握されたかを記録するために使います。
+- 一つの反応では、同じ内容コードを一度だけ記録します。
 - 人間内容では[`H`](ref://scoring-input/contents/H)、[`(H)`](ref://scoring-input/contents/%28H%29)、[`Hd`](ref://scoring-input/contents/Hd)、[`(Hd)`](ref://scoring-input/contents/%28Hd%29)、[`Hx`](ref://scoring-input/contents/Hx)を区別します。
 - 動物内容では[`A`](ref://scoring-input/contents/A)、[`(A)`](ref://scoring-input/contents/%28A%29)、[`Ad`](ref://scoring-input/contents/Ad)、[`(Ad)`](ref://scoring-input/contents/%28Ad%29)、[`An`](ref://scoring-input/contents/An)を使い分けます。
 - 芸術・文化・自然寄りの内容では[`Art`](ref://scoring-input/contents/Art)、[`Ay`](ref://scoring-input/contents/Ay)、[`Bl`](ref://scoring-input/contents/Bl)、[`Bt`](ref://scoring-input/contents/Bt)を検討します。
@@ -80,9 +81,10 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-contents-ls-na-sc-
 - [`Art`](ref://scoring-input/contents/Art)と[`Ay`](ref://scoring-input/contents/Ay)は近いですが、前者は芸術作品、後者は歴史的・文化的・人類学的な参照に重心があります。
 - [`Fd`](ref://scoring-input/contents/Fd)と[`FD`](ref://scoring-input/determinants/FD)は似た記号ですが、前者は内容、後者は決定因です。
 - [`Ge`](ref://scoring-input/contents/Ge)は地図であり、風景なら[`Ls`](ref://scoring-input/contents/Ls)、自然環境なら[`Na`](ref://scoring-input/contents/Na)を優先して考えます。
+- `Na`が`Bt`または`Ls`とともに該当する場合は、`Na`だけを記録します。`Na`がなく、`Bt`と`Ls`の両方が該当する場合は、反応の中心をよりよく表す一方だけを記録します。
 - [`Sc`](ref://scoring-input/contents/Sc)は科学技術的な読みが必要で、単に変わった内容というだけでは`Id`にしません。
 - [`Sx`](ref://scoring-input/contents/Sx)は明確な性的意味が必要で、単なる身体形態だけでは自動的に付けません。
-- [`Xy`](ref://scoring-input/contents/Xy)はX線的形式を示し、同じ反応に[`An`](ref://scoring-input/contents/An)を併記しない点が重要です。
+- [`Xy`](ref://scoring-input/contents/Xy)を記録した場合は、同じ反応に[`An`](ref://scoring-input/contents/An)を併記しません。
 
 ## 相互参照
 

@@ -38,6 +38,7 @@ Ele não descreve apenas uma mistura estranha, mas uma integração impossível 
 - O ponto principal é que o produto final e apresentado como um único percepto fundido, e não como duas ideias apenas comparadas.
 - A resposta deve soar impossível ou internamente contraditória por causa da fusão.
 - `CONTAM` representa forma particularmente severa de distorção e depois pesa em `Sum6` e `WSum6`.
+- Quando `CONTAM` é codificado, não se registram também `DV`, `DR`, `INCOM`, `FABCOM` ou `ALOG`.
 
 ## Cuidados e diferenciação
 

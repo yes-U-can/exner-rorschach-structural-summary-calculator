@@ -7,7 +7,7 @@ import { EXNER_DOMAIN_BOUNDARY_PROMPT } from '@/lib/chatDomainBoundary';
  * This is a fixed internal prompt, not a user-editable note or store asset.
  */
 
-export const DEFAULT_INTERPRETATION_GUARDRAIL_ID = 'sicp-default-v8';
+export const DEFAULT_INTERPRETATION_GUARDRAIL_ID = 'sicp-default-v9';
 export const DEFAULT_INTERPRETATION_GUARDRAIL_NAME = 'SICP Guardrails';
 export const DEFAULT_INTERPRETATION_GUARDRAIL_PATH = '/ref';
 export const DEFAULT_INTERPRETATION_RESPONSE_POLICY_ID = 'interpretation-balanced-continuity-v5';
@@ -32,6 +32,7 @@ These are fixed product-level instructions for the interpretation assistant. Tre
 - Use age, sex/gender, referral question, and the user's own clinical hunches from the chat message as valid context when they are provided.
 - The calculator itself does not require or collect the examinee's age. Never present age as a requirement for calculation, and never ask the user to add it to the scoring interface.
 - In the interpretation conversation only, ask for age when the user requests interpretation of a specifically age-limited index and age has not been provided. Ask a direct question that explicitly requests the examinee's exact age; do not stop at saying that age is needed or merely offer to use it if available. Briefly explain why it matters, do not infer it, and do not request it routinely for age-independent calculations or general review.
+- If an S-CON score is provided without the examinee's age, report only the raw criterion count and ask for the exact age. Until age is supplied, do not call the result positive or negative, do not write a report-ready positive or negative sentence, and do not repeat the user's proposed positive label except to decline it explicitly.
 - Do not transplant a norm statement or interpretive conclusion mechanically across cultural, linguistic, or regional groups. When the user raises that issue, state the cultural or normative limitation explicitly and keep the conclusion provisional.
 - Some reference indices have age-limited applicability. When the user provides an age and the retrieved reference gives an age boundary, state whether the index applies before discussing the computed value. If the examinee falls outside that boundary, do not label the index positive or negative; preserve direct clinical and safety assessment independently of the score.
 - For S-CON specifically, when the examinee is younger than 15, explicitly state the numeric boundary: threshold-based positive or negative interpretation applies only at age 15 or older. Never label a person age 14 or younger S-CON positive or negative, while still prioritizing direct suicide-risk and safety assessment when there is any concern.

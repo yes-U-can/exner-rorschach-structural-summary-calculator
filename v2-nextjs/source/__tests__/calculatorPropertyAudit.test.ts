@@ -28,6 +28,13 @@ const SINGLE_SCORE_DETERMINANT_FAMILIES = [
   ['FT', 'TF', 'T'],
   ['FV', 'VF', 'V'],
   ['FY', 'YF', 'Y'],
+  ['Fr', 'rF'],
+] as const;
+const SPECIAL_SCORE_LEVEL_PAIRS = [
+  ['DV1', 'DV2'],
+  ['DR1', 'DR2'],
+  ['INCOM1', 'INCOM2'],
+  ['FABCOM1', 'FABCOM2'],
 ] as const;
 
 const ZEST = [
@@ -118,6 +125,37 @@ function sampleValidContents(random: () => number, count: number) {
     : withoutNatureConflict;
 }
 
+function sampleValidSpecialScores(
+  random: () => number,
+  count: number,
+  determinants: readonly string[],
+) {
+  let selected = sampleDistinct(random, SPECIAL_SCORES, count);
+
+  for (const pair of SPECIAL_SCORE_LEVEL_PAIRS) {
+    const pairCodes = pair as readonly string[];
+    const firstSelected = selected.find((score) => pairCodes.includes(score));
+    if (!firstSelected) continue;
+    selected = selected.filter(
+      (score) => !pairCodes.includes(score) || score === firstSelected,
+    );
+  }
+
+  if (selected.includes('CONTAM')) {
+    selected = selected.filter(
+      (score) => score === 'CONTAM' || !CONTAM_CONFLICTS.has(score),
+    );
+  }
+  if (
+    selected.includes('CP')
+    && determinants.some((code) => ['FC', 'CF', 'C'].includes(code))
+  ) {
+    selected = selected.filter((score) => score !== 'CP');
+  }
+
+  return selected;
+}
+
 function makeProtocol(random: () => number): RorschachResponse[] {
   const responseCount = 1 + Math.floor(random() * 50);
   return Array.from({ length: responseCount }, (_, index) => {
@@ -134,18 +172,11 @@ function makeProtocol(random: () => number): RorschachResponse[] {
       (dq !== 'v' || code !== '+') && (allAllowNoForm || code !== 'none'),
     );
     const fq = allFormless ? 'none' : pick(random, fqCandidates);
-    let specialScores = sampleDistinct(random, SPECIAL_SCORES, Math.floor(random() * 3));
-    if (specialScores.includes('CONTAM')) {
-      specialScores = specialScores.filter(
-        (score) => score === 'CONTAM' || !CONTAM_CONFLICTS.has(score),
-      );
-    }
-    if (
-      specialScores.includes('CP') &&
-      determinants.some((code) => ['FC', 'CF', 'C'].includes(code))
-    ) {
-      specialScores = specialScores.filter((score) => score !== 'CP');
-    }
+    const specialScores = sampleValidSpecialScores(
+      random,
+      Math.floor(random() * 3),
+      determinants,
+    );
 
     const validZCodes: ZCode[] = [];
     if (fq !== 'none' && dq !== 'v') {

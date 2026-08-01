@@ -40,6 +40,7 @@ No hay apoyo formal suficiente y los rasgos negros, blancos o grises funcionan c
 - No aparece organización formal suficiente para `FC'` o `C'F`.
 - Si la encuesta muestra alguna forma secundaria real, hay que reconsiderar `C'F`.
 - La decisión exige que el uso de color acromático sea claro e inequívoco.
+- Como `C'` es un determinante acromático puro sin forma, registre la calidad formal como `FQnone`.
 
 ## Precauciones y distinciones
 

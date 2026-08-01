@@ -23,7 +23,7 @@ MOW(모오)는 웹앱의 기획, 제작, 배포, 운영, 유지보수를 맡습�
 ## 현재 공개된 항목
 
 - [Next.js] 라이브 웹앱: [exner.yesucan.co.kr](https://exner.yesucan.co.kr)
-- [Next.js] 버전 2 최신 릴리즈: [v2-nextjs/releases/v2.2.7](./v2-nextjs/releases/v2.2.7/)
+- [Next.js] 버전 2 최신 릴리즈: [v2-nextjs/releases/v2.2.8](./v2-nextjs/releases/v2.2.8/)
 - [Next.js] v2.2.2 계산 정확성 검산: [v2-nextjs/source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md](./v2-nextjs/source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md)
 - [Next.js] v2.2.2 Cn 설명·5개 언어 실제 GPT-5.5 호출 검사: [v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md](./v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md)
 - [Next.js] v2.2.0 UI 검증: [v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md](./v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md)
@@ -48,6 +48,12 @@ v2.1.x에서는 AI 도우미가 답변을 끝까지 작성하는지, 질문에 �
 - **v2.1.10:** 앞선 검색 개선 뒤에 남아 있던 일본어 부호 인식, 넓은 해석 질문, 새 데이터베이스 설치 문제를 수정했습니다.
 
 v2.1.8-v2.1.10에서 이어진 내용은 각 패치노트에 나누어 기록했습니다.
+
+## v2.2.8
+
+v2.2.8은 한 반응에 같은 내용 부호가 두 번 들어가 중복 집계되던 문제를 막고, 데스크톱과 모바일의 반응 정리 규칙을 같은 코드로 통일한 버그 패치입니다. 샘플 데이터가 기존 자동저장본을 덮어쓰지 않도록 했으며, 마지막 편집 저장과 손상된 저장 자료 검사도 보강했습니다.
+
+구조요약 계산식은 바뀌지 않았습니다. 규칙대로 입력한 기존 프로토콜은 다시 계산할 필요가 없습니다. 한 반응에 같은 내용 부호가 중복된 기록, 데스크톱과 모바일에서 Level 1·Level 2 특수점수가 서로 다르게 정리된 기록, 모바일 화면에서 무형태 결정인(`C`, `C'`, `T`, `V`, `Y`, `Cn`)만 입력했는데 [FQ]가 `none`이 아닌 값으로 저장된 기록, 허용되지 않은 Z 부호나 카드에 맞지 않는 Z 점수가 남은 기록은 원자료를 확인한 뒤 다시 계산합니다. S-CON 12개 기준과 8개 경계를 다섯 언어 문서와 AI 답변 규칙에 맞췄으며, 나이 입력란은 추가하지 않았습니다. OpenAI Codex와 Claude Opus 5는 유료 GPT-5.5 호출을 각각 독립적으로 실행했으며, 한 차례 재현되지 않은 계약 검사 결과와 후속 재검 결과도 함께 기록했습니다. 자세한 내용은 [v2.2.8 패치노트](./v2-nextjs/releases/v2.2.8/)에서 확인할 수 있습니다.
 
 ## v2.2.7
 
@@ -101,6 +107,7 @@ GPT-5.5 도우미는 Exner 종합체계 밖의 질문에 답변 범위를 넓히
 
 ## [Next.js] 버전 2 릴리즈 기록
 
+- **[2026-07-31] v2.2.8 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.2.8/) [소스코드](./v2-nextjs/source/)
 - **[2026-07-23] v2.2.7 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.2.7/) [소스코드](./v2-nextjs/source/)
 - **[2026-07-20] v2.2.6 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.2.6/) [소스코드](./v2-nextjs/source/)
 - **[2026-07-19] v2.2.5 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.2.5/) [소스코드](./v2-nextjs/source/)
@@ -133,7 +140,7 @@ GPT-5.5 도우미는 Exner 종합체계 밖의 질문에 답변 범위를 넓히
 3. `.env.example`을 참고해 로컬 환경변수 파일을 만듭니다.
 4. `npm run build` 또는 `npm run dev`로 앱을 확인합니다.
 
-공개 저장소에는 실제 운영 환경변수, Vercel 설정, 로컬 로그, 캐시, 비공개 작업 노트가 포함되어 있지 않습니다.
+공개 저장소에는 실제 운영 환경변수, Vercel 설정, 로컬 로그, 캐시, 비공개 작업 노트, API 키, 모델 응답 원문, 비공개 검사 자료가 포함되어 있지 않습니다.
 
 </details>
 

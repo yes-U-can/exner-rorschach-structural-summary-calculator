@@ -5,6 +5,7 @@ import type { RorschachResponse } from '@/types';
 import { OPTIONS } from '@/lib/options';
 import { SCORING_CONFIG } from '@/lib/constants';
 import { classifyGPHR } from '@/lib/gphr';
+import { applyScoringResponseRules } from '@/lib/scoringResponseRules';
 import SlotSelect from './SlotSelect';
 import DeterminantSlots from './DeterminantSlots';
 import ContentSlots from './ContentSlots';
@@ -66,20 +67,10 @@ export default function MobileCard({
 
   const updateField = <K extends keyof RorschachResponse>(field: K, value: RorschachResponse[K]) => {
     const next = { ...currentResponse, [field]: value };
-
-    // Keep the same domain constraints as desktop row input.
-    if ((field === 'determinants' || field === 'pair') && hasReflection && next.pair === '(2)') {
-      next.pair = 'none';
-    }
-    if ((field === 'dq' || field === 'fq') && next.dq === 'v' && next.fq === '+') {
-      next.fq = '';
-    }
-    if ((field === 'dq' || field === 'z') && next.dq === 'v' && next.z !== '') {
-      next.z = '';
-    }
+    const normalized = applyScoringResponseRules(next, currentResponse).response;
 
     const newResponses = [...responses];
-    newResponses[currentIndex] = next;
+    newResponses[currentIndex] = normalized;
     onChange(newResponses);
   };
 
@@ -190,6 +181,7 @@ export default function MobileCard({
           <label className="mb-1 block text-xs font-semibold text-[var(--text-soft)]">Determinants</label>
           <DeterminantSlots
             values={currentResponse.determinants}
+            specialScores={currentResponse.specialScores}
             onChange={(v) => updateField('determinants', v)}
           />
         </div>
@@ -258,6 +250,7 @@ export default function MobileCard({
           <label className="mb-1 block text-xs font-semibold text-[var(--text-soft)]">Special Score</label>
           <SpecialScoreSlots
             values={currentResponse.specialScores}
+            determinants={currentResponse.determinants}
             onChange={(v) => updateField('specialScores', v)}
           />
         </div>

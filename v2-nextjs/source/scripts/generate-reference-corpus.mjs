@@ -698,8 +698,12 @@ async function collectLocaleDocs(locale, promotionConfig) {
   }
 
   await walk(localeRoot);
-  routeDocs.sort((a, b) => a.canonicalRoute.localeCompare(b.canonicalRoute));
-  chunks.sort((a, b) => a.chunkId.localeCompare(b.chunkId));
+  routeDocs.sort((a, b) => (
+    a.canonicalRoute < b.canonicalRoute ? -1 : a.canonicalRoute > b.canonicalRoute ? 1 : 0
+  ));
+  chunks.sort((a, b) => (
+    a.chunkId < b.chunkId ? -1 : a.chunkId > b.chunkId ? 1 : 0
+  ));
   return { routeDocs, chunks };
 }
 

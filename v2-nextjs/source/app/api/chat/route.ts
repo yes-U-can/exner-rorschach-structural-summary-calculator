@@ -23,11 +23,18 @@ import {
 import { buildSafeApiErrorResponse, logApiError, logApiEvent } from '@/lib/apiError';
 import { parseJsonWithSizeLimit, REQUEST_BODY_SIZE_POLICIES } from '@/lib/requestBodyGuard';
 import { normalizeEphemeralChatContext } from '@/lib/chatEphemeralContext';
-import { getByokChatRateLimitKey, readByokSessionFromRequest } from '@/lib/byokSession';
-import { consumeChatRateLimit } from '@/lib/chatRateLimit';
+import {
+  getByokChatRateLimitKey,
+  getByokNetworkRateLimitKey,
+  readByokSessionFromRequest,
+} from '@/lib/byokSession';
+import { consumeChatNetworkRateLimit, consumeChatRateLimit } from '@/lib/chatRateLimit';
 import { BYOK_SESSION_MISSING_CODE } from '@/lib/chatApiErrors';
 import { detectChatSafetyAssessment } from '@/lib/chatSafety';
-import { detectChatDomainBoundary } from '@/lib/chatDomainBoundary';
+import {
+  detectChatContextPromptInjection,
+  detectChatDomainBoundary,
+} from '@/lib/chatDomainBoundary';
 import { classifyChatProviderError } from '@/lib/chatProviderErrors';
 import {
   CHAT_STREAM_CONTENT_TYPE,
@@ -226,8 +233,16 @@ export async function POST(req: Request) {
       );
     }
 
-    const rateLimit = consumeChatRateLimit(getByokChatRateLimitKey(byokSession));
-    if (!rateLimit.allowed) {
+    const sessionRateLimit = consumeChatRateLimit(getByokChatRateLimitKey(byokSession));
+    const networkRateLimit = sessionRateLimit.allowed
+      ? consumeChatNetworkRateLimit(getByokNetworkRateLimitKey(req, 'chat'))
+      : sessionRateLimit;
+    const blockedRateLimit = !sessionRateLimit.allowed
+      ? sessionRateLimit
+      : !networkRateLimit.allowed
+        ? networkRateLimit
+        : null;
+    if (blockedRateLimit) {
       return NextResponse.json(
         {
           error: 'Too many AI requests were sent from this session. Please wait and try again.',
@@ -237,7 +252,7 @@ export async function POST(req: Request) {
           status: 429,
           headers: {
             'Cache-Control': 'no-store',
-            'Retry-After': String(rateLimit.retryAfterSeconds),
+            'Retry-After': String(blockedRateLimit.retryAfterSeconds),
           },
         },
       );
@@ -253,6 +268,17 @@ export async function POST(req: Request) {
     }>(req, REQUEST_BODY_SIZE_POLICIES.chat);
     if (!parsedBody.ok) {
       return parsedBody.response;
+    }
+
+    if (
+      !parsedBody.value
+      || typeof parsedBody.value !== 'object'
+      || Array.isArray(parsedBody.value)
+    ) {
+      return NextResponse.json(
+        { error: 'Invalid JSON request body.' },
+        { status: 400 },
+      );
     }
 
     const body = parsedBody.value;
@@ -291,11 +317,23 @@ export async function POST(req: Request) {
     const provider = byokSession.provider;
     const apiKey = byokSession.apiKey;
     const selectedModel = getDefaultModelForProvider(provider);
-    const safety = detectChatSafetyAssessment({
+    const currentSafety = detectChatSafetyAssessment({
       text: userMessage.content,
       locale: workflowLocale,
       actorRole: 'user',
     });
+    const contextSafety = [...contextResult.messages]
+      .reverse()
+      .filter((message) => message.role === 'user')
+      .map((message) => detectChatSafetyAssessment({
+        text: message.content,
+        locale: workflowLocale,
+        actorRole: 'user',
+      }))
+      .find((assessment) => assessment.interventionTriggered);
+    const safety = currentSafety.interventionTriggered
+      ? currentSafety
+      : contextSafety ?? currentSafety;
 
     if (safety.interventionTriggered && safety.safeResponse) {
       logApiError('chat_safety_intervention', requestId, new Error('Safety intervention triggered.'), {
@@ -318,7 +356,13 @@ export async function POST(req: Request) {
       });
     }
 
-    const domainBoundary = detectChatDomainBoundary({
+    const contextDomainBoundary = contextResult.messages
+      .map((message) => detectChatContextPromptInjection({
+        text: message.content,
+        locale: workflowLocale,
+      }))
+      .find((assessment) => assessment.interventionTriggered);
+    const domainBoundary = contextDomainBoundary ?? detectChatDomainBoundary({
       text: userMessage.content,
       locale: workflowLocale,
     });

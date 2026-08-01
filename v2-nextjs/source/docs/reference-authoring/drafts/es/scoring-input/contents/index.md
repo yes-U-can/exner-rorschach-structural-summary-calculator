@@ -67,6 +67,7 @@ No explican por qué lo vio así; eso pertenece a los determinantes.
 
 - El contenido se decide según el objeto o la clase de objeto nombrado por el sujeto.
 - Una misma respuesta puede recibir más de un contenido si el sujeto realmente describe más de una clase de objeto.
+- Cada código de contenido se registra una sola vez dentro de una respuesta.
 - Los códigos de contenido deben revisarse en sus documentos individuales, incluidos `H`, `(H)`, `Hd`, `(Hd)` y `Hx` para las representaciones humanas.
 - También queda fijado el clúster animal y anatómico básico: [`A`](ref://scoring-input/contents/A), [`(A)`](ref://scoring-input/contents/%28A%29), [`Ad`](ref://scoring-input/contents/Ad), [`(Ad)`](ref://scoring-input/contents/%28Ad%29), [`An`](ref://scoring-input/contents/An).
 - Ahora también queda abierto un clúster cultural y natural básico: [`Art`](ref://scoring-input/contents/Art), [`Ay`](ref://scoring-input/contents/Ay), [`Bl`](ref://scoring-input/contents/Bl), [`Bt`](ref://scoring-input/contents/Bt).
@@ -84,8 +85,8 @@ No explican por qué lo vio así; eso pertenece a los determinantes.
 - `Bl` y `Bt` son contenidos específicos y no deben confundirse con determinantes de color ni con contenido animal.
 - `Cl`, `Ex` y `Fi` pueden sonar cercanos cuando el sujeto describe atmósfera o movimiento visual, pero siguen siendo contenidos distintos.
 - `Fd` como contenido no es lo mismo que [`FD`](ref://scoring-input/determinants/FD) como determinante.
-- `Na` puede desplazar a `Bt` o `Ls` si la respuesta realmente apunta a naturaleza general.
-- `Xy` no se combina con `An` cuando el sujeto describe la imagen como rayos X.
+- Si `Na` corresponde junto con `Bt` o `Ls`, se registra solo `Na`. Si no hay `Na` pero corresponden `Bt` y `Ls`, se registra únicamente el código que mejor represente el centro de la respuesta.
+- Cuando se registra `Xy`, no se añade `An` en la misma respuesta.
 - `Id` debe quedar como último recurso después de revisar categorías más específicas como `Sc` o `Art`.
 - `Hx` no describe una figura humana completa, sino una experiencia, emoción o sensación humana.
 - `An` no es un animal parcial cualquiera; exige que el foco recaiga en anatomía o estructura interna.

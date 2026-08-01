@@ -65,6 +65,7 @@ Contents는 피검자가 무엇을 보았는지를 기록하는 내용 부호군
 ## 채점/적용 조건
 
 - 반응의 중심 대상을 먼저 잡고, 필요하면 2차 내용까지 기록한다.
+- 한 반응 안에서 같은 내용 부호는 한 번만 기록한다.
 - 내용 부호는 determinant, location, FQ와 별개의 축이므로 섞어 쓰지 않는다.
 - 사람, 동물, 해부, 예술, 자연, 성 관련 내용 등은 각각 독립된 content category로 coding 한다.
 - 현재 이 개요 문서에서는 human cluster(`H`, `(H)`, `Hd`, `(Hd)`, `Hx`), animal/anatomy cluster(`A`, `(A)`, `Ad`, `(Ad)`, `An`), art/culture/basic nature cluster(`Art`, `Ay`, `Bl`, `Bt`), basic object/atmosphere cluster(`Cg`, `Cl`, `Ex`, `Fi`), food/map/household cluster(`Fd`, `Ge`, `Hh`), remaining environment/body/idiographic cluster(`Ls`, `Na`, `Sc`, `Sx`, `Xy`, `Id`)까지 우선 정리한다.
@@ -84,7 +85,8 @@ Contents는 피검자가 무엇을 보았는지를 기록하는 내용 부호군
 - `Fd`는 먹을 수 있는 음식, `Ge`는 실제 풍경이 아니라 지도(map), `Hh`는 가정용품일 때 붙는다.
 - `Fd`는 content code이고 `FD`는 determinant이므로 표기가 비슷해도 완전히 다른 항목이다.
 - `Ls`는 실제 풍경, `Na`는 자연 환경 전반, `Sc`는 과학/과학의 산물, `Sx`는 성 관련 내용, `Xy`는 X-ray, `Id`는 표준 범주에 안 맞는 특이 내용이다.
-- `Na`는 `Bt`와 `Ls`보다 우선하며, `Xy`를 주면 `An`은 2차로 더하지 않는다.
+- `Na`가 `Bt` 또는 `Ls`와 함께 해당되면 `Na`만 기록한다. `Na` 없이 `Bt`와 `Ls`가 함께 해당되면 둘 중 반응의 중심을 더 잘 나타내는 하나만 기록한다.
+- `Xy`를 기록하면 같은 반응에 `An`을 2차 내용으로 더하지 않는다.
 - 인간 내용은 이후 `GHR/PHR`, `Pure H`, `H ratio`와 연결되므로 지나치게 넓게 잡지 말아야 한다.
 - 역사적 인물이나 특정 인물은 기본 human content에 `Ay`가 2차로 붙을 수 있다.
 

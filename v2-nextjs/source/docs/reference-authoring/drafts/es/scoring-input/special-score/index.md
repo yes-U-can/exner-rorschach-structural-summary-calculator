@@ -73,6 +73,8 @@ Los Códigos Especiales complementan la codificación principal y describen cual
 
 - Los códigos especiales se agregan a la codificación principal; no sustituyen localización, determinantes ni contenidos.
 - Solo se asignan cuando la cualidad especial aparece de forma clara en la respuesta.
+- En `DV1/DV2`, `DR1/DR2`, `INCOM1/INCOM2` y `FABCOM1/FABCOM2`, se registra un solo nivel de cada par dentro de una respuesta. Si el nivel es dudoso, se usa conservadoramente el Nivel 1.
+- Distintos códigos especiales críticos pueden registrarse juntos solo cuando cada uno se basa en una expresión independiente. Si la misma expresión o el mismo caso de confusión cognitiva cumple criterios superpuestos, se registra únicamente el código con mayor peso en `WSum6`.
 - Cada código se aplica mediante sus criterios específicos; debe revisarse el documento correspondiente antes de asignarlo.
 - `COP` y `AG` dependen de que la respuesta tenga movimiento, normalmente [`M`](ref://scoring-input/determinants/M), [`FM`](ref://scoring-input/determinants/FM) o [`m`](ref://scoring-input/determinants/m).
 - `AB` se conecta con formulación abstracta y suele revisarse junto con [`Hx`](ref://scoring-input/contents/Hx), [`Art`](ref://scoring-input/contents/Art) y [`Ay`](ref://scoring-input/contents/Ay).

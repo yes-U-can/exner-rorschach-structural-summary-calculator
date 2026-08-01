@@ -67,6 +67,7 @@ They do not explain why it looked that way; that belongs to determinants.
 
 - Content is assigned from the object or class of object named by the person.
 - One response may receive more than one content code if the person truly describes more than one class of object.
+- Each content code is recorded only once within a response.
 - Human contents include [`H`](ref://scoring-input/contents/H), [`(H)`](ref://scoring-input/contents/%28H%29), [`Hd`](ref://scoring-input/contents/Hd), [`(Hd)`](ref://scoring-input/contents/%28Hd%29), and [`Hx`](ref://scoring-input/contents/Hx).
 - Animal and anatomy contents include [`A`](ref://scoring-input/contents/A), [`(A)`](ref://scoring-input/contents/%28A%29), [`Ad`](ref://scoring-input/contents/Ad), [`(Ad)`](ref://scoring-input/contents/%28Ad%29), and [`An`](ref://scoring-input/contents/An).
 - Art, cultural-historical, blood, and botanical contents are coded as [`Art`](ref://scoring-input/contents/Art), [`Ay`](ref://scoring-input/contents/Ay), [`Bl`](ref://scoring-input/contents/Bl), and [`Bt`](ref://scoring-input/contents/Bt).
@@ -90,7 +91,8 @@ They do not explain why it looked that way; that belongs to determinants.
 - `Bl` codes blood as content, not color as a determinant.
 - `Cl`, `Ex`, and `Fi` can look visually close, but they separate cloud, explosion, and fire/smoke content.
 - `Fd` as content is not the same as [`FD`](ref://scoring-input/determinants/FD) as a determinant.
-- `Xy` is not simply another way to write `An`; it codes an X-ray or radiographic format and later connects to [`An + Xy`](ref://result-interpretation/lower-section/selfPerception/An_Xy).
+- If `Na` applies with `Bt` or `Ls`, record `Na` only. If `Na` is absent but both `Bt` and `Ls` apply, record only the one that best represents the response.
+- `Xy` is not simply another way to write `An`; when `Xy` is recorded, do not add `An` to the same response.
 - `Id` is a last resort and should not absorb responses that fit better under `Sc` or `Art`.
 - Human content by itself does not decide [`GHR`](ref://scoring-input/gphr/GHR) or [`PHR`](ref://scoring-input/gphr/PHR); those require an additional coding step.
 
