@@ -2060,20 +2060,15 @@ html.theme-switching [data-theme-allow-transition]::after {
     color: var(--brand-700);
   }
 
-  .ui-chat-message-action.is-selected.is-helpful {
-    border-color: var(--success-border);
-    background-color: var(--success-text);
-    color: var(--surface-base);
-  }
-
-  .ui-chat-message-action.is-selected.is-unhelpful {
-    border-color: var(--danger-hover-border);
-    background-color: var(--danger-text);
-    color: var(--surface-base);
+  .ui-chat-message-action.is-selected {
+    border-color: transparent;
+    background-color: transparent;
+    color: var(--brand-700);
   }
 
   .ui-chat-message-action.is-selected:hover:not(:disabled) {
-    filter: brightness(0.95);
+    background-color: var(--surface-muted);
+    color: var(--brand-700);
   }
 
   .ui-chat-message-action:focus-visible,

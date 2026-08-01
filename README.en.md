@@ -51,7 +51,7 @@ The connected work from v2.1.8 through v2.1.10 is documented across the correspo
 
 ## v2.2.9
 
-v2.2.9 is a bug-fix release that makes the [Card] sort button alternate between ascending and descending order and opens the intended Interpretation Assistant after an AI session is started during navigation. In the Interpretation Assistant, the button shown while the reader is above the latest message now displays either three dots or a down arrow according to the AI response state. Helpful and unhelpful feedback now has a clearly filled selected state, and the save, skip, and remove behavior is covered by automated checks.
+v2.2.9 is a bug-fix release that makes the [Card] sort button alternate between ascending and descending order and opens the intended Interpretation Assistant after an AI session is started during navigation. In the Interpretation Assistant, the button shown while the reader is above the latest message now displays either three dots or a down arrow according to the AI response state. Selecting helpful or unhelpful feedback leaves the button background unchanged and turns only the thumb into a solid icon in the app's blue brand color. The save, skip, and remove behavior is also covered by automated checks.
 
 Structural Summary formulas and AI-answer rules are unchanged, so existing protocols do not need to be recalculated. The archive dates for v1.0.2 and v1.0.3 and the notation of four-digit technical counts in the five-language documents were also aligned. See the [v2.2.9 patch note](./v2-nextjs/releases/v2.2.9/README.en.md) for details.
 

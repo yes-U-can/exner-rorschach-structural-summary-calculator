@@ -24,7 +24,7 @@ O movimento dos pontos é reduzido quando o sistema operacional solicita a redu�
 
 ### Avaliação útil ou não útil
 
-O estado selecionado dos botões útil e não útil era pouco diferente do estado não selecionado. Agora, uma avaliação útil preenche o botão em verde, e uma avaliação não útil o preenche em vermelho. Os dois estados usam ícones sólidos para deixar a escolha atual claramente visível.
+O estado selecionado dos botões útil e não útil era pouco diferente do estado não selecionado. O fundo e a borda do botão agora mantêm a aparência existente, e apenas o polegar selecionado passa a ser um ícone sólido no azul do aplicativo. Assim, a escolha atual fica clara sem introduzir um novo código de cores para as avaliações.
 
 A avaliação é salva assim que um dos botões é pressionado. Ao escolher [Pular] na janela opcional de motivos, apenas a avaliação é mantida, sem códigos de motivo. Pressionar novamente o mesmo botão selecionado exclui a avaliação do banco de dados do servidor e devolve o botão ao estado não selecionado. O texto da pergunta e da resposta não é enviado ao banco de dados de avaliações.
 

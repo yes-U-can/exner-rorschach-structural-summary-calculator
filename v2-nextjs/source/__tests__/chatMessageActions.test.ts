@@ -1,4 +1,5 @@
 import { createElement } from 'react';
+import { readFileSync } from 'node:fs';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { describe, expect, it } from 'vitest';
 import { ChatMessageActions } from '@/components/chat/ChatMessageActions';
@@ -83,7 +84,7 @@ describe('feedback selection controls', () => {
     });
   });
 
-  it('renders a strongly identifiable selected state for either rating', () => {
+  it('renders a solid selected thumb for either rating', () => {
     const helpfulMarkup = renderToStaticMarkup(createElement(ChatMessageActions, {
       content: 'answer',
       language: 'ko',
@@ -103,5 +104,18 @@ describe('feedback selection controls', () => {
     expect(unhelpfulMarkup).toContain('is-selected');
     expect(unhelpfulMarkup).toContain('data-feedback-rating="unhelpful"');
     expect(unhelpfulMarkup).toContain('data-feedback-selected="true"');
+  });
+
+  it('colors only the selected thumb with the app brand color', () => {
+    const globalsCss = readFileSync(new URL('../app/globals.css', import.meta.url), 'utf8');
+    const selectedRule = globalsCss.match(
+      /\.ui-chat-message-action\.is-selected\s*\{([^}]*)\}/,
+    )?.[1];
+
+    expect(selectedRule).toContain('border-color: transparent');
+    expect(selectedRule).toContain('background-color: transparent');
+    expect(selectedRule).toContain('color: var(--brand-700)');
+    expect(selectedRule).not.toContain('success');
+    expect(selectedRule).not.toContain('danger');
   });
 });

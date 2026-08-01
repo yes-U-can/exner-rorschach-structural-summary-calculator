@@ -24,7 +24,7 @@ The dot motion is reduced when the operating system requests reduced motion.
 
 ### Helpful and unhelpful feedback
 
-The selected state of the helpful and unhelpful buttons was too similar to their unselected state. A helpful selection now uses a filled green button, while an unhelpful selection uses a filled red button. Both use solid icons so the current choice is easy to identify.
+The selected state of the helpful and unhelpful buttons was too similar to their unselected state. The button background and border now retain their existing appearance, while only the selected thumb changes to a solid icon in the app's blue brand color. This makes the current choice easy to identify without introducing a new feedback color scheme.
 
 The rating is saved as soon as either button is pressed. Choosing [Skip] in the optional reason dialog keeps the rating with no reason codes. Pressing the same selected button again deletes that rating from the server database and returns the button to its unselected state. The question and answer text are not sent to the feedback database.
 

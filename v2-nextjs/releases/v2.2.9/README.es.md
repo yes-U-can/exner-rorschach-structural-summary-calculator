@@ -24,7 +24,7 @@ El movimiento de los puntos se reduce cuando el sistema operativo solicita reduc
 
 ### Valoración útil o no útil
 
-El estado seleccionado de los botones útil y no útil se distinguía poco del estado sin seleccionar. Ahora una valoración útil muestra el botón relleno en verde y una valoración no útil lo muestra relleno en rojo. Ambos estados usan iconos sólidos para que la selección actual sea fácil de reconocer.
+El estado seleccionado de los botones útil y no útil se distinguía poco del estado sin seleccionar. El fondo y el borde del botón conservan ahora su aspecto habitual, y solo el pulgar seleccionado pasa a ser un icono sólido con el azul de la aplicación. Así se reconoce la selección actual sin introducir un nuevo código de colores para las valoraciones.
 
 La valoración se guarda en cuanto se pulsa uno de los botones. Si se elige [Omitir] en el cuadro opcional de motivos, se conserva solo la valoración, sin códigos de motivo. Al volver a pulsar el mismo botón seleccionado, la valoración se elimina de la base de datos del servidor y el botón vuelve al estado sin seleccionar. El texto de la pregunta y de la respuesta no se envía a la base de datos de valoraciones.
 

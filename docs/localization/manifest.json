@@ -46,7 +46,7 @@
                            {
                                "id":  "root-readme",
                                "canonical":  "README.md",
-                               "canonicalSha256":  "223791641d668e6c5d3831da8c95f3b7e8ee8902403b5209a762fce744fd1b78",
+                               "canonicalSha256":  "9e4acb90b875825ecc3db6a58e83ddd73560305b5379e96d1fe4947a5dbe04b6",
                                "reviewStatus":  "reviewed",
                                "translations":  {
                                                     "en":  "README.en.md",
@@ -154,7 +154,7 @@
                            {
                                "id":  "v2.2.9-release-note",
                                "canonical":  "v2-nextjs/releases/v2.2.9/README.md",
-                               "canonicalSha256":  "c390442c53f96ca97fc7f844a5913558b77399a78614b05c6dacda5296e4ef07",
+                               "canonicalSha256":  "2ed3ca19d08b482f8c0205cf7e65049a186c5f3be466a5a388448f8129942fea",
                                "reviewStatus":  "reviewed",
                                "translations":  {
                                                     "en":  "v2-nextjs/releases/v2.2.9/README.en.md",

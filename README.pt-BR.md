@@ -51,7 +51,7 @@ O trabalho relacionado da v2.1.8 à v2.1.10 está registrado nas respectivas not
 
 ## v2.2.9
 
-A v2.2.9 é uma correção de erros que permite alternar entre a ordem crescente e a decrescente com o botão [Card] e abre o Assistente de Interpretação pretendido quando uma sessão de IA é iniciada durante esse acesso. No Assistente de Interpretação, quando a pessoa está lendo acima da mensagem mais recente, o botão mostra três pontos ou uma seta para baixo conforme o estado da resposta da IA. As avaliações útil e não útil agora exibem um estado selecionado claramente preenchido, e os testes automáticos cobrem o salvamento, a opção de pular os motivos e a exclusão ao pressionar novamente o mesmo botão.
+A v2.2.9 é uma correção de erros que permite alternar entre a ordem crescente e a decrescente com o botão [Card] e abre o Assistente de Interpretação pretendido quando uma sessão de IA é iniciada durante esse acesso. No Assistente de Interpretação, quando a pessoa está lendo acima da mensagem mais recente, o botão mostra três pontos ou uma seta para baixo conforme o estado da resposta da IA. Ao selecionar uma avaliação útil ou não útil, o fundo do botão permanece igual; apenas o polegar passa a ser um ícone sólido no azul do aplicativo. Os testes automáticos também cobrem o salvamento, a opção de pular os motivos e a exclusão ao pressionar novamente o mesmo botão.
 
 As fórmulas do Sumário Estrutural e as regras de resposta da IA não mudaram, portanto protocolos existentes não precisam ser recalculados. Também foram alinhadas as datas de arquivo da v1.0.2 e da v1.0.3 e a notação das contagens técnicas de quatro algarismos nos documentos dos cinco idiomas. Consulte a [nota da v2.2.9](./v2-nextjs/releases/v2.2.9/README.pt-BR.md) para mais detalhes.
 
