@@ -46,7 +46,7 @@
                            {
                                "id":  "root-readme",
                                "canonical":  "README.md",
-                               "canonicalSha256":  "ffc647c2f4ef59560df075c8fe2fb85ad9b961acd66e07e618db0c112b9a9e1f",
+                               "canonicalSha256":  "223791641d668e6c5d3831da8c95f3b7e8ee8902403b5209a762fce744fd1b78",
                                "reviewStatus":  "reviewed",
                                "translations":  {
                                                     "en":  "README.en.md",
@@ -58,7 +58,7 @@
                            {
                                "id":  "root-changelog",
                                "canonical":  "CHANGELOG.md",
-                               "canonicalSha256":  "06087ff538f8a182f3d0c30cbe54605cad4a97c2bbc9635ef4c577fec4dcbbf3",
+                               "canonicalSha256":  "01043ab7e4bd2ee237094ad767a512db30b66f21e4216ebed5f438020e01cb4d",
                                "reviewStatus":  "reviewed",
                                "translations":  {
                                                     "en":  "CHANGELOG.en.md",
@@ -106,7 +106,7 @@
                            {
                                "id":  "v2-readme",
                                "canonical":  "v2-nextjs/README.md",
-                               "canonicalSha256":  "d02b55562cff7c976aa9fb3ed1302e2a6cc8ee0b2c8bc24dbe21d7198bb4b1db",
+                               "canonicalSha256":  "71703ec4952f5769e189b1ecd7ae261d9c68ca1154c533d0a89ae64249034932",
                                "reviewStatus":  "reviewed",
                                "translations":  {
                                                     "en":  "v2-nextjs/README.en.md",
@@ -142,13 +142,25 @@
                            {
                                "id":  "v2.2.8-release-note",
                                "canonical":  "v2-nextjs/releases/v2.2.8/README.md",
-                               "canonicalSha256":  "7644d7b7cb884a3923b337b2c6ea31da7a8558ef095152f6b540ae522455392b",
+                               "canonicalSha256":  "af635702e0b5c0b321a96b0b6772e5b7b7dcd878d330ebb89e52338ceb014c1e",
                                "reviewStatus":  "reviewed",
                                "translations":  {
                                                     "en":  "v2-nextjs/releases/v2.2.8/README.en.md",
                                                     "ja":  "v2-nextjs/releases/v2.2.8/README.ja.md",
                                                     "es":  "v2-nextjs/releases/v2.2.8/README.es.md",
                                                     "pt-BR":  "v2-nextjs/releases/v2.2.8/README.pt-BR.md"
+                                                }
+                           },
+                           {
+                               "id":  "v2.2.9-release-note",
+                               "canonical":  "v2-nextjs/releases/v2.2.9/README.md",
+                               "canonicalSha256":  "c390442c53f96ca97fc7f844a5913558b77399a78614b05c6dacda5296e4ef07",
+                               "reviewStatus":  "reviewed",
+                               "translations":  {
+                                                    "en":  "v2-nextjs/releases/v2.2.9/README.en.md",
+                                                    "ja":  "v2-nextjs/releases/v2.2.9/README.ja.md",
+                                                    "es":  "v2-nextjs/releases/v2.2.9/README.es.md",
+                                                    "pt-BR":  "v2-nextjs/releases/v2.2.9/README.pt-BR.md"
                                                 }
                            },
                            {

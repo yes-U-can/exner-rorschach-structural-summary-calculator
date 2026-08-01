@@ -2051,14 +2051,29 @@ html.theme-switching [data-theme-allow-transition]::after {
   }
 
   .ui-chat-message-action {
-    @apply inline-flex h-8 w-8 items-center justify-center rounded-md transition-colors disabled:cursor-not-allowed disabled:opacity-40;
+    @apply inline-flex h-8 w-8 items-center justify-center rounded-md border border-transparent transition-colors disabled:cursor-not-allowed disabled:opacity-40;
     color: var(--text-soft);
   }
 
-  .ui-chat-message-action:hover:not(:disabled),
-  .ui-chat-message-action.is-selected {
+  .ui-chat-message-action:hover:not(:disabled) {
     background-color: var(--surface-muted);
     color: var(--brand-700);
+  }
+
+  .ui-chat-message-action.is-selected.is-helpful {
+    border-color: var(--success-border);
+    background-color: var(--success-text);
+    color: var(--surface-base);
+  }
+
+  .ui-chat-message-action.is-selected.is-unhelpful {
+    border-color: var(--danger-hover-border);
+    background-color: var(--danger-text);
+    color: var(--surface-base);
+  }
+
+  .ui-chat-message-action.is-selected:hover:not(:disabled) {
+    filter: brightness(0.95);
   }
 
   .ui-chat-message-action:focus-visible,
@@ -2078,6 +2093,44 @@ html.theme-switching [data-theme-allow-transition]::after {
   .ui-chat-scroll-latest:hover {
     background-color: var(--surface-muted);
     color: var(--brand-700);
+  }
+
+  .ui-chat-scroll-streaming {
+    display: inline-flex;
+    height: 1rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+  }
+
+  .ui-chat-stream-dot {
+    width: 0.25rem;
+    height: 0.25rem;
+    border-radius: 9999px;
+    background-color: currentColor;
+    animation: ui-chat-stream-dot-bounce 1.05s ease-in-out infinite;
+  }
+
+  .ui-chat-stream-dot:nth-child(1) {
+    animation-delay: -0.28s;
+  }
+
+  .ui-chat-stream-dot:nth-child(2) {
+    animation-delay: -0.14s;
+  }
+
+  @keyframes ui-chat-stream-dot-bounce {
+    0%,
+    60%,
+    100% {
+      transform: translateY(0);
+      opacity: 0.48;
+    }
+
+    30% {
+      transform: translateY(-0.18rem);
+      opacity: 1;
+    }
   }
 
   .ui-coding-chat-scroll-region .ui-chat-scroll-latest {

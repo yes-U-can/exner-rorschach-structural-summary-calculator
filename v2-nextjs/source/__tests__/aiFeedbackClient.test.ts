@@ -36,4 +36,40 @@ describe('AI response feedback client', () => {
     expect(body).not.toHaveProperty('response');
     expect(body).not.toHaveProperty('prompt');
   });
+
+  it('submits a rating with no reasons when reason selection is skipped', async () => {
+    const { submitAiResponseFeedback } = await import('@/lib/aiFeedbackClient');
+    await submitAiResponseFeedback({
+      feedbackId: 'ce055b4d-5efe-4ec0-b381-e46c7a57efe1',
+      rating: 'helpful',
+      workflowType: 'interpretation',
+      locale: 'ko',
+      completionState: 'completed',
+      responseChars: 820,
+      reasonCodes: [],
+    });
+
+    const requestInit = fetchMock.mock.calls[0]?.[1] as RequestInit;
+    const body = JSON.parse(String(requestInit.body)) as Record<string, unknown>;
+    expect(body.rating).toBe('helpful');
+    expect(body.reasonCodes).toEqual([]);
+  });
+
+  it('submits a null rating with no reasons when feedback is removed', async () => {
+    const { submitAiResponseFeedback } = await import('@/lib/aiFeedbackClient');
+    await submitAiResponseFeedback({
+      feedbackId: 'ce055b4d-5efe-4ec0-b381-e46c7a57efe1',
+      rating: null,
+      workflowType: 'interpretation',
+      locale: 'ko',
+      completionState: 'completed',
+      responseChars: 820,
+      reasonCodes: [],
+    });
+
+    const requestInit = fetchMock.mock.calls[0]?.[1] as RequestInit;
+    const body = JSON.parse(String(requestInit.body)) as Record<string, unknown>;
+    expect(body.rating).toBeNull();
+    expect(body.reasonCodes).toEqual([]);
+  });
 });

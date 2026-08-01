@@ -21,6 +21,18 @@ const v2SourceUrl = `${exhibitionRepoUrl}/tree/main/v2-nextjs/source`;
 
 export const v2NextVersions: VersionArchiveEntry[] = [
   {
+    version: 'v2.2.9',
+    title: 'Version 2.2.9',
+    series: 'v2-nextjs',
+    publishedAt: '2026-08-01',
+    releaseKind: 'bugfix',
+    releaseLabel: '버그 패치',
+    summary:
+      'CARD 정렬 버튼을 오름차순과 내림차순으로 전환할 수 있게 고치고, 해석 도우미로 들어가며 AI 세션을 시작했을 때 목적 화면으로 바로 이동하게 했습니다. 대화 중에는 응답 상태에 따라 최신 메시지 이동 버튼이 점 세 개 또는 아래 화살표로 바뀝니다. 공개 아카이브의 날짜와 숫자 표기도 함께 정리했습니다.',
+    sourceUrl: v2SourceUrl,
+    releaseUrl: v2ReleaseUrl('v2.2.9'),
+  },
+  {
     version: 'v2.2.8',
     title: 'Version 2.2.8',
     series: 'v2-nextjs',

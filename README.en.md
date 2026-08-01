@@ -23,7 +23,7 @@ Each patch note records what changed, the conditions that may be affected, wheth
 ## What is available
 
 - [Next.js] Live web app: [exner.yesucan.co.kr](https://exner.yesucan.co.kr)
-- [Next.js] Latest version 2 release: [v2-nextjs/releases/v2.2.8](./v2-nextjs/releases/v2.2.8/README.en.md)
+- [Next.js] Latest version 2 release: [v2-nextjs/releases/v2.2.9](./v2-nextjs/releases/v2.2.9/README.en.md)
 - [Next.js] v2.2.2 calculation accuracy recheck: [v2-nextjs/source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md](./v2-nextjs/source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md)
 - [Next.js] v2.2.2 Cn explanation and live GPT-5.5 checks in 5 languages: [v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md](./v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md)
 - [Next.js] v2.2.0 UI validation: [v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md](./v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md)
@@ -48,6 +48,12 @@ The v2.1.x series improved the AI assistants in stages: completing answers, find
 - **v2.1.10:** corrected remaining Japanese code recognition, broad interpretation questions, and new-database setup.
 
 The connected work from v2.1.8 through v2.1.10 is documented across the corresponding patch notes.
+
+## v2.2.9
+
+v2.2.9 is a bug-fix release that makes the [Card] sort button alternate between ascending and descending order and opens the intended Interpretation Assistant after an AI session is started during navigation. In the Interpretation Assistant, the button shown while the reader is above the latest message now displays either three dots or a down arrow according to the AI response state. Helpful and unhelpful feedback now has a clearly filled selected state, and the save, skip, and remove behavior is covered by automated checks.
+
+Structural Summary formulas and AI-answer rules are unchanged, so existing protocols do not need to be recalculated. The archive dates for v1.0.2 and v1.0.3 and the notation of four-digit technical counts in the five-language documents were also aligned. See the [v2.2.9 patch note](./v2-nextjs/releases/v2.2.9/README.en.md) for details.
 
 ## v2.2.8
 
@@ -107,6 +113,7 @@ The GPT-5.5 assistants were restricted from expanding beyond the Exner Comprehen
 
 ## [Next.js] Version 2 release history
 
+- **[2026-08-01] v2.2.9 (bug-fix release)** [Patch note](./v2-nextjs/releases/v2.2.9/README.en.md) [Source](./v2-nextjs/source/)
 - **[2026-07-31] v2.2.8 (bug-fix release)** [Patch note](./v2-nextjs/releases/v2.2.8/README.en.md) [Source](./v2-nextjs/source/)
 - **[2026-07-23] v2.2.7 (bug-fix release)** [Patch note](./v2-nextjs/releases/v2.2.7/README.en.md) [Source](./v2-nextjs/source/)
 - **[2026-07-20] v2.2.6 (bug-fix release)** [Patch note](./v2-nextjs/releases/v2.2.6/README.en.md) [Source](./v2-nextjs/source/)

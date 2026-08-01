@@ -755,6 +755,7 @@ function ChatPageClient() {
             <ChatScrollToLatestButton
               label={messageActionsUi.jumpToLatest}
               onClick={() => resumeFollowing('smooth')}
+              streaming={isStreaming}
             />
           ) : null}
           {userPrompts.length > 1 ? (

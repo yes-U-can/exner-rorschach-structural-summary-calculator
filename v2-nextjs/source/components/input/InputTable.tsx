@@ -8,8 +8,12 @@ import { useTranslation } from '@/hooks/useTranslation';
 import { useToast } from '@/components/ui/Toast';
 import { SCORING_CONFIG } from '@/lib/constants';
 import { classifyGPHR } from '@/lib/gphr';
-import { OPTIONS } from '@/lib/options';
 import { applyScoringResponseRules } from '@/lib/scoringResponseRules';
+import {
+  detectCardSortDirection,
+  getNextCardSortDirection,
+  sortResponsesByCard,
+} from '@/lib/cardSort';
 import {
   SCORING_CANVAS_DEFAULT_ZOOM,
   SCORING_CANVAS_VERTICAL_EDGE_PADDING,
@@ -27,7 +31,13 @@ import {
 import InputRow from './InputRow';
 import Button from '@/components/ui/Button';
 import Tooltip from '@/components/ui/Tooltip';
-import { InformationCircleIcon, XMarkIcon, PencilSquareIcon, BarsArrowUpIcon } from '@heroicons/react/24/outline';
+import {
+  BarsArrowDownIcon,
+  BarsArrowUpIcon,
+  InformationCircleIcon,
+  PencilSquareIcon,
+  XMarkIcon,
+} from '@heroicons/react/24/outline';
 
 const DRAG_START_THRESHOLD = 6;
 const RESPONSE_MEMO_MAX_BYTES = 1200;
@@ -51,27 +61,32 @@ function truncateToUtf8Bytes(value: string, maxBytes: number) {
 
 const TABLE_COPY = {
   ko: {
-    cardSortLabel: 'Card 오름차순 정렬',
+    cardSortAscendingLabel: 'Card 오름차순 정렬',
+    cardSortDescendingLabel: 'Card 내림차순 정렬',
     responseByteLimit: '최대 1200바이트',
     responseByteLimitReached: 'RESPONSE 메모는 최대 1200바이트까지 입력할 수 있습니다.',
   },
   en: {
-    cardSortLabel: 'Sort Card ascending',
+    cardSortAscendingLabel: 'Sort Card ascending',
+    cardSortDescendingLabel: 'Sort Card descending',
     responseByteLimit: 'Up to 1200 bytes',
     responseByteLimitReached: 'The RESPONSE memo can be up to 1200 bytes.',
   },
   ja: {
-    cardSortLabel: 'Cardを昇順に並べ替え',
+    cardSortAscendingLabel: 'Cardを昇順に並べ替え',
+    cardSortDescendingLabel: 'Cardを降順に並べ替え',
     responseByteLimit: '最大1200バイト',
     responseByteLimitReached: 'RESPONSEメモは最大1200バイトまで入力できます。',
   },
   es: {
-    cardSortLabel: 'Ordenar Card ascendente',
+    cardSortAscendingLabel: 'Ordenar Card ascendente',
+    cardSortDescendingLabel: 'Ordenar Card descendente',
     responseByteLimit: 'Máximo 1200 bytes',
     responseByteLimitReached: 'El memo RESPONSE admite hasta 1200 bytes.',
   },
   pt: {
-    cardSortLabel: 'Ordenar Card em ordem crescente',
+    cardSortAscendingLabel: 'Ordenar Card em ordem crescente',
+    cardSortDescendingLabel: 'Ordenar Card em ordem decrescente',
     responseByteLimit: 'Até 1200 bytes',
     responseByteLimitReached: 'O memo RESPONSE pode ter até 1200 bytes.',
   },
@@ -195,7 +210,16 @@ export default function InputTable({
   const scoreTooltipText = t('input.scoreTooltip');
   const gphrTooltipText = t('input.gphrTooltip');
   const noTooltipText = t('input.noReorderTooltip');
-  const cardSortLabel = tableCopy.cardSortLabel;
+  const currentCardSortDirection = useMemo(
+    () => detectCardSortDirection(responses),
+    [responses],
+  );
+  const nextCardSortDirection = currentCardSortDirection === 'ascending'
+    ? 'descending'
+    : 'ascending';
+  const cardSortLabel = nextCardSortDirection === 'ascending'
+    ? tableCopy.cardSortAscendingLabel
+    : tableCopy.cardSortDescendingLabel;
 
   const { showToast } = useToast();
   const [editingResponseIndex, setEditingResponseIndex] = useState<number | null>(null);
@@ -226,10 +250,6 @@ export default function InputTable({
   const pointerYRef = useRef(0);
   const rafIdRef = useRef<number | null>(null);
   const responsePopupBackdropPointerStartedRef = useRef(false);
-  const cardOrderMap = useMemo(
-    () => new Map<string, number>(OPTIONS.CARDS.map((card, idx) => [card, idx])),
-    []
-  );
   const selectedRowSet = useMemo(() => new Set(selectedRowIndices), [selectedRowIndices]);
 
   useEffect(() => {
@@ -533,21 +553,14 @@ export default function InputTable({
     onChange(newResponses);
   }, [onChange, showToast, t]);
 
-  const sortByCardAscending = useCallback(() => {
+  const sortByCard = useCallback(() => {
     const currentResponses = responsesRef.current;
-    const sorted = currentResponses
-      .map((response, originalIndex) => ({ response, originalIndex }))
-      .sort((a, b) => {
-        const aRank = cardOrderMap.get(a.response.card) ?? Number.MAX_SAFE_INTEGER;
-        const bRank = cardOrderMap.get(b.response.card) ?? Number.MAX_SAFE_INTEGER;
-        if (aRank !== bRank) return aRank - bRank;
-        return a.originalIndex - b.originalIndex;
-      })
-      .map((entry) => entry.response);
+    const direction = getNextCardSortDirection(currentResponses);
+    const sorted = sortResponsesByCard(currentResponses, direction);
 
     responsesRef.current = sorted;
     onChange(sorted);
-  }, [cardOrderMap, onChange]);
+  }, [onChange]);
 
   const clearDragState = useCallback(() => {
     setDragSourceIndex(null);
@@ -814,6 +827,7 @@ export default function InputTable({
               {headers.map((h) => (
                 <th
                   key={h.key}
+                  aria-sort={h.key === 'card' ? currentCardSortDirection ?? 'none' : undefined}
                   className={`border-r border-b-2 border-white/40 border-b-[var(--table-header-border)] px-2 py-3 text-center text-[11px] font-semibold uppercase tracking-wider text-[var(--brand-700)] last:border-r-0 first:rounded-tl-xl last:rounded-tr-xl ${h.className}`}
                 >
                   {h.tooltip ? (
@@ -825,12 +839,16 @@ export default function InputTable({
                       <span>{h.label}</span>
                       <button
                         type="button"
-                        onClick={sortByCardAscending}
+                        onClick={sortByCard}
                         aria-label={cardSortLabel}
                         title={cardSortLabel}
                         className="inline-flex items-center justify-center rounded p-0.5 text-[var(--brand-700)]/80 transition-colors hover:bg-[var(--surface-base)]/40 hover:text-[var(--brand-700)]"
                       >
-                        <BarsArrowUpIcon className="w-3.5 h-3.5" />
+                        {nextCardSortDirection === 'ascending' ? (
+                          <BarsArrowUpIcon className="w-3.5 h-3.5" />
+                        ) : (
+                          <BarsArrowDownIcon className="w-3.5 h-3.5" />
+                        )}
                       </button>
                     </span>
                   ) : (

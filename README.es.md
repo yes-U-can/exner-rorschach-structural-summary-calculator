@@ -23,7 +23,7 @@ Cada nota de versión registra los cambios, las condiciones que podrían verse a
 ## Contenido publicado
 
 - [Next.js] Aplicación web: [exner.yesucan.co.kr](https://exner.yesucan.co.kr)
-- [Next.js] Versión 2 más reciente: [v2-nextjs/releases/v2.2.8](./v2-nextjs/releases/v2.2.8/README.es.md)
+- [Next.js] Versión 2 más reciente: [v2-nextjs/releases/v2.2.9](./v2-nextjs/releases/v2.2.9/README.es.md)
 - [Next.js] Revisión de la exactitud de cálculo en v2.2.2: [v2-nextjs/source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md](./v2-nextjs/source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md)
 - [Next.js] Explicación de Cn en v2.2.2 y llamadas reales a GPT-5.5 en 5 idiomas: [v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md](./v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md)
 - [Next.js] Validación de la interfaz de v2.2.0: [v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md](./v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md)
@@ -48,6 +48,12 @@ En v2.1.x se mejoró por etapas que los asistentes de IA completaran sus respues
 - **v2.1.10:** se corrigieron los problemas restantes de reconocimiento de códigos japoneses, preguntas amplias de interpretación y configuración de una base de datos nueva.
 
 El trabajo relacionado de v2.1.8 a v2.1.10 se documenta en las notas de cada parche.
+
+## v2.2.9
+
+v2.2.9 es una corrección de errores que permite alternar entre el orden ascendente y descendente con el botón [Card] y abre el Asistente de Interpretación previsto cuando se inicia una sesión de IA durante ese acceso. En el Asistente de Interpretación, cuando se está leyendo por encima del mensaje más reciente, el botón muestra tres puntos o una flecha hacia abajo según el estado de la respuesta de la IA. Las valoraciones útil y no útil muestran ahora un estado seleccionado claramente relleno, y las comprobaciones automáticas cubren el guardado, la omisión de motivos y la eliminación al volver a pulsar el mismo botón.
+
+Las fórmulas del Sumario Estructural y las reglas de respuesta de la IA no cambiaron, por lo que no es necesario volver a calcular protocolos existentes. También se unificaron las fechas de archivo de v1.0.2 y v1.0.3 y la notación de las cantidades técnicas de cuatro cifras en los documentos de los cinco idiomas. Consulte la [nota de v2.2.9](./v2-nextjs/releases/v2.2.9/README.es.md) para obtener más información.
 
 ## v2.2.8
 
@@ -107,6 +113,7 @@ Se restringió a los asistentes GPT-5.5 para que no ampliaran sus respuestas fue
 
 ## [Next.js] Historial de versiones 2
 
+- **[2026-08-01] v2.2.9 (corrección de errores)** [Nota del parche](./v2-nextjs/releases/v2.2.9/README.es.md) [Código fuente](./v2-nextjs/source/)
 - **[2026-07-31] v2.2.8 (corrección de errores)** [Nota del parche](./v2-nextjs/releases/v2.2.8/README.es.md) [Código fuente](./v2-nextjs/source/)
 - **[2026-07-23] v2.2.7 (corrección de errores)** [Nota del parche](./v2-nextjs/releases/v2.2.7/README.es.md) [Código fuente](./v2-nextjs/source/)
 - **[2026-07-20] v2.2.6 (corrección de errores)** [Nota del parche](./v2-nextjs/releases/v2.2.6/README.es.md) [Código fuente](./v2-nextjs/source/)

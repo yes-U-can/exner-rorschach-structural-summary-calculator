@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import {
   EyeIcon,
   EyeSlashIcon,
@@ -14,6 +15,7 @@ import { hasValidByokApiKeyFormat } from '@/lib/byokApiKeyFormat';
 import {
   closeByokSessionDialog,
   fetchByokSessionStatus,
+  getByokSessionSuccessPath,
   saveByokSession,
   type ByokSessionDialogOpenDetail,
   subscribeByokSessionDialogOpen,
@@ -23,7 +25,8 @@ const PROVIDER: Provider = 'openai';
 const PROVIDER_NAME = 'OpenAI';
 
 export default function ByokSessionDialog() {
-  const { t } = useTranslation();
+  const { language, t } = useTranslation();
+  const router = useRouter();
   const { showToast } = useToast();
   const [isOpen, setIsOpen] = useState(false);
   const [apiKey, setApiKey] = useState('');
@@ -77,7 +80,9 @@ export default function ByokSessionDialog() {
         title: t('toast.apiKeySaved.title'),
         message: t('toast.apiKeySaved.message', { provider: PROVIDER_NAME }),
       });
+      const successPath = getByokSessionSuccessPath(openDetail, language);
       close(true);
+      if (successPath) router.push(successPath);
     } catch {
       showToast({
         type: 'error',

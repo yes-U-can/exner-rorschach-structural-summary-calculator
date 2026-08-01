@@ -1,6 +1,7 @@
 'use client';
 
 import type { Provider } from '@/lib/aiModels';
+import type { Language } from '@/i18n/config';
 import { clearSessionUiPreferencesStorage } from '@/lib/sessionUiPreferencesStorage';
 
 export type ByokSessionStatus = {
@@ -18,11 +19,19 @@ const CLOSE_DIALOG_EVENT = 'sicp-byok-session-dialog-close';
 export type ByokSessionDialogOpenDetail = {
   required?: boolean;
   source?: 'chat' | 'header' | 'sidebar' | 'widget' | 'unknown';
+  destination?: 'chat';
 };
 
 export type ByokSessionDialogCloseDetail = ByokSessionDialogOpenDetail & {
   connected: boolean;
 };
+
+export function getByokSessionSuccessPath(
+  detail: ByokSessionDialogOpenDetail,
+  language: Language,
+): string | null {
+  return detail.destination === 'chat' ? `/chat?lang=${language}` : null;
+}
 
 const INACTIVE_BYOK_STATUS: ByokSessionStatus = {
   active: false,

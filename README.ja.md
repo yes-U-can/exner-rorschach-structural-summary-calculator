@@ -23,7 +23,7 @@ MOW（モオ）は、ウェブアプリの企画、制作、配布、運用、�
 ## 公開している内容
 
 - [Next.js] 公開ウェブアプリ: [exner.yesucan.co.kr](https://exner.yesucan.co.kr)
-- [Next.js] バージョン2の最新リリース: [v2-nextjs/releases/v2.2.8](./v2-nextjs/releases/v2.2.8/README.ja.md)
+- [Next.js] バージョン2の最新リリース: [v2-nextjs/releases/v2.2.9](./v2-nextjs/releases/v2.2.9/README.ja.md)
 - [Next.js] v2.2.2の計算精度再点検: [v2-nextjs/source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md](./v2-nextjs/source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md)
 - [Next.js] v2.2.2のCn説明と5言語でのGPT-5.5実呼び出し検査: [v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md](./v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md)
 - [Next.js] v2.2.0のUI検証: [v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md](./v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md)
@@ -48,6 +48,12 @@ v2.1.xでは、AIアシスタントが回答を最後まで作成するか、質
 - **v2.1.10:** 残っていた日本語の符号認識、広い解釈質問、新規データベース設定の問題を修正しました。
 
 v2.1.8からv2.1.10までの関連作業は、各パッチノートに分けて記録しています。
+
+## v2.2.9
+
+v2.2.9は、[Card]の並べ替えボタンで昇順と降順を切り替えられるようにし、解釈アシスタントへ移動する途中でAIセッションを開始した場合に目的の画面を開くよう修正したバグ修正版です。解釈アシスタントで最新メッセージより上を読んでいるときは、AIの応答状態に応じて三つの点または下向き矢印を表示します。役に立った・役に立たなかった評価は、選択状態を塗りつぶしで明確に示し、保存、理由のスキップ、再押下による削除の動作も自動検査で確認しました。
+
+構造一覧表の計算式とAI回答規則は変更していないため、既存プロトコルを再計算する必要はありません。v1.0.2とv1.0.3のアーカイブ日、および五言語文書の四桁の技術的な件数表記も整理しました。詳細は[v2.2.9パッチノート](./v2-nextjs/releases/v2.2.9/README.ja.md)で確認できます。
 
 ## v2.2.8
 
@@ -107,6 +113,7 @@ GPT-5.5アシスタントがエクスナー包括システム以外へ回答範�
 
 ## [Next.js] バージョン2リリース記録
 
+- **[2026-08-01] v2.2.9（バグ修正）** [パッチノート](./v2-nextjs/releases/v2.2.9/README.ja.md) [ソースコード](./v2-nextjs/source/)
 - **[2026-07-31] v2.2.8（バグ修正）** [パッチノート](./v2-nextjs/releases/v2.2.8/README.ja.md) [ソースコード](./v2-nextjs/source/)
 - **[2026-07-23] v2.2.7（バグ修正）** [パッチノート](./v2-nextjs/releases/v2.2.7/README.ja.md) [ソースコード](./v2-nextjs/source/)
 - **[2026-07-20] v2.2.6（バグ修正）** [パッチノート](./v2-nextjs/releases/v2.2.6/README.ja.md) [ソースコード](./v2-nextjs/source/)

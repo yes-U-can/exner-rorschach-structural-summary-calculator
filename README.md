@@ -23,7 +23,7 @@ MOW(모오)는 웹앱의 기획, 제작, 배포, 운영, 유지보수를 맡습�
 ## 현재 공개된 항목
 
 - [Next.js] 라이브 웹앱: [exner.yesucan.co.kr](https://exner.yesucan.co.kr)
-- [Next.js] 버전 2 최신 릴리즈: [v2-nextjs/releases/v2.2.8](./v2-nextjs/releases/v2.2.8/)
+- [Next.js] 버전 2 최신 릴리즈: [v2-nextjs/releases/v2.2.9](./v2-nextjs/releases/v2.2.9/)
 - [Next.js] v2.2.2 계산 정확성 검산: [v2-nextjs/source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md](./v2-nextjs/source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md)
 - [Next.js] v2.2.2 Cn 설명·5개 언어 실제 GPT-5.5 호출 검사: [v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md](./v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md)
 - [Next.js] v2.2.0 UI 검증: [v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md](./v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md)
@@ -48,6 +48,12 @@ v2.1.x에서는 AI 도우미가 답변을 끝까지 작성하는지, 질문에 �
 - **v2.1.10:** 앞선 검색 개선 뒤에 남아 있던 일본어 부호 인식, 넓은 해석 질문, 새 데이터베이스 설치 문제를 수정했습니다.
 
 v2.1.8-v2.1.10에서 이어진 내용은 각 패치노트에 나누어 기록했습니다.
+
+## v2.2.9
+
+v2.2.9는 [Card] 정렬 버튼을 오름차순과 내림차순으로 전환할 수 있게 고치고, 해석 도우미로 들어가며 AI 세션을 시작했을 때 목적 화면으로 바로 이동하게 한 버그 패치입니다. 해석 도우미에서 대화의 최신 메시지보다 위를 보고 있을 때에는 AI의 응답 상태에 따라 점 세 개 또는 아래 화살표를 표시합니다. 추천·비추천 버튼은 선택 상태를 채움색으로 분명히 보여 주며, 이유 건너뛰기와 같은 버튼 재클릭에 따른 저장·삭제 동작도 검사했습니다.
+
+구조요약 계산식과 AI 답변 규칙은 바뀌지 않았으며 기존 프로토콜을 다시 계산할 필요가 없습니다. v1.0.2와 v1.0.3의 아카이브 날짜 및 다섯 언어 문서의 네 자리 기술 수치 표기도 함께 정리했습니다. 자세한 내용은 [v2.2.9 패치노트](./v2-nextjs/releases/v2.2.9/)에서 확인할 수 있습니다.
 
 ## v2.2.8
 
@@ -107,6 +113,7 @@ GPT-5.5 도우미는 Exner 종합체계 밖의 질문에 답변 범위를 넓히
 
 ## [Next.js] 버전 2 릴리즈 기록
 
+- **[2026-08-01] v2.2.9 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.2.9/) [소스코드](./v2-nextjs/source/)
 - **[2026-07-31] v2.2.8 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.2.8/) [소스코드](./v2-nextjs/source/)
 - **[2026-07-23] v2.2.7 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.2.7/) [소스코드](./v2-nextjs/source/)
 - **[2026-07-20] v2.2.6 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.2.6/) [소스코드](./v2-nextjs/source/)

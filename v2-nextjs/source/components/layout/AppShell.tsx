@@ -40,7 +40,7 @@ import Button from '@/components/ui/Button';
 import { getAppShortcutAction, isEditableShortcutTarget } from '@/lib/appShortcuts';
 import { getKeyboardShortcutsUi } from '@/lib/keyboardShortcutsUi';
 
-const APP_VERSION = '2.2.8';
+const APP_VERSION = '2.2.9';
 
 type AuthStatus = 'loading' | 'authenticated' | 'unauthenticated';
 
@@ -315,7 +315,7 @@ export default function AppShell({ children }: { children: ReactNode }) {
   }, [closeMobileNavigation]);
   const requireAuth = useCallback(() => {
     closeMobileNavigation();
-    openByokSessionDialog({ source: 'sidebar' });
+    openByokSessionDialog({ source: 'sidebar', destination: 'chat' });
     showToast({
       type: 'error',
       title: t('nav.loginRequired'),

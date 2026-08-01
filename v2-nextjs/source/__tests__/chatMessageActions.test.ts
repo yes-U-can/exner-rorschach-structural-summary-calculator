@@ -1,5 +1,9 @@
+import { createElement } from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
 import { describe, expect, it } from 'vitest';
+import { ChatMessageActions } from '@/components/chat/ChatMessageActions';
 import {
+  getFeedbackToggleRequest,
   shouldShowChatMessageActions,
   withClientFeedbackIds,
 } from '@/lib/chatMessageActions';
@@ -61,5 +65,43 @@ describe('feedback id recovery', () => {
       enabled: false,
       createId: () => 'unused',
     })).toBe(messages);
+  });
+});
+
+describe('feedback selection controls', () => {
+  it('saves a rating without reasons before the optional reason dialog', () => {
+    expect(getFeedbackToggleRequest(null, 'helpful')).toEqual({
+      rating: 'helpful',
+      reasonCodes: [],
+    });
+  });
+
+  it('removes the stored rating when the selected thumb is pressed again', () => {
+    expect(getFeedbackToggleRequest('helpful', 'helpful')).toEqual({
+      rating: null,
+      reasonCodes: [],
+    });
+  });
+
+  it('renders a strongly identifiable selected state for either rating', () => {
+    const helpfulMarkup = renderToStaticMarkup(createElement(ChatMessageActions, {
+      content: 'answer',
+      language: 'ko',
+      feedbackRating: 'helpful',
+      onFeedback: async () => {},
+    }));
+    const unhelpfulMarkup = renderToStaticMarkup(createElement(ChatMessageActions, {
+      content: 'answer',
+      language: 'ko',
+      feedbackRating: 'unhelpful',
+      onFeedback: async () => {},
+    }));
+
+    expect(helpfulMarkup).toContain('is-selected');
+    expect(helpfulMarkup).toContain('data-feedback-rating="helpful"');
+    expect(helpfulMarkup).toContain('data-feedback-selected="true"');
+    expect(unhelpfulMarkup).toContain('is-selected');
+    expect(unhelpfulMarkup).toContain('data-feedback-rating="unhelpful"');
+    expect(unhelpfulMarkup).toContain('data-feedback-selected="true"');
   });
 });

@@ -1,4 +1,9 @@
-import type { AiMessageCompletionState, ChatMessageMetadata } from '@/types';
+import type {
+  AiFeedbackRating,
+  AiFeedbackReasonCode,
+  AiMessageCompletionState,
+  ChatMessageMetadata,
+} from '@/types';
 
 type ChatActionMessage = {
   role: 'ai' | 'user';
@@ -6,6 +11,19 @@ type ChatActionMessage = {
   uiOnly?: boolean;
   metadata?: ChatMessageMetadata;
 };
+
+export function getFeedbackToggleRequest(
+  currentRating: AiFeedbackRating | null,
+  requestedRating: AiFeedbackRating,
+): {
+  rating: AiFeedbackRating | null;
+  reasonCodes: AiFeedbackReasonCode[];
+} {
+  return {
+    rating: currentRating === requestedRating ? null : requestedRating,
+    reasonCodes: [],
+  };
+}
 
 export function shouldShowChatMessageActions(message: {
   content: string;

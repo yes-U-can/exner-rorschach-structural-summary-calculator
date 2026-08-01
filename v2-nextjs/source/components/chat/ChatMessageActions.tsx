@@ -7,6 +7,10 @@ import {
   HandThumbDownIcon,
   HandThumbUpIcon,
 } from '@heroicons/react/24/outline';
+import {
+  HandThumbDownIcon as HandThumbDownSolidIcon,
+  HandThumbUpIcon as HandThumbUpSolidIcon,
+} from '@heroicons/react/24/solid';
 import type {
   AiFeedbackRating,
   AiFeedbackReasonCode,
@@ -14,6 +18,7 @@ import type {
 } from '@/types';
 import { getChatMessageActionsUi } from '@/lib/chatMessageActionsUi';
 import { copyChatText } from '@/lib/chatClipboard';
+import { getFeedbackToggleRequest } from '@/lib/chatMessageActions';
 import { ChatFeedbackReasonDialog } from '@/components/chat/ChatFeedbackReasonDialog';
 
 type CopyState = 'idle' | 'copied' | 'failed';
@@ -67,15 +72,15 @@ export function ChatMessageActions({
 
   const handleFeedback = async (rating: AiFeedbackRating) => {
     if (!onFeedback || feedbackPending || feedbackDisabled) return;
-    const nextRating = feedbackRating === rating ? null : rating;
+    const request = getFeedbackToggleRequest(feedbackRating, rating);
     setFeedbackPending(true);
     setReasonDialogError('');
     try {
-      await onFeedback(nextRating, []);
-      setStatusMessage(nextRating ? ui.feedbackSaved : ui.feedbackRemoved);
-      if (nextRating) {
+      await onFeedback(request.rating, request.reasonCodes);
+      setStatusMessage(request.rating ? ui.feedbackSaved : ui.feedbackRemoved);
+      if (request.rating) {
         setSelectedReasonCodes([]);
-        setReasonDialogRating(nextRating);
+        setReasonDialogRating(request.rating);
       } else {
         setReasonDialogRating(null);
         setSelectedReasonCodes([]);
@@ -137,25 +142,33 @@ export function ChatMessageActions({
         <>
           <button
             type="button"
-            className={`ui-chat-message-action ${feedbackRating === 'helpful' ? 'is-selected' : ''}`}
+            className={`ui-chat-message-action is-helpful ${feedbackRating === 'helpful' ? 'is-selected' : ''}`}
             onClick={() => void handleFeedback('helpful')}
             disabled={feedbackPending || feedbackDisabled}
             aria-label={ui.helpful}
             aria-pressed={feedbackRating === 'helpful'}
             title={ui.helpful}
+            data-feedback-rating="helpful"
+            data-feedback-selected={feedbackRating === 'helpful'}
           >
-            <HandThumbUpIcon className="h-4 w-4" aria-hidden="true" />
+            {feedbackRating === 'helpful'
+              ? <HandThumbUpSolidIcon className="h-4 w-4" aria-hidden="true" />
+              : <HandThumbUpIcon className="h-4 w-4" aria-hidden="true" />}
           </button>
           <button
             type="button"
-            className={`ui-chat-message-action ${feedbackRating === 'unhelpful' ? 'is-selected' : ''}`}
+            className={`ui-chat-message-action is-unhelpful ${feedbackRating === 'unhelpful' ? 'is-selected' : ''}`}
             onClick={() => void handleFeedback('unhelpful')}
             disabled={feedbackPending || feedbackDisabled}
             aria-label={ui.unhelpful}
             aria-pressed={feedbackRating === 'unhelpful'}
             title={ui.unhelpful}
+            data-feedback-rating="unhelpful"
+            data-feedback-selected={feedbackRating === 'unhelpful'}
           >
-            <HandThumbDownIcon className="h-4 w-4" aria-hidden="true" />
+            {feedbackRating === 'unhelpful'
+              ? <HandThumbDownSolidIcon className="h-4 w-4" aria-hidden="true" />
+              : <HandThumbDownIcon className="h-4 w-4" aria-hidden="true" />}
           </button>
         </>
       ) : null}
