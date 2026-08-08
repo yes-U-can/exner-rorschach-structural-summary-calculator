@@ -12,9 +12,8 @@ relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/Art"
   - "scoring-input/contents/Ad"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/contents/hh/index.md"
 ---
 
 # Nombre del documento: [Codificación/Contenido] Hh
@@ -48,8 +47,3 @@ Lo central es que la forma se entienda como implemento del hogar, no como prenda
 - [[Codificación/Contenido] Contents](ref://scoring-input/contents)
 - [[Codificación/Contenido] Art](ref://scoring-input/contents/Art)
 - [[Codificación/Contenido] Ad](ref://scoring-input/contents/Ad)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/ZEst"
   - "result-interpretation/upper-section/Zd"
   - "scoring-input/z"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Upper Section] ZSum
@@ -52,7 +51,3 @@ It reflects not only how often organization was attempted, but also how much tot
 - [[Interpretation/Upper Section] ZEst](ref://result-interpretation/upper-section/ZEst)
 - [[Interpretation/Upper Section] Zd](ref://result-interpretation/upper-section/Zd)
 - [[Coding/Z] Z](ref://scoring-input/z)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

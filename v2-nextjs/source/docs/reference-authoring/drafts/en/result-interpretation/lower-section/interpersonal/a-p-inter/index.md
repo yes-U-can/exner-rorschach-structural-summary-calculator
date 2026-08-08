@@ -19,9 +19,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/interpersonal/AG"
   - "result-interpretation/lower-section/interpersonal/SumT_inter"
   - "scoring-input/determinants/M"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Interpersonal] a:p
@@ -72,7 +71,3 @@ In this section, it helps estimate whether the person imagines relatedness from 
 - [[Interpretation/Interpersonal] AG](ref://result-interpretation/lower-section/interpersonal/AG)
 - [[Interpretation/Interpersonal] SumT](ref://result-interpretation/lower-section/interpersonal/SumT_inter)
 - [[Coding/Determinants] M](ref://scoring-input/determinants/M)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/location/Dd"
   - "scoring-input/z/ZD"
   - "result-interpretation/upper-section/Zf"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-z-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Z] ZA
@@ -50,7 +49,3 @@ A resposta mostra organização entre partes próximas da mancha.
 - [[Codificação/Localização] Dd](ref://scoring-input/location/Dd)
 - [[Codificação/Z] ZD](ref://scoring-input/z/ZD)
 - [[Interpretação/Upper Section] Zf](ref://result-interpretation/upper-section/Zf)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

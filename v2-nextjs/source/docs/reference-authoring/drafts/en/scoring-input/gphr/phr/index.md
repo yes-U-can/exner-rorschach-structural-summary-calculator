@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/special-score/MOR"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/GHR-PHR] PHR
@@ -59,7 +58,3 @@ Like `GHR`, it is not chosen from free impression, but by moving through success
 - [[Coding/Special Score] MOR](ref://scoring-input/special-score/MOR)
 - [[Interpretation/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
 - [[Interpretation/Self Perception] H ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

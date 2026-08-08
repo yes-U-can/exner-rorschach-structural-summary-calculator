@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/Ay"
   - "scoring-input/contents/Art"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Content] Cg
@@ -50,7 +49,3 @@ The decisive point is that the form is understood as something worn on the body.
 - [[Coding/Content] Contents](ref://scoring-input/contents)
 - [[Coding/Content] Ay](ref://scoring-input/contents/Ay)
 - [[Coding/Content] Art](ref://scoring-input/contents/Art)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

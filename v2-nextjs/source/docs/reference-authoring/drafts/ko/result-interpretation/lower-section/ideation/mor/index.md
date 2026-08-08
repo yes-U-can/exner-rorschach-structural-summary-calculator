@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/_2AB_Art_Ay"
   - "result-interpretation/lower-section/selfPerception/MOR_self"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/ideation/mor/index.md"
 ---
 
 # 문서명: [해석/Ideation] MOR
@@ -62,7 +61,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[해석/Ideation\] 2AB+Art+Ay](ref://result-interpretation/lower-section/ideation/_2AB_Art_Ay)
 - [\[해석/Self Perception\] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
 - [\[해석/Special Indices\] DEPI](ref://result-interpretation/special-indices/DEPI)
-
-## 근거 메모
-
-- 상세 출처와 절단값 메모는 provenance note에 분리했다.

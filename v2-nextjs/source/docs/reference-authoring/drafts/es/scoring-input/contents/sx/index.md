@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/contents/H"
   - "scoring-input/contents/Hd"
   - "scoring-input/contents/An"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/contents/sx/index.md"
 ---
 
 # Nombre del documento: [Codificación/Contenido] Sx
@@ -50,8 +49,3 @@ Con frecuencia funciona como contenido secundario junto a un código humano o an
 - [[Codificación/Contenido] H](ref://scoring-input/contents/H)
 - [[Codificación/Contenido] Hd](ref://scoring-input/contents/Hd)
 - [[Codificación/Contenido] An](ref://scoring-input/contents/An)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

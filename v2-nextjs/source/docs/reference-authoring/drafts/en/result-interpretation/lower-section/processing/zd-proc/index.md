@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/processing/Zf_proc"
   - "result-interpretation/lower-section/processing/PSV"
   - "result-interpretation/lower-section/processing/W_D_Dd"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Processing] Zd
@@ -52,7 +51,3 @@ It is used to estimate whether processing tends to be balanced, excessive, or in
 - [[Interpretation/Processing] Zf](ref://result-interpretation/lower-section/processing/Zf_proc)
 - [[Interpretation/Processing] PSV](ref://result-interpretation/lower-section/processing/PSV)
 - [[Interpretation/Processing] W:D:Dd](ref://result-interpretation/lower-section/processing/W_D_Dd)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

@@ -18,9 +18,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/AdjD"
   - "result-interpretation/lower-section/core/FM"
   - "scoring-input/determinants/m"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-core-burden-qualities-2026-03-10.md"
 ---
 
 # [Interpretation/Core] m
@@ -60,6 +59,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-core-burden-qualit
 - [[解釈/Core] AdjD](ref://result-interpretation/lower-section/core/AdjD)
 - [[解釈/Core] FM](ref://result-interpretation/lower-section/core/FM)
 - [[Coding/決定因] m](ref://scoring-input/determinants/m)
-
-## 根拠メモ
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/determinants/T"
   - "scoring-input/determinants/FT"
   - "scoring-input/determinants/TF"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/core/sumt/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Core] SumT
@@ -69,7 +68,3 @@ En `core` suele indicar cuánto peso tiene la necesidad de cercanía, consuelo o
 - [[Codificación/Determinantes] T](ref://scoring-input/determinants/T)
 - [[Codificación/Determinantes] FT](ref://scoring-input/determinants/FT)
 - [[Codificación/Determinantes] TF](ref://scoring-input/determinants/TF)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

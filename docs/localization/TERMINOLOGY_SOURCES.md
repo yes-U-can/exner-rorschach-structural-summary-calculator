@@ -60,7 +60,7 @@ Project naming intentionally retains `로샤` and `구조요약`. Academic sourc
 
 For each review batch, record the date, reviewer, source additions, terms changed, and unresolved terms in the review report. Do not put agent conversations or draft history into reader-facing README files or release notes.
 
-### 2026-07-19 — independent editorial review (Claude Opus 4.8)
+### 2026-07-19 — terminology and editorial review
 
 - Sources added: English (Holaday 1996; Exner 2003 manual), Japanese (金剛出版 record form and authorized translation; cross-checked with the 日本ロールシャッハ学会 record-form listing), Spanish (Psimática authorized manuals; Sendín), Brazilian Portuguese (PePSIC 2012 normative study).
 - Confirmed against authoritative sources: `構造一覧表` (ja), `encuesta` (es Inquiry), `Sistema Comprehensivo` (es), `Sistema Compreensivo` and `inquérito` (pt-BR), and the English Comprehensive System terms.

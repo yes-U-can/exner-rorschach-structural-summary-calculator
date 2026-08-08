@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/determinants/Fr"
   - "scoring-input/determinants/rF"
   - "result-interpretation/lower-section/core/R"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-selfperception-2026-03-10.md"
 ---
 
 # [Interpretation/Self Perception] Egocentricity Index
@@ -71,7 +70,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-selfperception-202
 - [[Coding/決定因] Fr](ref://scoring-input/determinants/Fr)
 - [[Coding/決定因] rF](ref://scoring-input/determinants/rF)
 - [[解釈/Core] R](ref://result-interpretation/lower-section/core/R)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

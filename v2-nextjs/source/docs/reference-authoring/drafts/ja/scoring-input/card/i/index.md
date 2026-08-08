@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/contents/A"
   - "scoring-input/popular"
   - "scoring-input/card/V"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-card-i-v-2026-03-10.md"
 ---
 
 # [コーディング/カード] I
@@ -56,7 +55,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-card-i-v-2026-03-1
 - [[コーディング/内容] A](ref://scoring-input/contents/A)
 - [[コーディング/Popular] Popular](ref://scoring-input/popular)
 - [[コーディング/カード] V](ref://scoring-input/card/V)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

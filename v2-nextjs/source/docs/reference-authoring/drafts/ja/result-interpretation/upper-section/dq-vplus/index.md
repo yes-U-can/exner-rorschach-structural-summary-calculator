@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/dq/v/+"
   - "result-interpretation/lower-section/processing/DQ_plus_proc"
   - "result-interpretation/lower-section/processing/DQ_v_proc"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-upper-section-location-dq-2026-03-10.md"
 ---
 
 # [解釈/Upper Section] DQv/+
@@ -55,7 +54,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-upper-section-loca
 - [[コーディング/DQ] v/+](ref://scoring-input/dq/v/%2B)
 - [[解釈/情報処理] DQ+](ref://result-interpretation/lower-section/processing/DQ_plus_proc)
 - [[解釈/情報処理] DQv](ref://result-interpretation/lower-section/processing/DQ_v_proc)
-
-## 根拠メモ
-
-- 詳細な出典比較は内部 provenance note に分けて保持します。

@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/location/W"
   - "scoring-input/location/D"
   - "scoring-input/fq"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-mediation-opening-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Mediação] WDA%
@@ -53,7 +52,3 @@ Ele é usado para ver quão estável a mediação permanece nas partes mais comu
 - [[Codificação/Localização] W](ref://scoring-input/location/W)
 - [[Codificação/Localização] D](ref://scoring-input/location/D)
 - [[Codificação/FQ] FQ](ref://scoring-input/fq)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

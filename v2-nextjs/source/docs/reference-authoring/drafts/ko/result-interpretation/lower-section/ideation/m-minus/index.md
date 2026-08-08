@@ -18,9 +18,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/Mnone"
   - "scoring-input/determinants/M"
   - "result-interpretation/special-indices/PTI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/ideation/m-minus/index.md"
 ---
 
 # [해석/Ideation] M-
@@ -58,7 +57,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `Lv2`
 - `PTI`
 - `M`
-
-## 근거 메모
-
-- 상세 출처와 절단값 메모는 provenance note에 분리했다.

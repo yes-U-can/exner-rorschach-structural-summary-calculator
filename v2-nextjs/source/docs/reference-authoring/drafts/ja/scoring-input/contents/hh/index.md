@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/contents/Art"
   - "scoring-input/contents/Ad"
   - "scoring-input/contents/Cg"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-contents-fd-ge-hh-2026-03-10.md"
 ---
 
 # [コーディング/内容] Hh
@@ -52,7 +51,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-contents-fd-ge-hh-
 - [[コーディング/内容] Art](ref://scoring-input/contents/Art)
 - [[コーディング/内容] Ad](ref://scoring-input/contents/Ad)
 - [[コーディング/内容] Cg](ref://scoring-input/contents/Cg)
-
-## 根拠メモ
-
-- 詳細な出典比較は内部 provenance note に記録しています。

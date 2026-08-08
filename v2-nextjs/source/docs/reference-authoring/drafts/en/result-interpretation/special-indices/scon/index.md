@@ -17,9 +17,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/selfPerception/SumV_self"
   - "result-interpretation/lower-section/selfPerception/MOR_self"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 # Document Name: [Interpretation/Special Indices] Suicide Constellation
 ## Aliases / Search Terms
@@ -60,5 +59,3 @@ It does not replace immediate clinical assessment, but indicates when the issue 
 - [[Interpretation/Self Perception] SumV](ref://result-interpretation/lower-section/selfPerception/SumV_self)
 - [[Interpretation/Self Perception] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
 - [[Interpretation/Special Indices] DEPI](ref://result-interpretation/special-indices/DEPI)
-## Evidence Note
-- Detailed source comparison is stored in internal provenance notes.

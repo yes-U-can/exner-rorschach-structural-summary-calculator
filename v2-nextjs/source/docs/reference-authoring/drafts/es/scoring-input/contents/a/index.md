@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/contents/Ad"
   - "scoring-input/contents/(Ad)"
   - "scoring-input/popular"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/contents/a/index.md"
 ---
 
 # Nombre del documento: [Codificación/Contenido] A
@@ -53,8 +52,3 @@ No corresponde a una parte del animal ni a una criatura fantástica.
 - [[Codificación/Contenido] Ad](ref://scoring-input/contents/Ad)
 - [[Codificación/Contenido] (Ad)](ref://scoring-input/contents/%28Ad%29)
 - [[Codificación/Respuesta Popular] Popular](ref://scoring-input/popular)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

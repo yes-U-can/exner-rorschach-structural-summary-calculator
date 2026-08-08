@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/card"
   - "scoring-input/gphr/GHR"
   - "result-interpretation/lower-section/mediation/P"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # [コーディング/Popular] Popular
@@ -53,7 +52,3 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 - [[コーディング/カード] Card](ref://scoring-input/card)
 - [[コーディング/GHR-PHR] GHR](ref://scoring-input/gphr/GHR)
 - [[解釈/媒介] P](ref://result-interpretation/lower-section/mediation/P)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

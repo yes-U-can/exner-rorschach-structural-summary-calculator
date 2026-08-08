@@ -15,9 +15,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/M_minus"
   - "result-interpretation/lower-section/mediation/X_minus_percent"
   - "result-interpretation/lower-section/mediation/XA_percent"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-indices-2026-03-10.md"
 ---
 
 # 文書名: [解釈/特殊指標] PTI
@@ -67,7 +66,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-indices-20
 - [[解釈/観念] M-](ref://result-interpretation/lower-section/ideation/M_minus)
 - [[解釈/知覚の媒介] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
 - [[解釈/知覚の媒介] XA%](ref://result-interpretation/lower-section/mediation/XA_percent)
-
-## 根拠メモ
-
-- 詳細な検討記録は内部の検証ノートで管理します。

@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/special-score/COP"
   - "scoring-input/special-score/AG"
   - "result-interpretation/lower-section/ideation/M_minus"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-determinants-movement-chromatic-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Determinantes] M
@@ -60,7 +59,3 @@ Em uma resposta, registre apenas um código de movimento humano. Se figuras huma
 - [[Codificação/Códigos Especiais] COP](ref://scoring-input/special-score/COP)
 - [[Codificação/Códigos Especiais] AG](ref://scoring-input/special-score/AG)
 - [[Interpretação/Ideation] M-](ref://result-interpretation/lower-section/ideation/M_minus)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

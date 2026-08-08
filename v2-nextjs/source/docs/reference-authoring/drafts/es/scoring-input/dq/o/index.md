@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/dq/v/+"
   - "scoring-input/dq/v"
   - "scoring-input/fq/o"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/dq/o/index.md"
 ---
 
 # Nombre del documento: [Codificación/Calidad evolutiva] o
@@ -51,7 +50,3 @@ Puede tratarse de un solo objeto claramente definido o de una respuesta con vari
 - [[Codificación/Calidad evolutiva] v/+](ref://scoring-input/dq/v/%2B)
 - [[Codificación/Calidad evolutiva] v](ref://scoring-input/dq/v)
 - [[Codificación/Calidad formal] o](ref://scoring-input/fq/o)
-
-## Nota de fundamento
-
-- La provenance interna conserva la comparación de fuentes y los criterios de descarte.

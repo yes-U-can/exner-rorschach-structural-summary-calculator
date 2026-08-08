@@ -23,9 +23,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/SumT"
   - "result-interpretation/lower-section/ideation/a_p"
   - "result-interpretation/lower-section/selfPerception"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/interpersonal/index.md"
 ---
 
 # 문서명: [해석/Lower Section/Interpersonal] Interpersonal
@@ -84,7 +83,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[해석/Core\] SumT](ref://result-interpretation/lower-section/core/SumT)
 - [\[해석/Ideation\] a:p](ref://result-interpretation/lower-section/ideation/a_p)
 - [\[해석/Lower Section/Self Perception\] Self Perception](ref://result-interpretation/lower-section/selfPerception)
-
-## 근거 메모
-
-- 상세 출처와 절단값 메모는 provenance note에 분리했다.

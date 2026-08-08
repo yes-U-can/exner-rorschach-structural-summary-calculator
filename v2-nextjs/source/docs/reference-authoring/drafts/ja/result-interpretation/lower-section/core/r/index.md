@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/EA"
   - "result-interpretation/lower-section/core/EB"
   - "scoring-input/score"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-lower-section-core-opening-2026-03-10.md"
 ---
 
 # [Interpretation/Core] R
@@ -55,7 +54,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-lower-section-core
 - [[解釈/Core] EA](ref://result-interpretation/lower-section/core/EA)
 - [[解釈/Core] EB](ref://result-interpretation/lower-section/core/EB)
 - [[Coding] score](ref://scoring-input/score)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

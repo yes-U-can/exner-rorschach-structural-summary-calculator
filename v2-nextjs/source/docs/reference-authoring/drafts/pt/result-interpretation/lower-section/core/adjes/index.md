@@ -18,9 +18,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/SumY"
   - "scoring-input/determinants/m"
   - "scoring-input/determinants/Y"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-core-d-family-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Core] AdjEs
@@ -60,7 +59,3 @@ Ele estima quanta sobrecarga permanece depois que parte do peso de `m` e `Y` foi
 - [[Interpretação/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
 - [[Codificação/Determinantes] m](ref://scoring-input/determinants/m)
 - [[Codificação/Determinantes] Y](ref://scoring-input/determinants/Y)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/determinants/Fr"
   - "scoring-input/determinants/rF"
   - "result-interpretation/lower-section/selfPerception/_3r_2_R"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Pair] Pair
@@ -53,7 +52,3 @@ The key is not just that there are two things, but that they are treated as an e
 - [[Coding/Determinants] Fr](ref://scoring-input/determinants/Fr)
 - [[Coding/Determinants] rF](ref://scoring-input/determinants/rF)
 - [[Interpretation/Self Perception] Egocentricity Index](ref://result-interpretation/lower-section/selfPerception/_3r_2_R)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

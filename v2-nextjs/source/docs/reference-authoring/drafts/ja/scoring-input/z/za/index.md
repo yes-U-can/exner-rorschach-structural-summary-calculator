@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/location/Dd"
   - "scoring-input/z/ZD"
   - "result-interpretation/upper-section/Zf"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # [コーディング/Z] ZA
@@ -49,7 +48,3 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 - [[コーディング/場所] Dd](ref://scoring-input/location/Dd)
 - [[コーディング/Z] ZD](ref://scoring-input/z/ZD)
 - [[解釈/上段] Zf](ref://result-interpretation/upper-section/Zf)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

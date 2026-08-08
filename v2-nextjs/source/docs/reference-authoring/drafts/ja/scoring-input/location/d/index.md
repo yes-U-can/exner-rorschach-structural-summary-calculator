@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/location/Dd"
   - "scoring-input/location/DS"
   - "result-interpretation/upper-section/D"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # [コーディング/場所] D
@@ -49,7 +48,3 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 - [[コーディング/場所] Dd](ref://scoring-input/location/Dd)
 - [[コーディング/場所] DS](ref://scoring-input/location/DS)
 - [[解釈/上段] D](ref://result-interpretation/upper-section/D)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

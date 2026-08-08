@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/dq/v/+"
   - "result-interpretation/lower-section/processing/DQ_plus_proc"
   - "result-interpretation/lower-section/processing/DQ_v_proc"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/upper-section/dq-vplus/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Upper Section] DQv/+
@@ -68,7 +67,3 @@ Se interpreta como una señal mixta: hay esfuerzo integrativo, aunque la base es
 - [[Codificación/Calidad evolutiva] v/+](ref://scoring-input/dq/v/%2B)
 - [[Interpretación/Processing] DQ+](ref://result-interpretation/lower-section/processing/DQ_plus_proc)
 - [[Interpretación/Processing] DQv](ref://result-interpretation/lower-section/processing/DQ_v_proc)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

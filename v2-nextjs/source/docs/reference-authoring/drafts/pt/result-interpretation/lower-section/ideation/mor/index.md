@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/_2AB_Art_Ay"
   - "result-interpretation/lower-section/selfPerception/MOR_self"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-ideation-mor-sum6-lv2-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Ideação] MOR
@@ -52,7 +51,3 @@ Na área de `ideação`, ele ajuda a mostrar quanto o conteúdo mental está col
 - [[Interpretação/Ideação] 2AB+Art+Ay](ref://result-interpretation/lower-section/ideation/_2AB_Art_Ay)
 - [[Interpretação/Autopercepção] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
 - [[Interpretação/Índices Especiais] DEPI](ref://result-interpretation/special-indices/DEPI)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

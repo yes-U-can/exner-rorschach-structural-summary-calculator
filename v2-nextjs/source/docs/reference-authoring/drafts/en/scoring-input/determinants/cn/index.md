@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/determinants/CF"
   - "scoring-input/determinants/C"
   - "result-interpretation/lower-section/affect/FC_CF_C"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Determinants] Cn
@@ -55,7 +54,3 @@ That is why `Cn` does not belong to the full chromatic family `C / CF / FC` as a
 - [[Coding/Determinants] CF](ref://scoring-input/determinants/CF)
 - [[Coding/Determinants] C](ref://scoring-input/determinants/C)
 - [[Interpretation/Affect] FC:CF+C](ref://result-interpretation/lower-section/affect/FC_CF_C)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

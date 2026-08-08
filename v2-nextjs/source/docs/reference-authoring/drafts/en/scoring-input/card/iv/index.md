@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/determinants/T"
   - "scoring-input/determinants/TF"
   - "scoring-input/fq"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Cards] IV
@@ -56,7 +55,3 @@ This page summarizes what is useful to review when coding those responses.
 - [[Coding/Determinants] T](ref://scoring-input/determinants/T)
 - [[Coding/Determinants] TF](ref://scoring-input/determinants/TF)
 - [[Coding/FQ] FQ](ref://scoring-input/fq)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

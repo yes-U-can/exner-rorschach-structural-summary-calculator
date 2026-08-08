@@ -1,9 +1,18 @@
 import { createHash } from 'node:crypto';
 
 export function buildReferenceCorpusFingerprint(chunksArtifact) {
+  const locales = Array.isArray(chunksArtifact.locales) ? chunksArtifact.locales : [];
   const fingerprintPayload = {
-    locales: chunksArtifact.locales ?? [],
-    chunksByLocale: chunksArtifact.chunksByLocale ?? {},
+    locales,
+    chunksByLocale: Object.fromEntries(
+      locales.map((locale) => [
+        locale,
+        (chunksArtifact.chunksByLocale?.[locale] ?? []).map((chunk) => ({
+          chunkId: String(chunk.chunkId ?? ''),
+          contentHash: String(chunk.contentHash ?? ''),
+        })),
+      ]),
+    ),
   };
 
   return createHash('sha256')

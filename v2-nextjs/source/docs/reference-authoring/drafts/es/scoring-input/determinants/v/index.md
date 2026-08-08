@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/determinants/T"
   - "result-interpretation/lower-section/core/SumV"
   - "result-interpretation/lower-section/selfPerception/SumV_self"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/determinants/v/index.md"
 ---
 
 # Nombre del documento: [Codificación/Determinantes] V
@@ -57,8 +56,3 @@ La experiencia dimensional domina por sí misma y la forma no organiza realmente
 - [[Codificación/Determinantes] Y](ref://scoring-input/determinants/Y)
 - [[Interpretación/Core] SumV](ref://result-interpretation/lower-section/core/SumV)
 - [[Interpretación/Self Perception] SumV](ref://result-interpretation/lower-section/selfPerception/SumV_self)
-
-## Nota de fundamento
-
-- La justificación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

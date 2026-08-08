@@ -19,9 +19,8 @@ relatedRoutes:
   - "scoring-input/contents/Ad"
   - "scoring-input/popular"
   - "scoring-input/special-score/MOR"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/card/vi/index.md"
 ---
 
 # Nombre del documento: [Codificación/Láminas] VI
@@ -63,8 +62,3 @@ Esta página resume qué conviene revisar durante la codificación cuando aparec
 - [[Codificación/Contenido] Ad](ref://scoring-input/contents/Ad)
 - [[Codificación/Popular] Popular](ref://scoring-input/popular)
 - [[Codificación/Puntuaciones especiales] MOR](ref://scoring-input/special-score/MOR)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

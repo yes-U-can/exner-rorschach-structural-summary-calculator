@@ -80,7 +80,7 @@ function buildLocaleQuality(locale, docs, querySetEntry) {
       }
     }
 
-    if (doc.authorityPolicy !== 'curated-internal-reference') {
+    if (doc.authorityPolicy !== 'curated-reference') {
       runtimeProvenanceHits.push({
         canonicalRoute: doc.canonicalRoute,
         pattern: `authorityPolicy:${doc.authorityPolicy}`,

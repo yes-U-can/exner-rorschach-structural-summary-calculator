@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/location/DS"
   - "scoring-input/location/DdS"
   - "result-interpretation/upper-section/Zf"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-z-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Z] ZS
@@ -52,7 +51,3 @@ A resposta precisa organizar o espaço branco como parte do percepto, não apena
 - [[Codificação/Localização] DS](ref://scoring-input/location/DS)
 - [[Codificação/Localização] DdS](ref://scoring-input/location/DdS)
 - [[Interpretação/Upper Section] Zf](ref://result-interpretation/upper-section/Zf)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

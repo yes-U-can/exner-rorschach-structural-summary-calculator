@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/determinants/C"
   - "scoring-input/z"
   - "scoring-input/popular"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-card-i-v-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Cartões] II
@@ -56,7 +55,3 @@ Esta página resume como essa presença cromática pode influenciar a codificaç
 - [[Codificação/Determinantes] C](ref://scoring-input/determinants/C)
 - [[Codificação/Z] Z](ref://scoring-input/z)
 - [[Codificação/Popular] Popular](ref://scoring-input/popular)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

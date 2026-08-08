@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/determinants/FD"
   - "scoring-input/contents/Fd"
   - "result-interpretation/lower-section/core/SumV"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/selfperception/fd/index.md"
 ---
 
 # 문서명: [해석/Self Perception] FD
@@ -67,7 +66,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[부호화/결정인\] FD](ref://scoring-input/determinants/FD)
 - [\[부호화/내용\] Fd](ref://scoring-input/contents/Fd)
 - [\[해석/Core\] SumV](ref://result-interpretation/lower-section/core/SumV)
-
-## 근거 메모
-
-- introspection의 적응적/반추적 양면성 메모는 provenance note에 분리했다.

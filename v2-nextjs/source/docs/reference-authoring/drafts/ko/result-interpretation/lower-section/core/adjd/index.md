@@ -18,9 +18,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/SumY"
   - "result-interpretation/lower-section/core/Lambda"
   - "result-interpretation/special-indices/CDI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/core/adjd/index.md"
 ---
 
 # 문서명: [해석/Core] AdjD
@@ -74,7 +73,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[해석/Core\] SumY](ref://result-interpretation/lower-section/core/SumY)
 - [\[해석/Core\] Lambda](ref://result-interpretation/lower-section/core/Lambda)
 - [\[해석/Special Indices\] CDI](ref://result-interpretation/special-indices/CDI)
-
-## 근거 메모
-
-- 보정 규칙과 situational vs persistent distress 메모는 provenance note에 분리했다.

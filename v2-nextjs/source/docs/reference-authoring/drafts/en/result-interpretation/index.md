@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/lower-section"
   - "result-interpretation/special-indices"
   - "scoring-input"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation] result-interpretation
@@ -53,8 +52,3 @@ It does not explain how to code a single response; it explains how already-calcu
 - [[Interpretation/Lower Section] Lower Section](ref://result-interpretation/lower-section)
 - [[Interpretation/Special Indices] Special Indices](ref://result-interpretation/special-indices)
 - [[Coding] scoring-input](ref://scoring-input)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.
-- The public-facing body avoids naming source titles directly.

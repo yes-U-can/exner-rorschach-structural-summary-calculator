@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/dq/v"
   - "result-interpretation/lower-section/processing/DQ_v_proc"
   - "result-interpretation/lower-section/processing/DQ_plus_proc"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/dq/v-plus/index.md"
 ---
 
 # 문서명: [부호화/발달질] v/+
@@ -53,8 +52,3 @@ DQv/+는 둘 이상의 부분이나 대상을 하나의 응답으로 결합했�
 - [\[부호화/발달질\] v](ref://scoring-input/dq/v)
 - [\[해석/Processing\] DQv](ref://result-interpretation/lower-section/processing/DQ_v_proc)
 - [\[해석/Processing\] DQ+](ref://result-interpretation/lower-section/processing/DQ_plus_proc)
-
-## 근거 메모
-
-- 세부 근거 대조와 용어 판단 기록은 내부 작업 메모에서 관리한다.
-- 공개 참조 문서 반영 단계에서는 내부 provenance가 노출되지 않도록 분리한다.

@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/location/S"
   - "scoring-input/location/DS"
   - "result-interpretation/upper-section/S"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/location/dds/index.md"
 ---
 
 # Nombre del documento: [Codificación/Localización] DdS
@@ -49,7 +48,3 @@ Combina dos decisiones: área poco frecuente y uso real del blanco.
 - [[Codificación/Localización] S](ref://scoring-input/location/S)
 - [[Codificación/Localización] DS](ref://scoring-input/location/DS)
 - [[Interpretación/Upper Section] S](ref://result-interpretation/upper-section/S)
-
-## Nota de fundamento
-
-- La provenance interna conserva el criterio combinado de área inusual y uso efectivo de espacio blanco.

@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/popular"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
   - "result-interpretation/lower-section/interpersonal/PureH"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/gphr/ghr/index.md"
 ---
 
 # Nombre del documento: [Codificación/GHR-PHR] GHR
@@ -60,8 +59,3 @@ No es un juicio clínico libre, sino el resultado de aplicar los criterios suces
 - [[Codificación/Popular] P](ref://scoring-input/popular)
 - [[Interpretación/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
 - [[Interpretación/Interpersonal] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)
-
-## Nota de fundamento
-
-- La justificación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

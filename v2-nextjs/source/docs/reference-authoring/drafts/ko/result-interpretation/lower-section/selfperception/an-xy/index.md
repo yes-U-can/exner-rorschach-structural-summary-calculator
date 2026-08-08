@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/contents/An"
   - "scoring-input/contents/Xy"
   - "result-interpretation/special-indices/HVI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/selfperception/an-xy/index.md"
 ---
 
 # 문서명: [해석/Self Perception] An + Xy
@@ -63,7 +62,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[부호화/내용\] An](ref://scoring-input/contents/An)
 - [\[부호화/내용\] Xy](ref://scoring-input/contents/Xy)
 - [\[해석/Special Indices\] Hypervigilance Index](ref://result-interpretation/special-indices/HVI)
-
-## 근거 메모
-
-- medical-context caution은 provenance note에 분리했다.

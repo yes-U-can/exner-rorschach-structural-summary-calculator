@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/determinants/C'"
   - "scoring-input/determinants/FC'"
   - "scoring-input/determinants/C'F"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/core/sumcprime/index.md"
 ---
 
 # 문서명: [해석/Core] SumCprime
@@ -70,7 +69,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[부호화/결정인\] C'](ref://scoring-input/determinants/C%27)
 - [\[부호화/결정인\] FC'](ref://scoring-input/determinants/FC%27)
 - [\[부호화/결정인\] C'F](ref://scoring-input/determinants/C%27F)
-
-## 근거 메모
-
-- dysphoric duo와 constriction 관련 메모는 provenance note에 분리했다.

@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/contents/(Ad)"
   - "scoring-input/contents/Hd"
   - "scoring-input/contents/An"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/contents/ad/index.md"
 ---
 
 # Nombre del documento: [Codificación/Contenido] Ad
@@ -54,8 +53,3 @@ Sirve para cola, cabeza, ala, garra u otra porción animal claramente parcial.
 - [[Codificación/Contenido] (Ad)](ref://scoring-input/contents/%28Ad%29)
 - [[Codificación/Contenido] Hd](ref://scoring-input/contents/Hd)
 - [[Codificación/Contenido] An](ref://scoring-input/contents/An)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

@@ -23,9 +23,8 @@ relatedRoutes:
   - "scoring-input/special-score/FABCOM2"
   - "scoring-input/special-score/ALOG"
   - "scoring-input/special-score/CONTAM"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Ideation] Sum6
@@ -70,7 +69,3 @@ It is used to estimate how often cognitive oddities, verbal deviations, or probl
 - [[Coding/Special Score] FABCOM2](ref://scoring-input/special-score/FABCOM2)
 - [[Coding/Special Score] ALOG](ref://scoring-input/special-score/ALOG)
 - [[Coding/Special Score] CONTAM](ref://scoring-input/special-score/CONTAM)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

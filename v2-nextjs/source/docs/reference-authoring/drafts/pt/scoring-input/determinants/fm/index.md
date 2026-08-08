@@ -12,9 +12,8 @@ relatedRoutes:
   - "scoring-input/determinants/M"
   - "scoring-input/determinants/m"
   - "result-interpretation/lower-section/core/FM"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-determinants-movement-chromatic-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Determinantes] FM
@@ -53,7 +52,3 @@ Em uma resposta, registre apenas um código de movimento animal. Se animais dist
 - [[Codificação/Determinantes] M](ref://scoring-input/determinants/M)
 - [[Codificação/Determinantes] m](ref://scoring-input/determinants/m)
 - [[Interpretação/Core] FM](ref://result-interpretation/lower-section/core/FM)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

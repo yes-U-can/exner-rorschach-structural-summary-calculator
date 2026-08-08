@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/card"
   - "scoring-input/gphr/GHR"
   - "result-interpretation/lower-section/mediation/P"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/popular/index.md"
 ---
 
 # Nombre del documento: [Codificación/Popular] Popular
@@ -53,8 +52,3 @@ En codificación, `P` se usa cuando la respuesta coincide con una popular defini
 - [[Codificación/Láminas] Card](ref://scoring-input/card)
 - [[Codificación/GHR-PHR] GHR](ref://scoring-input/gphr/GHR)
 - [[Interpretación/Mediation] P](ref://result-interpretation/lower-section/mediation/P)
-
-## Nota de fundamento
-
-- La justificación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

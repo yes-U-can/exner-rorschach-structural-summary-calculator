@@ -25,9 +25,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/ZEst"
   - "result-interpretation/upper-section/Zd"
   - "result-interpretation/lower-section/processing/Zd_proc"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/z/index.md"
 ---
 
 # [부호화/Z] Z
@@ -82,8 +81,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/z/in
 - [result-interpretation/upper-section/ZEst](ref://result-interpretation%2Fupper-section%2FZEst)
 - [result-interpretation/upper-section/Zd](ref://result-interpretation%2Fupper-section%2FZd)
 - [result-interpretation/lower-section/processing/Zd_proc](ref://result-interpretation%2Flower-section%2Fprocessing%2FZd_proc)
-
-## 근거 메모
-
-- 상세 근거와 카드별 가중치 메모는 provenance note에 분리해 둔다.
-- 공개용 본문에는 저작권 자료명을 직접 노출하지 않는다.

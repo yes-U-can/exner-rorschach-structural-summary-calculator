@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/gphr/GHR"
   - "result-interpretation/lower-section/interpersonal/COP"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Special Scores] COP
@@ -59,7 +58,3 @@ The central idea is positive or coordinated joint action.
 - [[Coding/GHR-PHR] GHR](ref://scoring-input/gphr/GHR)
 - [[Interpretation/Interpersonal] COP](ref://result-interpretation/lower-section/interpersonal/COP)
 - [[Interpretation/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

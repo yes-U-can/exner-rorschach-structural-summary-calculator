@@ -21,9 +21,8 @@ relatedRoutes:
   - "scoring-input/determinants/FC"
   - "scoring-input/determinants/CF"
   - "scoring-input/determinants/C"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Core] EB
@@ -66,7 +65,3 @@ It shows whether the person tends to rely more on ideational, reflective elabora
 - [[Coding/Determinants] FC](ref://scoring-input/determinants/FC)
 - [[Coding/Determinants] CF](ref://scoring-input/determinants/CF)
 - [[Coding/Determinants] C](ref://scoring-input/determinants/C)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

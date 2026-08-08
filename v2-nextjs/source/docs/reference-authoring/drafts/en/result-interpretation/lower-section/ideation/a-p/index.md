@@ -19,9 +19,8 @@ relatedRoutes:
   - "scoring-input/determinants/FM"
   - "scoring-input/determinants/m"
   - "result-interpretation/lower-section/interpersonal/a_p_inter"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Ideation] a:p
@@ -59,7 +58,3 @@ It is used to estimate whether mental activity leans more toward initiative and 
 - [[Coding/Determinants] FM](ref://scoring-input/determinants/FM)
 - [[Coding/Determinants] m](ref://scoring-input/determinants/m)
 - [[Interpretation/Interpersonal] a:p](ref://result-interpretation/lower-section/interpersonal/a_p_inter)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

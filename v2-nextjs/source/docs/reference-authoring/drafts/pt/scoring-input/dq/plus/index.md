@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/dq/v"
   - "scoring-input/fq/+"
   - "result-interpretation/lower-section/processing/DQ_plus_proc"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-dq-2026-03-10.md"
 ---
 
 # Nome do documento: [Codificação/Qualidade Desenvolvimental] +
@@ -53,7 +52,3 @@ A chave não é apenas haver mais de um objeto, mas haver um todo organizado.
 - [[Codificação/Qualidade Desenvolvimental] o](ref://scoring-input/dq/o)
 - [[Codificação/Qualidade Formal] +](ref://scoring-input/fq/%2B)
 - [[Interpretação/Processing] DQ+](ref://result-interpretation/lower-section/processing/DQ_plus_proc)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

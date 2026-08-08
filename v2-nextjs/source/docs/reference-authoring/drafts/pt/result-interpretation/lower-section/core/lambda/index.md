@@ -17,9 +17,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/processing/W_M"
   - "scoring-input/fq"
   - "scoring-input/determinants/F"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-lower-section-core-opening-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Core] Lambda
@@ -57,7 +56,3 @@ Na interpretação, ela é usada como indicador de quanto o protocolo simplifica
 - [[Interpretação/Processing] W:M](ref://result-interpretation/lower-section/processing/W_M)
 - [[Codificação/FQ] FQ](ref://scoring-input/fq)
 - [[Codificação/Determinantes] F](ref://scoring-input/determinants/F)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

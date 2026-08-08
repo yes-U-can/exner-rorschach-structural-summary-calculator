@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/special-score/PSV"
   - "result-interpretation/lower-section/processing/Zd_proc"
   - "result-interpretation/lower-section/processing/W_D_Dd"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/processing/psv/index.md"
 ---
 
 # 문서명: [해석/Processing] PSV
@@ -62,7 +61,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[부호화/특수점수\] PSV](ref://scoring-input/special-score/PSV)
 - [\[해석/Processing\] Zd](ref://result-interpretation/lower-section/processing/Zd_proc)
 - [\[해석/Processing\] W:D:Dd](ref://result-interpretation/lower-section/processing/W_D_Dd)
-
-## 근거 메모
-
-- `PSV`의 within-card emphasis와 attention-shifting 메모는 provenance note에 분리했다.

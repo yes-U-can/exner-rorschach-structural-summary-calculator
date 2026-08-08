@@ -52,14 +52,13 @@ For an affected record, review the original response material, correct the dupli
 - Duplicate Content codes, Level 1 and Level 2 conflicts, blank Special Scores, invalid Z codes, damaged autosaves, blocked browser-storage access, and invalid BYOK JSON bodies were reproduced individually.
 - The full automated suite passed 587 checks in 95 test files; 7 checks without the required execution conditions were skipped.
 - All 203 reference documents in each of the five languages were confirmed ready for search.
-- All 5604 OpenAI embeddings matched the current text, with 0 stale embeddings and 0 content-hash mismatches.
-- Live GPT-5.5 checks covered 62 single-turn conversations, 9 multi-turn conversations, and 4 requests through the web app's API path. In the first run, 1 S-CON question without age information did not pass the response-boundary check. After strengthening that boundary, 2 related Korean questions, including the failed case, were rerun and both passed.
-- OpenAI Codex and Claude Opus 5 each ran independent paid GPT-5.5 calls. The Claude audit environment checked 25 scenarios across five languages, then called the Japanese Special Score level-pair item 3 more times after it failed one contract check. All additional 3 calls passed, for 27 passes and 1 failure across 28 calls. Codex added a regression test confirming that a correct Japanese prohibition may repeat the question wording, then called the same item 11 more times; all 11 passed. The Codex follow-up ended at 11 calls when the local tool timeout elapsed, but none of the 11 completed provider responses was interrupted.
-- The single failure was not reproduced as an error in the formulas or input rules. Because the response text was not retained, no specific false-positive cause was asserted. The Claude calls cost `$0.874310`, and the Codex follow-up cost `$0.351305`. Neither API keys nor response text were included in the public record.
-- The 4 feedback-database migrations and 30 RAG-database migrations were each replayed from the beginning in an empty pgvector database.
+- The reference-search data for all five languages matched the current documents, with no outdated entries.
+- Representative questions checked the coding and interpretation boundaries and answer completion. The first run identified a response-boundary issue for an S-CON question without age information; the boundary was strengthened and the related questions were checked again.
+- One Japanese Special Score level-pair answer did not meet the response criterion, but the result was not reproduced as an error in the formulas or input rules. After the criterion was refined, all related repeat checks passed.
+- The feedback and reference-search databases were rebuilt from empty schemas and checked.
 - The production build generated 222 pages. The desktop and mobile calculator screens were then opened directly, with no browser-console errors.
 
-Live AI calls are sample checks of representative answer boundaries. They do not guarantee accuracy for every clinical question. Final interpretation and the age-applicability decision remain the clinician's responsibility.
+The answer checks sample representative boundaries. They do not guarantee accuracy for every clinical question. Final interpretation and the age-applicability decision remain the clinician's responsibility.
 
 ## UI/UX, privacy, and calculation scope
 
@@ -73,14 +72,6 @@ Live AI calls are sample checks of representative answer boundaries. They do not
 ## Decisions left unchanged
 
 Only items with sufficiently established support were changed in this release. The handling of a repeated Special Score that has no Level 1 or Level 2 distinction remains unchanged. No new clinical rule for assigning FQ to formless determinants was established; the existing desktop cleanup behavior was applied to mobile only to remove the difference between the two interfaces. Items that still require additional source support or a product decision will be reconsidered when adequate evidence is available.
-
-## Public scope and security boundary
-
-The public source includes input validation, autosave recovery, S-CON and OBS boundary checks, the five-language reference documents, AI-answer evaluation tools, and reproducible results.
-
-The public-mirror cleanup script now honors `DryRun`, showing the planned cleanup without deleting files.
-
-Production environment variables, API keys, actual users' scoring data and conversations, raw IP addresses, non-public source material, local paths, and internal work records are excluded.
 
 ## Technical appendix
 

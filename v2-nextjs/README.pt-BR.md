@@ -5,8 +5,8 @@
 Esta pasta contém o histórico de versões e o código-fonte que pode ser disponibilizado publicamente da v2 da calculadora do Sumário Estrutural de Rorschach. As notas do patch descrevem as alterações mais recentes, enquanto o código público reúne materiais de verificação dos cálculos e de implementação.
 
 - Notas do patch mais recente: [releases/v2.2.10](./releases/v2.2.10/README.pt-BR.md)
-- Auditoria completa de 53 grupos documentais e limites entre sistemas: [methodology/reference-audit-v2.2.10](./methodology/reference-audit-v2.2.10/README.pt-BR.md)
-- Verificação do Sumário Estrutural com as fontes primárias: [source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md](./source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md)
+- Fontes de cálculo e escopo bibliográfico: [methodology/reference-audit-v2.2.10](./methodology/reference-audit-v2.2.10/README.pt-BR.md)
+- Verificação das fontes de cálculo do Sumário Estrutural: [source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md](./source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md)
 - Auditoria anterior da exatidão dos cálculos: [source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md](./source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md)
 - Notas da primeira versão v2: [releases/v2.0.0](./releases/v2.0.0/)
 - Código-fonte público: [source](./source/)
@@ -14,8 +14,6 @@ Esta pasta contém o histórico de versões e o código-fonte que pode ser dispo
 ## Escopo público
 
 `source/` contém o código-fonte central necessário para executar e revisar o aplicativo, os arquivos de tradução, o corpus breve de documentos de referência pesquisado pelos assistentes de IA, as verificações automáticas e a configuração de implantação.
-
-Não estão incluídas variáveis do ambiente de produção, configurações do projeto Vercel, logs locais, caches, `node_modules`, documentos operacionais experimentais antigos, notas de trabalho privadas nem o histórico de migrações do banco de dados. O código público permite revisar o funcionamento e o desenho centrais, mas não reproduz todo o ambiente de produção.
 
 <details>
 <summary><strong>Como executar o código-fonte localmente</strong></summary>

@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/W"
   - "scoring-input/determinants/M"
   - "result-interpretation/lower-section/ideation/Ma_Mp"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-processing-wm-psv-dqplus-2026-03-10.md"
 ---
 
 # [Interpretation/Processing] W:M
@@ -68,7 +67,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-processing-wm-psv-
 - [[解釈/上段] W](ref://result-interpretation/upper-section/W)
 - [[Coding/決定因] M](ref://scoring-input/determinants/M)
 - [[解釈/Ideation] Ma:Mp](ref://result-interpretation/lower-section/ideation/Ma_Mp)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

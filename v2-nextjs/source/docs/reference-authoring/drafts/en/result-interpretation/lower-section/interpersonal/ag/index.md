@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/gphr/PHR"
   - "result-interpretation/lower-section/affect/S_aff"
   - "result-interpretation/lower-section/ideation/MOR"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Interpersonal] AG
@@ -69,7 +68,3 @@ In interpretation, it is used to read whether relatedness is more easily organiz
 - [[Coding/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
 - [[Interpretation/Affect] S](ref://result-interpretation/lower-section/affect/S_aff)
 - [[Interpretation/Ideation] MOR](ref://result-interpretation/lower-section/ideation/MOR)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

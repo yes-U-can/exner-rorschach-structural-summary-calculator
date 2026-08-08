@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/contents/An"
   - "scoring-input/contents/Xy"
   - "result-interpretation/special-indices/HVI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 # Document Name: [Interpretation/Self Perception] An + Xy
 ## Aliases / Search Terms
@@ -51,5 +50,3 @@ In `Self Perception`, it functions as a clue to concern about the body, its func
 - [[Coding/Content] An](ref://scoring-input/contents/An)
 - [[Coding/Content] Xy](ref://scoring-input/contents/Xy)
 - [[Interpretation/Special Indices] Hypervigilance Index](ref://result-interpretation/special-indices/HVI)
-## Evidence Note
-- Detailed source comparison is stored in internal provenance notes.

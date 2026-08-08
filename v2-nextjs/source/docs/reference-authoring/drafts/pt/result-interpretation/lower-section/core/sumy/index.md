@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/determinants/Y"
   - "scoring-input/determinants/FY"
   - "scoring-input/determinants/YF"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-core-shading-burdens-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Core] SumY
@@ -58,7 +57,3 @@ No `core`, ele costuma refletir sofrimento vago, tensão difícil de modular ou 
 - [[Codificação/Determinantes] Y](ref://scoring-input/determinants/Y)
 - [[Codificação/Determinantes] FY](ref://scoring-input/determinants/FY)
 - [[Codificação/Determinantes] YF](ref://scoring-input/determinants/YF)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

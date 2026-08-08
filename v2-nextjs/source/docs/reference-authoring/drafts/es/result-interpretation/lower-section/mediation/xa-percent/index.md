@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/mediation/X_minus_percent"
   - "scoring-input/fq"
   - "scoring-input/popular"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/mediation/xa-percent/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Mediación] XA%
@@ -68,7 +67,3 @@ Incluye respuestas con `FQ+`, `FQo` y `FQu`, por eso muestra una visión amplia 
 - [[Interpretación/Mediación] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
 - [[Codificación/FQ] FQ](ref://scoring-input/fq)
 - [[Codificación/Popular] Popular](ref://scoring-input/popular)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/contents/Ad"
   - "scoring-input/contents/(Ad)"
   - "scoring-input/popular"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-animal-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Conteúdo] A
@@ -53,7 +52,3 @@ Ele não se refere a uma parte do animal nem a um animal claramente fantástico.
 - [[Codificação/Conteúdo] Ad](ref://scoring-input/contents/Ad)
 - [[Codificação/Conteúdo] (Ad)](ref://scoring-input/contents/%28Ad%29)
 - [[Codificação/Resposta Popular] Popular](ref://scoring-input/popular)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

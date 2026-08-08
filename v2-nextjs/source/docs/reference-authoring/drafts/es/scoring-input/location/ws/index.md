@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/location/DS"
   - "scoring-input/location/DdS"
   - "result-interpretation/upper-section/S"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/location/ws/index.md"
 ---
 
 # Nombre del documento: [Codificación/Localización] WS
@@ -51,7 +50,3 @@ La clave no es solo que haya blanco dentro del área, sino que ese blanco tenga 
 - [[Codificación/Localización] DS](ref://scoring-input/location/DS)
 - [[Codificación/Localización] DdS](ref://scoring-input/location/DdS)
 - [[Interpretación/Upper Section] S](ref://result-interpretation/upper-section/S)
-
-## Nota de fundamento
-
-- La provenance interna conserva los criterios de integración real del espacio blanco.

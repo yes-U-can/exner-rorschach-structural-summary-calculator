@@ -20,9 +20,8 @@ relatedRoutes:
   - "scoring-input/determinants/T"
   - "scoring-input/determinants/FT"
   - "scoring-input/determinants/TF"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-interpersonal-ap-food-sumt-humancont-2026-03-10.md"
 ---
 
 # [Interpretation/Interpersonal] SumT
@@ -77,7 +76,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-interpersonal-ap-f
 - [[Coding/決定因] T](ref://scoring-input/determinants/T)
 - [[Coding/決定因] FT](ref://scoring-input/determinants/FT)
 - [[Coding/決定因] TF](ref://scoring-input/determinants/TF)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/fq/-"
   - "result-interpretation/lower-section/mediation/XA_percent"
   - "result-interpretation/lower-section/mediation/WDA_percent"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-fq-2026-03-10.md"
 ---
 
 # Nome do documento: [Codificação/Qualidade Formal] o
@@ -52,7 +51,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-fq-2026-03-10.md"
 - [[Codificação/Qualidade Formal] -](ref://scoring-input/fq/-)
 - [[Interpretação/Mediation] XA%](ref://result-interpretation/lower-section/mediation/XA_percent)
 - [[Interpretação/Mediation] WDA%](ref://result-interpretation/lower-section/mediation/WDA_percent)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

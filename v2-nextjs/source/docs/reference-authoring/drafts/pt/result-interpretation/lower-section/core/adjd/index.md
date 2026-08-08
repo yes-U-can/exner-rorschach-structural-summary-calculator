@@ -18,9 +18,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/SumY"
   - "result-interpretation/lower-section/core/Lambda"
   - "result-interpretation/special-indices/CDI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-core-d-family-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Core] AdjD
@@ -61,7 +60,3 @@ Ele funciona como estimativa mais estável da margem de controle porque `AdjEs` 
 - [[Interpretação/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
 - [[Interpretação/Core] Lambda](ref://result-interpretation/lower-section/core/Lambda)
 - [[Interpretação/Special Índices] CDI](ref://result-interpretation/special-indices/CDI)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

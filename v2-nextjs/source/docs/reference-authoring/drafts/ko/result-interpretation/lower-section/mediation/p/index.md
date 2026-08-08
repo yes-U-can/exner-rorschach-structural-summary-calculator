@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/popular"
   - "scoring-input/card/I"
   - "scoring-input/card/V"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/mediation/p/index.md"
 ---
 
 # 문서명: [해석/Mediation] P
@@ -66,7 +65,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[부호화/인기반응\] Popular](ref://scoring-input/popular)
 - [\[부호화/카드\] I](ref://scoring-input/card/I)
 - [\[부호화/카드\] V](ref://scoring-input/card/V)
-
-## 근거 메모
-
-- culture-sensitive P 목록 차이와 `P < 4`, `P > 7`, `P < 3 or > 8` 메모는 provenance note에 분리했다.

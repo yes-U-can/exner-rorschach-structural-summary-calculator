@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/special-score/AG"
   - "result-interpretation/lower-section/ideation/MOR"
   - "result-interpretation/lower-section/selfPerception/MOR_self"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-special-score-opening-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Códigos Especiais] MOR
@@ -52,7 +51,3 @@ O código aponta para dano, degradação ou tonalidade patológica atribuída di
 - [[Codificação/Códigos Especiais] AG](ref://scoring-input/special-score/AG)
 - [[Interpretação/Ideation] MOR](ref://result-interpretation/lower-section/ideation/MOR)
 - [[Interpretação/Autopercepção] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

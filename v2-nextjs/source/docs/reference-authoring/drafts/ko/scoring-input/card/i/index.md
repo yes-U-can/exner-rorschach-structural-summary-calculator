@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/contents/A"
   - "scoring-input/popular"
   - "scoring-input/card/V"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/card/i/index.md"
 ---
 
 # [부호화/카드] I
@@ -59,8 +58,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/card
 - [scoring-input/contents/A](ref://scoring-input%2Fcontents%2FA)
 - [scoring-input/popular](ref://scoring-input%2Fpopular)
 - [scoring-input/card/V](ref://scoring-input%2Fcard%2FV)
-
-## 근거 메모
-
-- 상세 근거와 source 충돌 메모는 provenance note에 분리해 둔다.
-- 공개용 본문에는 저작권 자료명을 직접 노출하지 않는다.

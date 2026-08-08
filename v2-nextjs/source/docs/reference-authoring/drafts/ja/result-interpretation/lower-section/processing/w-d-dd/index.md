@@ -18,9 +18,8 @@ relatedRoutes:
   - "scoring-input/location/W"
   - "scoring-input/location/D"
   - "scoring-input/location/Dd"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-processing-zf-zd-wddd-2026-03-10.md"
 ---
 
 # [Interpretation/Processing] W:D:Dd
@@ -60,7 +59,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-processing-zf-zd-w
 - [[Coding/領域] W](ref://scoring-input/location/W)
 - [[Coding/領域] D](ref://scoring-input/location/D)
 - [[Coding/領域] Dd](ref://scoring-input/location/Dd)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

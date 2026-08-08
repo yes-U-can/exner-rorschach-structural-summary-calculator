@@ -19,9 +19,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation"
   - "result-interpretation/lower-section/affect"
   - "result-interpretation/lower-section/interpersonal"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-indices-2026-03-10.md"
 ---
 
 # 文書名: [解釈/特殊指標] 特殊指標
@@ -76,7 +75,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-indices-20
 - [[解釈/下位セクション/観念] 観念](ref://result-interpretation/lower-section/ideation)
 - [[解釈/下位セクション/感情] 感情](ref://result-interpretation/lower-section/affect)
 - [[解釈/下位セクション/対人関係] 対人関係](ref://result-interpretation/lower-section/interpersonal)
-
-## 根拠メモ
-
-- 詳細な検討記録は内部の検証ノートで管理します。

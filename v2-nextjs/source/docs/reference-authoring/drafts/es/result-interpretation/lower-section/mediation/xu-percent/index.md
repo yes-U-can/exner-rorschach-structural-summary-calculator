@@ -15,9 +15,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/mediation/X_minus_percent"
   - "result-interpretation/lower-section/mediation/P"
   - "scoring-input/fq/u"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/mediation/xu-percent/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Mediación] Xu%
@@ -66,7 +65,3 @@ Señala una mediación perceptiva que todavía puede sostenerse, aunque se aleja
 - [[Interpretación/Mediación] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
 - [[Interpretación/Mediación] P](ref://result-interpretation/lower-section/mediation/P)
 - [[Codificación/FQ] u](ref://scoring-input/fq/u)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

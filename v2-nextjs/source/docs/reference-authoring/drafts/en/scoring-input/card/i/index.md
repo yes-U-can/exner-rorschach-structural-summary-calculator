@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/contents/A"
   - "scoring-input/popular"
   - "scoring-input/card/V"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Cards] I
@@ -56,7 +55,3 @@ This page summarizes the kinds of responses that often appear when coding begins
 - [[Coding/Contents] A](ref://scoring-input/contents/A)
 - [[Coding/Popular] Popular](ref://scoring-input/popular)
 - [[Coding/Cards] V](ref://scoring-input/card/V)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

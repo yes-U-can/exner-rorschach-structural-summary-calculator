@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/location/Dd"
   - "scoring-input/location/W"
   - "result-interpretation/upper-section/D"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Location] D
@@ -49,7 +48,3 @@ The code is about frequency of area use, not simply about the physical size of t
 - [[Coding/Location] Dd](ref://scoring-input/location/Dd)
 - [[Coding/Location] W](ref://scoring-input/location/W)
 - [[Interpretation/Upper Section] D](ref://result-interpretation/upper-section/D)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

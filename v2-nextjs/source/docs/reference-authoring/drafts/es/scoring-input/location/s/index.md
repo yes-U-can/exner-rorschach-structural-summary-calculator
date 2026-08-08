@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/location/DdS"
   - "result-interpretation/upper-section/S"
   - "scoring-input/z/ZS"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/location/s/index.md"
 ---
 
 # Nombre del documento: [Codificación/Localización] S
@@ -52,7 +51,3 @@ No se codifica solo; siempre acompaña a un código básico de localización.
 - [[Codificación/Localización] DdS](ref://scoring-input/location/DdS)
 - [[Interpretación/Upper Section] S](ref://result-interpretation/upper-section/S)
 - [[Codificación/Z] ZS](ref://scoring-input/z/ZS)
-
-## Nota de fundamento
-
-- La provenance interna conserva los criterios para distinguir integración real del blanco de mera inclusión visual.

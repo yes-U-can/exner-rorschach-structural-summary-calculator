@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/contents/(H)"
   - "scoring-input/determinants/M"
   - "scoring-input/fq"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Cards] IX
@@ -56,7 +55,3 @@ This page summarizes what to watch in human content, movement, and formal qualit
 - [[Coding/Contents] (H)](ref://scoring-input/contents/%28H%29)
 - [[Coding/Determinants] M](ref://scoring-input/determinants/M)
 - [[Coding/FQ] FQ](ref://scoring-input/fq)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

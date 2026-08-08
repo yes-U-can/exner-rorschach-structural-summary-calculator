@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/An"
   - "result-interpretation/lower-section/selfPerception/An_Xy"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-completion-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Conteúdo] Xy
@@ -51,7 +50,3 @@ O foco principal é a leitura radiográfica, não apenas anatomia comum.
 - [[Codificação/Conteúdo] Contents](ref://scoring-input/contents)
 - [[Codificação/Conteúdo] An](ref://scoring-input/contents/An)
 - [[Interpretação/Self-Perception] An+Xy](ref://result-interpretation/lower-section/selfPerception/An_Xy)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

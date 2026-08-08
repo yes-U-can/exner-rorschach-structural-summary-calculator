@@ -12,9 +12,8 @@ relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/Na"
   - "scoring-input/contents/Fi"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/contents/cl/index.md"
 ---
 
 # Nombre del documento: [Codificación/Contenido] Cl
@@ -48,8 +47,3 @@ Se aplica a la nube misma, no a otras formas atmosféricas parecidas.
 - [[Codificación/Contenido] Contents](ref://scoring-input/contents)
 - [[Codificación/Contenido] Na](ref://scoring-input/contents/Na)
 - [[Codificación/Contenido] Fi](ref://scoring-input/contents/Fi)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

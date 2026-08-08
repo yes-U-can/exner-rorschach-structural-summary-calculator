@@ -31,6 +31,8 @@ describe('public mirror privacy boundary', () => {
     expect(script).toContain('Remove-PublicMirrorPrivateArtifacts');
     expect(script).toContain('Remove-PrivateGitMetadataProperties');
     expect(script).toContain('Assert-NoPublicGitMetadata');
+    expect(script).toContain('Assert-NoPublicAuthoringMetadata');
+    expect(script).toContain('Assert-NoReaderFacingProductionNarrative');
     expect(script).toContain('-Recurse -Force');
     expect(script).toContain('$sanitizedLines = @(foreach');
     expect(script).toContain('ConvertTo-Json -InputObject @($record)');

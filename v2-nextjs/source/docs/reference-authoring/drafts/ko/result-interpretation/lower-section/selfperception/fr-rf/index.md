@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/determinants/Fr"
   - "scoring-input/determinants/rF"
   - "scoring-input/pair"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/selfperception/fr-rf/index.md"
 ---
 
 # 문서명: [해석/Self Perception] Fr + rF
@@ -67,7 +66,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[부호화/결정인\] Fr](ref://scoring-input/determinants/Fr)
 - [\[부호화/결정인\] rF](ref://scoring-input/determinants/rF)
 - [\[부호화/쌍반응\] Pair](ref://scoring-input/pair)
-
-## 근거 메모
-
-- adult rarity와 reaffirmation 메모는 provenance note에 분리했다.

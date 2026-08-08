@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/special-score/PER"
   - "result-interpretation/lower-section/mediation/Xu_percent"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-interpersonal-closing-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Interpessoal] PER
@@ -54,7 +53,3 @@ Na interpretação, ele sugere o quanto um enquadre autorreferente molda a leitu
 - [[Codificação/Pontuação Especial] PER](ref://scoring-input/special-score/PER)
 - [[Interpretação/Mediação] Xu%](ref://result-interpretation/lower-section/mediation/Xu_percent)
 - [[Interpretação/Autopercepção] H Ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

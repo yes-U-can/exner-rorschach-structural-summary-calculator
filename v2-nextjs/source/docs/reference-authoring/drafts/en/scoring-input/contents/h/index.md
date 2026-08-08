@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/gphr/PHR"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
   - "result-interpretation/lower-section/interpersonal/PureH"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Content] H
@@ -59,7 +58,3 @@ The response points to an entire person, not a body part and not a mythic or fan
 - [[Coding/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
 - [[Interpretation/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
 - [[Interpretation/Interpersonal] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

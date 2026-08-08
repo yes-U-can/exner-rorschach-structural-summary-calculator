@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/selfPerception/An_Xy"
   - "scoring-input/special-score/MOR"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-selfperception-family-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Autopercepção] MOR
@@ -68,7 +67,3 @@ Onde `MOR` em `Ideação` descreve um tom geral do pensamento, aqui o foco é qu
 - [[Interpretação/Autopercepção] An + Xy](ref://result-interpretation/lower-section/selfPerception/An_Xy)
 - [[Codificação/Códigos Especiais] MOR](ref://scoring-input/special-score/MOR)
 - [[Interpretação/Índices Especiais] DEPI](ref://result-interpretation/special-indices/DEPI)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

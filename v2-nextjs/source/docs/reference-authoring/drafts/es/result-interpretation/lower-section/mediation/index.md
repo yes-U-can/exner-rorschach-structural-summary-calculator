@@ -22,9 +22,8 @@ relatedRoutes:
   - "scoring-input/fq"
   - "scoring-input/popular"
   - "scoring-input/location/S"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/mediation/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Lower Section/Mediación] Mediación
@@ -83,7 +82,3 @@ En esta zona se revisa cuánta adecuación perceptiva hay, cuánta rareza aparec
 - [[Codificación/FQ] FQ](ref://scoring-input/fq)
 - [[Codificación/Popular] Popular](ref://scoring-input/popular)
 - [[Codificación/Location] S](ref://scoring-input/location/S)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

@@ -62,12 +62,9 @@
 - `displayTitle`
 - `aliases`
 - `relatedRoutes`
-- `authorityPolicy: "curated-internal-reference"`
+- `authorityPolicy: "curated-reference"`
 - `status`
 - `runtimeReady`
-- `provenanceNote`
-
-`provenanceNote`는 저장소 안에 실제로 존재하는 내부 메모를 가리켜야 합니다. 공통 검수만 필요한 문서는 `notes/corpus-review-ledger.md`를 사용할 수 있습니다.
 
 ## 생성 흐름
 
@@ -116,13 +113,6 @@ npm run docs:generate-vector-release-snapshot
 
 </details>
 
-## 공개 경계
+## 공개 범위
 
-공개 소스에는 실행 가능한 앱, 공개 참조 문서, AI가 검색하는 데 필요한 공개 자료만 포함합니다. 다음 항목은 제외합니다.
-
-- `docs/reference-authoring/incoming/`
-- `docs/reference-authoring/notes/`
-- 비공개 작업 기록과 인수인계 문서
-- 환경 변수, API 키, 로컬 데이터베이스, 로그
-
-공개 문서는 프로젝트 안에서 선별하고 검토했다는 사실만 설명합니다. 특정 비공개 자료가 특정 참조 문서의 직접 출처라고 공개적으로 주장하지 않습니다.
+공개 저장소의 참조 문서는 공개 가능한 임상 설명과 공개 근거만 포함합니다. 출처 대조 기록은 원고 작업 공간에 별도로 보존하며 공개 원고 frontmatter에는 포함하지 않습니다.

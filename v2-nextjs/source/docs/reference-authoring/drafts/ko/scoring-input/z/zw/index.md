@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/dq/o"
   - "result-interpretation/upper-section/Zf"
   - "result-interpretation/upper-section/ZSum"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/z/zw/index.md"
 ---
 
 # [부호화/Z] ZW
@@ -60,8 +59,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/z/zw
 - [scoring-input/dq/o](ref://scoring-input%2Fdq%2Fo)
 - [result-interpretation/upper-section/Zf](ref://result-interpretation%2Fupper-section%2FZf)
 - [result-interpretation/upper-section/ZSum](ref://result-interpretation%2Fupper-section%2FZSum)
-
-## 근거 메모
-
-- 상세 근거와 카드별 가중치 메모는 provenance note에 분리해 둔다.
-- 공개용 본문에는 저작권 자료명을 직접 노출하지 않는다.

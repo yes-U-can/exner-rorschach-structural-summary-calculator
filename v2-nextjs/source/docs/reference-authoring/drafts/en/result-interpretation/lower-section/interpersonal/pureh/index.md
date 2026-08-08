@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/gphr/PHR"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
   - "result-interpretation/special-indices/CDI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Interpersonal] Pure H
@@ -71,7 +70,3 @@ At the interpersonal level, it helps show whether the image of the other tends t
 - [[Coding/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
 - [[Interpretation/Self Perception] H Ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
 - [[Interpretation/Special Indices] CDI](ref://result-interpretation/special-indices/CDI)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

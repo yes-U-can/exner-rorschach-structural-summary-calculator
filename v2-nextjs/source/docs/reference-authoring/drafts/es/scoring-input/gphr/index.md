@@ -20,9 +20,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/interpersonal/HumanCont"
   - "result-interpretation/lower-section/interpersonal/PureH"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/gphr/index.md"
 ---
 
 # Nombre del documento: [Codificación/GHR-PHR] GHR/PHR
@@ -65,8 +64,3 @@ No se asignan por impresión clínica general, sino siguiendo una secuencia de d
 - [[Interpretación/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
 - [[Interpretación/Interpersonal] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)
 - [[Interpretación/Self Perception] H ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/dq/v/+"
   - "scoring-input/dq/v"
   - "result-interpretation/upper-section/dq_o"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-dq-2026-03-10.md"
 ---
 
 # Nome do documento: [Codificação/Qualidade Desenvolvimental] o
@@ -50,7 +49,3 @@ Ele representa um nível ordinário, não sintetizado, de desenvolvimento estrut
 - [[Codificação/Qualidade Desenvolvimental] v/+](ref://scoring-input/dq/v/%2B)
 - [[Codificação/Qualidade Desenvolvimental] v](ref://scoring-input/dq/v)
 - [[Interpretação/Upper Section] DQo](ref://result-interpretation/upper-section/dq_o)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

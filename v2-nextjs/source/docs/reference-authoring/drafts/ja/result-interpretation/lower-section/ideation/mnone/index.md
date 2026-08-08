@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/M_minus"
   - "scoring-input/determinants/M"
   - "result-interpretation/special-indices/SCON"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-ideation-mnone-2026-03-10.md"
 ---
 
 # [Interpretation/Ideation] Mnone
@@ -51,7 +50,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-ideation-mnone-202
 - [[解釈/Ideation] M-](ref://result-interpretation/lower-section/ideation/M_minus)
 - [[Coding/決定因] M](ref://scoring-input/determinants/M)
 - [[解釈/特殊指標] SCON](ref://result-interpretation/special-indices/SCON)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/contents/A"
   - "scoring-input/contents/Ad"
   - "scoring-input/contents/(Ad)"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Content] (A)
@@ -51,7 +50,3 @@ The form is still a whole animal, even though the referent does not exist in ord
 - [[Coding/Content] A](ref://scoring-input/contents/A)
 - [[Coding/Content] Ad](ref://scoring-input/contents/Ad)
 - [[Coding/Content] (Ad)](ref://scoring-input/contents/%28Ad%29)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

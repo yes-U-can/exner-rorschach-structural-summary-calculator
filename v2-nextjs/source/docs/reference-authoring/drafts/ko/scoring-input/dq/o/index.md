@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/dq/v/+"
   - "scoring-input/dq/v"
   - "scoring-input/fq/o"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/dq/o/index.md"
 ---
 
 # 문서명: [부호화/발달질] o
@@ -55,8 +54,3 @@ DQo는 반점의 특정 영역이 선택되고 정교화되어 하나의 비교�
 - [\[부호화/발달질\] v/+](ref://scoring-input/dq/v/%2B)
 - [\[부호화/발달질\] v](ref://scoring-input/dq/v)
 - [\[부호화/형태질\] o](ref://scoring-input/fq/o)
-
-## 근거 메모
-
-- 세부 근거 대조와 용어 판단 기록은 내부 작업 메모에서 관리한다.
-- 공개 참조 문서 반영 단계에서는 내부 provenance가 노출되지 않도록 분리한다.

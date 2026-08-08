@@ -22,9 +22,8 @@ relatedRoutes:
   - "scoring-input/determinants/FC"
   - "scoring-input/determinants/CF"
   - "scoring-input/determinants/C"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Core] EA
@@ -68,7 +67,3 @@ It indicates how much effective capacity the person has to handle ordinary deman
 - [[Coding/Determinants] FC](ref://scoring-input/determinants/FC)
 - [[Coding/Determinants] CF](ref://scoring-input/determinants/CF)
 - [[Coding/Determinants] C](ref://scoring-input/determinants/C)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

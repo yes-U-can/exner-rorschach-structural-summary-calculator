@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/determinants/FV"
   - "scoring-input/determinants/FT"
   - "result-interpretation/lower-section/core/SumY"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-determinants-shading-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Determinantes] FY
@@ -55,7 +54,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-determinants-shadi
 - [[Codificação/Determinantes] FV](ref://scoring-input/determinants/FV)
 - [[Codificação/Determinantes] FT](ref://scoring-input/determinants/FT)
 - [[Interpretação/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

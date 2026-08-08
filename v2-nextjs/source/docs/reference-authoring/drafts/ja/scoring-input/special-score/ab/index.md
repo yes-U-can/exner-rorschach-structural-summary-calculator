@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/contents/Art"
   - "scoring-input/contents/Ay"
   - "result-interpretation/lower-section/ideation/_2AB_Art_Ay"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-score-ab-psv-per-cp-2026-03-10.md"
 ---
 
 # [コーディング/特殊スコア] AB
@@ -54,7 +53,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-score-ab-p
 - [[コーディング/内容] Art](ref://scoring-input/contents/Art)
 - [[コーディング/内容] Ay](ref://scoring-input/contents/Ay)
 - [[解釈/観念化] 2AB + Art + Ay](ref://result-interpretation/lower-section/ideation/_2AB_Art_Ay)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

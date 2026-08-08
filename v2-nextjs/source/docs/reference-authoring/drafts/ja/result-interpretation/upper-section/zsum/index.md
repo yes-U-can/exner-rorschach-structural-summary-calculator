@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/ZEst"
   - "result-interpretation/upper-section/Zd"
   - "scoring-input/z"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-upper-section-z-family-2026-03-10.md"
 ---
 
 # [解釈/Upper Section] ZSum
@@ -52,7 +51,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-upper-section-z-fa
 - [[解釈/上段] ZEst](ref://result-interpretation/upper-section/ZEst)
 - [[解釈/上段] Zd](ref://result-interpretation/upper-section/Zd)
 - [[コーディング/Z] Z](ref://scoring-input/z)
-
-## 根拠メモ
-
-- 詳細な出典比較は内部 provenance note に分けて保持します。

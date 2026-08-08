@@ -17,9 +17,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/affect/S_aff"
   - "result-interpretation/lower-section/affect/Blends_R"
   - "result-interpretation/lower-section/affect/CP"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/affect/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Lower Section/Afecto] Afecto
@@ -72,7 +71,3 @@ En esta zona se revisan juntas `FC:CF+C`, `Pure C`, `SumC / WSumC`, `Afr`, `S`, 
 - [[Interpretación/Afecto] S](ref://result-interpretation/lower-section/affect/S_aff)
 - [[Interpretación/Afecto] Blends:R](ref://result-interpretation/lower-section/affect/Blends_R)
 - [[Interpretación/Afecto] CP](ref://result-interpretation/lower-section/affect/CP)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

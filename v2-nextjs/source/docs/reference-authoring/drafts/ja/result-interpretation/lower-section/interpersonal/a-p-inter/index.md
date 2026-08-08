@@ -19,9 +19,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/interpersonal/AG"
   - "result-interpretation/lower-section/interpersonal/SumT_inter"
   - "scoring-input/determinants/M"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-interpersonal-ap-food-sumt-humancont-2026-03-10.md"
 ---
 
 # [Interpretation/Interpersonal] a:p
@@ -73,7 +72,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-interpersonal-ap-f
 - [[解釈/Interpersonal] AG](ref://result-interpretation/lower-section/interpersonal/AG)
 - [[解釈/Interpersonal] SumT](ref://result-interpretation/lower-section/interpersonal/SumT_inter)
 - [[Coding/決定因] M](ref://scoring-input/determinants/M)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

@@ -12,9 +12,8 @@ relatedRoutes:
   - "scoring-input/special-score"
   - "result-interpretation/lower-section/interpersonal/PER"
   - "result-interpretation/lower-section/mediation/Xu_percent"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-special-score-ab-psv-per-cp-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Códigos Especiais] PER
@@ -48,7 +47,3 @@ O importante é que a informação pessoal funcione como apoio direto para a cod
 - [[Codificação/Códigos Especiais] Códigos Especiais](ref://scoring-input/special-score)
 - [[Interpretação/Interpersonal] PER](ref://result-interpretation/lower-section/interpersonal/PER)
 - [[Interpretação/Mediation] Xu%](ref://result-interpretation/lower-section/mediation/Xu_percent)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

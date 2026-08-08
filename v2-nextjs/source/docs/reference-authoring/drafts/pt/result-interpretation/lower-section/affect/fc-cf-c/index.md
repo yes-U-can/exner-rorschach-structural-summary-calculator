@@ -19,9 +19,8 @@ relatedRoutes:
   - "scoring-input/determinants/Cn"
   - "result-interpretation/lower-section/core/EB"
   - "result-interpretation/lower-section/core/EA"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-affect-opening-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Afeto] FC:CF+C
@@ -63,7 +62,3 @@ Na interpretação, ajuda a estimar se a emoção está mais formalmente modulad
 - [[Codificação/Determinantes] Cn](ref://scoring-input/determinants/Cn)
 - [[Interpretação/Core] EB](ref://result-interpretation/lower-section/core/EB)
 - [[Interpretação/Core] EA](ref://result-interpretation/lower-section/core/EA)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

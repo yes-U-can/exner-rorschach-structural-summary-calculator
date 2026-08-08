@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/determinants/Y"
   - "result-interpretation/lower-section/core/SumV"
   - "result-interpretation/lower-section/selfPerception/SumV_self"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Determinants] VF
@@ -59,7 +58,3 @@ There is still some form support, but the dimensional quality carries more weigh
 - [[Coding/Determinants] Y](ref://scoring-input/determinants/Y)
 - [[Interpretation/Core] SumV](ref://result-interpretation/lower-section/core/SumV)
 - [[Interpretation/Self Perception] SumV](ref://result-interpretation/lower-section/selfPerception/SumV_self)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

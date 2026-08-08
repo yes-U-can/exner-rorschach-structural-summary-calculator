@@ -507,7 +507,7 @@ function splitSections(markdown) {
   };
 }
 
-function summarizeDoc({ title, aliases, sections, status, runtimeReady, docKind, relatedRoutes }) {
+function summarizeDoc({ title, aliases, sections, docKind, relatedRoutes }) {
   const lines = [`[Title] ${title}`];
   if (aliases.length) lines.push(`[Aliases] ${aliases.join(', ')}`);
 
@@ -517,22 +517,15 @@ function summarizeDoc({ title, aliases, sections, status, runtimeReady, docKind,
     lines.push(`[${section.normalizedHeading}] ${section.text}`);
   }
 
-  lines.push(`[Corpus Governance] status=${status}; runtime knowledge is curated and reviewed internally.`);
-  lines.push(
-    runtimeReady
-      ? '[AI Usage Guideline] This locale document is runtime-ready and may be used as built-in reference knowledge.'
-      : '[AI Usage Guideline] This document is not runtime-ready yet and should not replace guarded runtime knowledge until QA is complete.',
-  );
-
   if (docKind.startsWith('interpretation-')) {
     lines.push(
-      '[Interpretive Preconditions] Confirm the relevant scoring inputs and review the surrounding structural-summary context before interpreting this variable.',
+      '[Before Interpretation] Confirm the relevant scoring inputs and review the surrounding Structural Summary context.',
     );
     lines.push(
-      `[Cross-Checks] Review adjacent variables and linked routes${relatedRoutes.length ? `: ${relatedRoutes.join(', ')}` : ' before concluding.'}`,
+      `[Related References] Review adjacent variables and linked topics${relatedRoutes.length ? `: ${relatedRoutes.join(', ')}` : ' before concluding.'}`,
     );
     lines.push(
-      '[Common Misreading Guard] Do not treat this page as a stand-alone diagnosis rule; check range, profile context, and alternative explanations first.',
+      '[Caution] Do not use this page as a stand-alone diagnostic rule; consider the full profile and alternative explanations.',
     );
   }
 

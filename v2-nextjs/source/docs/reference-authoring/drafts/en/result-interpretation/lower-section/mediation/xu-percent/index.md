@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/mediation/X_minus_percent"
   - "result-interpretation/lower-section/mediation/P"
   - "scoring-input/fq/u"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Mediation] Xu%
@@ -51,7 +50,3 @@ It marks a style of mediation that can still be sustained, even though it depart
 - [[Interpretation/Mediation] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
 - [[Interpretation/Mediation] P](ref://result-interpretation/lower-section/mediation/P)
 - [[Coding/FQ] u](ref://scoring-input/fq/u)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

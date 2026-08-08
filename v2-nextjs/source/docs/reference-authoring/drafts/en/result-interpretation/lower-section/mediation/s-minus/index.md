@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/affect/S_aff"
   - "scoring-input/location/S"
   - "result-interpretation/special-indices/HVI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Mediation] S-
@@ -54,7 +53,3 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 - [[Interpretation/Affect] S](ref://result-interpretation/lower-section/affect/S_aff)
 - [[Coding/Location] S](ref://scoring-input/location/S)
 - [[Interpretation/Special Indices] HVI](ref://result-interpretation/special-indices/HVI)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

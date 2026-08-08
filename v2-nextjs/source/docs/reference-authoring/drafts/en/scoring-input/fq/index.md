@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/fq/-"
   - "scoring-input/fq/none"
   - "scoring-input/dq"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Form Quality] FQ
@@ -57,7 +56,3 @@ It is about formal fit, not about the organizational level of the response.
 - [[Coding/Form Quality] -](ref://scoring-input/fq/-)
 - [[Coding/Form Quality] none](ref://scoring-input/fq/none)
 - [[Coding/Developmental Quality] DQ](ref://scoring-input/dq)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

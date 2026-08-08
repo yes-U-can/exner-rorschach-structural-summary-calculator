@@ -18,9 +18,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/EB"
   - "result-interpretation/lower-section/core/m"
   - "result-interpretation/lower-section/core/SumY"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Core] D
@@ -61,7 +60,3 @@ It summarizes whether available resources are enough to manage the current level
 - [[Interpretation/Core] EB](ref://result-interpretation/lower-section/core/EB)
 - [[Interpretation/Core] m](ref://result-interpretation/lower-section/core/m)
 - [[Interpretation/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

@@ -52,14 +52,13 @@ Os registros afetados devem ser revistos com o material original, ter o código 
 - Foram reproduzidos separadamente códigos de Conteúdo duplicados, conflito entre Level 1 e Level 2, Special Scores vazios, códigos Z inválidos, salvamentos automáticos danificados, acesso bloqueado ao armazenamento do navegador e corpos JSON BYOK inválidos.
 - A suíte automatizada completa aprovou 587 verificações em 95 arquivos de teste; 7 sem as condições necessárias de execução foram ignoradas.
 - Confirmou-se que os 203 documentos de referência de cada um dos cinco idiomas estavam disponíveis para pesquisa.
-- Todos os 5604 embeddings da OpenAI corresponderam ao texto atual, com 0 itens desatualizados e 0 divergências de hash.
-- As verificações reais com GPT-5.5 abrangeram 62 conversas de um turno, 9 conversas de vários turnos e 4 solicitações pela rota de API do aplicativo. Na primeira execução, 1 pergunta sobre S-CON sem informação de idade não passou pela verificação dos limites da resposta. Depois de reforçar esse limite, 2 perguntas relacionadas em coreano, incluindo o caso que havia falhado, foram repetidas e ambas passaram.
-- O OpenAI Codex e o Claude Opus 5 executaram separadamente chamadas pagas ao GPT-5.5. O ambiente de auditoria do Claude verificou 25 cenários em cinco idiomas e depois chamou mais 3 vezes o caso japonês do par de níveis de Special Score, que não havia passado em uma verificação de contrato. As 3 chamadas adicionais passaram, totalizando 27 aprovações e 1 reprovação em 28 chamadas. O Codex acrescentou um teste de regressão que aceita uma proibição correta em japonês mesmo quando ela retoma as palavras da pergunta e chamou o mesmo caso mais 11 vezes; as 11 passaram. A execução adicional do Codex terminou em 11 chamadas quando se esgotou o tempo da ferramenta local, mas nenhuma das 11 respostas concluídas pelo provedor foi interrompida.
-- A única reprovação não foi reproduzida como erro das fórmulas ou das regras de entrada. Como o texto dessa resposta não foi retido, também não foi afirmada uma causa específica de falso positivo. As chamadas do Claude custaram `$0.874310`, e as chamadas adicionais do Codex, `$0.351305`. Nem as chaves de API nem o texto das respostas foram incluídos no registro público.
-- As 4 migrações do banco de feedback e as 30 migrações do banco RAG foram reproduzidas desde o início em um banco pgvector vazio.
+- Os dados de busca de referências dos cinco idiomas corresponderam aos documentos atuais, sem itens desatualizados.
+- Perguntas representativas verificaram os limites de codificação e interpretação e a conclusão das respostas. Na primeira revisão, foi identificado um problema no limite de resposta de uma pergunta sobre S-CON sem informação de idade; o limite foi reforçado e as perguntas relacionadas foram verificadas novamente.
+- Uma resposta japonesa sobre o par de níveis de Special Score não atendeu ao critério, mas o resultado não foi reproduzido como erro das fórmulas ou das regras de entrada. Depois do ajuste do critério, todas as verificações relacionadas passaram.
+- Os bancos de dados de feedback e de busca de referências foram reconstruídos a partir de esquemas vazios e verificados.
 - A compilação de produção gerou 222 páginas. Em seguida, as telas da calculadora em computador e dispositivo móvel foram abertas diretamente, sem erros no console do navegador.
 
-As chamadas reais de IA são verificações amostrais de limites representativos de resposta. Elas não garantem a exatidão de todas as perguntas clínicas. A interpretação final e a decisão sobre a aplicabilidade da idade permanecem sob responsabilidade do profissional clínico.
+As verificações de respostas são amostras de limites representativos. Elas não garantem a exatidão de todas as perguntas clínicas. A interpretação final e a decisão sobre a aplicabilidade da idade permanecem sob responsabilidade do profissional clínico.
 
 ## UI/UX, privacidade e escopo do cálculo
 
@@ -73,14 +72,6 @@ As chamadas reais de IA são verificações amostrais de limites representativos
 ## Decisões mantidas sem alteração
 
 Esta versão modificou apenas os itens com respaldo suficientemente estabelecido. Não foi alterado o tratamento da repetição do mesmo Special Score que não tenha distinção entre Level 1 e Level 2. Também não foi estabelecida uma nova regra clínica para atribuir FQ a determinantes sem forma; o comportamento de normalização já usado na interface de computador foi aplicado à interface móvel apenas para eliminar a diferença entre as duas. Os pontos que ainda exigem fontes adicionais ou uma decisão de produto serão revistos quando houver evidência suficiente.
-
-## Escopo público e limite de segurança
-
-O código público inclui validação de entrada, recuperação do salvamento automático, verificações dos limites de S-CON e OBS, documentos de referência em cinco idiomas, ferramentas de avaliação de respostas de IA e resultados reproduzíveis.
-
-O script de limpeza do espelho público agora respeita `DryRun` e mostra as operações planejadas sem excluir arquivos.
-
-Variáveis do ambiente de produção, chaves de API, dados reais de codificação e conversas, endereços IP brutos, fontes não públicas, caminhos locais e registros internos de trabalho são excluídos.
 
 ## Apêndice técnico
 

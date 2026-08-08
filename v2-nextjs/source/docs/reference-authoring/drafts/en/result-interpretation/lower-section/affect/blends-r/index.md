@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/R"
   - "result-interpretation/lower-section/core/Lambda"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Affect] Blends:R
@@ -51,7 +50,3 @@ In affect, it helps estimate how much complexity and mixture of emotional states
 - [[Interpretation/Core] R](ref://result-interpretation/lower-section/core/R)
 - [[Interpretation/Core] Lambda](ref://result-interpretation/lower-section/core/Lambda)
 - [[Interpretation/Special Indices] DEPI](ref://result-interpretation/special-indices/DEPI)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

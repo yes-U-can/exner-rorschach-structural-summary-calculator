@@ -21,9 +21,8 @@ relatedRoutes:
   - "scoring-input/determinants/FC"
   - "scoring-input/determinants/CF"
   - "scoring-input/determinants/C"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/core/eb--4542/index.md"
 ---
 
 # [해석/Core] EB
@@ -64,7 +63,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `es`
 - `Lambda`
 - `D`
-
-## 근거 메모
-
-- 상세 출처와 수치 기준은 provenance note에 분리했다.

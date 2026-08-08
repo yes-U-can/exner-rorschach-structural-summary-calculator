@@ -23,9 +23,8 @@ relatedRoutes:
   - "scoring-input/special-score/FABCOM2"
   - "scoring-input/special-score/ALOG"
   - "scoring-input/special-score/CONTAM"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/ideation/sum6/index.md"
 ---
 
 # 문서명: [해석/Ideation] Sum6
@@ -82,7 +81,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[부호화/특수점수\] FABCOM2](ref://scoring-input/special-score/FABCOM2)
 - [\[부호화/특수점수\] ALOG](ref://scoring-input/special-score/ALOG)
 - [\[부호화/특수점수\] CONTAM](ref://scoring-input/special-score/CONTAM)
-
-## 근거 메모
-
-- 상세 출처와 절단값 메모는 provenance note에 분리했다.

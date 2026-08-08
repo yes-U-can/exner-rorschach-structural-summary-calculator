@@ -27,9 +27,8 @@ relatedRoutes:
   - "scoring-input/determinants/T"
   - "scoring-input/determinants/V"
   - "scoring-input/determinants/Y"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/core/eb--6562/index.md"
 ---
 
 # [해석/Core] eb
@@ -73,7 +72,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `SumT`
 - `SumV`
 - `SumY`
-
-## 근거 메모
-
-- `eb`의 구성 논리와 determinant 대응표는 provenance note에 분리했다.

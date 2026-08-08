@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/gphr/PHR"
   - "result-interpretation/lower-section/affect/S_aff"
   - "result-interpretation/lower-section/ideation/MOR"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/interpersonal/ag/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Interpersonal] AG
@@ -69,7 +68,3 @@ En interpretación sirve para leer si el vínculo se organiza con mayor facilida
 - [[Codificación/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
 - [[Interpretación/Afecto] S](ref://result-interpretation/lower-section/affect/S_aff)
 - [[Interpretación/Ideación] MOR](ref://result-interpretation/lower-section/ideation/MOR)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

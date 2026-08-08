@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/contents/Ay"
   - "scoring-input/contents/H"
   - "scoring-input/contents/A"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Content] Art
@@ -54,7 +53,3 @@ The key point is not just seeing an object, but understanding it as something ar
 - [[Coding/Content] Ay](ref://scoring-input/contents/Ay)
 - [[Coding/Content] H](ref://scoring-input/contents/H)
 - [[Coding/Content] A](ref://scoring-input/contents/A)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

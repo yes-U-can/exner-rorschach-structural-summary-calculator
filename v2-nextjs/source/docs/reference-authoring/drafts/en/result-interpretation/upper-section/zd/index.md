@@ -15,9 +15,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/ZEst"
   - "scoring-input/z/ZD"
   - "result-interpretation/lower-section/processing/Zd_proc"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Upper Section] Zd
@@ -53,7 +52,3 @@ It is the most direct indicator of organizational efficiency within the `Z` fami
 - [[Interpretation/Upper Section] ZEst](ref://result-interpretation/upper-section/ZEst)
 - [[Coding/Z] ZD](ref://scoring-input/z/ZD)
 - [[Interpretation/Processing] Zd](ref://result-interpretation/lower-section/processing/Zd_proc)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/M_minus"
   - "result-interpretation/lower-section/ideation/Mnone"
   - "scoring-input/determinants/M"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-ideation-opening-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Ideação] Ma:Mp
@@ -52,7 +51,3 @@ Ela ajuda a mostrar se a atividade humana imaginada tende mais a agir e intervir
 - [[Interpretação/Ideação] M-](ref://result-interpretation/lower-section/ideation/M_minus)
 - [[Interpretação/Ideação] Mnone](ref://result-interpretation/lower-section/ideation/Mnone)
 - [[Codificação/Determinantes] M](ref://scoring-input/determinants/M)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

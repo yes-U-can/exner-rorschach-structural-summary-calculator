@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/contents/Ay"
   - "result-interpretation/lower-section/ideation/MOR"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/ideation/2ab-art-ay/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Ideación] 2AB+Art+Ay
@@ -68,7 +67,3 @@ Se usa para estimar con qué frecuencia el pensamiento se aleja de la experienci
 - [[Codificación/Contenidos] Ay](ref://scoring-input/contents/Ay)
 - [[Interpretación/Ideación] MOR](ref://result-interpretation/lower-section/ideation/MOR)
 - [[Interpretación/Índices Especiales] DEPI](ref://result-interpretation/special-indices/DEPI)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

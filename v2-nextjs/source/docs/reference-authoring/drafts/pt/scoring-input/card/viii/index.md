@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/determinants/CF"
   - "scoring-input/determinants/C"
   - "scoring-input/z"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-card-vi-x-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Cartões] VIII
@@ -58,7 +57,3 @@ Esta página resume esses focos de codificação.
 - [[Codificação/Determinantes] CF](ref://scoring-input/determinants/CF)
 - [[Codificação/Determinantes] C](ref://scoring-input/determinants/C)
 - [[Codificação/Z] Z](ref://scoring-input/z)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

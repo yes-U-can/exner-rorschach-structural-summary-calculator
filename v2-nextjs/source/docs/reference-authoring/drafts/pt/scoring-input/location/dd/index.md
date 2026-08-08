@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/location/D"
   - "scoring-input/location/W"
   - "result-interpretation/upper-section/Dd"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-location-2026-03-10.md"
 ---
 
 # Nome do documento: [Codificação/Localização] Dd
@@ -48,7 +47,3 @@ O essencial é o uso incomum da área.
 - [[Codificação/Localização] DdS](ref://scoring-input/location/DdS)
 - [[Codificação/Localização] D](ref://scoring-input/location/D)
 - [[Interpretação/Upper Section] Dd](ref://result-interpretation/upper-section/Dd)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/determinants/T"
   - "scoring-input/determinants/TF"
   - "scoring-input/fq"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/card/iv/index.md"
 ---
 
 # Nombre del documento: [Codificación/Láminas] IV
@@ -58,8 +57,3 @@ Esta página resume qué aspectos conviene revisar al codificar esas respuestas.
 - [[Codificación/Determinantes] T](ref://scoring-input/determinants/T)
 - [[Codificación/Determinantes] TF](ref://scoring-input/determinants/TF)
 - [[Codificación/FQ] FQ](ref://scoring-input/fq)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

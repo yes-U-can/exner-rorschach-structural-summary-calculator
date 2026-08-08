@@ -22,9 +22,8 @@ relatedRoutes:
   - "scoring-input/card/VIII"
   - "scoring-input/card/IX"
   - "scoring-input/card/X"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-card-i-v-2026-03-10.md"
 ---
 
 # [コーディング/カード] Card
@@ -69,7 +68,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-card-i-v-2026-03-1
 - [[コーディング/カード] VIII](ref://scoring-input/card/VIII)
 - [[コーディング/カード] IX](ref://scoring-input/card/IX)
 - [[コーディング/カード] X](ref://scoring-input/card/X)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

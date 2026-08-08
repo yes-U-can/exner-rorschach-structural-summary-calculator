@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/gphr/GHR"
   - "result-interpretation/lower-section/interpersonal/COP"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-special-score-opening-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Códigos Especiais] COP
@@ -59,7 +58,3 @@ A ideia central é ação conjunta positiva ou coordenada.
 - [[Codificação/GHR-PHR] GHR](ref://scoring-input/gphr/GHR)
 - [[Interpretação/Interpersonal] COP](ref://result-interpretation/lower-section/interpersonal/COP)
 - [[Interpretação/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

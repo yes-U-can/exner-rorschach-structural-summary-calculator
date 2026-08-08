@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/determinants/Cn"
   - "result-interpretation/lower-section/affect/FC_CF_C"
   - "result-interpretation/lower-section/affect/PureC"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/determinants/fc/index.md"
 ---
 
 # Nombre del documento: [Codificación/Determinantes] FC
@@ -55,8 +54,3 @@ El color está presente, pero el sujeto organiza la respuesta sobre todo por ras
 - [[Codificación/Determinantes] Cn](ref://scoring-input/determinants/Cn)
 - [[Interpretación/Affect] FC:CF+C](ref://result-interpretation/lower-section/affect/FC_CF_C)
 - [[Interpretación/Affect] Pure C](ref://result-interpretation/lower-section/affect/PureC)
-
-## Nota de fundamento
-
-- La justificación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

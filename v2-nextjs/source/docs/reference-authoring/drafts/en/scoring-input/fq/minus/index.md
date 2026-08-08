@@ -12,9 +12,8 @@ relatedRoutes:
   - "scoring-input/fq/u"
   - "scoring-input/fq/o"
   - "result-interpretation/lower-section/mediation/X_minus_percent"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Form Quality] -
@@ -48,7 +47,3 @@ It is the poor or distorted form-fit category.
 - [[Coding/Form Quality] u](ref://scoring-input/fq/u)
 - [[Coding/Form Quality] o](ref://scoring-input/fq/o)
 - [[Interpretation/Mediation] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

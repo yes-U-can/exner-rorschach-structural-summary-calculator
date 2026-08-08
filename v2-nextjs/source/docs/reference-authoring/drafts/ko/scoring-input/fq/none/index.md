@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/determinants/T"
   - "scoring-input/determinants/V"
   - "scoring-input/determinants/Y"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/fq/none/index.md"
 ---
 
 # [부호화/형태질] none
@@ -54,8 +53,3 @@ FQnone은 반응에 대해 형태질을 부여할 수 없을 때 쓰는 표기�
 - [scoring-input/determinants/T](ref://scoring-input%2Fdeterminants%2FT)
 - [scoring-input/determinants/V](ref://scoring-input%2Fdeterminants%2FV)
 - [scoring-input/determinants/Y](ref://scoring-input%2Fdeterminants%2FY)
-
-## 근거 메모
-
-- 세부 근거 대조와 용어 판단 기록은 내부 작업 메모에서 관리한다.
-- 공개 참조 문서 반영 단계에서는 내부 provenance가 노출되지 않도록 분리한다.

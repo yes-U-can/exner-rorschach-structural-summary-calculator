@@ -15,9 +15,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/processing/Zd_proc"
   - "result-interpretation/lower-section/processing/W_D_Dd"
   - "scoring-input/z"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Processing] Zf
@@ -52,7 +51,3 @@ In this section it is used as a frequency measure of organizational effort, not 
 - [[Interpretation/Processing] Zd](ref://result-interpretation/lower-section/processing/Zd_proc)
 - [[Interpretation/Processing] W:D:Dd](ref://result-interpretation/lower-section/processing/W_D_Dd)
 - [[Coding/Z] Z](ref://scoring-input/z)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

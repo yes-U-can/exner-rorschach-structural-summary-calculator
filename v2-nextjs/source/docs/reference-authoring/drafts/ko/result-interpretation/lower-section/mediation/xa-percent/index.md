@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/mediation/X_minus_percent"
   - "scoring-input/fq"
   - "scoring-input/popular"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/mediation/xa-percent/index.md"
 ---
 
 # 문서명: [해석/Mediation] XA%
@@ -67,7 +66,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[해석/Mediation\] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
 - [\[부호화/형태질\] FQ](ref://scoring-input/fq)
 - [\[부호화/인기반응\] Popular](ref://scoring-input/popular)
-
-## 근거 메모
-
-- 이 문서는 종합체계의 mediation section 계산 규칙을 기준으로 정리했다.

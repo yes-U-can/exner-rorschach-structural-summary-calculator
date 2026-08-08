@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/A"
   - "scoring-input/contents/Bl"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/contents/bt/index.md"
 ---
 
 # Nombre del documento: [Codificación/Contenido] Bt
@@ -53,8 +52,3 @@ Incluye plantas, flores, arboles, hojas o partes vegetales reconocidas como tale
 - [[Codificación/Contenido] Contents](ref://scoring-input/contents)
 - [[Codificación/Contenido] A](ref://scoring-input/contents/A)
 - [[Codificación/Contenido] Bl](ref://scoring-input/contents/Bl)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

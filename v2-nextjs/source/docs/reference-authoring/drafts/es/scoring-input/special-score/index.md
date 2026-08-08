@@ -51,9 +51,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/MOR"
   - "result-interpretation/lower-section/affect/CP"
   - "result-interpretation/lower-section/selfPerception/MOR_self"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/special-score/index.md"
 ---
 
 # Nombre del documento: [Codificación/Puntuaciones especiales] Códigos Especiales
@@ -150,8 +149,3 @@ Los Códigos Especiales complementan la codificación principal y describen cual
 - [[Interpretación/Ideation] MOR](ref://result-interpretation/lower-section/ideation/MOR)
 - [[Interpretación/Affect] CP](ref://result-interpretation/lower-section/affect/CP)
 - [[Interpretación/Self Perception] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

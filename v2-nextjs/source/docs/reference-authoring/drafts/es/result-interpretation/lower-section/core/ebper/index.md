@@ -19,9 +19,8 @@ relatedRoutes:
   - "scoring-input/determinants/FC"
   - "scoring-input/determinants/CF"
   - "scoring-input/determinants/C"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/core/ebper/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Core] EBPer
@@ -77,7 +76,3 @@ Solo se calcula cuando se cumplen todas las condiciones: `EA >= 4.0`, `Lambda < 
 - [[Codificación/Determinantes] FC](ref://scoring-input/determinants/FC)
 - [[Codificación/Determinantes] CF](ref://scoring-input/determinants/CF)
 - [[Codificación/Determinantes] C](ref://scoring-input/determinants/C)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

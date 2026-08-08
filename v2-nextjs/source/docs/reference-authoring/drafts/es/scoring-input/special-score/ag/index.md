@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/gphr/PHR"
   - "result-interpretation/lower-section/interpersonal/AG"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/special-score/ag/index.md"
 ---
 
 # Nombre del documento: [Codificación/Puntuaciones especiales] AG
@@ -58,8 +57,3 @@ Lo importante es que la agresión aparezca como acto en curso, no solo como cual
 - [[Codificación/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
 - [[Interpretación/Interpersonal] AG](ref://result-interpretation/lower-section/interpersonal/AG)
 - [[Interpretación/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

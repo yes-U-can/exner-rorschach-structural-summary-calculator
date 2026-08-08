@@ -12,9 +12,8 @@ aliases:
 relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/Ls"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-contents-fd-ge-hh-2026-03-10.md"
 ---
 
 # [コーディング/内容] Ge
@@ -48,7 +47,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-contents-fd-ge-hh-
 
 - [[コーディング/内容] Contents](ref://scoring-input/contents)
 - [[コーディング/内容] Ls](ref://scoring-input/contents/Ls)
-
-## 根拠メモ
-
-- 詳細な出典比較は内部 provenance note に記録しています。

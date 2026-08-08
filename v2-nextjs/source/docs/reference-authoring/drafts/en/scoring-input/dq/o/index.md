@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/dq/v/+"
   - "scoring-input/dq/v"
   - "result-interpretation/upper-section/dq_o"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Developmental Quality] o
@@ -50,7 +49,3 @@ It reflects an ordinary, non-synthesized level of structural development.
 - [[Coding/Developmental Quality] v/+](ref://scoring-input/dq/v/%2B)
 - [[Coding/Developmental Quality] v](ref://scoring-input/dq/v)
 - [[Interpretation/Upper Section] DQo](ref://result-interpretation/upper-section/dq_o)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

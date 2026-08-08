@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/determinants/Y"
   - "result-interpretation/lower-section/core/SumT"
   - "result-interpretation/lower-section/interpersonal/SumT_inter"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Determinants] T
@@ -59,7 +58,3 @@ The tactile or surface quality is the central determinant and form does not trul
 - [[Coding/Determinants] Y](ref://scoring-input/determinants/Y)
 - [[Interpretation/Core] SumT](ref://result-interpretation/lower-section/core/SumT)
 - [[Interpretation/Interpersonal] SumT](ref://result-interpretation/lower-section/interpersonal/SumT_inter)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

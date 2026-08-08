@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/M_minus"
   - "scoring-input/determinants/M"
   - "result-interpretation/special-indices/SCON"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/ideation/mnone/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Ideación] Mnone
@@ -64,7 +63,3 @@ En interpretación, funciona como una señal de imaginación humana poco organiz
 - [[Interpretación/Ideación] M-](ref://result-interpretation/lower-section/ideation/M_minus)
 - [[Codificación/Determinantes] M](ref://scoring-input/determinants/M)
 - [[Interpretación/Índices Especiales] SCON](ref://result-interpretation/special-indices/SCON)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

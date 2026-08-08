@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/contents/A"
   - "scoring-input/contents/Ad"
   - "scoring-input/contents/(Ad)"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/contents/paren-a/index.md"
 ---
 
 # Nombre del documento: [Codificación/Contenido] (A)
@@ -51,8 +50,3 @@ La forma sigue siendo de animal entero, aunque el referente no exista en la real
 - [[Codificación/Contenido] A](ref://scoring-input/contents/A)
 - [[Codificación/Contenido] Ad](ref://scoring-input/contents/Ad)
 - [[Codificación/Contenido] (Ad)](ref://scoring-input/contents/%28Ad%29)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

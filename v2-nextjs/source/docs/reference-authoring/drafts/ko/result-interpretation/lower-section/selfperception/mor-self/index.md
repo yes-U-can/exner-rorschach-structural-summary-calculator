@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/selfPerception/An_Xy"
   - "scoring-input/special-score/MOR"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/selfperception/mor-self/index.md"
 ---
 
 # 문서명: [해석/Self Perception] MOR
@@ -66,7 +65,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[해석/Self Perception\] An + Xy](ref://result-interpretation/lower-section/selfPerception/An_Xy)
 - [\[부호화/특수점수\] MOR](ref://scoring-input/special-score/MOR)
 - [\[해석/Special Indices\] DEPI](ref://result-interpretation/special-indices/DEPI)
-
-## 근거 메모
-
-- 반복 개수와 depression linkage 메모는 provenance note에 분리했다.

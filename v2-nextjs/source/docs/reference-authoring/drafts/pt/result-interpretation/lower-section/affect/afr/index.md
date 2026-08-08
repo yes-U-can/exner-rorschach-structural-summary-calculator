@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/card/VIII"
   - "scoring-input/card/IX"
   - "scoring-input/card/X"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-affect-opening-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Afeto] Afr
@@ -58,7 +57,3 @@ Na interpretação, ajuda a estimar quão prontamente a pessoa se aproxima ou se
 - [[Codificação/Cartão] VIII](ref://scoring-input/card/VIII)
 - [[Codificação/Cartão] IX](ref://scoring-input/card/IX)
 - [[Codificação/Cartão] X](ref://scoring-input/card/X)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

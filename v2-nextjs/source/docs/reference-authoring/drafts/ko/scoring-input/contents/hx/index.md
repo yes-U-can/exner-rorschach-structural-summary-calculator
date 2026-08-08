@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/special-score/AB"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/contents/hx/index.md"
 ---
 
 # 문서명: [부호화/내용] Hx
@@ -53,8 +52,3 @@ Hx는 인간 형상 그 자체가 아니라 인간의 정서, 감각, 경험을 
 - [\[부호화/특수점수\] AB](ref://scoring-input/special-score/AB)
 - [\[해석/Interpersonal\] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
 - [\[해석/Self Perception\] H Ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
-
-## 근거 메모
-
-- 상세 근거와 출처 충돌 메모는 provenance note에 분리해 둔다.
-- 공개용 본문에는 저작권 자료명을 직접 노출하지 않는다.

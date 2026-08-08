@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/special-score/MOR"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/gphr/phr/index.md"
 ---
 
 # Nombre del documento: [Codificación/GHR-PHR] PHR
@@ -59,8 +58,3 @@ Igual que `GHR`, no se decide por impresión libre, sino siguiendo criterios suc
 - [[Codificación/Código especial] MOR](ref://scoring-input/special-score/MOR)
 - [[Interpretación/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
 - [[Interpretación/Self Perception] H ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
-
-## Nota de fundamento
-
-- La justificación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

@@ -23,9 +23,8 @@ relatedRoutes:
   - "scoring-input/determinants/FC"
   - "scoring-input/determinants/CF"
   - "scoring-input/determinants/C"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/core/eb--4542/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Core] EB
@@ -84,7 +83,3 @@ Muestra si la persona tiende a basarse más en la elaboración ideacional y refl
 - [[Codificación/Determinantes] FC](ref://scoring-input/determinants/FC)
 - [[Codificación/Determinantes] CF](ref://scoring-input/determinants/CF)
 - [[Codificación/Determinantes] C](ref://scoring-input/determinants/C)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

@@ -18,9 +18,8 @@ relatedRoutes:
   - "scoring-input/special-score/DR2"
   - "scoring-input/special-score/FABCOM2"
   - "scoring-input/special-score/CONTAM"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/ideation/lv2/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Ideación] Lv2
@@ -74,7 +73,3 @@ En interpretación, muestra cuánto peso tienen las peculiaridades cognitivas m�
 - [[Codificación/Códigos Especiales] DR2](ref://scoring-input/special-score/DR2)
 - [[Codificación/Códigos Especiales] FABCOM2](ref://scoring-input/special-score/FABCOM2)
 - [[Codificación/Códigos Especiales] CONTAM](ref://scoring-input/special-score/CONTAM)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

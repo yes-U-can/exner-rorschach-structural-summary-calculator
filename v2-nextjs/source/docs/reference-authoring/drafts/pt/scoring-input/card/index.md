@@ -22,9 +22,8 @@ relatedRoutes:
   - "scoring-input/card/VIII"
   - "scoring-input/card/IX"
   - "scoring-input/card/X"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-card-vi-x-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Cartões] Cartão
@@ -69,7 +68,3 @@ Esta família não interpreta o significado simbólico global de cada prancha; e
 - [[Codificação/Cartões] VIII](ref://scoring-input/card/VIII)
 - [[Codificação/Cartões] IX](ref://scoring-input/card/IX)
 - [[Codificação/Cartões] X](ref://scoring-input/card/X)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

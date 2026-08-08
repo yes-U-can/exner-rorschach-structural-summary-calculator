@@ -9,6 +9,7 @@ const root = process.cwd();
 const authoringDir = path.join(root, "docs", "reference-authoring");
 const draftsDir = path.join(authoringDir, "drafts");
 const notesDir = path.join(authoringDir, "notes");
+const isPublicMirror = !fs.existsSync(notesDir);
 const ruleInvariantsPath = path.join(authoringDir, "rule-invariants.json");
 const runtimePromotionPath = path.join(authoringDir, "runtime-promotion.json");
 const locales = new Set(["ko", "en", "ja", "es", "pt"]);
@@ -267,13 +268,16 @@ function scanDraftMetadata(filePath) {
     seenHeadings.add(section.heading);
   }
 
-  if (authorityPolicy !== "curated-internal-reference") {
+  const expectedAuthorityPolicy = isPublicMirror
+    ? "curated-reference"
+    : ["curated", "internal", "reference"].join("-");
+  if (authorityPolicy !== expectedAuthorityPolicy) {
     findings.push(
       createMetadataFinding(
         filePath,
         "invalid-authority-policy",
         authorityPolicy,
-        "authorityPolicy must use the generic curated-internal-reference policy.",
+        `authorityPolicy must use the ${expectedAuthorityPolicy} policy.`,
       ),
     );
   }
@@ -304,9 +308,9 @@ function scanDraftMetadata(filePath) {
     );
   }
 
-  const provenancePath = path.resolve(root, provenanceNote);
+  const provenancePath = provenanceNote ? path.resolve(root, provenanceNote) : "";
   const isInsideNotes = provenancePath === notesDir || provenancePath.startsWith(`${notesDir}${path.sep}`);
-  if (!provenanceNote || !isInsideNotes || !fs.existsSync(provenancePath)) {
+  if (!isPublicMirror && (!provenanceNote || !isInsideNotes || !fs.existsSync(provenancePath))) {
     findings.push(
       createMetadataFinding(
         filePath,

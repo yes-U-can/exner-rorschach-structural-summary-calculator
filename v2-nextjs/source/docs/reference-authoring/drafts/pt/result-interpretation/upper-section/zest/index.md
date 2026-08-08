@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/ZSum"
   - "result-interpretation/upper-section/Zd"
   - "scoring-input/z"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-upper-section-family-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Seção Superior] ZEst
@@ -50,7 +49,3 @@ Ele funciona mais como linha de base para calcular `Zd` do que como variável cl
 - [[Interpretação/Seção Superior] ZSum](ref://result-interpretation/upper-section/ZSum)
 - [[Interpretação/Seção Superior] Zd](ref://result-interpretation/upper-section/Zd)
 - [[Codificação/Z] Z](ref://scoring-input/z)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

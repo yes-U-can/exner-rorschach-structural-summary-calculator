@@ -19,9 +19,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/S"
   - "result-interpretation/lower-section/mediation/S_minus"
   - "result-interpretation/lower-section/affect/S_aff"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/location/s/index.md"
 ---
 
 # [위치] S
@@ -63,7 +62,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/loca
 - [result-interpretation/upper-section/S](ref://result-interpretation%2Fupper-section%2FS)
 - [result-interpretation/lower-section/mediation/S_minus](ref://result-interpretation%2Flower-section%2Fmediation%2FS_minus)
 - [result-interpretation/lower-section/affect/S_aff](ref://result-interpretation%2Flower-section%2Faffect%2FS_aff)
-
-## 근거 메모
-
-세부 출처 비교와 판단 근거는 내부 검토 메모에서 관리한다.

@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/determinants/FM"
   - "scoring-input/determinants/m"
   - "result-interpretation/lower-section/interpersonal/a_p_inter"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/ideation/a-p/index.md"
 ---
 
 # [해석/Ideation] a:p
@@ -55,7 +54,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `Mnone`
 - `M`
 - `a_p_inter`
-
-## 근거 메모
-
-- 상세 출처와 절단값 메모는 provenance note에 분리했다.

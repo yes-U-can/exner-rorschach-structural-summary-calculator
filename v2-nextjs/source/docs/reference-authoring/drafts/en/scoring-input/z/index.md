@@ -25,9 +25,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/ZEst"
   - "result-interpretation/upper-section/Zd"
   - "result-interpretation/lower-section/processing/Zd_proc"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Z] Z
@@ -76,7 +75,3 @@ It is assigned only when the response uses form and fits one of four Z patterns:
 - [[Interpretation/Upper Section] ZEst](ref://result-interpretation/upper-section/ZEst)
 - [[Interpretation/Upper Section] Zd](ref://result-interpretation/upper-section/Zd)
 - [[Interpretation/Processing] Zd](ref://result-interpretation/lower-section/processing/Zd_proc)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

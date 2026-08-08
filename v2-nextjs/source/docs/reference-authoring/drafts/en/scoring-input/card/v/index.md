@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/popular"
   - "scoring-input/card/I"
   - "scoring-input/determinants/V"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Cards] V
@@ -58,7 +57,3 @@ This page summarizes coding points that are especially useful on that plate.
 - [[Coding/Popular] Popular](ref://scoring-input/popular)
 - [[Coding/Cards] I](ref://scoring-input/card/I)
 - [[Coding/Determinants] V](ref://scoring-input/determinants/V)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

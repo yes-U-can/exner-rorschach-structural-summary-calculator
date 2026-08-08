@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/affect/S_aff"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-indices-2026-03-10.md"
 ---
 
 # 文書名: [解釈/特殊指標] HVI
@@ -69,7 +68,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-indices-20
 - [[解釈/感情] S](ref://result-interpretation/lower-section/affect/S_aff)
 - [[解釈/自己知覚] H比率](ref://result-interpretation/lower-section/selfPerception/H_ratio)
 - [[解釈/対人関係] 人間内容](ref://result-interpretation/lower-section/interpersonal/HumanCont)
-
-## 根拠メモ
-
-- 詳細な検討記録は内部の検証ノートで管理します。

@@ -12,9 +12,8 @@ relatedRoutes:
   - "scoring-input/fq/o"
   - "scoring-input/fq/-"
   - "result-interpretation/lower-section/mediation/Xu_percent"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Form Quality] u
@@ -48,7 +47,3 @@ It is unusual fit, not distorted fit.
 - [[Coding/Form Quality] o](ref://scoring-input/fq/o)
 - [[Coding/Form Quality] -](ref://scoring-input/fq/-)
 - [[Interpretation/Mediation] Xu%](ref://result-interpretation/lower-section/mediation/Xu_percent)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

@@ -18,9 +18,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/SumY"
   - "scoring-input/determinants/m"
   - "scoring-input/determinants/Y"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/core/adjes/index.md"
 ---
 
 # [해석/Core] AdjEs
@@ -60,7 +59,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `EA`
 - `m`
 - `SumY`
-
-## 근거 메모
-
-- 보정 원리와 `m`, `Y` 기여 메모는 provenance note에 분리했다.

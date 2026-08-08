@@ -17,9 +17,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/affect/S_aff"
   - "scoring-input/location/S"
   - "result-interpretation/special-indices/HVI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/mediation/s-minus/index.md"
 ---
 
 # [해석/Mediation] S-
@@ -59,7 +58,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `S_aff`
 - `HVI`
 - `P`
-
-## 근거 메모
-
-- 상세 검토 기록은 내부 검증 노트에서 관리한다.

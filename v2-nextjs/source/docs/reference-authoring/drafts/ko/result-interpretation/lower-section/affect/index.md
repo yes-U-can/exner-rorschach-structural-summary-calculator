@@ -17,9 +17,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/affect/S_aff"
   - "result-interpretation/lower-section/affect/Blends_R"
   - "result-interpretation/lower-section/affect/CP"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/affect/index.md"
 ---
 
 # 문서명: [해석/Lower Section/Affect] Affect
@@ -73,7 +72,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[해석/Affect\] S](ref://result-interpretation/lower-section/affect/S_aff)
 - [\[해석/Affect\] Blends:R](ref://result-interpretation/lower-section/affect/Blends_R)
 - [\[해석/Affect\] CP](ref://result-interpretation/lower-section/affect/CP)
-
-## 근거 메모
-
-- 상세 출처와 절단값 메모는 provenance note에 분리했다.

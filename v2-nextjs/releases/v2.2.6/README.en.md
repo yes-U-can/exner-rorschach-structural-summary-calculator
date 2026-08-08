@@ -53,13 +53,7 @@ Automated checks verify metadata and input-event rules. The time at which search
 - Structural Summary formulas and results were not changed.
 - No new personal information is collected.
 - The existing rule that scoring data and OpenAI API keys are not stored in the server database remains unchanged.
-- The AI corpus, embeddings, and Coding and Interpretation Assistant response rules were not changed.
-
-## Public scope and security boundary
-
-The public source includes localized search metadata, canonical and alternate-language addresses, the sitemap, scoring-screen zoom handling, and the related automated checks.
-
-Environment variables, API keys, private deployment settings, local paths, and internal work records are not published.
+- Reference search and the Coding and Interpretation Assistant response rules were not changed.
 
 ## Technical appendix
 

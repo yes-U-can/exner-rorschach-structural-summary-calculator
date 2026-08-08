@@ -15,9 +15,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/processing/DQ_plus_proc"
   - "scoring-input/dq/v"
   - "scoring-input/dq/v/+"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Processing] DQv
@@ -66,7 +65,3 @@ In interpretation, it works as a sign that organizational quality may drift towa
 - [[Interpretation/Processing] DQ+](ref://result-interpretation/lower-section/processing/DQ_plus_proc)
 - [[Coding/DQ] v](ref://scoring-input/dq/v)
 - [[Coding/DQ] v/+](ref://scoring-input/dq/v/%2B)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

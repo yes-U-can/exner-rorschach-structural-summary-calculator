@@ -12,9 +12,8 @@ relatedRoutes:
   - "scoring-input/fq"
   - "scoring-input/determinants/M"
   - "scoring-input/special-score/AB"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # [コーディング/形態水準] none
@@ -48,7 +47,3 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 - [[コーディング/形態水準] FQ](ref://scoring-input/fq)
 - [[コーディング/決定因] M](ref://scoring-input/determinants/M)
 - [[コーディング/特殊スコア] AB](ref://scoring-input/special-score/AB)
-
-## 根拠メモ
-
-- 詳細な出典比較は内部 provenance note に記録します。

@@ -12,9 +12,8 @@ relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/An"
   - "result-interpretation/lower-section/selfPerception/An_Xy"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/contents/xy/index.md"
 ---
 
 # 문서명: [부호화/내용] Xy
@@ -46,8 +45,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/cont
 - [\[부호화/내용\] Contents](ref://scoring-input/contents)
 - [\[부호화/내용\] An](ref://scoring-input/contents/An)
 - [\[해석/Self Perception\] An + Xy](ref://result-interpretation/lower-section/selfPerception/An_Xy)
-
-## 근거 메모
-
-- 상세 근거와 출처 충돌 메모는 provenance note에 분리해 둔다.
-- 공개용 본문에는 저작권 자료명을 직접 노출하지 않는다.

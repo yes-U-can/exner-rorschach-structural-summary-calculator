@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/affect/S_aff"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Nome do documento: [Interpretação/Índices Especiais] Índice de Hipervigilância
@@ -69,7 +68,3 @@ O apoio empírico para interpretá-la como hipervigilância ou desconfiança é 
 - [[Interpretação/Afeto] S](ref://result-interpretation/lower-section/affect/S_aff)
 - [[Interpretação/Autopercepção] H Ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
 - [[Interpretação/Interpessoal] Conteúdo Humano](ref://result-interpretation/lower-section/interpersonal/HumanCont)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

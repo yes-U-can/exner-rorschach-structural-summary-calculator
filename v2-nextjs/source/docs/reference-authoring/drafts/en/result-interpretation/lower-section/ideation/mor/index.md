@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/_2AB_Art_Ay"
   - "result-interpretation/lower-section/selfPerception/MOR_self"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Ideation] MOR
@@ -52,7 +51,3 @@ In the ideation area, it helps show how much mental content is colored by negati
 - [[Interpretation/Ideation] 2AB+Art+Ay](ref://result-interpretation/lower-section/ideation/_2AB_Art_Ay)
 - [[Interpretation/Self Perception] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
 - [[Interpretation/Special Indices] DEPI](ref://result-interpretation/special-indices/DEPI)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/determinants/Fr"
   - "scoring-input/determinants/rF"
   - "scoring-input/pair"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Self Perception] Fr + rF
@@ -69,7 +68,3 @@ In `Self Perception`, it helps read whether the self-image needs special shine, 
 - [[Coding/Determinants] Fr](ref://scoring-input/determinants/Fr)
 - [[Coding/Determinants] rF](ref://scoring-input/determinants/rF)
 - [[Coding/Pair] Pair](ref://scoring-input/pair)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

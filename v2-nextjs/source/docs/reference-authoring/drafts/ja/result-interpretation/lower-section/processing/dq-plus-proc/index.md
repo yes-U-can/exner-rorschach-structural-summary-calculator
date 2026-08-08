@@ -15,9 +15,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/processing/DQ_v_proc"
   - "scoring-input/dq/+"
   - "scoring-input/dq/v/+"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-processing-wm-psv-dqplus-2026-03-10.md"
 ---
 
 # [Interpretation/Processing] DQ+
@@ -65,7 +64,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-processing-wm-psv-
 - [[解釈/情報処理] DQv](ref://result-interpretation/lower-section/processing/DQ_v_proc)
 - [[Coding/DQ] +](ref://scoring-input/dq/%2B)
 - [[Coding/DQ] v/+](ref://scoring-input/dq/v/%2B)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/contents/An"
   - "scoring-input/contents/H"
   - "scoring-input/contents/A"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Content] Bl
@@ -50,7 +49,3 @@ It does not refer to a full anatomical structure; it refers to blood itself or t
 - [[Coding/Content] An](ref://scoring-input/contents/An)
 - [[Coding/Content] H](ref://scoring-input/contents/H)
 - [[Coding/Content] A](ref://scoring-input/contents/A)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

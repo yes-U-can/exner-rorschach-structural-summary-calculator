@@ -144,4 +144,126 @@ describe.skipIf(process.platform !== 'win32')('public mirror sanitization behavi
       rmSync(root, { recursive: true, force: true });
     }
   }, 60_000);
+
+  it('removes private authoring metadata from public reference drafts', () => {
+    const privatePolicy = ['curated', 'internal', 'reference'].join('-');
+    const root = mkdtempSync(path.join(tmpdir(), 'rorschach-public-authoring-'));
+    const authoringRoot = path.join(root, 'docs', 'reference-authoring');
+    const draftRoot = path.join(root, 'docs', 'reference-authoring', 'drafts', 'en');
+    const draftPath = path.join(draftRoot, 'example.md');
+    const guidePath = path.join(authoringRoot, 'README.md');
+    const generatedRoot = path.join(root, 'generated', 'reference-corpus');
+    const generatedPath = path.join(generatedRoot, 'chunks.json');
+
+    try {
+      mkdirSync(draftRoot, { recursive: true });
+      mkdirSync(generatedRoot, { recursive: true });
+      writeFileSync(
+        guidePath,
+        [
+          '# Authoring',
+          '',
+          `- authorityPolicy: "${privatePolicy}"`,
+          '- provenanceNote',
+          '',
+          '`provenanceNote` must point to notes/corpus-review-ledger.md.',
+          '',
+          '## 공개 경계',
+          '',
+          '- docs/reference-authoring/notes/',
+          '',
+        ].join('\n'),
+        'utf8',
+      );
+      writeFileSync(
+        draftPath,
+        [
+          '---',
+          `authorityPolicy: "${privatePolicy}"`,
+          'provenanceNote: docs/reference-authoring/notes/example.md',
+          '---',
+          '',
+          '# Example',
+          '',
+          'Reader-facing text.',
+          '',
+          '## Evidence Note',
+          '',
+          'Private authoring evidence.',
+          '',
+        ].join('\n'),
+        'utf8',
+      );
+      writeFileSync(
+        generatedPath,
+        JSON.stringify({ chunks: [{ authorityPolicy: privatePolicy }] }),
+        'utf8',
+      );
+
+      execFileSync(
+        'powershell.exe',
+        [
+          '-NoProfile',
+          '-ExecutionPolicy',
+          'Bypass',
+          '-File',
+          path.join(process.cwd(), 'scripts', 'publish.ps1'),
+          '-SanitizeOnlyRoot',
+          root,
+        ],
+        { cwd: process.cwd(), encoding: 'utf8' },
+      );
+
+      const published = readFileSync(draftPath, 'utf8');
+      expect(published).toContain('authorityPolicy: "curated-reference"');
+      expect(published).not.toContain('provenanceNote');
+      expect(published).not.toContain('Evidence Note');
+      expect(published).not.toContain('Private authoring evidence');
+
+      const guide = readFileSync(guidePath, 'utf8');
+      expect(guide).toContain('authorityPolicy: "curated-reference"');
+      expect(guide).not.toContain('provenanceNote');
+      expect(guide).not.toContain('reference-authoring/notes');
+      expect(guide).toContain('frontmatter');
+
+      const generated = readFileSync(generatedPath, 'utf8');
+      expect(generated).toContain('curated-reference');
+      expect(generated).not.toContain(privatePolicy);
+    } finally {
+      rmSync(root, { recursive: true, force: true });
+    }
+  }, 60_000);
+
+  it('blocks internal production narrative in reader-facing public documents', () => {
+    const root = mkdtempSync(path.join(tmpdir(), 'rorschach-public-reader-copy-'));
+
+    try {
+      writeFileSync(
+        path.join(root, 'README.md'),
+        '# Release\n\nThe page number refers to a local PDF viewer.\n',
+        'utf8',
+      );
+
+      const result = spawnSync(
+        'powershell.exe',
+        [
+          '-NoProfile',
+          '-ExecutionPolicy',
+          'Bypass',
+          '-File',
+          path.join(process.cwd(), 'scripts', 'publish.ps1'),
+          '-SanitizeOnlyRoot',
+          root,
+        ],
+        { cwd: process.cwd(), encoding: 'utf8' },
+      );
+
+      expect(result.status).not.toBe(0);
+      expect(`${result.stdout}\n${result.stderr}`).toContain(
+        'Internal production narrative remains in reader-facing public documents',
+      );
+    } finally {
+      rmSync(root, { recursive: true, force: true });
+    }
+  }, 60_000);
 });

@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/contents/Art"
   - "scoring-input/contents/Ay"
   - "result-interpretation/lower-section/ideation/_2AB_Art_Ay"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Special Scores] AB
@@ -52,7 +51,3 @@ The key point is that the subject names an abstraction or broad quality rather t
 - [[Coding/Contents] Art](ref://scoring-input/contents/Art)
 - [[Coding/Contents] Ay](ref://scoring-input/contents/Ay)
 - [[Interpretation/Ideation] 2AB + Art + Ay](ref://result-interpretation/lower-section/ideation/_2AB_Art_Ay)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

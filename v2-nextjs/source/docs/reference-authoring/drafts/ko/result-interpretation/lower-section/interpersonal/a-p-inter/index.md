@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/interpersonal/AG"
   - "result-interpretation/lower-section/interpersonal/SumT_inter"
   - "scoring-input/determinants/M"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/interpersonal/a-p-inter/index.md"
 ---
 
 # [해석/Interpersonal] a:p
@@ -57,7 +56,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `COP`
 - `AG`
 - `SumT_inter`
-
-## 근거 메모
-
-- `p > a + 1` 반복 사용과 관계 역할 해석의 보수적 톤은 provenance note에 분리했다.

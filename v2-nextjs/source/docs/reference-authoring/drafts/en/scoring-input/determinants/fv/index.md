@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/determinants/Y"
   - "result-interpretation/lower-section/core/SumV"
   - "result-interpretation/lower-section/selfPerception/SumV_self"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Determinants] FV
@@ -59,7 +58,3 @@ The sense of distance or relief is present, but the percept still rests first on
 - [[Coding/Determinants] Y](ref://scoring-input/determinants/Y)
 - [[Interpretation/Core] SumV](ref://result-interpretation/lower-section/core/SumV)
 - [[Interpretation/Self Perception] SumV](ref://result-interpretation/lower-section/selfPerception/SumV_self)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

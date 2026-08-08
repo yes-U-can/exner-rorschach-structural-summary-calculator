@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/determinants/FD"
   - "scoring-input/contents/Fd"
   - "result-interpretation/lower-section/core/SumV"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-selfperception-family-2026-03-11.md"
 ---
 # Nome do documento: [Interpretação/Autopercepção] FD
 ## Apelidos e busca
@@ -54,5 +53,3 @@ Em `Autopercepção`, é usado como pista de introspecção e auto-observação 
 - [[Codificação/Determinantes] FD](ref://scoring-input/determinants/FD)
 - [[Codificação/Conteúdo] Fd](ref://scoring-input/contents/Fd)
 - [[Interpretação/Core] SumV](ref://result-interpretation/lower-section/core/SumV)
-## Nota de base
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

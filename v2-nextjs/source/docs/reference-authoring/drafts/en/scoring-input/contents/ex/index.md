@@ -11,9 +11,8 @@ aliases:
 relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/Fi"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Content] Ex
@@ -45,7 +44,3 @@ The key point is the bursting event itself, not just smoke or brightness.
 
 - [[Coding/Content] Contents](ref://scoring-input/contents)
 - [[Coding/Content] Fi](ref://scoring-input/contents/Fi)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

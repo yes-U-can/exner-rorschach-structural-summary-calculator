@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/determinants/VF"
   - "scoring-input/determinants/TF"
   - "result-interpretation/lower-section/core/SumY"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Determinants] YF
@@ -57,7 +56,3 @@ There is still some form support, but the vague shaded quality carries more weig
 - [[Coding/Determinants] VF](ref://scoring-input/determinants/VF)
 - [[Coding/Determinants] TF](ref://scoring-input/determinants/TF)
 - [[Interpretation/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

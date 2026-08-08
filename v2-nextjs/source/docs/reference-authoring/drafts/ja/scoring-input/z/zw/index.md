@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/dq/+"
   - "scoring-input/dq/v/+"
   - "result-interpretation/upper-section/Zf"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # [コーディング/Z] ZW
@@ -50,7 +49,3 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 - [[コーディング/発達水準] +](ref://scoring-input/dq/%2B)
 - [[コーディング/発達水準] v/+](ref://scoring-input/dq/v/%2B)
 - [[解釈/上段] Zf](ref://result-interpretation/upper-section/Zf)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

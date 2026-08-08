@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/determinants/Cn"
   - "result-interpretation/lower-section/affect/FC_CF_C"
   - "result-interpretation/lower-section/affect/PureC"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/determinants/cf/index.md"
 ---
 
 # [결정인] CF
@@ -52,7 +51,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/dete
 - [scoring-input/determinants/Cn](ref://scoring-input%2Fdeterminants%2FCn)
 - [result-interpretation/lower-section/affect/FC_CF_C](ref://result-interpretation%2Flower-section%2Faffect%2FFC_CF_C)
 - [result-interpretation/lower-section/affect/PureC](ref://result-interpretation%2Flower-section%2Faffect%2FPureC)
-
-## 근거 메모
-
-세부 출처 비교와 판단 근거는 내부 검토 메모에서 관리한다.

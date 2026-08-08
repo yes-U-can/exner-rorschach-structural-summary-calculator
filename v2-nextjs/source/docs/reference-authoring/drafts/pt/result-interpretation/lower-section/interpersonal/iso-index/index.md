@@ -22,9 +22,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/R"
   - "result-interpretation/special-indices/CDI"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-interpersonal-closing-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Interpessoal] Índice de Isolamento
@@ -68,7 +67,3 @@ Na interpretação, ele ajuda a estimar quanto o protocolo se organiza em torno 
 - [[Interpretação/Core] R](ref://result-interpretation/lower-section/core/R)
 - [[Interpretação/Índices Especiais] CDI](ref://result-interpretation/special-indices/CDI)
 - [[Interpretação/Índices Especiais] DEPI](ref://result-interpretation/special-indices/DEPI)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

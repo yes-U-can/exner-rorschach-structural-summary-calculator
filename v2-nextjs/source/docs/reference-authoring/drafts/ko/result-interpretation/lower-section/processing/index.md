@@ -22,9 +22,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/Zd"
   - "result-interpretation/lower-section/mediation"
   - "result-interpretation/lower-section/ideation"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/processing/index.md"
 ---
 
 # 문서명: [해석/Lower Section/Processing] Processing
@@ -81,7 +80,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[해석/Upper Section\] Zd](ref://result-interpretation/upper-section/Zd)
 - [\[해석/Lower Section/Mediation\] Mediation](ref://result-interpretation/lower-section/mediation)
 - [\[해석/Lower Section/Ideation\] Ideation](ref://result-interpretation/lower-section/ideation)
-
-## 근거 메모
-
-- app route와 상위 해석 절차의 대응 메모는 provenance note에 분리했다.

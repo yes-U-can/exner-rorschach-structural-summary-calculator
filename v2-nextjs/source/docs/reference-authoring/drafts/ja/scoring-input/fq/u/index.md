@@ -12,9 +12,8 @@ relatedRoutes:
   - "scoring-input/fq/o"
   - "scoring-input/fq/-"
   - "result-interpretation/lower-section/mediation/Xu_percent"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # [コーディング/形態水準] u
@@ -48,7 +47,3 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 - [[コーディング/形態水準] o](ref://scoring-input/fq/o)
 - [[コーディング/形態水準] -](ref://scoring-input/fq/-)
 - [[解釈/媒介] Xu%](ref://result-interpretation/lower-section/mediation/Xu_percent)
-
-## 根拠メモ
-
-- 詳細な出典比較は内部 provenance note に記録します。

@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/M_minus"
   - "scoring-input/determinants/M"
   - "result-interpretation/special-indices/SCON"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Ideation] Mnone
@@ -51,7 +50,3 @@ In interpretation, it functions as a sign that human fantasy or imagined human a
 - [[Interpretation/Ideation] M-](ref://result-interpretation/lower-section/ideation/M_minus)
 - [[Coding/Determinants] M](ref://scoring-input/determinants/M)
 - [[Interpretation/Special Indices] SCON](ref://result-interpretation/special-indices/SCON)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

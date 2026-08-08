@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/fq/-"
   - "scoring-input/fq/none"
   - "scoring-input/dq"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/fq/index.md"
 ---
 
 # Nombre del documento: [Codificación/Calidad formal] FQ
@@ -59,8 +58,3 @@ No describe organización de la respuesta; describe ajuste formal entre percepci
 - [[Codificación/Calidad formal] -](ref://scoring-input/fq/-)
 - [[Codificación/Calidad formal] none](ref://scoring-input/fq/none)
 - [[Codificación/Calidad evolutiva] DQ](ref://scoring-input/dq)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la nota interna de provenance.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

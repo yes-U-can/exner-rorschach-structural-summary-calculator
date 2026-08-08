@@ -31,7 +31,7 @@ Os protocolos existentes em que a localização, os determinantes de movimento e
 - Os documentos de referência de localização `S`, determinantes de movimento e Qualidade Formal nos cinco idiomas passaram a declarar, com o mesmo conteúdo, as regras de entrada descritas acima.
 - Foi introduzida uma lista de regras que verifica automaticamente se os documentos nos cinco idiomas declaram as mesmas regras clínicas. Agora, se o documento de apenas um idioma for corrigido e os demais forem esquecidos, a verificação falha na etapa de geração dos documentos.
 - As regras de resposta do Assistente de Codificação foram reforçadas para que ele não apresente o `S` isolado, a duplicação na mesma família de movimento ou a Qualidade Formal em branco como códigos completos.
-- Depois da alteração dos documentos de referência, os dados de busca nos cinco idiomas e os embeddings da OpenAI foram todos reconstruídos.
+- Depois da alteração dos documentos de referência, os dados de busca nos cinco idiomas foram reconstruídos.
 - Foram corrigidos erros de digitação e grafias de termos nos documentos em espanhol e em português, além de títulos em inglês que permaneciam em quatro pontos dos documentos em japonês.
 - Uma marcação de status que não era realmente usada foi removida dos originais dos documentos de referência, e foi adicionada uma verificação do intervalo permitido para os valores de status dos documentos.
 
@@ -54,15 +54,13 @@ O bloqueio de entrada e os avisos nos cinco idiomas também foram verificados na
 
 Os dados de busca nos cinco idiomas e os assistentes de IA também foram verificados.
 
-- As 380 perguntas de busca nos documentos de referência recuperaram os documentos correspondentes.
-- Os 5604 embeddings da OpenAI foram reconstruídos a partir do novo texto; as divergências no hash do conteúdo e os embeddings desatualizados foram 0.
-- Na busca híbrida com embeddings reais, a taxa de acerto dos primeiros documentos foi de 100% tanto para perguntas amplas quanto para perguntas com nome explícito.
-- Perguntas representativas sobre o `S` isolado, a duplicação de códigos de movimento e a Qualidade Formal em branco foram chamadas de fato nos cinco idiomas; nas 15 chamadas, foi confirmado que nenhuma resposta violou as regras.
+- As 380 perguntas de busca nos documentos de referência recuperaram o material correspondente, que apareceu primeiro tanto em perguntas amplas quanto em perguntas com nome explícito.
+- Perguntas representativas sobre o `S` isolado, a duplicação de códigos de movimento e a Qualidade Formal em branco foram verificadas nos cinco idiomas, e as respostas permaneceram dentro das novas regras.
 - No conjunto automatizado completo, 476 verificações em 83 arquivos de teste passaram e 7 foram ignoradas porque suas condições de execução não estavam disponíveis. A compilação de produção, a análise estática do código, a auditoria de textos nos cinco idiomas e a verificação de segredos também passaram.
 
 A notação do Lambda como número de respostas de F pura é uma forma de relatório de software na qual vários materiais públicos coincidem. O alcance da evidência verificada por vias públicas e as limitações restantes foram registrados tal como estão no documento de verificação.
 
-O OpenAI Codex e o Claude Fable 5 foram usados para a implementação e os testes repetidos, e o Claude Fable 5 para a revisão da documentação e das evidências dos cálculos antes da publicação. A concordância entre as ferramentas não foi tratada como gabarito; os critérios foram materiais profissionais públicos e resultados de cálculo reproduzíveis.
+A verificação foi baseada em materiais profissionais públicos e resultados de cálculo reproduzíveis.
 
 ## UI/UX, privacidade e escopo do cálculo
 
@@ -71,12 +69,6 @@ O OpenAI Codex e o Claude Fable 5 foram usados para a implementação e os teste
 - Os resultados de cálculo dos protocolos existentes inseridos conforme as regras não mudam.
 - Nenhuma nova informação pessoal é coletada.
 - Permanece o princípio existente de não armazenar dados de codificação nem chaves API no banco de dados do servidor.
-
-## Escopo público e limite de segurança
-
-O código público inclui as verificações do limite de entrada, os testes de regressão dos cálculos, os documentos de referência nos cinco idiomas com a lista de verificação de equivalência das regras e os instantâneos dos dados de busca.
-
-Variáveis de ambiente de produção, chaves API, textos originais de perguntas e respostas reais de IA, registros privados de revisão e caminhos locais não são publicados.
 
 ## Apêndice técnico
 

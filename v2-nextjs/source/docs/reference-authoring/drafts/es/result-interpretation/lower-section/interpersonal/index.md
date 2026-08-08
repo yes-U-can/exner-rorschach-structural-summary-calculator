@@ -23,9 +23,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/SumT"
   - "result-interpretation/lower-section/ideation/a_p"
   - "result-interpretation/lower-section/selfPerception"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/interpersonal/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Lower Section/Interpersonal] Interpersonal
@@ -84,7 +83,3 @@ En este conjunto se revisan `COP`, `AG`, `GHR:PHR`, `a:p`, `Food`, `SumT`, el co
 - [[Interpretación/Core] SumT](ref://result-interpretation/lower-section/core/SumT)
 - [[Interpretación/Ideación] a:p](ref://result-interpretation/lower-section/ideation/a_p)
 - [[Interpretación/Lower Section/Self Perception] Self Perception](ref://result-interpretation/lower-section/selfPerception)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

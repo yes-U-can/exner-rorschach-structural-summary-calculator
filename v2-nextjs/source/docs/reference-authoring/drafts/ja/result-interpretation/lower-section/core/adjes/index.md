@@ -19,9 +19,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/SumY"
   - "scoring-input/determinants/m"
   - "scoring-input/determinants/Y"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-core-d-family-2026-03-10.md"
 ---
 
 # [Interpretation/Core] AdjEs
@@ -62,6 +61,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-core-d-family-2026
 - [[解釈/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
 - [[Coding/決定因] m](ref://scoring-input/determinants/m)
 - [[Coding/決定因] Y](ref://scoring-input/determinants/Y)
-
-## 根拠メモ
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

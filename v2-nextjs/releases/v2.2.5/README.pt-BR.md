@@ -47,7 +47,7 @@ Excel e Perl distinguiam, cada um em seu próprio contexto, os códigos de movim
 - As explicações complementares na interface e as páginas de referência passaram a seguir o mesmo critério.
 - O Assistente de Codificação não apresenta mais `M`, `FM` ou `m` como códigos completos que podem ser inseridos diretamente para uma resposta individual e, em vez disso, pede as informações `a`, `p` ou `a-p` necessárias para completar o código.
 - Caracteres corrompidos foram restaurados em 4 perguntas de busca em japonês e em um registro coreano de manutenção de documentos.
-- Depois da alteração das páginas de referência, os dados de busca e os embeddings da OpenAI nos cinco idiomas foram reconstruídos.
+- Depois da alteração das páginas de referência, os dados de busca nos cinco idiomas foram reconstruídos.
 - As regras de geração de documentos e os testes de regressão foram reforçados para manter `Regra do código de entrada` e `Condição de codificação/aplicação` como seções separadas.
 - A ordem de resposta do Assistente de Interpretação foi reforçada para explicar primeiro o número de respostas e as limitações dos dados diante de perguntas amplas sobre o Sumário Estrutural.
 
@@ -63,19 +63,11 @@ Primeiro, foi verificado se os códigos de entrada e os campos de resultados man
 
 As páginas de referência nos cinco idiomas e os assistentes opcionais de IA também foram verificados.
 
-- As 365 perguntas de busca nos documentos recuperaram o material correspondente.
-- Todos os 5604 embeddings da OpenAI foram reconstruídos a partir do texto revisado, com 0 embeddings desatualizados ou divergências no hash do conteúdo.
-- Na busca híbrida com embeddings reais da OpenAI, tanto a taxa de acerto do primeiro documento quanto a cobertura do conjunto relevante foram de 100% para perguntas amplas e perguntas com nome explícito. Nenhuma pergunta ampla trouxe como primeiro resultado um documento de outra área de trabalho.
-- Em 62 chamadas reais de turno único ao GPT-5.5, todas as perguntas sobre codificação ativa-passiva do movimento respeitaram o limite pretendido. Em 1 resposta interpretativa longa, sem relação com os códigos de movimento, foi identificado que o número de respostas e as limitações dos dados não eram explicados primeiro; a ordem foi corrigida e a mesma condição passou em 3 verificações consecutivas.
-- As conversas sobre codificação do movimento passaram em 9 chamadas de vários turnos. Outra verificação em inglês falhou 1 vez porque o avaliador não reconheceu uma expressão equivalente; depois da correção da expressão aceita, a pergunta relacionada passou em 2 verificações consecutivas.
-- Depois de alinhar o texto e os embeddings finais nos cinco idiomas, foi feita uma chamada por idioma com uma pergunta representativa sobre o limite de entrada do movimento. As 5 chamadas em coreano, inglês, japonês, espanhol e português foram concluídas com sucesso.
-- Depois de corrigir a regra de geração dos títulos de seção, as mesmas perguntas nos cinco idiomas foram chamadas novamente. As 5 passaram sem interrupções ou violações do limite.
-- As 4 verificações feitas pela mesma rota de API usada pelo aplicativo web foram concluídas com sucesso.
+- As 365 perguntas de busca nos documentos recuperaram o material correspondente, e perguntas amplas ou com tema explícito não colocaram primeiro uma área de trabalho sem relação.
+- Perguntas preparadas confirmaram os limites de resposta dos assistentes de Codificação e Interpretação. Um problema na ordem de uma explicação longa e outro no reconhecimento de um sinônimo em inglês foram corrigidos e verificados novamente nos cinco idiomas e pela rota de resposta do aplicativo web.
 - No conjunto automatizado completo, 447 verificações em 81 arquivos de teste passaram e 7 foram ignoradas porque suas condições de execução não estavam disponíveis. Todas as 222 páginas de implantação foram geradas, e também passaram a análise estática, a auditoria de textos nos cinco idiomas, a verificação de segredos e as auditorias de dependências de produção e desenvolvimento.
 
-As chamadas reais ao GPT-5.5 verificaram se os Assistentes de Codificação e Interpretação mantinham os limites de resposta previstos para perguntas preparadas. Elas não garantem a exatidão clínica de todas as perguntas possíveis, e as respostas da IA não foram usadas como gabarito dos cálculos do Sumário Estrutural.
-
-O OpenAI Codex foi usado para implementação e testes repetidos. Claude Opus 4.8 foi usado para revisar a documentação e as evidências dos cálculos antes da publicação. A concordância entre ferramentas não foi tratada como prova; referências profissionais públicas, o escopo do CS adotado por este aplicativo, resultados de cálculo reproduzíveis e revisão humana foram considerados em conjunto.
+Essas verificações cobrem apenas limites de resposta preparados. Elas não garantem a exatidão clínica de todas as perguntas possíveis, e as respostas da IA não foram usadas como gabarito dos cálculos do Sumário Estrutural.
 
 ## UI/UX, privacidade e banco de dados
 
@@ -86,11 +78,7 @@ O OpenAI Codex foi usado para implementação e testes repetidos. Claude Opus 4.
 - Permanece a regra de que os dados de codificação não são armazenados no banco de dados do servidor.
 - A estrutura do banco de dados de feedback e os limites de requisição não foram alterados.
 
-## Escopo público e limite de segurança
-
-O código público inclui verificações do limite de entrada, testes de regressão dos cálculos, páginas de referência nos cinco idiomas, instantâneos dos dados de busca e resumos dos testes do GPT-5.5 sem o texto original das perguntas e respostas.
-
-Não são publicados os arquivos originais do início do desenvolvimento, literatura paga ou privada, caminhos locais, chaves de API, variáveis de ambiente, textos completos de respostas nem registros privados de revisão. Os documentos públicos apresentam links apenas para páginas públicas de distribuição reproduzíveis e repositórios públicos oficiais.
+O registro de verificação se baseia em referências profissionais públicas, no escopo do CS adotado por este aplicativo e em resultados de cálculo reproduzíveis.
 
 ## Apêndice técnico
 

@@ -45,9 +45,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/interpersonal/HumanCont"
   - "result-interpretation/lower-section/interpersonal/PureH"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/contents/index.md"
 ---
 
 # 문서명: [부호화/내용] Contents
@@ -128,8 +127,3 @@ Contents는 피검자가 무엇을 보았는지를 기록하는 내용 부호군
 - [\[해석/Interpersonal\] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
 - [\[해석/Interpersonal\] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)
 - [\[해석/Self Perception\] H Ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
-
-## 근거 메모
-
-- 상세 근거와 출처 충돌 메모는 provenance note에 분리해 둔다.
-- 공개용 본문에는 저작권 자료명을 직접 노출하지 않는다.

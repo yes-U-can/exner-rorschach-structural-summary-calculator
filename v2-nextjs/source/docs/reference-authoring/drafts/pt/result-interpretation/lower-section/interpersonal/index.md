@@ -23,9 +23,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/SumT"
   - "result-interpretation/lower-section/ideation/a_p"
   - "result-interpretation/lower-section/selfPerception"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-interpersonal-opening-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Seção Inferior/Interpessoal] Interpessoal
@@ -71,7 +70,3 @@ Neste grupo, o foco principal recai sobre `COP`, `AG`, `GHR:PHR`, `a:p`, `Food`,
 - [[Interpretação/Core] SumT](ref://result-interpretation/lower-section/core/SumT)
 - [[Interpretação/Ideação] a:p](ref://result-interpretation/lower-section/ideation/a_p)
 - [[Interpretação/Seção Inferior/Autopercepção] Autopercepção](ref://result-interpretation/lower-section/selfPerception)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

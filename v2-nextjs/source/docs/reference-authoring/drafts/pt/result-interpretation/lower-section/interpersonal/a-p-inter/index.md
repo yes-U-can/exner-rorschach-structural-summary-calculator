@@ -18,9 +18,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/interpersonal/AG"
   - "result-interpretation/lower-section/interpersonal/SumT_inter"
   - "scoring-input/determinants/M"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-interpersonal-opening-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Interpessoal] a:p
@@ -60,7 +59,3 @@ Nesta seção, ele ajuda a estimar se a pessoa imagina a relação a partir de p
 - [[Interpretação/Interpessoal] AG](ref://result-interpretation/lower-section/interpersonal/AG)
 - [[Interpretação/Interpessoal] SumT](ref://result-interpretation/lower-section/interpersonal/SumT_inter)
 - [[Codificação/Determinantes] M](ref://scoring-input/determinants/M)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

@@ -17,9 +17,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/AdjD"
   - "result-interpretation/lower-section/core/FM"
   - "scoring-input/determinants/m"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/core/m/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Core] m
@@ -72,7 +71,3 @@ En `core` suele leerse como un indicador de tensión reactiva, sensación de ver
 - [[Interpretación/Core] AdjD](ref://result-interpretation/lower-section/core/AdjD)
 - [[Interpretación/Core] FM](ref://result-interpretation/lower-section/core/FM)
 - [[Codificación/Determinantes] m](ref://scoring-input/determinants/m)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

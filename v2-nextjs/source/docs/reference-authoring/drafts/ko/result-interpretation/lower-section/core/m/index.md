@@ -17,9 +17,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/AdjD"
   - "result-interpretation/lower-section/core/FM"
   - "scoring-input/determinants/m"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/core/m/index.md"
 ---
 
 # [해석/Core] m
@@ -59,7 +58,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `D`
 - `AdjEs`
 - `AdjD`
-
-## 근거 메모
-
-- situational variability와 helplessness 메모는 provenance note에 분리했다.

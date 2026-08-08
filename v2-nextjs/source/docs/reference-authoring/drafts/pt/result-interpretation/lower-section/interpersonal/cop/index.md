@@ -18,9 +18,8 @@ relatedRoutes:
   - "scoring-input/gphr/GHR"
   - "scoring-input/gphr/PHR"
   - "result-interpretation/lower-section/interpersonal/ISO_Index"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-interpersonal-opening-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Interpessoal] COP
@@ -60,7 +59,3 @@ Na interpretação, ele funciona como pista de quão facilmente a relação é i
 - [[Codificação/GHR-PHR] GHR](ref://scoring-input/gphr/GHR)
 - [[Codificação/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
 - [[Interpretação/Interpessoal] Índice de Isolamento](ref://result-interpretation/lower-section/interpersonal/ISO_Index)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

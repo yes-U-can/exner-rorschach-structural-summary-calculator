@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/fq/minus"
   - "result-interpretation/lower-section/ideation/WSum6"
   - "result-interpretation/special-indices/PTI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/mediation/x-minus-percent/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Mediación] X-%
@@ -68,7 +67,3 @@ En mediación, funciona como una señal central de alejamiento perceptivo respec
 - [[Codificación/FQ] -](ref://scoring-input/fq/-)
 - [[Interpretación/Ideación] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
 - [[Interpretación/Índices Especiales] PTI](ref://result-interpretation/special-indices/PTI)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

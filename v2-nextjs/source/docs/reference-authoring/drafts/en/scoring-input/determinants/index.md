@@ -51,9 +51,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/interpersonal/SumT_inter"
   - "result-interpretation/lower-section/selfPerception/Fr_rF"
   - "result-interpretation/lower-section/selfPerception/FD"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Determinants] Determinants
@@ -133,7 +132,3 @@ They do not code what the person sees, but why it appears that way: form, moveme
 - [[Interpretation/Interpersonal] SumT](ref://result-interpretation/lower-section/interpersonal/SumT_inter)
 - [[Interpretation/Self Perception] Fr+rF](ref://result-interpretation/lower-section/selfPerception/Fr_rF)
 - [[Interpretation/Self Perception] FD](ref://result-interpretation/lower-section/selfPerception/FD)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/processing/Zd_proc"
   - "result-interpretation/lower-section/processing/W_D_Dd"
   - "scoring-input/z"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/processing/zf-proc/index.md"
 ---
 
 # 문서명: [해석/Processing] Zf
@@ -64,7 +63,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[해석/Processing\] Zd](ref://result-interpretation/lower-section/processing/Zd_proc)
 - [\[해석/Processing\] W:D:Dd](ref://result-interpretation/lower-section/processing/W_D_Dd)
 - [\[부호화/Z\] Z](ref://scoring-input/z)
-
-## 근거 메모
-
-- 기준 빈도와 cluster 해석 메모는 provenance note에 분리했다.

@@ -12,9 +12,8 @@ relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/Ay"
   - "scoring-input/contents/Art"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/contents/cg/index.md"
 ---
 
 # Nombre del documento: [Codificación/Contenido] Cg
@@ -48,8 +47,3 @@ Lo decisivo es que la forma se entienda como algo que se lleva puesto.
 - [[Codificación/Contenido] Contents](ref://scoring-input/contents)
 - [[Codificación/Contenido] Ay](ref://scoring-input/contents/Ay)
 - [[Codificación/Contenido] Art](ref://scoring-input/contents/Art)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

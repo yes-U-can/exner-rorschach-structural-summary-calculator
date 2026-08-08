@@ -48,9 +48,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/FM"
   - "result-interpretation/lower-section/core/m"
   - "result-interpretation/lower-section/ideation/M_minus"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/determinants/index.md"
 ---
 
 # Nombre del documento: [Codificación/Determinantes] Determinants
@@ -105,8 +104,3 @@ No indican qué ve la persona, sino por qué lo percibe de esa manera: forma, mo
 - [[Interpretación/Core] FM](ref://result-interpretation/lower-section/core/FM)
 - [[Interpretación/Core] m](ref://result-interpretation/lower-section/core/m)
 - [[Interpretación/Ideation] M-](ref://result-interpretation/lower-section/ideation/M_minus)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

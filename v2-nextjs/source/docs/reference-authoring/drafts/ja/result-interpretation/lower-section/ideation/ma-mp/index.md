@@ -15,9 +15,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/M_minus"
   - "result-interpretation/lower-section/ideation/Mnone"
   - "scoring-input/determinants/M"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-ideation-opening-2026-03-10.md"
 ---
 
 # [Interpretation/Ideation] Ma:Mp
@@ -54,6 +53,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-ideation-opening-2
 - [[解釈/Ideation] M-](ref://result-interpretation/lower-section/ideation/M_minus)
 - [[解釈/Ideation] Mnone](ref://result-interpretation/lower-section/ideation/Mnone)
 - [[Coding/決定因] M](ref://scoring-input/determinants/M)
-
-## 根拠メモ
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

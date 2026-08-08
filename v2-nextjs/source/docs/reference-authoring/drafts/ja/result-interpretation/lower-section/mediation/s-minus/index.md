@@ -17,9 +17,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/affect/S_aff"
   - "scoring-input/location/S"
   - "result-interpretation/special-indices/HVI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-mediation-xminus-sminus-p-2026-03-10.md"
 ---
 
 # [Interpretation/Mediation] S-
@@ -56,7 +55,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-mediation-xminus-s
 - [[解釈/Affect] S](ref://result-interpretation/lower-section/affect/S_aff)
 - [[Coding/領域] S](ref://scoring-input/location/S)
 - [[解釈/特殊指標] HVI](ref://result-interpretation/special-indices/HVI)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

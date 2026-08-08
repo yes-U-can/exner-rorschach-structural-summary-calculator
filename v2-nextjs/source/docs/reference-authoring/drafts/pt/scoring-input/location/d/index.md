@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/location/Dd"
   - "scoring-input/location/W"
   - "result-interpretation/upper-section/D"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-location-2026-03-10.md"
 ---
 
 # Nome do documento: [Codificação/Localização] D
@@ -49,7 +48,3 @@ O ponto central é o uso comum da área, não apenas seu tamanho.
 - [[Codificação/Localização] Dd](ref://scoring-input/location/Dd)
 - [[Codificação/Localização] W](ref://scoring-input/location/W)
 - [[Interpretação/Upper Section] D](ref://result-interpretation/upper-section/D)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

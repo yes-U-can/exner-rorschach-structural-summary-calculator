@@ -19,9 +19,8 @@ relatedRoutes:
   - "scoring-input/special-score/DR2"
   - "scoring-input/special-score/FABCOM2"
   - "scoring-input/special-score/CONTAM"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-ideation-lv2-wsum6-mminus-2026-03-10.md"
 ---
 
 # [Interpretation/Ideation] Lv2
@@ -61,6 +60,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-ideation-lv2-wsum6
 - [[Coding/特殊スコア] DR2](ref://scoring-input/special-score/DR2)
 - [[Coding/特殊スコア] FABCOM2](ref://scoring-input/special-score/FABCOM2)
 - [[Coding/特殊スコア] CONTAM](ref://scoring-input/special-score/CONTAM)
-
-## 根拠メモ
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

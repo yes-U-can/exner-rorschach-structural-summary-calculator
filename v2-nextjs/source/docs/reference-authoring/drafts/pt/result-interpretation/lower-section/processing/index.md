@@ -20,9 +20,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/Zd"
   - "result-interpretation/lower-section/mediation"
   - "result-interpretation/lower-section/ideation"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-mediation-xplus-xu-processing-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Seção Inferior/Processamento] Processamento
@@ -64,7 +63,3 @@ Esta seção costuma ser lida por meio de `Zf`, `Zd`, `W:D:Dd`, `W:M`, `PSV`, `D
 - [[Interpretação/Seção Superior] Zd](ref://result-interpretation/upper-section/Zd)
 - [[Interpretação/Seção Inferior/Mediação] Mediação](ref://result-interpretation/lower-section/mediation)
 - [[Interpretação/Seção Inferior/Ideação] Ideação](ref://result-interpretation/lower-section/ideation)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

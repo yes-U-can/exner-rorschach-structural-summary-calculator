@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/determinants/C"
   - "scoring-input/z"
   - "scoring-input/popular"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Cards] II
@@ -56,7 +55,3 @@ This page summarizes how that chromatic presence may influence coding without tu
 - [[Coding/Determinants] C](ref://scoring-input/determinants/C)
 - [[Coding/Z] Z](ref://scoring-input/z)
 - [[Coding/Popular] Popular](ref://scoring-input/popular)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

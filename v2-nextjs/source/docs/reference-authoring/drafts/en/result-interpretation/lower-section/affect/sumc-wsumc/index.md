@@ -20,9 +20,8 @@ relatedRoutes:
   - "scoring-input/determinants/CF"
   - "scoring-input/determinants/C"
   - "scoring-input/determinants/Cn"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Affect] SumC / WSumC
@@ -63,7 +62,3 @@ In interpretation, `WSumC` is usually more useful because it reflects not only h
 - [[Coding/Determinants] CF](ref://scoring-input/determinants/CF)
 - [[Coding/Determinants] C](ref://scoring-input/determinants/C)
 - [[Coding/Determinants] Cn](ref://scoring-input/determinants/Cn)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

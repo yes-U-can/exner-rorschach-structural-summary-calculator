@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/card"
   - "scoring-input/gphr/GHR"
   - "result-interpretation/lower-section/mediation/P"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Popular] Popular
@@ -53,7 +52,3 @@ In coding, `P` is assigned when the response matches a defined popular by criter
 - [[Coding/Cards] Card](ref://scoring-input/card)
 - [[Coding/GHR-PHR] GHR](ref://scoring-input/gphr/GHR)
 - [[Interpretation/Mediation] P](ref://result-interpretation/lower-section/mediation/P)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

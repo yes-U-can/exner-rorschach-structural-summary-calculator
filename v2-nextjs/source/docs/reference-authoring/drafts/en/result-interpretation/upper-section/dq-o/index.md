@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/dq_vplus"
   - "result-interpretation/upper-section/dq_v"
   - "scoring-input/dq/o"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Upper Section] DQo
@@ -51,7 +50,3 @@ It usually functions as the baseline for the protocol's usual level of organizat
 - [[Interpretation/Upper Section] DQv/+](ref://result-interpretation/upper-section/dq_vplus)
 - [[Interpretation/Upper Section] DQv](ref://result-interpretation/upper-section/dq_v)
 - [[Coding/Developmental Quality] o](ref://scoring-input/dq/o)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

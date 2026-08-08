@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/contents/(A)"
   - "scoring-input/contents/Ad"
   - "scoring-input/contents/Hd"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Content] (Ad)
@@ -51,7 +50,3 @@ It is the partial and imaginary member of the animal cluster.
 - [[Coding/Content] (A)](ref://scoring-input/contents/%28A%29)
 - [[Coding/Content] Ad](ref://scoring-input/contents/Ad)
 - [[Coding/Content] Hd](ref://scoring-input/contents/Hd)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

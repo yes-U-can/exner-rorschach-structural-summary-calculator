@@ -18,9 +18,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/Mnone"
   - "scoring-input/determinants/M"
   - "result-interpretation/special-indices/PTI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-ideation-wsum6-mminus-mnone-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Ideação] M-
@@ -59,7 +58,3 @@ Na interpretação, funciona como sinal de que a atividade humana imaginada est�
 - [[Interpretação/Ideação] Mnone](ref://result-interpretation/lower-section/ideation/Mnone)
 - [[Codificação/Determinantes] M](ref://scoring-input/determinants/M)
 - [[Interpretação/Índices Especiais] PTI](ref://result-interpretation/special-indices/PTI)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

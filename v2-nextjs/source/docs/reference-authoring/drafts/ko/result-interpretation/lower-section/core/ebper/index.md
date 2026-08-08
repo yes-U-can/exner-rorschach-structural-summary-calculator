@@ -19,9 +19,8 @@ relatedRoutes:
   - "scoring-input/determinants/FC"
   - "scoring-input/determinants/CF"
   - "scoring-input/determinants/C"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/core/ebper/index.md"
 ---
 
 # [해석/Core] EBPer
@@ -63,7 +62,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `D`
 - `M`
 - `WSumC`
-
-## 근거 메모
-
-- 편재성 판단 기준과 예외 메모는 provenance note에 분리했다.

@@ -20,9 +20,8 @@ relatedRoutes:
   - "scoring-input/gphr/GHR"
   - "scoring-input/gphr/PHR"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-interpersonal-ap-food-sumt-humancont-2026-03-10.md"
 ---
 
 # [Interpretation/Interpersonal] Human Content
@@ -77,7 +76,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-interpersonal-ap-f
 - [[Coding/GHR-PHR] GHR](ref://scoring-input/gphr/GHR)
 - [[Coding/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
 - [[解釈/Self Perception] H Ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

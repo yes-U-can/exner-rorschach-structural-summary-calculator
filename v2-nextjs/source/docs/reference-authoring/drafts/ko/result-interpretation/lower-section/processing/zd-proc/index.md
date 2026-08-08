@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/processing/Zf_proc"
   - "result-interpretation/lower-section/processing/PSV"
   - "result-interpretation/lower-section/processing/W_D_Dd"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/processing/zd-proc/index.md"
 ---
 
 # 문서명: [해석/Processing] Zd
@@ -66,7 +65,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[해석/Processing\] Zf](ref://result-interpretation/lower-section/processing/Zf_proc)
 - [\[해석/Processing\] PSV](ref://result-interpretation/lower-section/processing/PSV)
 - [\[해석/Processing\] W:D:Dd](ref://result-interpretation/lower-section/processing/W_D_Dd)
-
-## 근거 메모
-
-- `Zd` 기대 범위와 overincorporation/underincorporation 메모는 provenance note에 분리했다.

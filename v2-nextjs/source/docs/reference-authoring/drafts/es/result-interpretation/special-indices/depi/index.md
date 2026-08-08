@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/selfPerception/MOR_self"
   - "result-interpretation/lower-section/affect/Afr"
   - "result-interpretation/special-indices/CDI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/special-indices/depi/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Índices Especiales] DEPI
@@ -69,7 +68,3 @@ Integra variables de afecto, carga de malestar, autoimagen negativa y retirada e
 - [[Interpretación/Self Perception] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
 - [[Interpretación/Affect] Afr](ref://result-interpretation/lower-section/affect/Afr)
 - [[Interpretación/Índices Especiales] CDI](ref://result-interpretation/special-indices/CDI)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

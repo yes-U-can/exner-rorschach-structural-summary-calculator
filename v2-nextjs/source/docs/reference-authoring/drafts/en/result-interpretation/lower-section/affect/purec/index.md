@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/determinants/CF"
   - "scoring-input/determinants/FC"
   - "result-interpretation/lower-section/core/EB"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Affect] Pure C
@@ -55,7 +54,3 @@ In interpretation, it is used as a sign of more direct affective expression that
 - [[Coding/Determinants] CF](ref://scoring-input/determinants/CF)
 - [[Coding/Determinants] FC](ref://scoring-input/determinants/FC)
 - [[Interpretation/Core] EB](ref://result-interpretation/lower-section/core/EB)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/contents/Art"
   - "scoring-input/gphr/PHR"
   - "result-interpretation/lower-section/selfPerception/An_Xy"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-animal-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Conteúdo] An
@@ -54,7 +53,3 @@ Não basta soar como fragmento de animal; a ideia principal precisa ser anatômi
 - [[Codificação/Conteúdo] Art](ref://scoring-input/contents/Art)
 - [[Codificação/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
 - [[Interpretação/Autopercepção] An + Xy](ref://result-interpretation/lower-section/selfPerception/An_Xy)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

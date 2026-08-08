@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/card/VIII"
   - "scoring-input/card/IX"
   - "scoring-input/card/X"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Affect] Afr
@@ -58,7 +57,3 @@ In interpretation, it is used to estimate how readily the person approaches or w
 - [[Coding/Card] VIII](ref://scoring-input/card/VIII)
 - [[Coding/Card] IX](ref://scoring-input/card/IX)
 - [[Coding/Card] X](ref://scoring-input/card/X)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/contents/An"
   - "scoring-input/contents/Xy"
   - "result-interpretation/special-indices/HVI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/selfperception/an-xy/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Self Perception] An + Xy
@@ -65,7 +64,3 @@ En `Self Perception` funciona como una pista de preocupación por el cuerpo, por
 - [[Codificación/Contenido] An](ref://scoring-input/contents/An)
 - [[Codificación/Contenido] Xy](ref://scoring-input/contents/Xy)
 - [[Interpretación/Índices Especiales] Hypervigilance Index](ref://result-interpretation/special-indices/HVI)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

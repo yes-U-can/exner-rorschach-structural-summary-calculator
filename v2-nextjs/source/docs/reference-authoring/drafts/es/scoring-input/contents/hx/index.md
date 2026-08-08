@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/special-score/AB"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/contents/hx/index.md"
 ---
 
 # Nombre del documento: [Codificación/Contenido] Hx
@@ -53,8 +52,3 @@ El foco está en la vivencia humana atribuida con claridad.
 - [[Codificación/Código especial] AB](ref://scoring-input/special-score/AB)
 - [[Interpretación/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
 - [[Interpretación/Self Perception] H ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
-
-## Nota de fundamento
-
-- La justificación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

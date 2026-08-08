@@ -21,9 +21,8 @@ relatedRoutes:
   - "scoring-input/determinants/FM"
   - "scoring-input/determinants/m"
   - "result-interpretation/lower-section/interpersonal/a_p_inter"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-ideation-opening-2026-03-10.md"
 ---
 
 # [Interpretation/Ideation] a:p
@@ -63,6 +62,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-ideation-opening-2
 - [[Coding/決定因] FM](ref://scoring-input/determinants/FM)
 - [[Coding/決定因] m](ref://scoring-input/determinants/m)
 - [[解釈/Interpersonal] a:p](ref://result-interpretation/lower-section/interpersonal/a_p_inter)
-
-## 根拠メモ
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

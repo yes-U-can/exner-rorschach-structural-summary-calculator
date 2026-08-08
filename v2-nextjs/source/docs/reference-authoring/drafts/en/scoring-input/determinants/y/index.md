@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/determinants/V"
   - "scoring-input/determinants/T"
   - "result-interpretation/lower-section/core/SumY"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Determinants] Y
@@ -55,7 +54,3 @@ The dominant experience is vague, shaded, or cloudy, and form does not truly org
 - [[Coding/Determinants] V](ref://scoring-input/determinants/V)
 - [[Coding/Determinants] T](ref://scoring-input/determinants/T)
 - [[Interpretation/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

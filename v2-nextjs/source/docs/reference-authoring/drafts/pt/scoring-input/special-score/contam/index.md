@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/special-score/FABCOM2"
   - "result-interpretation/lower-section/ideation/Sum6"
   - "result-interpretation/lower-section/ideation/WSum6"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-special-score-incom-fabcom-contam-alog-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Códigos Especiais] CONTAM
@@ -53,7 +52,3 @@ Ele não descreve apenas uma mistura estranha, mas uma integração impossível 
 - [[Codificação/Códigos Especiais] FABCOM2](ref://scoring-input/special-score/FABCOM2)
 - [[Interpretação/Ideation] Sum6](ref://result-interpretation/lower-section/ideation/Sum6)
 - [[Interpretação/Ideation] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/determinants/Y"
   - "scoring-input/determinants/FY"
   - "scoring-input/determinants/YF"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Core] SumY
@@ -58,7 +57,3 @@ In `core`, it usually reflects vague distress, difficult-to-modulate tension, or
 - [[Coding/Determinants] Y](ref://scoring-input/determinants/Y)
 - [[Coding/Determinants] FY](ref://scoring-input/determinants/FY)
 - [[Coding/Determinants] YF](ref://scoring-input/determinants/YF)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

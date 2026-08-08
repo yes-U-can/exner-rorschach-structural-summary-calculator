@@ -18,13 +18,13 @@ describe('docs result-entry structure (English)', () => {
         failures.push({ id: route.id, slug: route.slug.join('/'), reason: 'empty_description' });
         continue;
       }
-      if (!description.includes('[Interpretive Preconditions]')) {
+      if (!description.includes('[Before Interpretation]')) {
         failures.push({ id: route.id, slug: route.slug.join('/'), reason: 'missing_interpretive_preconditions' });
       }
-      if (!description.includes('[Cross-Checks]')) {
+      if (!description.includes('[Related References]')) {
         failures.push({ id: route.id, slug: route.slug.join('/'), reason: 'missing_cross_checks' });
       }
-      if (!description.includes('[Common Misreading Guard]')) {
+      if (!description.includes('[Caution]')) {
         failures.push({ id: route.id, slug: route.slug.join('/'), reason: 'missing_misreading_guard' });
       }
     }

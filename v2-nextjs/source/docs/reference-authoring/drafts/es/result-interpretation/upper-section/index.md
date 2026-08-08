@@ -26,9 +26,8 @@ relatedRoutes:
   - "scoring-input/z"
   - "scoring-input/location"
   - "scoring-input/dq"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/upper-section/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Upper Section] Upper Section
@@ -88,7 +87,3 @@ Sirve como pantalla inicial para ver cómo la persona organiza el campo estimula
 - [[Codificación/Z] Z](ref://scoring-input/z)
 - [[Codificación/Ubicación] Location](ref://scoring-input/location)
 - [[Codificación/Calidad evolutiva] DQ](ref://scoring-input/dq)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

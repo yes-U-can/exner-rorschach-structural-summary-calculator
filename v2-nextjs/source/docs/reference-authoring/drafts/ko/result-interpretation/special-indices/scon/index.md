@@ -22,9 +22,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/mediation/P"
   - "result-interpretation/lower-section/interpersonal/PureH"
   - "result-interpretation/lower-section/core/R"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/special-indices/scon/index.md"
 ---
 
 # 문서명: [해석/특수지표] S-CON
@@ -91,7 +90,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[해석/인지적 매개\] P](ref://result-interpretation/lower-section/mediation/P)
 - [\[해석/대인관계\] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)
 - [\[해석/중핵\] R](ref://result-interpretation/lower-section/core/R)
-
-## 근거 메모
-
-- 상세 검토 기록은 내부 검증 노트에서 관리한다.

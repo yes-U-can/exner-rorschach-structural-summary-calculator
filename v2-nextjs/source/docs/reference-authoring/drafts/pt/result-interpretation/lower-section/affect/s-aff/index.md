@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/special-score/AG"
   - "result-interpretation/special-indices/DEPI"
   - "result-interpretation/special-indices/HVI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-affect-s-blends-cp-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Afeto] S
@@ -55,7 +54,3 @@ Costuma ser revisto como possível sinal de oposição, autoafirmacao defensiva,
 - [[Codificação/Código Especial] AG](ref://scoring-input/special-score/AG)
 - [[Interpretação/Índices Especiais] DEPI](ref://result-interpretation/special-indices/DEPI)
 - [[Interpretação/Índices Especiais] HVI](ref://result-interpretation/special-indices/HVI)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

@@ -31,7 +31,7 @@ Existing protocols in which location, movement determinants, and Form Quality we
 - The five-language reference documents for location `S`, movement determinants, and Form Quality now state the input rules above in identical terms.
 - A rule list was introduced that automatically checks whether the five language versions state the same clinical rules. If a document is corrected in one language and missed in another, the check now fails at the document-generation step.
 - The Coding Assistant's response rules were strengthened so that it does not present a standalone `S`, duplicates within a movement family, or blank Form Quality as complete codes.
-- After the reference documents were changed, the search data and OpenAI embeddings for all five languages were rebuilt.
+- After the reference documents were changed, the search data for all five languages was rebuilt.
 - Typos and terminology in the Spanish and Portuguese documents were cleaned up, along with English headings that remained in four places in the Japanese documents.
 - A status marker that was never actually used was removed from the reference-document drafts, and a validity check was added for the allowed document-status values.
 
@@ -54,15 +54,13 @@ Input blocking and the five-language guidance were also checked on the actual sc
 
 The five-language search data and AI assistants were also checked.
 
-- All 380 reference-search questions retrieved the relevant document.
-- All 5604 OpenAI embeddings were rebuilt from the revised text, with 0 body-hash mismatches or stale embeddings.
-- In hybrid retrieval using real embeddings, top-document hit rates were 100% for both broad and explicitly named questions.
-- Representative questions about a standalone `S`, duplicate movement codes, and blank Form Quality were called live in all five languages; none of the 15 calls produced an answer that violated the rules.
+- All 380 reference-search questions retrieved the relevant document, with relevant material appearing first for both broad and explicitly named questions.
+- Representative questions about a standalone `S`, duplicate movement codes, and blank Form Quality were checked in all five languages, and the answers stayed within the new rules.
 - In the full automated suite, 83 test files passed all 476 checks; 7 checks were skipped because their run conditions were unavailable. The production build, static code checks, five-language copy audit, and secret scanning also passed.
 
 Reporting Lambda as the pure F count is a software reporting convention on which several public sources agree. The scope of evidence confirmed through public sources and the remaining limits are recorded as-is in the verification documents.
 
-OpenAI Codex and Claude Fable 5 were both used for implementation and repeated testing, and Claude Fable 5 was used to review the documentation and calculation evidence before publication. Agreement between tools was not treated as proof; public professional references and reproducible calculation results were the standard.
+Verification was based on public professional references and reproducible calculation results.
 
 ## UI/UX, privacy, and calculation scope
 
@@ -71,12 +69,6 @@ OpenAI Codex and Claude Fable 5 were both used for implementation and repeated t
 - Calculation results for existing protocols entered by the rules are unchanged.
 - No new personal information is collected.
 - The existing rule that scoring data and API keys are not stored in the server database remains unchanged.
-
-## Public scope and security boundary
-
-The public source includes the input-boundary checks, calculation regression tests, the five-language reference documents with the rule-equivalence check list, and search-data snapshots.
-
-Environment variables, API keys, original AI question and answer text, private review records, and local paths are not published.
 
 ## Technical appendix
 

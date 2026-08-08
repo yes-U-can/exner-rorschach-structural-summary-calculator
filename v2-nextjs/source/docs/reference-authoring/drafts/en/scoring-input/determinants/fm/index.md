@@ -12,9 +12,8 @@ relatedRoutes:
   - "scoring-input/determinants/M"
   - "scoring-input/determinants/m"
   - "result-interpretation/lower-section/core/FM"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Determinants] FM
@@ -52,7 +51,3 @@ Use only one animal-movement code in a response. If separate animal objects show
 - [[Coding/Determinants] M](ref://scoring-input/determinants/M)
 - [[Coding/Determinants] m](ref://scoring-input/determinants/m)
 - [[Interpretation/Core] FM](ref://result-interpretation/lower-section/core/FM)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

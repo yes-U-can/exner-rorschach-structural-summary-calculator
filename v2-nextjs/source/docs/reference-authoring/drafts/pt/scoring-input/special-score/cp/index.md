@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/determinants/YF"
   - "scoring-input/determinants/Y"
   - "result-interpretation/lower-section/affect/CP"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-special-score-ab-psv-per-cp-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Códigos Especiais] CP
@@ -54,7 +53,3 @@ A ideia central é que a cor não está realmente presente naquela área, mas a 
 - [[Codificação/Determinantes] YF](ref://scoring-input/determinants/YF)
 - [[Codificação/Determinantes] Y](ref://scoring-input/determinants/Y)
 - [[Interpretação/Affect] CP](ref://result-interpretation/lower-section/affect/CP)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

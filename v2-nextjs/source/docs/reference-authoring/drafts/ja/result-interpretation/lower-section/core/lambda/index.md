@@ -18,9 +18,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/processing/W_M"
   - "scoring-input/fq"
   - "scoring-input/determinants/F"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-lower-section-core-opening-2026-03-10.md"
 ---
 
 # [Interpretation/Core] Lambda
@@ -59,7 +58,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-lower-section-core
 - [[解釈/情報処理] W:M](ref://result-interpretation/lower-section/processing/W_M)
 - [[Coding/FQ] FQ](ref://scoring-input/fq)
 - [[Coding/決定因] F](ref://scoring-input/determinants/F)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

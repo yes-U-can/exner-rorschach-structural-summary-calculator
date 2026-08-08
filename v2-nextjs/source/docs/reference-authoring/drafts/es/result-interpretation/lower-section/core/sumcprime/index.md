@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/determinants/C'"
   - "scoring-input/determinants/FC'"
   - "scoring-input/determinants/C'F"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/core/sumcprime/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Core] SumCprime
@@ -71,7 +70,3 @@ En `core` suele indicar el peso de malestar disfórico, afecto desagradable o to
 - [[Codificación/Determinantes] C'](ref://scoring-input/determinants/C%27)
 - [[Codificación/Determinantes] FC'](ref://scoring-input/determinants/FC%27)
 - [[Codificación/Determinantes] C'F](ref://scoring-input/determinants/C%27F)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

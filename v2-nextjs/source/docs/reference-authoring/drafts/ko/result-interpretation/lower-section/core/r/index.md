@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/EA"
   - "result-interpretation/lower-section/core/EB"
   - "scoring-input/score"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/core/r/index.md"
 ---
 
 # 문서명: [해석/Core] R
@@ -62,7 +61,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[해석/Core\] EA](ref://result-interpretation/lower-section/core/EA)
 - [\[해석/Core\] EB](ref://result-interpretation/lower-section/core/EB)
 - [\[부호화\] score](ref://scoring-input/score)
-
-## 근거 메모
-
-- 상세 출처와 절단값 메모는 provenance note에 분리했다.

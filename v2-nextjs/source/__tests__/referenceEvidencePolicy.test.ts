@@ -55,7 +55,7 @@ describe('reference special-index evidence policy', () => {
   it('keeps runtime governance generic and canonical identifiers stable', () => {
     for (const locale of locales) {
       for (const doc of getReferenceDocs(locale)) {
-        expect(doc.authorityPolicy).toBe('curated-internal-reference');
+        expect(doc.authorityPolicy).toBe('curated-reference');
         expect(doc.bodyText).not.toContain('authorityPolicy=');
         expect(doc.canonicalRoute).toMatch(/^[\x00-\x7F]+$/);
       }

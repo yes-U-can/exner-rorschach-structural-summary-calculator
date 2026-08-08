@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/fq/-"
   - "scoring-input/fq/none"
   - "scoring-input/dq"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/fq/index.md"
 ---
 
 # 문서명: [부호화/형태질] FQ
@@ -62,8 +61,3 @@ FQ는 피검자가 지각한 대상이 반점의 실제 윤곽과 얼마나 잘 
 - [\[부호화/형태질\] -](ref://scoring-input/fq/-)
 - [\[부호화/형태질\] none](ref://scoring-input/fq/none)
 - [\[부호화/발달질\] DQ](ref://scoring-input/dq)
-
-## 근거 메모
-
-- 세부 근거 대조와 용어 판단 기록은 내부 작업 메모에서 관리한다.
-- 공개 참조 문서 반영 단계에서는 내부 provenance가 노출되지 않도록 분리한다.

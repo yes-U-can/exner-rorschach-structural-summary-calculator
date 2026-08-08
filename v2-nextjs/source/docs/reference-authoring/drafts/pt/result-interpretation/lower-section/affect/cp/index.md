@@ -18,9 +18,8 @@ relatedRoutes:
   - "scoring-input/determinants/FY"
   - "scoring-input/determinants/YF"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-affect-s-blends-cp-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Afeto] CP
@@ -59,7 +58,3 @@ Ele é revisto como sinal de que o afeto está se impondo à percepção de mane
 - [[Codificação/Determinantes] FY](ref://scoring-input/determinants/FY)
 - [[Codificação/Determinantes] YF](ref://scoring-input/determinants/YF)
 - [[Interpretação/Índices Especiais] DEPI](ref://result-interpretation/special-indices/DEPI)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/determinants/CF"
   - "result-interpretation/lower-section/affect/PureC"
   - "result-interpretation/lower-section/affect/FC_CF_C"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Determinants] C
@@ -49,7 +48,3 @@ It is pure color responding.
 - [[Coding/Determinants] CF](ref://scoring-input/determinants/CF)
 - [[Interpretation/Affect] Pure C](ref://result-interpretation/lower-section/affect/PureC)
 - [[Interpretation/Affect] FC:CF+C](ref://result-interpretation/lower-section/affect/FC_CF_C)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

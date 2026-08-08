@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/mediation/P"
   - "scoring-input/fq/+"
   - "scoring-input/popular"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/special-indices/obs/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Índices Especiales] Obsessive Style Index
@@ -69,7 +68,3 @@ La evidencia de validez de constructo es insuficiente para inferir rasgos obsesi
 - [[Interpretación/Mediation] P](ref://result-interpretation/lower-section/mediation/P)
 - [[Codificación/FQ] +](ref://scoring-input/fq/%2B)
 - [[Codificación/Popular] Popular](ref://scoring-input/popular)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

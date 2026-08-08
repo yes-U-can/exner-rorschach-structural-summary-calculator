@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/processing/Zd_proc"
   - "result-interpretation/lower-section/processing/W_D_Dd"
   - "scoring-input/z"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-processing-zf-zd-wddd-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Processamento] Zf
@@ -51,7 +50,3 @@ Nesta seção, ele funciona como medida de frequência do esforço organizaciona
 - [[Interpretação/Processamento] Zd](ref://result-interpretation/lower-section/processing/Zd_proc)
 - [[Interpretação/Processamento] W:D:Dd](ref://result-interpretation/lower-section/processing/W_D_Dd)
 - [[Codificação/Z] Z](ref://scoring-input/z)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

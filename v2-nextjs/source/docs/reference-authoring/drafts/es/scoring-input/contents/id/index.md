@@ -12,9 +12,8 @@ relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/Sc"
   - "scoring-input/contents/Art"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/contents/id/index.md"
 ---
 
 # Nombre del documento: [Codificación/Contenido] Id
@@ -49,8 +48,3 @@ No es un código para "contenido raro" en general, sino para contenido verdadera
 - [[Codificación/Contenido] Contents](ref://scoring-input/contents)
 - [[Codificación/Contenido] Sc](ref://scoring-input/contents/Sc)
 - [[Codificación/Contenido] Art](ref://scoring-input/contents/Art)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

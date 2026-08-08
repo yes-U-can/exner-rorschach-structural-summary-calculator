@@ -15,9 +15,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/dq_vplus"
   - "scoring-input/dq/v"
   - "result-interpretation/lower-section/processing/DQ_v_proc"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/upper-section/dq-v/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Upper Section] DQv
@@ -66,7 +65,3 @@ Ayuda a estimar cuántas veces el protocolo produce respuestas poco definidas en
 - [[Interpretación/Upper Section] DQv/+](ref://result-interpretation/upper-section/dq_vplus)
 - [[Codificación/Calidad evolutiva] v](ref://scoring-input/dq/v)
 - [[Interpretación/Processing] DQv](ref://result-interpretation/lower-section/processing/DQ_v_proc)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

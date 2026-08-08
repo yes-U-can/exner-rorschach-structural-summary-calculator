@@ -19,9 +19,8 @@ relatedRoutes:
   - "scoring-input/contents/Hx"
   - "scoring-input/gphr/GHR"
   - "scoring-input/gphr/PHR"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/selfperception/h-ratio/index.md"
 ---
 
 # 문서명: [해석/Self Perception] H Ratio
@@ -74,7 +73,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[부호화/내용\] Hx](ref://scoring-input/contents/Hx)
 - [\[부호화/GHR-PHR\] GHR](ref://scoring-input/gphr/GHR)
 - [\[부호화/GHR-PHR\] PHR](ref://scoring-input/gphr/PHR)
-
-## 근거 메모
-
-- whole-vs-part human ratio 메모는 provenance note에 분리했다.

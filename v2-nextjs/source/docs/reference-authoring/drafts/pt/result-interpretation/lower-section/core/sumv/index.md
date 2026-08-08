@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/determinants/V"
   - "scoring-input/determinants/FV"
   - "scoring-input/determinants/VF"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-core-shading-burdens-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Core] SumV
@@ -56,7 +55,3 @@ No `core`, ele costuma indicar quanto autocrítica, insatisfação consigo mesmo
 - [[Codificação/Determinantes] V](ref://scoring-input/determinants/V)
 - [[Codificação/Determinantes] FV](ref://scoring-input/determinants/FV)
 - [[Codificação/Determinantes] VF](ref://scoring-input/determinants/VF)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/fq/u"
   - "scoring-input/fq/-"
   - "result-interpretation/lower-section/core/Lambda"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-determinants-form-reflection-fd-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Determinantes] F
@@ -57,7 +56,3 @@ Não há uso operativo de movimento, cor, reflexo, textura, vista ou dimensão a
 - [[Codificação/Qualidade Formal] u](ref://scoring-input/fq/u)
 - [[Codificação/Qualidade Formal] -](ref://scoring-input/fq/-)
 - [[Interpretação/Core] Lambda](ref://result-interpretation/lower-section/core/Lambda)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

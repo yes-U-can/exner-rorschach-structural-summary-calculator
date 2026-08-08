@@ -27,9 +27,8 @@ relatedRoutes:
   - "scoring-input/determinants/T"
   - "scoring-input/determinants/V"
   - "scoring-input/determinants/Y"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Core] eb
@@ -78,7 +77,3 @@ It describes the composition of current demand: whether the burden is weighted m
 - [[Coding/Determinants] T](ref://scoring-input/determinants/T)
 - [[Coding/Determinants] V](ref://scoring-input/determinants/V)
 - [[Coding/Determinants] Y](ref://scoring-input/determinants/Y)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

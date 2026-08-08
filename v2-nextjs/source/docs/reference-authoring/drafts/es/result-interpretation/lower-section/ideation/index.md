@@ -19,9 +19,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/WSum6"
   - "result-interpretation/lower-section/ideation/M_minus"
   - "result-interpretation/lower-section/ideation/Mnone"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/ideation/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Lower Section/Ideación] Ideación
@@ -77,7 +76,3 @@ En esta zona se revisan juntos `a:p`, `Ma:Mp`, `2AB+Art+Ay`, `MOR`, `Sum6`, `Lv2
 - [[Interpretación/Ideación] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
 - [[Interpretación/Ideación] M-](ref://result-interpretation/lower-section/ideation/M_minus)
 - [[Interpretación/Ideación] Mnone](ref://result-interpretation/lower-section/ideation/Mnone)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

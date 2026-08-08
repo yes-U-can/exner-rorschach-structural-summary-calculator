@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/contents/Na"
   - "scoring-input/contents/Bt"
   - "scoring-input/contents/Ge"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/contents/ls/index.md"
 ---
 
 # Nombre del documento: [Codificación/Contenido] Ls
@@ -52,8 +51,3 @@ El foco debe recaer en la escena o el entorno, no solo en una planta u objeto ai
 - [[Codificación/Contenido] Na](ref://scoring-input/contents/Na)
 - [[Codificación/Contenido] Bt](ref://scoring-input/contents/Bt)
 - [[Codificación/Contenido] Ge](ref://scoring-input/contents/Ge)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

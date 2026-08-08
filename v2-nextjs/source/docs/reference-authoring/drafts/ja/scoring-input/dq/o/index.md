@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/dq/v/+"
   - "scoring-input/dq/v"
   - "result-interpretation/upper-section/dq_o"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # [コーディング/発達水準] o
@@ -50,7 +49,3 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 - [[コーディング/発達水準] v/+](ref://scoring-input/dq/v/%2B)
 - [[コーディング/発達水準] v](ref://scoring-input/dq/v)
 - [[解釈/上段] DQo](ref://result-interpretation/upper-section/dq_o)
-
-## 根拠メモ
-
-- 詳細な出典比較は内部 provenance note に記録します。

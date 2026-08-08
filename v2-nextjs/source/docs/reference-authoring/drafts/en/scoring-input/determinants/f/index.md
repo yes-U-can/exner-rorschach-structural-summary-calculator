@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/fq/u"
   - "scoring-input/fq/-"
   - "result-interpretation/lower-section/core/Lambda"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Determinants] F
@@ -57,7 +56,3 @@ There is no operative use of movement, color, reflection, texture, vista, or add
 - [[Coding/Form Quality] u](ref://scoring-input/fq/u)
 - [[Coding/Form Quality] -](ref://scoring-input/fq/-)
 - [[Interpretation/Core] Lambda](ref://result-interpretation/lower-section/core/Lambda)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

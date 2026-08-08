@@ -19,9 +19,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation"
   - "result-interpretation/lower-section/affect"
   - "result-interpretation/lower-section/interpersonal"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 # Document Name: [Interpretation/Special Indices] Special Indices
 ## Aliases / Search Terms
@@ -62,5 +61,3 @@ Each index does not replace clinical interpretation; instead it works as an actu
 - [[Interpretation/Lower Section/Ideation] Ideation](ref://result-interpretation/lower-section/ideation)
 - [[Interpretation/Lower Section/Affect] Affect](ref://result-interpretation/lower-section/affect)
 - [[Interpretation/Lower Section/Interpersonal] Interpersonal](ref://result-interpretation/lower-section/interpersonal)
-## Evidence Note
-- Detailed source comparison is stored in internal provenance notes.

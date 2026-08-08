@@ -12,9 +12,8 @@ relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/Ex"
   - "scoring-input/contents/Cl"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Content] Fi
@@ -48,7 +47,3 @@ The response has to organize the blot as flame, fire, smoke, or a column of smok
 - [[Coding/Content] Contents](ref://scoring-input/contents)
 - [[Coding/Content] Ex](ref://scoring-input/contents/Ex)
 - [[Coding/Content] Cl](ref://scoring-input/contents/Cl)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

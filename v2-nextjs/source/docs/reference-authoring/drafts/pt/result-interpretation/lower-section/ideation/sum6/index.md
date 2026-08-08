@@ -23,9 +23,8 @@ relatedRoutes:
   - "scoring-input/special-score/FABCOM2"
   - "scoring-input/special-score/ALOG"
   - "scoring-input/special-score/CONTAM"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-ideation-mor-sum6-lv2-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Ideação] Sum6
@@ -70,7 +69,3 @@ Ele ajuda a estimar com que frequência peculiaridades cognitivas, desvios verba
 - [[Codificação/Código Especial] FABCOM2](ref://scoring-input/special-score/FABCOM2)
 - [[Codificação/Código Especial] ALOG](ref://scoring-input/special-score/ALOG)
 - [[Codificação/Código Especial] CONTAM](ref://scoring-input/special-score/CONTAM)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

@@ -47,7 +47,7 @@ Excel and Perl each distinguished individual movement codes from totals by movem
 - Supporting explanations in the interface and the reference pages now follow the same rule.
 - The Coding Assistant no longer presents `M`, `FM`, or `m` as complete codes for individual responses and instead asks for the `a`, `p`, or `a-p` information needed to complete the code.
 - Corrupted characters were restored in 4 Japanese search questions and in a Korean document-maintenance record.
-- After the reference pages were changed, the search data and OpenAI embeddings for all five languages were rebuilt.
+- After the reference pages were changed, the search data for all five languages was rebuilt.
 - Document-generation rules and regression tests were strengthened so that `Input-code rule` and `Scoring/application condition` remain separate sections.
 - The Interpretation Assistant now explains response count and data limitations before broader Structural Summary interpretations.
 
@@ -63,19 +63,11 @@ The first checks confirmed that input codes and result fields retained their dif
 
 The five-language reference pages and optional AI assistants were checked as well.
 
-- All 365 reference-search questions retrieved the relevant document.
-- All 5604 OpenAI embeddings were rebuilt from the revised text, with 0 stale embeddings or body-hash mismatches.
-- In hybrid retrieval using real OpenAI embeddings, top-document hit rate and relevant-set coverage were both 100% for broad and explicitly named questions. No broad question returned a document from another work area as its first result.
-- In 62 live single-turn GPT-5.5 calls, every question about active-passive movement coding respected the intended boundary. In 1 unrelated long interpretation, the response count and data limitations were not explained first; the response order was corrected and the same condition then passed 3 consecutive checks.
-- Movement-coding conversations passed in 9 multi-turn calls. A separate English check failed 1 time because the evaluator did not recognize an equivalent expression; after the accepted expression was corrected, the related question passed 2 consecutive checks.
-- After the final five-language text and embeddings were aligned, one representative movement-boundary question was called in each language. All 5 calls in Korean, English, Japanese, Spanish, and Portuguese passed.
-- After the section-heading generation rule was corrected, the same five-language questions were called again. All 5 passed without interruption or boundary violations.
-- All 4 checks through the same API route used by the web application passed.
+- All 365 reference-search questions retrieved the relevant document, and neither broad nor explicitly named questions placed an unrelated work area first.
+- Prepared questions confirmed the Coding and Interpretation Assistants' response boundaries. A long-form explanation-order issue and an English synonym-matching issue found during review were corrected and checked again across all five languages and through the web application's answer path.
 - Across the full automated suite, 447 checks in 81 test files passed and 7 were skipped because their execution conditions were unavailable. All 222 deployment pages were generated, and static analysis, the five-language copy audit, secret scanning, and production and development dependency audits also passed.
 
-The live GPT-5.5 calls checked whether the Coding and Interpretation Assistants maintained the intended response boundaries for prepared questions. They do not guarantee the clinical accuracy of every possible question, and AI responses were not used as the answer key for Structural Summary calculations.
-
-OpenAI Codex was used for implementation and repeated testing. Claude Opus 4.8 was used to review the documentation and calculation evidence before publication. Agreement between tools was not treated as proof; public professional references, the CS scope adopted by this application, reproducible calculation results, and human review were considered together.
+These checks cover prepared answer boundaries only. They do not guarantee the clinical accuracy of every possible question, and AI responses were not used as the answer key for Structural Summary calculations.
 
 ## UI/UX, privacy, and database
 
@@ -86,11 +78,7 @@ OpenAI Codex was used for implementation and repeated testing. Claude Opus 4.8 w
 - The existing rule that scoring data is not stored in the server database remains unchanged.
 - The feedback database structure and request limits were not changed.
 
-## Public scope and security boundary
-
-The public source includes input-boundary checks, calculation regression tests, five-language reference pages, search-data snapshots, and GPT-5.5 test summaries without the original prompt or response text.
-
-Original early-development files, paid or private literature, local paths, API keys, environment variables, full response text, and private review records are not published. Public documents link only to reproducible public distribution pages and official public repositories.
+The verification record is based on public professional references, the CS scope adopted by this application, and reproducible calculation results.
 
 ## Technical appendix
 

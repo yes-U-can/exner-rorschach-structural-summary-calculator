@@ -21,9 +21,8 @@ relatedRoutes:
   - "scoring-input/determinants/FV"
   - "scoring-input/determinants/VF"
   - "result-interpretation/lower-section/core/AdjD"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Self Perception] SumV
@@ -77,7 +76,3 @@ In `Core`, it also relates to overall burden, but here the emphasis is on self-e
 - [[Coding/Determinants] FV](ref://scoring-input/determinants/FV)
 - [[Coding/Determinants] VF](ref://scoring-input/determinants/VF)
 - [[Interpretation/Core] AdjD](ref://result-interpretation/lower-section/core/AdjD)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

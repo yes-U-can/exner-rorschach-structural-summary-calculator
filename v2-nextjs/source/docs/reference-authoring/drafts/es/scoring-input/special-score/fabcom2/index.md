@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/Sum6"
   - "result-interpretation/lower-section/ideation/Lv2"
   - "result-interpretation/lower-section/ideation/WSum6"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/special-score/fabcom2/index.md"
 ---
 
 # Nombre del documento: [Codificación/Puntuaciones especiales] FABCOM2
@@ -57,8 +56,3 @@ Se usa cuando la organización de la respuesta queda deformada por una relación
 - [[Interpretación/Ideation] Sum6](ref://result-interpretation/lower-section/ideation/Sum6)
 - [[Interpretación/Ideation] Lv2](ref://result-interpretation/lower-section/ideation/Lv2)
 - [[Interpretación/Ideation] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

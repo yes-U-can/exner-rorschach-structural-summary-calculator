@@ -22,9 +22,8 @@ relatedRoutes:
   - "scoring-input/fq"
   - "scoring-input/popular"
   - "scoring-input/location/S"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-mediation-opening-xa-wda-2026-03-10.md"
 ---
 
 # [Interpretation/Lower Section/Mediation] Mediation
@@ -68,7 +67,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-mediation-opening-
 - [[Coding/FQ] FQ](ref://scoring-input/fq)
 - [[Coding/Popular] Popular](ref://scoring-input/popular)
 - [[Coding/領域] S](ref://scoring-input/location/S)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

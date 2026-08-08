@@ -18,9 +18,8 @@ relatedRoutes:
   - "scoring-input/determinants/FY"
   - "scoring-input/determinants/YF"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/affect/cp/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Afecto] CP
@@ -72,7 +71,3 @@ Se mira como una señal de afecto que se impone o colorea la percepción de un m
 - [[Codificación/Determinantes] FY](ref://scoring-input/determinants/FY)
 - [[Codificación/Determinantes] YF](ref://scoring-input/determinants/YF)
 - [[Interpretación/Índices Especiales] DEPI](ref://result-interpretation/special-indices/DEPI)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

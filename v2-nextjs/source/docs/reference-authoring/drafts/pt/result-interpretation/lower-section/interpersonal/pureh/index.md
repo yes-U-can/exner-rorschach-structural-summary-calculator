@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/gphr/PHR"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
   - "result-interpretation/special-indices/CDI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-interpersonal-closing-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Interpessoal] Pure H
@@ -58,7 +57,3 @@ No plano interpessoal, ele ajuda a mostrar se a imagem do outro tende a ser orga
 - [[Codificação/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
 - [[Interpretação/Autopercepção] H Ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
 - [[Interpretação/Índices Especiais] CDI](ref://result-interpretation/special-indices/CDI)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

@@ -12,9 +12,8 @@ relatedRoutes:
   - "scoring-input/fq/o"
   - "scoring-input/fq/-"
   - "scoring-input/fq/+"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/fq/u/index.md"
 ---
 
 # 문서명: [부호화/형태질] u
@@ -49,8 +48,3 @@ FQu는 반점 윤곽 사용이 적절하지만, 그 반응이 비상투적이거
 - [\[부호화/형태질\] o](ref://scoring-input/fq/o)
 - [\[부호화/형태질\] -](ref://scoring-input/fq/-)
 - [\[부호화/형태질\] +](ref://scoring-input/fq/%2B)
-
-## 근거 메모
-
-- 세부 근거 대조와 용어 판단 기록은 내부 작업 메모에서 관리한다.
-- 공개 참조 문서 반영 단계에서는 내부 provenance가 노출되지 않도록 분리한다.

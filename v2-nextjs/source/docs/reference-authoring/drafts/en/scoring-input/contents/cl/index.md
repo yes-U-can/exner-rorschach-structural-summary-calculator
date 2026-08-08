@@ -12,9 +12,8 @@ relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/Na"
   - "scoring-input/contents/Fi"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Content] Cl
@@ -48,7 +47,3 @@ It is used for the cloud itself, not for every similar atmospheric form.
 - [[Coding/Content] Contents](ref://scoring-input/contents)
 - [[Coding/Content] Na](ref://scoring-input/contents/Na)
 - [[Coding/Content] Fi](ref://scoring-input/contents/Fi)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

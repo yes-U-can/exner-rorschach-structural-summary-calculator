@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/mediation/X_minus_percent"
   - "result-interpretation/lower-section/mediation/P"
   - "scoring-input/fq/u"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-mediation-xplus-xu-processing-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Mediação] Xu%
@@ -51,7 +50,3 @@ Ele marca um estilo de mediação que ainda pode ser sustentado, embora se afast
 - [[Interpretação/Mediação] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
 - [[Interpretação/Mediação] P](ref://result-interpretation/lower-section/mediation/P)
 - [[Codificação/FQ] u](ref://scoring-input/fq/u)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

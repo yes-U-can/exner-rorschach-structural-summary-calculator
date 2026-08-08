@@ -15,9 +15,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/Zd"
   - "scoring-input/z"
   - "result-interpretation/lower-section/processing/Zf_proc"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Upper Section] Zf
@@ -54,7 +53,3 @@ It shows how often the person attempts to organize relationships among parts of 
 - [[Interpretation/Upper Section] Zd](ref://result-interpretation/upper-section/Zd)
 - [[Coding/Z] Z](ref://scoring-input/z)
 - [[Interpretation/Processing] Zf](ref://result-interpretation/lower-section/processing/Zf_proc)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

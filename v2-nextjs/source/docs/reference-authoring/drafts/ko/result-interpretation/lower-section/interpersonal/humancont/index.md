@@ -20,9 +20,8 @@ relatedRoutes:
   - "scoring-input/gphr/GHR"
   - "scoring-input/gphr/PHR"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/interpersonal/humancont/index.md"
 ---
 
 # 문서명: [해석/Interpersonal] Human Content
@@ -75,7 +74,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[부호화/GHR-PHR\] GHR](ref://scoring-input/gphr/GHR)
 - [\[부호화/GHR-PHR\] PHR](ref://scoring-input/gphr/PHR)
 - [\[해석/Self Perception\] H Ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
-
-## 근거 메모
-
-- 공식과 평균 범위 메모, `Hx` 제외 원칙은 provenance note에 분리했다.

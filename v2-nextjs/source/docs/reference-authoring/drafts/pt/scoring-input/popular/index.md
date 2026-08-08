@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/card"
   - "scoring-input/gphr/GHR"
   - "result-interpretation/lower-section/mediation/P"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-score-pair-popular-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Popular] Popular
@@ -53,7 +52,3 @@ Na codificação, `P` é atribuído quando a resposta corresponde a um popular d
 - [[Codificação/Cartões] Card](ref://scoring-input/card)
 - [[Codificação/GHR-PHR] GHR](ref://scoring-input/gphr/GHR)
 - [[Interpretação/Mediation] P](ref://result-interpretation/lower-section/mediation/P)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

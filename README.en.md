@@ -24,10 +24,10 @@ Each patch note records what changed, the conditions that may be affected, wheth
 
 - [Next.js] Live web app: [exner.yesucan.co.kr](https://exner.yesucan.co.kr)
 - [Next.js] Latest version 2 release: [v2-nextjs/releases/v2.2.10](./v2-nextjs/releases/v2.2.10/README.en.md)
-- [Next.js] v2.2.10 full reference audit and system boundaries: [v2-nextjs/methodology/reference-audit-v2.2.10](./v2-nextjs/methodology/reference-audit-v2.2.10/README.en.md)
+- [Next.js] v2.2.10 calculation sources and literature scope: [v2-nextjs/methodology/reference-audit-v2.2.10](./v2-nextjs/methodology/reference-audit-v2.2.10/README.en.md)
 - [Next.js] v2.2.10 Structural Summary primary-source cross-check: [v2-nextjs/source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md](./v2-nextjs/source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md)
 - [Next.js] v2.2.2 calculation accuracy recheck: [v2-nextjs/source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md](./v2-nextjs/source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md)
-- [Next.js] v2.2.2 Cn explanation and live GPT-5.5 checks in 5 languages: [v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md](./v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md)
+- [Next.js] v2.2.2 Cn explanation and 5-language answer-boundary checks: [v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md](./v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md)
 - [Next.js] v2.2.0 UI validation: [v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md](./v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md)
 - [Next.js] v2.2.0 AI scope validation: [v2-nextjs/source/docs/ai-evals/2026-07-15-v2.2.0-exner-domain-boundary-report.md](./v2-nextjs/source/docs/ai-evals/2026-07-15-v2.2.0-exner-domain-boundary-report.md)
 - [Next.js] v2.1.2 case study on controlling AI answers: [docs/case-studies/v2.1.2-ai-harness.md](./docs/case-studies/v2.1.2-ai-harness.md)
@@ -55,9 +55,9 @@ The connected work from v2.1.8 through v2.1.10 is documented across the correspo
 
 v2.2.10 restores the missing `GHR:PHR` ratio to the Lower Section on screen and in the PDF, following the original Structural Summary layout. It also simplifies ordinary Lower Section PDF tables and restores overall decision marks and dividers in the Special Indices cards. GHR and PHR were already classified and totaled, so existing protocols do not need to be recalculated.
 
-For this patch, the available materials were organized into 53 reference families and reviewed through their contents and relevant chapters. The calculation basis for the Exner Comprehensive System was checked again against the printed pages of Volume 1, 4th edition, and Workbook, 5th edition, covering the Upper Section, Lower Section, six Special Indices, and major input rules. R-PAS and other Rorschach systems were not mixed into the calculation basis; they were reviewed to identify places where similar terms carry different meanings. This review found no new defect that changes calculated results.
+For this patch, 50 published works were sorted by role—direct calculation sources, interpretive support, boundaries with other Rorschach systems, historical and research context, and materials outside the product's scope—and their contents and relevant chapters were reviewed. The calculation basis for the Exner Comprehensive System was checked again against the printed pages of Volume 1, 4th edition, and Workbook, 5th edition, covering the Upper Section, Lower Section, six Special Indices, and major input rules. R-PAS and other Rorschach systems were not mixed into the calculation basis; they were reviewed to identify places where similar terms carry different meanings. This review found no new defect that changes calculated results.
 
-The Interpersonal references in all five languages and all 5604 search vectors were refreshed. Checks that distinguish Exner Comprehensive System questions from other systems and from prompt-extraction attempts were also expanded. The publications, editions, printed pages, roles of each source, and remaining limitations are recorded in the [v2.2.10 patch note](./v2-nextjs/releases/v2.2.10/README.en.md), [full audit of 53 reference families and system boundaries](./v2-nextjs/methodology/reference-audit-v2.2.10/README.en.md), and [Structural Summary primary-source cross-check](./v2-nextjs/source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md).
+The Interpersonal references in all five languages now explain `GHR:PHR`. Answer boundaries were also strengthened so that rules from other Rorschach systems are not mixed into Exner Comprehensive System calculations. Publications, editions, printed pages, source roles, and remaining limitations are recorded in the [v2.2.10 patch note](./v2-nextjs/releases/v2.2.10/README.en.md), [calculation sources and literature scope](./v2-nextjs/methodology/reference-audit-v2.2.10/README.en.md), and [Structural Summary calculation-source cross-check](./v2-nextjs/source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md).
 
 ## v2.2.9
 
@@ -69,7 +69,7 @@ Structural Summary formulas and AI-answer rules are unchanged, so existing proto
 
 v2.2.8 is a bug-fix release that prevents the same Content code from being counted twice in one response and gives the desktop and mobile interfaces one shared set of response-cleanup rules. Sample data no longer overwrites an existing autosave, and final-edit saving and damaged-autosave validation are more robust.
 
-The Structural Summary formulas did not change. Existing protocols entered according to the rules do not need to be recalculated. Review the original material and recalculate only when a record contains a duplicate Content code in one response; desktop and mobile stored different cleanup results for Level 1 and Level 2 Special Scores; the mobile interface stored only formless determinants (`C`, `C'`, `T`, `V`, `Y`, or `Cn`) with an [FQ] value other than `none`; or an unsupported Z code or a Z score that does not belong to the card remains in the record. The S-CON documents and AI-answer rules now state all 12 criteria and the 8-criterion boundary in all five languages; no age field was added. OpenAI Codex and Claude Opus 5 each ran independent paid GPT-5.5 calls, and the record includes both one non-reproducing contract-check result and the follow-up checks. See the [v2.2.8 patch note](./v2-nextjs/releases/v2.2.8/README.en.md) for details.
+The Structural Summary formulas did not change. Existing protocols entered according to the rules do not need to be recalculated. Review the original material and recalculate only when a record contains a duplicate Content code in one response; desktop and mobile stored different cleanup results for Level 1 and Level 2 Special Scores; the mobile interface stored only formless determinants (`C`, `C'`, `T`, `V`, `Y`, or `Cn`) with an [FQ] value other than `none`; or an unsupported Z code or a Z score that does not belong to the card remains in the record. The S-CON documents and AI-answer rules now state all 12 criteria and the 8-criterion boundary in all five languages; no age field was added. See the [v2.2.8 patch note](./v2-nextjs/releases/v2.2.8/README.en.md) for details.
 
 ## v2.2.7
 
@@ -87,13 +87,13 @@ It also fixes cases in some Windows browsers where `Alt+mouse wheel` on the scor
 
 v2.2.5 separates movement determinant input for an individual response from the family totals shown in the Structural Summary. The scoring table no longer offers `M`, `FM`, or `m` without an active/passive suffix; complete codes such as `Ma`, `Mp`, and `Ma-p` are used instead. The `M`, `FM`, and `m` totals in the Structural Summary and calculations such as EB, MQual, and W:M remain unchanged.
 
-Existing protocols that already use complete codes do not need to be recalculated. If an older browser autosave contains a movement code without its active/passive suffix, the app preserves the original entry, stops calculation, and identifies the row and code that need review. The release rechecked the five-language reference documents, 5604 search vectors, 365 retrieval questions, and live GPT-5.5 boundary questions. See the [v2.2.5 patch note](./v2-nextjs/releases/v2.2.5/README.en.md) for the affected conditions and the hypothetical CDI boundary example.
+Existing protocols that already use complete codes do not need to be recalculated. If an older browser autosave contains a movement code without its active/passive suffix, the app preserves the original entry, stops calculation, and identifies the row and code that need review. The five-language references and answer boundaries were also rechecked. See the [v2.2.5 patch note](./v2-nextjs/releases/v2.2.5/README.en.md) for the affected conditions and the hypothetical CDI boundary example.
 
 ## v2.2.4
 
 v2.2.4 reorganized the human-readable reference documents and the material searched by the optional AI assistants without changing Structural Summary formulas or scoring-table input. Existing Structural Summary results do not need to be recalculated.
 
-Terminology and prose in all five languages were checked against professional target-language sources, and page titles and document order were aligned with the actual coding and interpretation sequence. The release refreshed 1015 reference documents and 5589 search vectors, with 0 missing, stale, or content-hash-mismatched vectors. It also strengthened the assistants' Exner CS scope, prompt-injection refusal, and request limits, and passed 66 live GPT-5.5 single-turn and multi-turn scenarios across all five languages. See the [v2.2.4 patch note](./v2-nextjs/releases/v2.2.4/) for details and public evidence.
+Terminology and prose in all five languages were checked against professional target-language sources, and page titles and document order were aligned with the actual coding and interpretation sequence. The release refreshed 1015 reference documents and strengthened the assistants' Exner CS scope, prompt-injection refusal, and request limits. See the [v2.2.4 patch note](./v2-nextjs/releases/v2.2.4/) for details.
 
 A follow-up also refined the scoring start-choice dialog, reference-document readability, and the coding assistant's scroll control.
 
@@ -107,19 +107,19 @@ The search and sharing title is `Yes, U Can!` in every language. The localized d
 
 v2.2.2 rechecked the calculations that include and exclude Cn. In the conventional display label `FC:CF+C`, the right-hand value is `CF+C+Cn`, while this app excludes Cn from WSumC, S-CON criterion 7, and Color-Shading calculations. **The displayed Cn value for completed protocols was already correct in v2.2.1, so this point alone does not require recalculation.** The patch also prevents an unfinished row with blank Form Quality (FQ) from being provisionally classified as GHR or PHR.
 
-The 2019 Excel workbook, the original RorScore program, v1 GAS, the current v2 code, CHESSSS, RAP3, and RIAP5 each cover different parts of the calculation, so no single source was treated as the sole answer. The release passed 376 calculation and feature checks, 101 AI-answer criteria, and 222 production-page builds. It also checked 10 direct Cn questions and 5 representative questions with live GPT-5.5 calls in all 5 languages. The only UI change was making the left sidebar fully opaque; mobile-specific refinement continues in later v2.2.x work.
+The 2019 Excel workbook, the original RorScore program, v1 GAS, the current v2 code, CHESSSS, RAP3, and RIAP5 each cover different parts of the calculation, so no single source was treated as the sole answer. Calculation, feature, answer-boundary, and deployment-page checks all passed. The only UI change was making the left sidebar fully opaque; mobile-specific refinement continues in later v2.2.x work.
 
 ## v2.2.1
 
 v2.2.1 corrected calculations in the **Upper Section, Lower Section, and Special Indices** displayed by the app without changing the UI/UX or adding input fields. It corrected extreme D/AdjD values, EBPer display conditions, the ordered GHR/PHR rules, denominator handling when WDA% or Afr equals 0, and the Cn-inclusive right-hand value of `FC:CF+C`.
 
-The release also disclosed for the first time the public location and role of the 2019 Excel workbook consulted during early v1 development. Verification included 25 calculations using the same codes with notes in different languages, 2000 repeatable synthetic protocols, and live GPT-5.5 coding and interpretation calls.
+The release also disclosed for the first time the public location and role of the 2019 Excel workbook consulted during early v1 development. Verification included calculations using the same codes with notes in different languages and repeatable synthetic protocols.
 
 ## v2.2.0
 
 v2.2.0 is the first v2.2.x release to gather the main desktop navigation in a left sidebar and reshape the interpretation assistant as a conventional AI conversation view. It also organized answer stopping, message copying and feedback, conversation scrolling, reference documents, the version archive, and scoring-table zooming and panning.
 
-The GPT-5.5 assistants were restricted from expanding beyond the Exner Comprehensive System, and their behavior was checked with live Korean, Japanese, and English API calls. Calculation items identified during the v2.2.0 review were corrected in v2.2.1 and v2.2.2. Use v2.2.0 for the UI/UX record and the v2.2.2 calculation report for the current calculation basis. Mobile screens are refined separately in later v2.2.x work.
+The AI assistants were restricted from expanding beyond the Exner Comprehensive System. Calculation items identified during the v2.2.0 review were corrected in v2.2.1 and v2.2.2. Use v2.2.0 for the UI/UX record and the v2.2.2 calculation report for the current calculation basis. Mobile screens are refined separately in later v2.2.x work.
 
 ## [Next.js] Version 2 release history
 
@@ -157,8 +157,6 @@ The GPT-5.5 assistants were restricted from expanding beyond the Exner Comprehen
 2. Install dependencies with `npm install`.
 3. Create a local environment file from `.env.example`.
 4. Check the app with `npm run build` or `npm run dev`.
-
-The public repository does not include production environment variables, Vercel settings, local logs, caches, private work notes, API keys, raw model answers, or private assessment payloads.
 
 </details>
 

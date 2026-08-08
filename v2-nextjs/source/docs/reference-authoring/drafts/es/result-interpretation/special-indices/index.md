@@ -19,9 +19,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation"
   - "result-interpretation/lower-section/affect"
   - "result-interpretation/lower-section/interpersonal"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/special-indices/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Índices Especiales] Índices Especiales
@@ -76,7 +75,3 @@ Cada índice no reemplaza la interpretación clínica; funciona como una pantall
 - [[Interpretación/Lower Section/Ideación] Ideación](ref://result-interpretation/lower-section/ideation)
 - [[Interpretación/Lower Section/Affect] Affect](ref://result-interpretation/lower-section/affect)
 - [[Interpretación/Lower Section/Interpersonal] Interpersonal](ref://result-interpretation/lower-section/interpersonal)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

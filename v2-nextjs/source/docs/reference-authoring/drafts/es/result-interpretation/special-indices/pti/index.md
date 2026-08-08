@@ -15,9 +15,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/M_minus"
   - "result-interpretation/lower-section/mediation/X_minus_percent"
   - "result-interpretation/lower-section/mediation/XA_percent"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/special-indices/pti/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Índices Especiales] PTI
@@ -67,7 +66,3 @@ Su función es actuar como alerta para revisar si hay distorsión de la realidad
 - [[Interpretación/Ideación] M-](ref://result-interpretation/lower-section/ideation/M_minus)
 - [[Interpretación/Mediation] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
 - [[Interpretación/Mediation] XA%](ref://result-interpretation/lower-section/mediation/XA_percent)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/special-score/COP"
   - "scoring-input/special-score/AG"
   - "result-interpretation/lower-section/ideation/M_minus"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/determinants/m--4d/index.md"
 ---
 
 # Nombre del documento: [Codificación/Determinantes] M
@@ -60,8 +59,3 @@ En una respuesta se registra un solo código de movimiento humano. Si distintas 
 - [[Codificación/Códigos especiales] COP](ref://scoring-input/special-score/COP)
 - [[Codificación/Códigos especiales] AG](ref://scoring-input/special-score/AG)
 - [[Interpretación/Ideation] M-](ref://result-interpretation/lower-section/ideation/M_minus)
-
-## Nota de fundamento
-
-- La justificación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

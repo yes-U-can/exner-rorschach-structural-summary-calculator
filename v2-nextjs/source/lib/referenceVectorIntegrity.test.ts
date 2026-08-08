@@ -12,7 +12,7 @@ const chunk = {
   text: 'Current corpus text',
   aliases: ['FQ'],
   relatedRoutes: [],
-  authorityPolicy: 'curated-internal-reference',
+  authorityPolicy: 'curated-reference',
   evidenceTier: null,
   status: 'reviewed',
   runtimeReady: true,

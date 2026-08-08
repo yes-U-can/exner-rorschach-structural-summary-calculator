@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/gphr/GHR"
   - "scoring-input/gphr/PHR"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Content] (H)
@@ -57,7 +56,3 @@ It is still a whole human figure, but not an ordinary realistic person.
 - [[Coding/GHR-PHR] GHR](ref://scoring-input/gphr/GHR)
 - [[Coding/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
 - [[Interpretation/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

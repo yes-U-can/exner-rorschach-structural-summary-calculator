@@ -22,9 +22,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/R"
   - "result-interpretation/special-indices/CDI"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/interpersonal/iso-index/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Interpersonal] Isolation Index
@@ -81,7 +80,3 @@ En interpretación ayuda a estimar cuánto se organiza el protocolo alrededor de
 - [[Interpretación/Core] R](ref://result-interpretation/lower-section/core/R)
 - [[Interpretación/Índices Especiales] CDI](ref://result-interpretation/special-indices/CDI)
 - [[Interpretación/Índices Especiales] DEPI](ref://result-interpretation/special-indices/DEPI)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

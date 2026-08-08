@@ -18,9 +18,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/EB"
   - "result-interpretation/lower-section/core/m"
   - "result-interpretation/lower-section/core/SumY"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/core/d/index.md"
 ---
 
 # 문서명: [해석/Core] D
@@ -74,7 +73,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[해석/Core\] EB](ref://result-interpretation/lower-section/core/EB)
 - [\[해석/Core\] m](ref://result-interpretation/lower-section/core/m)
 - [\[해석/Core\] SumY](ref://result-interpretation/lower-section/core/SumY)
-
-## 근거 메모
-
-- `D`의 계산 원리와 예외 메모는 provenance note에 분리했다.

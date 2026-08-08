@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/location/S"
   - "scoring-input/location/DdS"
   - "result-interpretation/upper-section/S"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/location/ds/index.md"
 ---
 
 # Nombre del documento: [Codificación/Localización] DS
@@ -49,7 +48,3 @@ El blanco debe cumplir una función específica, no solo aparecer dentro del ár
 - [[Codificación/Localización] S](ref://scoring-input/location/S)
 - [[Codificación/Localización] DdS](ref://scoring-input/location/DdS)
 - [[Interpretación/Upper Section] S](ref://result-interpretation/upper-section/S)
-
-## Nota de fundamento
-
-- La provenance interna conserva las condiciones para distinguir uso real de espacio blanco de simple señalamiento.

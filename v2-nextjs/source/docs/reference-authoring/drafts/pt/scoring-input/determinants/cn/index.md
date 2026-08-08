@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/determinants/CF"
   - "scoring-input/determinants/C"
   - "result-interpretation/lower-section/affect/FC_CF_C"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-determinants-cn-achromatic-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Determinantes] Cn
@@ -54,7 +53,3 @@ Por isso `Cn` não pertence a família completa `C / CF / FC` como código pleno
 - [[Codificação/Determinantes] CF](ref://scoring-input/determinants/CF)
 - [[Codificação/Determinantes] C](ref://scoring-input/determinants/C)
 - [[Interpretação/Affect] FC:CF+C](ref://result-interpretation/lower-section/affect/FC_CF_C)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

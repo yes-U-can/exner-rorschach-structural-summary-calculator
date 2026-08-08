@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/contents/(H)"
   - "scoring-input/contents/A"
   - "scoring-input/contents/Art"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Content] Ay
@@ -54,7 +53,3 @@ It is not enough to see a person or object; the response has to carry a recogniz
 - [[Coding/Content] (H)](ref://scoring-input/contents/%28H%29)
 - [[Coding/Content] A](ref://scoring-input/contents/A)
 - [[Coding/Content] Art](ref://scoring-input/contents/Art)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/determinants/Y"
   - "result-interpretation/lower-section/core/SumT"
   - "result-interpretation/lower-section/interpersonal/SumT_inter"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/determinants/ft/index.md"
 ---
 
 # Nombre del documento: [Codificación/Determinantes] FT
@@ -59,8 +58,3 @@ La impresión táctil o de superficie está presente, pero la respuesta sigue ap
 - [[Codificación/Determinantes] Y](ref://scoring-input/determinants/Y)
 - [[Interpretación/Core] SumT](ref://result-interpretation/lower-section/core/SumT)
 - [[Interpretación/Interpersonal] SumT](ref://result-interpretation/lower-section/interpersonal/SumT_inter)
-
-## Nota de fundamento
-
-- La justificación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

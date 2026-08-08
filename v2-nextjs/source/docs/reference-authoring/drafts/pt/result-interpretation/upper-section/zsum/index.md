@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/ZEst"
   - "result-interpretation/upper-section/Zd"
   - "scoring-input/z"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-upper-section-family-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Seção Superior] ZSum
@@ -52,7 +51,3 @@ Ele reflete não apenas com que frequência a organização foi tentada, mas tam
 - [[Interpretação/Seção Superior] ZEst](ref://result-interpretation/upper-section/ZEst)
 - [[Interpretação/Seção Superior] Zd](ref://result-interpretation/upper-section/Zd)
 - [[Codificação/Z] Z](ref://scoring-input/z)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

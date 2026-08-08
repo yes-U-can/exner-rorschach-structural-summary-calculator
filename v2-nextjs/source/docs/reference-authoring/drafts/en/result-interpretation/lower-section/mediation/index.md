@@ -21,9 +21,8 @@ relatedRoutes:
   - "scoring-input/fq"
   - "scoring-input/popular"
   - "scoring-input/location/S"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Lower Section/Mediation] Mediation
@@ -66,7 +65,3 @@ This section focuses on adequacy, unusualness, and the degree to which perceptio
 - [[Coding/FQ] FQ](ref://scoring-input/fq)
 - [[Coding/Popular] Popular](ref://scoring-input/popular)
 - [[Coding/Location] S](ref://scoring-input/location/S)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

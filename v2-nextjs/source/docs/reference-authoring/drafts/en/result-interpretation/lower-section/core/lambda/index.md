@@ -17,9 +17,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/processing/W_M"
   - "scoring-input/fq"
   - "scoring-input/determinants/F"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Core] Lambda
@@ -57,7 +56,3 @@ In interpretation it is used as an indicator of how much the protocol simplifies
 - [[Interpretation/Processing] W:M](ref://result-interpretation/lower-section/processing/W_M)
 - [[Coding/FQ] FQ](ref://scoring-input/fq)
 - [[Coding/Determinants] F](ref://scoring-input/determinants/F)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

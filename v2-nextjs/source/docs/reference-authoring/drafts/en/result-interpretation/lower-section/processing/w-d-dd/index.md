@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/location/W"
   - "scoring-input/location/D"
   - "scoring-input/location/Dd"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Processing] W:D:Dd
@@ -58,7 +57,3 @@ In processing, it is used to see whether the person tends to take in the whole f
 - [[Coding/Location] W](ref://scoring-input/location/W)
 - [[Coding/Location] D](ref://scoring-input/location/D)
 - [[Coding/Location] Dd](ref://scoring-input/location/Dd)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

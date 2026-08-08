@@ -19,9 +19,8 @@ relatedRoutes:
   - "scoring-input/gphr/GHR"
   - "scoring-input/gphr/PHR"
   - "result-interpretation/lower-section/interpersonal/ISO_Index"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Interpersonal] COP
@@ -73,7 +72,3 @@ In interpretation, it works as a clue to how easily relatedness is imagined in t
 - [[Coding/GHR-PHR] GHR](ref://scoring-input/gphr/GHR)
 - [[Coding/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
 - [[Interpretation/Interpersonal] Isolation Index](ref://result-interpretation/lower-section/interpersonal/ISO_Index)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

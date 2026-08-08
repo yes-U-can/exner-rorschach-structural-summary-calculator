@@ -27,9 +27,8 @@ relatedRoutes:
   - "scoring-input/determinants/T"
   - "scoring-input/determinants/V"
   - "scoring-input/determinants/Y"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-core-eb-family-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Core] eb
@@ -78,7 +77,3 @@ Ela descreve a composição da demanda atual: se a sobrecarga pesa mais por tens
 - [[Codificação/Determinantes] T](ref://scoring-input/determinants/T)
 - [[Codificação/Determinantes] V](ref://scoring-input/determinants/V)
 - [[Codificação/Determinantes] Y](ref://scoring-input/determinants/Y)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

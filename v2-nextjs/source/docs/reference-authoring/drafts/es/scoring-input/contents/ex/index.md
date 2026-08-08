@@ -11,9 +11,8 @@ aliases:
 relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/Fi"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/contents/ex/index.md"
 ---
 
 # Nombre del documento: [Codificación/Contenido] Ex
@@ -45,8 +44,3 @@ Lo central es el evento de estallido, no solo el humo o el brillo.
 
 - [[Codificación/Contenido] Contents](ref://scoring-input/contents)
 - [[Codificación/Contenido] Fi](ref://scoring-input/contents/Fi)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

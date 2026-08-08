@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/contents/Ay"
   - "result-interpretation/lower-section/ideation/MOR"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/ideation/2ab-art-ay/index.md"
 ---
 
 # 문서명: [해석/Ideation] 2AB+Art+Ay
@@ -65,7 +64,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[부호화/내용\] Ay](ref://scoring-input/contents/Ay)
 - [\[해석/Ideation\] MOR](ref://result-interpretation/lower-section/ideation/MOR)
 - [\[해석/Special Indices\] DEPI](ref://result-interpretation/special-indices/DEPI)
-
-## 근거 메모
-
-- 상세 출처와 절단값 메모는 provenance note에 분리했다.

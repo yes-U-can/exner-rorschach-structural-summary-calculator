@@ -19,9 +19,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation"
   - "result-interpretation/lower-section/affect"
   - "result-interpretation/lower-section/interpersonal"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Nome do documento: [Interpretação/Índices Especiais] Índices Especiais
@@ -76,7 +75,3 @@ Cada índice não substitui a interpretação clínica; ele funciona como triage
 - [[Interpretação/Seção Inferior/Ideação] Ideação](ref://result-interpretation/lower-section/ideation)
 - [[Interpretação/Seção Inferior/Afeto] Afeto](ref://result-interpretation/lower-section/affect)
 - [[Interpretação/Seção Inferior/Interpessoal] Interpessoal](ref://result-interpretation/lower-section/interpersonal)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

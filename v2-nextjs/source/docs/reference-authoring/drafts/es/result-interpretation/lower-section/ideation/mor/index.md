@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/_2AB_Art_Ay"
   - "result-interpretation/lower-section/selfPerception/MOR_self"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/ideation/mor/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Ideación] MOR
@@ -65,7 +64,3 @@ En la zona de ideación se usa para ver cuán tenido queda el contenido mental p
 - [[Interpretación/Ideación] 2AB+Art+Ay](ref://result-interpretation/lower-section/ideation/_2AB_Art_Ay)
 - [[Interpretación/Self Perception] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
 - [[Interpretación/Índices Especiales] DEPI](ref://result-interpretation/special-indices/DEPI)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

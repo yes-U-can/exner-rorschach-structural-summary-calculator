@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/Sum6"
   - "result-interpretation/lower-section/ideation/Lv2"
   - "result-interpretation/lower-section/ideation/WSum6"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Special Scores] FABCOM2
@@ -57,7 +56,3 @@ It is used when the organization of the response is distorted by a very improbab
 - [[Interpretation/Ideation] Sum6](ref://result-interpretation/lower-section/ideation/Sum6)
 - [[Interpretation/Ideation] Lv2](ref://result-interpretation/lower-section/ideation/Lv2)
 - [[Interpretation/Ideation] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

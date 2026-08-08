@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/M_minus"
   - "scoring-input/determinants/M"
   - "result-interpretation/special-indices/SCON"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-ideation-wsum6-mminus-mnone-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Ideação] Mnone
@@ -51,7 +50,3 @@ Na interpretação, ele sugere fantasia humana presente, mas fracamente estrutur
 - [[Interpretação/Ideação] M-](ref://result-interpretation/lower-section/ideation/M_minus)
 - [[Codificação/Determinantes] M](ref://scoring-input/determinants/M)
 - [[Interpretação/Índices Especiais] SCON](ref://result-interpretation/special-indices/SCON)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

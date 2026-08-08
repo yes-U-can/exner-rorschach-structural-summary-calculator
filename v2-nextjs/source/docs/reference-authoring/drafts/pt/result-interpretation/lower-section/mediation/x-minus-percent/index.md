@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/fq/-"
   - "result-interpretation/lower-section/ideation/WSum6"
   - "result-interpretation/special-indices/PTI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-mediation-opening-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Mediação] X-%
@@ -53,7 +52,3 @@ Na mediação, funciona como um sinal central de distância perceptiva em relaç
 - [[Codificação/FQ] -](ref://scoring-input/fq/-)
 - [[Interpretação/Ideação] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
 - [[Interpretação/Índices Especiais] PTI](ref://result-interpretation/special-indices/PTI)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

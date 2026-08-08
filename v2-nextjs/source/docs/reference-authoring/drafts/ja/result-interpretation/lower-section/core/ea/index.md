@@ -23,9 +23,8 @@ relatedRoutes:
   - "scoring-input/determinants/FC"
   - "scoring-input/determinants/CF"
   - "scoring-input/determinants/C"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-core-eb-family-2026-03-10.md"
 ---
 
 # [Interpretation/Core] EA
@@ -70,7 +69,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-core-eb-family-202
 - [[Coding/決定因] FC](ref://scoring-input/determinants/FC)
 - [[Coding/決定因] CF](ref://scoring-input/determinants/CF)
 - [[Coding/決定因] C](ref://scoring-input/determinants/C)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

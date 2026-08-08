@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/special-score/AG"
   - "result-interpretation/special-indices/DEPI"
   - "result-interpretation/special-indices/HVI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/affect/s-aff/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Afecto] S
@@ -69,7 +68,3 @@ Se revisa como una señal posible de oposición, autoafirmación, tensión o dis
 - [[Codificación/Códigos Especiales] AG](ref://scoring-input/special-score/AG)
 - [[Interpretación/Índices Especiales] DEPI](ref://result-interpretation/special-indices/DEPI)
 - [[Interpretación/Índices Especiales] HVI](ref://result-interpretation/special-indices/HVI)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

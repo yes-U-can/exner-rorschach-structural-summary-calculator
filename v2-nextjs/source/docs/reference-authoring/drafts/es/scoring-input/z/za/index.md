@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/dq/v/+"
   - "scoring-input/dq/o"
   - "result-interpretation/upper-section/Zf"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/z/za/index.md"
 ---
 
 # Nombre del documento: [Codificación/Z] ZA
@@ -53,7 +52,3 @@ La organización se apoya en unir partes contiguas del blot.
 - [[Codificación/Calidad evolutiva] +](ref://scoring-input/dq/%2B)
 - [[Codificación/Calidad evolutiva] v/+](ref://scoring-input/dq/v/%2B)
 - [[Codificación/Calidad evolutiva] o](ref://scoring-input/dq/o)
-
-## Nota de fundamento
-
-- La provenance interna conserva la distinción entre relación significativa y simple enumeración.

@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/location/DdS"
   - "result-interpretation/upper-section/S"
   - "result-interpretation/lower-section/mediation/S_minus"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # [コーディング/場所] S
@@ -52,7 +51,3 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 - [[コーディング/場所] DdS](ref://scoring-input/location/DdS)
 - [[解釈/上段] S](ref://result-interpretation/upper-section/S)
 - [[解釈/媒介] S-%](ref://result-interpretation/lower-section/mediation/S_minus)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

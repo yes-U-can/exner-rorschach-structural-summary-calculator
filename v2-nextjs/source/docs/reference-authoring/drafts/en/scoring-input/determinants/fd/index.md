@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/determinants/FV"
   - "scoring-input/determinants/V"
   - "result-interpretation/lower-section/selfPerception/FD"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Determinants] FD
@@ -53,7 +52,3 @@ The person organizes the third dimension from relative size, position, or formal
 - [[Coding/Determinants] FV](ref://scoring-input/determinants/FV)
 - [[Coding/Determinants] V](ref://scoring-input/determinants/V)
 - [[Interpretation/Self Perception] FD](ref://result-interpretation/lower-section/selfPerception/FD)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

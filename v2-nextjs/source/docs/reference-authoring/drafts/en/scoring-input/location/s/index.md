@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/location/DdS"
   - "result-interpretation/upper-section/S"
   - "result-interpretation/lower-section/mediation/S_minus"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Location] S
@@ -52,7 +51,3 @@ It is not a stand-alone basic location code; it modifies another location decisi
 - [[Coding/Location] DdS](ref://scoring-input/location/DdS)
 - [[Interpretation/Upper Section] S](ref://result-interpretation/upper-section/S)
 - [[Interpretation/Mediation] S-%](ref://result-interpretation/lower-section/mediation/S_minus)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

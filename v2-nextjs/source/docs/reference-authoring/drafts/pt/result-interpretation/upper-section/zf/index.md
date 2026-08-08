@@ -15,9 +15,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/Zd"
   - "scoring-input/z"
   - "result-interpretation/lower-section/processing/Zf_proc"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-upper-section-family-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Seção Superior] Zf
@@ -54,7 +53,3 @@ Ela mostra com que frequência a pessoa tenta organizar relações entre partes 
 - [[Interpretação/Seção Superior] Zd](ref://result-interpretation/upper-section/Zd)
 - [[Codificação/Z] Z](ref://scoring-input/z)
 - [[Interpretação/Processing] Zf](ref://result-interpretation/lower-section/processing/Zf_proc)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

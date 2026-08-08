@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/determinants/V"
   - "scoring-input/determinants/T"
   - "result-interpretation/lower-section/core/SumY"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/determinants/y/index.md"
 ---
 
 # Nombre del documento: [Codificación/Determinantes] Y
@@ -55,8 +54,3 @@ La impresión dominante es vaga, sombreada o nebulosa y la forma no organiza rea
 - [[Codificación/Determinantes] V](ref://scoring-input/determinants/V)
 - [[Codificación/Determinantes] T](ref://scoring-input/determinants/T)
 - [[Interpretación/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
-
-## Nota de fundamento
-
-- La justificación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

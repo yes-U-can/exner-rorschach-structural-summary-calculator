@@ -24,9 +24,8 @@ relatedRoutes:
   - "scoring-input/special-score/FABCOM2"
   - "scoring-input/special-score/ALOG"
   - "scoring-input/special-score/CONTAM"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-ideation-2ab-mor-sum6-2026-03-10.md"
 ---
 
 # [Interpretation/Ideation] Sum6
@@ -72,6 +71,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-ideation-2ab-mor-s
 - [[Coding/Special Score] FABCOM2](ref://scoring-input/special-score/FABCOM2)
 - [[Coding/Special Score] ALOG](ref://scoring-input/special-score/ALOG)
 - [[Coding/Special Score] CONTAM](ref://scoring-input/special-score/CONTAM)
-
-## 根拠メモ
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

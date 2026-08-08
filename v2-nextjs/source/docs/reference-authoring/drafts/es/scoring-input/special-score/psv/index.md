@@ -11,9 +11,8 @@ aliases:
 relatedRoutes:
   - "scoring-input/special-score"
   - "result-interpretation/lower-section/processing/PSV"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/special-score/psv/index.md"
 ---
 
 # Nombre del documento: [Codificación/Puntuaciones especiales] PSV
@@ -46,8 +45,3 @@ No se refiere a simple consistencia; apunta a repetición estereotipada o mecán
 
 - [[Codificación/Puntuaciones especiales] Códigos Especiales](ref://scoring-input/special-score)
 - [[Interpretación/Processing] PSV](ref://result-interpretation/lower-section/processing/PSV)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

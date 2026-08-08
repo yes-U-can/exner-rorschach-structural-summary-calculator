@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/contents/Art"
   - "scoring-input/contents/Ay"
   - "result-interpretation/lower-section/ideation/_2AB_Art_Ay"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-special-score-ab-psv-per-cp-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Códigos Especiais] AB
@@ -52,7 +51,3 @@ O ponto principal é que a pessoa nomeia uma abstração ou qualidade ampla, em 
 - [[Codificação/Conteúdo] Art](ref://scoring-input/contents/Art)
 - [[Codificação/Conteúdo] Ay](ref://scoring-input/contents/Ay)
 - [[Interpretação/Ideation] 2AB + Art + Ay](ref://result-interpretation/lower-section/ideation/_2AB_Art_Ay)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

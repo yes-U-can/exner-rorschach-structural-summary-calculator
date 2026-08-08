@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/processing/DQ_v_proc"
   - "scoring-input/dq/+"
   - "scoring-input/dq/v/+"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Processing] DQ+
@@ -63,7 +62,3 @@ In interpretation, it is used as a sign of capacity to structure percepts in a c
 - [[Interpretation/Processing] DQv](ref://result-interpretation/lower-section/processing/DQ_v_proc)
 - [[Coding/DQ] +](ref://scoring-input/dq/%2B)
 - [[Coding/DQ] v/+](ref://scoring-input/dq/v/%2B)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

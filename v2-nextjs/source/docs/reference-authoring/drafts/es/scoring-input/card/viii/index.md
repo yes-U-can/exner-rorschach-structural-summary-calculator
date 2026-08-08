@@ -18,9 +18,8 @@ relatedRoutes:
   - "scoring-input/determinants/CF"
   - "scoring-input/determinants/C"
   - "scoring-input/z"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/card/viii/index.md"
 ---
 
 # Nombre del documento: [Codificación/Láminas] VIII
@@ -60,8 +59,3 @@ La página resume esos focos de codificación.
 - [[Codificación/Determinantes] CF](ref://scoring-input/determinants/CF)
 - [[Codificación/Determinantes] C](ref://scoring-input/determinants/C)
 - [[Codificación/Z] Z](ref://scoring-input/z)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

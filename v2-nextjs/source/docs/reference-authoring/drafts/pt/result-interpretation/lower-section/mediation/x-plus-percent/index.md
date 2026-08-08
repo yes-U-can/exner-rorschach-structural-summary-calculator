@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/mediation/X_minus_percent"
   - "scoring-input/fq/+"
   - "scoring-input/popular"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-mediation-xplus-xu-processing-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Mediação] X+%
@@ -55,7 +54,3 @@ Ele resume o quanto a mediação permanece alinhada com leituras comuns da manch
 - [[Interpretação/Mediação] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
 - [[Codificação/FQ] +](ref://scoring-input/fq/%2B)
 - [[Codificação/Popular] Popular](ref://scoring-input/popular)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

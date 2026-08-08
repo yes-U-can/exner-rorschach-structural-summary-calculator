@@ -17,9 +17,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/affect/S_aff"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/special-indices/hvi/index.md"
 ---
 
 # 문서명: [해석/특수지표] HVI
@@ -71,7 +70,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[해석/정서\] S](ref://result-interpretation/lower-section/affect/S_aff)
 - [\[해석/자기지각\] H 비율](ref://result-interpretation/lower-section/selfPerception/H_ratio)
 - [\[해석/대인관계\] 인간내용](ref://result-interpretation/lower-section/interpersonal/HumanCont)
-
-## 근거 메모
-
-- 상세 검토 기록은 내부 검증 노트에서 관리한다.

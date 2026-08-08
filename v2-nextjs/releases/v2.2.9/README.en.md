@@ -49,12 +49,12 @@ No. This release does not change Structural Summary formulas, available input co
 - Automated checks also cover the selected feedback appearance, saving a rating with no reasons, and deleting the stored rating when the same button is pressed again.
 - TypeScript validation and static analysis of the changed files passed.
 
-Paid API calls were not run because this release does not change OpenAI response-generation behavior.
+This release does not change answer-generation behavior, so the existing answer-boundary checks remain applicable.
 
 ## Scope confirmed unchanged
 
 - Structural Summary formulas and result fields are unchanged.
-- Reference documents, vector embeddings, AI system prompts, and playbooks are unchanged.
+- Reference documents and the Coding and Interpretation Assistant response rules are unchanged.
 - The existing policy of not storing scoring data or OpenAI API keys in the server database remains in place.
 
 ## Technical appendix

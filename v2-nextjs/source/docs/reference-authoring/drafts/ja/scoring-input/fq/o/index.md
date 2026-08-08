@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/fq/u"
   - "scoring-input/fq/-"
   - "scoring-input/dq/o"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # [コーディング/形態水準] o
@@ -50,7 +49,3 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 - [[コーディング/形態水準] u](ref://scoring-input/fq/u)
 - [[コーディング/形態水準] -](ref://scoring-input/fq/-)
 - [[コーディング/発達水準] o](ref://scoring-input/dq/o)
-
-## 根拠メモ
-
-- 詳細な出典比較は内部 provenance note に記録します。

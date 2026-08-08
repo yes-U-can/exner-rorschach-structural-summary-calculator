@@ -15,9 +15,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/R"
   - "result-interpretation/lower-section/core/Lambda"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-affect-s-blends-cp-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Afeto] Blends:R
@@ -53,7 +52,3 @@ Em afeto, ajuda a estimar quanta complexidade e mistura de estados emocionais ap
 - [[Interpretação/Core] R](ref://result-interpretation/lower-section/core/R)
 - [[Interpretação/Core] Lambda](ref://result-interpretation/lower-section/core/Lambda)
 - [[Interpretação/Índices Especiais] DEPI](ref://result-interpretation/special-indices/DEPI)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

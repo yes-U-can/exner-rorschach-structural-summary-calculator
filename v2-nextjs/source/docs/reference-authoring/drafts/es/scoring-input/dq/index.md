@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/fq/+"
   - "result-interpretation/lower-section/processing/DQ_plus_proc"
   - "result-interpretation/lower-section/processing/DQ_v_proc"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/dq/index.md"
 ---
 
 # Nombre del documento: [Codificación/Calidad evolutiva] DQ
@@ -63,8 +62,3 @@ No indica si la forma está bien ajustada; indica si la respuesta integra objeto
 - [[Codificación/Calidad formal] +](ref://scoring-input/fq/%2B)
 - [[Interpretación/Processing] DQ+](ref://result-interpretation/lower-section/processing/DQ_plus_proc)
 - [[Interpretación/Processing] DQv](ref://result-interpretation/lower-section/processing/DQ_v_proc)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la nota interna de provenance.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

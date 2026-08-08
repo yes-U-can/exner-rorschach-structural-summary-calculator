@@ -21,9 +21,8 @@ relatedRoutes:
   - "scoring-input/determinants/CF"
   - "scoring-input/determinants/C"
   - "scoring-input/determinants/Cn"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/affect/sumc-wsumc/index.md"
 ---
 
 # [해석/Affect] SumC / WSumC
@@ -64,7 +63,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `EB`
 - `EA`
 - `SumCprime`
-
-## 근거 메모
-
-- 가중치 공식과 `Cn` 제외 메모는 provenance note에 분리했다.

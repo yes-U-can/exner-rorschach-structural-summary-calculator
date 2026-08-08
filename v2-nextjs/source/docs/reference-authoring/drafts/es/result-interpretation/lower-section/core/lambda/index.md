@@ -17,9 +17,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/processing/W_M"
   - "scoring-input/fq"
   - "scoring-input/determinants/F"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/core/lambda/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Core] Lambda
@@ -71,7 +70,3 @@ En interpretación se usa como indicador del grado en que el protocolo simplific
 - [[Interpretación/Processing] W:M](ref://result-interpretation/lower-section/processing/W_M)
 - [[Codificación/Calidad formal] FQ](ref://scoring-input/fq)
 - [[Codificación/Determinantes] F](ref://scoring-input/determinants/F)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

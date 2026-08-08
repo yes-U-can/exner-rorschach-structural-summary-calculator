@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/special-score/COP"
   - "scoring-input/special-score/AG"
   - "result-interpretation/lower-section/core/FM"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/determinants/fm/index.md"
 ---
 
 # Nombre del documento: [Codificación/Determinantes] FM
@@ -58,8 +57,3 @@ En una respuesta se registra un solo código de movimiento animal. Si distintos 
 - [[Codificación/Códigos especiales] COP](ref://scoring-input/special-score/COP)
 - [[Codificación/Códigos especiales] AG](ref://scoring-input/special-score/AG)
 - [[Interpretación/Core] FM](ref://result-interpretation/lower-section/core/FM)
-
-## Nota de fundamento
-
-- La justificación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

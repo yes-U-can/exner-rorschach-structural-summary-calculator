@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/special-score/COP"
   - "scoring-input/special-score/AG"
   - "scoring-input/popular"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-card-i-v-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Cartões] III
@@ -58,7 +57,3 @@ Esta página funciona como lembrete de codificação para conteúdo humano, movi
 - [[Codificação/Códigos Especiais] COP](ref://scoring-input/special-score/COP)
 - [[Codificação/Códigos Especiais] AG](ref://scoring-input/special-score/AG)
 - [[Codificação/Popular] Popular](ref://scoring-input/popular)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/determinants/YF"
   - "scoring-input/determinants/Y"
   - "result-interpretation/lower-section/affect/CP"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/special-score/cp/index.md"
 ---
 
 # [부호화/특수점수] CP
@@ -56,8 +55,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/spec
 - [scoring-input/determinants/YF](ref://scoring-input%2Fdeterminants%2FYF)
 - [scoring-input/determinants/Y](ref://scoring-input%2Fdeterminants%2FY)
 - [result-interpretation/lower-section/affect/CP](ref://result-interpretation%2Flower-section%2Faffect%2FCP)
-
-## 근거 메모
-
-- 상세 근거와 source 충돌 메모는 provenance note에 분리해 둔다.
-- 공개용 본문에는 저작권 자료명을 직접 노출하지 않는다.

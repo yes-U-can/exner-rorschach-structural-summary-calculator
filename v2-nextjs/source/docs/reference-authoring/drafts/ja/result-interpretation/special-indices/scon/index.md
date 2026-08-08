@@ -17,9 +17,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/selfPerception/SumV_self"
   - "result-interpretation/lower-section/selfPerception/MOR_self"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-indices-2026-03-10.md"
 ---
 
 # 文書名: [解釈/特殊指標] S-CON
@@ -74,7 +73,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-indices-20
 - [[解釈/自己知覚] SumV](ref://result-interpretation/lower-section/selfPerception/SumV_self)
 - [[解釈/自己知覚] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
 - [[解釈/特殊指標] DEPI](ref://result-interpretation/special-indices/DEPI)
-
-## 根拠メモ
-
-- 詳細な検討記録は内部の検証ノートで管理します。

@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/contents/Art"
   - "scoring-input/contents/Cg"
   - "scoring-input/contents/H"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-completion-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Conteúdo] Ay
@@ -50,7 +49,3 @@ O foco deve cair na marca cultural do objeto ou da figura, não apenas em sua fo
 - [[Codificação/Conteúdo] Art](ref://scoring-input/contents/Art)
 - [[Codificação/Conteúdo] Cg](ref://scoring-input/contents/Cg)
 - [[Codificação/Conteúdo] H](ref://scoring-input/contents/H)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

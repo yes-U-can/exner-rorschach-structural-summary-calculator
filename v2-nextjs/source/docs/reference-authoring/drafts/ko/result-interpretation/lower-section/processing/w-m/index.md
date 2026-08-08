@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/W"
   - "scoring-input/determinants/M"
   - "result-interpretation/lower-section/ideation/Ma_Mp"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/processing/w-m/index.md"
 ---
 
 # [해석/Processing] W:M
@@ -56,7 +55,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `Ma:Mp`
 - `AdjD`
 - `3r+(2)/R`
-
-## 근거 메모
-
-- W-heavy disproportion과 aspiration 관련 사례 메모는 provenance note에 분리했다.

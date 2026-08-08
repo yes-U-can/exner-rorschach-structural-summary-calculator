@@ -21,9 +21,8 @@ relatedRoutes:
   - "scoring-input/determinants/CF"
   - "scoring-input/determinants/C"
   - "scoring-input/determinants/Cn"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/affect/sumc-wsumc/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Afecto] SumC / WSumC
@@ -79,7 +78,3 @@ En interpretación, `WSumC` suele ser más útil porque refleja no solo cuántas
 - [[Codificación/Determinantes] CF](ref://scoring-input/determinants/CF)
 - [[Codificación/Determinantes] C](ref://scoring-input/determinants/C)
 - [[Codificación/Determinantes] Cn](ref://scoring-input/determinants/Cn)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

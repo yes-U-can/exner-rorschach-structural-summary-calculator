@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/contents/An"
   - "scoring-input/contents/Xy"
   - "result-interpretation/special-indices/HVI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-selfperception-2026-03-10.md"
 ---
 
 # [Interpretation/Self Perception] An + Xy
@@ -65,7 +64,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-selfperception-202
 - [[Coding/Content] An](ref://scoring-input/contents/An)
 - [[Coding/Content] Xy](ref://scoring-input/contents/Xy)
 - [[解釈/特殊指標] Hypervigilance Index](ref://result-interpretation/special-indices/HVI)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

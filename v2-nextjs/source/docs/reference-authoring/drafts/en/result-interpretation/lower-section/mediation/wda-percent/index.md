@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/location/W"
   - "scoring-input/location/D"
   - "scoring-input/fq"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Mediation] WDA%
@@ -53,7 +52,3 @@ It is used to see how stable mediation remains in relatively common and more eas
 - [[Coding/Location] W](ref://scoring-input/location/W)
 - [[Coding/Location] D](ref://scoring-input/location/D)
 - [[Coding/FQ] FQ](ref://scoring-input/fq)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

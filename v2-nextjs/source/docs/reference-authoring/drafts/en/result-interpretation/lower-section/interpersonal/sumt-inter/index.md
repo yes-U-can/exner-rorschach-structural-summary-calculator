@@ -19,9 +19,8 @@ relatedRoutes:
   - "scoring-input/determinants/T"
   - "scoring-input/determinants/FT"
   - "scoring-input/determinants/TF"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Interpersonal] SumT
@@ -75,7 +74,3 @@ In interpretation, it helps estimate how much need for closeness, contact, and s
 - [[Coding/Determinants] T](ref://scoring-input/determinants/T)
 - [[Coding/Determinants] FT](ref://scoring-input/determinants/FT)
 - [[Coding/Determinants] TF](ref://scoring-input/determinants/TF)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

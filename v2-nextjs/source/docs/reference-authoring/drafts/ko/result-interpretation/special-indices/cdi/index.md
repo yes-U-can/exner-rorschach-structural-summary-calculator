@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/interpersonal/PureH"
   - "result-interpretation/lower-section/core/EA"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/special-indices/cdi/index.md"
 ---
 
 # 문서명: [해석/특수지표] CDI
@@ -69,7 +68,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[해석/대인관계\] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)
 - [\[해석/중핵\] EA](ref://result-interpretation/lower-section/core/EA)
 - [\[해석/특수지표\] DEPI](ref://result-interpretation/special-indices/DEPI)
-
-## 근거 메모
-
-- 상세 검토 기록은 내부 검증 노트에서 관리한다.

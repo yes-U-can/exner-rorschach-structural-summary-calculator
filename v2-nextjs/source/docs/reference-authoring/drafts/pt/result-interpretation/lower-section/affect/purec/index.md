@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/determinants/CF"
   - "scoring-input/determinants/FC"
   - "result-interpretation/lower-section/core/EB"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-affect-opening-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Afeto] Pure C
@@ -55,7 +54,3 @@ Na interpretação, funciona como sinal de expressão afetiva mais direta e meno
 - [[Codificação/Determinantes] CF](ref://scoring-input/determinants/CF)
 - [[Codificação/Determinantes] FC](ref://scoring-input/determinants/FC)
 - [[Interpretação/Core] EB](ref://result-interpretation/lower-section/core/EB)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

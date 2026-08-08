@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/fq/u"
   - "scoring-input/fq/-"
   - "scoring-input/dq/o"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/fq/o/index.md"
 ---
 
 # 문서명: [부호화/형태질] o
@@ -51,8 +50,3 @@ FQo는 반점 윤곽과 적절하게 들어맞는 보통 수준의 형태질 코
 - [\[부호화/형태질\] u](ref://scoring-input/fq/u)
 - [\[부호화/형태질\] -](ref://scoring-input/fq/-)
 - [\[부호화/발달질\] o](ref://scoring-input/dq/o)
-
-## 근거 메모
-
-- 세부 근거 대조와 용어 판단 기록은 내부 작업 메모에서 관리한다.
-- 공개 참조 문서 반영 단계에서는 내부 provenance가 노출되지 않도록 분리한다.

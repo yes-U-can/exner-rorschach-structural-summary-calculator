@@ -11,9 +11,8 @@ aliases:
 relatedRoutes:
   - "scoring-input/special-score"
   - "result-interpretation/lower-section/processing/PSV"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Special Scores] PSV
@@ -46,7 +45,3 @@ It does not refer to simple consistency; it points to stereotyped or mechanical 
 
 - [[Coding/Special Scores] Special Scores](ref://scoring-input/special-score)
 - [[Interpretation/Processing] PSV](ref://result-interpretation/lower-section/processing/PSV)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

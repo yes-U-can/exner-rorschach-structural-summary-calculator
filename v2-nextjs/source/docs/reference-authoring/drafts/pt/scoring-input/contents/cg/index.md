@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/Ay"
   - "scoring-input/contents/Art"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-completion-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Conteúdo] Cg
@@ -50,7 +49,3 @@ O ponto decisivo é a resposta entender a forma como algo que se veste.
 - [[Codificação/Conteúdo] Contents](ref://scoring-input/contents)
 - [[Codificação/Conteúdo] Ay](ref://scoring-input/contents/Ay)
 - [[Codificação/Conteúdo] Art](ref://scoring-input/contents/Art)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

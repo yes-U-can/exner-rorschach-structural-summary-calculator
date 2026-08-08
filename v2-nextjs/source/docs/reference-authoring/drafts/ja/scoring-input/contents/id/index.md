@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/Sc"
   - "scoring-input/contents/Art"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-contents-ls-na-sc-sx-xy-id-2026-03-10.md"
 ---
 
 # [コーディング/内容] Id
@@ -51,7 +50,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-contents-ls-na-sc-
 - [[コーディング/内容] Contents](ref://scoring-input/contents)
 - [[コーディング/内容] Sc](ref://scoring-input/contents/Sc)
 - [[コーディング/内容] Art](ref://scoring-input/contents/Art)
-
-## 根拠メモ
-
-- 詳細な出典比較は内部 provenance note に記録しています。

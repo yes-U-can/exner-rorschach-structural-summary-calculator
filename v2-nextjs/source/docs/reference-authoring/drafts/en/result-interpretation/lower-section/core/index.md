@@ -26,9 +26,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/SumT"
   - "result-interpretation/lower-section/core/SumV"
   - "result-interpretation/lower-section/core/SumY"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Lower Section/Core] Core
@@ -75,7 +74,3 @@ This is where `R`, `Lambda`, `EB`, `EA`, `eb`, `es`, `D`, `AdjD`, and the tensio
 - [[Interpretation/Core] SumT](ref://result-interpretation/lower-section/core/SumT)
 - [[Interpretation/Core] SumV](ref://result-interpretation/lower-section/core/SumV)
 - [[Interpretation/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

@@ -15,9 +15,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/M_minus"
   - "result-interpretation/lower-section/mediation/X_minus_percent"
   - "result-interpretation/lower-section/mediation/XA_percent"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/special-indices/pti/index.md"
 ---
 
 # 문서명: [해석/특수지표] PTI
@@ -67,7 +66,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[해석/관념\] M-](ref://result-interpretation/lower-section/ideation/M_minus)
 - [\[해석/지각매개\] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
 - [\[해석/지각매개\] XA%](ref://result-interpretation/lower-section/mediation/XA_percent)
-
-## 근거 메모
-
-- 상세 검토 기록은 내부 검증 노트에서 관리한다.

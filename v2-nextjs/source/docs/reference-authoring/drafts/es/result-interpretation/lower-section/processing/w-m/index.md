@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/W"
   - "scoring-input/determinants/M"
   - "result-interpretation/lower-section/ideation/Ma_Mp"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/processing/w-m/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Procesamiento] W:M
@@ -67,7 +66,3 @@ En procesamiento se usa para estimar si la amplitud del abordaje y los recursos 
 - [[Interpretación/Upper Section] W](ref://result-interpretation/upper-section/W)
 - [[Codificación/Determinantes] M](ref://scoring-input/determinants/M)
 - [[Interpretación/Ideación] Ma:Mp](ref://result-interpretation/lower-section/ideation/Ma_Mp)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

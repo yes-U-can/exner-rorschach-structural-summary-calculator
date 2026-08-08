@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/Lv2"
   - "result-interpretation/lower-section/ideation/M_minus"
   - "result-interpretation/special-indices/PTI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/ideation/wsum6/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Ideación] WSum6
@@ -64,7 +63,3 @@ No solo cuenta cuántas peculiaridades aparecen, sino cuánto peso clínico tien
 - [[Interpretación/Ideación] Lv2](ref://result-interpretation/lower-section/ideation/Lv2)
 - [[Interpretación/Ideación] M-](ref://result-interpretation/lower-section/ideation/M_minus)
 - [[Interpretación/Índices Especiales] PTI](ref://result-interpretation/special-indices/PTI)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

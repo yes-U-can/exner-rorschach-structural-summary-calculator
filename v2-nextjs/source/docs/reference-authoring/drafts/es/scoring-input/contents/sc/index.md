@@ -12,9 +12,8 @@ relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/Art"
   - "scoring-input/contents/Id"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/contents/sc/index.md"
 ---
 
 # Nombre del documento: [Codificación/Contenido] Sc
@@ -48,8 +47,3 @@ Lo importante es que el sujeto lo vea como aparato, instrumento, máquina o prod
 - [[Codificación/Contenido] Contents](ref://scoring-input/contents)
 - [[Codificación/Contenido] Art](ref://scoring-input/contents/Art)
 - [[Codificación/Contenido] Id](ref://scoring-input/contents/Id)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

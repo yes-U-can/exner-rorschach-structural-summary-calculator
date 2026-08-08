@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/contents/An"
   - "scoring-input/contents/H"
   - "scoring-input/contents/A"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/contents/bl/index.md"
 ---
 
 # Nombre del documento: [Codificación/Contenido] Bl
@@ -50,8 +49,3 @@ No se refiere a una estructura anatómica completa, sino al líquido o a la idea
 - [[Codificación/Contenido] An](ref://scoring-input/contents/An)
 - [[Codificación/Contenido] H](ref://scoring-input/contents/H)
 - [[Codificación/Contenido] A](ref://scoring-input/contents/A)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

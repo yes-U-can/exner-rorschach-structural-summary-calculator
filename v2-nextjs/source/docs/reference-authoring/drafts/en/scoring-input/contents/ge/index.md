@@ -12,9 +12,8 @@ aliases:
 relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/Ls"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Content] Ge
@@ -48,7 +47,3 @@ It does not refer to a real landscape scene; it refers to something read as a ma
 
 - [[Coding/Content] Contents](ref://scoring-input/contents)
 - [[Coding/Content] Ls](ref://scoring-input/contents/Ls)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

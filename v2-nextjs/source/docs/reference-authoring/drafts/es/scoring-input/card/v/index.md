@@ -18,9 +18,8 @@ relatedRoutes:
   - "scoring-input/popular"
   - "scoring-input/card/I"
   - "scoring-input/determinants/V"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/card/v/index.md"
 ---
 
 # Nombre del documento: [Codificación/Láminas] V
@@ -60,8 +59,3 @@ La página resume puntos de codificación útiles para esa lámina.
 - [[Codificación/Popular] Popular](ref://scoring-input/popular)
 - [[Codificación/Láminas] I](ref://scoring-input/card/I)
 - [[Codificación/Determinantes] V](ref://scoring-input/determinants/V)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

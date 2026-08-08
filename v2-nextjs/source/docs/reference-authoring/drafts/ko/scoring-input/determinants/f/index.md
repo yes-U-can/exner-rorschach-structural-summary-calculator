@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/fq/u"
   - "scoring-input/fq/-"
   - "result-interpretation/lower-section/core/Lambda"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/determinants/f/index.md"
 ---
 
 # 문서명: [부호화/결정인] F
@@ -57,8 +56,3 @@ F는 형태만으로 반응이 성립할 때 주는 순수 형태 determinant이
 - [\[부호화/형태질\] u](ref://scoring-input/fq/u)
 - [\[부호화/형태질\] -](ref://scoring-input/fq/-)
 - [\[해석/Core\] Lambda](ref://result-interpretation/lower-section/core/Lambda)
-
-## 근거 메모
-
-- 상세 근거와 출처 충돌 메모는 provenance note에 분리해 둔다.
-- 공개용 본문에는 저작권 자료명을 직접 노출하지 않는다.

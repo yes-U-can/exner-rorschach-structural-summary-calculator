@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/contents/Fd"
   - "result-interpretation/lower-section/core/SumT"
   - "result-interpretation/special-indices/CDI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/interpersonal/food/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Interpersonal] Food
@@ -66,7 +65,3 @@ En interpretación se usa como un indicador complementario de necesidad de cuida
 - [[Codificación/Contenido] Fd](ref://scoring-input/contents/Fd)
 - [[Interpretación/Core] SumT](ref://result-interpretation/lower-section/core/SumT)
 - [[Interpretación/Índices Especiales] CDI](ref://result-interpretation/special-indices/CDI)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

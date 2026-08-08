@@ -18,9 +18,8 @@ relatedRoutes:
   - "scoring-input/determinants/Y"
   - "scoring-input/determinants/FY"
   - "scoring-input/determinants/YF"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-core-sumt-sumv-sumy-2026-03-10.md"
 ---
 
 # [Interpretation/Core] SumY
@@ -60,6 +59,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-core-sumt-sumv-sum
 - [[Coding/決定因] Y](ref://scoring-input/determinants/Y)
 - [[Coding/決定因] FY](ref://scoring-input/determinants/FY)
 - [[Coding/決定因] YF](ref://scoring-input/determinants/YF)
-
-## 根拠メモ
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

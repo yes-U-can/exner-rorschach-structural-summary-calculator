@@ -21,9 +21,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/interpersonal/HumanCont"
   - "result-interpretation/lower-section/interpersonal/PureH"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/GHR-PHR] GHR/PHR
@@ -67,7 +66,3 @@ They are not assigned from general clinical impression, but through a decision s
 - [[Interpretation/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
 - [[Interpretation/Interpersonal] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)
 - [[Interpretation/Self Perception] H ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

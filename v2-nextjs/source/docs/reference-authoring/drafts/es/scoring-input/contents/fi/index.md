@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/Ex"
   - "scoring-input/contents/Cl"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/contents/fi/index.md"
 ---
 
 # Nombre del documento: [Codificación/Contenido] Fi
@@ -50,8 +49,3 @@ La respuesta tiene que organizar la imagen como llama, incendio, humo o columna 
 - [[Codificación/Contenido] Contents](ref://scoring-input/contents)
 - [[Codificación/Contenido] Ex](ref://scoring-input/contents/Ex)
 - [[Codificación/Contenido] Cl](ref://scoring-input/contents/Cl)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

@@ -18,9 +18,8 @@ relatedRoutes:
   - "scoring-input/special-score/DR2"
   - "scoring-input/special-score/FABCOM2"
   - "scoring-input/special-score/CONTAM"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Ideation] Lv2
@@ -59,7 +58,3 @@ In interpretation, it indicates how much weight the more severe cognitive peculi
 - [[Coding/Special Scores] DR2](ref://scoring-input/special-score/DR2)
 - [[Coding/Special Scores] FABCOM2](ref://scoring-input/special-score/FABCOM2)
 - [[Coding/Special Scores] CONTAM](ref://scoring-input/special-score/CONTAM)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

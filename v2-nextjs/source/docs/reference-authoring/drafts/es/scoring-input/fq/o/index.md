@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/fq/u"
   - "scoring-input/fq/-"
   - "scoring-input/dq/o"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/fq/o/index.md"
 ---
 
 # Nombre del documento: [Codificación/Calidad formal] o
@@ -51,7 +50,3 @@ Es la categoría base de buen ajuste cuando no hay elaboración suficiente para 
 - [[Codificación/Calidad formal] u](ref://scoring-input/fq/u)
 - [[Codificación/Calidad formal] -](ref://scoring-input/fq/-)
 - [[Codificación/Calidad evolutiva] o](ref://scoring-input/dq/o)
-
-## Nota de fundamento
-
-- La provenance interna conserva la comparación de fuentes y los criterios de extrapolación.

@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/interpersonal/PureH"
   - "result-interpretation/lower-section/core/EA"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-indices-2026-03-10.md"
 ---
 
 # 文書名: [解釈/特殊指標] CDI
@@ -69,7 +68,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-indices-20
 - [[解釈/対人関係] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)
 - [[解釈/中核] EA](ref://result-interpretation/lower-section/core/EA)
 - [[解釈/特殊指標] DEPI](ref://result-interpretation/special-indices/DEPI)
-
-## 根拠メモ
-
-- 詳細な検討記録は内部の検証ノートで管理します。

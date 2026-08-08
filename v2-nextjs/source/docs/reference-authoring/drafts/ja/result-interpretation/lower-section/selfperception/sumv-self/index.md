@@ -22,9 +22,8 @@ relatedRoutes:
   - "scoring-input/determinants/FV"
   - "scoring-input/determinants/VF"
   - "result-interpretation/lower-section/core/AdjD"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-selfperception-2026-03-10.md"
 ---
 
 # [Interpretation/Self Perception] SumV
@@ -78,7 +77,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-selfperception-202
 - [[Coding/決定因] FV](ref://scoring-input/determinants/FV)
 - [[Coding/決定因] VF](ref://scoring-input/determinants/VF)
 - [[解釈/Core] AdjD](ref://result-interpretation/lower-section/core/AdjD)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

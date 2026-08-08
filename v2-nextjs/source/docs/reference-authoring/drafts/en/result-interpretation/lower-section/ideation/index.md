@@ -19,9 +19,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/WSum6"
   - "result-interpretation/lower-section/ideation/M_minus"
   - "result-interpretation/lower-section/ideation/Mnone"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Lower Section/Ideation] Ideation
@@ -63,7 +62,3 @@ In this section, `a:p`, `Ma:Mp`, `2AB+Art+Ay`, `MOR`, `Sum6`, `Lv2`, `WSum6`, `M
 - [[Interpretation/Ideation] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
 - [[Interpretation/Ideation] M-](ref://result-interpretation/lower-section/ideation/M_minus)
 - [[Interpretation/Ideation] Mnone](ref://result-interpretation/lower-section/ideation/Mnone)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

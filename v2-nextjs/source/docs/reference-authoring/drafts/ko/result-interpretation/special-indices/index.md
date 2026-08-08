@@ -19,9 +19,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation"
   - "result-interpretation/lower-section/affect"
   - "result-interpretation/lower-section/interpersonal"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/special-indices/index.md"
 ---
 
 # 문서명: [해석/특수지표] 특수지표
@@ -77,7 +76,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[해석/하위영역/관념\] 관념](ref://result-interpretation/lower-section/ideation)
 - [\[해석/하위영역/정서\] 정서](ref://result-interpretation/lower-section/affect)
 - [\[해석/하위영역/대인관계\] 대인관계](ref://result-interpretation/lower-section/interpersonal)
-
-## 근거 메모
-
-- 상세 검토 기록은 내부 검증 노트에서 관리한다.

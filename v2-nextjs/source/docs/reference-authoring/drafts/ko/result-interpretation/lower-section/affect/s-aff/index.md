@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/special-score/AG"
   - "result-interpretation/special-indices/DEPI"
   - "result-interpretation/special-indices/HVI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/affect/s-aff/index.md"
 ---
 
 # [해석/Affect] S
@@ -58,7 +57,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `CP`
 - `DEPI`
 - `HVI`
-
-## 근거 메모
-
-- 지표 재등장 cut point 메모는 provenance note에 분리했다.

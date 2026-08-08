@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/AdjD"
   - "result-interpretation/lower-section/core/m"
   - "scoring-input/determinants/FM"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Core] FM
@@ -56,7 +55,3 @@ In `core`, it usually acts as a component on the left side of `eb`, reflecting n
 - [[Interpretation/Core] AdjD](ref://result-interpretation/lower-section/core/AdjD)
 - [[Interpretation/Core] m](ref://result-interpretation/lower-section/core/m)
 - [[Coding/Determinants] FM](ref://scoring-input/determinants/FM)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

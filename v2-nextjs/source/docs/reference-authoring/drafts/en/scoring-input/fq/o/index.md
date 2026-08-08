@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/fq/u"
   - "scoring-input/fq/-"
   - "scoring-input/dq/o"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Form Quality] o
@@ -50,7 +49,3 @@ It is the standard good-fit category and the most common positive FQ code.
 - [[Coding/Form Quality] u](ref://scoring-input/fq/u)
 - [[Coding/Form Quality] -](ref://scoring-input/fq/-)
 - [[Coding/Developmental Quality] o](ref://scoring-input/dq/o)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

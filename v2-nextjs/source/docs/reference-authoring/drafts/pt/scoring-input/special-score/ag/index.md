@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/gphr/PHR"
   - "result-interpretation/lower-section/interpersonal/AG"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-special-score-opening-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Códigos Especiais] AG
@@ -58,7 +57,3 @@ O que importa e agressão como ato em curso, não apenas uma qualidade hostil va
 - [[Codificação/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
 - [[Interpretação/Interpersonal] AG](ref://result-interpretation/lower-section/interpersonal/AG)
 - [[Interpretação/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

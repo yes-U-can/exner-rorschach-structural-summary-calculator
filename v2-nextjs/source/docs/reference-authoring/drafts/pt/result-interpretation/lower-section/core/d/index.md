@@ -18,9 +18,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/EB"
   - "result-interpretation/lower-section/core/m"
   - "result-interpretation/lower-section/core/SumY"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-core-d-family-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Core] D
@@ -61,7 +60,3 @@ Ela resume se os recursos disponíveis bastam para manejar o nível atual de dem
 - [[Interpretação/Core] EB](ref://result-interpretation/lower-section/core/EB)
 - [[Interpretação/Core] m](ref://result-interpretation/lower-section/core/m)
 - [[Interpretação/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

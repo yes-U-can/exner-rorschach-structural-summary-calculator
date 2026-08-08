@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/pair"
   - "scoring-input/determinants/F"
   - "result-interpretation/lower-section/selfPerception/Fr_rF"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/determinants/rf/index.md"
 ---
 
 # Nombre del documento: [Codificación/Determinantes] rF
@@ -53,8 +52,3 @@ La simetría sigue siendo necesaria, pero el énfasis principal está en la cual
 - [[Codificación/Par] (2)](ref://scoring-input/pair)
 - [[Codificación/Determinantes] F](ref://scoring-input/determinants/F)
 - [[Interpretación/Self Perception] Fr+rF](ref://result-interpretation/lower-section/selfPerception/Fr_rF)
-
-## Nota de fundamento
-
-- La justificación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

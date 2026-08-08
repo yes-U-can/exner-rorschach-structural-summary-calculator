@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/contents/H"
   - "scoring-input/contents/Hd"
   - "scoring-input/contents/An"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Content] Sx
@@ -50,7 +49,3 @@ It often works as a secondary content code alongside a human or anatomy code.
 - [[Coding/Content] H](ref://scoring-input/contents/H)
 - [[Coding/Content] Hd](ref://scoring-input/contents/Hd)
 - [[Coding/Content] An](ref://scoring-input/contents/An)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

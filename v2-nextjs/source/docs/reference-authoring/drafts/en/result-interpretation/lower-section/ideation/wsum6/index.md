@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/Lv2"
   - "result-interpretation/lower-section/ideation/M_minus"
   - "result-interpretation/special-indices/PTI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Ideation] WSum6
@@ -51,7 +50,3 @@ It not only counts how many peculiarities appear, but also how much clinical wei
 - [[Interpretation/Ideation] Lv2](ref://result-interpretation/lower-section/ideation/Lv2)
 - [[Interpretation/Ideation] M-](ref://result-interpretation/lower-section/ideation/M_minus)
 - [[Interpretation/Special Indices] PTI](ref://result-interpretation/special-indices/PTI)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

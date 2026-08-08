@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/contents/Na"
   - "scoring-input/contents/Bt"
   - "scoring-input/contents/Ge"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-contents-ls-na-sc-sx-xy-id-2026-03-10.md"
 ---
 
 # [コーディング/内容] Ls
@@ -54,7 +53,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-contents-ls-na-sc-
 - [[コーディング/内容] Na](ref://scoring-input/contents/Na)
 - [[コーディング/内容] Bt](ref://scoring-input/contents/Bt)
 - [[コーディング/内容] Ge](ref://scoring-input/contents/Ge)
-
-## 根拠メモ
-
-- 詳細な出典比較は内部 provenance note に記録しています。

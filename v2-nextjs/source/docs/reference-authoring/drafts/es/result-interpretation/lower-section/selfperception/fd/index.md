@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/determinants/FD"
   - "scoring-input/contents/Fd"
   - "result-interpretation/lower-section/core/SumV"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/selfperception/fd/index.md"
 ---
 
 # Nombre del documento: [Interpretaci처n/Self Perception] FD
@@ -69,7 +68,3 @@ En `Self Perception` se usa como una pista de introspecci처n y de autoobservaci�
 - [[Codificaci처n/Determinantes] FD](ref://scoring-input/determinants/FD)
 - [[Codificaci처n/Contenido] Fd](ref://scoring-input/contents/Fd)
 - [[Interpretaci처n/Core] SumV](ref://result-interpretation/lower-section/core/SumV)
-
-## Nota de fundamento
-
-- La fundamentaci처n detallada y las comparaciones de fuente se conservan en la provenance interna.

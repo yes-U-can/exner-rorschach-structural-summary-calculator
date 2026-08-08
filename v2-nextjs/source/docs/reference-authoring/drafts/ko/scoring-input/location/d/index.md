@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/location/DS"
   - "scoring-input/location/Dd"
   - "result-interpretation/upper-section/D"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/location/d/index.md"
 ---
 
 # [위치] D
@@ -50,7 +49,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/loca
 - [scoring-input/location/DS](ref://scoring-input%2Flocation%2FDS)
 - [scoring-input/location/Dd](ref://scoring-input%2Flocation%2FDd)
 - [result-interpretation/upper-section/D](ref://result-interpretation%2Fupper-section%2FD)
-
-## 근거 메모
-
-세부 출처 비교와 판단 근거는 내부 검토 메모에서 관리한다.

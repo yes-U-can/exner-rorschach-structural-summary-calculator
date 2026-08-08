@@ -12,9 +12,8 @@ relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/An"
   - "result-interpretation/lower-section/selfPerception/An_Xy"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Content] Xy
@@ -48,7 +47,3 @@ If the response is coded `Xy`, the focus is on the radiographic way of seeing th
 - [[Coding/Content] Contents](ref://scoring-input/contents)
 - [[Coding/Content] An](ref://scoring-input/contents/An)
 - [[Interpretation/Self Perception] An + Xy](ref://result-interpretation/lower-section/selfPerception/An_Xy)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

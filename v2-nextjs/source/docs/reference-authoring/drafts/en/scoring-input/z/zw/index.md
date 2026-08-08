@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/dq/v/+"
   - "scoring-input/dq/o"
   - "result-interpretation/upper-section/Zf"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Z] ZW
@@ -52,7 +51,3 @@ The basis is a `W` response with compatible developmental quality.
 - [[Coding/Developmental Quality] v/+](ref://scoring-input/dq/v/%2B)
 - [[Coding/Developmental Quality] o](ref://scoring-input/dq/o)
 - [[Interpretation/Upper Section] Zf](ref://result-interpretation/upper-section/Zf)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

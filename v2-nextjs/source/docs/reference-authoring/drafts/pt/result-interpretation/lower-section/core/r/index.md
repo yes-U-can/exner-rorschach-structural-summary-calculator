@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/EA"
   - "result-interpretation/lower-section/core/EB"
   - "scoring-input/score"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-lower-section-core-opening-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Core] R
@@ -51,7 +50,3 @@ Na interpretação, ele funciona primeiro como indicador de amplitude, produtivi
 - [[Interpretação/Core] EA](ref://result-interpretation/lower-section/core/EA)
 - [[Interpretação/Core] EB](ref://result-interpretation/lower-section/core/EB)
 - [[Codificação] score](ref://scoring-input/score)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

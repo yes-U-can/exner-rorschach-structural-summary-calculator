@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/dq/v/+"
   - "result-interpretation/lower-section/processing/DQ_plus_proc"
   - "result-interpretation/lower-section/processing/DQ_v_proc"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Upper Section] DQv/+
@@ -55,7 +54,3 @@ It is a mixed signal: there is integrative effort, but the structural support is
 - [[Coding/Developmental Quality] v/+](ref://scoring-input/dq/v/%2B)
 - [[Interpretation/Processing] DQ+](ref://result-interpretation/lower-section/processing/DQ_plus_proc)
 - [[Interpretation/Processing] DQv](ref://result-interpretation/lower-section/processing/DQ_v_proc)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

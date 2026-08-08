@@ -19,9 +19,8 @@ relatedRoutes:
   - "scoring-input/contents/Hx"
   - "scoring-input/gphr/GHR"
   - "scoring-input/gphr/PHR"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/selfperception/h-ratio/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Self Perception] H Ratio
@@ -75,7 +74,3 @@ En `Self Perception` ayuda a ver si la imagen de sí mismo y de los otros se apo
 - [[Codificación/Contenido] Hx](ref://scoring-input/contents/Hx)
 - [[Codificación/GHR-PHR] GHR](ref://scoring-input/gphr/GHR)
 - [[Codificación/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

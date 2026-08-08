@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/D"
   - "scoring-input/location/Dd"
   - "result-interpretation/lower-section/processing/W_D_Dd"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/upper-section/dd/index.md"
 ---
 
 # [해석/Upper Section] Dd
@@ -53,7 +52,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `P`
 - `Xu%`
 - `W_D_Dd`
-
-## 근거 메모
-
-- 상세 기준과 수치 메모는 provenance note에 분리했다.

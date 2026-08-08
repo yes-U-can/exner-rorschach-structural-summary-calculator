@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/contents/Ad"
   - "scoring-input/contents/(Ad)"
   - "scoring-input/popular"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Content] A
@@ -53,7 +52,3 @@ It does not refer to an animal part or a fantastic creature.
 - [[Coding/Content] Ad](ref://scoring-input/contents/Ad)
 - [[Coding/Content] (Ad)](ref://scoring-input/contents/%28Ad%29)
 - [[Coding/Popular Response] Popular](ref://scoring-input/popular)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

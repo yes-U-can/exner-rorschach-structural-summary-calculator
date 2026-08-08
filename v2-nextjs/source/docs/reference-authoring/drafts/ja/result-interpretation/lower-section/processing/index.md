@@ -21,9 +21,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/Zd"
   - "result-interpretation/lower-section/mediation"
   - "result-interpretation/lower-section/ideation"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-mediation-xplus-xu-processing-2026-03-10.md"
 ---
 
 # [Interpretation/Lower Section/Processing] Processing
@@ -66,7 +65,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-mediation-xplus-xu
 - [[解釈/上段] Zd](ref://result-interpretation/upper-section/Zd)
 - [[解釈/下段/Mediation] Mediation](ref://result-interpretation/lower-section/mediation)
 - [[解釈/下段/Ideation] Ideation](ref://result-interpretation/lower-section/ideation)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/contents/Ad"
   - "scoring-input/contents/(Ad)"
   - "scoring-input/popular"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/contents/a/index.md"
 ---
 
 # 문서명: [부호화/내용] A
@@ -53,8 +52,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/cont
 - [\[부호화/내용\] Ad](ref://scoring-input/contents/Ad)
 - [\[부호화/내용\] (Ad)](ref://scoring-input/contents/%28Ad%29)
 - [\[부호화/인기반응\] Popular](ref://scoring-input/popular)
-
-## 근거 메모
-
-- 상세 근거와 출처 충돌 메모는 provenance note에 분리해 둔다.
-- 공개용 본문에는 저작권 자료명을 직접 노출하지 않는다.

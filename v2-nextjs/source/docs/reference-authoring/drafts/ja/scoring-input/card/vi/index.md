@@ -18,9 +18,8 @@ relatedRoutes:
   - "scoring-input/contents/Ad"
   - "scoring-input/popular"
   - "scoring-input/special-score/MOR"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-card-vi-x-2026-03-10.md"
 ---
 
 # [コーディング/カード] VI
@@ -61,7 +60,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-card-vi-x-2026-03-
 - [[コーディング/内容] Ad](ref://scoring-input/contents/Ad)
 - [[コーディング/Popular] Popular](ref://scoring-input/popular)
 - [[コーディング/特殊スコア] MOR](ref://scoring-input/special-score/MOR)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

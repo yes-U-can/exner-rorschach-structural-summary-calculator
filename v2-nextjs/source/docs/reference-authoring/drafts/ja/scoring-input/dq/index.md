@@ -17,9 +17,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/dq_o"
   - "result-interpretation/upper-section/dq_vplus"
   - "result-interpretation/upper-section/dq_v"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # [コーディング/発達水準] DQ
@@ -58,7 +57,3 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 - [[解釈/上段] DQo](ref://result-interpretation/upper-section/dq_o)
 - [[解釈/上段] DQv/+](ref://result-interpretation/upper-section/dq_vplus)
 - [[解釈/上段] DQv](ref://result-interpretation/upper-section/dq_v)
-
-## 根拠メモ
-
-- 詳細な出典比較は内部 provenance note に記録します。

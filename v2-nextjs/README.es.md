@@ -5,8 +5,8 @@
 Esta carpeta contiene el historial de versiones y el código fuente que puede hacerse público de la v2 de la calculadora del Sumario Estructural de Rorschach. Las notas del parche describen los cambios más recientes, mientras que el código público contiene materiales de verificación de los cálculos y de implementación.
 
 - Notas del parche más reciente: [releases/v2.2.10](./releases/v2.2.10/README.es.md)
-- Auditoría completa de 53 grupos documentales y límites entre sistemas: [methodology/reference-audit-v2.2.10](./methodology/reference-audit-v2.2.10/README.es.md)
-- Cotejo del Sumario Estructural con las fuentes primarias: [source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md](./source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md)
+- Fuentes de cálculo y alcance bibliográfico: [methodology/reference-audit-v2.2.10](./methodology/reference-audit-v2.2.10/README.es.md)
+- Cotejo de las fuentes de cálculo del Sumario Estructural: [source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md](./source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md)
 - Auditoría anterior de la exactitud del cálculo: [source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md](./source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md)
 - Notas de la primera versión v2: [releases/v2.0.0](./releases/v2.0.0/)
 - Código fuente público: [source](./source/)
@@ -14,8 +14,6 @@ Esta carpeta contiene el historial de versiones y el código fuente que puede ha
 ## Alcance público
 
 `source/` contiene el código fuente principal necesario para ejecutar y revisar la aplicación, los archivos de traducción, el corpus breve de documentos de referencia que consultan los asistentes de IA, las comprobaciones automáticas y la configuración de despliegue.
-
-No incluye variables del entorno de producción, la configuración del proyecto de Vercel, registros locales, cachés, `node_modules`, documentos operativos experimentales del pasado, notas de trabajo privadas ni el historial de migraciones de la base de datos. El código público permite revisar el funcionamiento y el diseño centrales, pero no reproduce todo el entorno de producción.
 
 <details>
 <summary><strong>Cómo ejecutar el código fuente de forma local</strong></summary>

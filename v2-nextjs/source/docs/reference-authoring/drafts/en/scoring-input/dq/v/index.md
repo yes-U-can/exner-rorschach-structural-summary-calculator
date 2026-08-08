@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/dq/v/+"
   - "scoring-input/dq/o"
   - "result-interpretation/upper-section/dq_v"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Developmental Quality] v
@@ -50,7 +49,3 @@ It is the least structurally developed DQ code in the standard four-code set.
 - [[Coding/Developmental Quality] v/+](ref://scoring-input/dq/v/%2B)
 - [[Coding/Developmental Quality] +](ref://scoring-input/dq/%2B)
 - [[Interpretation/Upper Section] DQv](ref://result-interpretation/upper-section/dq_v)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

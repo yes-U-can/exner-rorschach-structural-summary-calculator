@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/AdjD"
   - "result-interpretation/lower-section/core/m"
   - "scoring-input/determinants/FM"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/core/fm/index.md"
 ---
 
 # [해석/Core] FM
@@ -57,7 +56,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `es`
 - `D`
 - `AdjD`
-
-## 근거 메모
-
-- normative range와 intrusive ideation 메모는 provenance note에 분리했다.

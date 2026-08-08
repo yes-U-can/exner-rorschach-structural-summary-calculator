@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/popular"
   - "scoring-input/card/I"
   - "scoring-input/card/V"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-mediation-opening-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Mediação] P
@@ -53,7 +52,3 @@ Na mediação, ajuda a estimar o quanto a percepção se aproxima de padrões de
 - [[Codificação/Popular] Popular](ref://scoring-input/popular)
 - [[Codificação/Cartão] I](ref://scoring-input/card/I)
 - [[Codificação/Cartão] V](ref://scoring-input/card/V)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

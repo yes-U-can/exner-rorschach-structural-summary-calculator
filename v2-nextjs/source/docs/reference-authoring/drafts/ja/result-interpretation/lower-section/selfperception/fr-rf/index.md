@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/determinants/Fr"
   - "scoring-input/determinants/rF"
   - "scoring-input/pair"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-selfperception-2026-03-10.md"
 ---
 
 # [Interpretation/Self Perception] Fr + rF
@@ -69,7 +68,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-selfperception-202
 - [[Coding/決定因] Fr](ref://scoring-input/determinants/Fr)
 - [[Coding/決定因] rF](ref://scoring-input/determinants/rF)
 - [[Coding/Pair] Pair](ref://scoring-input/pair)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

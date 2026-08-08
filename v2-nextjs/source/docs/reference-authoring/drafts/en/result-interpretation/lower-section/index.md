@@ -17,9 +17,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/processing"
   - "result-interpretation/lower-section/interpersonal"
   - "result-interpretation/lower-section/selfPerception"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Lower Section] Lower Section
@@ -56,7 +55,3 @@ If `Upper Section` works as the first screen, `Lower Section` is usually where c
 - [[Interpretation/Lower Section/Processing] Processing](ref://result-interpretation/lower-section/processing)
 - [[Interpretation/Lower Section/Interpersonal] Interpersonal](ref://result-interpretation/lower-section/interpersonal)
 - [[Interpretation/Lower Section/Self Perception] Self Perception](ref://result-interpretation/lower-section/selfPerception)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

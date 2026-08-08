@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/special-score/CONTAM"
   - "result-interpretation/lower-section/ideation/Sum6"
   - "result-interpretation/lower-section/ideation/WSum6"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Special Scores] FABCOM1
@@ -55,7 +54,3 @@ It does not describe a single incongruous combination inside one object, but a d
 - [[Coding/Special Scores] CONTAM](ref://scoring-input/special-score/CONTAM)
 - [[Interpretation/Ideation] Sum6](ref://result-interpretation/lower-section/ideation/Sum6)
 - [[Interpretation/Ideation] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

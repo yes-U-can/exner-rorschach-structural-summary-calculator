@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/determinants/FD"
   - "scoring-input/contents/A"
   - "result-interpretation/lower-section/interpersonal/Food"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-completion-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Conteúdo] Fd
@@ -52,7 +51,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-completio
 - [[Codificação/Determinantes] FD](ref://scoring-input/determinants/FD)
 - [[Codificação/Conteúdo] A](ref://scoring-input/contents/A)
 - [[Interpretação/Interpersonal] Food](ref://result-interpretation/lower-section/interpersonal/Food)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/contents/Ay"
   - "scoring-input/contents/H"
   - "scoring-input/contents/A"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-completion-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Conteúdo] Art
@@ -52,7 +51,3 @@ O ponto central não é apenas ver um objeto, mas entendê-lo como peça de arte
 - [[Codificação/Conteúdo] Ay](ref://scoring-input/contents/Ay)
 - [[Codificação/Conteúdo] H](ref://scoring-input/contents/H)
 - [[Codificação/Conteúdo] A](ref://scoring-input/contents/A)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

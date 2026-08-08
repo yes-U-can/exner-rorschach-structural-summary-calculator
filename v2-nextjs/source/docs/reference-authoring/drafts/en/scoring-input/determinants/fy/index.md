@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/determinants/FV"
   - "scoring-input/determinants/FT"
   - "result-interpretation/lower-section/core/SumY"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Determinants] FY
@@ -57,7 +56,3 @@ The impression of shadow, cloudiness, or diffuse uncertainty is present, but the
 - [[Coding/Determinants] FV](ref://scoring-input/determinants/FV)
 - [[Coding/Determinants] FT](ref://scoring-input/determinants/FT)
 - [[Interpretation/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

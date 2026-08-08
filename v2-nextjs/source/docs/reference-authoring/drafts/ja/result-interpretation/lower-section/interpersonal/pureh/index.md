@@ -18,9 +18,8 @@ relatedRoutes:
   - "scoring-input/gphr/PHR"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
   - "result-interpretation/special-indices/CDI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-interpersonal-pureh-per-iso-2026-03-10.md"
 ---
 
 # [Interpretation/Interpersonal] Pure H
@@ -73,7 +72,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-interpersonal-pure
 - [[Coding/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
 - [[解釈/Self Perception] H Ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
 - [[解釈/特殊指標] CDI](ref://result-interpretation/special-indices/CDI)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

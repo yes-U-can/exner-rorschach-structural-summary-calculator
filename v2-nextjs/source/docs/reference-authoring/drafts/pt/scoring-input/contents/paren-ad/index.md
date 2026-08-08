@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/contents/(A)"
   - "scoring-input/contents/Ad"
   - "scoring-input/contents/An"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-animal-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Conteúdo] (Ad)
@@ -51,7 +50,3 @@ Ele combina parcialidade com fantasia.
 - [[Codificação/Conteúdo] (A)](ref://scoring-input/contents/%28A%29)
 - [[Codificação/Conteúdo] Ad](ref://scoring-input/contents/Ad)
 - [[Codificação/Conteúdo] An](ref://scoring-input/contents/An)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

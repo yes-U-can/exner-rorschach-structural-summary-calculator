@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/location/W"
   - "result-interpretation/lower-section/processing/W_D_Dd"
   - "result-interpretation/lower-section/processing/W_M"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/upper-section/w/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Upper Section] W
@@ -66,7 +65,3 @@ En interpretación indica hasta que punto la persona intenta captar el campo est
 - [[Codificación/Ubicación] W](ref://scoring-input/location/W)
 - [[Interpretación/Processing] W:D:Dd](ref://result-interpretation/lower-section/processing/W_D_Dd)
 - [[Interpretación/Processing] W:M](ref://result-interpretation/lower-section/processing/W_M)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

@@ -15,9 +15,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/dq_vplus"
   - "scoring-input/dq/v"
   - "result-interpretation/lower-section/processing/DQ_v_proc"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Upper Section] DQv
@@ -53,7 +52,3 @@ It helps estimate how often the protocol produces responses that are poorly defi
 - [[Interpretation/Upper Section] DQv/+](ref://result-interpretation/upper-section/dq_vplus)
 - [[Coding/Developmental Quality] v](ref://scoring-input/dq/v)
 - [[Interpretation/Processing] DQv](ref://result-interpretation/lower-section/processing/DQ_v_proc)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

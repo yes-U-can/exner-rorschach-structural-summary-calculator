@@ -18,9 +18,8 @@ relatedRoutes:
   - "scoring-input/card/VIII"
   - "scoring-input/card/IX"
   - "scoring-input/card/X"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/affect/afr/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Afecto] Afr
@@ -73,7 +72,3 @@ En interpretación, se usa para estimar cuánto se acerca o se retira la persona
 - [[Codificación/Card] VIII](ref://scoring-input/card/VIII)
 - [[Codificación/Card] IX](ref://scoring-input/card/IX)
 - [[Codificación/Card] X](ref://scoring-input/card/X)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

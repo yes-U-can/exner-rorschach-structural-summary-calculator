@@ -12,9 +12,8 @@ aliases:
 relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/Ls"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/contents/ge/index.md"
 ---
 
 # Nombre del documento: [Codificación/Contenido] Ge
@@ -48,8 +47,3 @@ No se refiere a paisaje real, sino a imagen leída como mapa.
 
 - [[Codificación/Contenido] Contents](ref://scoring-input/contents)
 - [[Codificación/Contenido] Ls](ref://scoring-input/contents/Ls)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/determinants/YF"
   - "scoring-input/determinants/Y"
   - "result-interpretation/lower-section/affect/CP"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Special Scores] CP
@@ -54,7 +53,3 @@ The core idea is that color is not actually present in that area, but the subjec
 - [[Coding/Determinant] YF](ref://scoring-input/determinants/YF)
 - [[Coding/Determinant] Y](ref://scoring-input/determinants/Y)
 - [[Interpretation/Affect] CP](ref://result-interpretation/lower-section/affect/CP)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

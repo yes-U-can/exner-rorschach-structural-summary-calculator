@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/determinants/Y"
   - "result-interpretation/lower-section/core/SumT"
   - "result-interpretation/lower-section/interpersonal/SumT_inter"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-determinants-shading-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Determinantes] FT
@@ -59,7 +58,3 @@ A qualidade tátil ou de superfície está presente, mas a resposta continua apo
 - [[Codificação/Determinantes] Y](ref://scoring-input/determinants/Y)
 - [[Interpretação/Core] SumT](ref://result-interpretation/lower-section/core/SumT)
 - [[Interpretação/Interpersonal] SumT](ref://result-interpretation/lower-section/interpersonal/SumT_inter)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

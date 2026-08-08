@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/selfPerception/An_Xy"
   - "scoring-input/special-score/MOR"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 # Document Name: [Interpretation/Self Perception] MOR
 ## Aliases / Search Terms
@@ -54,5 +53,3 @@ Where `MOR` in `Ideation` describes a general tone of thinking, the focus here i
 - [[Interpretation/Self Perception] An + Xy](ref://result-interpretation/lower-section/selfPerception/An_Xy)
 - [[Coding/Special Scores] MOR](ref://scoring-input/special-score/MOR)
 - [[Interpretation/Special Indices] DEPI](ref://result-interpretation/special-indices/DEPI)
-## Evidence Note
-- Detailed source comparison is stored in internal provenance notes.

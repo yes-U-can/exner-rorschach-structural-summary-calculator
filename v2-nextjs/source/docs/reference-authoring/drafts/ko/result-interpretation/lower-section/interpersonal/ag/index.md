@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/gphr/PHR"
   - "result-interpretation/lower-section/affect/S_aff"
   - "result-interpretation/lower-section/ideation/MOR"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/interpersonal/ag/index.md"
 ---
 
 # 문서명: [해석/Interpersonal] AG
@@ -68,7 +67,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[부호화/GHR-PHR\] PHR](ref://scoring-input/gphr/PHR)
 - [\[해석/Affect\] S](ref://result-interpretation/lower-section/affect/S_aff)
 - [\[해석/Ideation\] MOR](ref://result-interpretation/lower-section/ideation/MOR)
-
-## 근거 메모
-
-- 공격적 기대와 실제 행동 추정의 구분은 provenance note에 분리했다.

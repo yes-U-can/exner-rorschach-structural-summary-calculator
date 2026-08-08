@@ -18,9 +18,8 @@ relatedRoutes:
   - "scoring-input/determinants/FY"
   - "scoring-input/determinants/YF"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/affect/cp/index.md"
 ---
 
 # 문서명: [해석/Affect] CP
@@ -72,7 +71,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[부호화/결정인\] FY](ref://scoring-input/determinants/FY)
 - [\[부호화/결정인\] YF](ref://scoring-input/determinants/YF)
 - [\[해석/Special Indices\] DEPI](ref://result-interpretation/special-indices/DEPI)
-
-## 근거 메모
-
-- rarity와 coding gate 메모는 provenance note에 분리했다.

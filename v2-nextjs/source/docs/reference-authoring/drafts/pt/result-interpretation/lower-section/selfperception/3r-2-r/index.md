@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/determinants/Fr"
   - "scoring-input/determinants/rF"
   - "result-interpretation/lower-section/core/R"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-selfperception-family-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Autopercepção] Índice Egocêntrico
@@ -71,7 +70,3 @@ Na interpretação, ele ajuda a estimar quanto peso o self, o valor pessoal ou a
 - [[Codificação/Determinantes] Fr](ref://scoring-input/determinants/Fr)
 - [[Codificação/Determinantes] rF](ref://scoring-input/determinants/rF)
 - [[Interpretação/Core] R](ref://result-interpretation/lower-section/core/R)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

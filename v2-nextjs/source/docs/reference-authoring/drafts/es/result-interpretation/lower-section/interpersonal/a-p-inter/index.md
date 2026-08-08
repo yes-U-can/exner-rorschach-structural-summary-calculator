@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/interpersonal/AG"
   - "result-interpretation/lower-section/interpersonal/SumT_inter"
   - "scoring-input/determinants/M"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/interpersonal/a-p-inter/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Interpersonal] a:p
@@ -69,7 +68,3 @@ En esta zona ayuda a estimar si la persona imagina el vínculo desde una posici�
 - [[Interpretación/Interpersonal] AG](ref://result-interpretation/lower-section/interpersonal/AG)
 - [[Interpretación/Interpersonal] SumT](ref://result-interpretation/lower-section/interpersonal/SumT_inter)
 - [[Codificación/Determinantes] M](ref://scoring-input/determinants/M)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

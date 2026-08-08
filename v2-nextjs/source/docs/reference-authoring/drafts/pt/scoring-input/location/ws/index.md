@@ -12,9 +12,8 @@ relatedRoutes:
   - "scoring-input/location/S"
   - "scoring-input/location/DS"
   - "scoring-input/location/DdS"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-location-2026-03-10.md"
 ---
 
 # Nome do documento: [Codificação/Localização] WS
@@ -47,7 +46,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-location-2026-03-1
 - [[Codificação/Localização] S](ref://scoring-input/location/S)
 - [[Codificação/Localização] DS](ref://scoring-input/location/DS)
 - [[Codificação/Localização] DdS](ref://scoring-input/location/DdS)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

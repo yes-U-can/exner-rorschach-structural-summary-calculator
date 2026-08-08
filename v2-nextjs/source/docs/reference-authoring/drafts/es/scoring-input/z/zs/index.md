@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/location/DS"
   - "scoring-input/location/DdS"
   - "result-interpretation/upper-section/S"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/z/zs/index.md"
 ---
 
 # Nombre del documento: [Codificación/Z] ZS
@@ -52,7 +51,3 @@ El espacio blanco debe tener un papel específico dentro del percepto.
 - [[Codificación/Localización] DS](ref://scoring-input/location/DS)
 - [[Codificación/Localización] DdS](ref://scoring-input/location/DdS)
 - [[Interpretación/Upper Section] S](ref://result-interpretation/upper-section/S)
-
-## Nota de fundamento
-
-- La provenance interna conserva los patrones de sobrecodificación y la regla de exclusión para respuestas de solo blanco.

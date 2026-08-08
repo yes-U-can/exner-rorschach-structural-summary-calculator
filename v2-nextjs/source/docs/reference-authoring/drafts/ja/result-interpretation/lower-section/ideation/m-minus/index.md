@@ -19,9 +19,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/Mnone"
   - "scoring-input/determinants/M"
   - "result-interpretation/special-indices/PTI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-ideation-lv2-wsum6-mminus-2026-03-10.md"
 ---
 
 # [Interpretation/Ideation] M-
@@ -61,6 +60,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-ideation-lv2-wsum6
 - [[解釈/Ideation] Mnone](ref://result-interpretation/lower-section/ideation/Mnone)
 - [[Coding/決定因] M](ref://scoring-input/determinants/M)
 - [[解釈/特殊指標] PTI](ref://result-interpretation/special-indices/PTI)
-
-## 根拠メモ
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

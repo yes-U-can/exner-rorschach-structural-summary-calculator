@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/pair"
   - "scoring-input/determinants/F"
   - "result-interpretation/lower-section/selfPerception/Fr_rF"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Determinants] rF
@@ -53,7 +52,3 @@ Symmetry is still required, but the main emphasis falls on reflectiveness itself
 - [[Coding/Pair] (2)](ref://scoring-input/pair)
 - [[Coding/Determinants] F](ref://scoring-input/determinants/F)
 - [[Interpretation/Self Perception] Fr+rF](ref://result-interpretation/lower-section/selfPerception/Fr_rF)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

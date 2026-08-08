@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/contents/Art"
   - "scoring-input/gphr/PHR"
   - "result-interpretation/lower-section/selfPerception/An_Xy"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-contents-animal-2026-03-10.md"
 ---
 
 # [コーディング/内容] An
@@ -56,7 +55,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-contents-animal-20
 - [[コーディング/内容] Art](ref://scoring-input/contents/Art)
 - [[コーディング/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
 - [[解釈/自己知覚] An + Xy](ref://result-interpretation/lower-section/selfPerception/An_Xy)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

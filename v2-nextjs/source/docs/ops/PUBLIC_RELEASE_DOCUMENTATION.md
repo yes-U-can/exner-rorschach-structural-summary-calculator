@@ -59,7 +59,7 @@ The public documentation has a five-language reader-facing layer and an original
 
 1. Korean is the canonical source for reader-facing public documentation. The supported companion locales are English, Japanese, Spanish, and Brazilian Portuguese.
 2. Every reader-facing document group listed in the public localization manifest must provide all five locale files. This includes public entry README files, CHANGELOG files, acknowledgements, current release notes, and clinician-readable calculation explanations selected for publication.
-3. Historical Korean release notes remain unchanged as records of their released wording. Their companion translations may be added in controlled backfill batches without rewriting the Korean originals.
+3. Historical release notes preserve released product facts. They may receive a clearly scoped editorial correction when private provenance, agent dialogue, local-environment wording, or other internal production notes were published by mistake; such a correction must not invent or alter released behavior.
 4. Raw AI evaluation reports, machine-generated evidence, deployment checklists, architecture rules, commands, and source-level technical records may remain in their original technical language. A reader-facing README or summary that introduces those records must be available in all five locales when it is listed in the manifest.
 5. Keep one prose language per file. Use separate locale files rather than placing several complete translations in one Markdown document.
 6. Translation is not a literal substitution task. Use the approved locale glossary, the existing five-language reference corpus, and professional target-language sources. Preserve Exner notation and explicitly review any term whose established target-language usage is uncertain.
@@ -171,10 +171,6 @@ Use this structure for the Korean canonical public v2 Next.js release note. The 
 
 검산에 사용한 근거와 반복 확인 결과를 먼저 설명합니다. 명령어와 파일 경로는 필요한 경우 기술 부록에 적습니다.
 
-## 공개 범위와 보안 경계
-
-공개 아카이브에 포함한 것과 제외한 것을 적습니다.
-
 ## 기술 부록
 
 재현에 필요한 명령어, 파일, 수치와 같은 개발 세부 사항을 적습니다.
@@ -192,11 +188,9 @@ Every public-facing release record must answer these questions:
 4. Why was it worth a release?
 5. Did the app UI/UX, data collection, or privacy behavior change?
 6. What evidence and checks support the conclusion, expressed first in plain language?
-7. Which public files were updated?
-8. What secrets, raw prompts, raw model answers, private payloads, and local runtime files were excluded?
-9. For a calculation or coding change, which source edition and printed pages support it, and which app output and repeatable check demonstrate the implementation?
+7. For a calculation or coding change, which source edition and printed pages support it, and which app output and repeatable check demonstrate the implementation?
 
-For AI-related releases, also state whether the release changed runtime assistant behavior, evaluation harnesses, or only documentation/governance.
+For AI-related releases, state whether the user-visible assistant behavior changed. Internal evaluation harness changes belong in technical evidence, not in the reader-facing release story.
 
 ## Version-Line Closure Wording
 
@@ -220,9 +214,9 @@ When preparing a release:
 6. Update all four companion locales when a managed Korean canonical document changes.
 7. Run the public documentation localization check and resolve stale hashes, missing files, or structural drift.
 8. Ensure public-facing release text follows the language coverage policy and stays technically precise.
-9. Ensure public source mirror excludes `.env*`, `.vercel/`, `node_modules/`, runtime logs, local caches, private work notes, API keys, and raw model output.
+9. Ensure the public source mirror excludes secrets, private work material, and raw model output. Enforce this as a publication check; do not turn the excluded-item inventory into reader-facing prose.
 10. Confirm that the impact, affected condition, need for recalculation, and limitations are clear before technical details appear.
-11. Remove AI-to-owner reporting language and unexplained internal engineering terms from the main narrative.
+11. Remove AI-to-owner reporting language, agent names, local-environment narration, model-call counts or costs, mirror mechanics, and unexplained internal engineering terms from the reader-facing document. A technical appendix may contain reproducible public commands and public artifact names, but never private paths, acquisition notes, internal approval dialogue, or agent work allocation.
 12. For calculation-related releases, verify every public source citation against the private source page before publication, and confirm that no copyrighted source file or extended passage entered the public mirror.
 
 ## Agent Rule

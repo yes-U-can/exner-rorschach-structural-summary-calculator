@@ -18,9 +18,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/SumY"
   - "scoring-input/determinants/m"
   - "scoring-input/determinants/Y"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/core/adjes/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Core] AdjEs
@@ -74,7 +73,3 @@ Busca estimar cuánta carga sigue presente cuando se ajusta parte del peso de `m
 - [[Interpretación/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
 - [[Codificación/Determinantes] m](ref://scoring-input/determinants/m)
 - [[Codificación/Determinantes] Y](ref://scoring-input/determinants/Y)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

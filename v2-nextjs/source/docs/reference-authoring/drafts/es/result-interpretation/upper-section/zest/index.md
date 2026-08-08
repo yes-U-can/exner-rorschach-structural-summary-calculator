@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/ZSum"
   - "result-interpretation/upper-section/Zd"
   - "scoring-input/z"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/upper-section/zest/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Upper Section] ZEst
@@ -61,7 +60,3 @@ Se usa como línea de base para calcular `Zd`, más que como una variable clíni
 - [[Interpretación/Upper Section] ZSum](ref://result-interpretation/upper-section/ZSum)
 - [[Interpretación/Upper Section] Zd](ref://result-interpretation/upper-section/Zd)
 - [[Codificación/Z] Z](ref://scoring-input/z)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

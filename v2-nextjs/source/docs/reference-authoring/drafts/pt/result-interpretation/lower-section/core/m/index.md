@@ -17,9 +17,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/AdjD"
   - "result-interpretation/lower-section/core/FM"
   - "scoring-input/determinants/m"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-core-burden-qualities-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Core] m
@@ -58,7 +57,3 @@ No `core`, ele costuma ser lido como indicador de tensão reativa, sensação de
 - [[Interpretação/Core] AdjD](ref://result-interpretation/lower-section/core/AdjD)
 - [[Interpretação/Core] FM](ref://result-interpretation/lower-section/core/FM)
 - [[Codificação/Determinantes] m](ref://scoring-input/determinants/m)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

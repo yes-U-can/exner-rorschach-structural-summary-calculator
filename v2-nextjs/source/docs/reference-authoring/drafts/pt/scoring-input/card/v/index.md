@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/popular"
   - "scoring-input/card/I"
   - "scoring-input/determinants/V"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-card-i-v-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Cartões] V
@@ -58,7 +57,3 @@ Esta página resume pontos de codificação especialmente úteis nessa prancha.
 - [[Codificação/Popular] Popular](ref://scoring-input/popular)
 - [[Codificação/Cartões] I](ref://scoring-input/card/I)
 - [[Codificação/Determinantes] V](ref://scoring-input/determinants/V)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

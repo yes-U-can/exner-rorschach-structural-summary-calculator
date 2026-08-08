@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/location/D"
   - "scoring-input/location/Dd"
   - "result-interpretation/upper-section/W"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Location] W
@@ -49,7 +48,3 @@ It is not enough for the response to sound global; the whole blot must actually 
 - [[Coding/Location] D](ref://scoring-input/location/D)
 - [[Coding/Location] Dd](ref://scoring-input/location/Dd)
 - [[Interpretation/Upper Section] W](ref://result-interpretation/upper-section/W)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

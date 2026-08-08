@@ -15,9 +15,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/_2AB_Art_Ay"
   - "result-interpretation/lower-section/selfPerception/MOR_self"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-ideation-2ab-mor-sum6-2026-03-10.md"
 ---
 
 # [Interpretation/Ideation] MOR
@@ -54,6 +53,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-ideation-2ab-mor-s
 - [[解釈/Ideation] 2AB+Art+Ay](ref://result-interpretation/lower-section/ideation/_2AB_Art_Ay)
 - [[解釈/Self Perception] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
 - [[解釈/特殊指標] DEPI](ref://result-interpretation/special-indices/DEPI)
-
-## 根拠メモ
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

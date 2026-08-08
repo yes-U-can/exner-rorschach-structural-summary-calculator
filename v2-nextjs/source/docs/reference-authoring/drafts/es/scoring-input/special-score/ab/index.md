@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/contents/Art"
   - "scoring-input/contents/Ay"
   - "result-interpretation/lower-section/ideation/_2AB_Art_Ay"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/special-score/ab/index.md"
 ---
 
 # Nombre del documento: [Codificación/Puntuaciones especiales] AB
@@ -52,8 +51,3 @@ La idea central es que el sujeto nombra una abstracción o una cualidad global e
 - [[Codificación/Contenido] Art](ref://scoring-input/contents/Art)
 - [[Codificación/Contenido] Ay](ref://scoring-input/contents/Ay)
 - [[Interpretación/Ideation] 2AB + Art + Ay](ref://result-interpretation/lower-section/ideation/_2AB_Art_Ay)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

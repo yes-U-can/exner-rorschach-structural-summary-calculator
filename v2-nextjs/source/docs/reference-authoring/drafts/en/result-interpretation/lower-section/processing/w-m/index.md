@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/W"
   - "scoring-input/determinants/M"
   - "result-interpretation/lower-section/ideation/Ma_Mp"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Processing] W:M
@@ -67,7 +66,3 @@ In processing, it is used to estimate whether breadth of approach and ideational
 - [[Interpretation/Upper Section] W](ref://result-interpretation/upper-section/W)
 - [[Coding/Determinants] M](ref://scoring-input/determinants/M)
 - [[Interpretation/Ideation] Ma:Mp](ref://result-interpretation/lower-section/ideation/Ma_Mp)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

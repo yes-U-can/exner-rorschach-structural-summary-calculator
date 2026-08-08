@@ -12,9 +12,8 @@ relatedRoutes:
   - "scoring-input/fq"
   - "scoring-input/determinants/M"
   - "scoring-input/special-score/AB"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-fq-2026-03-10.md"
 ---
 
 # Nome do documento: [Codificação/Qualidade Formal] none
@@ -48,7 +47,3 @@ Um campo em branco indica codificação incompleta, não `FQnone`; selecione `no
 - [[Codificação/Qualidade Formal] FQ](ref://scoring-input/fq)
 - [[Codificação/Determinantes] M](ref://scoring-input/determinants/M)
 - [[Codificação/Códigos Especiais] AB](ref://scoring-input/special-score/AB)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

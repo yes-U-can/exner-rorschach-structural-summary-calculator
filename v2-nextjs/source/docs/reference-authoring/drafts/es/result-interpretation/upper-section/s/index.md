@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/location/S"
   - "result-interpretation/lower-section/affect/S_aff"
   - "result-interpretation/lower-section/mediation/S_minus"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/upper-section/s/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Upper Section] S
@@ -68,7 +67,3 @@ Dentro del `Upper Section` se lee como una pista sobre foco inverso, oposición 
 - [[Codificación/Ubicación] S](ref://scoring-input/location/S)
 - [[Interpretación/Affect] S](ref://result-interpretation/lower-section/affect/S_aff)
 - [[Interpretación/Mediation] S-%](ref://result-interpretation/lower-section/mediation/S_minus)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

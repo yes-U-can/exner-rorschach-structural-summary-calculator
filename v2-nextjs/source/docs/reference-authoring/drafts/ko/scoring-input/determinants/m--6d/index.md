@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/special-score/COP"
   - "scoring-input/special-score/AG"
   - "result-interpretation/lower-section/core/m"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/determinants/m--6d/index.md"
 ---
 
 # [결정인] m
@@ -57,7 +56,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/dete
 - [scoring-input/special-score/COP](ref://scoring-input%2Fspecial-score%2FCOP)
 - [scoring-input/special-score/AG](ref://scoring-input%2Fspecial-score%2FAG)
 - [result-interpretation/lower-section/core/m](ref://result-interpretation%2Flower-section%2Fcore%2Fm)
-
-## 근거 메모
-
-세부 출처 비교와 판단 근거는 내부 검토 메모에서 관리한다.

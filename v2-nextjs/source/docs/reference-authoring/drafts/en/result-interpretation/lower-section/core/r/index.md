@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/EA"
   - "result-interpretation/lower-section/core/EB"
   - "scoring-input/score"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Core] R
@@ -51,7 +50,3 @@ In interpretation it functions first as an indicator of range, productivity, and
 - [[Interpretation/Core] EA](ref://result-interpretation/lower-section/core/EA)
 - [[Interpretation/Core] EB](ref://result-interpretation/lower-section/core/EB)
 - [[Coding] score](ref://scoring-input/score)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

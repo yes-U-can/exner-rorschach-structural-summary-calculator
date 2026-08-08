@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/Art"
   - "scoring-input/contents/Id"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-completion-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Conteúdo] Sc
@@ -50,7 +49,3 @@ O foco principal é técnico ou científico, não artístico nem simplesmente es
 - [[Codificação/Conteúdo] Contents](ref://scoring-input/contents)
 - [[Codificação/Conteúdo] Art](ref://scoring-input/contents/Art)
 - [[Codificação/Conteúdo] Id](ref://scoring-input/contents/Id)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

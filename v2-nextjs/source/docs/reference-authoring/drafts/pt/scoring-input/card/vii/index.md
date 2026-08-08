@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/determinants/M"
   - "scoring-input/gphr"
   - "scoring-input/z"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-card-vi-x-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Cartões] VII
@@ -59,7 +58,3 @@ Esta página resume o que vale a pena revisar em conteúdo humano, organização
 - [[Codificação/Determinantes] M](ref://scoring-input/determinants/M)
 - [[Codificação/GHR-PHR] GHR/PHR](ref://scoring-input/gphr)
 - [[Codificação/Z] Z](ref://scoring-input/z)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

@@ -12,9 +12,8 @@ relatedRoutes:
   - "scoring-input/fq"
   - "scoring-input/determinants/M"
   - "scoring-input/special-score/AB"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Form Quality] none
@@ -48,7 +47,3 @@ A blank field is unfinished coding, not `FQnone`; select `none` explicitly when 
 - [[Coding/Form Quality] FQ](ref://scoring-input/fq)
 - [[Coding/Determinants] M](ref://scoring-input/determinants/M)
 - [[Coding/Special Scores] AB](ref://scoring-input/special-score/AB)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

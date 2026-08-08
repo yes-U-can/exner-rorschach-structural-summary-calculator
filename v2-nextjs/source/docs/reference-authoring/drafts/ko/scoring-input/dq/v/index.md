@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/dq/v/+"
   - "scoring-input/dq/+"
   - "result-interpretation/lower-section/processing/DQ_v_proc"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/dq/v/index.md"
 ---
 
 # 문서명: [부호화/발달질] v
@@ -60,8 +59,3 @@ DQv는 특정한 윤곽이나 구조를 정교화하지 않고, 반점이나 반
 - [\[부호화/발달질\] v/+](ref://scoring-input/dq/v/%2B)
 - [\[부호화/발달질\] +](ref://scoring-input/dq/%2B)
 - [\[해석/Processing\] DQv](ref://result-interpretation/lower-section/processing/DQ_v_proc)
-
-## 근거 메모
-
-- 세부 근거 대조와 용어 판단 기록은 내부 작업 메모에서 관리한다.
-- 공개 참조 문서 반영 단계에서는 내부 provenance가 노출되지 않도록 분리한다.

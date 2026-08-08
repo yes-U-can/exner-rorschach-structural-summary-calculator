@@ -21,9 +21,8 @@ relatedRoutes:
   - "scoring-input/z"
   - "scoring-input/gphr"
   - "scoring-input/special-score"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # [コーディング] score
@@ -67,7 +66,3 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 - [[コーディング/Z] Z](ref://scoring-input/z)
 - [[コーディング/GHR-PHR] GHR/PHR](ref://scoring-input/gphr)
 - [[コーディング/特殊スコア] 特殊スコア](ref://scoring-input/special-score)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

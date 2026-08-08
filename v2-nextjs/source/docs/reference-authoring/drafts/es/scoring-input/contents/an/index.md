@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/contents/Art"
   - "scoring-input/gphr/PHR"
   - "result-interpretation/lower-section/selfPerception/An_Xy"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/contents/an/index.md"
 ---
 
 # Nombre del documento: [Codificación/Contenido] An
@@ -54,8 +53,3 @@ No basta con que parezca un fragmento de animal; la idea principal tiene que ser
 - [[Codificación/Contenido] Art](ref://scoring-input/contents/Art)
 - [[Codificación/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
 - [[Interpretación/Self Perception] An + Xy](ref://result-interpretation/lower-section/selfPerception/An_Xy)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

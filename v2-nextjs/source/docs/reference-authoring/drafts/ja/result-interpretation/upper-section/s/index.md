@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/location/S"
   - "result-interpretation/lower-section/affect/S_aff"
   - "result-interpretation/lower-section/mediation/S_minus"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-upper-section-location-dq-2026-03-10.md"
 ---
 
 # [解釈/Upper Section] S
@@ -55,7 +54,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-upper-section-loca
 - [[コーディング/位置] S](ref://scoring-input/location/S)
 - [[解釈/Affect] S](ref://result-interpretation/lower-section/affect/S_aff)
 - [[解釈/Mediation] S-%](ref://result-interpretation/lower-section/mediation/S_minus)
-
-## 根拠メモ
-
-- 詳細な出典比較は内部 provenance note に分けて保持します。

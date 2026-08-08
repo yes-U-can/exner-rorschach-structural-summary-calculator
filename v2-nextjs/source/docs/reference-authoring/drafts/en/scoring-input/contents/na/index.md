@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/contents/Bt"
   - "scoring-input/contents/Ls"
   - "scoring-input/contents/Cl"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Content] Na
@@ -51,7 +50,3 @@ The response points to "nature" as a whole rather than to one isolated object.
 - [[Coding/Content] Bt](ref://scoring-input/contents/Bt)
 - [[Coding/Content] Ls](ref://scoring-input/contents/Ls)
 - [[Coding/Content] Cl](ref://scoring-input/contents/Cl)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

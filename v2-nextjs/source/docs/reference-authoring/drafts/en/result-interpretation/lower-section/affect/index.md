@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/affect/S_aff"
   - "result-interpretation/lower-section/affect/Blends_R"
   - "result-interpretation/lower-section/affect/CP"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Lower Section/Affect] Affect
@@ -56,7 +55,3 @@ This section is usually reviewed through `FC:CF+C`, `Pure C`, `SumC / WSumC`, `A
 - [[Interpretation/Affect] S](ref://result-interpretation/lower-section/affect/S_aff)
 - [[Interpretation/Affect] Blends:R](ref://result-interpretation/lower-section/affect/Blends_R)
 - [[Interpretation/Affect] CP](ref://result-interpretation/lower-section/affect/CP)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

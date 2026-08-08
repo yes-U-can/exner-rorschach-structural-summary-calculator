@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/determinants/V"
   - "scoring-input/determinants/Y"
   - "result-interpretation/lower-section/core/SumCprime"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Determinants] C'F
@@ -57,7 +56,3 @@ The response depends more on black, white, or gray used as color than on formal 
 - [[Coding/Determinants] V](ref://scoring-input/determinants/V)
 - [[Coding/Determinants] Y](ref://scoring-input/determinants/Y)
 - [[Interpretation/Core] SumCprime](ref://result-interpretation/lower-section/core/SumCprime)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/determinants/CF"
   - "scoring-input/determinants/FC"
   - "result-interpretation/lower-section/core/EB"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/affect/purec/index.md"
 ---
 
 # [해석/Affect] Pure C
@@ -56,7 +55,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `SumC / WSumC`
 - `CP`
 - `EB`
-
-## 근거 메모
-
-- 낮은 base rate 메모는 provenance note에 분리했다.

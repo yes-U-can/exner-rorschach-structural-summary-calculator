@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/contents/(Ad)"
   - "scoring-input/contents/Hd"
   - "scoring-input/contents/An"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Content] Ad
@@ -54,7 +53,3 @@ It covers a tail, head, wing, claw, or other clearly partial animal feature.
 - [[Coding/Content] (Ad)](ref://scoring-input/contents/%28Ad%29)
 - [[Coding/Content] Hd](ref://scoring-input/contents/Hd)
 - [[Coding/Content] An](ref://scoring-input/contents/An)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

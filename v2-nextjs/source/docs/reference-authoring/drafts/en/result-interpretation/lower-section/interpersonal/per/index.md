@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/special-score/PER"
   - "result-interpretation/lower-section/mediation/Xu_percent"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Interpersonal] PER
@@ -67,7 +66,3 @@ In interpretation, it suggests how much a self-referential frame shapes the pers
 - [[Coding/Special Scores] PER](ref://scoring-input/special-score/PER)
 - [[Interpretation/Mediation] Xu%](ref://result-interpretation/lower-section/mediation/Xu_percent)
 - [[Interpretation/Self Perception] H Ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

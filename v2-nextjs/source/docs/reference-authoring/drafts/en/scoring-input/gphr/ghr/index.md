@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/popular"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
   - "result-interpretation/lower-section/interpersonal/PureH"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/GHR-PHR] GHR
@@ -60,7 +59,3 @@ It is not a free clinical judgment, but the result of moving through the sequenc
 - [[Coding/Popular] P](ref://scoring-input/popular)
 - [[Interpretation/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
 - [[Interpretation/Interpersonal] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/special-score/MOR"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/gphr/phr/index.md"
 ---
 
 # 문서명: [부호화/GHR-PHR] PHR
@@ -60,8 +59,3 @@ PHR은 인간 표상 반응 중에서 왜곡, 손상, 부적절성, 불안정성
 - [\[부호화/특수점수\] MOR](ref://scoring-input/special-score/MOR)
 - [\[해석/Interpersonal\] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
 - [\[해석/Self Perception\] H Ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
-
-## 근거 메모
-
-- 상세 근거와 출처 충돌 메모는 provenance note에 분리해 둔다.
-- 공개용 본문에는 저작권 자료명을 직접 노출하지 않는다.

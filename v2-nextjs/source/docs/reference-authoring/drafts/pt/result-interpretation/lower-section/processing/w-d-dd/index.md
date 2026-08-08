@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/location/W"
   - "scoring-input/location/D"
   - "scoring-input/location/Dd"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-processing-zf-zd-wddd-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Processamento] W:D:Dd
@@ -58,7 +57,3 @@ No processamento, ele é usado para ver se a pessoa tende a abranger o campo int
 - [[Codificação/Localização] W](ref://scoring-input/location/W)
 - [[Codificação/Localização] D](ref://scoring-input/location/D)
 - [[Codificação/Localização] Dd](ref://scoring-input/location/Dd)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

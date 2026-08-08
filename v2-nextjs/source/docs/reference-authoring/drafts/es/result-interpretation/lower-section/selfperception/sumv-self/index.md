@@ -20,9 +20,8 @@ relatedRoutes:
   - "scoring-input/determinants/FV"
   - "scoring-input/determinants/VF"
   - "result-interpretation/lower-section/core/AdjD"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/selfperception/sumv-self/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Self Perception] SumV
@@ -75,7 +74,3 @@ En `Core` también se vincula con carga de malestar, pero aquí se enfatiza su s
 - [[Codificación/Determinantes] FV](ref://scoring-input/determinants/FV)
 - [[Codificación/Determinantes] VF](ref://scoring-input/determinants/VF)
 - [[Interpretación/Core] AdjD](ref://result-interpretation/lower-section/core/AdjD)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

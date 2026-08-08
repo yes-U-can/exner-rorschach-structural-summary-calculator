@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/contents/(A)"
   - "scoring-input/contents/Ad"
   - "scoring-input/contents/Hd"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-contents-animal-2026-03-10.md"
 ---
 
 # [コーディング/内容] (Ad)
@@ -53,7 +52,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-contents-animal-20
 - [[コーディング/内容] (A)](ref://scoring-input/contents/%28A%29)
 - [[コーディング/内容] Ad](ref://scoring-input/contents/Ad)
 - [[コーディング/内容] Hd](ref://scoring-input/contents/Hd)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

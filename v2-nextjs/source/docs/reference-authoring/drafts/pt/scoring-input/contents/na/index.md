@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/contents/Cl"
   - "scoring-input/contents/Ge"
   - "result-interpretation/lower-section/interpersonal/ISO_Index"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-completion-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Conteúdo] Na
@@ -57,7 +56,3 @@ O foco precisa recair no ambiente ou fenômeno natural, e não em cartografia, v
 - [[Codificação/Conteúdo] Cl](ref://scoring-input/contents/Cl)
 - [[Codificação/Conteúdo] Ge](ref://scoring-input/contents/Ge)
 - [[Interpretação/Interpersonal] Índice de Isolamento](ref://result-interpretation/lower-section/interpersonal/ISO_Index)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

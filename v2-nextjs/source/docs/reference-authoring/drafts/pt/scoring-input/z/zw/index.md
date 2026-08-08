@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/dq/v/+"
   - "scoring-input/dq/o"
   - "result-interpretation/upper-section/Zf"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-z-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Z] ZW
@@ -52,7 +51,3 @@ A base é uma resposta `W` com qualidade desenvolvimental compatível.
 - [[Codificação/Qualidade Desenvolvimental] v/+](ref://scoring-input/dq/v/%2B)
 - [[Codificação/Qualidade Desenvolvimental] o](ref://scoring-input/dq/o)
 - [[Interpretação/Upper Section] Zf](ref://result-interpretation/upper-section/Zf)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

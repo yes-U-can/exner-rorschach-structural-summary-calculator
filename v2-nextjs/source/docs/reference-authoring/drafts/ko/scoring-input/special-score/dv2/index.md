@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/Sum6"
   - "result-interpretation/lower-section/ideation/Lv2"
   - "result-interpretation/lower-section/ideation/WSum6"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/special-score/dv2/index.md"
 ---
 
 # 문서명: [부호화/특수점수] DV2
@@ -55,8 +54,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/spec
 - [\[해석/Ideation\] Sum6](ref://result-interpretation/lower-section/ideation/Sum6)
 - [\[해석/Ideation\] Lv2](ref://result-interpretation/lower-section/ideation/Lv2)
 - [\[해석/Ideation\] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
-
-## 근거 메모
-
-- 상세 근거와 source 충돌 메모는 provenance note에 분리해 둔다.
-- 공개용 본문에는 저작권 자료명을 직접 노출하지 않는다.

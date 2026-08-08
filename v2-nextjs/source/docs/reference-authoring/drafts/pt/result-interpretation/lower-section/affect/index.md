@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/affect/S_aff"
   - "result-interpretation/lower-section/affect/Blends_R"
   - "result-interpretation/lower-section/affect/CP"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-affect-opening-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Seção Inferior/Afeto] Afeto
@@ -56,7 +55,3 @@ Esta seção costuma ser revisada por meio de `FC:CF+C`, `Pure C`, `SumC / WSumC
 - [[Interpretação/Afeto] S](ref://result-interpretation/lower-section/affect/S_aff)
 - [[Interpretação/Afeto] Blends:R](ref://result-interpretation/lower-section/affect/Blends_R)
 - [[Interpretação/Afeto] CP](ref://result-interpretation/lower-section/affect/CP)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

@@ -12,9 +12,8 @@ relatedRoutes:
   - "scoring-input/determinants/M"
   - "scoring-input/determinants/FM"
   - "result-interpretation/lower-section/core/m"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Determinants] m
@@ -52,7 +51,3 @@ Use only one inanimate-movement code in a response. If separate inanimate object
 - [[Coding/Determinants] M](ref://scoring-input/determinants/M)
 - [[Coding/Determinants] FM](ref://scoring-input/determinants/FM)
 - [[Interpretation/Core] m](ref://result-interpretation/lower-section/core/m)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

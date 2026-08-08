@@ -82,7 +82,8 @@ When using AI coding assistants:
 
 Reference:
 
-1. `docs/AI_SYSTEM_MASTERPLAN.md`
+1. `docs/ai-evals/README.md`
+2. `docs/ops/RELEASE_CHECKLIST.md`
 
 Additional non-negotiable rules for AI chat implementation:
 

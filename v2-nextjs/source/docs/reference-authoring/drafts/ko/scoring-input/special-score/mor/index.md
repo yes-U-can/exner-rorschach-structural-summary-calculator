@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/special-score/AG"
   - "result-interpretation/lower-section/ideation/MOR"
   - "result-interpretation/lower-section/selfPerception/MOR_self"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/special-score/mor/index.md"
 ---
 
 # 문서명: [부호화/특수점수] MOR
@@ -54,8 +53,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/spec
 - [\[부호화/특수점수\] AG](ref://scoring-input/special-score/AG)
 - [\[해석/Ideation\] MOR](ref://result-interpretation/lower-section/ideation/MOR)
 - [\[해석/Self Perception\] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
-
-## 근거 메모
-
-- 상세 근거와 source 충돌 메모는 provenance note에 분리해 둔다.
-- 공개용 본문에는 저작권 자료명을 직접 노출하지 않는다.

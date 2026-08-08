@@ -22,9 +22,8 @@ relatedRoutes:
   - "scoring-input/card/VIII"
   - "scoring-input/card/IX"
   - "scoring-input/card/X"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Cards] Card
@@ -69,7 +68,3 @@ This family does not interpret the global symbolic meaning of each card; it work
 - [[Coding/Cards] VIII](ref://scoring-input/card/VIII)
 - [[Coding/Cards] IX](ref://scoring-input/card/IX)
 - [[Coding/Cards] X](ref://scoring-input/card/X)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

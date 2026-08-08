@@ -23,9 +23,8 @@ relatedRoutes:
   - "scoring-input/fq"
   - "scoring-input/popular"
   - "scoring-input/location/S"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/mediation/index.md"
 ---
 
 # [해석/Lower Section/Mediation] Mediation
@@ -68,7 +67,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `P`
 - `X+%`
 - `Xu%`
-
-## 근거 메모
-
-- locale별 용어 차이와 app route 이름 대응 메모는 provenance note에 분리했다.

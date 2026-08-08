@@ -20,9 +20,8 @@ relatedRoutes:
   - "scoring-input/z"
   - "scoring-input/gphr"
   - "scoring-input/special-score"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-score-pair-popular-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação] score
@@ -65,7 +64,3 @@ No Comprehensive System, significa converter cada resposta de Rorschach em uma c
 - [[Codificação/Z] Z](ref://scoring-input/z)
 - [[Codificação/GHR-PHR] GHR/PHR](ref://scoring-input/gphr)
 - [[Codificação/Códigos Especiais] Códigos Especiais](ref://scoring-input/special-score)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/special-score/FABCOM2"
   - "result-interpretation/lower-section/ideation/Sum6"
   - "result-interpretation/lower-section/ideation/WSum6"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/special-score/contam/index.md"
 ---
 
 # Nombre del documento: [Codificación/Puntuaciones especiales] CONTAM
@@ -54,8 +53,3 @@ No describe solo una mezcla rara, sino una integración imposible dentro de un m
 - [[Codificación/Puntuaciones especiales] FABCOM2](ref://scoring-input/special-score/FABCOM2)
 - [[Interpretación/Ideation] Sum6](ref://result-interpretation/lower-section/ideation/Sum6)
 - [[Interpretación/Ideation] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

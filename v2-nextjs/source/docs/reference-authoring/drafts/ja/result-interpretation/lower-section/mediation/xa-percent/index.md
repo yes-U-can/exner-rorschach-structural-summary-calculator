@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/mediation/X_minus_percent"
   - "scoring-input/fq"
   - "scoring-input/popular"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-mediation-opening-xa-wda-2026-03-10.md"
 ---
 
 # [Interpretation/Mediation] XA%
@@ -55,7 +54,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-mediation-opening-
 - [[解釈/Mediation] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
 - [[Coding/FQ] FQ](ref://scoring-input/fq)
 - [[Coding/Popular] Popular](ref://scoring-input/popular)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

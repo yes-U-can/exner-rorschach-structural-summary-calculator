@@ -23,9 +23,8 @@ relatedRoutes:
   - "scoring-input/determinants/Cn"
   - "result-interpretation/lower-section/core/EB"
   - "result-interpretation/lower-section/core/EA"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Affect] FC:CF+C
@@ -68,7 +67,3 @@ In interpretation, it helps estimate whether emotion is more formally modulated 
 - [[Coding/Determinants] Cn](ref://scoring-input/determinants/Cn)
 - [[Interpretation/Core] EB](ref://result-interpretation/lower-section/core/EB)
 - [[Interpretation/Core] EA](ref://result-interpretation/lower-section/core/EA)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

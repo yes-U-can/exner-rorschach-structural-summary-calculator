@@ -23,9 +23,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/SumT"
   - "result-interpretation/lower-section/ideation/a_p"
   - "result-interpretation/lower-section/selfPerception"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Lower Section/Interpersonal] Interpersonal
@@ -84,7 +83,3 @@ In this cluster, the main focus is on `COP`, `AG`, `GHR:PHR`, `a:p`, `Food`, `Su
 - [[Interpretation/Core] SumT](ref://result-interpretation/lower-section/core/SumT)
 - [[Interpretation/Ideation] a:p](ref://result-interpretation/lower-section/ideation/a_p)
 - [[Interpretation/Lower Section/Self Perception] Self Perception](ref://result-interpretation/lower-section/selfPerception)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

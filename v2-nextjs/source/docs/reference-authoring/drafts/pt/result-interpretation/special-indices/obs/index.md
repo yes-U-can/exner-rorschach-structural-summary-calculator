@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/mediation/P"
   - "scoring-input/fq/+"
   - "scoring-input/popular"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Nome do documento: [Interpretação/Índices Especiais] Índice de Estilo Obsessivo
@@ -70,7 +69,3 @@ A evidência de validade de construto é insuficiente para inferir traços obses
 - [[Interpretação/Mediação] P](ref://result-interpretation/lower-section/mediation/P)
 - [[Codificação/FQ] +](ref://scoring-input/fq/%2B)
 - [[Codificação/Popular] Popular](ref://scoring-input/popular)
-
-## Nota de base
-
-- O registro detalhado da revisão é mantido na nota interna de verificação.

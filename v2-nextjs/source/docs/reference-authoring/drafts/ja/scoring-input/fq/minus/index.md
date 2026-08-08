@@ -12,9 +12,8 @@ relatedRoutes:
   - "scoring-input/fq/u"
   - "scoring-input/fq/o"
   - "result-interpretation/lower-section/mediation/X_minus_percent"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # [コーディング/形態水準] -
@@ -48,7 +47,3 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 - [[コーディング/形態水準] u](ref://scoring-input/fq/u)
 - [[コーディング/形態水準] o](ref://scoring-input/fq/o)
 - [[解釈/媒介] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
-
-## 根拠メモ
-
-- 詳細な出典比較は内部 provenance note に記録します。

@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/contents/Bt"
   - "scoring-input/contents/Ge"
   - "result-interpretation/lower-section/interpersonal/ISO_Index"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-completion-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Conteúdo] Ls
@@ -56,7 +55,3 @@ O foco principal é a configuração de ambiente, não apenas um objeto isolado 
 - [[Codificação/Conteúdo] Bt](ref://scoring-input/contents/Bt)
 - [[Codificação/Conteúdo] Ge](ref://scoring-input/contents/Ge)
 - [[Interpretação/Interpersonal] Índice de Isolamento](ref://result-interpretation/lower-section/interpersonal/ISO_Index)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

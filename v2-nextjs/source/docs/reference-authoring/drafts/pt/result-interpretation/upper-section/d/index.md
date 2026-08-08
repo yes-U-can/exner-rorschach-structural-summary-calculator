@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/Dd"
   - "scoring-input/location/D"
   - "result-interpretation/lower-section/processing/W_D_Dd"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-upper-section-family-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Seção Superior] D
@@ -51,7 +50,3 @@ Na interpretação, funciona como indicador básico de atenção a unidades prá
 - [[Interpretação/Seção Superior] Dd](ref://result-interpretation/upper-section/Dd)
 - [[Codificação/Localização] D](ref://scoring-input/location/D)
 - [[Interpretação/Processing] W:D:Dd](ref://result-interpretation/lower-section/processing/W_D_Dd)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

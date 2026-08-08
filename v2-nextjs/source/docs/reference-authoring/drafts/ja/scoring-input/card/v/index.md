@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/popular"
   - "scoring-input/card/I"
   - "scoring-input/determinants/V"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-card-i-v-2026-03-10.md"
 ---
 
 # [コーディング/カード] V
@@ -58,7 +57,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-card-i-v-2026-03-1
 - [[コーディング/Popular] Popular](ref://scoring-input/popular)
 - [[コーディング/カード] I](ref://scoring-input/card/I)
 - [[コーディング/決定因] V](ref://scoring-input/determinants/V)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

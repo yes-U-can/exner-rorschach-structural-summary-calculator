@@ -17,9 +17,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/mediation/X_minus_percent"
   - "scoring-input/fq/+"
   - "scoring-input/popular"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/mediation/x-plus-percent/index.md"
 ---
 
 # 문서명: [해석/Mediation] X+%
@@ -69,7 +68,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[해석/Mediation\] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
 - [\[부호화/형태질\] +](ref://scoring-input/fq/%2B)
 - [\[부호화/인기반응\] Popular](ref://scoring-input/popular)
-
-## 근거 메모
-
-- `X+% < .61`, `< .50`, `> .89` 관련 절단값 메모는 provenance note에 분리했다.

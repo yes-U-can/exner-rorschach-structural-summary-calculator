@@ -18,9 +18,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/processing"
   - "result-interpretation/lower-section/interpersonal"
   - "result-interpretation/lower-section/selfPerception"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Lower Section] Lower Section
@@ -73,7 +72,3 @@ Si el `Upper Section` funciona como pantalla inicial, el `Lower Section` suele s
 - [[Interpretación/Lower Section/Processing] Processing](ref://result-interpretation/lower-section/processing)
 - [[Interpretación/Lower Section/Interpersonal] Interpersonal](ref://result-interpretation/lower-section/interpersonal)
 - [[Interpretación/Lower Section/Self Perception] Self Perception](ref://result-interpretation/lower-section/selfPerception)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

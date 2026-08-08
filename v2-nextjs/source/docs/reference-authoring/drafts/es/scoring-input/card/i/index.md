@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/contents/A"
   - "scoring-input/popular"
   - "scoring-input/card/V"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/card/i/index.md"
 ---
 
 # Nombre del documento: [Codificación/Láminas] I
@@ -58,8 +57,3 @@ En esta página se resume qué tipo de respuestas suelen aparecer con frecuencia
 - [[Codificación/Contenido] A](ref://scoring-input/contents/A)
 - [[Codificación/Popular] Popular](ref://scoring-input/popular)
 - [[Codificación/Láminas] V](ref://scoring-input/card/V)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

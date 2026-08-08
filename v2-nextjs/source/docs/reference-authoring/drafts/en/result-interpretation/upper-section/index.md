@@ -25,9 +25,8 @@ relatedRoutes:
   - "scoring-input/z"
   - "scoring-input/location"
   - "scoring-input/dq"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Upper Section] Upper Section
@@ -75,7 +74,3 @@ It works as an initial screen for how the person organizes the stimulus field, w
 - [[Coding/Z] Z](ref://scoring-input/z)
 - [[Coding/Location] Location](ref://scoring-input/location)
 - [[Coding/Developmental Quality] DQ](ref://scoring-input/dq)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

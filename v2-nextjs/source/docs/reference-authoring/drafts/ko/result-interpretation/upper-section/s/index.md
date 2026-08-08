@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/location/S"
   - "result-interpretation/lower-section/affect/S_aff"
   - "result-interpretation/lower-section/mediation/S_minus"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/upper-section/s/index.md"
 ---
 
 # [해석/Upper Section] S
@@ -55,7 +54,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `AG`
 - `PER`
 - `W_D_Dd`
-
-## 근거 메모
-
-- 상세 기준과 수치 메모는 provenance note에 분리했다.

@@ -22,9 +22,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/R"
   - "result-interpretation/special-indices/CDI"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Interpersonal] Isolation Index
@@ -81,7 +80,3 @@ In interpretation, it helps estimate how much the record is organized around dis
 - [[Interpretation/Core] R](ref://result-interpretation/lower-section/core/R)
 - [[Interpretation/Special Indices] CDI](ref://result-interpretation/special-indices/CDI)
 - [[Interpretation/Special Indices] DEPI](ref://result-interpretation/special-indices/DEPI)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

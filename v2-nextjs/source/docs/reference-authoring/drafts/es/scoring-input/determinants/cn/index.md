@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/determinants/CF"
   - "scoring-input/determinants/C"
   - "result-interpretation/lower-section/affect/FC_CF_C"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/determinants/cn/index.md"
 ---
 
 # Nombre del documento: [Codificación/Determinantes] Cn
@@ -55,8 +54,3 @@ Por eso `Cn` no entra en la familia cromática `C / CF / FC` como código de col
 - [[Codificación/Determinantes] CF](ref://scoring-input/determinants/CF)
 - [[Codificación/Determinantes] C](ref://scoring-input/determinants/C)
 - [[Interpretación/Affect] FC:CF+C](ref://result-interpretation/lower-section/affect/FC_CF_C)
-
-## Nota de fundamento
-
-- La justificación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

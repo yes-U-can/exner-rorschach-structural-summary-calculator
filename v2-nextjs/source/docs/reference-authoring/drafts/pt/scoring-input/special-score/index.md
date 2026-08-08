@@ -51,9 +51,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/Lv2"
   - "result-interpretation/lower-section/ideation/WSum6"
   - "result-interpretation/lower-section/selfPerception/MOR_self"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-special-score-overview-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Códigos Especiais] Códigos Especiais
@@ -143,7 +142,3 @@ Cada código descreve um aspecto específico da resposta e deve ser aplicado pel
 - [[Interpretação/Ideation] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
 - [[Interpretação/Affect] CP](ref://result-interpretation/lower-section/affect/CP)
 - [[Interpretação/Autopercepção] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

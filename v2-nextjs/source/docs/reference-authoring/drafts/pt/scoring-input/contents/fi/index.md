@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/Cl"
   - "scoring-input/contents/Ex"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-completion-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Conteúdo] Fi
@@ -50,7 +49,3 @@ O código recai no material ardente ou fumegante em si.
 - [[Codificação/Conteúdo] Contents](ref://scoring-input/contents)
 - [[Codificação/Conteúdo] Cl](ref://scoring-input/contents/Cl)
 - [[Codificação/Conteúdo] Ex](ref://scoring-input/contents/Ex)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

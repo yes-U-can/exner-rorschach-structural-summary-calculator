@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/contents/(H)"
   - "scoring-input/determinants/M"
   - "scoring-input/fq"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/card/ix/index.md"
 ---
 
 # Nombre del documento: [Codificación/Láminas] IX
@@ -58,8 +57,3 @@ La página resume qué conviene vigilar en el contenido humano, el movimiento y 
 - [[Codificación/Contenido] (H)](ref://scoring-input/contents/%28H%29)
 - [[Codificación/Determinantes] M](ref://scoring-input/determinants/M)
 - [[Codificación/FQ] FQ](ref://scoring-input/fq)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

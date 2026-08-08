@@ -24,10 +24,10 @@ Cada nota de atualização registra o que mudou, as condições que podem ser af
 
 - [Next.js] Aplicativo web: [exner.yesucan.co.kr](https://exner.yesucan.co.kr)
 - [Next.js] Versão 2 mais recente: [v2-nextjs/releases/v2.2.10](./v2-nextjs/releases/v2.2.10/README.pt-BR.md)
-- [Next.js] Auditoria documental completa e limites entre sistemas na v2.2.10: [v2-nextjs/methodology/reference-audit-v2.2.10](./v2-nextjs/methodology/reference-audit-v2.2.10/README.pt-BR.md)
+- [Next.js] Fontes de cálculo e escopo bibliográfico da v2.2.10: [v2-nextjs/methodology/reference-audit-v2.2.10](./v2-nextjs/methodology/reference-audit-v2.2.10/README.pt-BR.md)
 - [Next.js] Verificação de fontes primárias da v2.2.10: [v2-nextjs/source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md](./v2-nextjs/source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md)
 - [Next.js] Nova verificação da precisão de cálculo da v2.2.2: [v2-nextjs/source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md](./v2-nextjs/source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md)
-- [Next.js] Explicação de Cn da v2.2.2 e chamadas reais ao GPT-5.5 em 5 idiomas: [v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md](./v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md)
+- [Next.js] Explicação de Cn da v2.2.2 e verificações do limite de resposta em 5 idiomas: [v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md](./v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md)
 - [Next.js] Validação da interface da v2.2.0: [v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md](./v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md)
 - [Next.js] Validação dos limites temáticos de IA da v2.2.0: [v2-nextjs/source/docs/ai-evals/2026-07-15-v2.2.0-exner-domain-boundary-report.md](./v2-nextjs/source/docs/ai-evals/2026-07-15-v2.2.0-exner-domain-boundary-report.md)
 - [Next.js] Estudo de caso sobre o controle de respostas de IA na v2.1.2: [docs/case-studies/v2.1.2-ai-harness.md](./docs/case-studies/v2.1.2-ai-harness.md)
@@ -55,9 +55,9 @@ O trabalho relacionado da v2.1.8 à v2.1.10 está registrado nas respectivas not
 
 A v2.2.10 restaura a razão `GHR:PHR` ausente na Lower Section da tela e do PDF, seguindo a disposição original do Sumário Estrutural. Também organiza as tabelas comuns da Lower Section no PDF e recupera as decisões gerais e os separadores dos Special Indices. GHR e PHR já eram classificados e somados, portanto não é necessário recalcular protocolos existentes.
 
-Para esta versão, os materiais disponíveis foram organizados em 53 grupos documentais, com revisão dos sumários e dos capítulos pertinentes. A base de cálculo do Sistema Compreensivo de Exner foi novamente comparada às páginas impressas do Volume 1, 4.ª edição, e do Workbook, 5.ª edição, abrangendo a Upper Section, a Lower Section, os seis Special Indices e as principais regras de entrada. O R-PAS e outros sistemas de Rorschach não foram misturados à base de cálculo; foram examinados para distinguir termos semelhantes que têm significados diferentes. A auditoria não encontrou nenhum novo defeito que altere os resultados calculados.
+Para esta versão, 50 obras publicadas foram classificadas como fontes diretas de cálculo, apoio interpretativo, limites com outros sistemas de Rorschach, contexto histórico e de pesquisa ou materiais fora do escopo do produto; em seguida, seus sumários e capítulos pertinentes foram revisados. A base de cálculo do Sistema Compreensivo de Exner foi novamente comparada às páginas impressas do Volume 1, 4.ª edição, e do Workbook, 5.ª edição, abrangendo a Upper Section, a Lower Section, os seis Special Indices e as principais regras de entrada. O R-PAS e outros sistemas de Rorschach não foram misturados à base de cálculo; foram examinados para distinguir termos semelhantes que têm significados diferentes. A auditoria não encontrou nenhum novo defeito que altere os resultados calculados.
 
-Os documentos Interpersonal em cinco idiomas e os 5604 vetores de busca foram atualizados. Também foram ampliados os testes que distinguem perguntas do Sistema Compreensivo de Exner de outros sistemas e de tentativas de extrair instruções internas. As obras, edições, páginas impressas, o papel de cada material e as limitações restantes estão na [nota da v2.2.10](./v2-nextjs/releases/v2.2.10/README.pt-BR.md), na [auditoria completa de 53 grupos documentais e limites entre sistemas](./v2-nextjs/methodology/reference-audit-v2.2.10/README.pt-BR.md) e na [verificação do Sumário Estrutural com as fontes primárias](./v2-nextjs/source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md).
+Os documentos Interpersonal em cinco idiomas agora explicam `GHR:PHR`. Também foram reforçados os limites de resposta para que as regras de outros sistemas de Rorschach não sejam misturadas aos cálculos do Sistema Compreensivo de Exner. As obras, edições, páginas impressas, o papel de cada material e as limitações restantes estão na [nota da v2.2.10](./v2-nextjs/releases/v2.2.10/README.pt-BR.md), em [fontes de cálculo e escopo bibliográfico](./v2-nextjs/methodology/reference-audit-v2.2.10/README.pt-BR.md) e na [verificação das fontes de cálculo](./v2-nextjs/source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md).
 
 ## v2.2.9
 
@@ -69,7 +69,7 @@ As fórmulas do Sumário Estrutural e as regras de resposta da IA não mudaram, 
 
 A v2.2.8 é uma correção de erros que impede a contagem dupla do mesmo código de Conteúdo em uma resposta e unifica as regras de normalização das interfaces de computador e móvel. Os dados de exemplo não substituem mais um salvamento automático existente, e foram reforçados o salvamento da última edição e a validação de dados danificados.
 
-As fórmulas do Sumário Estrutural não mudaram. Protocolos existentes inseridos conforme as regras não precisam ser recalculados. Devem ser revistos com o material original e recalculados apenas os registros que contenham um código de Conteúdo duplicado em uma resposta; que tenham armazenado resultados diferentes entre as interfaces de computador e móvel para Special Scores Level 1 e Level 2; que tenham armazenado na interface móvel apenas determinantes sem forma (`C`, `C'`, `T`, `V`, `Y` ou `Cn`) com um valor de [FQ] diferente de `none`; ou que conservem um código Z não aceito ou um escore Z que não pertença ao cartão. Os documentos de S-CON e as regras de resposta de IA agora apresentam os 12 critérios e o limite de 8 critérios nos cinco idiomas; nenhum campo de idade foi adicionado. O OpenAI Codex e o Claude Opus 5 executaram separadamente chamadas pagas ao GPT-5.5, e o registro inclui tanto um resultado de contrato que não voltou a se reproduzir quanto as verificações posteriores. Consulte a [nota da v2.2.8](./v2-nextjs/releases/v2.2.8/README.pt-BR.md) para mais detalhes.
+As fórmulas do Sumário Estrutural não mudaram. Protocolos existentes inseridos conforme as regras não precisam ser recalculados. Devem ser revistos com o material original e recalculados apenas os registros que contenham um código de Conteúdo duplicado em uma resposta; que tenham armazenado resultados diferentes entre as interfaces de computador e móvel para Special Scores Level 1 e Level 2; que tenham armazenado na interface móvel apenas determinantes sem forma (`C`, `C'`, `T`, `V`, `Y` ou `Cn`) com um valor de [FQ] diferente de `none`; ou que conservem um código Z não aceito ou um escore Z que não pertença ao cartão. Os documentos de S-CON e as regras de resposta de IA agora apresentam os 12 critérios e o limite de 8 critérios nos cinco idiomas; nenhum campo de idade foi adicionado. Consulte a [nota da v2.2.8](./v2-nextjs/releases/v2.2.8/README.pt-BR.md) para mais detalhes.
 
 ## v2.2.7
 
@@ -87,13 +87,13 @@ Também foi corrigido um problema de alguns navegadores no Windows em que `Alt+r
 
 A v2.2.5 separa a entrada do determinante de movimento de cada resposta dos totais de família exibidos no Sumário Estrutural. A tabela de codificação deixa de oferecer `M`, `FM` e `m` sem sufixo ativo ou passivo; em seu lugar, são usados códigos completos como `Ma`, `Mp` e `Ma-p`. Os totais `M`, `FM` e `m` do Sumário Estrutural e os cálculos de EB, MQual e W:M permanecem inalterados.
 
-Protocolos existentes que já usam códigos completos não precisam ser recalculados. Se um salvamento automático antigo contiver um código de movimento sem o sufixo ativo ou passivo, o aplicativo preserva a entrada original, interrompe o cálculo e identifica a linha e o código que precisam de revisão. Foram verificados novamente os documentos de referência em cinco idiomas, 5604 vetores de busca, 365 perguntas de recuperação e perguntas de limite com chamadas reais ao GPT-5.5. A [nota da v2.2.5](./v2-nextjs/releases/v2.2.5/README.pt-BR.md) explica as condições afetadas e o exemplo hipotético no limite do CDI.
+Protocolos existentes que já usam códigos completos não precisam ser recalculados. Se um salvamento automático antigo contiver um código de movimento sem o sufixo ativo ou passivo, o aplicativo preserva a entrada original, interrompe o cálculo e identifica a linha e o código que precisam de revisão. Os documentos de referência e os limites de resposta em cinco idiomas também foram verificados. A [nota da v2.2.5](./v2-nextjs/releases/v2.2.5/README.pt-BR.md) explica as condições afetadas e o exemplo hipotético no limite do CDI.
 
 ## v2.2.4
 
 A v2.2.4 reorganizou os documentos de referência destinados às pessoas e o material pesquisado pelos assistentes de IA opcionais, sem alterar as fórmulas do Sumário Estrutural nem a entrada da tabela de codificação. Não é necessário recalcular resultados existentes.
 
-Os termos e a redação dos cinco idiomas foram comparados com fontes profissionais de cada idioma, e os títulos e a ordem dos documentos foram alinhados ao fluxo real de codificação e interpretação. Foram atualizados 1015 documentos de referência e 5589 vetores de busca, com 0 documentos ausentes, vetores desatualizados ou divergências de hash. Também foram reforçados o limite exato do sistema Exner CS, a recusa de injeções de prompt e os limites de solicitações. Foram aprovadas 66 conversas reais, de uma ou várias etapas, com GPT-5.5 nos cinco idiomas. A [nota da v2.2.4](./v2-nextjs/releases/v2.2.4/) apresenta os detalhes e as evidências públicas.
+Os termos e a redação dos cinco idiomas foram comparados com fontes profissionais de cada idioma, e os títulos e a ordem dos documentos foram alinhados ao fluxo real de codificação e interpretação. Foram atualizados 1015 documentos de referência e reforçados o escopo Exner CS, a recusa de injeções de prompt e os limites de solicitações. A [nota da v2.2.4](./v2-nextjs/releases/v2.2.4/) apresenta os detalhes.
 
 Uma revisão posterior também aperfeiçoou a escolha da forma de iniciar a codificação, a legibilidade dos documentos de referência e o controle de rolagem do assistente de codificação.
 
@@ -107,19 +107,19 @@ O título usado em buscas e compartilhamentos é `Yes, U Can!` em todos os idiom
 
 A v2.2.2 voltou a separar os cálculos que incluem Cn daqueles que o excluem. No rótulo convencional `FC:CF+C`, o valor à direita é `CF+C+Cn`, enquanto este aplicativo exclui Cn de WSumC, do critério 7 de S-CON e dos cálculos Color-Shading. **O valor exibido de Cn para protocolos completos já estava correto na v2.2.1, portanto esse ponto isolado não exige novo cálculo.** A atualização também impede que uma linha incompleta com Qualidade Formal (FQ) em branco receba classificação provisória GHR ou PHR.
 
-A planilha Excel de 2019, o programa original RorScore, a v1 GAS, o código atual da v2, CHESSSS, RAP3 e RIAP5 permitem verificar partes diferentes do cálculo; por isso, nenhum deles foi tratado como autoridade única. Foram aprovadas 376 verificações de cálculo e recursos, 101 critérios para respostas de IA e 222 gerações de páginas para distribuição. Também foram verificadas 10 perguntas diretas sobre Cn e 5 perguntas representativas por chamadas reais ao GPT-5.5 nos 5 idiomas. A única mudança de interface foi tornar a barra lateral esquerda totalmente opaca; a otimização específica para dispositivos móveis continua em versões posteriores da v2.2.x.
+A planilha Excel de 2019, o programa original RorScore, a v1 GAS, o código atual da v2, CHESSSS, RAP3 e RIAP5 permitem verificar partes diferentes do cálculo; por isso, nenhum deles foi tratado como autoridade única. Foram verificados o cálculo, os recursos, os limites de resposta e as páginas de distribuição. A única mudança de interface foi tornar a barra lateral esquerda totalmente opaca; a otimização específica para dispositivos móveis continua em versões posteriores da v2.2.x.
 
 ## v2.2.1
 
 A v2.2.1 corrigiu os cálculos de **Upper Section, Lower Section e Special Indices** exibidos pelo aplicativo, sem alterar a UI/UX nem acrescentar campos de entrada. Foram corrigidos os valores extremos de D/AdjD, as condições de exibição de EBPer, a ordem das regras GHR/PHR, os denominadores iguais a 0 de WDA% e Afr e a inclusão de Cn no valor à direita de `FC:CF+C`.
 
-A versão também informou pela primeira vez a localização pública e a função da planilha Excel de 2019 consultada no desenvolvimento inicial da v1. A verificação incluiu 25 cálculos com os mesmos códigos e notas em diferentes idiomas, 2000 protocolos sintéticos reproduzíveis e chamadas reais ao GPT-5.5 para codificação e interpretação.
+A versão também informou pela primeira vez a localização pública e a função da planilha Excel de 2019 consultada no desenvolvimento inicial da v1. A verificação incluiu cálculos com os mesmos códigos e notas em diferentes idiomas e protocolos sintéticos reproduzíveis.
 
 ## v2.2.0
 
 A v2.2.0 é a primeira versão v2.2.x a reunir a navegação principal do desktop em uma barra lateral esquerda e apresentar o assistente de interpretação como uma conversa convencional com IA. Também organizou a interrupção das respostas, a cópia e avaliação de mensagens, a rolagem da área de conversa, os documentos de referência, o arquivo de versões e o zoom e deslocamento da tabela de codificação.
 
-Os assistentes GPT-5.5 foram restringidos para não ampliar as respostas além do Sistema Compreensivo de Exner, e seu comportamento foi verificado com chamadas reais à API em coreano, japonês e inglês. Os pontos de cálculo identificados durante a revisão da v2.2.0 foram corrigidos na v2.2.1 e na v2.2.2. Consulte a v2.2.0 para o registro de UI/UX e o relatório de cálculo da v2.2.2 para os critérios atuais. As telas para dispositivos móveis são aperfeiçoadas separadamente nas versões posteriores da v2.2.x.
+Os assistentes de IA foram limitados ao Sistema Compreensivo de Exner. Os pontos de cálculo identificados durante a revisão da v2.2.0 foram corrigidos na v2.2.1 e na v2.2.2. Consulte a v2.2.0 para o registro de UI/UX e o relatório de cálculo da v2.2.2 para os critérios atuais. As telas para dispositivos móveis são aperfeiçoadas separadamente nas versões posteriores da v2.2.x.
 
 ## [Next.js] Histórico de versões 2
 
@@ -157,8 +157,6 @@ Os assistentes GPT-5.5 foram restringidos para não ampliar as respostas além d
 2. Instale as dependências com `npm install`.
 3. Crie um arquivo local de variáveis de ambiente a partir de `.env.example`.
 4. Verifique o aplicativo com `npm run build` ou `npm run dev`.
-
-O repositório público não contém variáveis de ambiente de produção, configurações da Vercel, registros locais, caches, notas privadas de trabalho, chaves de API, respostas originais do modelo nem dados privados de avaliação.
 
 </details>
 

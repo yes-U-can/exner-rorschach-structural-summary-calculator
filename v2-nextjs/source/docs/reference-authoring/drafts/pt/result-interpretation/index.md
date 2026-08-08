@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/lower-section"
   - "result-interpretation/special-indices"
   - "scoring-input"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-result-interpretation-overview-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação] result-interpretation
@@ -53,7 +52,3 @@ Ele não explica como codificar uma resposta isolada; ele explica como ler, em c
 - [[Interpretação/Seção Inferior] Lower Section](ref://result-interpretation/lower-section)
 - [[Interpretação/Índices Especiais] Special Índices](ref://result-interpretation/special-indices)
 - [[Codificação] scoring-input](ref://scoring-input)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

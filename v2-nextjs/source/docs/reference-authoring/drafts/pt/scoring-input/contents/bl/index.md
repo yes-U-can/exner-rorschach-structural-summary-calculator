@@ -12,9 +12,8 @@ relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/An"
   - "scoring-input/contents/Hd"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-completion-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Conteúdo] Bl
@@ -48,7 +47,3 @@ O código aponta para o próprio sangue, não apenas para anatomia geral.
 - [[Codificação/Conteúdo] Contents](ref://scoring-input/contents)
 - [[Codificação/Conteúdo] An](ref://scoring-input/contents/An)
 - [[Codificação/Conteúdo] Hd](ref://scoring-input/contents/Hd)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

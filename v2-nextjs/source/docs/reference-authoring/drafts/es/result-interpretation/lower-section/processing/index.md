@@ -21,9 +21,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/Zd"
   - "result-interpretation/lower-section/mediation"
   - "result-interpretation/lower-section/ideation"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/processing/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Lower Section/Procesamiento] Procesamiento
@@ -81,7 +80,3 @@ En esta zona se leen juntas `Zf`, `Zd`, `W:D:Dd`, `W:M`, `PSV`, `DQ+` y `DQv`.
 - [[Interpretación/Upper Section] Zd](ref://result-interpretation/upper-section/Zd)
 - [[Interpretación/Lower Section/Mediación] Mediación](ref://result-interpretation/lower-section/mediation)
 - [[Interpretación/Lower Section/Ideación] Ideación](ref://result-interpretation/lower-section/ideation)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

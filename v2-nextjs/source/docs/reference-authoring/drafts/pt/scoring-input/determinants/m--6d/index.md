@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/determinants/M"
   - "scoring-input/determinants/FM"
   - "result-interpretation/lower-section/core/m"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-determinants-movement-chromatic-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Determinantes] m
@@ -55,7 +54,3 @@ Em uma resposta, registre apenas um código de movimento inanimado. Se objetos i
 - [[Codificação/Determinantes] M](ref://scoring-input/determinants/M)
 - [[Codificação/Determinantes] FM](ref://scoring-input/determinants/FM)
 - [[Interpretação/Core] m](ref://result-interpretation/lower-section/core/m)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

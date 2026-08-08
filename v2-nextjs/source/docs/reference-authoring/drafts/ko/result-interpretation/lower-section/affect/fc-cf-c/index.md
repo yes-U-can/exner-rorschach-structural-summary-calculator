@@ -20,9 +20,8 @@ relatedRoutes:
   - "scoring-input/determinants/Cn"
   - "result-interpretation/lower-section/core/EB"
   - "result-interpretation/lower-section/core/EA"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/affect/fc-cf-c/index.md"
 ---
 
 # [해석/Affect] FC:CF+C
@@ -55,8 +54,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 
 - 이 비율 하나만으로 정서 개방성, 정서 자극량, 감정 회피를 모두 설명할 수는 없다.
 - 반드시 `Afr`, `Pure C`, `SumC / WSumC`, `EB`와 함께 읽어야 한다.
-
-## 근거 메모
-
-- 세부 출처 비교와 판단 근거는 내부 검토 메모에서 관리한다.
-- 표기 체계와 `Cn` 처리 메모는 provenance note에 분리했다.

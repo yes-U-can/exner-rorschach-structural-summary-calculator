@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/processing/DQ_plus_proc"
   - "scoring-input/dq/v"
   - "scoring-input/dq/v/+"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/processing/dq-v-proc/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Procesamiento] DQv
@@ -67,7 +66,3 @@ En interpretación funciona como una señal de que la calidad organizativa puede
 - [[Interpretación/Procesamiento] DQ+](ref://result-interpretation/lower-section/processing/DQ_plus_proc)
 - [[Codificación/DQ] v](ref://scoring-input/dq/v)
 - [[Codificación/DQ] v/+](ref://scoring-input/dq/v/%2B)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

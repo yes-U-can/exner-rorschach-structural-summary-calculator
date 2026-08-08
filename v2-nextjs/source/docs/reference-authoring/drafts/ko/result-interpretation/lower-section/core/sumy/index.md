@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/determinants/Y"
   - "scoring-input/determinants/FY"
   - "scoring-input/determinants/YF"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/core/sumy/index.md"
 ---
 
 # 문서명: [해석/Core] SumY
@@ -70,7 +69,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[부호화/결정인\] Y](ref://scoring-input/determinants/Y)
 - [\[부호화/결정인\] FY](ref://scoring-input/determinants/FY)
 - [\[부호화/결정인\] YF](ref://scoring-input/determinants/YF)
-
-## 근거 메모
-
-- situational distress와 hopelessness 메모는 provenance note에 분리했다.

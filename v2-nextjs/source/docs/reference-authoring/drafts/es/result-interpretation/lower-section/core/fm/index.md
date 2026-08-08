@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/AdjD"
   - "result-interpretation/lower-section/core/m"
   - "scoring-input/determinants/FM"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/core/fm/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Core] FM
@@ -69,7 +68,3 @@ En la lectura `core` suele funcionar como un componente del lado izquierdo de `e
 - [[Interpretación/Core] AdjD](ref://result-interpretation/lower-section/core/AdjD)
 - [[Interpretación/Core] m](ref://result-interpretation/lower-section/core/m)
 - [[Codificación/Determinantes] FM](ref://scoring-input/determinants/FM)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/determinants/FV"
   - "scoring-input/determinants/FT"
   - "result-interpretation/lower-section/core/SumY"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # [コーディング/決定因] YF
@@ -56,7 +55,3 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 - [[コーディング/決定因] FV](ref://scoring-input/determinants/FV)
 - [[コーディング/決定因] FT](ref://scoring-input/determinants/FT)
 - [[解釈/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/special-score/PER"
   - "result-interpretation/lower-section/mediation/Xu_percent"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/interpersonal/per/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Interpersonal] PER
@@ -67,7 +66,3 @@ En interpretación sugiere cuánto pesa un marco autorreferencial al mirar a otr
 - [[Codificación/Códigos Especiales] PER](ref://scoring-input/special-score/PER)
 - [[Interpretación/Mediation] Xu%](ref://result-interpretation/lower-section/mediation/Xu_percent)
 - [[Interpretación/Self Perception] H Ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

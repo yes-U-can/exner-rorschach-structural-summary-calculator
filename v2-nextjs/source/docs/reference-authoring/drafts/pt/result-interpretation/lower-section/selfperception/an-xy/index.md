@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/contents/An"
   - "scoring-input/contents/Xy"
   - "result-interpretation/special-indices/HVI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-selfperception-family-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Autopercepção] An + Xy
@@ -65,7 +64,3 @@ Em `Autopercepção`, funciona como pista de preocupação com o corpo, seu func
 - [[Codificação/Conteúdo] An](ref://scoring-input/contents/An)
 - [[Codificação/Conteúdo] Xy](ref://scoring-input/contents/Xy)
 - [[Interpretação/Índices Especiais] HVI](ref://result-interpretation/special-indices/HVI)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

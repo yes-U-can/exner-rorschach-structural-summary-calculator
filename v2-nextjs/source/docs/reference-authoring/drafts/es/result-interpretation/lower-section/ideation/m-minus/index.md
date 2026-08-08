@@ -18,9 +18,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/Mnone"
   - "scoring-input/determinants/M"
   - "result-interpretation/special-indices/PTI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/ideation/m-minus/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Ideación] M-
@@ -72,7 +71,3 @@ En interpretación, se usa como señal de imaginación humana mal ajustada, dist
 - [[Interpretación/Ideación] Mnone](ref://result-interpretation/lower-section/ideation/Mnone)
 - [[Codificación/Determinantes] M](ref://scoring-input/determinants/M)
 - [[Interpretación/Índices Especiales] PTI](ref://result-interpretation/special-indices/PTI)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/M_minus"
   - "result-interpretation/lower-section/ideation/Mnone"
   - "scoring-input/determinants/M"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Ideation] Ma:Mp
@@ -52,7 +51,3 @@ It helps show whether imagined human activity tends to be represented as acting 
 - [[Interpretation/Ideation] M-](ref://result-interpretation/lower-section/ideation/M_minus)
 - [[Interpretation/Ideation] Mnone](ref://result-interpretation/lower-section/ideation/Mnone)
 - [[Coding/Determinants] M](ref://scoring-input/determinants/M)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

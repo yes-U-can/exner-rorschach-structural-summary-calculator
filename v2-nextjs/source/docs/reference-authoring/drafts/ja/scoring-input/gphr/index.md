@@ -21,9 +21,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/interpersonal/HumanCont"
   - "result-interpretation/lower-section/interpersonal/PureH"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-gphr-2026-03-10.md"
 ---
 
 # [コーディング/GHR-PHR] GHR/PHR
@@ -67,7 +66,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-gphr-2026-03-10.md
 - [[解釈/対人関係] 人間内容](ref://result-interpretation/lower-section/interpersonal/HumanCont)
 - [[解釈/対人関係] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)
 - [[解釈/自己知覚] H比率](ref://result-interpretation/lower-section/selfPerception/H_ratio)
-
-## 根拠メモ
-
-- 詳細な出典比較は内部 provenance note に記録しています。

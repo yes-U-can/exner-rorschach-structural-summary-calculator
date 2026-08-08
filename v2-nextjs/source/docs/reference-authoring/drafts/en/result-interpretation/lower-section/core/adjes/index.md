@@ -18,9 +18,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/SumY"
   - "scoring-input/determinants/m"
   - "scoring-input/determinants/Y"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Core] AdjEs
@@ -60,7 +59,3 @@ It estimates how much burden remains after part of the weight from `m` and `Y` h
 - [[Interpretation/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
 - [[Coding/Determinants] m](ref://scoring-input/determinants/m)
 - [[Coding/Determinants] Y](ref://scoring-input/determinants/Y)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

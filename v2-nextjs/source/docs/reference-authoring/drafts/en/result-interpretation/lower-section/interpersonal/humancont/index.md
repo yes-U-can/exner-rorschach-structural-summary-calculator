@@ -21,9 +21,8 @@ relatedRoutes:
   - "scoring-input/gphr/GHR"
   - "scoring-input/gphr/PHR"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Interpersonal] Human Content
@@ -77,7 +76,3 @@ At the interpersonal level, it helps estimate how much weight people and human t
 - [[Coding/GHR-PHR] GHR](ref://scoring-input/gphr/GHR)
 - [[Coding/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
 - [[Interpretation/Self Perception] H Ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

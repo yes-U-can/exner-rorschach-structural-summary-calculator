@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/fq/-"
   - "result-interpretation/lower-section/ideation/WSum6"
   - "result-interpretation/special-indices/PTI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/mediation/x-minus-percent/index.md"
 ---
 
 # 문서명: [해석/Mediation] X-%
@@ -68,7 +67,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[부호화/형태질\] -](ref://scoring-input/fq/-)
 - [\[해석/Ideation\] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
 - [\[해석/Special Indices\] PTI](ref://result-interpretation/special-indices/PTI)
-
-## 근거 메모
-
-- `X-% > .29`, `> .40`, `> .20` 계열 cut-off 메모는 provenance note에 분리했다.

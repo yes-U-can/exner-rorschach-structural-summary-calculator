@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/dq/v/+"
   - "scoring-input/dq/o"
   - "result-interpretation/upper-section/Zf"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/z/zw/index.md"
 ---
 
 # Nombre del documento: [Codificación/Z] ZW
@@ -52,7 +51,3 @@ La base es una respuesta `W` con calidad evolutiva compatible.
 - [[Codificación/Calidad evolutiva] v/+](ref://scoring-input/dq/v/%2B)
 - [[Codificación/Calidad evolutiva] o](ref://scoring-input/dq/o)
 - [[Interpretación/Upper Section] Zf](ref://result-interpretation/upper-section/Zf)
-
-## Nota de fundamento
-
-- La provenance interna conserva el criterio de exclusión de `Wv` y la prioridad de tipo Z.

@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/determinants/Fr"
   - "scoring-input/determinants/rF"
   - "result-interpretation/lower-section/selfPerception/_3r_2_R"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-score-pair-popular-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Pair] Pair
@@ -53,7 +52,3 @@ A chave não é apenas haver duas coisas, mas tratá-las como par equivalente de
 - [[Codificação/Determinantes] Fr](ref://scoring-input/determinants/Fr)
 - [[Codificação/Determinantes] rF](ref://scoring-input/determinants/rF)
 - [[Interpretação/Self Perception] Egocentricity Index](ref://result-interpretation/lower-section/selfPerception/_3r_2_R)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

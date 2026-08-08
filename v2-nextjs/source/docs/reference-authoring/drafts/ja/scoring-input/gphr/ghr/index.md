@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/popular"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
   - "result-interpretation/lower-section/interpersonal/PureH"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-gphr-2026-03-10.md"
 ---
 
 # [コーディング/GHR-PHR] GHR
@@ -60,7 +59,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-gphr-2026-03-10.md
 - [[コーディング/Popular] P](ref://scoring-input/popular)
 - [[解釈/対人関係] 人間内容](ref://result-interpretation/lower-section/interpersonal/HumanCont)
 - [[解釈/対人関係] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)
-
-## 根拠メモ
-
-- 詳細な出典比較は内部 provenance note に記録しています。

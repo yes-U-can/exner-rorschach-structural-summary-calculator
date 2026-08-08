@@ -20,9 +20,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/Zd"
   - "result-interpretation/lower-section/mediation"
   - "result-interpretation/lower-section/ideation"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Lower Section/Processing] Processing
@@ -64,7 +63,3 @@ This section is usually read through `Zf`, `Zd`, `W:D:Dd`, `W:M`, `PSV`, `DQ+`, 
 - [[Interpretation/Upper Section] Zd](ref://result-interpretation/upper-section/Zd)
 - [[Interpretation/Lower Section/Mediation] Mediation](ref://result-interpretation/lower-section/mediation)
 - [[Interpretation/Lower Section/Ideation] Ideation](ref://result-interpretation/lower-section/ideation)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

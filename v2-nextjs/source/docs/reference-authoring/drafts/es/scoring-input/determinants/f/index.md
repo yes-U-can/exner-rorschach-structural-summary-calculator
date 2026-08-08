@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/fq/u"
   - "scoring-input/fq/-"
   - "result-interpretation/lower-section/core/Lambda"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/determinants/f/index.md"
 ---
 
 # Nombre del documento: [Codificación/Determinantes] F
@@ -57,8 +56,3 @@ No hay un uso operativo de movimiento, color, reflejo, textura, vista o dimensi�
 - [[Codificación/Calidad formal] u](ref://scoring-input/fq/u)
 - [[Codificación/Calidad formal] -](ref://scoring-input/fq/-)
 - [[Interpretación/Core] Lambda](ref://result-interpretation/lower-section/core/Lambda)
-
-## Nota de fundamento
-
-- La justificación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

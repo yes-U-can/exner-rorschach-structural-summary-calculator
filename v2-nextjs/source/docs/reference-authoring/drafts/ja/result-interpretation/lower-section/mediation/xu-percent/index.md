@@ -15,9 +15,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/mediation/X_minus_percent"
   - "result-interpretation/lower-section/mediation/P"
   - "scoring-input/fq/u"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-mediation-xplus-xu-processing-2026-03-10.md"
 ---
 
 # [Interpretation/Mediation] Xu%
@@ -53,7 +52,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-mediation-xplus-xu
 - [[解釈/Mediation] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
 - [[解釈/Mediation] P](ref://result-interpretation/lower-section/mediation/P)
 - [[Coding/FQ] u](ref://scoring-input/fq/u)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

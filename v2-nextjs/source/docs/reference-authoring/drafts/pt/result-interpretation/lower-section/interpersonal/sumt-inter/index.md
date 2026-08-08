@@ -19,9 +19,8 @@ relatedRoutes:
   - "scoring-input/determinants/T"
   - "scoring-input/determinants/FT"
   - "scoring-input/determinants/TF"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-interpersonal-closing-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Interpessoal] SumT
@@ -63,7 +62,3 @@ Na interpretação, ele ajuda a estimar quanta necessidade de proximidade, conta
 - [[Codificação/Determinantes] T](ref://scoring-input/determinants/T)
 - [[Codificação/Determinantes] FT](ref://scoring-input/determinants/FT)
 - [[Codificação/Determinantes] TF](ref://scoring-input/determinants/TF)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

@@ -21,9 +21,8 @@ relatedRoutes:
   - "scoring-input/determinants/Cn"
   - "result-interpretation/lower-section/core/EB"
   - "result-interpretation/lower-section/core/EA"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/affect/fc-cf-c/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Afecto] FC:CF+C
@@ -76,7 +75,3 @@ En interpretación, ayuda a ver si la emoción suele pasar por mayor control for
 - [[Codificación/Determinantes] Cn](ref://scoring-input/determinants/Cn)
 - [[Interpretación/Core] EB](ref://result-interpretation/lower-section/core/EB)
 - [[Interpretación/Core] EA](ref://result-interpretation/lower-section/core/EA)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

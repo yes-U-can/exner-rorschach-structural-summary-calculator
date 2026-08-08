@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/determinants/CF"
   - "scoring-input/determinants/C"
   - "scoring-input/z"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Cards] VIII
@@ -58,7 +57,3 @@ This page summarizes those coding focal points.
 - [[Coding/Determinants] CF](ref://scoring-input/determinants/CF)
 - [[Coding/Determinants] C](ref://scoring-input/determinants/C)
 - [[Coding/Z] Z](ref://scoring-input/z)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

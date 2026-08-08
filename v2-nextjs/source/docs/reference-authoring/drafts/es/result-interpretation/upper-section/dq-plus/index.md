@@ -15,9 +15,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/dq_v"
   - "scoring-input/dq/+"
   - "result-interpretation/lower-section/processing/DQ_plus_proc"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/upper-section/dq-plus/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Upper Section] DQ+
@@ -66,7 +65,3 @@ En interpretación indica con cuánta regularidad aparece una organización comp
 - [[Interpretación/Upper Section] DQv](ref://result-interpretation/upper-section/dq_v)
 - [[Codificación/Calidad evolutiva] +](ref://scoring-input/dq/%2B)
 - [[Interpretación/Processing] DQ+](ref://result-interpretation/lower-section/processing/DQ_plus_proc)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

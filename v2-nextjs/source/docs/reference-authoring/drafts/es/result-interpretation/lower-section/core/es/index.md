@@ -22,9 +22,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/SumT"
   - "result-interpretation/lower-section/core/SumV"
   - "result-interpretation/lower-section/core/SumY"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/core/es/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Core] es
@@ -87,7 +86,3 @@ Representa la magnitud total de la demanda actual o de la carga interna que el p
 - [[Interpretación/Core] SumT](ref://result-interpretation/lower-section/core/SumT)
 - [[Interpretación/Core] SumV](ref://result-interpretation/lower-section/core/SumV)
 - [[Interpretación/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

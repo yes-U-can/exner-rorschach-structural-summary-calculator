@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/determinants/FY"
   - "scoring-input/determinants/YF"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Affect] CP
@@ -57,7 +56,3 @@ It is reviewed as a sign that affect is imposing itself on perception in an unus
 - [[Coding/Determinants] FY](ref://scoring-input/determinants/FY)
 - [[Coding/Determinants] YF](ref://scoring-input/determinants/YF)
 - [[Interpretation/Special Indices] DEPI](ref://result-interpretation/special-indices/DEPI)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/processing/DQ_v_proc"
   - "scoring-input/dq/+"
   - "scoring-input/dq/v/+"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/processing/dq-plus-proc/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Procesamiento] DQ+
@@ -63,7 +62,3 @@ En interpretación se usa como una señal de capacidad para estructurar percepto
 - [[Interpretación/Procesamiento] DQv](ref://result-interpretation/lower-section/processing/DQ_v_proc)
 - [[Codificación/DQ] +](ref://scoring-input/dq/%2B)
 - [[Codificación/DQ] v/+](ref://scoring-input/dq/v/%2B)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

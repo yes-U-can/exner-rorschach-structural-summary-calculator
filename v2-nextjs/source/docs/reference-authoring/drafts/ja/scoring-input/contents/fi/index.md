@@ -12,9 +12,8 @@ relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/Ex"
   - "scoring-input/contents/Cl"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-contents-cg-cl-ex-fi-2026-03-10.md"
 ---
 
 # [コーディング/内容] Fi
@@ -48,7 +47,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-contents-cg-cl-ex-
 - [[コーディング/内容] Contents](ref://scoring-input/contents)
 - [[コーディング/内容] Ex](ref://scoring-input/contents/Ex)
 - [[コーディング/内容] Cl](ref://scoring-input/contents/Cl)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

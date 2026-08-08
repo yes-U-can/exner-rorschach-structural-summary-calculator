@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/contents/H"
   - "scoring-input/contents/Hd"
   - "scoring-input/contents/An"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-completion-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Conteúdo] Sx
@@ -52,7 +51,3 @@ O código depende do referente nomeado, não apenas de insinuação vaga.
 - [[Codificação/Conteúdo] H](ref://scoring-input/contents/H)
 - [[Codificação/Conteúdo] Hd](ref://scoring-input/contents/Hd)
 - [[Codificação/Conteúdo] An](ref://scoring-input/contents/An)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

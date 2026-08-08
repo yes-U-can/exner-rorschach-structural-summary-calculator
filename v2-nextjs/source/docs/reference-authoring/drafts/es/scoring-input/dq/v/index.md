@@ -12,9 +12,8 @@ relatedRoutes:
   - "scoring-input/dq/v/+"
   - "scoring-input/dq/o"
   - "result-interpretation/lower-section/processing/DQ_v_proc"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/dq/v/index.md"
 ---
 
 # Nombre del documento: [Codificación/Calidad evolutiva] v
@@ -49,7 +48,3 @@ La impresión global puede ser reconocible como categoría amplia, pero sigue si
 - [[Codificación/Calidad evolutiva] v/+](ref://scoring-input/dq/v/%2B)
 - [[Codificación/Calidad evolutiva] o](ref://scoring-input/dq/o)
 - [[Interpretación/Processing] DQv](ref://result-interpretation/lower-section/processing/DQ_v_proc)
-
-## Nota de fundamento
-
-- La provenance interna mantiene la justificación de fuentes y los contrastes de codificación.

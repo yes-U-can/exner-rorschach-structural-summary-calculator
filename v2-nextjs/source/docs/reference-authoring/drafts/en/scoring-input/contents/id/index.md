@@ -12,9 +12,8 @@ relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/Sc"
   - "scoring-input/contents/Art"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Content] Id
@@ -49,7 +48,3 @@ It is not a code for "odd content" in general; it is for truly idiographic conte
 - [[Coding/Content] Contents](ref://scoring-input/contents)
 - [[Coding/Content] Sc](ref://scoring-input/contents/Sc)
 - [[Coding/Content] Art](ref://scoring-input/contents/Art)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

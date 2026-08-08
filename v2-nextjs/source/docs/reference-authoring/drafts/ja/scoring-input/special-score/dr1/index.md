@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/special-score/DR2"
   - "result-interpretation/lower-section/ideation/Sum6"
   - "result-interpretation/lower-section/ideation/WSum6"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-score-dv-dr-2026-03-10.md"
 ---
 
 # [コーディング/特殊スコア] DR1
@@ -54,7 +53,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-score-dv-d
 - [[コーディング/特殊スコア] DR2](ref://scoring-input/special-score/DR2)
 - [[解釈/観念化] Sum6](ref://result-interpretation/lower-section/ideation/Sum6)
 - [[解釈/観念化] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

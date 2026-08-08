@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/fq/u"
   - "scoring-input/fq/-"
   - "scoring-input/dq/+"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/fq/plus/index.md"
 ---
 
 # 문서명: [부호화/형태질] +
@@ -51,8 +50,3 @@ FQ+는 반점 윤곽과 잘 맞는 보통 반응 가운데서도, 피검자가 �
 - [\[부호화/형태질\] u](ref://scoring-input/fq/u)
 - [\[부호화/형태질\] -](ref://scoring-input/fq/-)
 - [\[부호화/발달질\] +](ref://scoring-input/dq/%2B)
-
-## 근거 메모
-
-- 세부 근거 대조와 용어 판단 기록은 내부 작업 메모에서 관리한다.
-- 공개 참조 문서 반영 단계에서는 내부 provenance가 노출되지 않도록 분리한다.

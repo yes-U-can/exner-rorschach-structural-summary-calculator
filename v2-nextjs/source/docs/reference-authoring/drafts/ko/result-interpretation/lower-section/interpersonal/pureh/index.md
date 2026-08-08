@@ -18,9 +18,8 @@ relatedRoutes:
   - "scoring-input/gphr/GHR"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
   - "result-interpretation/special-indices/CDI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/interpersonal/pureh/index.md"
 ---
 
 # 문서명: [해석/Interpersonal] Pure H
@@ -70,7 +69,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[부호화/GHR-PHR\] GHR](ref://scoring-input/gphr/GHR)
 - [\[해석/Self Perception\] H Ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
 - [\[해석/Special Indices\] CDI](ref://result-interpretation/special-indices/CDI)
-
-## 근거 메모
-
-- `PureH < 2` 반복 사용과 quality/quantity 구분은 provenance note에 분리했다.

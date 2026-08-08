@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/determinants/YF"
   - "scoring-input/determinants/Y"
   - "result-interpretation/lower-section/affect/CP"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-score-ab-psv-per-cp-2026-03-10.md"
 ---
 
 # [コーディング/特殊スコア] CP
@@ -54,7 +53,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-score-ab-p
 - [[コーディング/決定因] YF](ref://scoring-input/determinants/YF)
 - [[コーディング/決定因] Y](ref://scoring-input/determinants/Y)
 - [[解釈/感情] CP](ref://result-interpretation/lower-section/affect/CP)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

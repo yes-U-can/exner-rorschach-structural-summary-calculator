@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/contents/Na"
   - "scoring-input/contents/Bt"
   - "scoring-input/contents/Ge"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Content] Ls
@@ -52,7 +51,3 @@ The focus has to be on the scene or setting, not just on a single plant or objec
 - [[Coding/Content] Na](ref://scoring-input/contents/Na)
 - [[Coding/Content] Bt](ref://scoring-input/contents/Bt)
 - [[Coding/Content] Ge](ref://scoring-input/contents/Ge)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

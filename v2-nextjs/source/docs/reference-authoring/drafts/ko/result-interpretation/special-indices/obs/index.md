@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/mediation/P"
   - "scoring-input/fq/+"
   - "scoring-input/popular"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/special-indices/obs/index.md"
 ---
 
 # 문서명: [해석/특수지표] OBS
@@ -69,7 +68,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[해석/지각매개\] P](ref://result-interpretation/lower-section/mediation/P)
 - [\[부호화/형태질\] +](ref://scoring-input/fq/%2B)
 - [\[부호화/인기반응\] Popular](ref://scoring-input/popular)
-
-## 근거 메모
-
-- 상세 검토 기록은 내부 검증 노트에서 관리한다.

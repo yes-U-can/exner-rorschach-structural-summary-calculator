@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/dq/o"
   - "scoring-input/dq/v"
   - "result-interpretation/upper-section/dq_vplus"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-dq-2026-03-10.md"
 ---
 
 # Nome do documento: [Codificação/Qualidade Desenvolvimental] v/+
@@ -50,7 +49,3 @@ A resposta é organizada, embora os objetos permaneçam relativamente vagos.
 - [[Codificação/Qualidade Desenvolvimental] o](ref://scoring-input/dq/o)
 - [[Codificação/Qualidade Desenvolvimental] v](ref://scoring-input/dq/v)
 - [[Interpretação/Upper Section] DQv/+](ref://result-interpretation/upper-section/dq_vplus)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

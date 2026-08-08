@@ -28,9 +28,8 @@ relatedRoutes:
   - "scoring-input/determinants/T"
   - "scoring-input/determinants/V"
   - "scoring-input/determinants/Y"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-core-eb-family-2026-03-10.md"
 ---
 
 # [Interpretation/Core] eb
@@ -80,7 +79,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-core-eb-family-202
 - [[Coding/決定因] T](ref://scoring-input/determinants/T)
 - [[Coding/決定因] V](ref://scoring-input/determinants/V)
 - [[Coding/決定因] Y](ref://scoring-input/determinants/Y)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

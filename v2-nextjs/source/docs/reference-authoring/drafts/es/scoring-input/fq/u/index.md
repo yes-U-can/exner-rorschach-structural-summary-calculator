@@ -12,9 +12,8 @@ relatedRoutes:
   - "scoring-input/fq/o"
   - "scoring-input/fq/-"
   - "scoring-input/dq"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/fq/u/index.md"
 ---
 
 # Nombre del documento: [Codificación/Calidad formal] u
@@ -48,7 +47,3 @@ La respuesta puede ser menos frecuente, aunque todavía se ve con relativa rapid
 - [[Codificación/Calidad formal] o](ref://scoring-input/fq/o)
 - [[Codificación/Calidad formal] -](ref://scoring-input/fq/-)
 - [[Codificación/Calidad evolutiva] DQ](ref://scoring-input/dq)
-
-## Nota de fundamento
-
-- La provenance interna conserva los criterios diferenciales entre `u` y `-`.

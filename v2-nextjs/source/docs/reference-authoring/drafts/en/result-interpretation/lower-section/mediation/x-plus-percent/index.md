@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/mediation/X_minus_percent"
   - "scoring-input/fq/+"
   - "scoring-input/popular"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Mediation] X+%
@@ -55,7 +54,3 @@ It summarizes how strongly mediation stays aligned with common readings of the b
 - [[Interpretation/Mediation] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
 - [[Coding/FQ] +](ref://scoring-input/fq/%2B)
 - [[Coding/Popular] Popular](ref://scoring-input/popular)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

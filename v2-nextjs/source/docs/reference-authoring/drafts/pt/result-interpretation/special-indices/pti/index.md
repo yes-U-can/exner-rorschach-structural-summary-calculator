@@ -15,9 +15,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/M_minus"
   - "result-interpretation/lower-section/mediation/X_minus_percent"
   - "result-interpretation/lower-section/mediation/XA_percent"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Nome do documento: [Interpretação/Índices Especiais] PTI
@@ -67,7 +66,3 @@ Sua função é alertar o leitor para revisar possível distorção da realidade
 - [[Interpretação/Ideação] M-](ref://result-interpretation/lower-section/ideation/M_minus)
 - [[Interpretação/Mediação] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
 - [[Interpretação/Mediação] XA%](ref://result-interpretation/lower-section/mediation/XA_percent)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

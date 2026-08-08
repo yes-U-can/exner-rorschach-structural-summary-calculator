@@ -26,9 +26,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/interpersonal/HumanCont"
   - "result-interpretation/lower-section/interpersonal/PureH"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/gphr/index.md"
 ---
 
 # [부호화/GHR-PHR] GHR/PHR
@@ -80,8 +79,3 @@ GHR와 PHR은 인간을 어떻게 표상하는지에 대한 special coding이다
 - [result-interpretation/lower-section/interpersonal/HumanCont](ref://result-interpretation%2Flower-section%2Finterpersonal%2FHumanCont)
 - [result-interpretation/lower-section/interpersonal/PureH](ref://result-interpretation%2Flower-section%2Finterpersonal%2FPureH)
 - [result-interpretation/lower-section/selfPerception/H_ratio](ref://result-interpretation%2Flower-section%2FselfPerception%2FH_ratio)
-
-## 근거 메모
-
-- 상세 근거와 출처 충돌 메모는 provenance note에 분리해 둔다.
-- 공개용 본문에는 저작권 자료명을 직접 노출하지 않는다.

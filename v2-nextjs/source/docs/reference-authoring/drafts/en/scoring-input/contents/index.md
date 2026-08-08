@@ -44,9 +44,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/interpersonal/PureH"
   - "result-interpretation/lower-section/selfPerception/An_Xy"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Content] Contents
@@ -132,7 +131,3 @@ They do not explain why it looked that way; that belongs to determinants.
 - [[Interpretation/Interpersonal] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)
 - [[Interpretation/Self Perception] An + Xy](ref://result-interpretation/lower-section/selfPerception/An_Xy)
 - [[Interpretation/Self Perception] H ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

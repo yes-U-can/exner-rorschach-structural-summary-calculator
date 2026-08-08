@@ -22,9 +22,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/R"
   - "result-interpretation/special-indices/CDI"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/interpersonal/iso-index/index.md"
 ---
 
 # 문서명: [해석/Interpersonal] Isolation Index
@@ -79,7 +78,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[해석/Core\] R](ref://result-interpretation/lower-section/core/R)
 - [\[해석/Special Indices\] CDI](ref://result-interpretation/special-indices/CDI)
 - [\[해석/Special Indices\] DEPI](ref://result-interpretation/special-indices/DEPI)
-
-## 근거 메모
-
-- 공식과 `.24/.25/.33` 절단값 메모는 provenance note에 분리했다.

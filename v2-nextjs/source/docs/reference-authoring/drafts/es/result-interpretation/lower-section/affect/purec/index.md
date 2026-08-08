@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/determinants/CF"
   - "scoring-input/determinants/FC"
   - "result-interpretation/lower-section/core/EB"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/affect/purec/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Afecto] Pure C
@@ -69,7 +68,3 @@ En interpretación, se usa como señal de expresión afectiva más directa, meno
 - [[Codificación/Determinantes] CF](ref://scoring-input/determinants/CF)
 - [[Codificación/Determinantes] FC](ref://scoring-input/determinants/FC)
 - [[Interpretación/Core] EB](ref://result-interpretation/lower-section/core/EB)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

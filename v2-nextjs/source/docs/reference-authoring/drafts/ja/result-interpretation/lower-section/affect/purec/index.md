@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/determinants/CF"
   - "scoring-input/determinants/FC"
   - "result-interpretation/lower-section/core/EB"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-affect-purec-sumc-afr-2026-03-10.md"
 ---
 
 # [Interpretation/Affect] Pure C
@@ -57,7 +56,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-affect-purec-sumc-
 - [[Coding/決定因] CF](ref://scoring-input/determinants/CF)
 - [[Coding/決定因] FC](ref://scoring-input/determinants/FC)
 - [[解釈/Core] EB](ref://result-interpretation/lower-section/core/EB)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

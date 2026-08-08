@@ -23,9 +23,8 @@ relatedRoutes:
   - "scoring-input/z"
   - "scoring-input/gphr"
   - "scoring-input/special-score"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-scoring-input-overview-2026-03-10.md"
 ---
 
 # [コーディング] scoring-input
@@ -73,8 +72,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-scoring-input-over
 - [[コーディング/Z] Z](ref://scoring-input/z)
 - [[コーディング/GHR-PHR] GHR/PHR](ref://scoring-input/gphr)
 - [[コーディング/特殊スコア] 特殊スコア](ref://scoring-input/special-score)
-
-## 根拠メモ
-
-- 詳細な出典比較と用語判断は内部 provenance note に分けて記録します。
-- 公開本文では資料名を直接出さず、RAG が読みやすい説明構造を優先します。

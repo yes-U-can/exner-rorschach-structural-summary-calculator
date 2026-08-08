@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/contents/Fd"
   - "result-interpretation/lower-section/core/SumT"
   - "result-interpretation/special-indices/CDI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/interpersonal/food/index.md"
 ---
 
 # 문서명: [해석/Interpersonal] Food
@@ -64,7 +63,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[부호화/내용\] Fd](ref://scoring-input/contents/Fd)
 - [\[해석/Core\] SumT](ref://result-interpretation/lower-section/core/SumT)
 - [\[해석/Special Indices\] CDI](ref://result-interpretation/special-indices/CDI)
-
-## 근거 메모
-
-- 성인 대 아동 기록의 보수적 해석 차이는 provenance note에 분리했다.

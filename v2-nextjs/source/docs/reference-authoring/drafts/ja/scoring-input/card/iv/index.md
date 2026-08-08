@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/determinants/T"
   - "scoring-input/determinants/TF"
   - "scoring-input/fq"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-card-i-v-2026-03-10.md"
 ---
 
 # [コーディング/カード] IV
@@ -56,7 +55,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-card-i-v-2026-03-1
 - [[コーディング/決定因] T](ref://scoring-input/determinants/T)
 - [[コーディング/決定因] TF](ref://scoring-input/determinants/TF)
 - [[コーディング/FQ] FQ](ref://scoring-input/fq)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

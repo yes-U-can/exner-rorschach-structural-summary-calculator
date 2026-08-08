@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/processing/DQ_v_proc"
   - "scoring-input/dq/+"
   - "scoring-input/dq/v/+"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/processing/dq-plus-proc/index.md"
 ---
 
 # 문서명: [해석/Processing] DQ+
@@ -62,7 +61,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[해석/Processing\] DQv](ref://result-interpretation/lower-section/processing/DQ_v_proc)
 - [\[부호화/발달질\] +](ref://scoring-input/dq/%2B)
 - [\[부호화/발달질\] v/+](ref://scoring-input/dq/v/%2B)
-
-## 근거 메모
-
-- 상위 절차에서는 `DQv + DQv/+`와의 비교가 중요하다는 점을 provenance note에 남겼다.

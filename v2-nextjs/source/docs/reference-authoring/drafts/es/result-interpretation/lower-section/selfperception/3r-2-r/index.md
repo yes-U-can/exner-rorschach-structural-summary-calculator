@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/determinants/Fr"
   - "scoring-input/determinants/rF"
   - "result-interpretation/lower-section/core/R"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/selfperception/3r-2-r/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Self Perception] Egocentricity Index
@@ -71,7 +70,3 @@ En interpretación ayuda a estimar cuánto peso ocupa el yo, el propio valor o l
 - [[Codificación/Determinantes] Fr](ref://scoring-input/determinants/Fr)
 - [[Codificación/Determinantes] rF](ref://scoring-input/determinants/rF)
 - [[Interpretación/Core] R](ref://result-interpretation/lower-section/core/R)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

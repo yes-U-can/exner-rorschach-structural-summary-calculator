@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/W"
   - "scoring-input/determinants/M"
   - "result-interpretation/lower-section/ideation/Ma_Mp"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-processing-wm-psv-dq-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Processamento] W:M
@@ -55,7 +54,3 @@ No processamento, esta razão ajuda a estimar se a amplitude de abordagem está 
 - [[Interpretação/Seção Superior] W](ref://result-interpretation/upper-section/W)
 - [[Codificação/Determinantes] M](ref://scoring-input/determinants/M)
 - [[Interpretação/Ideação] Ma:Mp](ref://result-interpretation/lower-section/ideation/Ma_Mp)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

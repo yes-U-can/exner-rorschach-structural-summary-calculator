@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/contents/Fd"
   - "result-interpretation/lower-section/core/SumT"
   - "result-interpretation/special-indices/CDI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-interpersonal-opening-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Interpessoal] Food
@@ -53,7 +52,3 @@ Na interpretação, ele é usado como indicador secundário de necessidade de cu
 - [[Codificação/Conteúdo] Fd](ref://scoring-input/contents/Fd)
 - [[Interpretação/Core] SumT](ref://result-interpretation/lower-section/core/SumT)
 - [[Interpretação/Índices Especiais] CDI](ref://result-interpretation/special-indices/CDI)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

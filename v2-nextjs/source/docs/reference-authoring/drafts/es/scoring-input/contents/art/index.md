@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/contents/Ay"
   - "scoring-input/contents/H"
   - "scoring-input/contents/A"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/contents/art/index.md"
 ---
 
 # Nombre del documento: [Codificación/Contenido] Art
@@ -52,8 +51,3 @@ Lo central no es solo que se vea algo, sino que ese algo sea entendido como piez
 - [[Codificación/Contenido] Ay](ref://scoring-input/contents/Ay)
 - [[Codificación/Contenido] H](ref://scoring-input/contents/H)
 - [[Codificación/Contenido] A](ref://scoring-input/contents/A)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/determinants/Fr"
   - "scoring-input/determinants/rF"
   - "result-interpretation/lower-section/selfPerception/_3r_2_R"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/pair/index.md"
 ---
 
 # Nombre del documento: [Codificación/Pareja] Pair
@@ -53,8 +52,3 @@ La clave no es solo que haya dos cosas, sino que las trate como una pareja equiv
 - [[Codificación/Determinantes] Fr](ref://scoring-input/determinants/Fr)
 - [[Codificación/Determinantes] rF](ref://scoring-input/determinants/rF)
 - [[Interpretación/Self Perception] Egocentricity Index](ref://result-interpretation/lower-section/selfPerception/_3r_2_R)
-
-## Nota de fundamento
-
-- La justificación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

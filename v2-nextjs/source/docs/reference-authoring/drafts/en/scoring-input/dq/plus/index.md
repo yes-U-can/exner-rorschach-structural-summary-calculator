@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/dq/v"
   - "scoring-input/fq/+"
   - "result-interpretation/lower-section/processing/DQ_plus_proc"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Developmental Quality] +
@@ -54,7 +53,3 @@ The key is not just “more than one object,” but an organized whole.
 - [[Coding/Developmental Quality] o](ref://scoring-input/dq/o)
 - [[Coding/Form Quality] +](ref://scoring-input/fq/%2B)
 - [[Interpretation/Processing] DQ+](ref://result-interpretation/lower-section/processing/DQ_plus_proc)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

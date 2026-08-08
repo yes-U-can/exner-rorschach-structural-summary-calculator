@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/location/WS"
   - "result-interpretation/upper-section/Dd"
   - "result-interpretation/upper-section/S"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Location] DdS
@@ -51,7 +50,3 @@ It is a `Dd` response modified by white-space integration.
 - [[Coding/Location] WS](ref://scoring-input/location/WS)
 - [[Interpretation/Upper Section] Dd](ref://result-interpretation/upper-section/Dd)
 - [[Interpretation/Upper Section] S](ref://result-interpretation/upper-section/S)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

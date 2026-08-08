@@ -12,9 +12,8 @@ relatedRoutes:
   - "scoring-input/fq/u"
   - "scoring-input/fq/o"
   - "result-interpretation/lower-section/mediation/x-minus-percent"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/fq/minus/index.md"
 ---
 
 # Nombre del documento: [Codificación/Calidad formal] -
@@ -48,7 +47,3 @@ Es la categoría de ajuste formal pobre o distorsionado.
 - [[Codificación/Calidad formal] u](ref://scoring-input/fq/u)
 - [[Codificación/Calidad formal] o](ref://scoring-input/fq/o)
 - [[Interpretación/Mediation] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
-
-## Nota de fundamento
-
-- La provenance interna conserva la lógica de contraste entre `u` y `-`.

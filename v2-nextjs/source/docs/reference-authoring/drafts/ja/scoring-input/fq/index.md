@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/fq/-"
   - "scoring-input/fq/none"
   - "scoring-input/dq"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # [コーディング/形態水準] FQ
@@ -57,7 +56,3 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 - [[コーディング/形態水準] -](ref://scoring-input/fq/-)
 - [[コーディング/形態水準] none](ref://scoring-input/fq/none)
 - [[コーディング/発達水準] DQ](ref://scoring-input/dq)
-
-## 根拠メモ
-
-- 詳細な出典比較は内部 provenance note に記録します。

@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/gphr/GHR"
   - "scoring-input/gphr/PHR"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-human-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Conteúdo] (H)
@@ -55,7 +54,3 @@ Continua sendo figura humana inteira, mas não uma pessoa comum e realista.
 - [[Codificação/GHR-PHR] GHR](ref://scoring-input/gphr/GHR)
 - [[Codificação/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
 - [[Interpretação/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

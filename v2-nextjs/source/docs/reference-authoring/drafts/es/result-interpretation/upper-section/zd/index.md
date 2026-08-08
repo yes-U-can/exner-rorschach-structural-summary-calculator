@@ -15,9 +15,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/ZEst"
   - "scoring-input/z/ZD"
   - "result-interpretation/lower-section/processing/Zd_proc"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/upper-section/zd/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Upper Section] Zd
@@ -65,7 +64,3 @@ Es el indicador más directo de eficiencia organizativa dentro de la familia `Z`
 - [[Interpretación/Upper Section] ZEst](ref://result-interpretation/upper-section/ZEst)
 - [[Codificación/Z] ZD](ref://scoring-input/z/ZD)
 - [[Interpretación/Processing] Zd](ref://result-interpretation/lower-section/processing/Zd_proc)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

@@ -17,9 +17,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/processing/W_M"
   - "scoring-input/fq"
   - "scoring-input/determinants/F"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/core/lambda/index.md"
 ---
 
 # 문서명: [해석/Core] Lambda
@@ -71,7 +70,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[해석/Processing\] W:M](ref://result-interpretation/lower-section/processing/W_M)
 - [\[부호화/형태질\] FQ](ref://scoring-input/fq)
 - [\[부호화/결정인\] F](ref://scoring-input/determinants/F)
-
-## 근거 메모
-
-- 상세 출처와 절단값 메모는 provenance note에 분리했다.

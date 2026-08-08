@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/special-score/AG"
   - "result-interpretation/special-indices/DEPI"
   - "result-interpretation/special-indices/HVI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Affect] S
@@ -53,7 +52,3 @@ It is reviewed as a possible sign of opposition, self-assertion, tension, or dis
 - [[Coding/Special Scores] AG](ref://scoring-input/special-score/AG)
 - [[Interpretation/Special Indices] DEPI](ref://result-interpretation/special-indices/DEPI)
 - [[Interpretation/Special Indices] HVI](ref://result-interpretation/special-indices/HVI)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

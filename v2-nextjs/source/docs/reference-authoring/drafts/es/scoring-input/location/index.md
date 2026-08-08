@@ -20,9 +20,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/D"
   - "result-interpretation/upper-section/Dd"
   - "result-interpretation/upper-section/S"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/location/index.md"
 ---
 
 # Nombre del documento: [Codificación/Localización] Location
@@ -67,8 +66,3 @@ La decisión principal es si usa toda la mancha, un detalle usual, un detalle in
 - [[Interpretación/Upper Section] D](ref://result-interpretation/upper-section/D)
 - [[Interpretación/Upper Section] Dd](ref://result-interpretation/upper-section/Dd)
 - [[Interpretación/Upper Section] S](ref://result-interpretation/upper-section/S)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la nota interna de provenance.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

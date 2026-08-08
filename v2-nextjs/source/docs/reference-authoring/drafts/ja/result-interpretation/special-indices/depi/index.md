@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/selfPerception/MOR_self"
   - "result-interpretation/lower-section/affect/Afr"
   - "result-interpretation/special-indices/CDI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-indices-2026-03-10.md"
 ---
 
 # 文書名: [解釈/特殊指標] DEPI
@@ -69,7 +68,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-indices-20
 - [[解釈/自己知覚] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
 - [[解釈/感情] Afr](ref://result-interpretation/lower-section/affect/Afr)
 - [[解釈/特殊指標] CDI](ref://result-interpretation/special-indices/CDI)
-
-## 根拠メモ
-
-- 詳細な検討記録は内部の検証ノートで管理します。

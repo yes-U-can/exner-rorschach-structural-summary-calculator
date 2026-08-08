@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/contents/Hd"
   - "scoring-input/contents/Hx"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-human-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Conteúdo] (Hd)
@@ -51,7 +50,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-human-202
 - [[Codificação/Conteúdo] Hd](ref://scoring-input/contents/Hd)
 - [[Codificação/Conteúdo] Hx](ref://scoring-input/contents/Hx)
 - [[Interpretação/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

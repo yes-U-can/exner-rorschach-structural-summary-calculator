@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/determinants/CF"
   - "scoring-input/determinants/C"
   - "scoring-input/fq/-"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-card-vi-x-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Cartões] X
@@ -58,7 +57,3 @@ Esta página resume os focos de codificação mais úteis para essa complexidade
 - [[Codificação/Determinantes] CF](ref://scoring-input/determinants/CF)
 - [[Codificação/Determinantes] C](ref://scoring-input/determinants/C)
 - [[Codificação/FQ] -](ref://scoring-input/fq/-)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

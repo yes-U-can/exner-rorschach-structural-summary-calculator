@@ -17,9 +17,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/dq_o"
   - "result-interpretation/upper-section/dq_vplus"
   - "result-interpretation/upper-section/dq_v"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Developmental Quality] DQ
@@ -58,7 +57,3 @@ It focuses on the structural level of the response, not on whether the form fit 
 - [[Interpretation/Upper Section] DQo](ref://result-interpretation/upper-section/dq_o)
 - [[Interpretation/Upper Section] DQv/+](ref://result-interpretation/upper-section/dq_vplus)
 - [[Interpretation/Upper Section] DQv](ref://result-interpretation/upper-section/dq_v)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

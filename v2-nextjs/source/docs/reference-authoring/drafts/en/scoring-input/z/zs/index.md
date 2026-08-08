@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/location/DS"
   - "scoring-input/location/DdS"
   - "result-interpretation/upper-section/Zf"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Z] ZS
@@ -52,7 +51,3 @@ The response has to organize white space as part of the percept, not merely noti
 - [[Coding/Location] DS](ref://scoring-input/location/DS)
 - [[Coding/Location] DdS](ref://scoring-input/location/DdS)
 - [[Interpretation/Upper Section] Zf](ref://result-interpretation/upper-section/Zf)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

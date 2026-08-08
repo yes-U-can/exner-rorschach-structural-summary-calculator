@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/location/W"
   - "scoring-input/location/D"
   - "scoring-input/fq"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/mediation/wda-percent/index.md"
 ---
 
 # [해석/Mediation] WDA%
@@ -57,7 +56,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `P`
 - `W`
 - `D`
-
-## 근거 메모
-
-- public draft에서는 공통 영역 안정성 설명에 집중하고, 절단값 메모는 provenance note에 분리했다.

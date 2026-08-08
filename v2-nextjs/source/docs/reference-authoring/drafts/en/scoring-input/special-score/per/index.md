@@ -12,9 +12,8 @@ relatedRoutes:
   - "scoring-input/special-score"
   - "result-interpretation/lower-section/interpersonal/PER"
   - "result-interpretation/lower-section/mediation/Xu_percent"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Special Scores] PER
@@ -48,7 +47,3 @@ The important point is that the personal information functions as direct support
 - [[Coding/Special Scores] Special Scores](ref://scoring-input/special-score)
 - [[Interpretation/Interpersonal] PER](ref://result-interpretation/lower-section/interpersonal/PER)
 - [[Interpretation/Mediation] Xu%](ref://result-interpretation/lower-section/mediation/Xu_percent)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

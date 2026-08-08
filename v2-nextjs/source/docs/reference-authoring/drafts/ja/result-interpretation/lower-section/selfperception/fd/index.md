@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/determinants/FD"
   - "scoring-input/contents/Fd"
   - "result-interpretation/lower-section/core/SumV"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-selfperception-2026-03-10.md"
 ---
 
 # [Interpretation/Self Perception] FD
@@ -69,7 +68,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-selfperception-202
 - [[Coding/決定因] FD](ref://scoring-input/determinants/FD)
 - [[Coding/Content] Fd](ref://scoring-input/contents/Fd)
 - [[解釈/Core] SumV](ref://result-interpretation/lower-section/core/SumV)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

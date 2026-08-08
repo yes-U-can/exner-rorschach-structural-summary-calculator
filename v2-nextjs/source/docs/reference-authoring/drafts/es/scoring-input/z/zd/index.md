@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/dq/+"
   - "scoring-input/dq/v/+"
   - "result-interpretation/upper-section/Zd"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/z/zd/index.md"
 ---
 
 # Nombre del documento: [Codificación/Z] ZD
@@ -52,7 +51,3 @@ La actividad organizativa depende de unir partes separadas del blot.
 - [[Codificación/Localización] D](ref://scoring-input/location/D)
 - [[Codificación/Localización] Dd](ref://scoring-input/location/Dd)
 - [[Interpretación/Upper Section] Zd](ref://result-interpretation/upper-section/Zd)
-
-## Nota de fundamento
-
-- La provenance interna conserva el criterio de distancia y relación significativa.

@@ -19,9 +19,8 @@ relatedRoutes:
   - "scoring-input/determinants/FV"
   - "scoring-input/determinants/VF"
   - "result-interpretation/lower-section/core/AdjD"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-selfperception-family-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Autopercepção] SumV
@@ -75,7 +74,3 @@ Em `Core`, também se relaciona a carga geral, mas aqui o foco está na avaliaç
 - [[Codificação/Determinantes] FV](ref://scoring-input/determinants/FV)
 - [[Codificação/Determinantes] VF](ref://scoring-input/determinants/VF)
 - [[Interpretação/Core] AdjD](ref://result-interpretation/lower-section/core/AdjD)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

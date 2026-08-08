@@ -12,9 +12,8 @@ relatedRoutes:
   - "scoring-input/fq/o"
   - "scoring-input/fq/-"
   - "result-interpretation/lower-section/mediation/Xu_percent"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-fq-2026-03-10.md"
 ---
 
 # Nome do documento: [Codificação/Qualidade Formal] u
@@ -48,7 +47,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-fq-2026-03-10.md"
 - [[Codificação/Qualidade Formal] o](ref://scoring-input/fq/o)
 - [[Codificação/Qualidade Formal] -](ref://scoring-input/fq/-)
 - [[Interpretação/Mediation] Xu%](ref://result-interpretation/lower-section/mediation/Xu_percent)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

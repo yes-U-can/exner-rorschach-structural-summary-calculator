@@ -15,9 +15,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/dq_v"
   - "scoring-input/dq/+"
   - "result-interpretation/lower-section/processing/DQ_plus_proc"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Upper Section] DQ+
@@ -53,7 +52,3 @@ In interpretation it indicates how often complex and well-articulated organizati
 - [[Interpretation/Upper Section] DQv](ref://result-interpretation/upper-section/dq_v)
 - [[Coding/Developmental Quality] +](ref://scoring-input/dq/%2B)
 - [[Interpretation/Processing] DQ+](ref://result-interpretation/lower-section/processing/DQ_plus_proc)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

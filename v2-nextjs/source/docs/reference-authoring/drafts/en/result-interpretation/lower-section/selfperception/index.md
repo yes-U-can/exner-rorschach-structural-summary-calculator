@@ -21,9 +21,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/MOR"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
   - "result-interpretation/lower-section/interpersonal/PureH"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Lower Section/Self Perception] Self Perception
@@ -79,7 +78,3 @@ In this cluster, the main review points are `3r+(2)/R`, `Fr+rF`, `SumV`, `FD`, `
 - [[Interpretation/Ideation] MOR](ref://result-interpretation/lower-section/ideation/MOR)
 - [[Interpretation/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
 - [[Interpretation/Interpersonal] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

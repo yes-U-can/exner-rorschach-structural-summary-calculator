@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/gphr/GHR"
   - "result-interpretation/lower-section/interpersonal/COP"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-score-cop-ag-mor-2026-03-10.md"
 ---
 
 # [コーディング/特殊スコア] COP
@@ -59,7 +58,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-score-cop-
 - [[コーディング/GHR-PHR] GHR](ref://scoring-input/gphr/GHR)
 - [[解釈/対人関係] COP](ref://result-interpretation/lower-section/interpersonal/COP)
 - [[解釈/対人関係] 人間内容](ref://result-interpretation/lower-section/interpersonal/HumanCont)
-
-## 根拠メモ
-
-- 詳細な出典比較は内部 provenance note に記録しています。

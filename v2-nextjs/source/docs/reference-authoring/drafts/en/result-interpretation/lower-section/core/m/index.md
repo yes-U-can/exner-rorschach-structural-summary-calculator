@@ -17,9 +17,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/AdjD"
   - "result-interpretation/lower-section/core/FM"
   - "scoring-input/determinants/m"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Core] m
@@ -58,7 +57,3 @@ In `core`, it is usually read as an indicator of reactive tension, feeling pushe
 - [[Interpretation/Core] AdjD](ref://result-interpretation/lower-section/core/AdjD)
 - [[Interpretation/Core] FM](ref://result-interpretation/lower-section/core/FM)
 - [[Coding/Determinants] m](ref://scoring-input/determinants/m)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

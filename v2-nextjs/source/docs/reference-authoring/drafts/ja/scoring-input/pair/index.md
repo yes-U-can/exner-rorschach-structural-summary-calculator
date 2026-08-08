@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/determinants/Fr"
   - "scoring-input/determinants/rF"
   - "result-interpretation/lower-section/selfPerception/_3r_2_R"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # [コーディング/Pair] Pair
@@ -53,7 +52,3 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 - [[コーディング/決定因] Fr](ref://scoring-input/determinants/Fr)
 - [[コーディング/決定因] rF](ref://scoring-input/determinants/rF)
 - [[解釈/自己知覚] 自己中心性指標](ref://result-interpretation/lower-section/selfPerception/_3r_2_R)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

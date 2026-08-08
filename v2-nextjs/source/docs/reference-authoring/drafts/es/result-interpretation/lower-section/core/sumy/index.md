@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/determinants/Y"
   - "scoring-input/determinants/FY"
   - "scoring-input/determinants/YF"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/core/sumy/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Core] SumY
@@ -71,7 +70,3 @@ En `core` suele reflejar malestar vago, tensión difícil de modular o una sensa
 - [[Codificación/Determinantes] Y](ref://scoring-input/determinants/Y)
 - [[Codificación/Determinantes] FY](ref://scoring-input/determinants/FY)
 - [[Codificación/Determinantes] YF](ref://scoring-input/determinants/YF)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

@@ -18,9 +18,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/EB"
   - "result-interpretation/lower-section/core/m"
   - "result-interpretation/lower-section/core/SumY"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/core/d/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Core] D
@@ -77,7 +76,3 @@ Resume si los recursos disponibles alcanzan para manejar la demanda actual sin q
 - [[Interpretación/Core] EB](ref://result-interpretation/lower-section/core/EB)
 - [[Interpretación/Core] m](ref://result-interpretation/lower-section/core/m)
 - [[Interpretación/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

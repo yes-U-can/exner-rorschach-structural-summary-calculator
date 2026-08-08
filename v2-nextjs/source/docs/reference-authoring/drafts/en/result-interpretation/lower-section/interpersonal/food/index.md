@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/contents/Fd"
   - "result-interpretation/lower-section/core/SumT"
   - "result-interpretation/special-indices/CDI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Interpersonal] Food
@@ -66,7 +65,3 @@ In interpretation, it is used as a secondary indicator of need for care, support
 - [[Coding/Content] Fd](ref://scoring-input/contents/Fd)
 - [[Interpretation/Core] SumT](ref://result-interpretation/lower-section/core/SumT)
 - [[Interpretation/Special Indices] CDI](ref://result-interpretation/special-indices/CDI)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

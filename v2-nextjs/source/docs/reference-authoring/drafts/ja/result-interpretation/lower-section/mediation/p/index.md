@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/popular"
   - "scoring-input/card/I"
   - "scoring-input/card/V"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-mediation-xminus-sminus-p-2026-03-10.md"
 ---
 
 # [Interpretation/Mediation] P
@@ -55,7 +54,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-mediation-xminus-s
 - [[Coding/Popular] Popular](ref://scoring-input/popular)
 - [[Coding/Card] I](ref://scoring-input/card/I)
 - [[Coding/Card] V](ref://scoring-input/card/V)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

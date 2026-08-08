@@ -15,9 +15,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/Zf"
   - "result-interpretation/upper-section/ZSum"
   - "result-interpretation/upper-section/Zd"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/z/zd/index.md"
 ---
 
 # [부호화/Z] ZD
@@ -56,8 +55,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/z/zd
 - [result-interpretation/upper-section/Zf](ref://result-interpretation%2Fupper-section%2FZf)
 - [result-interpretation/upper-section/ZSum](ref://result-interpretation%2Fupper-section%2FZSum)
 - [result-interpretation/upper-section/Zd](ref://result-interpretation%2Fupper-section%2FZd)
-
-## 근거 메모
-
-- 상세 근거와 카드별 가중치 메모는 provenance note에 분리해 둔다.
-- 공개용 본문에는 저작권 자료명을 직접 노출하지 않는다.

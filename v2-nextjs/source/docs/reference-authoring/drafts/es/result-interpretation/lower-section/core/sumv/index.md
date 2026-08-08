@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/determinants/V"
   - "scoring-input/determinants/FV"
   - "scoring-input/determinants/VF"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/core/sumv/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Core] SumV
@@ -69,7 +68,3 @@ En `core` suele indicar cuánto peso tiene la autocrítica, la disconformidad co
 - [[Codificación/Determinantes] V](ref://scoring-input/determinants/V)
 - [[Codificación/Determinantes] FV](ref://scoring-input/determinants/FV)
 - [[Codificación/Determinantes] VF](ref://scoring-input/determinants/VF)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

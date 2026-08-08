@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/ZSum"
   - "result-interpretation/upper-section/Zd"
   - "scoring-input/z"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Upper Section] ZEst
@@ -50,7 +49,3 @@ It functions as a baseline for calculating `Zd` more than as an independent clin
 - [[Interpretation/Upper Section] ZSum](ref://result-interpretation/upper-section/ZSum)
 - [[Interpretation/Upper Section] Zd](ref://result-interpretation/upper-section/Zd)
 - [[Coding/Z] Z](ref://scoring-input/z)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

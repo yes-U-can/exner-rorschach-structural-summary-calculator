@@ -15,9 +15,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/dq_v"
   - "scoring-input/dq/+"
   - "result-interpretation/lower-section/processing/DQ_plus_proc"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/upper-section/dq-plus/index.md"
 ---
 
 # 문서명: [해석/Upper Section] DQ+
@@ -64,7 +63,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[해석/Upper Section\] DQv](ref://result-interpretation/upper-section/dq_v)
 - [\[부호화/발달질\] +](ref://scoring-input/dq/%2B)
 - [\[해석/Processing\] DQ+](ref://result-interpretation/lower-section/processing/DQ_plus_proc)
-
-## 근거 메모
-
-- 상세 기준과 수치 메모는 provenance note에 분리했다.

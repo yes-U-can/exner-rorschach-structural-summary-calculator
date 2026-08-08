@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/location/DdS"
   - "scoring-input/location/DS"
   - "result-interpretation/upper-section/Dd"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/location/dd/index.md"
 ---
 
 # Nombre del documento: [Codificación/Localización] Dd
@@ -49,7 +48,3 @@ Es el código para detalles no habituales, incluso cuando el área sea relativam
 - [[Codificación/Localización] DdS](ref://scoring-input/location/DdS)
 - [[Codificación/Localización] DS](ref://scoring-input/location/DS)
 - [[Interpretación/Upper Section] Dd](ref://result-interpretation/upper-section/Dd)
-
-## Nota de fundamento
-
-- La provenance interna conserva los criterios de frecuencia y combinación no habitual.

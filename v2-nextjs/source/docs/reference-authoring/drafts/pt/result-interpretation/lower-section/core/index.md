@@ -26,9 +26,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/SumT"
   - "result-interpretation/lower-section/core/SumV"
   - "result-interpretation/lower-section/core/SumY"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-lower-section-core-opening-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Seção Inferior/Core] Core
@@ -75,7 +74,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-lower-section-core
 - [[Interpretação/Core] SumT](ref://result-interpretation/lower-section/core/SumT)
 - [[Interpretação/Core] SumV](ref://result-interpretation/lower-section/core/SumV)
 - [[Interpretação/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

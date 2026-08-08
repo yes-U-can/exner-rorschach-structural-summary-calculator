@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/fq/u"
   - "scoring-input/fq/-"
   - "scoring-input/dq/+"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-fq-2026-03-10.md"
 ---
 
 # Nome do documento: [Codificação/Qualidade Formal] +
@@ -50,7 +49,3 @@ Ela é bem ajustada e especialmente bem especificada.
 - [[Codificação/Qualidade Formal] u](ref://scoring-input/fq/u)
 - [[Codificação/Qualidade Formal] -](ref://scoring-input/fq/-)
 - [[Codificação/Qualidade Desenvolvimental] +](ref://scoring-input/dq/%2B)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

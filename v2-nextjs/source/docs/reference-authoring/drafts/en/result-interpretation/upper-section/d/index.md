@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/Dd"
   - "scoring-input/location/D"
   - "result-interpretation/lower-section/processing/W_D_Dd"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Upper Section] D
@@ -51,7 +50,3 @@ In interpretation it serves as a basic indicator of attention to practical, usua
 - [[Interpretation/Upper Section] Dd](ref://result-interpretation/upper-section/Dd)
 - [[Coding/Location] D](ref://scoring-input/location/D)
 - [[Interpretation/Processing] W:D:Dd](ref://result-interpretation/lower-section/processing/W_D_Dd)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

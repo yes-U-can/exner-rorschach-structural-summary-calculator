@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/M_minus"
   - "result-interpretation/lower-section/ideation/Mnone"
   - "scoring-input/determinants/M"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/ideation/ma-mp/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Ideación] Ma:Mp
@@ -64,7 +63,3 @@ Ayuda a ver si la imaginación humana tiende a representarse actuando e intervin
 - [[Interpretación/Ideación] M-](ref://result-interpretation/lower-section/ideation/M_minus)
 - [[Interpretación/Ideación] Mnone](ref://result-interpretation/lower-section/ideation/Mnone)
 - [[Codificación/Determinantes] M](ref://scoring-input/determinants/M)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

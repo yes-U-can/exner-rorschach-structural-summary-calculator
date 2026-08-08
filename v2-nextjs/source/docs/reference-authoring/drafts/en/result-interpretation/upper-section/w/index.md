@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/location/W"
   - "result-interpretation/lower-section/processing/W_D_Dd"
   - "result-interpretation/lower-section/processing/W_M"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Upper Section] W
@@ -53,7 +52,3 @@ In interpretation it shows how much the person tries to take in the stimulus fie
 - [[Coding/Location] W](ref://scoring-input/location/W)
 - [[Interpretation/Processing] W:D:Dd](ref://result-interpretation/lower-section/processing/W_D_Dd)
 - [[Interpretation/Processing] W:M](ref://result-interpretation/lower-section/processing/W_M)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

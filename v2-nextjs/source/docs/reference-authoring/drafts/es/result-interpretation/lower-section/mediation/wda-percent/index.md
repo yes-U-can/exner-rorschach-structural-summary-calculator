@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/location/W"
   - "scoring-input/location/D"
   - "scoring-input/fq"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/mediation/wda-percent/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Mediación] WDA%
@@ -69,7 +68,3 @@ Se usa para ver cuán estable es la mediación perceptiva en zonas relativamente
 - [[Codificación/Location] W](ref://scoring-input/location/W)
 - [[Codificación/Location] D](ref://scoring-input/location/D)
 - [[Codificación/FQ] FQ](ref://scoring-input/fq)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

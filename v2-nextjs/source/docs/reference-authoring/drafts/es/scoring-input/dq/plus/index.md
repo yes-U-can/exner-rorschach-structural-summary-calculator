@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/dq/v"
   - "scoring-input/fq/+"
   - "result-interpretation/lower-section/processing/DQ_plus_proc"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/dq/plus/index.md"
 ---
 
 # Nombre del documento: [Codificación/Calidad evolutiva] +
@@ -52,7 +51,3 @@ La clave no es solo que haya varios objetos, sino que la respuesta forme una uni
 - [[Codificación/Calidad evolutiva] o](ref://scoring-input/dq/o)
 - [[Codificación/Calidad formal] +](ref://scoring-input/fq/%2B)
 - [[Interpretación/Processing] DQ+](ref://result-interpretation/lower-section/processing/DQ_plus_proc)
-
-## Nota de fundamento
-
-- La justificación de fuente y las observaciones de contraste se conservan en la provenance interna.

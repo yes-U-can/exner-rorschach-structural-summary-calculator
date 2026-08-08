@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/dq/o"
   - "scoring-input/dq/v"
   - "result-interpretation/lower-section/processing/DQ_v_proc"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/dq/v-plus/index.md"
 ---
 
 # Nombre del documento: [Codificación/Calidad evolutiva] v/+
@@ -50,7 +49,3 @@ Hay organización, pero el material sintetizado sigue siendo formalmente vago.
 - [[Codificación/Calidad evolutiva] +](ref://scoring-input/dq/%2B)
 - [[Codificación/Calidad evolutiva] v](ref://scoring-input/dq/v)
 - [[Interpretación/Processing] DQv](ref://result-interpretation/lower-section/processing/DQ_v_proc)
-
-## Nota de fundamento
-
-- La nota de provenance interna conserva el desglose de fuente y el criterio de contraste.

@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/fq/-"
   - "scoring-input/fq/none"
   - "scoring-input/dq"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-fq-2026-03-10.md"
 ---
 
 # Nome do documento: [Codificação/Qualidade Formal] FQ
@@ -57,7 +56,3 @@ Ela trata do ajuste formal, não do nível de organização da resposta.
 - [[Codificação/Qualidade Formal] -](ref://scoring-input/fq/-)
 - [[Codificação/Qualidade Formal] none](ref://scoring-input/fq/none)
 - [[Codificação/Qualidade Evolutiva] DQ](ref://scoring-input/dq)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

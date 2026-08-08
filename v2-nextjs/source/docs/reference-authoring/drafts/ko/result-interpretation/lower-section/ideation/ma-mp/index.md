@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/M_minus"
   - "result-interpretation/lower-section/ideation/Mnone"
   - "scoring-input/determinants/M"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/ideation/ma-mp/index.md"
 ---
 
 # [해석/Ideation] Ma:Mp
@@ -52,7 +51,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `M-`
 - `Mnone`
 - `M`
-
-## 근거 메모
-
-- 상세 출처와 절단값 메모는 provenance note에 분리했다.

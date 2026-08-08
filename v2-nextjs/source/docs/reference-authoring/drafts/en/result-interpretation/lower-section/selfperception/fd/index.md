@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/determinants/FD"
   - "scoring-input/contents/Fd"
   - "result-interpretation/lower-section/core/SumV"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 # Document Name: [Interpretation/Self Perception] FD
 ## Aliases / Search Terms
@@ -55,5 +54,3 @@ In `Self Perception`, it is used as a clue to introspection and conscious self-o
 - [[Coding/Determinants] FD](ref://scoring-input/determinants/FD)
 - [[Coding/Content] Fd](ref://scoring-input/contents/Fd)
 - [[Interpretation/Core] SumV](ref://result-interpretation/lower-section/core/SumV)
-## Evidence Note
-- Detailed source comparison is stored in internal provenance notes.

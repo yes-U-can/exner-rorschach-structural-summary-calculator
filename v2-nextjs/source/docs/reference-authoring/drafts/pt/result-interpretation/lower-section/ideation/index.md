@@ -19,9 +19,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/WSum6"
   - "result-interpretation/lower-section/ideation/M_minus"
   - "result-interpretation/lower-section/ideation/Mnone"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-ideation-opening-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Seção Inferior/Ideação] Ideação
@@ -61,7 +60,3 @@ Ela ajuda a separar preferência de atividade mental, grau de abstração e sina
 - [[Interpretação/Ideação] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
 - [[Interpretação/Ideação] M-](ref://result-interpretation/lower-section/ideation/M_minus)
 - [[Interpretação/Ideação] Mnone](ref://result-interpretation/lower-section/ideation/Mnone)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

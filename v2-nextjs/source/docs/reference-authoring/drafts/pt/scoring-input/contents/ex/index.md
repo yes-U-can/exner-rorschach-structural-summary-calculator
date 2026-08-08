@@ -12,9 +12,8 @@ relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/Fi"
   - "scoring-input/contents/Sc"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-completion-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Conteúdo] Ex
@@ -48,7 +47,3 @@ O foco recai no acontecimento, não apenas no objeto parado.
 - [[Codificação/Conteúdo] Contents](ref://scoring-input/contents)
 - [[Codificação/Conteúdo] Fi](ref://scoring-input/contents/Fi)
 - [[Codificação/Conteúdo] Sc](ref://scoring-input/contents/Sc)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

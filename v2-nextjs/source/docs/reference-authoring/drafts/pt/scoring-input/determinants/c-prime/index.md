@@ -12,9 +12,8 @@ relatedRoutes:
   - "scoring-input/determinants/FC'"
   - "scoring-input/determinants/C'F"
   - "result-interpretation/lower-section/core/SumCprime"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-determinants-cn-achromatic-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Determinantes] C'
@@ -48,7 +47,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-determinants-cn-ac
 - [[Codificação/Determinantes] FC'](ref://scoring-input/determinants/FC%27)
 - [[Codificação/Determinantes] C'F](ref://scoring-input/determinants/C%27F)
 - [[Interpretação/Core] SumCprime](ref://result-interpretation/lower-section/core/SumCprime)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/gphr/GHR"
   - "scoring-input/gphr/PHR"
   - "result-interpretation/lower-section/interpersonal/ISO_Index"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/interpersonal/cop/index.md"
 ---
 
 # 문서명: [해석/Interpersonal] COP
@@ -69,7 +68,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[부호화/GHR-PHR\] GHR](ref://scoring-input/gphr/GHR)
 - [\[부호화/GHR-PHR\] PHR](ref://scoring-input/gphr/PHR)
 - [\[해석/Interpersonal\] Isolation Index](ref://result-interpretation/lower-section/interpersonal/ISO_Index)
-
-## 근거 메모
-
-- 빈도 해석과 `AG` 동반 시 주의점은 provenance note에 분리했다.

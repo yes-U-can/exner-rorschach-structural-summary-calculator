@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/contents/A"
   - "scoring-input/popular"
   - "scoring-input/card/V"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-card-i-v-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Cartões] I
@@ -56,7 +55,3 @@ Esta página resume os tipos de resposta que costumam aparecer quando a codifica
 - [[Codificação/Conteúdos] A](ref://scoring-input/contents/A)
 - [[Codificação/Popular] Popular](ref://scoring-input/popular)
 - [[Codificação/Cartões] V](ref://scoring-input/card/V)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

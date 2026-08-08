@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/determinants/Fr"
   - "scoring-input/determinants/rF"
   - "result-interpretation/lower-section/core/R"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Self Perception] Egocentricity Index
@@ -71,7 +70,3 @@ In interpretation, it helps estimate how much weight the self, personal value, o
 - [[Coding/Determinants] Fr](ref://scoring-input/determinants/Fr)
 - [[Coding/Determinants] rF](ref://scoring-input/determinants/rF)
 - [[Interpretation/Core] R](ref://result-interpretation/lower-section/core/R)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

@@ -25,9 +25,8 @@ relatedRoutes:
   - "scoring-input/z"
   - "scoring-input/location"
   - "scoring-input/dq"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-upper-section-overview-2026-03-10.md"
 ---
 
 # [解釈/Upper Section] Upper Section
@@ -75,7 +74,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-upper-section-over
 - [[コーディング/Z] Z](ref://scoring-input/z)
 - [[コーディング/位置] 領域](ref://scoring-input/location)
 - [[コーディング/DQ] DQ](ref://scoring-input/dq)
-
-## 根拠メモ
-
-- 詳細な出典比較は内部 provenance note に分けて保持します。

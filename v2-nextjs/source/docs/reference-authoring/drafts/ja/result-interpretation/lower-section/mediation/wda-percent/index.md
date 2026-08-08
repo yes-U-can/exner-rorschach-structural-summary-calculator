@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/location/W"
   - "scoring-input/location/D"
   - "scoring-input/fq"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-mediation-opening-xa-wda-2026-03-10.md"
 ---
 
 # [Interpretation/Mediation] WDA%
@@ -55,7 +54,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-mediation-opening-
 - [[Coding/領域] W](ref://scoring-input/location/W)
 - [[Coding/領域] D](ref://scoring-input/location/D)
 - [[Coding/FQ] FQ](ref://scoring-input/fq)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

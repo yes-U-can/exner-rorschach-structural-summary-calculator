@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/mediation/P"
   - "scoring-input/fq/+"
   - "scoring-input/popular"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 # Document Name: [Interpretation/Special Indices] Obsessive Style Index
 ## Aliases / Search Terms
@@ -55,5 +54,3 @@ Construct-validity evidence is insufficient for using it to infer obsessive pers
 - [[Interpretation/Mediation] P](ref://result-interpretation/lower-section/mediation/P)
 - [[Coding/FQ] +](ref://scoring-input/fq/%2B)
 - [[Coding/Popular] Popular](ref://scoring-input/popular)
-## Evidence Note
-- Detailed source comparison is stored in internal provenance notes.

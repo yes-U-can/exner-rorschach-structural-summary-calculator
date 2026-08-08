@@ -18,9 +18,8 @@ relatedRoutes:
   - "scoring-input/special-score/COP"
   - "scoring-input/special-score/AG"
   - "scoring-input/popular"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/card/iii/index.md"
 ---
 
 # Nombre del documento: [Codificación/Láminas] III
@@ -60,8 +59,3 @@ La página funciona como recordatorio de codificación para contenido humano, mo
 - [[Codificación/Puntuaciones especiales] COP](ref://scoring-input/special-score/COP)
 - [[Codificación/Puntuaciones especiales] AG](ref://scoring-input/special-score/AG)
 - [[Codificación/Popular] Popular](ref://scoring-input/popular)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

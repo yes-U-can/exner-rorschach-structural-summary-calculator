@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/Sc"
   - "scoring-input/contents/Art"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-completion-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Conteúdo] Id
@@ -50,7 +49,3 @@ Ele não deve virar categoria de conveniência para qualquer resposta estranha.
 - [[Codificação/Conteúdo] Contents](ref://scoring-input/contents)
 - [[Codificação/Conteúdo] Sc](ref://scoring-input/contents/Sc)
 - [[Codificação/Conteúdo] Art](ref://scoring-input/contents/Art)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

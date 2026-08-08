@@ -23,9 +23,8 @@ relatedRoutes:
   - "scoring-input/special-score/FABCOM2"
   - "scoring-input/special-score/ALOG"
   - "scoring-input/special-score/CONTAM"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/ideation/sum6/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Ideación] Sum6
@@ -84,7 +83,3 @@ Se usa para estimar con qué frecuencia aparecen rarezas cognitivas, desviacione
 - [[Codificación/Código Especial] FABCOM2](ref://scoring-input/special-score/FABCOM2)
 - [[Codificación/Código Especial] ALOG](ref://scoring-input/special-score/ALOG)
 - [[Codificación/Código Especial] CONTAM](ref://scoring-input/special-score/CONTAM)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

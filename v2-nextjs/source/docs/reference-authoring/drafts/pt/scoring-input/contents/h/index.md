@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/gphr/PHR"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
   - "result-interpretation/lower-section/interpersonal/PureH"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-human-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Conteúdo] H
@@ -56,7 +55,3 @@ A resposta aponta para uma pessoa inteira, não para parte do corpo e não para 
 - [[Codificação/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
 - [[Interpretação/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
 - [[Interpretação/Interpersonal] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

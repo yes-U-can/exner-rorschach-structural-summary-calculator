@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/fq/+"
   - "result-interpretation/lower-section/processing/DQ_plus_proc"
   - "result-interpretation/lower-section/processing/DQ_v_proc"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/dq/index.md"
 ---
 
 # 문서명: [부호화/발달질] DQ
@@ -61,8 +60,3 @@ DQ는 피검자가 반점 영역을 얼마나 조직적으로 선택하고 결�
 - [\[부호화/형태질\] +](ref://scoring-input/fq/%2B)
 - [\[해석/Processing\] DQ+](ref://result-interpretation/lower-section/processing/DQ_plus_proc)
 - [\[해석/Processing\] DQv](ref://result-interpretation/lower-section/processing/DQ_v_proc)
-
-## 근거 메모
-
-- 세부 근거 대조와 용어 판단 기록은 내부 작업 메모에서 관리한다.
-- 공개 참조 문서 반영 단계에서는 내부 provenance가 노출되지 않도록 분리한다.

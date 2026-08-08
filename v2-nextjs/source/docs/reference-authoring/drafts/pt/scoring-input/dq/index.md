@@ -17,9 +17,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/dq_o"
   - "result-interpretation/upper-section/dq_vplus"
   - "result-interpretation/upper-section/dq_v"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-dq-2026-03-10.md"
 ---
 
 # Nome do documento: [Codificação/Qualidade Desenvolvimental] DQ
@@ -58,7 +57,3 @@ O foco é a estrutura da resposta, não se o ajuste formal e bom ou ruim.
 - [[Interpretação/Upper Section] DQo](ref://result-interpretation/upper-section/dq_o)
 - [[Interpretação/Upper Section] DQv/+](ref://result-interpretation/upper-section/dq_vplus)
 - [[Interpretação/Upper Section] DQv](ref://result-interpretation/upper-section/dq_v)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

@@ -12,9 +12,8 @@ relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/An"
   - "result-interpretation/lower-section/selfPerception/An_Xy"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/contents/xy/index.md"
 ---
 
 # Nombre del documento: [Codificación/Contenido] Xy
@@ -48,8 +47,3 @@ Si la respuesta se codifica como `Xy`, el foco está en la imagen radiográfica 
 - [[Codificación/Contenido] Contents](ref://scoring-input/contents)
 - [[Codificación/Contenido] An](ref://scoring-input/contents/An)
 - [[Interpretación/Self Perception] An + Xy](ref://result-interpretation/lower-section/selfPerception/An_Xy)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

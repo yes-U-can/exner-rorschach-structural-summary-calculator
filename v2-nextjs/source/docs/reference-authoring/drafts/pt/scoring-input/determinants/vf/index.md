@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/determinants/V"
   - "result-interpretation/lower-section/core/SumV"
   - "result-interpretation/lower-section/selfPerception/SumV_self"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-determinants-shading-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Determinantes] VF
@@ -51,7 +50,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-determinants-shadi
 - [[Codificação/Determinantes] V](ref://scoring-input/determinants/V)
 - [[Interpretação/Core] SumV](ref://result-interpretation/lower-section/core/SumV)
 - [[Interpretação/Self Perception] SumV](ref://result-interpretation/lower-section/selfPerception/SumV_self)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

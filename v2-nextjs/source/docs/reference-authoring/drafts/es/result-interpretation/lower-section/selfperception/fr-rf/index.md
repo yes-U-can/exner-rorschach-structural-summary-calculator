@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/determinants/Fr"
   - "scoring-input/determinants/rF"
   - "scoring-input/pair"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/selfperception/fr-rf/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Self Perception] Fr + rF
@@ -69,7 +68,3 @@ En `Self Perception` ayuda a leer si la autoimagen necesita brillo especial, con
 - [[Codificación/Determinantes] Fr](ref://scoring-input/determinants/Fr)
 - [[Codificación/Determinantes] rF](ref://scoring-input/determinants/rF)
 - [[Codificación/Pair] Pair](ref://scoring-input/pair)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

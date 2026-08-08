@@ -21,9 +21,8 @@ relatedRoutes:
   - "scoring-input/z"
   - "scoring-input/gphr"
   - "scoring-input/special-score"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding] score
@@ -67,7 +66,3 @@ In the Comprehensive System, it means converting each Rorschach response into a 
 - [[Coding/Z] Z](ref://scoring-input/z)
 - [[Coding/GHR-PHR] GHR/PHR](ref://scoring-input/gphr)
 - [[Coding/Special Scores] Special Scores](ref://scoring-input/special-score)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

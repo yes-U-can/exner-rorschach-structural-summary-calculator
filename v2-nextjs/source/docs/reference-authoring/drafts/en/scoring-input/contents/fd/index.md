@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/determinants/FD"
   - "scoring-input/contents/A"
   - "result-interpretation/lower-section/interpersonal/Food"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Content] Fd
@@ -50,7 +49,3 @@ It is a content code, not a determinant.
 - [[Coding/Determinant] FD](ref://scoring-input/determinants/FD)
 - [[Coding/Content] A](ref://scoring-input/contents/A)
 - [[Interpretation/Interpersonal] Food](ref://result-interpretation/lower-section/interpersonal/Food)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

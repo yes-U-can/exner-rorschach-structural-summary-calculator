@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/z/ZA"
   - "result-interpretation/upper-section/Zd"
   - "result-interpretation/lower-section/processing/Zd_proc"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Z] ZD
@@ -52,7 +51,3 @@ The response organizes non-adjacent areas into a meaningful whole.
 - [[Coding/Z] ZA](ref://scoring-input/z/ZA)
 - [[Interpretation/Upper Section] Zd](ref://result-interpretation/upper-section/Zd)
 - [[Interpretation/Processing] Zd](ref://result-interpretation/lower-section/processing/Zd_proc)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

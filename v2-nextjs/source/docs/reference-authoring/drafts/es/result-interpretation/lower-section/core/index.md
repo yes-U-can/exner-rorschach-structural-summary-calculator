@@ -26,9 +26,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/SumT"
   - "result-interpretation/lower-section/core/SumV"
   - "result-interpretation/lower-section/core/SumY"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/core/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Lower Section/Core] Core
@@ -91,7 +90,3 @@ Aquí se leen juntos `R`, `Lambda`, `EB`, `EA`, `eb`, `es`, `D`, `AdjD` y las va
 - [[Interpretación/Core] SumT](ref://result-interpretation/lower-section/core/SumT)
 - [[Interpretación/Core] SumV](ref://result-interpretation/lower-section/core/SumV)
 - [[Interpretación/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

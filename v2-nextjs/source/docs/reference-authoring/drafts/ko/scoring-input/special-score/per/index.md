@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/special-score"
   - "result-interpretation/lower-section/interpersonal/PER"
   - "result-interpretation/lower-section/mediation/Xu_percent"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/special-score/per/index.md"
 ---
 
 # 문서명: [부호화/특수점수] PER
@@ -49,8 +48,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/spec
 - [\[부호화/특수점수\] Special Scores](ref://scoring-input/special-score)
 - [\[해석/Interpersonal\] PER](ref://result-interpretation/lower-section/interpersonal/PER)
 - [\[해석/Mediation\] Xu%](ref://result-interpretation/lower-section/mediation/Xu_percent)
-
-## 근거 메모
-
-- 상세 근거와 source 충돌 메모는 provenance note에 분리해 둔다.
-- 공개용 본문에는 저작권 자료명을 직접 노출하지 않는다.

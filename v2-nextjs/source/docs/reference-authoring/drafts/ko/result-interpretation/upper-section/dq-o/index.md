@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/dq_vplus"
   - "result-interpretation/upper-section/dq_v"
   - "scoring-input/dq/o"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/upper-section/dq-o/index.md"
 ---
 
 # 문서명: [해석/Upper Section] DQo
@@ -62,7 +61,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[해석/Upper Section\] DQv/+](ref://result-interpretation/upper-section/dq_vplus)
 - [\[해석/Upper Section\] DQv](ref://result-interpretation/upper-section/dq_v)
 - [\[부호화/발달질\] o](ref://scoring-input/dq/o)
-
-## 근거 메모
-
-- 상세 기준과 수치 메모는 provenance note에 분리했다.

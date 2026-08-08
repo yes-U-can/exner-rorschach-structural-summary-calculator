@@ -26,9 +26,8 @@ relatedRoutes:
   - "scoring-input/z"
   - "scoring-input/location"
   - "scoring-input/dq"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/upper-section/index.md"
 ---
 
 # [해석/Upper Section] Upper Section
@@ -71,8 +70,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `result-interpretation/lower-section/processing/W_M`
 - `result-interpretation/lower-section/processing/DQ_plus_proc`
 - `result-interpretation/lower-section/processing/DQ_v_proc`
-
-## 근거 메모
-
-- 상세 출처와 수치 기준 메모는 provenance note에 분리했다.
-- 공개용 본문에는 저작권 자료명을 직접 적지 않는다.

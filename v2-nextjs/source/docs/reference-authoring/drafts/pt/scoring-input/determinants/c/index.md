@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/determinants/CF"
   - "result-interpretation/lower-section/affect/FC_CF_C"
   - "result-interpretation/lower-section/affect/PureC"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-determinants-movement-chromatic-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Determinantes] C
@@ -52,7 +51,3 @@ A percepção depende da cor mais do que da forma.
 - [[Codificação/Determinantes] CF](ref://scoring-input/determinants/CF)
 - [[Interpretação/Affect] FC:CF+C](ref://result-interpretation/lower-section/affect/FC_CF_C)
 - [[Interpretação/Affect] Pure C](ref://result-interpretation/lower-section/affect/PureC)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

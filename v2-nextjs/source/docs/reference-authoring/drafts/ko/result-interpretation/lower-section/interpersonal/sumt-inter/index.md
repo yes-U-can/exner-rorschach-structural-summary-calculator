@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/determinants/T"
   - "scoring-input/determinants/FT"
   - "scoring-input/determinants/TF"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/interpersonal/sumt-inter/index.md"
 ---
 
 # 문서명: [해석/Interpersonal] SumT
@@ -69,7 +68,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[부호화/결정인\] T](ref://scoring-input/determinants/T)
 - [\[부호화/결정인\] FT](ref://scoring-input/determinants/FT)
 - [\[부호화/결정인\] TF](ref://scoring-input/determinants/TF)
-
-## 근거 메모
-
-- core burden와 interpersonal need를 분리하는 원칙은 provenance note에 분리했다.

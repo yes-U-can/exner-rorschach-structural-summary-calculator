@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/special-score/DR2"
   - "result-interpretation/lower-section/ideation/Sum6"
   - "result-interpretation/lower-section/ideation/WSum6"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Special Scores] DV1
@@ -54,7 +53,3 @@ The core idea is that the wording sounds strange or improper without reaching a 
 - [[Coding/Special Scores] DR2](ref://scoring-input/special-score/DR2)
 - [[Interpretation/Ideation] Sum6](ref://result-interpretation/lower-section/ideation/Sum6)
 - [[Interpretation/Ideation] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

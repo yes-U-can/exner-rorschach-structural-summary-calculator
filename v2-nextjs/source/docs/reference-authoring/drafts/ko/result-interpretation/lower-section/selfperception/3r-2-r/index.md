@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/determinants/Fr"
   - "scoring-input/determinants/rF"
   - "result-interpretation/lower-section/core/R"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/selfperception/3r-2-r/index.md"
 ---
 
 # 문서명: [해석/Self Perception] Egocentricity Index
@@ -70,7 +69,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[부호화/결정인\] Fr](ref://scoring-input/determinants/Fr)
 - [\[부호화/결정인\] rF](ref://scoring-input/determinants/rF)
 - [\[해석/Core\] R](ref://result-interpretation/lower-section/core/R)
-
-## 근거 메모
-
-- 성인 절단값과 reflection weighting 메모는 provenance note에 분리했다.

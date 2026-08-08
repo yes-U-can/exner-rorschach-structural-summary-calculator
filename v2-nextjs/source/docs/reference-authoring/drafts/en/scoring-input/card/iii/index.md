@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/special-score/COP"
   - "scoring-input/special-score/AG"
   - "scoring-input/popular"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Cards] III
@@ -58,7 +57,3 @@ This page functions as a coding reminder for human content, movement, and relati
 - [[Coding/Special Scores] COP](ref://scoring-input/special-score/COP)
 - [[Coding/Special Scores] AG](ref://scoring-input/special-score/AG)
 - [[Coding/Popular] Popular](ref://scoring-input/popular)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

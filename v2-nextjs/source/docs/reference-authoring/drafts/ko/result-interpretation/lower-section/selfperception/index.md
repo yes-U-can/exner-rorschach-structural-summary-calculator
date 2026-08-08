@@ -21,9 +21,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/MOR"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
   - "result-interpretation/lower-section/interpersonal/PureH"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/selfperception/index.md"
 ---
 
 # 문서명: [해석/Lower Section/Self Perception] Self Perception
@@ -81,7 +80,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[해석/Ideation\] MOR](ref://result-interpretation/lower-section/ideation/MOR)
 - [\[해석/Interpersonal\] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
 - [\[해석/Interpersonal\] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)
-
-## 근거 메모
-
-- 절단값과 세부 출처 메모는 provenance note에 분리했다.

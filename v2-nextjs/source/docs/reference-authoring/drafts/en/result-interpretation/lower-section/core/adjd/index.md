@@ -18,9 +18,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/SumY"
   - "result-interpretation/lower-section/core/Lambda"
   - "result-interpretation/special-indices/CDI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Core] AdjD
@@ -61,7 +60,3 @@ It works as a more stable estimate of control margin because `AdjEs` removes all
 - [[Interpretation/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
 - [[Interpretation/Core] Lambda](ref://result-interpretation/lower-section/core/Lambda)
 - [[Interpretation/Special Indices] CDI](ref://result-interpretation/special-indices/CDI)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

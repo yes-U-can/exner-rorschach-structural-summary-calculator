@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/pair"
   - "scoring-input/determinants/F"
   - "result-interpretation/lower-section/selfPerception/Fr_rF"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-determinants-f-fr-rf-fd-2026-03-10.md"
 ---
 
 # [コーディング/決定因] Fr
@@ -53,7 +52,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-determinants-f-fr-
 - [[Coding/Pair] Pair](ref://scoring-input/pair)
 - [[Coding/決定因] F](ref://scoring-input/determinants/F)
 - [[解釈/Self Perception] Fr + rF](ref://result-interpretation/lower-section/selfPerception/Fr_rF)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

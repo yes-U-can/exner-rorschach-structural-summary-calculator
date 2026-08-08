@@ -15,9 +15,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/Zd"
   - "scoring-input/z"
   - "result-interpretation/lower-section/processing/Zf_proc"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/upper-section/zf/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Upper Section] Zf
@@ -66,7 +65,3 @@ Indica cuántas veces aparece el intento de organizar relaciones entre partes de
 - [[Interpretación/Upper Section] Zd](ref://result-interpretation/upper-section/Zd)
 - [[Codificación/Z] Z](ref://scoring-input/z)
 - [[Interpretación/Processing] Zf](ref://result-interpretation/lower-section/processing/Zf_proc)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

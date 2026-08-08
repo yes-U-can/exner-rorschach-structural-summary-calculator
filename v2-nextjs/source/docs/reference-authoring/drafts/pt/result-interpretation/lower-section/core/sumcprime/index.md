@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/determinants/C'"
   - "scoring-input/determinants/FC'"
   - "scoring-input/determinants/C'F"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-core-burden-qualities-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Core] SumCprime
@@ -58,7 +57,3 @@ No `core`, ele costuma indicar o peso de desconforto disfórico, afeto desagrad�
 - [[Codificação/Determinantes] C'](ref://scoring-input/determinants/C%27)
 - [[Codificação/Determinantes] FC'](ref://scoring-input/determinants/FC%27)
 - [[Codificação/Determinantes] C'F](ref://scoring-input/determinants/C%27F)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

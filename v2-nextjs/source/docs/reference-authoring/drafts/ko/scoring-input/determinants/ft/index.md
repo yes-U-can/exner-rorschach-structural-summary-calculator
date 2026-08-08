@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/determinants/Y"
   - "result-interpretation/lower-section/core/SumT"
   - "result-interpretation/lower-section/interpersonal/SumT_inter"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/determinants/ft/index.md"
 ---
 
 # 문서명: [부호화/결정인] FT
@@ -59,8 +58,3 @@ FT는 형태가 먼저 대상을 조직하고, 음영 특징이 그 대상의 �
 - [\[부호화/결정인\] Y](ref://scoring-input/determinants/Y)
 - [\[해석/Core\] SumT](ref://result-interpretation/lower-section/core/SumT)
 - [\[해석/Interpersonal\] SumT](ref://result-interpretation/lower-section/interpersonal/SumT_inter)
-
-## 근거 메모
-
-- 상세 근거와 출처 충돌 메모는 provenance note에 분리해 둔다.
-- 공개용 본문에는 저작권 자료명을 직접 노출하지 않는다.

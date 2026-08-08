@@ -15,9 +15,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/processing/Zf_proc"
   - "result-interpretation/lower-section/processing/PSV"
   - "result-interpretation/lower-section/processing/W_D_Dd"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/processing/zd-proc/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Procesamiento] Zd
@@ -67,7 +66,3 @@ Se usa para estimar si el procesamiento tiende a ser equilibrado, excesivo o ins
 - [[Interpretación/Procesamiento] Zf](ref://result-interpretation/lower-section/processing/Zf_proc)
 - [[Interpretación/Procesamiento] PSV](ref://result-interpretation/lower-section/processing/PSV)
 - [[Interpretación/Procesamiento] W:D:Dd](ref://result-interpretation/lower-section/processing/W_D_Dd)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

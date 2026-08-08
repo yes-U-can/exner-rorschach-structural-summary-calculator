@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/determinants/FD"
   - "scoring-input/contents/A"
   - "result-interpretation/lower-section/interpersonal/Food"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/contents/fd/index.md"
 ---
 
 # Nombre del documento: [Codificación/Contenido] Fd
@@ -50,8 +49,3 @@ No es un determinante; es un código de contenido para algo entendido como comes
 - [[Codificación/Determinante] FD](ref://scoring-input/determinants/FD)
 - [[Codificación/Contenido] A](ref://scoring-input/contents/A)
 - [[Interpretación/Interpersonal] Food](ref://result-interpretation/lower-section/interpersonal/Food)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/D"
   - "scoring-input/location/Dd"
   - "result-interpretation/lower-section/processing/W_D_Dd"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-upper-section-location-dq-2026-03-10.md"
 ---
 
 # [解釈/Upper Section] Dd
@@ -51,7 +50,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-upper-section-loca
 - [[解釈/上段] D](ref://result-interpretation/upper-section/D)
 - [[コーディング/位置] Dd](ref://scoring-input/location/Dd)
 - [[解釈/情報処理] W:D:Dd](ref://result-interpretation/lower-section/processing/W_D_Dd)
-
-## 根拠メモ
-
-- 詳細な出典比較は内部 provenance note に分けて保持します。

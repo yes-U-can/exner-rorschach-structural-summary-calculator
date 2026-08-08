@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/determinants/T"
   - "scoring-input/determinants/TF"
   - "scoring-input/fq"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/card/iv/index.md"
 ---
 
 # [부호화/카드] IV
@@ -59,8 +58,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/card
 - [scoring-input/determinants/T](ref://scoring-input%2Fdeterminants%2FT)
 - [scoring-input/determinants/TF](ref://scoring-input%2Fdeterminants%2FTF)
 - [scoring-input/fq](ref://scoring-input%2Ffq)
-
-## 근거 메모
-
-- 상세 근거와 source 충돌 메모는 provenance note에 분리해 둔다.
-- 공개용 본문에는 저작권 자료명을 직접 노출하지 않는다.

@@ -17,9 +17,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/affect/S_aff"
   - "result-interpretation/lower-section/affect/Blends_R"
   - "result-interpretation/lower-section/affect/CP"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-affect-opening-fccfc-2026-03-10.md"
 ---
 
 # [Interpretation/Lower Section/Affect] Affect
@@ -58,7 +57,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-affect-opening-fcc
 - [[解釈/Affect] S](ref://result-interpretation/lower-section/affect/S_aff)
 - [[解釈/Affect] Blends:R](ref://result-interpretation/lower-section/affect/Blends_R)
 - [[解釈/Affect] CP](ref://result-interpretation/lower-section/affect/CP)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

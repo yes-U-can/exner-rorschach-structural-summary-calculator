@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/Art"
   - "scoring-input/contents/Id"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Content] Sc
@@ -50,7 +49,3 @@ The important point is that the person sees an apparatus, instrument, machine, o
 - [[Coding/Content] Contents](ref://scoring-input/contents)
 - [[Coding/Content] Art](ref://scoring-input/contents/Art)
 - [[Coding/Content] Id](ref://scoring-input/contents/Id)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/An"
   - "result-interpretation/lower-section/selfPerception/An_Xy"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-contents-ls-na-sc-sx-xy-id-2026-03-10.md"
 ---
 
 # [コーディング/内容] Xy
@@ -50,7 +49,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-contents-ls-na-sc-
 - [[コーディング/内容] Contents](ref://scoring-input/contents)
 - [[コーディング/内容] An](ref://scoring-input/contents/An)
 - [[解釈/自己知覚] An + Xy](ref://result-interpretation/lower-section/selfPerception/An_Xy)
-
-## 根拠メモ
-
-- 詳細な出典比較は内部 provenance note に記録しています。

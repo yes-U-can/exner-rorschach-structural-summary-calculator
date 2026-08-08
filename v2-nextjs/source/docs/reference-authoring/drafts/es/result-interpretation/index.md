@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/lower-section"
   - "result-interpretation/special-indices"
   - "scoring-input"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/index.md"
 ---
 
 # Nombre del documento: [Interpretación] result-interpretation
@@ -58,8 +57,3 @@ No explica cómo se codifica una respuesta aislada, sino cómo se leen en conjun
 - [[Interpretación/Lower Section] Lower Section](ref://result-interpretation/lower-section)
 - [[Interpretación/Índices Especiales] Índices Especiales](ref://result-interpretation/special-indices)
 - [[Codificación] scoring-input](ref://scoring-input)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

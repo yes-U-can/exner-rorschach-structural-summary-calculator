@@ -27,9 +27,8 @@ relatedRoutes:
   - "scoring-input/determinants/T"
   - "scoring-input/determinants/V"
   - "scoring-input/determinants/Y"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/core/eb--6562/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Core] eb
@@ -96,7 +95,3 @@ Describe la composición de la demanda actual: si pesa más la tensión ligada a
 - [[Codificación/Determinantes] T](ref://scoring-input/determinants/T)
 - [[Codificación/Determinantes] V](ref://scoring-input/determinants/V)
 - [[Codificación/Determinantes] Y](ref://scoring-input/determinants/Y)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

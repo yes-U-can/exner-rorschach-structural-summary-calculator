@@ -22,9 +22,8 @@ relatedRoutes:
   - "scoring-input/card/VIII"
   - "scoring-input/card/IX"
   - "scoring-input/card/X"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/card/index.md"
 ---
 
 # Nombre del documento: [Codificación/Láminas] Card
@@ -69,8 +68,3 @@ Esta familia no interpreta el significado clínico global de cada lámina; funci
 - [[Codificación/Láminas] VIII](ref://scoring-input/card/VIII)
 - [[Codificación/Láminas] IX](ref://scoring-input/card/IX)
 - [[Codificación/Láminas] X](ref://scoring-input/card/X)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

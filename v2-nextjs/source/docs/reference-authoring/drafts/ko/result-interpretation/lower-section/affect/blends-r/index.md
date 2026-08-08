@@ -15,9 +15,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/R"
   - "result-interpretation/lower-section/core/Lambda"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/affect/blends-r/index.md"
 ---
 
 # 문서명: [해석/Affect] Blends:R
@@ -66,7 +65,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[해석/Core\] R](ref://result-interpretation/lower-section/core/R)
 - [\[해석/Core\] Lambda](ref://result-interpretation/lower-section/core/Lambda)
 - [\[해석/Special Indices\] DEPI](ref://result-interpretation/special-indices/DEPI)
-
-## 근거 메모
-
-- low blend warning과 color-shading blend 메모는 provenance note에 분리했다.

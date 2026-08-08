@@ -19,9 +19,8 @@ relatedRoutes:
   - "scoring-input/contents/Hx"
   - "scoring-input/gphr/GHR"
   - "scoring-input/gphr/PHR"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 # Document Name: [Interpretation/Self Perception] H Ratio
 ## Aliases / Search Terms
@@ -61,5 +60,3 @@ In `Self Perception`, it helps show whether the image of self and others rests m
 - [[Coding/Content] Hx](ref://scoring-input/contents/Hx)
 - [[Coding/GHR-PHR] GHR](ref://scoring-input/gphr/GHR)
 - [[Coding/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
-## Evidence Note
-- Detailed source comparison is stored in internal provenance notes.

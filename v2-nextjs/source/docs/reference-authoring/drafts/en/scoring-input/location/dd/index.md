@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/location/D"
   - "scoring-input/location/W"
   - "result-interpretation/upper-section/Dd"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Location] Dd
@@ -49,7 +48,3 @@ The code indicates uncommon area selection, not automatically unusual content or
 - [[Coding/Location] D](ref://scoring-input/location/D)
 - [[Coding/Location] W](ref://scoring-input/location/W)
 - [[Interpretation/Upper Section] Dd](ref://result-interpretation/upper-section/Dd)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

@@ -18,9 +18,8 @@ relatedRoutes:
   - "scoring-input/contents/Ad"
   - "scoring-input/popular"
   - "scoring-input/special-score/MOR"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-card-vi-x-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Cartões] VI
@@ -61,7 +60,3 @@ Esta página resume o que vale a pena revisar na codificação quando essas resp
 - [[Codificação/Conteúdos] Ad](ref://scoring-input/contents/Ad)
 - [[Codificação/Popular] Popular](ref://scoring-input/popular)
 - [[Codificação/Códigos Especiais] MOR](ref://scoring-input/special-score/MOR)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

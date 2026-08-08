@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/M_minus"
   - "scoring-input/determinants/M"
   - "result-interpretation/special-indices/SCON"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/ideation/mnone/index.md"
 ---
 
 # [해석/Ideation] Mnone
@@ -53,7 +52,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `WSum6`
 - `PTI`
 - `SCON`
-
-## 근거 메모
-
-- 상세 출처와 절단값 메모는 provenance note에 분리했다.

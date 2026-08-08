@@ -18,9 +18,8 @@ relatedRoutes:
   - "scoring-input/contents/Ad"
   - "scoring-input/popular"
   - "scoring-input/special-score/MOR"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Cards] VI
@@ -61,7 +60,3 @@ This page summarizes what is useful to review in coding when those responses app
 - [[Coding/Contents] Ad](ref://scoring-input/contents/Ad)
 - [[Coding/Popular] Popular](ref://scoring-input/popular)
 - [[Coding/Special Scores] MOR](ref://scoring-input/special-score/MOR)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

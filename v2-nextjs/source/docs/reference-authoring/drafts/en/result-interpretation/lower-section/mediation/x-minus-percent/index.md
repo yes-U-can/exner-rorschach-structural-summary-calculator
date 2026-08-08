@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/fq/-"
   - "result-interpretation/lower-section/ideation/WSum6"
   - "result-interpretation/special-indices/PTI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Mediation] X-%
@@ -53,7 +52,3 @@ In mediation, it functions as a central sign of perceptual distance from shared 
 - [[Coding/FQ] -](ref://scoring-input/fq/-)
 - [[Interpretation/Ideation] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
 - [[Interpretation/Special Indices] PTI](ref://result-interpretation/special-indices/PTI)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/contents/Art"
   - "scoring-input/contents/Ad"
   - "scoring-input/contents/Cg"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Content] Hh
@@ -50,7 +49,3 @@ The key point is that the form is understood as something used in the home, not 
 - [[Coding/Content] Art](ref://scoring-input/contents/Art)
 - [[Coding/Content] Ad](ref://scoring-input/contents/Ad)
 - [[Coding/Content] Cg](ref://scoring-input/contents/Cg)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

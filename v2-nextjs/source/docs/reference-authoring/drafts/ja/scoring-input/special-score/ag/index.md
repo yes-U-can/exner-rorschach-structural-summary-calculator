@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/gphr/PHR"
   - "result-interpretation/lower-section/interpersonal/AG"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-score-cop-ag-mor-2026-03-10.md"
 ---
 
 # [コーディング/特殊スコア] AG
@@ -58,7 +57,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-score-cop-
 - [[コーディング/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
 - [[解釈/対人関係] AG](ref://result-interpretation/lower-section/interpersonal/AG)
 - [[解釈/対人関係] 人間内容](ref://result-interpretation/lower-section/interpersonal/HumanCont)
-
-## 根拠メモ
-
-- 詳細な出典比較は内部 provenance note に記録しています。

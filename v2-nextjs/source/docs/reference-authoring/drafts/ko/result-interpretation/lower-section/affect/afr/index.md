@@ -18,9 +18,8 @@ relatedRoutes:
   - "scoring-input/card/VIII"
   - "scoring-input/card/IX"
   - "scoring-input/card/X"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/affect/afr/index.md"
 ---
 
 # 문서명: [해석/Affect] Afr
@@ -72,7 +71,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[부호화/카드\] VIII](ref://scoring-input/card/VIII)
 - [\[부호화/카드\] IX](ref://scoring-input/card/IX)
 - [\[부호화/카드\] X](ref://scoring-input/card/X)
-
-## 근거 메모
-
-- 카드별 반응 수 비율 공식과 stress-related drop 메모는 provenance note에 분리했다.

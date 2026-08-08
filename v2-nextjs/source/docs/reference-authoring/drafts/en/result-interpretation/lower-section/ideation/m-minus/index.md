@@ -18,9 +18,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/Mnone"
   - "scoring-input/determinants/M"
   - "result-interpretation/special-indices/PTI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Ideation] M-
@@ -59,7 +58,3 @@ In interpretation, it is used as a sign that imagined human activity is distorte
 - [[Interpretation/Ideation] Mnone](ref://result-interpretation/lower-section/ideation/Mnone)
 - [[Coding/Determinants] M](ref://scoring-input/determinants/M)
 - [[Interpretation/Special Indices] PTI](ref://result-interpretation/special-indices/PTI)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/determinants/C'"
   - "scoring-input/determinants/FC'"
   - "scoring-input/determinants/C'F"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Core] SumCprime
@@ -58,7 +57,3 @@ In `core`, it usually indicates the weight of dysphoric discomfort, unpleasant a
 - [[Coding/Determinants] C'](ref://scoring-input/determinants/C%27)
 - [[Coding/Determinants] FC'](ref://scoring-input/determinants/FC%27)
 - [[Coding/Determinants] C'F](ref://scoring-input/determinants/C%27F)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

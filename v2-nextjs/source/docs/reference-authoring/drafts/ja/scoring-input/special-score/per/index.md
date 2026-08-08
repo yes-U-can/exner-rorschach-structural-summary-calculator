@@ -12,9 +12,8 @@ relatedRoutes:
   - "scoring-input/special-score"
   - "result-interpretation/lower-section/interpersonal/PER"
   - "result-interpretation/lower-section/mediation/Xu_percent"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-score-ab-psv-per-cp-2026-03-10.md"
 ---
 
 # [コーディング/特殊スコア] PER
@@ -48,7 +47,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-score-ab-p
 - [[コーディング/特殊スコア] 特殊スコア](ref://scoring-input/special-score)
 - [[解釈/対人関係] PER](ref://result-interpretation/lower-section/interpersonal/PER)
 - [[解釈/媒介] Xu%](ref://result-interpretation/lower-section/mediation/Xu_percent)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

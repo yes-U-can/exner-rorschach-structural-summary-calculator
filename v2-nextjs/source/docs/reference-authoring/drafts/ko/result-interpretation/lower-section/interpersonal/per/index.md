@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/special-score/PER"
   - "result-interpretation/lower-section/mediation/Xu_percent"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/interpersonal/per/index.md"
 ---
 
 # 문서명: [해석/Interpersonal] PER
@@ -65,7 +64,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[부호화/특수점수\] PER](ref://scoring-input/special-score/PER)
 - [\[해석/Mediation\] Xu%](ref://result-interpretation/lower-section/mediation/Xu_percent)
 - [\[해석/Self Perception\] H Ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
-
-## 근거 메모
-
-- 자기준거적 해석과 단순 자기언급의 구분은 provenance note에 분리했다.

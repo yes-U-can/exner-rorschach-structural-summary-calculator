@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/determinants/FV"
   - "scoring-input/determinants/FT"
   - "result-interpretation/lower-section/core/SumY"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/determinants/fy/index.md"
 ---
 
 # Nombre del documento: [Codificación/Determinantes] FY
@@ -57,8 +56,3 @@ La impresión de sombra, nubosidad o indeterminación está presente, pero la re
 - [[Codificación/Determinantes] FV](ref://scoring-input/determinants/FV)
 - [[Codificación/Determinantes] FT](ref://scoring-input/determinants/FT)
 - [[Interpretación/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
-
-## Nota de fundamento
-
-- La justificación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

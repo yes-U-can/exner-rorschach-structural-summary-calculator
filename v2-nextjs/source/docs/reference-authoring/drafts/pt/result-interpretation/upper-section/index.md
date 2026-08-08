@@ -25,9 +25,8 @@ relatedRoutes:
   - "scoring-input/z"
   - "scoring-input/location"
   - "scoring-input/dq"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-upper-section-family-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Seção Superior] Seção Superior
@@ -75,7 +74,3 @@ Ela funciona como uma triagem inicial de como a pessoa organiza o campo do estí
 - [[Codificação/Z] Z](ref://scoring-input/z)
 - [[Codificação/Localização] Location](ref://scoring-input/location)
 - [[Codificação/DQ] DQ](ref://scoring-input/dq)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

@@ -18,9 +18,8 @@ relatedRoutes:
   - "scoring-input/determinants/FV"
   - "scoring-input/determinants/VF"
   - "result-interpretation/lower-section/core/AdjD"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/selfperception/sumv-self/index.md"
 ---
 
 # 문서명: [해석/Self Perception] SumV
@@ -72,7 +71,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[부호화/결정인\] FV](ref://scoring-input/determinants/FV)
 - [\[부호화/결정인\] VF](ref://scoring-input/determinants/VF)
 - [\[해석/Core\] AdjD](ref://result-interpretation/lower-section/core/AdjD)
-
-## 근거 메모
-
-- reactive self-criticism과 trait self-criticism 구분 메모는 provenance note에 분리했다.

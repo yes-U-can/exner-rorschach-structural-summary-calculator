@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/selfPerception/MOR_self"
   - "result-interpretation/lower-section/affect/Afr"
   - "result-interpretation/special-indices/CDI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 # Document Name: [Interpretation/Special Indices] DEPI
 ## Aliases / Search Terms
@@ -55,5 +54,3 @@ It integrates variables from affect, burden, negative self-image, and emotional 
 - [[Interpretation/Self Perception] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
 - [[Interpretation/Affect] Afr](ref://result-interpretation/lower-section/affect/Afr)
 - [[Interpretation/Special Indices] CDI](ref://result-interpretation/special-indices/CDI)
-## Evidence Note
-- Detailed source comparison is stored in internal provenance notes.

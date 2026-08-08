@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/popular"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
   - "result-interpretation/lower-section/interpersonal/PureH"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-gphr-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/GHR-PHR] GHR
@@ -60,7 +59,3 @@ Ele não é um julgamento clínico livre, mas o resultado de seguir a sequência
 - [[Codificação/Resposta Popular] Popular](ref://scoring-input/popular)
 - [[Interpretação/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
 - [[Interpretação/Interpersonal] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

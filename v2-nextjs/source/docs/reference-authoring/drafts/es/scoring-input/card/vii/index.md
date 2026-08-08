@@ -18,9 +18,8 @@ relatedRoutes:
   - "scoring-input/determinants/M"
   - "scoring-input/gphr"
   - "scoring-input/z"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/card/vii/index.md"
 ---
 
 # Nombre del documento: [Codificación/Láminas] VII
@@ -61,8 +60,3 @@ La página resume qué debe revisarse en el contenido humano, la organización y
 - [[Codificación/Determinantes] M](ref://scoring-input/determinants/M)
 - [[Codificación/GHR-PHR] GHR/PHR](ref://scoring-input/gphr)
 - [[Codificación/Z] Z](ref://scoring-input/z)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

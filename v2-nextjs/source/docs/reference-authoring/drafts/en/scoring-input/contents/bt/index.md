@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/A"
   - "scoring-input/contents/Bl"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Content] Bt
@@ -53,7 +52,3 @@ It includes plants, flowers, trees, leaves, or recognizable plant parts.
 - [[Coding/Content] Contents](ref://scoring-input/contents)
 - [[Coding/Content] A](ref://scoring-input/contents/A)
 - [[Coding/Content] Bl](ref://scoring-input/contents/Bl)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

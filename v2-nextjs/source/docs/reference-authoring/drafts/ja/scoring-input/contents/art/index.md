@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/contents/Ay"
   - "scoring-input/contents/H"
   - "scoring-input/contents/A"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-contents-art-ay-bl-bt-2026-03-10.md"
 ---
 
 # [コーディング/内容] Art
@@ -54,7 +53,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-contents-art-ay-bl
 - [[コーディング/内容] Ay](ref://scoring-input/contents/Ay)
 - [[コーディング/内容] H](ref://scoring-input/contents/H)
 - [[コーディング/内容] A](ref://scoring-input/contents/A)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

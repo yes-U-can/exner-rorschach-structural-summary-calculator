@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/contents/Ay"
   - "result-interpretation/lower-section/ideation/MOR"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Ideation] 2AB+Art+Ay
@@ -54,7 +53,3 @@ It is used to estimate how often thought moves away from direct experience and s
 - [[Coding/Contents] Ay](ref://scoring-input/contents/Ay)
 - [[Interpretation/Ideation] MOR](ref://result-interpretation/lower-section/ideation/MOR)
 - [[Interpretation/Special Indices] DEPI](ref://result-interpretation/special-indices/DEPI)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

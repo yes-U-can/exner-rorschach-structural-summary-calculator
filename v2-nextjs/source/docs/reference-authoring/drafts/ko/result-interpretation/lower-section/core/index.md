@@ -26,9 +26,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/SumT"
   - "result-interpretation/lower-section/core/SumV"
   - "result-interpretation/lower-section/core/SumY"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/core/index.md"
 ---
 
 # 문서명: [해석/Lower Section/Core] Core
@@ -90,7 +89,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[해석/Core\] SumT](ref://result-interpretation/lower-section/core/SumT)
 - [\[해석/Core\] SumV](ref://result-interpretation/lower-section/core/SumV)
 - [\[해석/Core\] SumY](ref://result-interpretation/lower-section/core/SumY)
-
-## 근거 메모
-
-- 상세 출처와 연결 메모는 provenance note에 분리했다.

@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/Lv2"
   - "result-interpretation/lower-section/ideation/M_minus"
   - "result-interpretation/special-indices/PTI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/ideation/wsum6/index.md"
 ---
 
 # 문서명: [해석/Ideation] WSum6
@@ -63,7 +62,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[해석/Ideation\] Lv2](ref://result-interpretation/lower-section/ideation/Lv2)
 - [\[해석/Ideation\] M-](ref://result-interpretation/lower-section/ideation/M_minus)
 - [\[해석/Special Indices\] PTI](ref://result-interpretation/special-indices/PTI)
-
-## 근거 메모
-
-- 상세 출처와 절단값 메모는 provenance note에 분리했다.

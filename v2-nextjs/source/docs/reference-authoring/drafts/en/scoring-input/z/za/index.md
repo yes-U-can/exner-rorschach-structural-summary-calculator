@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/location/Dd"
   - "scoring-input/z/ZD"
   - "result-interpretation/upper-section/Zf"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Z] ZA
@@ -50,7 +49,3 @@ The response shows organization across nearby parts of the blot.
 - [[Coding/Location] Dd](ref://scoring-input/location/Dd)
 - [[Coding/Z] ZD](ref://scoring-input/z/ZD)
 - [[Interpretation/Upper Section] Zf](ref://result-interpretation/upper-section/Zf)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

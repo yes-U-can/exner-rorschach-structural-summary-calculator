@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/interpersonal/PureH"
   - "result-interpretation/lower-section/core/EA"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Nome do documento: [Interpretação/Índices Especiais] CDI
@@ -70,7 +69,3 @@ Um resultado positivo pede avaliação adicional, mas não demonstra sozinho que
 - [[Interpretação/Interpessoal] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)
 - [[Interpretação/Core] EA](ref://result-interpretation/lower-section/core/EA)
 - [[Interpretação/Índices Especiais] DEPI](ref://result-interpretation/special-indices/DEPI)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

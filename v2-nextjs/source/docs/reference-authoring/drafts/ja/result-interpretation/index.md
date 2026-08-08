@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/lower-section"
   - "result-interpretation/special-indices"
   - "scoring-input"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-result-interpretation-overview-2026-03-10.md"
 ---
 
 # [解釈] result-interpretation
@@ -53,8 +52,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-result-interpretat
 - [[解釈/下段] 下段](ref://result-interpretation/lower-section)
 - [[解釈/特殊指標] 特殊指標](ref://result-interpretation/special-indices)
 - [[コーディング] scoring-input](ref://scoring-input)
-
-## 根拠メモ
-
-- 詳細な出典比較は内部 provenance note に分けて保持します。
-- 公開本文では資料名を直接出さず、RAG が扱いやすい構造を優先します。

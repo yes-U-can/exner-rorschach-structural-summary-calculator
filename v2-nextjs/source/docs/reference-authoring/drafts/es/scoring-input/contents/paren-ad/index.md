@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/contents/(A)"
   - "scoring-input/contents/Ad"
   - "scoring-input/contents/Hd"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/contents/paren-ad/index.md"
 ---
 
 # Nombre del documento: [Codificación/Contenido] (Ad)
@@ -51,8 +50,3 @@ Es la versión parcial e imaginaria del clúster animal.
 - [[Codificación/Contenido] (A)](ref://scoring-input/contents/%28A%29)
 - [[Codificación/Contenido] Ad](ref://scoring-input/contents/Ad)
 - [[Codificación/Contenido] Hd](ref://scoring-input/contents/Hd)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

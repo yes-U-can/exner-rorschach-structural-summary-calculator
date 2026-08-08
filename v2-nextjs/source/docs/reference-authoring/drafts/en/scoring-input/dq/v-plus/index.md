@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/dq/o"
   - "scoring-input/dq/v"
   - "result-interpretation/upper-section/dq_vplus"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Developmental Quality] v/+
@@ -50,7 +49,3 @@ The response is organized, yet the objects remain comparatively vague.
 - [[Coding/Developmental Quality] o](ref://scoring-input/dq/o)
 - [[Coding/Developmental Quality] v](ref://scoring-input/dq/v)
 - [[Interpretation/Upper Section] DQv/+](ref://result-interpretation/upper-section/dq_vplus)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

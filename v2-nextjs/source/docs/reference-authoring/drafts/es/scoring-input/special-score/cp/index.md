@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/determinants/YF"
   - "scoring-input/determinants/Y"
   - "result-interpretation/lower-section/affect/CP"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/special-score/cp/index.md"
 ---
 
 # Nombre del documento: [Codificación/Puntuaciones especiales] CP
@@ -54,8 +53,3 @@ La idea central es que el color no está en la mancha, pero el sujeto lo atribuy
 - [[Codificación/Determinante] YF](ref://scoring-input/determinants/YF)
 - [[Codificación/Determinante] Y](ref://scoring-input/determinants/Y)
 - [[Interpretación/Affect] CP](ref://result-interpretation/lower-section/affect/CP)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

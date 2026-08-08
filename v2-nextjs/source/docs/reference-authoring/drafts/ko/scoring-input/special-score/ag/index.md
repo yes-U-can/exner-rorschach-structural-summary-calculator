@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/gphr/PHR"
   - "result-interpretation/lower-section/interpersonal/AG"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/special-score/ag/index.md"
 ---
 
 # [부호화/특수점수] AG
@@ -61,8 +60,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/spec
 - [scoring-input/gphr/PHR](ref://scoring-input%2Fgphr%2FPHR)
 - [result-interpretation/lower-section/interpersonal/AG](ref://result-interpretation%2Flower-section%2Finterpersonal%2FAG)
 - [result-interpretation/lower-section/interpersonal/HumanCont](ref://result-interpretation%2Flower-section%2Finterpersonal%2FHumanCont)
-
-## 근거 메모
-
-- 상세 근거와 source 충돌 메모는 provenance note에 분리해 둔다.
-- 공개용 본문에는 저작권 자료명을 직접 노출하지 않는다.

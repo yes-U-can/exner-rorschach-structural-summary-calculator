@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/determinants/Fr"
   - "scoring-input/determinants/rF"
   - "scoring-input/pair"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-selfperception-family-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Autopercepção] Fr + rF
@@ -69,7 +68,3 @@ Em `Autopercepção`, ajuda a ler se a autoimagem precisa de brilho especial, co
 - [[Codificação/Determinantes] Fr](ref://scoring-input/determinants/Fr)
 - [[Codificação/Determinantes] rF](ref://scoring-input/determinants/rF)
 - [[Codificação/Par] Pair](ref://scoring-input/pair)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

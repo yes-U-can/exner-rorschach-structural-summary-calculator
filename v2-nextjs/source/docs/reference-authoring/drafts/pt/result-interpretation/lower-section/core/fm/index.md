@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/AdjD"
   - "result-interpretation/lower-section/core/m"
   - "scoring-input/determinants/FM"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-core-burden-qualities-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Core] FM
@@ -56,7 +55,3 @@ No `core`, ele costuma funcionar como componente do lado esquerdo de `eb`, refle
 - [[Interpretação/Core] AdjD](ref://result-interpretation/lower-section/core/AdjD)
 - [[Interpretação/Core] m](ref://result-interpretation/lower-section/core/m)
 - [[Codificação/Determinantes] FM](ref://scoring-input/determinants/FM)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

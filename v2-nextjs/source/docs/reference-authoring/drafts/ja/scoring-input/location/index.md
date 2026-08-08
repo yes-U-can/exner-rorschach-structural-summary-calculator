@@ -20,9 +20,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/D"
   - "result-interpretation/upper-section/Dd"
   - "result-interpretation/upper-section/S"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # [コーディング/場所] Location
@@ -65,7 +64,3 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 - [[解釈/上段] D](ref://result-interpretation/upper-section/D)
 - [[解釈/上段] Dd](ref://result-interpretation/upper-section/Dd)
 - [[解釈/上段] S](ref://result-interpretation/upper-section/S)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

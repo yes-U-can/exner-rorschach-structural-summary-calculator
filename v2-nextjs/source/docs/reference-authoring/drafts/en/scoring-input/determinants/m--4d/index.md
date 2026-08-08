@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/special-score/COP"
   - "scoring-input/special-score/AG"
   - "result-interpretation/lower-section/ideation/M_minus"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Determinants] M
@@ -60,7 +59,3 @@ Use only one human-movement code in a response. If separate human objects show a
 - [[Coding/Special Scores] COP](ref://scoring-input/special-score/COP)
 - [[Coding/Special Scores] AG](ref://scoring-input/special-score/AG)
 - [[Interpretation/Ideation] M-](ref://result-interpretation/lower-section/ideation/M_minus)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

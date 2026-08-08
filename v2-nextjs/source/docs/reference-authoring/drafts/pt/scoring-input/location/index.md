@@ -20,9 +20,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/D"
   - "result-interpretation/upper-section/Dd"
   - "result-interpretation/upper-section/S"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-location-2026-03-10.md"
 ---
 
 # Nome do documento: [Codificação/Localização] Location
@@ -67,7 +66,3 @@ A pergunta principal é se a pessoa usa a mancha inteira, um detalhe comum, um d
 - [[Interpretação/Upper Section] D](ref://result-interpretation/upper-section/D)
 - [[Interpretação/Upper Section] Dd](ref://result-interpretation/upper-section/Dd)
 - [[Interpretação/Upper Section] S](ref://result-interpretation/upper-section/S)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

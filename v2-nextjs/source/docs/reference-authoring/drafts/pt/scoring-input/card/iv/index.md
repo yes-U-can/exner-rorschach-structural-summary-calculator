@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/determinants/T"
   - "scoring-input/determinants/TF"
   - "scoring-input/fq"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-card-i-v-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Cartões] IV
@@ -56,7 +55,3 @@ Esta página resume o que vale a pena revisar quando essas respostas aparecem na
 - [[Codificação/Determinantes] T](ref://scoring-input/determinants/T)
 - [[Codificação/Determinantes] TF](ref://scoring-input/determinants/TF)
 - [[Codificação/FQ] FQ](ref://scoring-input/fq)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

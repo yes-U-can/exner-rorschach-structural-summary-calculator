@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/card"
   - "scoring-input/gphr/GHR"
   - "result-interpretation/lower-section/mediation/P"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/popular/index.md"
 ---
 
 # 문서명: [부호화/인기반응] Popular
@@ -54,8 +53,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/popu
 - [\[부호화/카드\] Card](ref://scoring-input/card)
 - [\[부호화/GHR-PHR\] GHR](ref://scoring-input/gphr/GHR)
 - [\[해석/Mediation\] P](ref://result-interpretation/lower-section/mediation/P)
-
-## 근거 메모
-
-- 상세 근거와 source 충돌 메모는 provenance note에 분리해 둔다.
-- 공개용 본문에는 저작권 자료명을 직접 노출하지 않는다.

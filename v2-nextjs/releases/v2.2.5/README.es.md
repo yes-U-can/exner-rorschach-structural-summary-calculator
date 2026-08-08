@@ -47,7 +47,7 @@ Excel y Perl distinguían, cada uno en su propio contexto, los códigos de movim
 - Las explicaciones complementarias de la interfaz y las páginas de referencia siguen ahora el mismo criterio.
 - El Asistente de Codificación ya no presenta `M`, `FM` o `m` como códigos completos que puedan introducirse directamente para una respuesta individual y solicita la información `a`, `p` o `a-p` necesaria para completar el código.
 - Se restauraron caracteres dañados en 4 preguntas de búsqueda en japonés y en un registro coreano de mantenimiento de documentos.
-- Tras modificar las páginas de referencia, se reconstruyeron los datos de búsqueda y los embeddings de OpenAI de los cinco idiomas.
+- Tras modificar las páginas de referencia, se reconstruyeron los datos de búsqueda de los cinco idiomas.
 - Se reforzaron las reglas de generación de documentos y las pruebas de regresión para mantener `Regla del código de entrada` y `Condición de codificación/aplicación` como secciones independientes.
 - Se reforzó el orden de respuesta del Asistente de Interpretación para que explique primero el número de respuestas y las limitaciones de los datos ante preguntas amplias sobre el Sumario Estructural.
 
@@ -63,19 +63,11 @@ En primer lugar, se comprobó que los códigos de entrada y los campos de result
 
 También se comprobaron las páginas de referencia en cinco idiomas y los asistentes de IA opcionales.
 
-- Las 365 preguntas de búsqueda de documentación recuperaron el documento correspondiente.
-- Se reconstruyeron los 5604 embeddings de OpenAI a partir del texto revisado; hubo 0 embeddings obsoletos o discrepancias en el hash del contenido.
-- En la búsqueda híbrida con embeddings reales de OpenAI, tanto la tasa de acierto del primer documento como la cobertura del conjunto relevante fueron del 100% para preguntas amplias y preguntas con nombre explícito. Ninguna pregunta amplia devolvió como primer resultado un documento de otra área de trabajo.
-- En 62 llamadas reales de un solo turno a GPT-5.5, todas las preguntas sobre codificación activa-pasiva del movimiento respetaron el límite previsto. En 1 respuesta interpretativa extensa no relacionada con los códigos de movimiento se detectó que no explicaba primero el número de respuestas y las limitaciones de los datos; se corrigió el orden y la misma condición superó después 3 comprobaciones consecutivas.
-- Las conversaciones sobre codificación del movimiento superaron 9 llamadas de varios turnos. Otra comprobación en inglés falló 1 vez porque el evaluador no reconoció una expresión equivalente; tras corregir la expresión aceptada, la pregunta relacionada superó 2 comprobaciones consecutivas.
-- Después de alinear el texto y los embeddings definitivos de los cinco idiomas, se hizo una llamada por idioma con una pregunta representativa sobre el límite de entrada del movimiento. Las 5 llamadas en coreano, inglés, japonés, español y portugués se completaron correctamente.
-- Después de corregir la regla de generación de títulos de sección, se repitieron las mismas preguntas en cinco idiomas. Las 5 se completaron correctamente, sin interrupciones ni incumplimientos del límite.
-- Las 4 comprobaciones realizadas por la misma ruta de API que utiliza la aplicación web se completaron correctamente.
+- Las 365 preguntas de búsqueda de documentación recuperaron el documento correspondiente, y ni las preguntas amplias ni las que nombraban un tema colocaron primero un área de trabajo ajena.
+- Las preguntas preparadas confirmaron los límites de respuesta de los asistentes de Codificación e Interpretación. Se corrigieron un problema en el orden de una explicación extensa y otro en el reconocimiento de un sinónimo inglés, y se volvieron a comprobar en los cinco idiomas y en la ruta de respuesta de la aplicación web.
 - En el conjunto automatizado completo, se superaron 447 comprobaciones de 81 archivos de prueba y 7 se omitieron porque no estaban disponibles sus condiciones de ejecución. También se generaron las 222 páginas de despliegue, y se completaron correctamente el análisis estático, la auditoría de textos en cinco idiomas, la detección de secretos y las auditorías de dependencias de producción y desarrollo.
 
-Las llamadas reales a GPT-5.5 comprobaron si los asistentes de Codificación e Interpretación respetaban los límites de respuesta previstos para preguntas preparadas. No garantizan la exactitud clínica de todas las preguntas posibles, ni se utilizaron respuestas de IA como clave de corrección de los cálculos del Sumario Estructural.
-
-OpenAI Codex se utilizó para la implementación y las pruebas repetidas. Claude Opus 4.8 se utilizó para revisar la documentación y los fundamentos de cálculo antes de la publicación. La coincidencia entre herramientas no se consideró una prueba; se valoraron conjuntamente fuentes profesionales públicas, el alcance del CS adoptado por esta aplicación, resultados de cálculo reproducibles y la revisión humana.
+Estas comprobaciones solo abarcan límites de respuesta preparados. No garantizan la exactitud clínica de todas las preguntas posibles, ni se utilizaron respuestas de IA como clave de corrección de los cálculos del Sumario Estructural.
 
 ## UI/UX, privacidad y base de datos
 
@@ -86,11 +78,7 @@ OpenAI Codex se utilizó para la implementación y las pruebas repetidas. Claude
 - Se mantiene el principio de no guardar los datos de codificación en la base de datos del servidor.
 - No se modificaron la estructura de la base de datos de comentarios ni los límites de solicitudes.
 
-## Alcance público y límite de seguridad
-
-El código público incluye comprobaciones del límite de entrada, pruebas de regresión de los cálculos, páginas de referencia en cinco idiomas, instantáneas de los datos de búsqueda y resúmenes de pruebas de GPT-5.5 sin los textos originales de las preguntas y respuestas.
-
-No se publican los archivos originales del desarrollo inicial, bibliografía de pago o privada, rutas locales, claves de API, variables de entorno, textos completos de respuestas ni registros privados de revisión. Los documentos públicos enlazan únicamente páginas públicas de distribución reproducibles y repositorios públicos oficiales.
+El registro de verificación se basa en fuentes profesionales públicas, el alcance del CS adoptado por esta aplicación y resultados de cálculo reproducibles.
 
 ## Apéndice técnico
 

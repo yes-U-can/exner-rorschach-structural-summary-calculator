@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/fq/u"
   - "scoring-input/fq/-"
   - "scoring-input/dq/+"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Form Quality] +
@@ -50,7 +49,3 @@ It is both well fitted and especially well specified.
 - [[Coding/Form Quality] u](ref://scoring-input/fq/u)
 - [[Coding/Form Quality] -](ref://scoring-input/fq/-)
 - [[Coding/Developmental Quality] +](ref://scoring-input/dq/%2B)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

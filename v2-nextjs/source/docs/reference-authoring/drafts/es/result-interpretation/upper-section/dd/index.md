@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/D"
   - "scoring-input/location/Dd"
   - "result-interpretation/lower-section/processing/W_D_Dd"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/upper-section/dd/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Upper Section] Dd
@@ -64,7 +63,3 @@ En interpretación indica cuánto se desplaza el foco hacia elementos menos comp
 - [[Interpretación/Upper Section] D](ref://result-interpretation/upper-section/D)
 - [[Codificación/Ubicación] Dd](ref://scoring-input/location/Dd)
 - [[Interpretación/Processing] W:D:Dd](ref://result-interpretation/lower-section/processing/W_D_Dd)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

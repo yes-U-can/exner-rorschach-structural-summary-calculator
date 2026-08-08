@@ -53,13 +53,7 @@ Las pruebas automáticas verifican los metadatos y las reglas de los eventos de 
 - No se modificaron las fórmulas ni los resultados del Sumario Estructural.
 - No se recopila nueva información personal.
 - Se mantiene la regla de no guardar los datos de codificación ni las claves API de OpenAI en la base de datos del servidor.
-- No se modificaron el corpus de IA, las incrustaciones ni las reglas de respuesta de los asistentes de codificación e interpretación.
-
-## Alcance público y límite de seguridad
-
-El código público incluye metadatos de búsqueda localizados, direcciones canónicas y alternativas, el mapa del sitio, el tratamiento de la ampliación de la pantalla de codificación y las pruebas automáticas relacionadas.
-
-No se publican variables de entorno, claves API, ajustes privados de despliegue, rutas locales ni registros internos de trabajo.
+- No se modificaron la búsqueda de referencias ni las reglas de respuesta de los asistentes de codificación e interpretación.
 
 ## Apéndice técnico
 

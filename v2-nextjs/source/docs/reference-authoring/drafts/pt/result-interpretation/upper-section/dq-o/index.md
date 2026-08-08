@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/dq_vplus"
   - "result-interpretation/upper-section/dq_v"
   - "scoring-input/dq/o"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-upper-section-family-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Seção Superior] DQo
@@ -51,7 +50,3 @@ Em muitos protocolos, ele funciona como linha de base para o nível usual de org
 - [[Interpretação/Seção Superior] DQv/+](ref://result-interpretation/upper-section/dq_vplus)
 - [[Interpretação/Seção Superior] DQv](ref://result-interpretation/upper-section/dq_v)
 - [[Codificação/DQ] o](ref://scoring-input/dq/o)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

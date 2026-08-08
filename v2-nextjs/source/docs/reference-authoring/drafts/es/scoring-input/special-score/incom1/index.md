@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/special-score/CONTAM"
   - "result-interpretation/lower-section/ideation/Sum6"
   - "result-interpretation/lower-section/ideation/WSum6"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/special-score/incom1/index.md"
 ---
 
 # Nombre del documento: [Codificación/Puntuaciones especiales] INCOM1
@@ -57,8 +56,3 @@ Se usa cuando los elementos unidos no encajan bien entre si, pero la extrañeza 
 - [[Codificación/Puntuaciones especiales] CONTAM](ref://scoring-input/special-score/CONTAM)
 - [[Interpretación/Ideation] Sum6](ref://result-interpretation/lower-section/ideation/Sum6)
 - [[Interpretación/Ideation] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

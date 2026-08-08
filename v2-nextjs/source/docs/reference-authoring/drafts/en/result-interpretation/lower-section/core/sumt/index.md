@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/determinants/T"
   - "scoring-input/determinants/FT"
   - "scoring-input/determinants/TF"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Core] SumT
@@ -56,7 +55,3 @@ In `core`, it usually indicates how much the need for closeness, comfort, or pro
 - [[Coding/Determinants] T](ref://scoring-input/determinants/T)
 - [[Coding/Determinants] FT](ref://scoring-input/determinants/FT)
 - [[Coding/Determinants] TF](ref://scoring-input/determinants/TF)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

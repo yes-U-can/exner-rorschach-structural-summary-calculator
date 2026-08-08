@@ -25,9 +25,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/ZEst"
   - "result-interpretation/upper-section/Zd"
   - "result-interpretation/lower-section/processing/Zd_proc"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-z-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Z] Z
@@ -76,7 +75,3 @@ Ele só é atribuído quando a resposta usa forma e se encaixa em um dos quatro 
 - [[Interpretação/Upper Section] ZEst](ref://result-interpretation/upper-section/ZEst)
 - [[Interpretação/Upper Section] Zd](ref://result-interpretation/upper-section/Zd)
 - [[Interpretação/Processing] Zd](ref://result-interpretation/lower-section/processing/Zd_proc)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

@@ -18,9 +18,8 @@ relatedRoutes:
   - "scoring-input/location/W"
   - "scoring-input/location/D"
   - "scoring-input/location/Dd"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/processing/w-d-dd/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Procesamiento] W:D:Dd
@@ -73,7 +72,3 @@ En procesamiento se usa para ver si la persona tiende a abarcar el conjunto, a c
 - [[Codificación/Location] W](ref://scoring-input/location/W)
 - [[Codificación/Location] D](ref://scoring-input/location/D)
 - [[Codificación/Location] Dd](ref://scoring-input/location/Dd)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

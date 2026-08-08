@@ -5,8 +5,8 @@
 このフォルダーには、ロールシャッハ構造一覧表計算機v2のリリース履歴と公開可能なソースコードがあります。最新の変更内容はパッチノートで、計算検証と実装に関する資料は公開ソースで確認できます。
 
 - 最新のパッチノート：[releases/v2.2.10](./releases/v2.2.10/README.ja.md)
-- 全53文献群監査と体系境界：[methodology/reference-audit-v2.2.10](./methodology/reference-audit-v2.2.10/README.ja.md)
-- Structural Summary原典照合：[source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md](./source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md)
+- 計算根拠と文献範囲：[methodology/reference-audit-v2.2.10](./methodology/reference-audit-v2.2.10/README.ja.md)
+- 構造一覧表の計算根拠照合：[source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md](./source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md)
 - 以前の計算精度再監査：[source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md](./source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md)
 - 最初のv2リリースノート：[releases/v2.0.0](./releases/v2.0.0/)
 - 公開ソースコード：[source](./source/)
@@ -14,8 +14,6 @@
 ## 公開範囲
 
 `source/`には、アプリの実行と検討に必要な中核ソースコード、翻訳ファイル、AIが検索する短い参照文書群、自動検査、デプロイ設定を収録しています。
-
-本番環境変数、Vercelプロジェクト設定、ローカルログ、キャッシュ、`node_modules`、過去の実験的な運用文書、非公開の作業ノート、データベース移行履歴は収録していません。公開ソースから中核となる動作と設計を確認できますが、本番環境全体を複製したものではありません。
 
 <details>
 <summary><strong>ソースをローカルで実行する方法</strong></summary>

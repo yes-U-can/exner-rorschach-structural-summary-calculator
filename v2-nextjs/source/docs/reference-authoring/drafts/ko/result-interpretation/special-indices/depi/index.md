@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/selfPerception/MOR_self"
   - "result-interpretation/lower-section/affect/Afr"
   - "result-interpretation/special-indices/CDI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/special-indices/depi/index.md"
 ---
 
 # 문서명: [해석/특수지표] DEPI
@@ -69,7 +68,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[해석/자기지각\] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
 - [\[해석/정서\] Afr](ref://result-interpretation/lower-section/affect/Afr)
 - [\[해석/특수지표\] CDI](ref://result-interpretation/special-indices/CDI)
-
-## 근거 메모
-
-- 상세 검토 기록은 내부 검증 노트에서 관리한다.

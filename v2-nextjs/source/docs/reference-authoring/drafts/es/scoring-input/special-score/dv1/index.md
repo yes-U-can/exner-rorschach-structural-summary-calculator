@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/special-score/DR2"
   - "result-interpretation/lower-section/ideation/Sum6"
   - "result-interpretation/lower-section/ideation/WSum6"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/special-score/dv1/index.md"
 ---
 
 # Nombre del documento: [Codificación/Puntuaciones especiales] DV1
@@ -54,8 +53,3 @@ La idea central es que la formulación suena rara o impropia sin llegar a una al
 - [[Codificación/Puntuaciones especiales] DR2](ref://scoring-input/special-score/DR2)
 - [[Interpretación/Ideation] Sum6](ref://result-interpretation/lower-section/ideation/Sum6)
 - [[Interpretación/Ideation] WSum6](ref://result-interpretation/lower-section/ideation/WSum6)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

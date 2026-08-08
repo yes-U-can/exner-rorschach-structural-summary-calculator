@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/contents/(H)"
   - "scoring-input/contents/A"
   - "scoring-input/contents/Art"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/contents/ay/index.md"
 ---
 
 # Nombre del documento: [Codificación/Contenido] Ay
@@ -52,8 +51,3 @@ No basta con ver una persona u objeto; debe aparecer un marco cultural reconocib
 - [[Codificación/Contenido] (H)](ref://scoring-input/contents/%28H%29)
 - [[Codificación/Contenido] A](ref://scoring-input/contents/A)
 - [[Codificación/Contenido] Art](ref://scoring-input/contents/Art)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/mediation/P"
   - "scoring-input/fq/+"
   - "scoring-input/popular"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-indices-2026-03-10.md"
 ---
 
 # 文書名: [解釈/特殊指標] OBS
@@ -69,7 +68,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-indices-20
 - [[解釈/知覚の媒介] P](ref://result-interpretation/lower-section/mediation/P)
 - [[コーディング/形態水準] +](ref://scoring-input/fq/%2B)
 - [[コーディング/平凡反応] Popular](ref://scoring-input/popular)
-
-## 根拠メモ
-
-- 詳細な検討記録は内部の検証ノートで管理します。

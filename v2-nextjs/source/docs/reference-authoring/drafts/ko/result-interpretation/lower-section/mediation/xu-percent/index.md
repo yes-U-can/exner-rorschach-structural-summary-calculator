@@ -15,9 +15,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/mediation/X_minus_percent"
   - "result-interpretation/lower-section/mediation/P"
   - "scoring-input/fq/u"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/mediation/xu-percent/index.md"
 ---
 
 # 문서명: [해석/Mediation] Xu%
@@ -65,7 +64,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[해석/Mediation\] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
 - [\[해석/Mediation\] P](ref://result-interpretation/lower-section/mediation/P)
 - [\[부호화/형태질\] u](ref://scoring-input/fq/u)
-
-## 근거 메모
-
-- `Xu% > .20` 메모와 overpersonalized translation 설명은 provenance note에 분리했다.

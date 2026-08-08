@@ -15,9 +15,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/mediation/X_minus_percent"
   - "scoring-input/fq"
   - "scoring-input/popular"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-mediation-opening-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Mediação] XA%
@@ -53,7 +52,3 @@ Como inclui `FQ+`, `FQo` e `FQu`, oferece uma visão ampla da mediação percept
 - [[Interpretação/Mediação] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
 - [[Codificação/FQ] FQ](ref://scoring-input/fq)
 - [[Codificação/Popular] Popular](ref://scoring-input/popular)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

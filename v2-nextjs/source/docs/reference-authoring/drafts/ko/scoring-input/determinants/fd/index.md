@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/determinants/FV"
   - "scoring-input/determinants/V"
   - "result-interpretation/lower-section/selfPerception/FD"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/scoring-input/determinants/fd/index.md"
 ---
 
 # 문서명: [부호화/결정인] FD
@@ -53,8 +52,3 @@ FD는 음영이 아니라 형태만으로 3차원성, 조망, 원근이 성립�
 - [\[부호화/결정인\] FV](ref://scoring-input/determinants/FV)
 - [\[부호화/결정인\] V](ref://scoring-input/determinants/V)
 - [\[해석/Self Perception\] FD](ref://result-interpretation/lower-section/selfPerception/FD)
-
-## 근거 메모
-
-- 상세 근거와 출처 충돌 메모는 provenance note에 분리해 둔다.
-- 공개용 본문에는 저작권 자료명을 직접 노출하지 않는다.

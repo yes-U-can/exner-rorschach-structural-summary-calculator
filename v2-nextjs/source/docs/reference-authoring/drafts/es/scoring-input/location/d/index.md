@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/location/Dd"
   - "scoring-input/location/DS"
   - "result-interpretation/upper-section/D"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/location/d/index.md"
 ---
 
 # Nombre del documento: [Codificación/Localización] D
@@ -49,7 +48,3 @@ La decisión depende de la frecuencia de uso del área, no de su tamaño aparent
 - [[Codificación/Localización] Dd](ref://scoring-input/location/Dd)
 - [[Codificación/Localización] DS](ref://scoring-input/location/DS)
 - [[Interpretación/Upper Section] D](ref://result-interpretation/upper-section/D)
-
-## Nota de fundamento
-
-- La provenance interna conserva el criterio de frecuencia y los ejemplos de combinación entre áreas D.

@@ -1369,31 +1369,31 @@ function wrapScoringDoc(lang: Language, code: string, categoryId: string, core: 
       '[Input Constraints In This App] Apply mutual exclusion, determinant-priority, and auto-rule constraints implemented in calculator logic before final lock.',
       `[Interpretation Relevance] ${relevance}`,
       '[AI Usage Guideline] Use conservative wording: describe coding evidence and probable implications; avoid diagnosis-level conclusions from single codes.',
-      '[Corpus Governance] Runtime knowledge is curated and reviewed internally; confidence depends on explicit inquiry evidence and reliable coding.',
+      '[Clinical Caution] Confidence depends on explicit inquiry evidence and reliable coding.',
     ],
     ko: [
       '[Input Constraints In This App] 최종 확정 전에 상호배제, 결정인 우선순위, 앱 자동 규칙을 모두 적용합니다.',
       `[Interpretation Relevance] ${relevance}`,
       '[AI Usage Guideline] 보수적 표현을 사용합니다. 단일 코드만으로 진단 수준 결론을 내리지 않습니다.',
-      '[Corpus Governance] 런타임 지식은 내부 검수 절차를 거칩니다. 신뢰도는 명확한 탐문 근거와 채점 신뢰도에 따라 달라집니다.',
+      '[임상적 유의사항] 신뢰도는 명확한 탐문 근거와 채점 신뢰도에 따라 달라집니다.',
     ],
     ja: [
       '[Input Constraints In This App] Apply mutual exclusion, determinant-priority, and auto-rule constraints implemented in calculator logic before final lock.',
       `[Interpretation Relevance] ${relevance}`,
       '[AI Usage Guideline] Use conservative wording: describe coding evidence and probable implications; avoid diagnosis-level conclusions from single codes.',
-      '[Corpus Governance] ランタイム知識は内部で選別・レビューされています。信頼度は、明確な照会根拠と採点の信頼性に左右されます。',
+      '[臨床上の注意] 信頼度は、明確な照会根拠と採点の信頼性に左右されます。',
     ],
     es: [
       '[Input Constraints In This App] Aplique exclusion mutua, prioridad jerarquica y reglas automaticas de la app antes del cierre.',
       `[Interpretation Relevance] ${relevance}`,
       '[AI Usage Guideline] Use lenguaje prudente: "puede indicar", "es consistente con"; evite afirmaciones diagnosticas de un solo codigo.',
-      '[Corpus Governance] El conocimiento operativo se selecciona y revisa internamente; la confianza depende de evidencia explícita y una codificación fiable.',
+      '[Precaución clínica] La confianza depende de evidencia explícita y una codificación fiable.',
     ],
     pt: [
       '[Input Constraints In This App] Aplique exclusao mutua, prioridade hierarquica e regras automaticas do app antes do fechamento.',
       `[Interpretation Relevance] ${relevance}`,
       '[AI Usage Guideline] Use linguagem prudente: "pode indicar", "e consistente com"; evite conclusoes diagnosticas por codigo isolado.',
-      '[Corpus Governance] O conhecimento operacional é selecionado e revisado internamente; a confiança depende de evidência explícita e codificação confiável.',
+      '[Cautela clínica] A confiança depende de evidência explícita e codificação confiável.',
     ],
   };
 
@@ -1554,7 +1554,7 @@ function resultEntryText(title: string, base: string, section: string, lang: Lan
       `[Cross-Checks] ${checks[0]} ${checks[1]}`,
       '[Common Misreading Guard] Do not infer traits or diagnosis from a single variable; treat isolated elevations as hypotheses requiring convergence.',
       '[AI Usage Guideline] Preferred wording: "may indicate", "is consistent with", "should be interpreted with". Avoid deterministic claims.',
-      '[Corpus Governance] Runtime knowledge is curated and reviewed internally; confidence depends on protocol adequacy and coding reliability.',
+      '[Clinical Caution] Confidence depends on protocol adequacy and coding reliability.',
     ].join('\n\n'),
     ko: [
       `[Concept] ${title} is interpreted in the ${sec} frame of the Structural Summary. ${safeBase}`,
@@ -1562,7 +1562,7 @@ function resultEntryText(title: string, base: string, section: string, lang: Lan
       `[Cross-Variable Rule] Confirm convergence with neighboring variables before concluding.`,
       `[Clinical Caution] This supports structured hypothesis building and does not replace full clinical judgment.`,
       '[AI Usage Guideline] Use conservative wording and avoid deterministic one-variable conclusions.',
-      '[Corpus Governance] 런타임 지식은 내부 검수 절차를 거칩니다. 신뢰도는 프로토콜의 적절성과 채점 신뢰도에 따라 달라집니다.',
+      '[임상적 유의사항] 신뢰도는 프로토콜의 적절성과 채점 신뢰도에 따라 달라집니다.',
     ].join('\n\n'),
     ja: [
       `[Concept] ${title} is interpreted in the ${sec} frame of the Structural Summary. ${safeBase}`,
@@ -1570,7 +1570,7 @@ function resultEntryText(title: string, base: string, section: string, lang: Lan
       `[Cross-Variable Rule] Confirm convergence with neighboring variables before concluding.`,
       `[Clinical Caution] This supports structured hypothesis building and does not replace full clinical judgment.`,
       '[AI Usage Guideline] Use conservative wording and avoid deterministic one-variable conclusions.',
-      '[Corpus Governance] ランタイム知識は内部で選別・レビューされています。信頼度は、プロトコルの妥当性と採点の信頼性に左右されます。',
+      '[臨床上の注意] 信頼度は、プロトコルの妥当性と採点の信頼性に左右されます。',
     ].join('\n\n'),
     es: [
       `[Concepto] ${title} se interpreta en el marco de ${sec} del Resumen Estructural. ${safeBase}`,
@@ -1578,7 +1578,7 @@ function resultEntryText(title: string, base: string, section: string, lang: Lan
       `[Regla de Variables Cruzadas] Verifique convergencia con variables vecinas antes de concluir.`,
       `[Cautela Clinica] Es apoyo estructurado y no sustituye el juicio clinico integral.`,
       '[AI Usage Guideline] Use lenguaje prudente: "puede indicar", "es consistente con"; evite afirmaciones deterministas.',
-      '[Corpus Governance] El conocimiento operativo se selecciona y revisa internamente; la confianza depende de la suficiencia del protocolo y una codificación fiable.',
+      '[Precaución clínica] La confianza depende de la suficiencia del protocolo y una codificación fiable.',
     ].join('\n\n'),
     pt: [
       `[Conceito] ${title} e interpretado no contexto de ${sec} no Resumo Estrutural. ${safeBase}`,
@@ -1586,7 +1586,7 @@ function resultEntryText(title: string, base: string, section: string, lang: Lan
       `[Regra de Variaveis Cruzadas] Confirme convergencia com variaveis vizinhas antes de concluir.`,
       `[Cautela Clinica] E suporte estruturado e nao substitui julgamento clinico integral.`,
       '[AI Usage Guideline] Use linguagem prudente: "pode indicar", "e consistente com"; evite afirmacoes deterministas.',
-      '[Corpus Governance] O conhecimento operacional é selecionado e revisado internamente; a confiança depende da adequação do protocolo e da codificação confiável.',
+      '[Cautela clínica] A confiança depende da adequação do protocolo e da codificação confiável.',
     ].join('\n\n'),
   };
 

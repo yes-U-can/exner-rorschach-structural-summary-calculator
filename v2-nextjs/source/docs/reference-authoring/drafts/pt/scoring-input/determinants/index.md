@@ -49,9 +49,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/core/Lambda"
   - "result-interpretation/lower-section/selfPerception/Fr_rF"
   - "result-interpretation/lower-section/selfPerception/FD"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-determinants-form-reflection-fd-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Determinantes] Determinantes
@@ -129,7 +128,3 @@ Eles não dizem o que a pessoa viu, mas por que aquilo parece assim: movimento, 
 - [[Interpretação/Core] Lambda](ref://result-interpretation/lower-section/core/Lambda)
 - [[Interpretação/Self Perception] Fr+rF](ref://result-interpretation/lower-section/selfPerception/Fr_rF)
 - [[Interpretação/Self Perception] FD](ref://result-interpretation/lower-section/selfPerception/FD)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

@@ -15,9 +15,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/mediation/X_minus_percent"
   - "scoring-input/fq"
   - "scoring-input/popular"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Mediation] XA%
@@ -53,7 +52,3 @@ Because it includes `FQ+`, `FQo`, and `FQu`, it offers a broad view of perceptua
 - [[Interpretation/Mediation] X-%](ref://result-interpretation/lower-section/mediation/X_minus_percent)
 - [[Coding/FQ] FQ](ref://scoring-input/fq)
 - [[Coding/Popular] Popular](ref://scoring-input/popular)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

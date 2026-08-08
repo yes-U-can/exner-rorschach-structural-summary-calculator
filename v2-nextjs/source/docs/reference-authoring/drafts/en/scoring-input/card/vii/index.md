@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/determinants/M"
   - "scoring-input/gphr"
   - "scoring-input/z"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Cards] VII
@@ -59,7 +58,3 @@ This page summarizes what to review in human content, organization, and movement
 - [[Coding/Determinants] M](ref://scoring-input/determinants/M)
 - [[Coding/GHR-PHR] GHR/PHR](ref://scoring-input/gphr)
 - [[Coding/Z] Z](ref://scoring-input/z)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

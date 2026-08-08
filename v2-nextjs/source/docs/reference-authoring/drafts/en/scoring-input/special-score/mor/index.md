@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/special-score/AG"
   - "result-interpretation/lower-section/ideation/MOR"
   - "result-interpretation/lower-section/selfPerception/MOR_self"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Special Scores] MOR
@@ -52,7 +51,3 @@ The code points to damage, degradation, or pathological tone attributed directly
 - [[Coding/Special Scores] AG](ref://scoring-input/special-score/AG)
 - [[Interpretation/Ideation] MOR](ref://result-interpretation/lower-section/ideation/MOR)
 - [[Interpretation/Self Perception] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

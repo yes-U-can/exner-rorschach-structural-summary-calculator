@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/special-score/AG"
   - "result-interpretation/special-indices/DEPI"
   - "result-interpretation/special-indices/HVI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-affect-s-blends-cp-2026-03-10.md"
 ---
 
 # [Interpretation/Affect] S
@@ -55,7 +54,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-affect-s-blends-cp
 - [[Coding/Special Score] AG](ref://scoring-input/special-score/AG)
 - [[解釈/特殊指標] DEPI](ref://result-interpretation/special-indices/DEPI)
 - [[解釈/特殊指標] HVI](ref://result-interpretation/special-indices/HVI)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

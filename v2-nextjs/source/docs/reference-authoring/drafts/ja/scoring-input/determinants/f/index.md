@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/fq/u"
   - "scoring-input/fq/-"
   - "result-interpretation/lower-section/core/Lambda"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-determinants-f-fr-rf-fd-2026-03-10.md"
 ---
 
 # [コーディング/決定因] F
@@ -59,7 +58,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-determinants-f-fr-
 - [[Coding/形態水準] u](ref://scoring-input/fq/u)
 - [[Coding/形態水準] -](ref://scoring-input/fq/-)
 - [[解釈/Core] Lambda](ref://result-interpretation/lower-section/core/Lambda)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

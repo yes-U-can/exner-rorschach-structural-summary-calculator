@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/determinants/V"
   - "scoring-input/determinants/FV"
   - "scoring-input/determinants/VF"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-core-sumt-sumv-sumy-2026-03-10.md"
 ---
 
 # [Interpretation/Core] SumV
@@ -58,6 +57,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-core-sumt-sumv-sum
 - [[Coding/決定因] V](ref://scoring-input/determinants/V)
 - [[Coding/決定因] FV](ref://scoring-input/determinants/FV)
 - [[Coding/決定因] VF](ref://scoring-input/determinants/VF)
-
-## 根拠メモ
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

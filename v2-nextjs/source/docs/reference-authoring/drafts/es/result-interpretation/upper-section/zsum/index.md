@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/ZEst"
   - "result-interpretation/upper-section/Zd"
   - "scoring-input/z"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/upper-section/zsum/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Upper Section] ZSum
@@ -63,7 +62,3 @@ No solo cuenta cuántas veces se intentó organizar el campo, sino cuánto esfue
 - [[Interpretación/Upper Section] ZEst](ref://result-interpretation/upper-section/ZEst)
 - [[Interpretación/Upper Section] Zd](ref://result-interpretation/upper-section/Zd)
 - [[Codificación/Z] Z](ref://scoring-input/z)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

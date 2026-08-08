@@ -15,9 +15,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/selfPerception/An_Xy"
   - "scoring-input/special-score/MOR"
   - "result-interpretation/special-indices/DEPI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-selfperception-2026-03-10.md"
 ---
 
 # [Interpretation/Self Perception] MOR
@@ -67,7 +66,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-selfperception-202
 - [[解釈/Self Perception] An + Xy](ref://result-interpretation/lower-section/selfPerception/An_Xy)
 - [[Coding/特殊スコア] MOR](ref://scoring-input/special-score/MOR)
 - [[解釈/特殊指標] DEPI](ref://result-interpretation/special-indices/DEPI)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

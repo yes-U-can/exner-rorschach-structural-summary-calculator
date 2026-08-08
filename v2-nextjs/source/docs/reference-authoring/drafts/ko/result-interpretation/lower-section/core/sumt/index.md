@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/determinants/T"
   - "scoring-input/determinants/FT"
   - "scoring-input/determinants/TF"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/core/sumt/index.md"
 ---
 
 # 문서명: [해석/Core] SumT
@@ -68,7 +67,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[부호화/결정인\] T](ref://scoring-input/determinants/T)
 - [\[부호화/결정인\] FT](ref://scoring-input/determinants/FT)
 - [\[부호화/결정인\] TF](ref://scoring-input/determinants/TF)
-
-## 근거 메모
-
-- attachment need와 core burden 분리 원칙은 provenance note에 분리했다.

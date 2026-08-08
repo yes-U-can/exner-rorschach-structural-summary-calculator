@@ -12,9 +12,8 @@ relatedRoutes:
   - "scoring-input/contents"
   - "scoring-input/contents/Na"
   - "scoring-input/contents/Fi"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-completion-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Conteúdo] Cl
@@ -48,7 +47,3 @@ Ele codifica a própria nuvem, não qualquer forma difusa da cena.
 - [[Codificação/Conteúdo] Contents](ref://scoring-input/contents)
 - [[Codificação/Conteúdo] Na](ref://scoring-input/contents/Na)
 - [[Codificação/Conteúdo] Fi](ref://scoring-input/contents/Fi)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

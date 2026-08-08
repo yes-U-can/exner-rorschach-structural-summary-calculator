@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/determinants/V"
   - "scoring-input/determinants/FV"
   - "scoring-input/determinants/VF"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Core] SumV
@@ -56,7 +55,3 @@ In `core`, it usually indicates how much self-criticism, dissatisfaction with th
 - [[Coding/Determinants] V](ref://scoring-input/determinants/V)
 - [[Coding/Determinants] FV](ref://scoring-input/determinants/FV)
 - [[Coding/Determinants] VF](ref://scoring-input/determinants/VF)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

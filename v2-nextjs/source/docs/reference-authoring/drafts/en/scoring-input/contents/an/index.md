@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/contents/Art"
   - "scoring-input/gphr/PHR"
   - "result-interpretation/lower-section/selfPerception/An_Xy"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Content] An
@@ -54,7 +53,3 @@ It is not enough that the response seems like an animal fragment; the main idea 
 - [[Coding/Content] Art](ref://scoring-input/contents/Art)
 - [[Coding/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
 - [[Interpretation/Self Perception] An + Xy](ref://result-interpretation/lower-section/selfPerception/An_Xy)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/fq/u"
   - "scoring-input/fq/-"
   - "scoring-input/dq/+"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/fq/plus/index.md"
 ---
 
 # Nombre del documento: [Codificación/Calidad formal] +
@@ -50,7 +49,3 @@ Es una respuesta bien ajustada y especialmente bien especificada.
 - [[Codificación/Calidad formal] u](ref://scoring-input/fq/u)
 - [[Codificación/Calidad formal] -](ref://scoring-input/fq/-)
 - [[Codificación/Calidad evolutiva] +](ref://scoring-input/dq/%2B)
-
-## Nota de fundamento
-
-- La provenance interna conserva el contraste de fuentes y la justificación de criterio.

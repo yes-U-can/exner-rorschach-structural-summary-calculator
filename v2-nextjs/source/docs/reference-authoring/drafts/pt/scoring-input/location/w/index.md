@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/location/D"
   - "scoring-input/location/Dd"
   - "result-interpretation/upper-section/W"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-location-2026-03-10.md"
 ---
 
 # Nome do documento: [Codificação/Localização] W
@@ -49,7 +48,3 @@ Não basta a resposta soar global; a mancha toda precisa realmente entrar no per
 - [[Codificação/Localização] D](ref://scoring-input/location/D)
 - [[Codificação/Localização] Dd](ref://scoring-input/location/Dd)
 - [[Interpretação/Upper Section] W](ref://result-interpretation/upper-section/W)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

@@ -21,9 +21,8 @@ relatedRoutes:
   - "scoring-input/fq"
   - "scoring-input/popular"
   - "scoring-input/location/S"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-mediation-opening-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Seção Inferior/Mediação] Mediação
@@ -66,7 +65,3 @@ Esta seção foca adequação, estranheza e o grau em que a percepção se afast
 - [[Codificação/FQ] FQ](ref://scoring-input/fq)
 - [[Codificação/Popular] Popular](ref://scoring-input/popular)
 - [[Codificação/Localização] S](ref://scoring-input/location/S)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

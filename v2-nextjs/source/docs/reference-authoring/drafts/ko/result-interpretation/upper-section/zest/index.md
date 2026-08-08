@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/ZSum"
   - "result-interpretation/upper-section/Zd"
   - "scoring-input/z"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/upper-section/zest/index.md"
 ---
 
 # 문서명: [해석/Upper Section] ZEst
@@ -60,7 +59,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[해석/Upper Section\] ZSum](ref://result-interpretation/upper-section/ZSum)
 - [\[해석/Upper Section\] Zd](ref://result-interpretation/upper-section/Zd)
 - [\[부호화/Z\] Z](ref://scoring-input/z)
-
-## 근거 메모
-
-- 상세 기준과 수치 메모는 provenance note에 분리했다.

@@ -22,9 +22,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/MOR"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
   - "result-interpretation/lower-section/interpersonal/PureH"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-selfperception-2026-03-10.md"
 ---
 
 # [Interpretation/Lower Section/Self Perception] Self Perception
@@ -81,7 +80,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-selfperception-202
 - [[解釈/Ideation] MOR](ref://result-interpretation/lower-section/ideation/MOR)
 - [[解釈/Interpersonal] 人間内容](ref://result-interpretation/lower-section/interpersonal/HumanCont)
 - [[解釈/Interpersonal] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

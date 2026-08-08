@@ -15,9 +15,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/dq_v"
   - "scoring-input/dq/+"
   - "result-interpretation/lower-section/processing/DQ_plus_proc"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-upper-section-family-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Seção Superior] DQ+
@@ -53,7 +52,3 @@ Na interpretação, indica com que frequência aparecem organizações complexas
 - [[Interpretação/Seção Superior] DQv](ref://result-interpretation/upper-section/dq_v)
 - [[Codificação/DQ] +](ref://scoring-input/dq/%2B)
 - [[Interpretação/Processing] DQ+](ref://result-interpretation/lower-section/processing/DQ_plus_proc)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

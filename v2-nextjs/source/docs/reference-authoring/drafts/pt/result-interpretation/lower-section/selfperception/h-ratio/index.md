@@ -19,9 +19,8 @@ relatedRoutes:
   - "scoring-input/contents/Hx"
   - "scoring-input/gphr/GHR"
   - "scoring-input/gphr/PHR"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-selfperception-family-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Autopercepção] H Ratio
@@ -75,7 +74,3 @@ Em `Autopercepção`, ajuda a mostrar se a imagem de si e dos outros se apoia ma
 - [[Codificação/Conteúdo] Hx](ref://scoring-input/contents/Hx)
 - [[Codificação/GHR-PHR] GHR](ref://scoring-input/gphr/GHR)
 - [[Codificação/GHR-PHR] PHR](ref://scoring-input/gphr/PHR)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

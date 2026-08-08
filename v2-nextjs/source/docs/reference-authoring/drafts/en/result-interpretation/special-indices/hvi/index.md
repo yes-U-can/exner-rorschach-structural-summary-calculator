@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/affect/S_aff"
   - "result-interpretation/lower-section/selfPerception/H_ratio"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 # Document Name: [Interpretation/Special Indices] Hypervigilance Index
 ## Aliases / Search Terms
@@ -55,5 +54,3 @@ Empirical support for interpreting it as hypervigilance or distrust is weak and 
 - [[Interpretation/Affect] S](ref://result-interpretation/lower-section/affect/S_aff)
 - [[Interpretation/Self Perception] H Ratio](ref://result-interpretation/lower-section/selfPerception/H_ratio)
 - [[Interpretation/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
-## Evidence Note
-- Detailed source comparison is stored in internal provenance notes.

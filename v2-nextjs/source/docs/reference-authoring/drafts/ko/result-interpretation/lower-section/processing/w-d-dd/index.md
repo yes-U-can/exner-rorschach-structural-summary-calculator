@@ -19,9 +19,8 @@ relatedRoutes:
   - "scoring-input/location/W"
   - "scoring-input/location/D"
   - "scoring-input/location/Dd"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/lower-section/processing/w-d-dd/index.md"
 ---
 
 # [해석/Processing] W:D:Dd
@@ -60,7 +59,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `W`
 - `D`
 - `Dd`
-
-## 근거 메모
-
-- public draft는 위치 배분의 경제성 설명에 집중하고, 세부 규범 메모는 provenance note에 분리했다.

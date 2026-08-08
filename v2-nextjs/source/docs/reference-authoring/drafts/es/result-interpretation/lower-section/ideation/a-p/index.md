@@ -17,9 +17,8 @@ relatedRoutes:
   - "scoring-input/determinants/FM"
   - "scoring-input/determinants/m"
   - "result-interpretation/lower-section/interpersonal/a_p_inter"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/ideation/a-p/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Ideación] a:p
@@ -70,7 +69,3 @@ Se usa para estimar si la actividad mental tiende más hacia la iniciativa y la 
 - [[Codificación/Determinantes] FM](ref://scoring-input/determinants/FM)
 - [[Codificación/Determinantes] m](ref://scoring-input/determinants/m)
 - [[Interpretación/Interpersonal] a:p](ref://result-interpretation/lower-section/interpersonal/a_p_inter)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

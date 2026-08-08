@@ -18,9 +18,8 @@ relatedRoutes:
   - "scoring-input/special-score/AG"
   - "result-interpretation/lower-section/ideation/MOR"
   - "result-interpretation/lower-section/selfPerception/MOR_self"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-score-cop-ag-mor-2026-03-10.md"
 ---
 
 # [コーディング/特殊スコア] MOR
@@ -57,7 +56,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-score-cop-
 - [[コーディング/特殊スコア] AG](ref://scoring-input/special-score/AG)
 - [[解釈/思考] MOR](ref://result-interpretation/lower-section/ideation/MOR)
 - [[解釈/自己知覚] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
-
-## 根拠メモ
-
-- 詳細な出典比較は内部 provenance note に記録しています。

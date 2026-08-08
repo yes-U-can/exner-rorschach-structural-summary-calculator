@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/determinants/FV"
   - "scoring-input/determinants/V"
   - "result-interpretation/lower-section/selfPerception/FD"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-determinants-f-fr-rf-fd-2026-03-10.md"
 ---
 
 # [コーディング/決定因] FD
@@ -53,7 +52,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-determinants-f-fr-
 - [[Coding/決定因] FV](ref://scoring-input/determinants/FV)
 - [[Coding/決定因] V](ref://scoring-input/determinants/V)
 - [[解釈/Self Perception] FD](ref://result-interpretation/lower-section/selfPerception/FD)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

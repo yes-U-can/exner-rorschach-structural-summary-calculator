@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/contents/(H)"
   - "scoring-input/determinants/M"
   - "scoring-input/fq"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-card-vi-x-2026-03-10.md"
 ---
 
 # [コーディング/カード] IX
@@ -56,7 +55,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-card-vi-x-2026-03-
 - [[コーディング/内容] (H)](ref://scoring-input/contents/%28H%29)
 - [[コーディング/決定因] M](ref://scoring-input/determinants/M)
 - [[コーディング/FQ] FQ](ref://scoring-input/fq)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

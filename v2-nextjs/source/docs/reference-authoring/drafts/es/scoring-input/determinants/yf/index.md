@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/determinants/VF"
   - "scoring-input/determinants/TF"
   - "result-interpretation/lower-section/core/SumY"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/determinants/yf/index.md"
 ---
 
 # Nombre del documento: [Codificación/Determinantes] YF
@@ -57,8 +56,3 @@ Todavía hay cierto apoyo formal, pero pesa más la impresión vaga de sombreado
 - [[Codificación/Determinantes] VF](ref://scoring-input/determinants/VF)
 - [[Codificación/Determinantes] TF](ref://scoring-input/determinants/TF)
 - [[Interpretación/Core] SumY](ref://result-interpretation/lower-section/core/SumY)
-
-## Nota de fundamento
-
-- La justificación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

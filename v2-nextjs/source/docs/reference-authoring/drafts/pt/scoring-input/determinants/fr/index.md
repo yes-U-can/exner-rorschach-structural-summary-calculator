@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/pair"
   - "scoring-input/determinants/F"
   - "result-interpretation/lower-section/selfPerception/Fr_rF"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-determinants-form-reflection-fd-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Determinantes] Fr
@@ -53,7 +52,3 @@ A simetria precisa estar envolvida, e a ideia de reflexo deve estar explicitamen
 - [[Codificação/Pair] (2)](ref://scoring-input/pair)
 - [[Codificação/Determinantes] F](ref://scoring-input/determinants/F)
 - [[Interpretação/Self Perception] Fr+rF](ref://result-interpretation/lower-section/selfPerception/Fr_rF)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

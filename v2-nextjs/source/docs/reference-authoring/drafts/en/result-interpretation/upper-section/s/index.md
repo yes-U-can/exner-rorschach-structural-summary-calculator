@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/location/S"
   - "result-interpretation/lower-section/affect/S_aff"
   - "result-interpretation/lower-section/mediation/S_minus"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Upper Section] S
@@ -55,7 +54,3 @@ Within `Upper Section` it is read as a clue about reversed focus, opposition, or
 - [[Coding/Location] S](ref://scoring-input/location/S)
 - [[Interpretation/Affect] S](ref://result-interpretation/lower-section/affect/S_aff)
 - [[Interpretation/Mediation] S-%](ref://result-interpretation/lower-section/mediation/S_minus)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

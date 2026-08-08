@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/popular"
   - "scoring-input/card/I"
   - "scoring-input/card/V"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Interpretation/Mediation] P
@@ -53,7 +52,3 @@ In mediation, it helps estimate how closely perception approaches widely shared 
 - [[Coding/Popular] Popular](ref://scoring-input/popular)
 - [[Coding/Card] I](ref://scoring-input/card/I)
 - [[Coding/Card] V](ref://scoring-input/card/V)
-
-## Evidence Note
-
-- Detailed source comparison is stored in internal provenance notes.

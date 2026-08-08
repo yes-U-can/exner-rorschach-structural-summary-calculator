@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/determinants/C"
   - "result-interpretation/lower-section/affect/FC_CF_C"
   - "result-interpretation/lower-section/affect/PureC"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-determinants-movement-chromatic-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Determinantes] FC
@@ -52,7 +51,3 @@ A cor participa, mas a organização principal da resposta continua sendo formal
 - [[Codificação/Determinantes] C](ref://scoring-input/determinants/C)
 - [[Interpretação/Affect] FC:CF+C](ref://result-interpretation/lower-section/affect/FC_CF_C)
 - [[Interpretação/Affect] Pure C](ref://result-interpretation/lower-section/affect/PureC)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

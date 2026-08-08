@@ -16,9 +16,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/affect/S_aff"
   - "scoring-input/location/S"
   - "result-interpretation/special-indices/HVI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-mediation-opening-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Mediação] S-
@@ -54,7 +53,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-pt-mediation-opening-
 - [[Interpretação/Afeto] S](ref://result-interpretation/lower-section/affect/S_aff)
 - [[Codificação/Localização] S](ref://scoring-input/location/S)
 - [[Interpretação/Índices Especiais] HVI](ref://result-interpretation/special-indices/HVI)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

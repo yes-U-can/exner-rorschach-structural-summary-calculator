@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/location/D"
   - "scoring-input/location/Dd"
   - "result-interpretation/upper-section/W"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/location/w/index.md"
 ---
 
 # Nombre del documento: [Codificación/Localización] W
@@ -49,7 +48,3 @@ No basta con que la respuesta suene global; el sujeto debe usar realmente la man
 - [[Codificación/Localización] D](ref://scoring-input/location/D)
 - [[Codificación/Localización] Dd](ref://scoring-input/location/Dd)
 - [[Interpretación/Upper Section] W](ref://result-interpretation/upper-section/W)
-
-## Nota de fundamento
-
-- La provenance interna conserva las observaciones y ejemplos de contraste.

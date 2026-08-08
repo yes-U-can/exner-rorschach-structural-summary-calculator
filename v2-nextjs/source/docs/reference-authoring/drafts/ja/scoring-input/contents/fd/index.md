@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/determinants/FD"
   - "scoring-input/contents/A"
   - "result-interpretation/lower-section/interpersonal/Food"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-contents-fd-ge-hh-2026-03-10.md"
 ---
 
 # [コーディング/内容] Fd
@@ -52,7 +51,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-contents-fd-ge-hh-
 - [[コーディング/決定因] FD](ref://scoring-input/determinants/FD)
 - [[コーディング/内容] A](ref://scoring-input/contents/A)
 - [[解釈/対人関係] Food](ref://result-interpretation/lower-section/interpersonal/Food)
-
-## 根拠メモ
-
-- 詳細な出典比較は内部 provenance note に記録しています。

@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/special-score/PSV"
   - "result-interpretation/lower-section/processing/Zd_proc"
   - "result-interpretation/lower-section/processing/W_D_Dd"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-processing-wm-psv-dq-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Processamento] PSV
@@ -49,7 +48,3 @@ Na interpretação, ele funciona como sinal de rigidez, dificuldade de mudança 
 - [[Codificação/Pontuação Especial] PSV](ref://scoring-input/special-score/PSV)
 - [[Interpretação/Processamento] Zd](ref://result-interpretation/lower-section/processing/Zd_proc)
 - [[Interpretação/Processamento] W:D:Dd](ref://result-interpretation/lower-section/processing/W_D_Dd)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

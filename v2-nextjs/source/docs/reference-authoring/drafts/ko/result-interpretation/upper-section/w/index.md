@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/location/W"
   - "result-interpretation/lower-section/processing/W_D_Dd"
   - "result-interpretation/lower-section/processing/W_M"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretation/upper-section/w/index.md"
 ---
 
 # [해석/Upper Section] W
@@ -55,7 +54,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - `W_M`
 - `W_D_Dd`
 - `DQ+`
-
-## 근거 메모
-
-- 상세 기준과 수치 메모는 provenance note에 분리했다.

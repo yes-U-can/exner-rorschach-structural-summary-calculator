@@ -14,6 +14,8 @@ param(
 $ErrorActionPreference = "Stop"
 
 $sourceRoot = (Resolve-Path ".").Path
+$privateReferencePolicy = @('curated', 'internal', 'reference') -join '-'
+$publicReferencePolicy = 'curated-reference'
 
 function Assert-NativeCommandSucceeded {
   param(
@@ -347,7 +349,22 @@ function Assert-NoPublicEditorialLeak {
   )
 
   $leaks = @()
+  $excludedPrefixes = @(
+    'node_modules',
+    '.next',
+    '.git',
+    '.npm-cache',
+    '.vercel',
+    'v2-nextjs\source\node_modules',
+    'v2-nextjs\source\.next'
+  ) | ForEach-Object {
+    [IO.Path]::GetFullPath((Join-Path $Root $_)).TrimEnd([IO.Path]::DirectorySeparatorChar) + [IO.Path]::DirectorySeparatorChar
+  }
   foreach ($file in Get-ChildItem -LiteralPath $Root -File -Filter '*.md' -Recurse -Force -ErrorAction SilentlyContinue) {
+    $fullPath = [IO.Path]::GetFullPath($file.FullName)
+    if ($excludedPrefixes | Where-Object { $fullPath.StartsWith($_, [StringComparison]::OrdinalIgnoreCase) }) {
+      continue
+    }
     foreach ($pattern in $patterns) {
       foreach ($match in Select-String -LiteralPath $file.FullName -Pattern $pattern -CaseSensitive:$false) {
         $leaks += "$($file.FullName):$($match.LineNumber): $($match.Line.Trim())"
@@ -357,6 +374,245 @@ function Assert-NoPublicEditorialLeak {
 
   if ($leaks.Count -gt 0) {
     throw "Internal audience or editorial labels remain in public Markdown:`n$($leaks -join "`n")"
+  }
+}
+
+function Assert-NoReaderFacingProductionNarrative {
+  param(
+    [Parameter(Mandatory = $true)]
+    [string]$Root
+  )
+
+  $resolvedRoot = [IO.Path]::GetFullPath($Root).TrimEnd([IO.Path]::DirectorySeparatorChar)
+  $appRootCandidate = Join-Path $resolvedRoot 'v2-nextjs'
+  $appRoot = if (Test-Path -LiteralPath $appRootCandidate -PathType Container) {
+    $appRootCandidate
+  } else {
+    $resolvedRoot
+  }
+
+  $readerFiles = @()
+  foreach ($scanRoot in @($resolvedRoot, $appRoot) | Select-Object -Unique) {
+    if (-not (Test-Path -LiteralPath $scanRoot -PathType Container)) {
+      continue
+    }
+    $readerFiles += Get-ChildItem -LiteralPath $scanRoot -File -Filter '*.md' -ErrorAction SilentlyContinue |
+      Where-Object { $_.Name -like 'README*.md' -or $_.Name -like 'CHANGELOG*.md' }
+  }
+  foreach ($relativeRoot in @('releases', 'methodology')) {
+    $scanRoot = Join-Path $appRoot $relativeRoot
+    if (Test-Path -LiteralPath $scanRoot -PathType Container) {
+      $readerFiles += Get-ChildItem -LiteralPath $scanRoot -File -Filter '*.md' -Recurse -ErrorAction SilentlyContinue
+    }
+  }
+  $opsRoot = Join-Path $appRoot 'source\docs\ops'
+  if (Test-Path -LiteralPath $opsRoot -PathType Container) {
+    $readerFiles += Get-ChildItem -LiteralPath $opsRoot -File -Filter '*calculation-source-crosscheck*.md' -ErrorAction SilentlyContinue
+  }
+  $readerFiles = @($readerFiles | Sort-Object -Property FullName -Unique)
+
+  $patterns = @(
+    'Codex',
+    'Claude',
+    'worktree',
+    'uncommitted',
+    '\bpublic[- ]mirror\b',
+    '\blocal PDF\b',
+    '\bPDF viewer\b',
+    '\bprivate repositor(?:y|ies)\b',
+    '\bpaid API\b',
+    '\bAPI cost\b',
+    '\bestimated cost\b',
+    '\bactual API calls?\b',
+    '\blive GPT',
+    '^#{1,6}\s+Public scope and security boundary\s*$',
+    '\bThe public source includes\b',
+    '\bOpenAI embeddings?\b',
+    '\bcontent[- ]hash mismatch(?:es)?\b',
+    'pgvector',
+    '\uB85C\uCEEC\s*PDF',
+    'PDF\s*\uBDF0\uC5B4',
+    '\uACF5\uAC1C\s*\uBBF8\uB7EC',
+    '\uBBF8\uCEE4\uBC0B',
+    '\uC0AC\uC124\s*\uC800\uC7A5\uC18C',
+    '\uBE44\uACF5\uAC1C\s*\uBCF4\uC720',
+    '\uB85C\uCEEC\s*\uD30C\uC77C\uBA85',
+    '\uB85C\uCEEC\s*\uACBD\uB85C',
+    '\uB0B4\uBD80\s*\uBC84\uC804\s*\uC2DD\uBCC4',
+    '\uC720\uB8CC\s*API',
+    '\uCD94\uC815\s*\uBE44\uC6A9',
+    '\uC2E4\uC81C\s*API\s*\uD638\uCD9C',
+    '^#{1,6}\s+\uACF5\uAC1C\s*\uBC94\uC704\uC640\s*\uBCF4\uC548\s*\uACBD\uACC4\s*$',
+    '\uACF5\uAC1C\s*\uC18C\uC2A4\uC5D0\uB294',
+    '\uC784\uBCA0\uB529',
+    '\uBCF8\uBB38\s*\uD574\uC2DC\s*\uBD88\uC77C\uCE58',
+    '\u6709\u6599API',
+    '\u63A8\u5B9A\u8CBB\u7528',
+    '\u5B9F\u969B\u306E(?:GPT|API)',
+    '^#{1,6}\s+\u516C\u958B\u7BC4\u56F2\u3068\u30BB\u30AD\u30E5\u30EA\u30C6\u30A3\u5883\u754C\s*$',
+    '\u516C\u958B\u30BD\u30FC\u30B9\u306B\u306F',
+    '\u57CB\u3081\u8FBC\u307F',
+    'llamadas? de pago a la API',
+    'llamadas? reales? (?:a|de)',
+    'costo estimado',
+    'incrustaciones vectoriales',
+    '^#{1,6}\s+Alcance p\u00FAblico y l\u00EDmite de seguridad\s*$',
+    'El c\u00F3digo p\u00FAblico incluye',
+    'chamadas? pagas? (?:a|\u00E0) API',
+    'chamadas? reais?',
+    'custo estimado',
+    'embeddings vetoriais',
+    '^#{1,6}\s+Escopo p\u00FAblico e limite de seguran\u00E7a\s*$',
+    'O c\u00F3digo p\u00FAblico inclui'
+  )
+
+  $leaks = @()
+  foreach ($file in $readerFiles) {
+    foreach ($pattern in $patterns) {
+      foreach ($match in Select-String -LiteralPath $file.FullName -Pattern $pattern -CaseSensitive:$false) {
+        $leaks += "$($file.FullName):$($match.LineNumber): $($match.Line.Trim())"
+      }
+    }
+  }
+
+  if ($leaks.Count -gt 0) {
+    throw "Internal production narrative remains in reader-facing public documents:`n$($leaks -join "`n")"
+  }
+}
+
+function Remove-PublicAuthoringMetadata {
+  param(
+    [Parameter(Mandatory = $true)]
+    [string]$Root,
+    [switch]$WhatIf
+  )
+
+  $resolvedRoot = [IO.Path]::GetFullPath($Root).TrimEnd([IO.Path]::DirectorySeparatorChar)
+  $draftRoot = Join-Path $resolvedRoot "docs\reference-authoring\drafts"
+  $utf8NoBom = New-Object System.Text.UTF8Encoding($false)
+  $evidenceTailPattern = '(?ms)\r?\n##\s+(?:Evidence Note|\uADFC\uAC70 \uBA54\uBAA8|\u6839\u62E0\u30E1\u30E2|Nota de base|Nota de fundamento)\s*\r?\n.*\z'
+
+  if (Test-Path -LiteralPath $draftRoot) {
+    foreach ($file in Get-ChildItem -LiteralPath $draftRoot -File -Filter '*.md' -Recurse -Force) {
+      $text = [IO.File]::ReadAllText($file.FullName)
+      $sanitized = [regex]::Replace($text, '(?m)^provenanceNote:[^\r\n]*(?:\r?\n)', '')
+      $sanitized = [regex]::Replace($sanitized, $evidenceTailPattern, '')
+      $sanitized = $sanitized.Replace($privateReferencePolicy, $publicReferencePolicy).TrimEnd() + "`n"
+      if ($sanitized -eq $text) {
+        continue
+      }
+      if ($WhatIf) {
+        Write-Host "[dry-run] would sanitize public authoring metadata: $($file.FullName)"
+      } else {
+        [IO.File]::WriteAllText($file.FullName, $sanitized, $utf8NoBom)
+      }
+    }
+  }
+
+  $authoringReadme = Join-Path $resolvedRoot 'docs\reference-authoring\README.md'
+  if (Test-Path -LiteralPath $authoringReadme -PathType Leaf) {
+    $text = [IO.File]::ReadAllText($authoringReadme)
+    $sanitized = [regex]::Replace($text, '(?m)^-\s*`?provenanceNote`?\s*\r?\n', '')
+    $sanitized = [regex]::Replace($sanitized, '(?m)^`provenanceNote`[^\r\n]*(?:\r?\n)?', '')
+    $publicBoundary = [regex]::Unescape('## \uACF5\uAC1C \uBC94\uC704\n\n\uACF5\uAC1C \uC800\uC7A5\uC18C\uC758 \uCC38\uC870 \uBB38\uC11C\uB294 \uACF5\uAC1C \uAC00\uB2A5\uD55C \uC784\uC0C1 \uC124\uBA85\uACFC \uACF5\uAC1C \uADFC\uAC70\uB9CC \uD3EC\uD568\uD569\uB2C8\uB2E4. \uCD9C\uCC98 \uB300\uC870 \uAE30\uB85D\uC740 \uC6D0\uACE0 \uC791\uC5C5 \uACF5\uAC04\uC5D0 \uBCC4\uB3C4\uB85C \uBCF4\uC874\uD558\uBA70 \uACF5\uAC1C \uC6D0\uACE0 frontmatter\uC5D0\uB294 \uD3EC\uD568\uD558\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.\n')
+    $sanitized = [regex]::Replace(
+      $sanitized,
+      '(?ms)^##\s+\uACF5\uAC1C\s+\uACBD\uACC4\s*\r?\n.*\z',
+      $publicBoundary
+    )
+    $sanitized = $sanitized.Replace($privateReferencePolicy, $publicReferencePolicy)
+    if ($sanitized -ne $text) {
+      if ($WhatIf) {
+        Write-Host "[dry-run] would sanitize public authoring guide: $authoringReadme"
+      } else {
+        [IO.File]::WriteAllText($authoringReadme, $sanitized.TrimEnd() + "`n", $utf8NoBom)
+      }
+    }
+  }
+
+  $textExtensions = @('.json', '.jsonl', '.js', '.mjs', '.ts', '.tsx', '.md')
+  $excludedPrefixes = @(
+    'node_modules',
+    '.next',
+    '.git',
+    '.npm-cache',
+    '.vercel'
+  ) | ForEach-Object {
+    [IO.Path]::GetFullPath((Join-Path $resolvedRoot $_)).TrimEnd([IO.Path]::DirectorySeparatorChar) + [IO.Path]::DirectorySeparatorChar
+  }
+  foreach ($file in Get-ChildItem -LiteralPath $resolvedRoot -File -Recurse -Force -ErrorAction SilentlyContinue) {
+    $fullPath = [IO.Path]::GetFullPath($file.FullName)
+    if ($excludedPrefixes | Where-Object { $fullPath.StartsWith($_, [StringComparison]::OrdinalIgnoreCase) }) {
+      continue
+    }
+    if ($file.Extension -notin $textExtensions) {
+      continue
+    }
+    $text = [IO.File]::ReadAllText($file.FullName)
+    if (-not $text.Contains($privateReferencePolicy)) {
+      continue
+    }
+    if ($WhatIf) {
+      Write-Host "[dry-run] would neutralize public reference policy label: $($file.FullName)"
+    } else {
+      [IO.File]::WriteAllText(
+        $file.FullName,
+        $text.Replace($privateReferencePolicy, $publicReferencePolicy),
+        $utf8NoBom
+      )
+    }
+  }
+}
+
+function Assert-NoPublicAuthoringMetadata {
+  param(
+    [Parameter(Mandatory = $true)]
+    [string]$Root
+  )
+
+  $patterns = @(
+    'provenanceNote\s*:',
+    '^\s*-\s*`?provenanceNote`?\s*$',
+    'notes/corpus-review-ledger\.md',
+    'docs/reference-authoring/notes',
+    [regex]::Escape($privateReferencePolicy),
+    '^##\s+(?:Evidence Note|\uADFC\uAC70 \uBA54\uBAA8|\u6839\u62E0\u30E1\u30E2|Nota de base|Nota de fundamento)\s*$',
+    '\[Corpus Governance\]',
+    'reviewed internally',
+    '\uB0B4\uBD80 \uAC80\uC218',
+    '\u5185\u90E8\u3067\u9078\u5225',
+    'revisad[oa] internamente'
+  )
+  $roots = @(
+    (Join-Path $Root 'docs\reference-authoring\README.md'),
+    (Join-Path $Root 'docs\reference-authoring\drafts'),
+    (Join-Path $Root 'generated\reference-corpus'),
+    (Join-Path $Root 'lib\docsDetailed.ts')
+  )
+  $leaks = @()
+  foreach ($scanRoot in $roots) {
+    if (-not (Test-Path -LiteralPath $scanRoot)) {
+      continue
+    }
+    $files = if (Test-Path -LiteralPath $scanRoot -PathType Leaf) {
+      @(Get-Item -LiteralPath $scanRoot)
+    } else {
+      @(Get-ChildItem -LiteralPath $scanRoot -File -Recurse -Force)
+    }
+    foreach ($file in $files) {
+      if ($file.Extension -notin @('.md', '.json', '.jsonl', '.ts', '.tsx')) {
+        continue
+      }
+      foreach ($pattern in $patterns) {
+        foreach ($match in Select-String -LiteralPath $file.FullName -Pattern $pattern -CaseSensitive:$false) {
+          $leaks += "$($file.FullName):$($match.LineNumber): $($match.Line.Trim())"
+        }
+      }
+    }
+  }
+
+  if ($leaks.Count -gt 0) {
+    throw "Private authoring metadata remains in public reference files:`n$($leaks -join "`n")"
   }
 }
 
@@ -386,11 +642,14 @@ if ($SanitizeOnlyRoot) {
   }
   Remove-PublicMirrorPrivateArtifacts -Root $resolvedSanitizeRoot -WhatIf:$DryRun
   Remove-PublicEvalPrivateMetadata -Root $resolvedSanitizeRoot -WhatIf:$DryRun
+  Remove-PublicAuthoringMetadata -Root $resolvedSanitizeRoot -WhatIf:$DryRun
   if ($DryRun) {
     Write-Host "[dry-run] sanitize-only simulation completed."
   } else {
     Assert-NoPublicGitMetadata -Root $resolvedSanitizeRoot
+    Assert-NoPublicAuthoringMetadata -Root $resolvedSanitizeRoot
     Assert-NoPublicEditorialLeak -Root $resolvedSanitizeRoot
+    Assert-NoReaderFacingProductionNarrative -Root $resolvedSanitizeRoot
     Write-Host "[sanitize-only] public mirror boundary verified."
   }
   exit 0
@@ -567,9 +826,12 @@ if ($rc -ge 8) {
 
 Remove-PublicMirrorPrivateArtifacts -Root $targetRoot -WhatIf:$DryRun
 Remove-PublicEvalPrivateMetadata -Root $targetRoot -WhatIf:$DryRun
+Remove-PublicAuthoringMetadata -Root $targetRoot -WhatIf:$DryRun
 if (-not $DryRun) {
   Assert-NoPublicGitMetadata -Root $targetRoot
+  Assert-NoPublicAuthoringMetadata -Root $targetRoot
   Assert-NoPublicEditorialLeak -Root $resolvedPublishRoot
+  Assert-NoReaderFacingProductionNarrative -Root $resolvedPublishRoot
 }
 
 if ($DryRun) {

@@ -43,9 +43,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/interpersonal/PureH"
   - "result-interpretation/lower-section/interpersonal/Food"
   - "result-interpretation/lower-section/interpersonal/ISO_Index"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-completion-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Conteúdo] Contents
@@ -121,7 +120,3 @@ Eles não explicam por que aquilo pareceu daquele jeito; isso pertence aos deter
 - [[Interpretação/Interpersonal] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)
 - [[Interpretação/Interpersonal] Food](ref://result-interpretation/lower-section/interpersonal/Food)
 - [[Interpretação/Interpersonal] Índice de Isolamento](ref://result-interpretation/lower-section/interpersonal/ISO_Index)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

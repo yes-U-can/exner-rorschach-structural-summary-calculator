@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/contents/Art"
   - "scoring-input/contents/Cg"
   - "scoring-input/contents/Fd"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-completion-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Conteúdo] Hh
@@ -53,7 +52,3 @@ O centro da resposta é uma coisa da casa ou do uso cotidiano, não uma pessoa, 
 - [[Codificação/Conteúdo] Art](ref://scoring-input/contents/Art)
 - [[Codificação/Conteúdo] Cg](ref://scoring-input/contents/Cg)
 - [[Codificação/Conteúdo] Fd](ref://scoring-input/contents/Fd)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/Lv2"
   - "result-interpretation/lower-section/ideation/M_minus"
   - "result-interpretation/special-indices/PTI"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-ideation-wsum6-mminus-mnone-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Ideação] WSum6
@@ -52,7 +51,3 @@ Ele não mostra apenas quantas peculiaridades aparecem, mas também quanto peso 
 - [[Interpretação/Ideação] Lv2](ref://result-interpretation/lower-section/ideation/Lv2)
 - [[Interpretação/Ideação] M-](ref://result-interpretation/lower-section/ideation/M_minus)
 - [[Interpretação/Índices Especiais] PTI](ref://result-interpretation/special-indices/PTI)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

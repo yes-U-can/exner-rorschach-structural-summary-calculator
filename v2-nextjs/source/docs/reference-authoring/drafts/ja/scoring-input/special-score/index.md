@@ -52,9 +52,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/MOR"
   - "result-interpretation/lower-section/affect/CP"
   - "result-interpretation/lower-section/selfPerception/MOR_self"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-score-dv-dr-2026-03-10.md"
 ---
 
 # [コーディング/特殊スコア] Special Scores
@@ -149,7 +148,3 @@ provenanceNote: "docs/reference-authoring/notes/provenance-ja-special-score-dv-d
 - [[解釈/観念化] MOR](ref://result-interpretation/lower-section/ideation/MOR)
 - [[解釈/感情] CP](ref://result-interpretation/lower-section/affect/CP)
 - [[解釈/自己認知] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

@@ -23,9 +23,8 @@ relatedRoutes:
   - "scoring-input/z"
   - "scoring-input/gphr"
   - "scoring-input/special-score"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/scoring-input/index.md"
 ---
 
 # Nombre del documento: [Codificación] scoring-input
@@ -74,8 +73,3 @@ Esta página no calcula variables interpretativas; organiza el mapa de familias 
 - [[Codificación/Z] Z](ref://scoring-input/z)
 - [[Codificación/GHR-PHR] GHR/PHR](ref://scoring-input/gphr)
 - [[Codificación/Puntuaciones especiales] Códigos Especiales](ref://scoring-input/special-score)
-
-## Nota de fundamento
-
-- La fundamentación detallada y la comparación de fuentes se conservan en la provenance interna.
-- El cuerpo público evita citar directamente los títulos de las fuentes.

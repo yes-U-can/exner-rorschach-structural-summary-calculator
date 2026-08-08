@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/determinants/C"
   - "result-interpretation/lower-section/affect/FC_CF_C"
   - "result-interpretation/lower-section/affect/PureC"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # [コーディング/決定因] FC
@@ -52,7 +51,3 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 - [[コーディング/決定因] C](ref://scoring-input/determinants/C)
 - [[解釈/感情] FC:CF+C](ref://result-interpretation/lower-section/affect/FC_CF_C)
 - [[解釈/感情] Pure C](ref://result-interpretation/lower-section/affect/PureC)
-
-## 根拠メモ
-
-- 詳細な出典比較と判断根拠は、内部の検討メモで管理しています。

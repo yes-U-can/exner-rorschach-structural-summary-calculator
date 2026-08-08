@@ -21,9 +21,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/MOR"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
   - "result-interpretation/lower-section/interpersonal/PureH"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-selfperception-family-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Seção Inferior/Autopercepção] Autopercepção
@@ -79,7 +78,3 @@ Neste grupo, os principais pontos de revisão são `3r+(2)/R`, `Fr+rF`, `SumV`, 
 - [[Interpretação/Ideação] MOR](ref://result-interpretation/lower-section/ideation/MOR)
 - [[Interpretação/Interpessoal] Conteúdo Humano](ref://result-interpretation/lower-section/interpersonal/HumanCont)
 - [[Interpretação/Interpessoal] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

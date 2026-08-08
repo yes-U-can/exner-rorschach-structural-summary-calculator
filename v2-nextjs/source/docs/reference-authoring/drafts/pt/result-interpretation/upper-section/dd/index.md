@@ -14,9 +14,8 @@ relatedRoutes:
   - "result-interpretation/upper-section/D"
   - "scoring-input/location/Dd"
   - "result-interpretation/lower-section/processing/W_D_Dd"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-upper-section-family-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Seção Superior] Dd
@@ -51,7 +50,3 @@ Na interpretação, indica o quanto a atenção se desloca para partes menos com
 - [[Interpretação/Seção Superior] D](ref://result-interpretation/upper-section/D)
 - [[Codificação/Localização] Dd](ref://scoring-input/location/Dd)
 - [[Interpretação/Processing] W:D:Dd](ref://result-interpretation/lower-section/processing/W_D_Dd)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

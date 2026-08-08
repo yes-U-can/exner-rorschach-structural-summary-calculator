@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/determinants/FV"
   - "scoring-input/determinants/V"
   - "result-interpretation/lower-section/selfPerception/FD"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-determinants-form-reflection-fd-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Determinantes] FD
@@ -53,7 +52,3 @@ A pessoa organiza a terceira dimensão a partir de tamanho relativo, posição o
 - [[Codificação/Determinantes] FV](ref://scoring-input/determinants/FV)
 - [[Codificação/Determinantes] V](ref://scoring-input/determinants/V)
 - [[Interpretação/Self Perception] FD](ref://result-interpretation/lower-section/selfPerception/FD)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

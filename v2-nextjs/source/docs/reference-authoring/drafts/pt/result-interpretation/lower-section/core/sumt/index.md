@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/determinants/T"
   - "scoring-input/determinants/FT"
   - "scoring-input/determinants/TF"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-core-shading-burdens-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Core] SumT
@@ -56,7 +55,3 @@ No `core`, ele costuma indicar quanto a necessidade de proximidade, conforto ou 
 - [[Codificação/Determinantes] T](ref://scoring-input/determinants/T)
 - [[Codificação/Determinantes] FT](ref://scoring-input/determinants/FT)
 - [[Codificação/Determinantes] TF](ref://scoring-input/determinants/TF)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

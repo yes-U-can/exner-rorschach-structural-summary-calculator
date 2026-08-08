@@ -14,9 +14,8 @@ relatedRoutes:
   - "scoring-input/contents/(Ad)"
   - "scoring-input/contents/Hd"
   - "scoring-input/contents/An"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-animal-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Conteúdo] Ad
@@ -54,7 +53,3 @@ Ele cobre cauda, cabeça, asa, garra ou outra característica claramente parcial
 - [[Codificação/Conteúdo] (Ad)](ref://scoring-input/contents/%28Ad%29)
 - [[Codificação/Conteúdo] Hd](ref://scoring-input/contents/Hd)
 - [[Codificação/Conteúdo] An](ref://scoring-input/contents/An)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

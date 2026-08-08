@@ -52,9 +52,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/MOR"
   - "result-interpretation/lower-section/affect/CP"
   - "result-interpretation/lower-section/selfPerception/MOR_self"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ---
 
 # Document Name: [Coding/Special Scores] Special Scores
@@ -152,7 +151,3 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 - [[Interpretation/Ideation] MOR](ref://result-interpretation/lower-section/ideation/MOR)
 - [[Interpretation/Affect] CP](ref://result-interpretation/lower-section/affect/CP)
 - [[Interpretation/Self Perception] MOR](ref://result-interpretation/lower-section/selfPerception/MOR_self)
-
-## Evidence Note
-
-- Detailed source comparisons remain in the internal provenance note.

@@ -13,9 +13,8 @@ relatedRoutes:
   - "scoring-input/contents/A"
   - "scoring-input/contents/Ad"
   - "scoring-input/contents/(Ad)"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-contents-animal-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Conteúdo] (A)
@@ -51,7 +50,3 @@ A forma continua sendo de animal inteiro, mesmo que o referente não exista na r
 - [[Codificação/Conteúdo] A](ref://scoring-input/contents/A)
 - [[Codificação/Conteúdo] Ad](ref://scoring-input/contents/Ad)
 - [[Codificação/Conteúdo] (Ad)](ref://scoring-input/contents/%28Ad%29)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

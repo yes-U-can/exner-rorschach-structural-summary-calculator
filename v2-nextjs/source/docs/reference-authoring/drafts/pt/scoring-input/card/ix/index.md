@@ -16,9 +16,8 @@ relatedRoutes:
   - "scoring-input/contents/(H)"
   - "scoring-input/determinants/M"
   - "scoring-input/fq"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-card-vi-x-2026-03-11.md"
 ---
 
 # Nome do documento: [Codificação/Cartões] IX
@@ -56,7 +55,3 @@ Esta página resume o que observar em conteúdo humano, movimento e qualidade fo
 - [[Codificação/Conteúdos] (H)](ref://scoring-input/contents/%28H%29)
 - [[Codificação/Determinantes] M](ref://scoring-input/determinants/M)
 - [[Codificação/FQ] FQ](ref://scoring-input/fq)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

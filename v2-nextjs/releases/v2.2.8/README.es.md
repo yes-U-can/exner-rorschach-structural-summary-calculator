@@ -52,14 +52,13 @@ Los registros afectados deben revisarse con el material original, corregirse el 
 - Se reprodujeron por separado los códigos de Contenido duplicados, el conflicto entre Level 1 y Level 2, los Special Scores vacíos, los códigos Z no válidos, los autoguardados dañados, el acceso bloqueado al almacenamiento del navegador y los cuerpos JSON BYOK no válidos.
 - La batería automática completa superó 587 comprobaciones en 95 archivos de prueba; se omitieron 7 que no disponían de las condiciones de ejecución necesarias.
 - Se confirmó que los 203 documentos de referencia de cada uno de los cinco idiomas estaban disponibles para la búsqueda.
-- Las 5604 representaciones vectoriales de OpenAI coincidieron con el texto actual, con 0 elementos obsoletos y 0 discrepancias de hash.
-- Las pruebas reales con GPT-5.5 abarcaron 62 conversaciones de un turno, 9 conversaciones de varios turnos y 4 solicitudes por la ruta API de la aplicación. En la primera ejecución, 1 pregunta sobre S-CON sin información de edad no superó la comprobación de límites de la respuesta. Tras reforzar ese límite, se repitieron 2 preguntas relacionadas en coreano, incluida la que había fallado, y ambas superaron la comprobación.
-- OpenAI Codex y Claude Opus 5 realizaron por separado llamadas de pago a GPT-5.5. El entorno de auditoría de Claude comprobó 25 escenarios en cinco idiomas y luego llamó 3 veces más al caso japonés del par de niveles de Special Score, que no había superado una comprobación de contrato en una ocasión. Las 3 llamadas adicionales pasaron: 27 aprobadas y 1 no aprobada de un total de 28. Codex añadió una prueba de regresión que admite una prohibición correcta en japonés aunque repita las palabras de la pregunta y llamó 11 veces más al mismo caso; las 11 pasaron. La ejecución adicional de Codex terminó en 11 llamadas al agotarse el tiempo de la herramienta local, pero ninguna de las 11 respuestas completadas por el proveedor fue interrumpida.
-- El único resultado no aprobado no pudo reproducirse como un error de las fórmulas o de las reglas de entrada. Como no se conservó el texto de esa respuesta, tampoco se afirmó una causa concreta de falso positivo. Las llamadas de Claude costaron `$0.874310` y las de seguimiento de Codex `$0.351305`. Ni las claves API ni el texto de las respuestas se incluyeron en el registro público.
-- Las 4 migraciones de la base de datos de retroalimentación y las 30 migraciones de la base RAG se reprodujeron desde el principio en una base pgvector vacía.
+- Los datos de búsqueda de referencias de los cinco idiomas coincidían con los documentos actuales, sin elementos obsoletos.
+- Se comprobaron con preguntas representativas los límites de codificación e interpretación y la finalización de las respuestas. En la primera revisión se detectó un problema en el límite de respuesta de una pregunta sobre S-CON sin información de edad; se reforzó el límite y se volvieron a comprobar las preguntas relacionadas.
+- Una respuesta japonesa sobre el par de niveles de Special Score no cumplió el criterio, pero el resultado no se reprodujo como un error de las fórmulas o de las reglas de entrada. Tras ajustar el criterio, todas las comprobaciones relacionadas pasaron.
+- Las bases de datos de retroalimentación y de búsqueda de referencias se reconstruyeron desde esquemas vacíos y se comprobaron.
 - La compilación de producción generó 222 páginas. Después se abrieron directamente las pantallas de escritorio y móvil, sin errores en la consola del navegador.
 
-Las llamadas reales de IA son pruebas muestrales de límites de respuesta representativos. No garantizan la exactitud de todas las preguntas clínicas. La interpretación final y la decisión sobre la edad de aplicación corresponden al profesional clínico.
+Las comprobaciones de respuestas son pruebas muestrales de límites representativos. No garantizan la exactitud de todas las preguntas clínicas. La interpretación final y la decisión sobre la edad de aplicación corresponden al profesional clínico.
 
 ## UI/UX, privacidad y alcance del cálculo
 
@@ -73,14 +72,6 @@ Las llamadas reales de IA son pruebas muestrales de límites de respuesta repres
 ## Decisiones que se mantienen sin cambios
 
 En esta versión solo se modificaron los puntos con respaldo suficientemente establecido. No se modificó el tratamiento de un mismo Special Score repetido que no tenga distinción entre Level 1 y Level 2. Tampoco se estableció una nueva regla clínica para asignar FQ a determinantes sin forma; el comportamiento de normalización ya usado en la interfaz de escritorio se aplicó a la interfaz móvil únicamente para eliminar la diferencia entre ambas. Los puntos que aún requieren fuentes adicionales o una decisión de producto se revisarán cuando exista evidencia suficiente.
-
-## Alcance público y límite de seguridad
-
-El código público incluye la validación de entradas, la recuperación del autoguardado, las pruebas de los límites de S-CON y OBS, los documentos de referencia en cinco idiomas, las herramientas de evaluación de respuestas de IA y resultados reproducibles.
-
-El script de limpieza del espejo público ahora respeta `DryRun` y muestra las operaciones previstas sin eliminar archivos.
-
-Se excluyen las variables del entorno de producción, las claves API, los datos de codificación y conversaciones reales, las direcciones IP sin transformar, las fuentes no públicas, las rutas locales y los registros internos de trabajo.
 
 ## Apéndice técnico
 

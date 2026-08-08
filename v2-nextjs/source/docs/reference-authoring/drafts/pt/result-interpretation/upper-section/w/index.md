@@ -15,9 +15,8 @@ relatedRoutes:
   - "scoring-input/location/W"
   - "result-interpretation/lower-section/processing/W_D_Dd"
   - "result-interpretation/lower-section/processing/W_M"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance-pt-upper-section-family-2026-03-11.md"
 ---
 
 # Nome do documento: [Interpretação/Seção Superior] W
@@ -53,7 +52,3 @@ Na interpretação, mostra quanto a pessoa tenta abarcar o campo do estímulo co
 - [[Codificação/Localização] W](ref://scoring-input/location/W)
 - [[Interpretação/Processing] W:D:Dd](ref://result-interpretation/lower-section/processing/W_D_Dd)
 - [[Interpretação/Processing] W:M](ref://result-interpretation/lower-section/processing/W_M)
-
-## Nota de base
-
-- A comparação detalhada de fontes ficou separada na nota interna de provenance.

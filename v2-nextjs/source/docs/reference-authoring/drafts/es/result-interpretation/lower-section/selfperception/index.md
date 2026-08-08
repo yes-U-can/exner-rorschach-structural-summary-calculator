@@ -21,9 +21,8 @@ relatedRoutes:
   - "result-interpretation/lower-section/ideation/MOR"
   - "result-interpretation/lower-section/interpersonal/HumanCont"
   - "result-interpretation/lower-section/interpersonal/PureH"
-authorityPolicy: "curated-internal-reference"
+authorityPolicy: "curated-reference"
 status: "draft"
-provenanceNote: "docs/reference-authoring/notes/provenance/es/result-interpretation/lower-section/selfperception/index.md"
 ---
 
 # Nombre del documento: [Interpretación/Lower Section/Self Perception] Self Perception
@@ -79,7 +78,3 @@ En este grupo se revisan `3r+(2)/R`, `Fr+rF`, `SumV`, `FD`, `An+Xy`, `MOR` y `H 
 - [[Interpretación/Ideación] MOR](ref://result-interpretation/lower-section/ideation/MOR)
 - [[Interpretación/Interpersonal] Human Content](ref://result-interpretation/lower-section/interpersonal/HumanCont)
 - [[Interpretación/Interpersonal] Pure H](ref://result-interpretation/lower-section/interpersonal/PureH)
-
-## Nota de fundamento
-
-- La fundamentación detallada y las comparaciones de fuente se conservan en la provenance interna.

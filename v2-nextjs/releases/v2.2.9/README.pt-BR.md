@@ -49,12 +49,12 @@ Não. Esta versão não altera as fórmulas do Sumário Estrutural, os códigos 
 - Os testes automáticos também cobrem a aparência selecionada da avaliação, o salvamento sem motivos e a exclusão da avaliação armazenada quando o mesmo botão é pressionado novamente.
 - A validação do TypeScript e a análise estática dos arquivos modificados foram aprovadas.
 
-Não foram executadas chamadas pagas à API porque esta versão não altera a geração de respostas da OpenAI.
+Esta versão não altera a geração de respostas, portanto as verificações existentes dos limites de resposta continuam aplicáveis.
 
 ## Escopo confirmado sem alterações
 
 - As fórmulas do Sumário Estrutural e os campos de resultados não foram alterados.
-- Os documentos de referência, embeddings vetoriais, prompts de sistema de IA e playbooks não foram alterados.
+- Os documentos de referência e as regras de resposta dos assistentes de Codificação e Interpretação não foram alterados.
 - Permanece a política de não armazenar dados de pontuação nem chaves de API da OpenAI no banco de dados do servidor.
 
 ## Apêndice técnico
