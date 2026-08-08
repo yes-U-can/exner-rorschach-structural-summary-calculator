@@ -288,8 +288,21 @@ function Assert-NoPublicGitMetadata {
   )
 
   $fieldPattern = '"(?:gitCommit|baseCommit|commitSha|sourceCommit|commit|gitDirty)"\s*:'
+  $excludedPrefixes = @(
+    "node_modules",
+    ".git",
+    ".next",
+    ".vercel",
+    ".npm-cache"
+  ) | ForEach-Object {
+    [IO.Path]::GetFullPath((Join-Path $Root $_)).TrimEnd([IO.Path]::DirectorySeparatorChar) + [IO.Path]::DirectorySeparatorChar
+  }
   $leaks = @()
   foreach ($file in Get-ChildItem -LiteralPath $Root -File -Recurse -Force -ErrorAction SilentlyContinue) {
+    $fullPath = [IO.Path]::GetFullPath($file.FullName)
+    if ($excludedPrefixes | Where-Object { $fullPath.StartsWith($_, [StringComparison]::OrdinalIgnoreCase) }) {
+      continue
+    }
     if ($file.Extension -notin @('.json', '.jsonl')) {
       continue
     }

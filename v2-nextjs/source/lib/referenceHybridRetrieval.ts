@@ -89,6 +89,7 @@ const EXPLICIT_CONTAM_EXCLUSION_BOUNDARY_BONUS = 0.06;
 const EXPLICIT_C_PRIME_FQ_BOUNDARY_BONUS = 0.06;
 const EXPLICIT_SPECIAL_SCORE_LEVEL_PAIR_BONUS = 0.06;
 const EXPLICIT_CRITICAL_SCORE_OVERLAP_BONUS = 0.06;
+const EXPLICIT_GHR_PHR_INTERPRETATION_BONUS = 0.06;
 
 const POPULAR_QUERY_PATTERNS = [
   /\bpopular(?:\s+response)?\b/iu,
@@ -224,6 +225,10 @@ function isExplicitCPrimeFormQualityQuery(query: string): boolean {
     /qualidade\s+formal/iu,
     /form\s+quality/iu,
   ].some((pattern) => pattern.test(query));
+}
+
+function isExplicitGhrPhrInterpretationQuery(query: string): boolean {
+  return hasAsciiCodeToken(query, 'ghr') && hasAsciiCodeToken(query, 'phr');
 }
 
 const NATURE_CONTENT_RULE_TEXT_PATTERNS: Record<Language, RegExp[]> = {
@@ -417,8 +422,20 @@ function scoreKnowledgeRerankBonus(query: string, item: KnowledgeItem): number {
     ...(item.aliases ?? []).map((alias) => scoreExactOrPrefixMatch(query, alias, 0.008, 0.003)),
   );
   const retrievalKindBonus = item.retrievalKind === 'runtime-route-summary' ? 0.0004 : 0;
+  const ghrPhrInterpretationBonus =
+    item.canonicalRoute?.toLowerCase() ===
+      'result-interpretation/lower-section/interpersonal' &&
+    isExplicitGhrPhrInterpretationQuery(query)
+      ? EXPLICIT_GHR_PHR_INTERPRETATION_BONUS
+      : 0;
 
-  return titleBonus + routeBonus + aliasBonus + retrievalKindBonus;
+  return (
+    titleBonus +
+    routeBonus +
+    aliasBonus +
+    retrievalKindBonus +
+    ghrPhrInterpretationBonus
+  );
 }
 
 function scoreCodingRerankBonus(query: string, item: CodingRuleChunk): number {
@@ -742,10 +759,33 @@ export async function getHybridInterpretationKnowledge(params: {
 }): Promise<HybridKnowledgeResult> {
   const limit = params.limit ?? 8;
   const broadInterpretation = isBroadInterpretationQuery(params.query, params.lang);
+  const runtimeKnowledge = getBuiltInKnowledge(params.lang);
   const selectedLexicalItems = selectRelevantKnowledge(params.query, undefined, params.lang);
-  const lexicalItems = broadInterpretation
-    ? selectedLexicalItems.filter(isInterpretationKnowledgeItem)
+  const ghrPhrOverview = isExplicitGhrPhrInterpretationQuery(params.query)
+    ? runtimeKnowledge.find(
+        (item) =>
+          item.canonicalRoute ===
+            'result-interpretation/lower-section/interpersonal' &&
+          /\bGHR\b/u.test(item.content) &&
+          /\bPHR\b/u.test(item.content),
+      ) ??
+      runtimeKnowledge.find(
+        (item) =>
+          item.canonicalRoute ===
+          'result-interpretation/lower-section/interpersonal',
+      )
+    : undefined;
+  const anchoredLexicalItems = ghrPhrOverview
+    ? [
+        ghrPhrOverview,
+        ...selectedLexicalItems.filter(
+          (item) => item.canonicalRoute !== ghrPhrOverview.canonicalRoute,
+        ),
+      ]
     : selectedLexicalItems;
+  const lexicalItems = broadInterpretation
+    ? anchoredLexicalItems.filter(isInterpretationKnowledgeItem)
+    : anchoredLexicalItems;
   const lexicalOnly = rankMergedKnowledgeDetailed(params.query, lexicalItems, [], limit);
 
   if (!isReferenceVectorRuntimeReady(params.provider, params.lang)) {
@@ -786,7 +826,6 @@ export async function getHybridInterpretationKnowledge(params: {
       trace: lexicalOnly.trace,
     };
   }
-  const runtimeKnowledge = getBuiltInKnowledge(params.lang);
   const preparedVectorItems = prepareVectorCandidates(
     vectorHits
       .map((hit) => {

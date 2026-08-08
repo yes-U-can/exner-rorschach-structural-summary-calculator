@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { classifyRunFailure } from '../scripts/lib/liveEvalBatch.mjs';
+import { classifyRunFailure, countProviderRequests } from '../scripts/lib/liveEvalBatch.mjs';
 
 describe('AI live-eval batch metadata', () => {
   it('does not report a failure reason for a successful run', () => {
@@ -22,5 +22,11 @@ describe('AI live-eval batch metadata', () => {
     expect(classifyRunFailure({ exitCode: 1, stdout: '', stderr: '' }, [])).toBe(
       'no_fixture_results',
     );
+  });
+
+  it('counts the provider requests inside multi-turn fixture results', () => {
+    expect(countProviderRequests({ fixtureId: 'single' })).toBe(1);
+    expect(countProviderRequests({ fixtureId: 'multi', turnCount: 2 })).toBe(2);
+    expect(countProviderRequests({ fixtureId: 'invalid', turnCount: 0 })).toBe(1);
   });
 });

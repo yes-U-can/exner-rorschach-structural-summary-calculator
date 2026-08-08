@@ -4,8 +4,10 @@
 
 Esta pasta contém o histórico de versões e o código-fonte que pode ser disponibilizado publicamente da v2 da calculadora do Sumário Estrutural de Rorschach. As notas do patch descrevem as alterações mais recentes, enquanto o código público reúne materiais de verificação dos cálculos e de implementação.
 
-- Notas do patch mais recente: [releases/v2.2.9](./releases/v2.2.9/README.pt-BR.md)
-- Nova auditoria da exatidão dos cálculos: [source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md](./source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md)
+- Notas do patch mais recente: [releases/v2.2.10](./releases/v2.2.10/README.pt-BR.md)
+- Auditoria completa de 53 grupos documentais e limites entre sistemas: [methodology/reference-audit-v2.2.10](./methodology/reference-audit-v2.2.10/README.pt-BR.md)
+- Verificação do Sumário Estrutural com as fontes primárias: [source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md](./source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md)
+- Auditoria anterior da exatidão dos cálculos: [source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md](./source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md)
 - Notas da primeira versão v2: [releases/v2.0.0](./releases/v2.0.0/)
 - Código-fonte público: [source](./source/)
 

@@ -23,7 +23,9 @@ Each patch note records what changed, the conditions that may be affected, wheth
 ## What is available
 
 - [Next.js] Live web app: [exner.yesucan.co.kr](https://exner.yesucan.co.kr)
-- [Next.js] Latest version 2 release: [v2-nextjs/releases/v2.2.9](./v2-nextjs/releases/v2.2.9/README.en.md)
+- [Next.js] Latest version 2 release: [v2-nextjs/releases/v2.2.10](./v2-nextjs/releases/v2.2.10/README.en.md)
+- [Next.js] v2.2.10 full reference audit and system boundaries: [v2-nextjs/methodology/reference-audit-v2.2.10](./v2-nextjs/methodology/reference-audit-v2.2.10/README.en.md)
+- [Next.js] v2.2.10 Structural Summary primary-source cross-check: [v2-nextjs/source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md](./v2-nextjs/source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md)
 - [Next.js] v2.2.2 calculation accuracy recheck: [v2-nextjs/source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md](./v2-nextjs/source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md)
 - [Next.js] v2.2.2 Cn explanation and live GPT-5.5 checks in 5 languages: [v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md](./v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md)
 - [Next.js] v2.2.0 UI validation: [v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md](./v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md)
@@ -48,6 +50,14 @@ The v2.1.x series improved the AI assistants in stages: completing answers, find
 - **v2.1.10:** corrected remaining Japanese code recognition, broad interpretation questions, and new-database setup.
 
 The connected work from v2.1.8 through v2.1.10 is documented across the corresponding patch notes.
+
+## v2.2.10
+
+v2.2.10 restores the missing `GHR:PHR` ratio to the Lower Section on screen and in the PDF, following the original Structural Summary layout. It also simplifies ordinary Lower Section PDF tables and restores overall decision marks and dividers in the Special Indices cards. GHR and PHR were already classified and totaled, so existing protocols do not need to be recalculated.
+
+For this patch, the available materials were organized into 53 reference families and reviewed through their contents and relevant chapters. The calculation basis for the Exner Comprehensive System was checked again against the printed pages of Volume 1, 4th edition, and Workbook, 5th edition, covering the Upper Section, Lower Section, six Special Indices, and major input rules. R-PAS and other Rorschach systems were not mixed into the calculation basis; they were reviewed to identify places where similar terms carry different meanings. This review found no new defect that changes calculated results.
+
+The Interpersonal references in all five languages and all 5604 search vectors were refreshed. Checks that distinguish Exner Comprehensive System questions from other systems and from prompt-extraction attempts were also expanded. The publications, editions, printed pages, roles of each source, and remaining limitations are recorded in the [v2.2.10 patch note](./v2-nextjs/releases/v2.2.10/README.en.md), [full audit of 53 reference families and system boundaries](./v2-nextjs/methodology/reference-audit-v2.2.10/README.en.md), and [Structural Summary primary-source cross-check](./v2-nextjs/source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md).
 
 ## v2.2.9
 
@@ -113,6 +123,7 @@ The GPT-5.5 assistants were restricted from expanding beyond the Exner Comprehen
 
 ## [Next.js] Version 2 release history
 
+- **[2026-08-08] v2.2.10 (bug-fix release)** [Patch note](./v2-nextjs/releases/v2.2.10/README.en.md) [Source](./v2-nextjs/source/)
 - **[2026-08-01] v2.2.9 (bug-fix release)** [Patch note](./v2-nextjs/releases/v2.2.9/README.en.md) [Source](./v2-nextjs/source/)
 - **[2026-07-31] v2.2.8 (bug-fix release)** [Patch note](./v2-nextjs/releases/v2.2.8/README.en.md) [Source](./v2-nextjs/source/)
 - **[2026-07-23] v2.2.7 (bug-fix release)** [Patch note](./v2-nextjs/releases/v2.2.7/README.en.md) [Source](./v2-nextjs/source/)

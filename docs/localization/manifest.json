@@ -46,7 +46,7 @@
                            {
                                "id":  "root-readme",
                                "canonical":  "README.md",
-                               "canonicalSha256":  "9e4acb90b875825ecc3db6a58e83ddd73560305b5379e96d1fe4947a5dbe04b6",
+                               "canonicalSha256":  "3ecdd5f1ed85a8bd1f24b553b1d3996f4df90aabc35829b8ad88b1bfbd11307f",
                                "reviewStatus":  "reviewed",
                                "translations":  {
                                                     "en":  "README.en.md",
@@ -58,7 +58,7 @@
                            {
                                "id":  "root-changelog",
                                "canonical":  "CHANGELOG.md",
-                               "canonicalSha256":  "01043ab7e4bd2ee237094ad767a512db30b66f21e4216ebed5f438020e01cb4d",
+                               "canonicalSha256":  "ee0cefaf5efef5e48edc396a6b031edd577aaf0715bde9d5ab7cb82bf9b3c16b",
                                "reviewStatus":  "reviewed",
                                "translations":  {
                                                     "en":  "CHANGELOG.en.md",
@@ -106,7 +106,7 @@
                            {
                                "id":  "v2-readme",
                                "canonical":  "v2-nextjs/README.md",
-                               "canonicalSha256":  "71703ec4952f5769e189b1ecd7ae261d9c68ca1154c533d0a89ae64249034932",
+                               "canonicalSha256":  "06595db8c919b6b410658af89c46d66f73121ebdc4f568319c18335cebf47e9e",
                                "reviewStatus":  "reviewed",
                                "translations":  {
                                                     "en":  "v2-nextjs/README.en.md",
@@ -173,6 +173,30 @@
                                                     "ja":  "v2-nextjs/releases/v2.2.6/README.ja.md",
                                                     "es":  "v2-nextjs/releases/v2.2.6/README.es.md",
                                                     "pt-BR":  "v2-nextjs/releases/v2.2.6/README.pt-BR.md"
+                                                }
+                           },
+                           {
+                               "id":  "v2.2.10-release-note",
+                               "canonical":  "v2-nextjs/releases/v2.2.10/README.md",
+                               "canonicalSha256":  "171e58f1213e936dd7af139fe4ce80cd83e52ccaf8438a6528d689bedf7df38d",
+                               "reviewStatus":  "reviewed",
+                               "translations":  {
+                                                    "en":  "v2-nextjs/releases/v2.2.10/README.en.md",
+                                                    "ja":  "v2-nextjs/releases/v2.2.10/README.ja.md",
+                                                    "es":  "v2-nextjs/releases/v2.2.10/README.es.md",
+                                                    "pt-BR":  "v2-nextjs/releases/v2.2.10/README.pt-BR.md"
+                                                }
+                           },
+                           {
+                               "id":  "v2.2.10-reference-audit-methodology",
+                               "canonical":  "v2-nextjs/methodology/reference-audit-v2.2.10/README.md",
+                               "canonicalSha256":  "f0d3dcb6a314ae3c59cead60bf246558fcf1bdc565490a67f8006fa42e64e5a3",
+                               "reviewStatus":  "reviewed",
+                               "translations":  {
+                                                    "en":  "v2-nextjs/methodology/reference-audit-v2.2.10/README.en.md",
+                                                    "ja":  "v2-nextjs/methodology/reference-audit-v2.2.10/README.ja.md",
+                                                    "es":  "v2-nextjs/methodology/reference-audit-v2.2.10/README.es.md",
+                                                    "pt-BR":  "v2-nextjs/methodology/reference-audit-v2.2.10/README.pt-BR.md"
                                                 }
                            }
                        ],

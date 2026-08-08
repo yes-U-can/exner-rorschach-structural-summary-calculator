@@ -3,7 +3,7 @@ import { spawn } from 'node:child_process';
 import { mkdirSync, writeFileSync, appendFileSync } from 'node:fs';
 import { basename, dirname, resolve } from 'node:path';
 import { loadProjectEnv } from './load-project-env.mjs';
-import { classifyRunFailure } from './lib/liveEvalBatch.mjs';
+import { classifyRunFailure, countProviderRequests } from './lib/liveEvalBatch.mjs';
 import { getSourceMetadata } from './lib/sourceMetadata.mjs';
 
 const PRICE_PER_1M_TOKENS = {
@@ -148,6 +148,7 @@ writeFileSync(
 
 let totalCostUsd = 0;
 let totalCalls = 0;
+let totalProviderRequests = 0;
 let failedRuns = 0;
 const issueCounts = new Map();
 const npmCommand = process.platform === 'win32' ? 'npm.cmd' : 'npm';
@@ -181,6 +182,7 @@ for (let round = 1; round <= args.rounds; round += 1) {
       runCostUsd += eventCostUsd;
       totalCostUsd += eventCostUsd;
       totalCalls += 1;
+      totalProviderRequests += countProviderRequests(event);
       for (const issueType of event.issueTypes ?? []) {
         issueCounts.set(issueType, (issueCounts.get(issueType) ?? 0) + 1);
       }
@@ -229,6 +231,7 @@ const summary = {
   retrieval: args.retrieval,
   suite: args.suite,
   totalCalls,
+  totalProviderRequests,
   failedRuns,
   totalCostUsd: Number(totalCostUsd.toFixed(8)),
   issueCounts: Object.fromEntries([...issueCounts.entries()].sort()),

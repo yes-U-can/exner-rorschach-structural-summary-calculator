@@ -4,8 +4,10 @@
 
 このフォルダーには、ロールシャッハ構造一覧表計算機v2のリリース履歴と公開可能なソースコードがあります。最新の変更内容はパッチノートで、計算検証と実装に関する資料は公開ソースで確認できます。
 
-- 最新のパッチノート：[releases/v2.2.9](./releases/v2.2.9/README.ja.md)
-- 計算精度の再監査：[source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md](./source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md)
+- 最新のパッチノート：[releases/v2.2.10](./releases/v2.2.10/README.ja.md)
+- 全53文献群監査と体系境界：[methodology/reference-audit-v2.2.10](./methodology/reference-audit-v2.2.10/README.ja.md)
+- Structural Summary原典照合：[source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md](./source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md)
+- 以前の計算精度再監査：[source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md](./source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md)
 - 最初のv2リリースノート：[releases/v2.0.0](./releases/v2.0.0/)
 - 公開ソースコード：[source](./source/)
 

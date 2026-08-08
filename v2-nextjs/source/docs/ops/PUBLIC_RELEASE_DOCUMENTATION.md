@@ -40,6 +40,8 @@ The original v1 GAS patch notes are the project's writing reference. Their stron
 9. Describe corrections at release level. Write "v2.2.1 corrected X, and v2.2.2 added Y" instead of recounting who first believed, rejected, or rediscovered a claim during development.
 10. Preserve historical facts, declared release dates, measurements, failures, and limitations. Improve the explanation without silently rewriting released behavior.
 11. Use headings and tables to put the clinical impact first. Detailed commands, file paths, hashes, and reproducibility notes may follow under a clearly labeled technical appendix.
+12. When a release checks or corrects a calculation, coding boundary, Structural Summary field, or Special Index, identify the bibliographic source, edition, printed page, rule that was checked, affected app output, and repeatable verification. Readers should be able to trace a released conclusion without needing access to the private source collection.
+13. Cite printed book pages rather than local PDF viewer pages when printed pagination is available. Do not publish source PDFs, OCR exports, local filenames, acquisition paths, or private hashes. Paraphrase source rules and keep any indispensable quotation brief.
 
 Public rewrites should follow these examples:
 
@@ -192,6 +194,7 @@ Every public-facing release record must answer these questions:
 6. What evidence and checks support the conclusion, expressed first in plain language?
 7. Which public files were updated?
 8. What secrets, raw prompts, raw model answers, private payloads, and local runtime files were excluded?
+9. For a calculation or coding change, which source edition and printed pages support it, and which app output and repeatable check demonstrate the implementation?
 
 For AI-related releases, also state whether the release changed runtime assistant behavior, evaluation harnesses, or only documentation/governance.
 
@@ -220,6 +223,7 @@ When preparing a release:
 9. Ensure public source mirror excludes `.env*`, `.vercel/`, `node_modules/`, runtime logs, local caches, private work notes, API keys, and raw model output.
 10. Confirm that the impact, affected condition, need for recalculation, and limitations are clear before technical details appear.
 11. Remove AI-to-owner reporting language and unexplained internal engineering terms from the main narrative.
+12. For calculation-related releases, verify every public source citation against the private source page before publication, and confirm that no copyrighted source file or extended passage entered the public mirror.
 
 ## Agent Rule
 

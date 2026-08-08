@@ -7,6 +7,8 @@ interface SpecialIndicesData {
   SCON?: string;
   HVI?: string;
   OBS?: string;
+  GHR?: number;
+  PHR?: number;
 }
 
 interface PrintLowerSectionProps {
@@ -115,19 +117,18 @@ function PairTable({
   );
 }
 
-function TripleTable({
+function SimpleTable({
   rows,
 }: {
-  rows: Array<{ label: string; value: string | number; note?: string }>;
+  rows: Array<{ label: string; value: string | number }>;
 }) {
   return (
     <table className="w-full table-fixed border-collapse text-[8px] leading-tight">
       <tbody>
         {rows.map((row, index) => (
           <tr key={index}>
-            <th className="w-[38%] border border-slate-200 bg-slate-50 px-1 py-1 text-left font-normal text-slate-600">{row.label}</th>
-            <td className={`w-[28%] border border-slate-200 px-1 py-1 text-center ${valueClass(row.value)}`}>{row.value}</td>
-            <td className="w-[34%] border border-slate-200 px-1 py-1 text-center text-[7px] text-slate-400">{row.note ?? ''}</td>
+            <th className="w-[56%] border border-slate-200 bg-slate-50 px-1 py-1 text-left font-normal text-slate-600">{row.label}</th>
+            <td className={`w-[44%] border border-slate-200 px-1 py-1 text-center ${valueClass(row.value)}`}>{row.value}</td>
           </tr>
         ))}
       </tbody>
@@ -196,7 +197,7 @@ export default function PrintLowerSection({ data, specialIndices }: PrintLowerSe
       </PrintCard>
 
       <PrintCard title="Affection">
-        <TripleTable
+        <SimpleTable
           rows={[
             { label: 'FC : CF+C', value: data.FC_CF_C },
             { label: 'Pure C', value: data.PureC },
@@ -210,10 +211,11 @@ export default function PrintLowerSection({ data, specialIndices }: PrintLowerSe
       </PrintCard>
 
       <PrintCard title="Interpersonal">
-        <TripleTable
+        <SimpleTable
           rows={[
             { label: 'COP', value: data.COP },
             { label: 'AG', value: data.AG },
+            { label: 'GHR : PHR', value: `${specialIndices?.GHR ?? 0} : ${specialIndices?.PHR ?? 0}` },
             { label: 'a : p', value: data.a_p_inter },
             { label: 'Food', value: data.Food },
             { label: 'SumT', value: data.SumT_inter },
@@ -226,7 +228,7 @@ export default function PrintLowerSection({ data, specialIndices }: PrintLowerSe
       </PrintCard>
 
       <PrintCard title="Self-Perception">
-        <TripleTable
+        <SimpleTable
           rows={[
             { label: '3r+(2)/R', value: data._3r_2_R },
             { label: 'Fr+rF', value: data.Fr_rF },
@@ -252,7 +254,7 @@ export default function PrintLowerSection({ data, specialIndices }: PrintLowerSe
       </PrintCard>
 
       <PrintCard title="Cognitive Mediation">
-        <TripleTable
+        <SimpleTable
           rows={[
             { label: 'XA%', value: data.XA_percent },
             { label: 'WDA%', value: data.WDA_percent },
@@ -266,7 +268,7 @@ export default function PrintLowerSection({ data, specialIndices }: PrintLowerSe
       </PrintCard>
 
       <PrintCard title="Information Processing">
-        <TripleTable
+        <SimpleTable
           rows={[
             { label: 'Zf', value: data.Zf },
             { label: 'W : D : Dd', value: data.W_D_Dd },

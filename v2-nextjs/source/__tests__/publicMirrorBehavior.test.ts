@@ -38,8 +38,11 @@ describe.skipIf(process.platform !== 'win32')('public mirror sanitization behavi
       );
 
       expect(result.status).not.toBe(0);
-      expect(`${result.stdout}\n${result.stderr}`).toContain(
-        'Refusing to sanitize a path that overlaps the private source root.',
+      // Windows PowerShell may hard-wrap error text at the host width, even in
+      // captured output (for example, splitting "source" across two lines).
+      // Compare the stable message after removing presentation whitespace.
+      expect(`${result.stdout}\n${result.stderr}`.replace(/\s+/g, '')).toContain(
+        'Refusingtosanitizeapaththatoverlapstheprivatesourceroot.',
       );
     }
   }, 60_000);
@@ -47,12 +50,16 @@ describe.skipIf(process.platform !== 'win32')('public mirror sanitization behavi
   it('removes hidden secrets and preserves JSON collection shapes', () => {
     const root = mkdtempSync(path.join(tmpdir(), 'rorschach-public-mirror-'));
     const evalRoot = path.join(root, 'docs', 'ai-evals');
+    const dependencyRoot = path.join(root, 'node_modules', 'react-is');
+    const dependencyMetadata = path.join(dependencyRoot, 'build-info.json');
     const hiddenSecret = path.join(root, '.env.local');
 
     try {
       mkdirSync(evalRoot, { recursive: true });
+      mkdirSync(dependencyRoot, { recursive: true });
       writeFileSync(hiddenSecret, 'OPENAI_API_KEY=private-test-value\n', 'utf8');
       execFileSync('attrib.exe', ['+h', hiddenSecret]);
+      writeFileSync(dependencyMetadata, JSON.stringify({ commit: 'third-party-build' }), 'utf8');
       writeFileSync(
         path.join(evalRoot, 'single-array.json'),
         JSON.stringify([{ gitCommit: 'private-commit', kept: 'yes' }]),
@@ -79,6 +86,7 @@ describe.skipIf(process.platform !== 'win32')('public mirror sanitization behavi
       );
 
       expect(existsSync(hiddenSecret)).toBe(false);
+      expect(existsSync(dependencyMetadata)).toBe(true);
 
       const jsonValue = JSON.parse(readFileSync(path.join(evalRoot, 'single-array.json'), 'utf8'));
       expect(Array.isArray(jsonValue)).toBe(true);

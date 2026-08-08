@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-01T07:00:58.494Z",
+  "generatedAt": "2026-08-04T06:53:26.278Z",
   "version": "2026-03-11-all-locales-go-live-v1",
   "locales": [
     "ko",
@@ -55,7 +55,7 @@
         }
       },
       "inlineRefs": {
-        "count": 1289,
+        "count": 1290,
         "brokenTargetsCount": 0,
         "pass": true
       },
@@ -110,7 +110,7 @@
         }
       },
       "inlineRefs": {
-        "count": 1879,
+        "count": 1880,
         "brokenTargetsCount": 0,
         "pass": true
       },
@@ -165,7 +165,7 @@
         }
       },
       "inlineRefs": {
-        "count": 1940,
+        "count": 1941,
         "brokenTargetsCount": 0,
         "pass": true
       },
@@ -220,7 +220,7 @@
         }
       },
       "inlineRefs": {
-        "count": 1844,
+        "count": 1845,
         "brokenTargetsCount": 0,
         "pass": true
       },
@@ -275,7 +275,7 @@
         }
       },
       "inlineRefs": {
-        "count": 1847,
+        "count": 1848,
         "brokenTargetsCount": 0,
         "pass": true
       },

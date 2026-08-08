@@ -23,7 +23,9 @@ Cada nota de atualização registra o que mudou, as condições que podem ser af
 ## Conteúdo publicado
 
 - [Next.js] Aplicativo web: [exner.yesucan.co.kr](https://exner.yesucan.co.kr)
-- [Next.js] Versão 2 mais recente: [v2-nextjs/releases/v2.2.9](./v2-nextjs/releases/v2.2.9/README.pt-BR.md)
+- [Next.js] Versão 2 mais recente: [v2-nextjs/releases/v2.2.10](./v2-nextjs/releases/v2.2.10/README.pt-BR.md)
+- [Next.js] Auditoria documental completa e limites entre sistemas na v2.2.10: [v2-nextjs/methodology/reference-audit-v2.2.10](./v2-nextjs/methodology/reference-audit-v2.2.10/README.pt-BR.md)
+- [Next.js] Verificação de fontes primárias da v2.2.10: [v2-nextjs/source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md](./v2-nextjs/source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md)
 - [Next.js] Nova verificação da precisão de cálculo da v2.2.2: [v2-nextjs/source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md](./v2-nextjs/source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md)
 - [Next.js] Explicação de Cn da v2.2.2 e chamadas reais ao GPT-5.5 em 5 idiomas: [v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md](./v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md)
 - [Next.js] Validação da interface da v2.2.0: [v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md](./v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md)
@@ -48,6 +50,14 @@ Na série v2.1.x, os assistentes de IA foram aprimorados em etapas para concluir
 - **v2.1.10:** foram corrigidos os problemas restantes de reconhecimento de códigos em japonês, perguntas amplas de interpretação e configuração de um banco de dados novo.
 
 O trabalho relacionado da v2.1.8 à v2.1.10 está registrado nas respectivas notas de atualização.
+
+## v2.2.10
+
+A v2.2.10 restaura a razão `GHR:PHR` ausente na Lower Section da tela e do PDF, seguindo a disposição original do Sumário Estrutural. Também organiza as tabelas comuns da Lower Section no PDF e recupera as decisões gerais e os separadores dos Special Indices. GHR e PHR já eram classificados e somados, portanto não é necessário recalcular protocolos existentes.
+
+Para esta versão, os materiais disponíveis foram organizados em 53 grupos documentais, com revisão dos sumários e dos capítulos pertinentes. A base de cálculo do Sistema Compreensivo de Exner foi novamente comparada às páginas impressas do Volume 1, 4.ª edição, e do Workbook, 5.ª edição, abrangendo a Upper Section, a Lower Section, os seis Special Indices e as principais regras de entrada. O R-PAS e outros sistemas de Rorschach não foram misturados à base de cálculo; foram examinados para distinguir termos semelhantes que têm significados diferentes. A auditoria não encontrou nenhum novo defeito que altere os resultados calculados.
+
+Os documentos Interpersonal em cinco idiomas e os 5604 vetores de busca foram atualizados. Também foram ampliados os testes que distinguem perguntas do Sistema Compreensivo de Exner de outros sistemas e de tentativas de extrair instruções internas. As obras, edições, páginas impressas, o papel de cada material e as limitações restantes estão na [nota da v2.2.10](./v2-nextjs/releases/v2.2.10/README.pt-BR.md), na [auditoria completa de 53 grupos documentais e limites entre sistemas](./v2-nextjs/methodology/reference-audit-v2.2.10/README.pt-BR.md) e na [verificação do Sumário Estrutural com as fontes primárias](./v2-nextjs/source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md).
 
 ## v2.2.9
 
@@ -113,6 +123,7 @@ Os assistentes GPT-5.5 foram restringidos para não ampliar as respostas além d
 
 ## [Next.js] Histórico de versões 2
 
+- **[2026-08-08] v2.2.10 (correção de erros)** [Nota da versão](./v2-nextjs/releases/v2.2.10/README.pt-BR.md) [Código-fonte](./v2-nextjs/source/)
 - **[2026-08-01] v2.2.9 (correção de erros)** [Nota da versão](./v2-nextjs/releases/v2.2.9/README.pt-BR.md) [Código-fonte](./v2-nextjs/source/)
 - **[2026-07-31] v2.2.8 (correção de erros)** [Nota da versão](./v2-nextjs/releases/v2.2.8/README.pt-BR.md) [Código-fonte](./v2-nextjs/source/)
 - **[2026-07-23] v2.2.7 (correção de erros)** [Nota da versão](./v2-nextjs/releases/v2.2.7/README.pt-BR.md) [Código-fonte](./v2-nextjs/source/)

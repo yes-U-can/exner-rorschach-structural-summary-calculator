@@ -4,8 +4,10 @@
 
 이 폴더에는 로샤 구조요약 계산기 v2의 릴리즈 기록과 공개 가능한 소스코드가 있습니다. 최신 변경 내용은 패치노트에서, 검산과 구현 자료는 공개 소스에서 확인할 수 있습니다.
 
-- 최신 패치노트: [releases/v2.2.9](./releases/v2.2.9/)
-- 계산 정확성 재감사: [source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md](./source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md)
+- 최신 패치노트: [releases/v2.2.10](./releases/v2.2.10/)
+- 53개 문헌 전수감사와 체계 경계: [methodology/reference-audit-v2.2.10](./methodology/reference-audit-v2.2.10/)
+- 구조요약 원전 교차검증: [source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md](./source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md)
+- 이전 계산 정확성 재감사: [source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md](./source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md)
 - 최초 v2 릴리즈 패치노트: [releases/v2.0.0](./releases/v2.0.0/)
 - 공개 소스코드: [source](./source/)
 

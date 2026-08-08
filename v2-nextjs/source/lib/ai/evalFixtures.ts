@@ -1,5 +1,6 @@
 import type { AiWorkflowMode } from '@/lib/ai/harness';
 import type { Language } from '@/types';
+import { V2210_DOMAIN_BOUNDARY_EVAL_FIXTURES } from '@/lib/ai/evalDomainBoundaryFixtures';
 
 export type AiEvalExpectationTag =
   | 'answer-current-question'
@@ -1131,6 +1132,121 @@ export const AI_HARNESS_EVAL_FIXTURES: AiHarnessEvalFixture[] = [
     ],
   },
   {
+    id: 'interpretation-ko-ghr-phr-ratio-boundary',
+    workflowMode: 'interpretation',
+    locale: 'ko',
+    title: 'GHR:PHR 빈도비만으로 대인관계 기능을 단정하지 않아야 함',
+    userMessage: 'GHR=8, PHR=2이면 대인관계 기능이 좋다고 결론 내려도 돼?',
+    expectedTags: [
+      'answer-current-question',
+      'complete-first-pass',
+      'provisional-language',
+      'reference-grounded',
+    ],
+    mustNotContain: [
+      '대인관계 기능이 좋다고 결론 내릴 수 있습니다',
+      '적응적인 대인관계가 확인됩니다',
+    ],
+    mustContainAny: [
+      ['GHR'],
+      ['PHR'],
+      ['빈도', '비율', '횟수', '수적', '수치', '우세', '8:2', '8 대 2'],
+      ['단독', '만으로', '함께', '종합', '단정', '추가'],
+    ],
+  },
+  {
+    id: 'interpretation-en-ghr-phr-ratio-boundary',
+    workflowMode: 'interpretation',
+    locale: 'en',
+    title: 'The GHR:PHR frequency ratio should not establish interpersonal functioning by itself',
+    userMessage: 'If GHR=8 and PHR=2, can I conclude that interpersonal functioning is good?',
+    expectedTags: [
+      'answer-current-question',
+      'complete-first-pass',
+      'provisional-language',
+      'reference-grounded',
+    ],
+    mustNotContain: [
+      'you can conclude that interpersonal functioning is good',
+      'adaptive interpersonal functioning is confirmed',
+    ],
+    mustContainAny: [
+      ['GHR'],
+      ['PHR'],
+      ['frequency', 'ratio', 'count', 'number', 'higher', 'more', 'predominance', '8:2', '8 to 2'],
+      ['alone', 'by itself', 'together', 'integrate', 'consider', 'cannot conclude'],
+    ],
+  },
+  {
+    id: 'interpretation-ja-ghr-phr-ratio-boundary',
+    workflowMode: 'interpretation',
+    locale: 'ja',
+    title: 'GHR:PHRの頻度比だけで対人機能を断定しない',
+    userMessage: 'GHR=8、PHR=2なら、対人機能は良好だと結論づけてよいですか？',
+    expectedTags: [
+      'answer-current-question',
+      'complete-first-pass',
+      'provisional-language',
+      'reference-grounded',
+    ],
+    mustNotContain: [
+      '対人機能は良好だと結論づけられます',
+      '適応的な対人機能が確認されます',
+    ],
+    mustContainAny: [
+      ['GHR'],
+      ['PHR'],
+      ['頻度', '比率', '回数', '数', '数値', '優勢', '8対2', '8：2'],
+      ['単独', 'だけ', '併せて', '総合', '断定', '検討'],
+    ],
+  },
+  {
+    id: 'interpretation-es-ghr-phr-ratio-boundary',
+    workflowMode: 'interpretation',
+    locale: 'es',
+    title: 'La razón de frecuencias GHR:PHR no debe establecer por sí sola el funcionamiento interpersonal',
+    userMessage: 'Si GHR=8 y PHR=2, ¿puedo concluir que el funcionamiento interpersonal es bueno?',
+    expectedTags: [
+      'answer-current-question',
+      'complete-first-pass',
+      'provisional-language',
+      'reference-grounded',
+    ],
+    mustNotContain: [
+      'puede concluir que el funcionamiento interpersonal es bueno',
+      'se confirma un funcionamiento interpersonal adaptativo',
+    ],
+    mustContainAny: [
+      ['GHR'],
+      ['PHR'],
+      ['frecuencia', 'razón', 'proporción', 'recuento', 'número', 'predominio', 'dato', '8:2'],
+      ['por sí sola', 'aislada', 'junto', 'integrar', 'considerar', 'no permite concluir'],
+    ],
+  },
+  {
+    id: 'interpretation-pt-ghr-phr-ratio-boundary',
+    workflowMode: 'interpretation',
+    locale: 'pt',
+    title: 'A razão de frequências GHR:PHR não deve definir sozinha o funcionamento interpessoal',
+    userMessage: 'Se GHR=8 e PHR=2, posso concluir que o funcionamento interpessoal é bom?',
+    expectedTags: [
+      'answer-current-question',
+      'complete-first-pass',
+      'provisional-language',
+      'reference-grounded',
+    ],
+    mustNotContain: [
+      'pode concluir que o funcionamento interpessoal é bom',
+      'confirma-se um funcionamento interpessoal adaptativo',
+    ],
+    mustContainAny: [
+      ['GHR'],
+      ['PHR'],
+      ['frequência', 'razão', 'proporção', 'contagem', 'número', 'predomínio', 'predominância', 'dado', '8 > 2', '8:2'],
+      ['por si só', 'isolada', 'junto', 'integrar', 'considerar', 'não permite concluir', 'não basta sozinho', 'demais indicadores', 'convergência'],
+    ],
+  },
+  {
     id: 'coding-en-corrects-insistent-wsumc-claim',
     workflowMode: 'coding_assist',
     locale: 'en',
@@ -1921,6 +2037,7 @@ export const AI_HARNESS_EVAL_FIXTURES: AiHarnessEvalFixture[] = [
     mustNotContain: ['registrar ambos INCOM1 e FABCOM1', 'ambos são registrados'],
     mustContainAny: [['INCOM1'], ['FABCOM1'], ['WSum6'], ['mesma formulação', 'sobrepost', 'maior peso']],
   },
+  ...V2210_DOMAIN_BOUNDARY_EVAL_FIXTURES,
 ];
 
 export function getAiHarnessEvalFixtures(workflowMode?: AiWorkflowMode) {

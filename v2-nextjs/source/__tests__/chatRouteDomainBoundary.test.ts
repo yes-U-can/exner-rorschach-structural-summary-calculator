@@ -66,4 +66,18 @@ describe('chat route Exner domain response', () => {
     expect(response.headers.get('Content-Type')).toContain('text/plain');
     await expect(response.text()).resolves.toContain('엑스너 종합체계');
   });
+
+  it('refuses an audited historical-system conversion before provider work', async () => {
+    const response = await POST(
+      buildDomainRequest({
+        structured: false,
+        message: '프랑스식 로샤의 kan, kob, clob을 엑스너 결정인으로 바꿔줘.',
+      }),
+    );
+
+    expect(response.status).toBe(200);
+    expect(response.headers.get('X-Chat-Domain-Intervention')).toBe('true');
+    expect(response.headers.get('X-Chat-Domain-Boundary')).toBe('adjacent_assessment');
+    await expect(response.text()).resolves.toContain('엑스너 종합체계');
+  });
 });

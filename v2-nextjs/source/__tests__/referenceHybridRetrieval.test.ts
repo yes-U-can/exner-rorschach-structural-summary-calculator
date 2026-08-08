@@ -69,6 +69,43 @@ describe('referenceHybridRetrieval', () => {
     expect(ranked[0]?.canonicalRoute).toBe('scoring-input/dq/+');
   });
 
+  it('anchors GHR:PHR interpretation questions at the interpersonal overview', () => {
+    const scoringRule: KnowledgeItem = {
+      id: 'route:scoring-input/gphr/GHR',
+      title: 'GHR',
+      content: 'Ordered scoring criteria for assigning GHR.',
+      source: 'builtin',
+      locale: 'en',
+      aliases: ['GHR'],
+      canonicalRoute: 'scoring-input/gphr/GHR',
+      relatedRoutes: [],
+      retrievalKind: 'runtime-route-summary',
+    };
+    const interpersonalOverview: KnowledgeItem = {
+      id: 'route:result-interpretation/lower-section/interpersonal',
+      title: 'Interpersonal',
+      content:
+        'GHR:PHR is a descriptive frequency ratio and does not establish interpersonal functioning by itself.',
+      source: 'builtin',
+      locale: 'en',
+      aliases: ['GHR:PHR', 'interpersonal'],
+      canonicalRoute: 'result-interpretation/lower-section/interpersonal',
+      relatedRoutes: ['scoring-input/gphr'],
+      retrievalKind: 'runtime-route-summary',
+    };
+
+    const ranked = rankMergedKnowledge(
+      'If GHR=8 and PHR=2, can I conclude that interpersonal functioning is good?',
+      [scoringRule, interpersonalOverview],
+      [{ item: scoringRule, similarity: 0.91 }],
+      4,
+    );
+
+    expect(ranked[0]?.canonicalRoute).toBe(
+      'result-interpretation/lower-section/interpersonal',
+    );
+  });
+
   it('rewards items that are supported by both lexical and vector retrieval', () => {
     const shared: KnowledgeItem = {
       id: 'chunk:shared',
@@ -315,6 +352,31 @@ describe('referenceHybridRetrieval', () => {
       ),
     ).toBe(true);
   });
+
+  it.each([
+    ['ko' as const, 'GHR=8, PHR=2이면 대인관계 기능이 좋다고 결론 내려도 돼?'],
+    ['en' as const, 'If GHR=8 and PHR=2, can I conclude that interpersonal functioning is good?'],
+    ['ja' as const, 'GHR=8、PHR=2なら、対人機能は良好だと結論づけてよいですか？'],
+    ['es' as const, 'Si GHR=8 y PHR=2, ¿puedo concluir que el funcionamiento interpersonal es bueno?'],
+    ['pt' as const, 'Se GHR=8 e PHR=2, posso concluir que o funcionamento interpessoal é bom?'],
+  ])(
+    'anchors the explicit %s GHR:PHR interpretation query to the interpersonal overview',
+    async (lang, query) => {
+      const result = await getHybridInterpretationKnowledge({
+        query,
+        lang,
+        provider: 'openai',
+        apiKey: 'unused-in-lexical-fallback',
+        limit: 5,
+      });
+
+      expect(result.mode).toBe('lexical');
+      expect(result.items[0]?.canonicalRoute).toBe(
+        'result-interpretation/lower-section/interpersonal',
+      );
+      expect(result.items[0]?.content).toMatch(/GHR\s*[:/]\s*PHR/u);
+    },
+  );
 
   it('reports lexical mode when the vector runtime returns no usable hits', async () => {
     retrievalMocks.runtimeReady.mockReturnValue(true);

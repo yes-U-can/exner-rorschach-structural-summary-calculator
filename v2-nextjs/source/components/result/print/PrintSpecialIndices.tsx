@@ -20,7 +20,7 @@ interface PrintSpecialIndicesProps {
   };
 }
 
-type Criterion = { label: string; met: boolean };
+type Criterion = { label: string; met: boolean; dividerBefore?: boolean };
 
 function Checkbox({ checked }: { checked: boolean }) {
   return (
@@ -39,7 +39,12 @@ function CriteriaList({ items }: { items: Criterion[] }) {
   return (
     <ul className="space-y-1">
       {items.map((item, index) => (
-        <li key={index} className="flex items-start gap-1">
+        <li
+          key={index}
+          className={`flex items-start gap-1 ${
+            item.dividerBefore ? 'border-t border-slate-200 pt-1' : ''
+          }`}
+        >
           <Checkbox checked={item.met} />
           <span className={`text-[8px] leading-tight ${item.met ? 'text-slate-800' : 'text-slate-400'}`}>{item.label}</span>
         </li>
@@ -51,19 +56,30 @@ function CriteriaList({ items }: { items: Criterion[] }) {
 function PrintIndexCard({
   title,
   summary,
+  isPositive,
   items,
   note,
+  summaryTextClassName = 'text-[8px]',
 }: {
   title: string;
   summary?: string;
+  isPositive?: boolean;
   items: Criterion[];
   note?: string;
+  summaryTextClassName?: string;
 }) {
   return (
     <section className="rounded-lg border border-slate-200 bg-white p-2">
       <h3 className="border-b border-slate-200 pb-1 text-center text-[9px] font-semibold text-slate-800">{title}</h3>
-      {summary ? <p className="mt-1 text-[8px] font-medium text-slate-600">{summary}</p> : null}
-      {note ? <p className="mt-0.5 text-[7px] text-amber-600">{note}</p> : null}
+      {summary ? (
+        <div className="mt-1 flex items-start gap-1 border-b border-slate-200 pb-1">
+          <Checkbox checked={Boolean(isPositive)} />
+          <div className="min-w-0 flex-1">
+            <p className={`${summaryTextClassName} font-medium leading-tight text-slate-600`}>{summary}</p>
+            {note ? <p className="mt-0.5 text-[7px] text-amber-600">{note}</p> : null}
+          </div>
+        </div>
+      ) : null}
       <div className="mt-1.5">
         <CriteriaList items={items} />
       </div>
@@ -73,6 +89,7 @@ function PrintIndexCard({
 
 export default function PrintSpecialIndices({ data }: PrintSpecialIndicesProps) {
   const { t } = useTranslation();
+  const isPositive = (value: string) => value.split(', ')[1] === 'Positive';
 
   const ptiCriteria: Criterion[] = [
     { label: '(1) XA% < .70 & WDA% < .75', met: data.pti_criteria.c1 },
@@ -130,7 +147,7 @@ export default function PrintSpecialIndices({ data }: PrintSpecialIndicesProps) 
     { label: `${t('specialIndices.obs_r1')}`, met: data.obs_rules.r1 },
     { label: `${t('specialIndices.obs_r2')} & FQ+ > 3`, met: data.obs_rules.r2 },
     { label: `${t('specialIndices.obs_r3')} & X+% > .89`, met: data.obs_rules.r3 },
-    { label: 'FQ+ > 3 & X+% > .89', met: data.obs_rules.r4 },
+    { label: 'FQ+ > 3 & X+% > .89', met: data.obs_rules.r4, dividerBefore: true },
     { label: '(1) Dd > 3', met: data.obs_criteria.c1 },
     { label: '(2) Zf > 12', met: data.obs_criteria.c2 },
     { label: '(3) Zd > +3.0', met: data.obs_criteria.c3 },
@@ -143,14 +160,36 @@ export default function PrintSpecialIndices({ data }: PrintSpecialIndicesProps) 
       <PrintIndexCard
         title="S-Constellation"
         summary={t('specialIndices.scon_main')}
+        isPositive={isPositive(data.SCON)}
         note={t('specialIndices.scon_note')}
         items={sconCriteria}
       />
-      <PrintIndexCard title="DEPI" summary={t('specialIndices.depi_main')} items={depiCriteria} />
+      <PrintIndexCard
+        title="DEPI"
+        summary={t('specialIndices.depi_main')}
+        isPositive={isPositive(data.DEPI)}
+        items={depiCriteria}
+      />
       <PrintIndexCard title="PTI" items={ptiCriteria} />
-      <PrintIndexCard title="CDI" summary={t('specialIndices.cdi_main')} items={cdiCriteria} />
-      <PrintIndexCard title="HVI" summary={t('specialIndices.hvi_main')} items={hviCriteria} />
-      <PrintIndexCard title="OBS" summary={t('specialIndices.obs_main')} items={obsRules} />
+      <PrintIndexCard
+        title="CDI"
+        summary={t('specialIndices.cdi_main')}
+        isPositive={isPositive(data.CDI)}
+        items={cdiCriteria}
+      />
+      <PrintIndexCard
+        title="HVI"
+        summary={t('specialIndices.hvi_main')}
+        isPositive={isPositive(data.HVI)}
+        summaryTextClassName="text-[7px]"
+        items={hviCriteria}
+      />
+      <PrintIndexCard
+        title="OBS"
+        summary={t('specialIndices.obs_main')}
+        isPositive={isPositive(data.OBS)}
+        items={obsRules}
+      />
     </div>
   );
 }

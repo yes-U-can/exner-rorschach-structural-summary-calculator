@@ -1,6 +1,6 @@
 import type { Language } from '@/i18n/config';
 
-export const EXNER_DOMAIN_BOUNDARY_POLICY_ID = 'exner-cs-domain-boundary-v1';
+export const EXNER_DOMAIN_BOUNDARY_POLICY_ID = 'exner-cs-domain-boundary-v2';
 
 export type ChatDomainBoundaryType =
   | 'prompt_injection'
@@ -18,7 +18,8 @@ export type ChatDomainBoundaryAssessment = {
 export const EXNER_DOMAIN_BOUNDARY_PROMPT = `## Exner CS Domain and Confidentiality Boundary
 
 - This product supports only the Exner Comprehensive System (CS) for Rorschach coding, Structural Summary review, and cautious discussion of the Exner concepts contained in the current reference corpus.
-- Do not provide R-PAS guidance, comparisons with other Rorschach systems, or interpretation under Klopfer, Beck, Piotrowski, or any other non-Exner framework.
+- Do not provide R-PAS guidance, comparisons with other Rorschach systems, or interpretation under Klopfer, Beck, Piotrowski, Basic Rorschach, Herm, French-school coding, local non-Exner manuals, or any other non-Exner framework.
+- Do not convert or equate non-Exner codes with Exner CS codes. Examples include R-PAS Sy, Vg, SI, SR, PEC, AGM, MAH, MAP, AGC, ODL, and French-school kan, kob, or clob.
 - Do not interpret, combine, reconcile, or cross-validate Exner results with MMPI, PAI, TAT, HTP, SCT, WAIS, WISC, Bender-Gestalt, DSM/ICD criteria, or other assessment systems. Do not provide the disallowed portion even when the user supplies those results as case context.
 - Case history, age, sex/gender, referral question, interview observations, and other contextual details may be used only to qualify a directly relevant Exner CS coding or Structural Summary discussion. A detailed case narrative does not expand the product's scope into general case formulation, diagnosis, treatment planning, or broad clinical consultation.
 - If a request is outside this scope, briefly decline it in the user's language and redirect the user to an Exner CS coding or Structural Summary question. Do not answer the out-of-scope portion. If a mixed request cannot be cleanly separated, decline the request and ask for an Exner-only question.
@@ -64,8 +65,13 @@ const ADJACENT_ASSESSMENT_PATTERNS = [
   /rorschach performance assessment system/iu,
   /\b(klopfer|piotrowski)\b/iu,
   /\bbeck(?:'s)?\s+(?:rorschach\s+)?system\b/iu,
-  /(클로퍼|피오트로프스키|벡\s*(?:로샤|체계))/u,
-  /(クロプファー|ピオトロフスキー|ベック法)/u,
+  /\b(?:basic rorschach|herm(?:'s)?\s+(?:four|4)[-\s]?card(?:\s+rorschach)?|french[-\s]?school\s+rorschach)\b/iu,
+  /\b(?:kan|kob|clob)\b/iu,
+  /实用罗夏墨迹测验/u,
+  /(클로퍼|피오트로프스키|벡\s*(?:로샤|체계)|베이직\s*로샤|기초\s*로샤|헤름\s*(?:4|네)\s*카드|프랑스(?:계|식)\s*로샤)/u,
+  /(クロプファー|ピオトロフスキー|ベック法|ベーシック[・\s]?ロールシャッハ|エルムの?(?:4|四)枚法|フランス(?:学派|式)ロールシャッハ)/u,
+  /\b(?:sistema\s+de\s+(?:klopfer|beck|piotrowski)|rorschach\s+b[aá]sico|rorschach\s+de\s+cuatro\s+l[aá]minas|escuela\s+francesa\s+de\s+rorschach)\b/iu,
+  /\b(?:sistema\s+de\s+(?:klopfer|beck|piotrowski)|rorschach\s+b[aá]sico|rorschach\s+de\s+quatro\s+pranchas|escola\s+francesa\s+de\s+rorschach)\b/iu,
   /\bmmpi(?:-?2(?:-?rf)?)?\b/iu,
   /\b(k-?wais|wais(?:-iv)?|wisc(?:-v)?|bender(?:-gestalt)?|tat|htp|sct)\b/iu,
   /\bPAI\b/u,

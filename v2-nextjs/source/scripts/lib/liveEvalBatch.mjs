@@ -20,3 +20,8 @@ export function classifyRunFailure(result, events) {
   if (events.length === 0) return 'no_fixture_results';
   return 'evaluation_process_failed';
 }
+
+export function countProviderRequests(event) {
+  const turnCount = Number(event?.turnCount);
+  return Number.isInteger(turnCount) && turnCount > 0 ? turnCount : 1;
+}

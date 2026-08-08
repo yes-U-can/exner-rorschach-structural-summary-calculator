@@ -7,6 +7,7 @@ import {
   appendAiResponsePolicyPrompt,
   createOpenAITextStream,
   getAiPromptProfile,
+  OPENAI_GENERATION_TIMEOUT_MS,
   type AiModelMessage,
   type AiWorkflowMode,
 } from '@/lib/ai/harness';
@@ -491,7 +492,7 @@ describe.runIf(apiKey && liveFixtures.length > 0)('OpenAI live AI harness eval',
       }
       expect(contract.passed, contract.issues.map((issue) => issue.message).join('; ')).toBe(true);
     },
-    60_000,
+    OPENAI_GENERATION_TIMEOUT_MS + 60_000,
   );
 });
 

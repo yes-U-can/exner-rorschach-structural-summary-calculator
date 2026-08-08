@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-01T07:47:10.728Z",
-  "corpusFingerprint": "3f82b4f1ce27620f75006290c990543cbe564559af67f702837269327e795125",
+  "generatedAt": "2026-08-04T06:53:25.393Z",
+  "corpusFingerprint": "ceed019ab15c8caa61a7cab4a7fc762d4fe5e700568394616d372caa56a48ffe",
   "locales": [
     "ko",
     "en",
@@ -7457,6 +7457,7 @@
           "result-interpretation/lower-section",
           "result-interpretation/lower-section/interpersonal/COP",
           "result-interpretation/lower-section/interpersonal/AG",
+          "scoring-input/gphr",
           "result-interpretation/lower-section/interpersonal/a_p_inter",
           "result-interpretation/lower-section/interpersonal/Food",
           "result-interpretation/lower-section/interpersonal/SumT_inter",
@@ -7482,7 +7483,7 @@
           "[해석/Lower Section/Interpersonal] Interpersonal",
           "핵심 정의"
         ],
-        "text": "[Title] [해석/Lower Section/Interpersonal] Interpersonal\n[Definition] Interpersonal은 구조요약에서 사람이 다른 사람을 얼마나 찾고, 얼마나 가깝게 지내고 싶어 하며, 관계를 협동적으로 보는지 아니면 공격적이고 멀어진 것으로 보는지를 읽는 묶음이다. 이 묶음은 COP, AG, a:p, Food, SumT, 인간 내용, 고립지수 같은 변수를 함께 본다.",
+        "text": "[Title] [해석/Lower Section/Interpersonal] Interpersonal\n[Definition] Interpersonal은 구조요약에서 사람이 다른 사람을 얼마나 찾고, 얼마나 가깝게 지내고 싶어 하며, 관계를 협동적으로 보는지 아니면 공격적이고 멀어진 것으로 보는지를 읽는 묶음이다. 이 묶음은 COP, AG, GHR:PHR, a:p, Food, SumT, 인간 내용, 고립지수 같은 변수를 함께 본다.",
         "aliases": [
           "interpersonal",
           "인간관계부",
@@ -7492,6 +7493,7 @@
           "result-interpretation/lower-section",
           "result-interpretation/lower-section/interpersonal/COP",
           "result-interpretation/lower-section/interpersonal/AG",
+          "scoring-input/gphr",
           "result-interpretation/lower-section/interpersonal/a_p_inter",
           "result-interpretation/lower-section/interpersonal/Food",
           "result-interpretation/lower-section/interpersonal/SumT_inter",
@@ -7507,7 +7509,7 @@
         "evidenceTier": null,
         "status": "draft",
         "runtimeReady": true,
-        "contentHash": "d0e29c2cc14c7009fc7989ba00f51ada079e63c470f8e753bf260c0607220eaf"
+        "contentHash": "52f4e8545c513f30aafe607cd28511a1827681cd4f946923c24dff4b8d1640f2"
       },
       {
         "locale": "ko",
@@ -7517,7 +7519,7 @@
           "[해석/Lower Section/Interpersonal] Interpersonal",
           "해석 포인트"
         ],
-        "text": "[Title] [해석/Lower Section/Interpersonal] Interpersonal\n[Interpretation] COP와 AG는 사람 사이의 상호작용을 협동적으로 예상하는지, 갈등적으로 예상하는지의 방향을 보여 준다.\n\nSumT\\_inter와 Food는 친밀감 욕구나 의존 욕구가 관계 장면에서 얼마나 활성화되어 있는지 읽을 때 중요하다.\n\nHumanCont와 PureH는 사람에 대한 관심의 양과, 사람 개념이 실제 경험에 더 가까운지 상상에 더 기대는지의 차이를 보여 준다.\n\nPER는 대인 장면을 볼 때 자기 기준과 자기 경험을 얼마나 강하게 끌어오는지 알려 준다.\n\nISO\\_Index는 사회적 거리두기, 위축, 고립 경향을 읽을 때 보조 축으로 쓴다.",
+        "text": "[Title] [해석/Lower Section/Interpersonal] Interpersonal\n[Interpretation] COP와 AG는 사람 사이의 상호작용을 협동적으로 예상하는지, 갈등적으로 예상하는지의 방향을 보여 준다.\n\nGHR:PHR은 좋은 인간표상과 빈약한 인간표상의 빈도를 나란히 보여 주는 기술적 비율이다. 이 비율만으로 대인관계 기능을 단정하지 않는다.\n\nSumT\\_inter와 Food는 친밀감 욕구나 의존 욕구가 관계 장면에서 얼마나 활성화되어 있는지 읽을 때 중요하다.\n\nHumanCont와 PureH는 사람에 대한 관심의 양과, 사람 개념이 실제 경험에 더 가까운지 상상에 더 기대는지의 차이를 보여 준다.\n\nPER는 대인 장면을 볼 때 자기 기준과 자기 경험을 얼마나 강하게 끌어오는지 알려 준다.\n\nISO\\_Index는 사회적 거리두기, 위축, 고립 경향을 읽을 때 보조 축으로 쓴다.",
         "aliases": [
           "interpersonal",
           "인간관계부",
@@ -7527,6 +7529,7 @@
           "result-interpretation/lower-section",
           "result-interpretation/lower-section/interpersonal/COP",
           "result-interpretation/lower-section/interpersonal/AG",
+          "scoring-input/gphr",
           "result-interpretation/lower-section/interpersonal/a_p_inter",
           "result-interpretation/lower-section/interpersonal/Food",
           "result-interpretation/lower-section/interpersonal/SumT_inter",
@@ -7542,7 +7545,7 @@
         "evidenceTier": null,
         "status": "draft",
         "runtimeReady": true,
-        "contentHash": "76b279797de915634d09d1103d82bc7245463a6ed3dc4dcb0a4b3d93094f899d"
+        "contentHash": "b811b09d8190360241df00018b1451a34b40311266b7c427e2a9f6b5c36f0128"
       },
       {
         "locale": "ko",
@@ -7562,6 +7565,7 @@
           "result-interpretation/lower-section",
           "result-interpretation/lower-section/interpersonal/COP",
           "result-interpretation/lower-section/interpersonal/AG",
+          "scoring-input/gphr",
           "result-interpretation/lower-section/interpersonal/a_p_inter",
           "result-interpretation/lower-section/interpersonal/Food",
           "result-interpretation/lower-section/interpersonal/SumT_inter",
@@ -7597,6 +7601,7 @@
           "result-interpretation/lower-section",
           "result-interpretation/lower-section/interpersonal/COP",
           "result-interpretation/lower-section/interpersonal/AG",
+          "scoring-input/gphr",
           "result-interpretation/lower-section/interpersonal/a_p_inter",
           "result-interpretation/lower-section/interpersonal/Food",
           "result-interpretation/lower-section/interpersonal/SumT_inter",
@@ -7632,6 +7637,7 @@
           "result-interpretation/lower-section",
           "result-interpretation/lower-section/interpersonal/COP",
           "result-interpretation/lower-section/interpersonal/AG",
+          "scoring-input/gphr",
           "result-interpretation/lower-section/interpersonal/a_p_inter",
           "result-interpretation/lower-section/interpersonal/Food",
           "result-interpretation/lower-section/interpersonal/SumT_inter",
@@ -7657,7 +7663,7 @@
           "[해석/Lower Section/Interpersonal] Interpersonal",
           "상호 참조"
         ],
-        "text": "[Title] [해석/Lower Section/Interpersonal] Interpersonal\n[Cross References] \\[해석/Lower Section] Lower Section\n\n\\[해석/Interpersonal] COP\n\n\\[해석/Interpersonal] AG\n\n\\[해석/Interpersonal] a:p\n\n\\[해석/Interpersonal] Food\n\n\\[해석/Interpersonal] SumT\n\n\\[해석/Interpersonal] Human Content\n\n\\[해석/Interpersonal] Pure H\n\n\\[해석/Interpersonal] PER\n\n\\[해석/Interpersonal] Isolation Index\n\n\\[해석/Core] SumT\n\n\\[해석/Ideation] a:p\n\n\\[해석/Lower Section/Self Perception] Self Perception",
+        "text": "[Title] [해석/Lower Section/Interpersonal] Interpersonal\n[Cross References] \\[해석/Lower Section] Lower Section\n\n\\[해석/Interpersonal] COP\n\n\\[해석/Interpersonal] AG\n\n\\[부호화/GHR-PHR] GHR/PHR\n\n\\[해석/Interpersonal] a:p\n\n\\[해석/Interpersonal] Food\n\n\\[해석/Interpersonal] SumT\n\n\\[해석/Interpersonal] Human Content\n\n\\[해석/Interpersonal] Pure H\n\n\\[해석/Interpersonal] PER\n\n\\[해석/Interpersonal] Isolation Index\n\n\\[해석/Core] SumT\n\n\\[해석/Ideation] a:p\n\n\\[해석/Lower Section/Self Perception] Self Perception",
         "aliases": [
           "interpersonal",
           "인간관계부",
@@ -7667,6 +7673,7 @@
           "result-interpretation/lower-section",
           "result-interpretation/lower-section/interpersonal/COP",
           "result-interpretation/lower-section/interpersonal/AG",
+          "scoring-input/gphr",
           "result-interpretation/lower-section/interpersonal/a_p_inter",
           "result-interpretation/lower-section/interpersonal/Food",
           "result-interpretation/lower-section/interpersonal/SumT_inter",
@@ -7682,7 +7689,7 @@
         "evidenceTier": null,
         "status": "draft",
         "runtimeReady": true,
-        "contentHash": "0964cce52cbf5bd496df245e5b1aab0c845c9245fb6ee559b68dd6e2cb8d9110"
+        "contentHash": "1abf9e451cb757b66eec63044d4e205f13da84769d10fc56894dee12e64fc5cd"
       },
       {
         "locale": "ko",
@@ -40578,6 +40585,7 @@
           "result-interpretation/lower-section",
           "result-interpretation/lower-section/interpersonal/COP",
           "result-interpretation/lower-section/interpersonal/AG",
+          "scoring-input/gphr",
           "result-interpretation/lower-section/interpersonal/a_p_inter",
           "result-interpretation/lower-section/interpersonal/Food",
           "result-interpretation/lower-section/interpersonal/SumT_inter",
@@ -40603,7 +40611,7 @@
           "[Interpretation/Lower Section/Interpersonal] Interpersonal",
           "Definition"
         ],
-        "text": "[Title] [Interpretation/Lower Section/Interpersonal] Interpersonal\n[Definition] Interpersonal gathers the variables that help read how the person imagines, seeks, fears, or organizes contact with other people.\nIn this cluster, the main focus is on COP, AG, a:p, Food, SumT, human content, and interpersonal isolation.",
+        "text": "[Title] [Interpretation/Lower Section/Interpersonal] Interpersonal\n[Definition] Interpersonal gathers the variables that help read how the person imagines, seeks, fears, or organizes contact with other people.\nIn this cluster, the main focus is on COP, AG, GHR:PHR, a:p, Food, SumT, human content, and interpersonal isolation.",
         "aliases": [
           "interpersonal",
           "interpersonal relations",
@@ -40613,6 +40621,7 @@
           "result-interpretation/lower-section",
           "result-interpretation/lower-section/interpersonal/COP",
           "result-interpretation/lower-section/interpersonal/AG",
+          "scoring-input/gphr",
           "result-interpretation/lower-section/interpersonal/a_p_inter",
           "result-interpretation/lower-section/interpersonal/Food",
           "result-interpretation/lower-section/interpersonal/SumT_inter",
@@ -40628,7 +40637,7 @@
         "evidenceTier": null,
         "status": "draft",
         "runtimeReady": true,
-        "contentHash": "c975c37a5bebc2b1102dc1d4cc77c23ad7c509516f4d512013333d46f6036a5b"
+        "contentHash": "8bd964731af44f181d8a63e55315803366f646822dfc4e1d0a88313afb34e28f"
       },
       {
         "locale": "en",
@@ -40638,7 +40647,7 @@
           "[Interpretation/Lower Section/Interpersonal] Interpersonal",
           "Interpretation"
         ],
-        "text": "[Title] [Interpretation/Lower Section/Interpersonal] Interpersonal\n[Interpretation] COP and AG show whether interpersonal scenes are imagined more cooperatively or more conflictually.\n\nSumT\\_inter and Food help estimate needs for closeness, support, or dependency.\n\nHumanCont and PureH show how much human representation is present in the record.\n\nPER and ISO\\_Index add information about self-reference, distance, and social isolation.",
+        "text": "[Title] [Interpretation/Lower Section/Interpersonal] Interpersonal\n[Interpretation] COP and AG show whether interpersonal scenes are imagined more cooperatively or more conflictually.\n\nGHR:PHR is a descriptive frequency ratio of Good Human Representations to Poor Human Representations. It does not by itself establish interpersonal functioning.\n\nSumT\\_inter and Food help estimate needs for closeness, support, or dependency.\n\nHumanCont and PureH show how much human representation is present in the record.\n\nPER and ISO\\_Index add information about self-reference, distance, and social isolation.",
         "aliases": [
           "interpersonal",
           "interpersonal relations",
@@ -40648,6 +40657,7 @@
           "result-interpretation/lower-section",
           "result-interpretation/lower-section/interpersonal/COP",
           "result-interpretation/lower-section/interpersonal/AG",
+          "scoring-input/gphr",
           "result-interpretation/lower-section/interpersonal/a_p_inter",
           "result-interpretation/lower-section/interpersonal/Food",
           "result-interpretation/lower-section/interpersonal/SumT_inter",
@@ -40663,7 +40673,7 @@
         "evidenceTier": null,
         "status": "draft",
         "runtimeReady": true,
-        "contentHash": "a8fa51389ee117890e4aafd5dcbe690c910f026364eeddfbdb043b402d3dd360"
+        "contentHash": "d5e00c0025d37f0b60580a17e8efdb5507422c7f40e3d9b98f96f8f5f147ea85"
       },
       {
         "locale": "en",
@@ -40683,6 +40693,7 @@
           "result-interpretation/lower-section",
           "result-interpretation/lower-section/interpersonal/COP",
           "result-interpretation/lower-section/interpersonal/AG",
+          "scoring-input/gphr",
           "result-interpretation/lower-section/interpersonal/a_p_inter",
           "result-interpretation/lower-section/interpersonal/Food",
           "result-interpretation/lower-section/interpersonal/SumT_inter",
@@ -40718,6 +40729,7 @@
           "result-interpretation/lower-section",
           "result-interpretation/lower-section/interpersonal/COP",
           "result-interpretation/lower-section/interpersonal/AG",
+          "scoring-input/gphr",
           "result-interpretation/lower-section/interpersonal/a_p_inter",
           "result-interpretation/lower-section/interpersonal/Food",
           "result-interpretation/lower-section/interpersonal/SumT_inter",
@@ -40753,6 +40765,7 @@
           "result-interpretation/lower-section",
           "result-interpretation/lower-section/interpersonal/COP",
           "result-interpretation/lower-section/interpersonal/AG",
+          "scoring-input/gphr",
           "result-interpretation/lower-section/interpersonal/a_p_inter",
           "result-interpretation/lower-section/interpersonal/Food",
           "result-interpretation/lower-section/interpersonal/SumT_inter",
@@ -40778,7 +40791,7 @@
           "[Interpretation/Lower Section/Interpersonal] Interpersonal",
           "Cross References"
         ],
-        "text": "[Title] [Interpretation/Lower Section/Interpersonal] Interpersonal\n[Cross References] \\[Interpretation/Lower Section] Lower Section\n\n\\[Interpretation/Interpersonal] COP\n\n\\[Interpretation/Interpersonal] AG\n\n\\[Interpretation/Interpersonal] a:p\n\n\\[Interpretation/Interpersonal] Food\n\n\\[Interpretation/Interpersonal] SumT\n\n\\[Interpretation/Interpersonal] Human Content\n\n\\[Interpretation/Interpersonal] Pure H\n\n\\[Interpretation/Interpersonal] PER\n\n\\[Interpretation/Interpersonal] Isolation Index\n\n\\[Interpretation/Core] SumT\n\n\\[Interpretation/Ideation] a:p\n\n\\[Interpretation/Lower Section/Self Perception] Self Perception",
+        "text": "[Title] [Interpretation/Lower Section/Interpersonal] Interpersonal\n[Cross References] \\[Interpretation/Lower Section] Lower Section\n\n\\[Interpretation/Interpersonal] COP\n\n\\[Interpretation/Interpersonal] AG\n\n\\[Coding/GHR-PHR] GHR/PHR\n\n\\[Interpretation/Interpersonal] a:p\n\n\\[Interpretation/Interpersonal] Food\n\n\\[Interpretation/Interpersonal] SumT\n\n\\[Interpretation/Interpersonal] Human Content\n\n\\[Interpretation/Interpersonal] Pure H\n\n\\[Interpretation/Interpersonal] PER\n\n\\[Interpretation/Interpersonal] Isolation Index\n\n\\[Interpretation/Core] SumT\n\n\\[Interpretation/Ideation] a:p\n\n\\[Interpretation/Lower Section/Self Perception] Self Perception",
         "aliases": [
           "interpersonal",
           "interpersonal relations",
@@ -40788,6 +40801,7 @@
           "result-interpretation/lower-section",
           "result-interpretation/lower-section/interpersonal/COP",
           "result-interpretation/lower-section/interpersonal/AG",
+          "scoring-input/gphr",
           "result-interpretation/lower-section/interpersonal/a_p_inter",
           "result-interpretation/lower-section/interpersonal/Food",
           "result-interpretation/lower-section/interpersonal/SumT_inter",
@@ -40803,7 +40817,7 @@
         "evidenceTier": null,
         "status": "draft",
         "runtimeReady": true,
-        "contentHash": "e0bacda8b0591d723d942e5beea409c5f5035297f1fa2b88b5e237b08dd84e3b"
+        "contentHash": "fa7949046a92bdad03642d8bb8fb542db73f720f6e1ab46a940d9572760bdf36"
       },
       {
         "locale": "en",
@@ -72579,6 +72593,7 @@
           "result-interpretation/lower-section",
           "result-interpretation/lower-section/interpersonal/COP",
           "result-interpretation/lower-section/interpersonal/AG",
+          "scoring-input/gphr",
           "result-interpretation/lower-section/interpersonal/a_p_inter",
           "result-interpretation/lower-section/interpersonal/Food",
           "result-interpretation/lower-section/interpersonal/SumT_inter",
@@ -72604,7 +72619,7 @@
           "[Interpretation/Lower Section/Interpersonal] Interpersonal",
           "中核的定義"
         ],
-        "text": "[Title] [Interpretation/Lower Section/Interpersonal] Interpersonal\n[Definition] Interpersonal は、他者との接触をどのように想像し、求め、恐れ、組織化しているかを読むための変数群です。\nこの領域では主に COP、AG、a:p、Food、SumT、人間内容、対人孤立をみます。",
+        "text": "[Title] [Interpretation/Lower Section/Interpersonal] Interpersonal\n[Definition] Interpersonal は、他者との接触をどのように想像し、求め、恐れ、組織化しているかを読むための変数群です。\nこの領域では主に COP、AG、GHR:PHR、a:p、Food、SumT、人間内容、対人孤立をみます。",
         "aliases": [
           "interpersonal",
           "対人関係",
@@ -72614,6 +72629,7 @@
           "result-interpretation/lower-section",
           "result-interpretation/lower-section/interpersonal/COP",
           "result-interpretation/lower-section/interpersonal/AG",
+          "scoring-input/gphr",
           "result-interpretation/lower-section/interpersonal/a_p_inter",
           "result-interpretation/lower-section/interpersonal/Food",
           "result-interpretation/lower-section/interpersonal/SumT_inter",
@@ -72629,7 +72645,7 @@
         "evidenceTier": null,
         "status": "draft",
         "runtimeReady": true,
-        "contentHash": "baff2afd4d6499cca07c2b63f2d9ee0a1b15a898d3d551afe811dc4d8a69538a"
+        "contentHash": "9415f0c851c116b77b9fc4574bd46b45e6549b4d8d57f8f6699a0c4d9605a459"
       },
       {
         "locale": "ja",
@@ -72639,7 +72655,7 @@
           "[Interpretation/Lower Section/Interpersonal] Interpersonal",
           "解釈の要点"
         ],
-        "text": "[Title] [Interpretation/Lower Section/Interpersonal] Interpersonal\n[Interpretation] COP と AG は、対人場面がより協力的に想像されるか、より衝突的に想像されるかを示します。\n\nSumT\\_inter と Food は、親密さ、支え、依存への欲求を見積もる助けになります。\n\nHumanCont と PureH は、記録の中にどれくらい人間表象が現れているかを示します。\n\nPER と ISO\\_Index は、自己言及、距離、社会的孤立についての情報を補います。",
+        "text": "[Title] [Interpretation/Lower Section/Interpersonal] Interpersonal\n[Interpretation] COP と AG は、対人場面がより協力的に想像されるか、より衝突的に想像されるかを示します。\n\nGHR:PHR は、良好な人間表象と不良な人間表象の頻度を並べて示す記述的な比率です。この比率だけで対人機能を断定しません。\n\nSumT\\_inter と Food は、親密さ、支え、依存への欲求を見積もる助けになります。\n\nHumanCont と PureH は、記録の中にどれくらい人間表象が現れているかを示します。\n\nPER と ISO\\_Index は、自己言及、距離、社会的孤立についての情報を補います。",
         "aliases": [
           "interpersonal",
           "対人関係",
@@ -72649,6 +72665,7 @@
           "result-interpretation/lower-section",
           "result-interpretation/lower-section/interpersonal/COP",
           "result-interpretation/lower-section/interpersonal/AG",
+          "scoring-input/gphr",
           "result-interpretation/lower-section/interpersonal/a_p_inter",
           "result-interpretation/lower-section/interpersonal/Food",
           "result-interpretation/lower-section/interpersonal/SumT_inter",
@@ -72664,7 +72681,7 @@
         "evidenceTier": null,
         "status": "draft",
         "runtimeReady": true,
-        "contentHash": "edef8ec2c0b1c29fc5dbc854922eaa46ea63f83ce35aa52ac068c03e1efd1de9"
+        "contentHash": "fcc585dd331688e8f7ce60f690b64ba43bb05dea9f360ee1e0223bc7e336cd7f"
       },
       {
         "locale": "ja",
@@ -72684,6 +72701,7 @@
           "result-interpretation/lower-section",
           "result-interpretation/lower-section/interpersonal/COP",
           "result-interpretation/lower-section/interpersonal/AG",
+          "scoring-input/gphr",
           "result-interpretation/lower-section/interpersonal/a_p_inter",
           "result-interpretation/lower-section/interpersonal/Food",
           "result-interpretation/lower-section/interpersonal/SumT_inter",
@@ -72719,6 +72737,7 @@
           "result-interpretation/lower-section",
           "result-interpretation/lower-section/interpersonal/COP",
           "result-interpretation/lower-section/interpersonal/AG",
+          "scoring-input/gphr",
           "result-interpretation/lower-section/interpersonal/a_p_inter",
           "result-interpretation/lower-section/interpersonal/Food",
           "result-interpretation/lower-section/interpersonal/SumT_inter",
@@ -72754,6 +72773,7 @@
           "result-interpretation/lower-section",
           "result-interpretation/lower-section/interpersonal/COP",
           "result-interpretation/lower-section/interpersonal/AG",
+          "scoring-input/gphr",
           "result-interpretation/lower-section/interpersonal/a_p_inter",
           "result-interpretation/lower-section/interpersonal/Food",
           "result-interpretation/lower-section/interpersonal/SumT_inter",
@@ -72779,7 +72799,7 @@
           "[Interpretation/Lower Section/Interpersonal] Interpersonal",
           "相互参照"
         ],
-        "text": "[Title] [Interpretation/Lower Section/Interpersonal] Interpersonal\n[Cross References] \\[解釈/下段] 下段\n\n\\[解釈/Interpersonal] COP\n\n\\[解釈/Interpersonal] AG\n\n\\[解釈/Interpersonal] a:p\n\n\\[解釈/Interpersonal] Food\n\n\\[解釈/Interpersonal] SumT\n\n\\[解釈/Interpersonal] 人間内容\n\n\\[解釈/Interpersonal] Pure H\n\n\\[解釈/Interpersonal] PER\n\n\\[解釈/Interpersonal] Isolation Index\n\n\\[解釈/Core] SumT\n\n\\[解釈/Ideation] a:p\n\n\\[解釈/下段/Self Perception] Self Perception",
+        "text": "[Title] [Interpretation/Lower Section/Interpersonal] Interpersonal\n[Cross References] \\[解釈/下段] 下段\n\n\\[解釈/Interpersonal] COP\n\n\\[解釈/Interpersonal] AG\n\n\\[符号化/GHR-PHR] GHR/PHR\n\n\\[解釈/Interpersonal] a:p\n\n\\[解釈/Interpersonal] Food\n\n\\[解釈/Interpersonal] SumT\n\n\\[解釈/Interpersonal] 人間内容\n\n\\[解釈/Interpersonal] Pure H\n\n\\[解釈/Interpersonal] PER\n\n\\[解釈/Interpersonal] Isolation Index\n\n\\[解釈/Core] SumT\n\n\\[解釈/Ideation] a:p\n\n\\[解釈/下段/Self Perception] Self Perception",
         "aliases": [
           "interpersonal",
           "対人関係",
@@ -72789,6 +72809,7 @@
           "result-interpretation/lower-section",
           "result-interpretation/lower-section/interpersonal/COP",
           "result-interpretation/lower-section/interpersonal/AG",
+          "scoring-input/gphr",
           "result-interpretation/lower-section/interpersonal/a_p_inter",
           "result-interpretation/lower-section/interpersonal/Food",
           "result-interpretation/lower-section/interpersonal/SumT_inter",
@@ -72804,7 +72825,7 @@
         "evidenceTier": null,
         "status": "draft",
         "runtimeReady": true,
-        "contentHash": "d5c6e23a4be39e212dfa5a9a367268a1465eb1ba73bf175d56ef766f6f1fce3b"
+        "contentHash": "b9409a347a1e4df65278321f4e06bc3289f1f251b7c7b8368832054b7b6e3791"
       },
       {
         "locale": "ja",
@@ -106848,6 +106869,7 @@
           "result-interpretation/lower-section",
           "result-interpretation/lower-section/interpersonal/COP",
           "result-interpretation/lower-section/interpersonal/AG",
+          "scoring-input/gphr",
           "result-interpretation/lower-section/interpersonal/a_p_inter",
           "result-interpretation/lower-section/interpersonal/Food",
           "result-interpretation/lower-section/interpersonal/SumT_inter",
@@ -106873,7 +106895,7 @@
           "[Interpretación/Lower Section/Interpersonal] Interpersonal",
           "Definición central"
         ],
-        "text": "[Title] [Interpretación/Lower Section/Interpersonal] Interpersonal\n[Definition] Relaciones interpersonales agrupa las variables que ayudan a leer cómo la persona imagina, busca, teme u organiza el contacto con otras personas.\nEn este conjunto se revisan COP, AG, a:p, Food, SumT, el contenido humano y el aislamiento interpersonal.",
+        "text": "[Title] [Interpretación/Lower Section/Interpersonal] Interpersonal\n[Definition] Relaciones interpersonales agrupa las variables que ayudan a leer cómo la persona imagina, busca, teme u organiza el contacto con otras personas.\nEn este conjunto se revisan COP, AG, GHR:PHR, a:p, Food, SumT, el contenido humano y el aislamiento interpersonal.",
         "aliases": [
           "interpersonal",
           "relaciones interpersonales",
@@ -106883,6 +106905,7 @@
           "result-interpretation/lower-section",
           "result-interpretation/lower-section/interpersonal/COP",
           "result-interpretation/lower-section/interpersonal/AG",
+          "scoring-input/gphr",
           "result-interpretation/lower-section/interpersonal/a_p_inter",
           "result-interpretation/lower-section/interpersonal/Food",
           "result-interpretation/lower-section/interpersonal/SumT_inter",
@@ -106898,7 +106921,7 @@
         "evidenceTier": null,
         "status": "draft",
         "runtimeReady": true,
-        "contentHash": "ee7327d13187b1e9f09f8dea0bce0371f303b276856194adff6671b61b3ad098"
+        "contentHash": "4c332f55c573447c64cd8a8fa2f3a4f3857af6ad71126627e02f1a4d3cd91fe3"
       },
       {
         "locale": "es",
@@ -106908,7 +106931,7 @@
           "[Interpretación/Lower Section/Interpersonal] Interpersonal",
           "Puntos de interpretación"
         ],
-        "text": "[Title] [Interpretación/Lower Section/Interpersonal] Interpersonal\n[Interpretation] COP y AG muestran si la escena interpersonal tiende a imaginarse como cooperativa o conflictiva.\n\nSumT\\_inter y Food ayudan a leer necesidades de cercanía, sostén y dependencia.\n\nHumanCont y PureH muestran el peso que tienen las representaciones humanas en el protocolo.\n\nPER e ISO\\_Index agregan información sobre autorreferencia, distancia y aislamiento social.",
+        "text": "[Title] [Interpretación/Lower Section/Interpersonal] Interpersonal\n[Interpretation] COP y AG muestran si la escena interpersonal tiende a imaginarse como cooperativa o conflictiva.\n\nGHR:PHR es una razón descriptiva entre la frecuencia de representaciones humanas adecuadas y deficientes. Por sí sola no permite concluir cómo funciona la persona en sus relaciones.\n\nSumT\\_inter y Food ayudan a leer necesidades de cercanía, sostén y dependencia.\n\nHumanCont y PureH muestran el peso que tienen las representaciones humanas en el protocolo.\n\nPER e ISO\\_Index agregan información sobre autorreferencia, distancia y aislamiento social.",
         "aliases": [
           "interpersonal",
           "relaciones interpersonales",
@@ -106918,6 +106941,7 @@
           "result-interpretation/lower-section",
           "result-interpretation/lower-section/interpersonal/COP",
           "result-interpretation/lower-section/interpersonal/AG",
+          "scoring-input/gphr",
           "result-interpretation/lower-section/interpersonal/a_p_inter",
           "result-interpretation/lower-section/interpersonal/Food",
           "result-interpretation/lower-section/interpersonal/SumT_inter",
@@ -106933,7 +106957,7 @@
         "evidenceTier": null,
         "status": "draft",
         "runtimeReady": true,
-        "contentHash": "9341c9997ff5b0fd0fc17eceddebf143209ca81c992de18151ee2e0764117fc8"
+        "contentHash": "2d21390744a7ed25a8570cb33e9eaef9ed74aa5a9e5f11209ad8e40cda47c931"
       },
       {
         "locale": "es",
@@ -106953,6 +106977,7 @@
           "result-interpretation/lower-section",
           "result-interpretation/lower-section/interpersonal/COP",
           "result-interpretation/lower-section/interpersonal/AG",
+          "scoring-input/gphr",
           "result-interpretation/lower-section/interpersonal/a_p_inter",
           "result-interpretation/lower-section/interpersonal/Food",
           "result-interpretation/lower-section/interpersonal/SumT_inter",
@@ -106988,6 +107013,7 @@
           "result-interpretation/lower-section",
           "result-interpretation/lower-section/interpersonal/COP",
           "result-interpretation/lower-section/interpersonal/AG",
+          "scoring-input/gphr",
           "result-interpretation/lower-section/interpersonal/a_p_inter",
           "result-interpretation/lower-section/interpersonal/Food",
           "result-interpretation/lower-section/interpersonal/SumT_inter",
@@ -107023,6 +107049,7 @@
           "result-interpretation/lower-section",
           "result-interpretation/lower-section/interpersonal/COP",
           "result-interpretation/lower-section/interpersonal/AG",
+          "scoring-input/gphr",
           "result-interpretation/lower-section/interpersonal/a_p_inter",
           "result-interpretation/lower-section/interpersonal/Food",
           "result-interpretation/lower-section/interpersonal/SumT_inter",
@@ -107048,7 +107075,7 @@
           "[Interpretación/Lower Section/Interpersonal] Interpersonal",
           "Referencias cruzadas"
         ],
-        "text": "[Title] [Interpretación/Lower Section/Interpersonal] Interpersonal\n[Cross References] \\[Interpretación/Lower Section] Lower Section\n\n\\[Interpretación/Interpersonal] COP\n\n\\[Interpretación/Interpersonal] AG\n\n\\[Interpretación/Interpersonal] a:p\n\n\\[Interpretación/Interpersonal] Food\n\n\\[Interpretación/Interpersonal] SumT\n\n\\[Interpretación/Interpersonal] Human Content\n\n\\[Interpretación/Interpersonal] Pure H\n\n\\[Interpretación/Interpersonal] PER\n\n\\[Interpretación/Interpersonal] Isolation Index\n\n\\[Interpretación/Core] SumT\n\n\\[Interpretación/Ideación] a:p\n\n\\[Interpretación/Lower Section/Self Perception] Self Perception",
+        "text": "[Title] [Interpretación/Lower Section/Interpersonal] Interpersonal\n[Cross References] \\[Interpretación/Lower Section] Lower Section\n\n\\[Interpretación/Interpersonal] COP\n\n\\[Interpretación/Interpersonal] AG\n\n\\[Codificación/GHR-PHR] GHR/PHR\n\n\\[Interpretación/Interpersonal] a:p\n\n\\[Interpretación/Interpersonal] Food\n\n\\[Interpretación/Interpersonal] SumT\n\n\\[Interpretación/Interpersonal] Human Content\n\n\\[Interpretación/Interpersonal] Pure H\n\n\\[Interpretación/Interpersonal] PER\n\n\\[Interpretación/Interpersonal] Isolation Index\n\n\\[Interpretación/Core] SumT\n\n\\[Interpretación/Ideación] a:p\n\n\\[Interpretación/Lower Section/Self Perception] Self Perception",
         "aliases": [
           "interpersonal",
           "relaciones interpersonales",
@@ -107058,6 +107085,7 @@
           "result-interpretation/lower-section",
           "result-interpretation/lower-section/interpersonal/COP",
           "result-interpretation/lower-section/interpersonal/AG",
+          "scoring-input/gphr",
           "result-interpretation/lower-section/interpersonal/a_p_inter",
           "result-interpretation/lower-section/interpersonal/Food",
           "result-interpretation/lower-section/interpersonal/SumT_inter",
@@ -107073,7 +107101,7 @@
         "evidenceTier": null,
         "status": "draft",
         "runtimeReady": true,
-        "contentHash": "50a677ddc36166656a58c43740166eb71055395f1e1ffc5d64fbe2e5d9aaf4e8"
+        "contentHash": "6b47082c9d394a2bbdf7e3f6211d2ba77cb26584f05320d252588f0700f351d1"
       },
       {
         "locale": "es",
@@ -140181,6 +140209,7 @@
           "result-interpretation/lower-section",
           "result-interpretation/lower-section/interpersonal/COP",
           "result-interpretation/lower-section/interpersonal/AG",
+          "scoring-input/gphr",
           "result-interpretation/lower-section/interpersonal/a_p_inter",
           "result-interpretation/lower-section/interpersonal/Food",
           "result-interpretation/lower-section/interpersonal/SumT_inter",
@@ -140206,7 +140235,7 @@
           "[Interpretação/Seção Inferior/Interpessoal] Interpessoal",
           "Definição central"
         ],
-        "text": "[Title] [Interpretação/Seção Inferior/Interpessoal] Interpessoal\n[Definition] Interpessoal reúne as variáveis que ajudam a ler como a pessoa imagina, procura, teme ou organiza o contato com outras pessoas.\nNeste grupo, o foco principal recai sobre COP, AG, a:p, Food, SumT, conteúdo humano e isolamento interpessoal.",
+        "text": "[Title] [Interpretação/Seção Inferior/Interpessoal] Interpessoal\n[Definition] Interpessoal reúne as variáveis que ajudam a ler como a pessoa imagina, procura, teme ou organiza o contato com outras pessoas.\nNeste grupo, o foco principal recai sobre COP, AG, GHR:PHR, a:p, Food, SumT, conteúdo humano e isolamento interpessoal.",
         "aliases": [
           "interpessoal",
           "relações interpessoais",
@@ -140216,6 +140245,7 @@
           "result-interpretation/lower-section",
           "result-interpretation/lower-section/interpersonal/COP",
           "result-interpretation/lower-section/interpersonal/AG",
+          "scoring-input/gphr",
           "result-interpretation/lower-section/interpersonal/a_p_inter",
           "result-interpretation/lower-section/interpersonal/Food",
           "result-interpretation/lower-section/interpersonal/SumT_inter",
@@ -140231,7 +140261,7 @@
         "evidenceTier": null,
         "status": "draft",
         "runtimeReady": true,
-        "contentHash": "346d6c5867db0730ad7fb79bc91b9429ec7ad9fa052fcd8b0a160ae8dbfd3582"
+        "contentHash": "47d484147af562fa81936bcdc2f325c37cf8260e522123233fcc33f43add5bea"
       },
       {
         "locale": "pt",
@@ -140241,7 +140271,7 @@
           "[Interpretação/Seção Inferior/Interpessoal] Interpessoal",
           "Pontos de interpretação"
         ],
-        "text": "[Title] [Interpretação/Seção Inferior/Interpessoal] Interpessoal\n[Interpretation] COP e AG mostram se as cenas interpessoais são imaginadas de modo mais cooperativo ou mais conflitivo.\n\nSumT\\_inter e Food ajudam a estimar necessidades de proximidade, apoio ou dependência.\n\nHumanCont e PureH mostram quanto peso as representações humanas recebem no protocolo.\n\nPER e ISO\\_Index acrescentam informação sobre autorreferência, distância e isolamento social.",
+        "text": "[Title] [Interpretação/Seção Inferior/Interpessoal] Interpessoal\n[Interpretation] COP e AG mostram se as cenas interpessoais são imaginadas de modo mais cooperativo ou mais conflitivo.\n\nGHR:PHR é uma razão descritiva entre as frequências de representações humanas boas e pobres. Isoladamente, ela não permite concluir como funciona a pessoa em suas relações.\n\nSumT\\_inter e Food ajudam a estimar necessidades de proximidade, apoio ou dependência.\n\nHumanCont e PureH mostram quanto peso as representações humanas recebem no protocolo.\n\nPER e ISO\\_Index acrescentam informação sobre autorreferência, distância e isolamento social.",
         "aliases": [
           "interpessoal",
           "relações interpessoais",
@@ -140251,6 +140281,7 @@
           "result-interpretation/lower-section",
           "result-interpretation/lower-section/interpersonal/COP",
           "result-interpretation/lower-section/interpersonal/AG",
+          "scoring-input/gphr",
           "result-interpretation/lower-section/interpersonal/a_p_inter",
           "result-interpretation/lower-section/interpersonal/Food",
           "result-interpretation/lower-section/interpersonal/SumT_inter",
@@ -140266,7 +140297,7 @@
         "evidenceTier": null,
         "status": "draft",
         "runtimeReady": true,
-        "contentHash": "65a7f5806eee2324064bc74f92e14a3a7ca32168f84289a882f84b2b9930da01"
+        "contentHash": "9ae0dfdda4fbd4ffca7e0b732c22c16377b183edbd740110131246242e6c292f"
       },
       {
         "locale": "pt",
@@ -140286,6 +140317,7 @@
           "result-interpretation/lower-section",
           "result-interpretation/lower-section/interpersonal/COP",
           "result-interpretation/lower-section/interpersonal/AG",
+          "scoring-input/gphr",
           "result-interpretation/lower-section/interpersonal/a_p_inter",
           "result-interpretation/lower-section/interpersonal/Food",
           "result-interpretation/lower-section/interpersonal/SumT_inter",
@@ -140311,7 +140343,7 @@
           "[Interpretação/Seção Inferior/Interpessoal] Interpessoal",
           "Referências cruzadas"
         ],
-        "text": "[Title] [Interpretação/Seção Inferior/Interpessoal] Interpessoal\n[Cross References] \\[Interpretação/Seção Inferior] Seção Inferior\n\n\\[Interpretação/Interpessoal] COP\n\n\\[Interpretação/Interpessoal] AG\n\n\\[Interpretação/Interpessoal] a:p\n\n\\[Interpretação/Interpessoal] Food\n\n\\[Interpretação/Interpessoal] SumT\n\n\\[Interpretação/Interpessoal] Conteúdo Humano\n\n\\[Interpretação/Interpessoal] Pure H\n\n\\[Interpretação/Interpessoal] PER\n\n\\[Interpretação/Interpessoal] Índice de Isolamento\n\n\\[Interpretação/Core] SumT\n\n\\[Interpretação/Ideação] a:p\n\n\\[Interpretação/Seção Inferior/Autopercepção] Autopercepção",
+        "text": "[Title] [Interpretação/Seção Inferior/Interpessoal] Interpessoal\n[Cross References] \\[Interpretação/Seção Inferior] Seção Inferior\n\n\\[Interpretação/Interpessoal] COP\n\n\\[Interpretação/Interpessoal] AG\n\n\\[Codificação/GHR-PHR] GHR/PHR\n\n\\[Interpretação/Interpessoal] a:p\n\n\\[Interpretação/Interpessoal] Food\n\n\\[Interpretação/Interpessoal] SumT\n\n\\[Interpretação/Interpessoal] Conteúdo Humano\n\n\\[Interpretação/Interpessoal] Pure H\n\n\\[Interpretação/Interpessoal] PER\n\n\\[Interpretação/Interpessoal] Índice de Isolamento\n\n\\[Interpretação/Core] SumT\n\n\\[Interpretação/Ideação] a:p\n\n\\[Interpretação/Seção Inferior/Autopercepção] Autopercepção",
         "aliases": [
           "interpessoal",
           "relações interpessoais",
@@ -140321,6 +140353,7 @@
           "result-interpretation/lower-section",
           "result-interpretation/lower-section/interpersonal/COP",
           "result-interpretation/lower-section/interpersonal/AG",
+          "scoring-input/gphr",
           "result-interpretation/lower-section/interpersonal/a_p_inter",
           "result-interpretation/lower-section/interpersonal/Food",
           "result-interpretation/lower-section/interpersonal/SumT_inter",
@@ -140336,7 +140369,7 @@
         "evidenceTier": null,
         "status": "draft",
         "runtimeReady": true,
-        "contentHash": "a9eaedeefcd7101d194fecacd9d50cc4c209f548fa44140cbe46b59ed3ad3f0b"
+        "contentHash": "b349b58f2ab94df6b85deec82503f1eee3f37ba72c5a88d1160ea4abc53a5b4f"
       },
       {
         "locale": "pt",

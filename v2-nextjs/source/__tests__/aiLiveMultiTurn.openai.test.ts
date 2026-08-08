@@ -7,6 +7,7 @@ import {
   appendAiResponsePolicyPrompt,
   createOpenAITextStream,
   getAiPromptProfile,
+  OPENAI_GENERATION_TIMEOUT_MS,
   type AiModelMessage,
   type AiWorkflowMode,
   type OpenAITextStreamUsage,
@@ -278,6 +279,11 @@ const liveFixtures = getAiMultiTurnEvalFixtures()
   .filter((fixture) => (liveEvalIds.size ? liveEvalIds.has(fixture.id) : true))
   .slice(0, liveEvalLimit);
 
+const liveEvalTestTimeoutMs =
+  Math.max(1, ...liveFixtures.map((fixture) => fixture.turns.length)) *
+    OPENAI_GENERATION_TIMEOUT_MS +
+  60_000;
+
 describe.runIf(apiKey && liveFixtures.length > 0)('OpenAI live AI multi-turn harness eval', () => {
   it.each(liveFixtures)(
     'completes multi-turn fixture $id without losing harness boundaries',
@@ -364,7 +370,7 @@ describe.runIf(apiKey && liveFixtures.length > 0)('OpenAI live AI multi-turn har
       }
       expect(contract.passed, contract.issues.map((issue) => issue.message).join('; ')).toBe(true);
     },
-    120_000,
+    liveEvalTestTimeoutMs,
   );
 });
 

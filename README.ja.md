@@ -23,7 +23,9 @@ MOW（モオ）は、ウェブアプリの企画、制作、配布、運用、�
 ## 公開している内容
 
 - [Next.js] 公開ウェブアプリ: [exner.yesucan.co.kr](https://exner.yesucan.co.kr)
-- [Next.js] バージョン2の最新リリース: [v2-nextjs/releases/v2.2.9](./v2-nextjs/releases/v2.2.9/README.ja.md)
+- [Next.js] バージョン2の最新リリース: [v2-nextjs/releases/v2.2.10](./v2-nextjs/releases/v2.2.10/README.ja.md)
+- [Next.js] v2.2.10の文献全数監査と体系境界: [v2-nextjs/methodology/reference-audit-v2.2.10](./v2-nextjs/methodology/reference-audit-v2.2.10/README.ja.md)
+- [Next.js] v2.2.10 Structural Summary原典照合: [v2-nextjs/source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md](./v2-nextjs/source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md)
 - [Next.js] v2.2.2の計算精度再点検: [v2-nextjs/source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md](./v2-nextjs/source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md)
 - [Next.js] v2.2.2のCn説明と5言語でのGPT-5.5実呼び出し検査: [v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md](./v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md)
 - [Next.js] v2.2.0のUI検証: [v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md](./v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md)
@@ -48,6 +50,14 @@ v2.1.xでは、AIアシスタントが回答を最後まで作成するか、質
 - **v2.1.10:** 残っていた日本語の符号認識、広い解釈質問、新規データベース設定の問題を修正しました。
 
 v2.1.8からv2.1.10までの関連作業は、各パッチノートに分けて記録しています。
+
+## v2.2.10
+
+v2.2.10は、画面とPDFのLower Sectionから抜けていた`GHR:PHR`比率を原版のStructural Summary配置に合わせて復元し、PDFの通常Lower Section表とSpecial Indicesの判定表示を整理したバグ修正版です。GHRとPHRの判定・合計はすでに計算されていたため、既存プロトコルを再計算する必要はありません。
+
+今回の修正では、保有資料を53の文献群に整理し、目次と関連章の本文をすべて確認しました。エクスナー包括システムの計算根拠は、Volume 1第4版とWorkbook第5版の印刷ページに基づき、Upper Section、Lower Section、六つのSpecial Indices、主要な入力規則と再照合しました。R-PASや他のロールシャッハ体系は計算根拠に混在させず、似た用語が異なる意味で用いられる箇所を区別するための資料として確認しました。この監査では、計算値を変更する新たな不具合は見つかりませんでした。
+
+五言語のInterpersonal参照文書と検索ベクトル5604件を更新し、他体系の質問やプロンプト抽出の試みをエクスナー包括システムの質問と区別する検査も拡充しました。文献名、版、印刷ページ、各資料の役割、残る限界は、[v2.2.10パッチノート](./v2-nextjs/releases/v2.2.10/README.ja.md)、[全53文献群監査と体系境界](./v2-nextjs/methodology/reference-audit-v2.2.10/README.ja.md)、[Structural Summary原典照合記録](./v2-nextjs/source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md)にまとめています。
 
 ## v2.2.9
 
@@ -113,6 +123,7 @@ GPT-5.5アシスタントがエクスナー包括システム以外へ回答範�
 
 ## [Next.js] バージョン2リリース記録
 
+- **[2026-08-08] v2.2.10（バグ修正）** [パッチノート](./v2-nextjs/releases/v2.2.10/README.ja.md) [ソースコード](./v2-nextjs/source/)
 - **[2026-08-01] v2.2.9（バグ修正）** [パッチノート](./v2-nextjs/releases/v2.2.9/README.ja.md) [ソースコード](./v2-nextjs/source/)
 - **[2026-07-31] v2.2.8（バグ修正）** [パッチノート](./v2-nextjs/releases/v2.2.8/README.ja.md) [ソースコード](./v2-nextjs/source/)
 - **[2026-07-23] v2.2.7（バグ修正）** [パッチノート](./v2-nextjs/releases/v2.2.7/README.ja.md) [ソースコード](./v2-nextjs/source/)

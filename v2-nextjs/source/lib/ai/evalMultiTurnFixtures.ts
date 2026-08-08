@@ -1,6 +1,7 @@
 import type { AiEvalExpectationTag } from '@/lib/ai/evalFixtures';
 import type { AiWorkflowMode } from '@/lib/ai/harness';
 import type { Language } from '@/types';
+import { V2210_DOMAIN_BOUNDARY_MULTITURN_FIXTURES } from '@/lib/ai/evalDomainBoundaryFixtures';
 
 export type AiMultiTurnEvalTurn = {
   id: string;
@@ -671,6 +672,7 @@ export const AI_MULTI_TURN_EVAL_FIXTURES: AiMultiTurnEvalFixture[] = [
       },
     ],
   },
+  ...V2210_DOMAIN_BOUNDARY_MULTITURN_FIXTURES,
 ];
 
 export function getAiMultiTurnEvalFixtures(workflowMode?: AiWorkflowMode) {

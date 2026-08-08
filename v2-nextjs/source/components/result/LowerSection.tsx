@@ -7,6 +7,8 @@ interface SpecialIndicesData {
   SCON?: string;
   HVI?: string;
   OBS?: string;
+  GHR?: number;
+  PHR?: number;
   [key: string]: unknown;
 }
 
@@ -232,6 +234,12 @@ export default function LowerSection({ data, specialIndices, printMode = false }
           <tbody>
             <Row label="COP" value={data.COP} thClass={thClass} tdClass={tdClass} />
             <Row label="AG" value={data.AG} thClass={thClass} tdClass={tdClass} />
+            <Row
+              label="GHR : PHR"
+              value={`${specialIndices?.GHR ?? 0} : ${specialIndices?.PHR ?? 0}`}
+              thClass={thClass}
+              tdClass={tdClass}
+            />
             <Row label="a : p" value={data.a_p_inter} thClass={thClass} tdClass={tdClass} />
             <Row label="Food" value={data.Food} thClass={thClass} tdClass={tdClass} />
             <Row label="SumT" value={data.SumT_inter} thClass={thClass} tdClass={tdClass} />

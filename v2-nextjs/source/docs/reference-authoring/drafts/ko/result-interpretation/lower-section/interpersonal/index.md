@@ -12,6 +12,7 @@ relatedRoutes:
   - "result-interpretation/lower-section"
   - "result-interpretation/lower-section/interpersonal/COP"
   - "result-interpretation/lower-section/interpersonal/AG"
+  - "scoring-input/gphr"
   - "result-interpretation/lower-section/interpersonal/a_p_inter"
   - "result-interpretation/lower-section/interpersonal/Food"
   - "result-interpretation/lower-section/interpersonal/SumT_inter"
@@ -37,11 +38,12 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 
 ## 핵심 정의
 
-`Interpersonal`은 구조요약에서 사람이 다른 사람을 얼마나 찾고, 얼마나 가깝게 지내고 싶어 하며, 관계를 협동적으로 보는지 아니면 공격적이고 멀어진 것으로 보는지를 읽는 묶음이다. 이 묶음은 `COP`, `AG`, `a:p`, `Food`, `SumT`, 인간 내용, 고립지수 같은 변수를 함께 본다.
+`Interpersonal`은 구조요약에서 사람이 다른 사람을 얼마나 찾고, 얼마나 가깝게 지내고 싶어 하며, 관계를 협동적으로 보는지 아니면 공격적이고 멀어진 것으로 보는지를 읽는 묶음이다. 이 묶음은 `COP`, `AG`, `GHR:PHR`, `a:p`, `Food`, `SumT`, 인간 내용, 고립지수 같은 변수를 함께 본다.
 
 ## 해석 포인트
 
 - `COP`와 `AG`는 사람 사이의 상호작용을 협동적으로 예상하는지, 갈등적으로 예상하는지의 방향을 보여 준다.
+- `GHR:PHR`은 좋은 인간표상과 빈약한 인간표상의 빈도를 나란히 보여 주는 기술적 비율이다. 이 비율만으로 대인관계 기능을 단정하지 않는다.
 - `SumT_inter`와 `Food`는 친밀감 욕구나 의존 욕구가 관계 장면에서 얼마나 활성화되어 있는지 읽을 때 중요하다.
 - `HumanCont`와 `PureH`는 사람에 대한 관심의 양과, 사람 개념이 실제 경험에 더 가까운지 상상에 더 기대는지의 차이를 보여 준다.
 - `PER`는 대인 장면을 볼 때 자기 기준과 자기 경험을 얼마나 강하게 끌어오는지 알려 준다.
@@ -71,6 +73,7 @@ provenanceNote: "docs/reference-authoring/notes/provenance/ko/result-interpretat
 - [\[해석/Lower Section\] Lower Section](ref://result-interpretation/lower-section)
 - [\[해석/Interpersonal\] COP](ref://result-interpretation/lower-section/interpersonal/COP)
 - [\[해석/Interpersonal\] AG](ref://result-interpretation/lower-section/interpersonal/AG)
+- [\[부호화/GHR-PHR\] GHR/PHR](ref://scoring-input/gphr)
 - [\[해석/Interpersonal\] a:p](ref://result-interpretation/lower-section/interpersonal/a_p_inter)
 - [\[해석/Interpersonal\] Food](ref://result-interpretation/lower-section/interpersonal/Food)
 - [\[해석/Interpersonal\] SumT](ref://result-interpretation/lower-section/interpersonal/SumT_inter)

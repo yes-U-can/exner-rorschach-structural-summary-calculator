@@ -211,6 +211,35 @@ describe('Comprehensive System calculation conformance', () => {
     expect(result.data?.special_indices.cdi_criteria.c3).toBe(false);
   });
 
+  it('uses the operational PTI high-R WSum6 boundary from the Workbook and RIAP', () => {
+    const atBoundary = Array.from({ length: 17 }, (_, index) => makeResponse(index));
+    atBoundary[0] = makeResponse(0, { specialScores: ['CONTAM'] });
+    atBoundary[1] = makeResponse(1, { specialScores: ['ALOG'] });
+    atBoundary[2] = makeResponse(2, { specialScores: ['FABCOM1'] });
+    atBoundary[3] = makeResponse(3, { specialScores: ['DV1'] });
+
+    const aboveBoundary = atBoundary.map((response, index) => (
+      index === 3 ? makeResponse(index, { specialScores: ['DV2'] }) : response
+    ));
+
+    const atBoundaryResult = calculateStructuralSummary(atBoundary);
+    const aboveBoundaryResult = calculateStructuralSummary(aboveBoundary);
+
+    expect(atBoundaryResult.success).toBe(true);
+    expect(atBoundaryResult.data?.lower_section).toMatchObject({
+      R: 17,
+      WSum6_ideation: 17,
+    });
+    expect(atBoundaryResult.data?.special_indices.pti_criteria.c4).toBe(false);
+
+    expect(aboveBoundaryResult.success).toBe(true);
+    expect(aboveBoundaryResult.data?.lower_section).toMatchObject({
+      R: 17,
+      WSum6_ideation: 18,
+    });
+    expect(aboveBoundaryResult.data?.special_indices.pti_criteria.c4).toBe(true);
+  });
+
   it('uses the HVI Zd boundary strictly above 3.5', () => {
     const atBoundary = calculateStructuralSummary([
       makeResponse(0, { card: 'I', location: 'W', z: 'ZW' }),

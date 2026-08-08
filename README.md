@@ -23,7 +23,9 @@ MOW(모오)는 웹앱의 기획, 제작, 배포, 운영, 유지보수를 맡습�
 ## 현재 공개된 항목
 
 - [Next.js] 라이브 웹앱: [exner.yesucan.co.kr](https://exner.yesucan.co.kr)
-- [Next.js] 버전 2 최신 릴리즈: [v2-nextjs/releases/v2.2.9](./v2-nextjs/releases/v2.2.9/)
+- [Next.js] 버전 2 최신 릴리즈: [v2-nextjs/releases/v2.2.10](./v2-nextjs/releases/v2.2.10/)
+- [Next.js] v2.2.10 문헌 전수감사와 체계 경계: [v2-nextjs/methodology/reference-audit-v2.2.10](./v2-nextjs/methodology/reference-audit-v2.2.10/)
+- [Next.js] v2.2.10 구조요약 원전 교차검증: [v2-nextjs/source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md](./v2-nextjs/source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md)
 - [Next.js] v2.2.2 계산 정확성 검산: [v2-nextjs/source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md](./v2-nextjs/source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md)
 - [Next.js] v2.2.2 Cn 설명·5개 언어 실제 GPT-5.5 호출 검사: [v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md](./v2-nextjs/source/docs/ai-evals/2026-07-17-v2.2.2-live-eval-report.md)
 - [Next.js] v2.2.0 UI 검증: [v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md](./v2-nextjs/source/docs/ops/2026-07-14-v2.2.0-workspace-shell-validation.md)
@@ -48,6 +50,14 @@ v2.1.x에서는 AI 도우미가 답변을 끝까지 작성하는지, 질문에 �
 - **v2.1.10:** 앞선 검색 개선 뒤에 남아 있던 일본어 부호 인식, 넓은 해석 질문, 새 데이터베이스 설치 문제를 수정했습니다.
 
 v2.1.8-v2.1.10에서 이어진 내용은 각 패치노트에 나누어 기록했습니다.
+
+## v2.2.10
+
+v2.2.10은 Lower Section 화면과 PDF에 빠져 있던 `GHR:PHR` 비율을 원전의 구조요약 배치에 맞춰 복원하고, PDF의 일반 Lower Section 표와 Special Indices 판정 표시를 정리한 버그 패치입니다. GHR와 PHR의 판정과 합계는 이미 계산되고 있었으므로 기존 프로토콜을 다시 계산할 필요는 없습니다.
+
+이번 패치에서는 보유 자료를 53개 문헌군으로 정리하여 본문과 목차를 모두 확인했습니다. Exner 종합체계의 계산 근거는 Volume 1 제4판과 Workbook 제5판의 인쇄 쪽수를 기준으로 Upper Section, Lower Section, 여섯 Special Indices 및 주요 입력 규칙과 다시 대조했습니다. R-PAS와 그 밖의 로르샤흐 체계는 계산 근거에 섞지 않고, 같은 용어가 다른 뜻으로 사용되는 지점을 구분하는 자료로 검토했습니다. 이 과정에서 계산값을 바꿔야 할 새로운 결함은 발견되지 않았습니다.
+
+다섯 언어의 Interpersonal 참조 문서와 검색 벡터 5604개를 갱신하고, 다른 체계의 질문이나 프롬프트 탈취 시도를 Exner 종합체계 답변과 구분하는 검사도 보강했습니다. 문헌명, 판, 인쇄 쪽수, 자료별 역할과 남은 한계는 [v2.2.10 패치노트](./v2-nextjs/releases/v2.2.10/), [53개 문헌 전수감사와 체계 경계](./v2-nextjs/methodology/reference-audit-v2.2.10/), [구조요약 원전 교차검증 기록](./v2-nextjs/source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md)에서 확인할 수 있습니다.
 
 ## v2.2.9
 
@@ -113,6 +123,7 @@ GPT-5.5 도우미는 Exner 종합체계 밖의 질문에 답변 범위를 넓히
 
 ## [Next.js] 버전 2 릴리즈 기록
 
+- **[2026-08-08] v2.2.10 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.2.10/) [소스코드](./v2-nextjs/source/)
 - **[2026-08-01] v2.2.9 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.2.9/) [소스코드](./v2-nextjs/source/)
 - **[2026-07-31] v2.2.8 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.2.8/) [소스코드](./v2-nextjs/source/)
 - **[2026-07-23] v2.2.7 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.2.7/) [소스코드](./v2-nextjs/source/)

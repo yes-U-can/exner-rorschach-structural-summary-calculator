@@ -21,6 +21,18 @@ const v2SourceUrl = `${exhibitionRepoUrl}/tree/main/v2-nextjs/source`;
 
 export const v2NextVersions: VersionArchiveEntry[] = [
   {
+    version: 'v2.2.10',
+    title: 'Version 2.2.10',
+    series: 'v2-nextjs',
+    publishedAt: '2026-08-08',
+    releaseKind: 'bugfix',
+    releaseLabel: '버그 패치',
+    summary:
+      'Lower Section 화면과 PDF에 빠져 있던 GHR:PHR 비율을 원전의 구조요약 배치에 맞춰 복원하고, PDF의 일반 Lower Section 표와 Special Indices 판정 표시를 정리했습니다. 다섯 언어 Interpersonal 참조 문서, 검색 벡터와 GPT-5.5 경계 답변도 같은 범위로 다시 확인했습니다. 계산식은 변경하지 않았습니다.',
+    sourceUrl: v2SourceUrl,
+    releaseUrl: v2ReleaseUrl('v2.2.10'),
+  },
+  {
     version: 'v2.2.9',
     title: 'Version 2.2.9',
     series: 'v2-nextjs',

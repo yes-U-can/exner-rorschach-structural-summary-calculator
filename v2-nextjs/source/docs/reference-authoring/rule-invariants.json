@@ -1,5 +1,5 @@
 {
-  "version": "2026-08-01-multiselect-boundaries-v2",
+  "version": "2026-08-04-calculation-source-crosscheck-v3",
   "description": "Locale-independent clinical-rule invariants. Every rule statement listed here must be asserted by all five locale drafts of the referenced routes, so a rule fix can never land in a subset of locales again. Patterns are JavaScript regular expressions matched against the raw draft markdown.",
   "locales": ["ko", "en", "ja", "es", "pt"],
   "invariants": [
@@ -215,6 +215,19 @@
         "ja": ["混ぜて扱いません"],
         "es": ["no se combina con"],
         "pt": ["não deve ser misturado com"]
+      }
+    },
+    {
+      "id": "lower-interpersonal-includes-ghr-phr-ratio",
+      "description": "The Lower Section Interpersonal overview includes GHR:PHR as a descriptive frequency ratio and does not treat it as a stand-alone conclusion.",
+      "paths": ["result-interpretation/lower-section/interpersonal/index.md"],
+      "allLocalesMustMatch": ["`GHR:PHR`"],
+      "mustMatch": {
+        "ko": ["기술적 비율", "이 비율만으로.*단정하지 않는다"],
+        "en": ["descriptive frequency ratio", "does not by itself establish"],
+        "ja": ["記述的な比率", "この比率だけで.*断定しません"],
+        "es": ["razón descriptiva", "Por sí sola no permite concluir"],
+        "pt": ["razão descritiva", "Isoladamente.*não permite concluir"]
       }
     },
     {

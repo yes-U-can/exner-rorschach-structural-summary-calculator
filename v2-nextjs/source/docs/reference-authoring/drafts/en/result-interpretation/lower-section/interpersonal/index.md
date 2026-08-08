@@ -12,6 +12,7 @@ relatedRoutes:
   - "result-interpretation/lower-section"
   - "result-interpretation/lower-section/interpersonal/COP"
   - "result-interpretation/lower-section/interpersonal/AG"
+  - "scoring-input/gphr"
   - "result-interpretation/lower-section/interpersonal/a_p_inter"
   - "result-interpretation/lower-section/interpersonal/Food"
   - "result-interpretation/lower-section/interpersonal/SumT_inter"
@@ -38,11 +39,12 @@ provenanceNote: "docs/reference-authoring/notes/corpus-review-ledger.md"
 ## Core Definition
 
 `Interpersonal` gathers the variables that help read how the person imagines, seeks, fears, or organizes contact with other people.
-In this cluster, the main focus is on `COP`, `AG`, `a:p`, `Food`, `SumT`, human content, and interpersonal isolation.
+In this cluster, the main focus is on `COP`, `AG`, `GHR:PHR`, `a:p`, `Food`, `SumT`, human content, and interpersonal isolation.
 
 ## Interpretation Points
 
 - `COP` and `AG` show whether interpersonal scenes are imagined more cooperatively or more conflictually.
+- `GHR:PHR` is a descriptive frequency ratio of Good Human Representations to Poor Human Representations. It does not by itself establish interpersonal functioning.
 - `SumT_inter` and `Food` help estimate needs for closeness, support, or dependency.
 - `HumanCont` and `PureH` show how much human representation is present in the record.
 - `PER` and `ISO_Index` add information about self-reference, distance, and social isolation.
@@ -71,6 +73,7 @@ In this cluster, the main focus is on `COP`, `AG`, `a:p`, `Food`, `SumT`, human 
 - [[Interpretation/Lower Section] Lower Section](ref://result-interpretation/lower-section)
 - [[Interpretation/Interpersonal] COP](ref://result-interpretation/lower-section/interpersonal/COP)
 - [[Interpretation/Interpersonal] AG](ref://result-interpretation/lower-section/interpersonal/AG)
+- [[Coding/GHR-PHR] GHR/PHR](ref://scoring-input/gphr)
 - [[Interpretation/Interpersonal] a:p](ref://result-interpretation/lower-section/interpersonal/a_p_inter)
 - [[Interpretation/Interpersonal] Food](ref://result-interpretation/lower-section/interpersonal/Food)
 - [[Interpretation/Interpersonal] SumT](ref://result-interpretation/lower-section/interpersonal/SumT_inter)
