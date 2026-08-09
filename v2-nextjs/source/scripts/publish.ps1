@@ -16,6 +16,7 @@ $ErrorActionPreference = "Stop"
 $sourceRoot = (Resolve-Path ".").Path
 $privateReferencePolicy = @('curated', 'internal', 'reference') -join '-'
 $publicReferencePolicy = 'curated-reference'
+$internalAiGuidanceMarker = '[' + (@('AI', 'Usage', 'Guideline') -join ' ') + ']'
 
 function Assert-NativeCommandSucceeded {
   param(
@@ -412,6 +413,7 @@ function Assert-NoReaderFacingProductionNarrative {
   $readerFiles = @($readerFiles | Sort-Object -Property FullName -Unique)
 
   $patterns = @(
+    [regex]::Escape($internalAiGuidanceMarker),
     'Codex',
     'Claude',
     'worktree',
@@ -576,6 +578,7 @@ function Assert-NoPublicAuthoringMetadata {
     'notes/corpus-review-ledger\.md',
     'docs/reference-authoring/notes',
     [regex]::Escape($privateReferencePolicy),
+    [regex]::Escape($internalAiGuidanceMarker),
     '^##\s+(?:Evidence Note|\uADFC\uAC70 \uBA54\uBAA8|\u6839\u62E0\u30E1\u30E2|Nota de base|Nota de fundamento)\s*$',
     '\[Corpus Governance\]',
     'reviewed internally',

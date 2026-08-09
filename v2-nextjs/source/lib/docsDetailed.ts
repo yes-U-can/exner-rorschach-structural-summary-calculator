@@ -1368,31 +1368,31 @@ function wrapScoringDoc(lang: Language, code: string, categoryId: string, core: 
     en: [
       '[Input Constraints In This App] Apply mutual exclusion, determinant-priority, and auto-rule constraints implemented in calculator logic before final lock.',
       `[Interpretation Relevance] ${relevance}`,
-      '[AI Usage Guideline] Use conservative wording: describe coding evidence and probable implications; avoid diagnosis-level conclusions from single codes.',
+      '[Interpretation Guidance] Use conservative wording: describe coding evidence and probable implications; avoid diagnosis-level conclusions from single codes.',
       '[Clinical Caution] Confidence depends on explicit inquiry evidence and reliable coding.',
     ],
     ko: [
       '[Input Constraints In This App] 최종 확정 전에 상호배제, 결정인 우선순위, 앱 자동 규칙을 모두 적용합니다.',
       `[Interpretation Relevance] ${relevance}`,
-      '[AI Usage Guideline] 보수적 표현을 사용합니다. 단일 코드만으로 진단 수준 결론을 내리지 않습니다.',
+      '[해석 지침] 보수적 표현을 사용합니다. 단일 코드만으로 진단 수준 결론을 내리지 않습니다.',
       '[임상적 유의사항] 신뢰도는 명확한 탐문 근거와 채점 신뢰도에 따라 달라집니다.',
     ],
     ja: [
       '[Input Constraints In This App] Apply mutual exclusion, determinant-priority, and auto-rule constraints implemented in calculator logic before final lock.',
       `[Interpretation Relevance] ${relevance}`,
-      '[AI Usage Guideline] Use conservative wording: describe coding evidence and probable implications; avoid diagnosis-level conclusions from single codes.',
+      '[解釈の指針] Use conservative wording: describe coding evidence and probable implications; avoid diagnosis-level conclusions from single codes.',
       '[臨床上の注意] 信頼度は、明確な照会根拠と採点の信頼性に左右されます。',
     ],
     es: [
       '[Input Constraints In This App] Aplique exclusion mutua, prioridad jerarquica y reglas automaticas de la app antes del cierre.',
       `[Interpretation Relevance] ${relevance}`,
-      '[AI Usage Guideline] Use lenguaje prudente: "puede indicar", "es consistente con"; evite afirmaciones diagnosticas de un solo codigo.',
+      '[Orientación interpretativa] Use lenguaje prudente: "puede indicar", "es consistente con"; evite afirmaciones diagnosticas de un solo codigo.',
       '[Precaución clínica] La confianza depende de evidencia explícita y una codificación fiable.',
     ],
     pt: [
       '[Input Constraints In This App] Aplique exclusao mutua, prioridade hierarquica e regras automaticas do app antes do fechamento.',
       `[Interpretation Relevance] ${relevance}`,
-      '[AI Usage Guideline] Use linguagem prudente: "pode indicar", "e consistente com"; evite conclusoes diagnosticas por codigo isolado.',
+      '[Orientação interpretativa] Use linguagem prudente: "pode indicar", "e consistente com"; evite conclusoes diagnosticas por codigo isolado.',
       '[Cautela clínica] A confiança depende de evidência explícita e codificação confiável.',
     ],
   };
@@ -1553,7 +1553,7 @@ function resultEntryText(title: string, base: string, section: string, lang: Lan
       '[Interpretive Preconditions] Check protocol adequacy (R length, coding confidence, inquiry quality) before interpreting extremes.',
       `[Cross-Checks] ${checks[0]} ${checks[1]}`,
       '[Common Misreading Guard] Do not infer traits or diagnosis from a single variable; treat isolated elevations as hypotheses requiring convergence.',
-      '[AI Usage Guideline] Preferred wording: "may indicate", "is consistent with", "should be interpreted with". Avoid deterministic claims.',
+      '[Interpretation Guidance] Preferred wording: "may indicate", "is consistent with", "should be interpreted with". Avoid deterministic claims.',
       '[Clinical Caution] Confidence depends on protocol adequacy and coding reliability.',
     ].join('\n\n'),
     ko: [
@@ -1561,7 +1561,7 @@ function resultEntryText(title: string, base: string, section: string, lang: Lan
       `[Reading Logic] Evaluate level, direction, and stability of the indicator across the protocol.`,
       `[Cross-Variable Rule] Confirm convergence with neighboring variables before concluding.`,
       `[Clinical Caution] This supports structured hypothesis building and does not replace full clinical judgment.`,
-      '[AI Usage Guideline] Use conservative wording and avoid deterministic one-variable conclusions.',
+      '[해석 지침] Use conservative wording and avoid deterministic one-variable conclusions.',
       '[임상적 유의사항] 신뢰도는 프로토콜의 적절성과 채점 신뢰도에 따라 달라집니다.',
     ].join('\n\n'),
     ja: [
@@ -1569,7 +1569,7 @@ function resultEntryText(title: string, base: string, section: string, lang: Lan
       `[Reading Logic] Evaluate level, direction, and stability of the indicator across the protocol.`,
       `[Cross-Variable Rule] Confirm convergence with neighboring variables before concluding.`,
       `[Clinical Caution] This supports structured hypothesis building and does not replace full clinical judgment.`,
-      '[AI Usage Guideline] Use conservative wording and avoid deterministic one-variable conclusions.',
+      '[解釈の指針] Use conservative wording and avoid deterministic one-variable conclusions.',
       '[臨床上の注意] 信頼度は、プロトコルの妥当性と採点の信頼性に左右されます。',
     ].join('\n\n'),
     es: [
@@ -1577,7 +1577,7 @@ function resultEntryText(title: string, base: string, section: string, lang: Lan
       `[Logica de Lectura] Evalua nivel, direccion y estabilidad del indicador a lo largo del protocolo.`,
       `[Regla de Variables Cruzadas] Verifique convergencia con variables vecinas antes de concluir.`,
       `[Cautela Clinica] Es apoyo estructurado y no sustituye el juicio clinico integral.`,
-      '[AI Usage Guideline] Use lenguaje prudente: "puede indicar", "es consistente con"; evite afirmaciones deterministas.',
+      '[Orientación interpretativa] Use lenguaje prudente: "puede indicar", "es consistente con"; evite afirmaciones deterministas.',
       '[Precaución clínica] La confianza depende de la suficiencia del protocolo y una codificación fiable.',
     ].join('\n\n'),
     pt: [
@@ -1585,7 +1585,7 @@ function resultEntryText(title: string, base: string, section: string, lang: Lan
       `[Logica de Leitura] Avalie nivel, direcao e estabilidade do indicador ao longo do protocolo.`,
       `[Regra de Variaveis Cruzadas] Confirme convergencia com variaveis vizinhas antes de concluir.`,
       `[Cautela Clinica] E suporte estruturado e nao substitui julgamento clinico integral.`,
-      '[AI Usage Guideline] Use linguagem prudente: "pode indicar", "e consistente com"; evite afirmacoes deterministas.',
+      '[Orientação interpretativa] Use linguagem prudente: "pode indicar", "e consistente com"; evite afirmacoes deterministas.',
       '[Cautela clínica] A confiança depende da adequação do protocolo e da codificação confiável.',
     ].join('\n\n'),
   };
@@ -1601,7 +1601,7 @@ function categoryText(title: string, lang: Language): string {
       '[Workflow] Recommended order: transcript fidelity -> inquiry clarification -> candidate code selection -> hierarchy/exclusion check -> protocol integration.',
       '[Reliability Focus] Re-check card context, determinant priority, and inter-rater defensibility before finalizing code-level decisions.',
       '[Interpretation Guardrail] Category-level reading must be based on pattern convergence, not isolated striking responses.',
-      '[AI Usage Guideline] Use this domain as reference knowledge for grounded explanation; separate scoring evidence from clinical hypothesis language.',
+      '[Interpretation Guidance] Use this domain as reference knowledge for grounded explanation; separate scoring evidence from clinical hypothesis language.',
     ].join('\n\n'),
     ko: [
       `[Overview] ${title} is a major coding and interpretation domain in Exner's Structural Summary.`,

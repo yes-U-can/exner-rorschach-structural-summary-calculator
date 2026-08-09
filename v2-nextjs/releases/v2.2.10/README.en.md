@@ -2,6 +2,8 @@
 
 [한국어](./README.md) | [English](./README.en.md) | [日本語](./README.ja.md) | [Español](./README.es.md) | [Português (Brasil)](./README.pt-BR.md)
 
+> **2026-08-09 documentation correction:** The public release notes and source archive now contain the same corrected content. Product behavior and calculation results are unchanged.
+
 ## This release
 
 v2.2.10 keeps the Structural Summary calculations unchanged, restores the missing `GHR:PHR` display on the result screen and in the PDF, and improves PDF readability.

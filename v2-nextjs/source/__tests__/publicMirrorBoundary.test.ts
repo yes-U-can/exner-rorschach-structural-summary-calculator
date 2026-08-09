@@ -6,6 +6,12 @@ import { describe, expect, it } from 'vitest';
 describe('public mirror privacy boundary', () => {
   it('excludes and purges private corpus working material', () => {
     const script = fs.readFileSync(path.join(process.cwd(), 'scripts', 'publish.ps1'), 'utf8');
+    const internalGuidanceGuard = '[regex]::Escape($internalAiGuidanceMarker)';
+    const readerFacingGuard = script.slice(
+      script.indexOf('function Assert-NoReaderFacingProductionNarrative'),
+      script.indexOf('function Remove-PublicAuthoringMetadata'),
+    );
+    const authoringGuard = script.slice(script.indexOf('function Assert-NoPublicAuthoringMetadata'));
 
     expect(script).toContain('docs\\reference-authoring\\incoming');
     expect(script).toContain('docs\\reference-authoring\\notes');
@@ -33,6 +39,8 @@ describe('public mirror privacy boundary', () => {
     expect(script).toContain('Assert-NoPublicGitMetadata');
     expect(script).toContain('Assert-NoPublicAuthoringMetadata');
     expect(script).toContain('Assert-NoReaderFacingProductionNarrative');
+    expect(readerFacingGuard).toContain(internalGuidanceGuard);
+    expect(authoringGuard).toContain(internalGuidanceGuard);
     expect(script).toContain('-Recurse -Force');
     expect(script).toContain('$sanitizedLines = @(foreach');
     expect(script).toContain('ConvertTo-Json -InputObject @($record)');

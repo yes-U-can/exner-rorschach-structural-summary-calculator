@@ -1,8 +1,16 @@
+import { readFileSync } from 'node:fs';
+import path from 'node:path';
+
 import { describe, expect, it } from 'vitest';
 
 import { getAllDocRoutes, resolveDocContent } from '@/lib/referenceDocs';
 
 describe('docs structured signals', () => {
+  const internalMarkers = [
+    `[${['Corpus', 'Governance'].join(' ')}]`,
+    `[${['AI', 'Usage', 'Guideline'].join(' ')}]`,
+  ];
+
   it('keeps reader-facing interpretation signals without exposing internal governance markers', () => {
     const entryRoutes = getAllDocRoutes().filter((item) => item.kind === 'entry');
     const languages = ['en', 'es', 'pt', 'ja'] as const;
@@ -31,12 +39,21 @@ describe('docs structured signals', () => {
           failures.push({ id: route.id, slug: route.slug.join('/'), lang, reason: 'missing_reader_caution' });
         }
 
-        if (description.includes('[Corpus Governance]') || description.includes('[AI Usage Guideline]')) {
+        if (internalMarkers.some((marker) => description.includes(marker))) {
           failures.push({ id: route.id, slug: route.slug.join('/'), lang, reason: 'internal_marker_exposed' });
         }
       }
     }
 
     expect(failures).toEqual([]);
+  });
+
+  it('keeps internal guidance markers out of the public source copy', () => {
+    const source = readFileSync(path.join(process.cwd(), 'lib', 'docsDetailed.ts'), 'utf8');
+
+    for (const marker of internalMarkers) {
+      expect(source).not.toContain(marker);
+    }
+    expect(source).toContain('[Interpretation Guidance]');
   });
 });

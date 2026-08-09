@@ -2,6 +2,8 @@
 
 [한국어](./README.md) | [English](./README.en.md) | [日本語](./README.ja.md) | [Español](./README.es.md) | [Português (Brasil)](./README.pt-BR.md)
 
+> **Correção de documentação de 2026-08-09:** As notas públicas da versão e o arquivo do código-fonte agora contêm o mesmo conteúdo corrigido. O funcionamento do produto e os resultados dos cálculos não foram alterados.
+
 ## Esta versão
 
 v2.2.10 mantém inalterados os cálculos do Resumo Estrutural, restaura `GHR:PHR` na tela de resultados e no PDF e melhora a legibilidade do PDF.
