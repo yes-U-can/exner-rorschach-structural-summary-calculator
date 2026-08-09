@@ -2,7 +2,7 @@
 
 import { useMemo, useState, type ReactNode } from 'react';
 import { ArrowsUpDownIcon, ChevronDownIcon, InformationCircleIcon } from '@heroicons/react/24/outline';
-import type { ReleaseKind, VersionArchiveEntry } from '@/lib/versionArchive';
+import { sortVersionArchiveEntries, type ReleaseKind, type VersionArchiveEntry } from '@/lib/versionArchive';
 import Tooltip from '@/components/ui/Tooltip';
 import { useTranslation } from '@/hooks/useTranslation';
 
@@ -26,14 +26,6 @@ function formatDate(value: string | null, unpublishedDate: string) {
 
 function buildSummary(entry: VersionArchiveEntry, labels: VersionArchiveLabels) {
   return `[${formatDate(entry.publishedAt, labels.unpublishedDate)}] ${entry.version} (${labels.releaseKinds[entry.releaseKind]})`;
-}
-
-function sortVersions(entries: VersionArchiveEntry[], sortOrder: SortOrder) {
-  return [...entries].sort((a, b) => {
-    const left = a.publishedAt ?? '';
-    const right = b.publishedAt ?? '';
-    return sortOrder === 'asc' ? left.localeCompare(right) : right.localeCompare(left);
-  });
 }
 
 function TextLink({ href, children }: { href: string; children: ReactNode }) {
@@ -99,7 +91,10 @@ export default function VersionArchiveList({ v2NextVersions, v1GasVersions }: Ve
   const [isV2Open, setIsV2Open] = useState(false);
   const [isV1Open, setIsV1Open] = useState(false);
   const v2SourceUrl = v2NextVersions.find((entry) => entry.sourceUrl)?.sourceUrl ?? null;
-  const sortedV1Versions = useMemo(() => sortVersions(v1GasVersions, sortOrder), [sortOrder, v1GasVersions]);
+  const sortedV1Versions = useMemo(
+    () => sortVersionArchiveEntries(v1GasVersions, sortOrder),
+    [sortOrder, v1GasVersions],
+  );
   const labels: VersionArchiveLabels = {
     unpublishedDate: t('versions.unpublishedDate'),
     releaseKinds: {

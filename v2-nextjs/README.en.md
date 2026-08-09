@@ -2,18 +2,18 @@
 
 [한국어](./README.md) | [English](./README.en.md) | [日本語](./README.ja.md) | [Español](./README.es.md) | [Português (Brasil)](./README.pt-BR.md)
 
-This directory contains the release history and publicly shareable source code for v2 of the Rorschach Structural Summary calculator. The patch notes describe the latest changes, while the public source contains calculation-verification and implementation materials.
+This directory contains the release history and public source code for v2 of the Rorschach Structural Summary calculator. The patch notes describe the latest changes, and the literature guide explains the calculation sources.
 
-- Latest patch note: [releases/v2.2.10](./releases/v2.2.10/README.en.md)
-- Calculation sources and literature scope: [methodology/reference-audit-v2.2.10](./methodology/reference-audit-v2.2.10/README.en.md)
-- Structural Summary calculation-source cross-check: [source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md](./source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md)
-- Earlier calculation-accuracy re-audit: [source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md](./source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md)
-- Initial v2 release note: [releases/v2.0.0](./releases/v2.0.0/)
-- Public source code: [source](./source/)
+- Latest patch note: [v2.2.10 patch note](./releases/v2.2.10/README.en.md)
+- Calculation sources and literature scope: [calculation sources and literature scope](./methodology/reference-audit-v2.2.10/README.en.md)
+- Initial v2 release note: [v2.0.0 patch note](./releases/v2.0.0/)
+- Public source code: [version 2 source code](./source/)
 
 ## Public scope
 
-`source/` contains the core source code required to run and review the application, translation files, the compact reference corpus searched by the AI assistants, automated checks, and deployment configuration.
+`source/` contains the source code, translations, and public reference documents required to run the application.
+
+The optional AI features use the user's own OpenAI API key. The key is kept in encrypted form for no more than 24 hours, deleted when the AI connection ends, and not retained as a long-term account record.
 
 <details>
 <summary><strong>Running the source locally</strong></summary>
@@ -24,7 +24,5 @@ npm install
 cp .env.example .env.local
 npm run build
 ```
-
-To use the optional AI features, each user must enter their own OpenAI API key in the application's BYOK session. User API keys are not stored in the server database.
 
 </details>

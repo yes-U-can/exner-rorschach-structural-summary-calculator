@@ -4,11 +4,7 @@
 
 Este documento apresenta as versões públicas de `exner-rorschach-structural-summary-calculator` em ordem cronológica inversa. A partir da v2.2.1, quando uma alteração pode afetar os resultados do cálculo, as notas correspondentes explicam primeiro as condições afetadas e se resultados anteriores precisam ser recalculados.
 
-> **Padronização das datas de lançamento (2026-07-18):** algumas sessões de trabalho durante a madrugada atravessaram a meia-noite. Para essas versões, o arquivo passou a usar de modo consistente a data de Asia/Seoul declarada operacionalmente na ocasião, em vez do horário do commit. A correção começou na v2.2.3 e, na v2.2.4, o intervalo contínuo v2.1.8-v2.2.4 foi antecipado em um dia para corresponder às datas de trabalho daquele período. O histórico do código-fonte e as datas dos relatórios de verificação não foram alterados.
-
-> **Correção adicional (2026-08-01):** após nova conferência da ordem de lançamento da v1.0.2 e da v1.0.3, a data de arquivo da v1.0.2 foi alinhada à mesma data de Asia/Seoul da v1.0.3: 2025-10-18. O código de cálculo e as versões implantadas na época não foram alterados.
-
-## [Next.js] Histórico de versões da versão 2
+## [v2] Histórico de versões da versão 2
 
 | Data | Versão | Tipo | Notas | Código-fonte |
 | --- | --- | --- | --- | --- |

@@ -22,77 +22,25 @@ When a movement value without active or passive quality was entered, the total m
 
 The fourth CDI condition, in particular, checks whether `passive movement > active movement + 1`. Near the cutoff, omitting the active or passive quality from even one movement could change whether CDI was positive.
 
-As a concrete illustration, a hypothetical record coded the responses "A person is resting" and "Another person is lying down asleep" as `Mp H`. With both movements coded `Mp`, passive movement is 2 and active movement is 0, so the fourth condition is met and the screen displays CDI as `4, Positive`.
+As a concrete illustration, a hypothetical record coded the responses "A person is resting" and "Another person is lying down asleep" as `Mp H`. With both movements coded as passive, passive movement is 2 and active movement is 0, so the fourth condition is met and the screen displays CDI as `4, Positive`.
 
 If the second `Mp` had been entered in an earlier version as `M` without active or passive quality, the human-movement total would still appear as 2, but the passive count would be only 1. In the same boundary record, the fourth condition would no longer be met and CDI could instead appear as `3, NO`.
 
 This illustration is a hypothetical record containing only two responses to demonstrate the calculation boundary; it is not a complete protocol suitable for clinical interpretation. A clinician determines the active or passive quality of movement after reviewing the response record and Inquiry.
 
-### Where did the problem begin?
-
-The early development materials were compared again.
-
-- The input list in the 2019 Excel calculation file used during v1 development contained only movement codes with active or passive quality, while `M`, `FM`, and `m` were used as totals derived from those codes.
-- The Perl implementation in RorScore likewise read movement codes with active or passive quality and then calculated the `M`, `FM`, and `m` totals separately from the active-passive frequencies.
-- The v1.0.0 scoring dropdown combined codes entered for individual responses with total fields shown in the Structural Summary, and that state continued into v2.
-- The MQual correction history in v1.0.2 shows that `M` without active or passive quality was treated like an individual response code alongside `Ma`, `Mp`, and `Ma-p`.
-
-The surviving records do not establish the exact manual sequence by which the Excel input list and the Perl total fields were combined. Within what can be verified, the most accurate explanation is that **the distinction between codes entered for individual responses and totals displayed in the Structural Summary became blurred in the v1 implementation**.
-
-Excel and Perl each distinguished individual movement codes from totals by movement type in their own context. The confirmed problem was not the calculation rule in either reference, but the application implementation that placed items with different roles in one input list. The development history and limits of the available evidence are documented in detail in the [movement-determinant input-boundary review](../../source/docs/ops/2026-07-18-v2.2.5-movement-input-boundary.md).
-
 ## Related corrections
 
 - The five-language reference pages for `M`, `FM`, and `m` now state the difference between Structural Summary totals and codes entered for individual responses.
-- Supporting explanations in the interface and the reference pages now follow the same rule.
-- The Coding Assistant no longer presents `M`, `FM`, or `m` as complete codes for individual responses and instead asks for the `a`, `p`, or `a-p` information needed to complete the code.
-- Corrupted characters were restored in 4 Japanese search questions and in a Korean document-maintenance record.
-- After the reference pages were changed, the search data for all five languages was rebuilt.
-- Document-generation rules and regression tests were strengthened so that `Input-code rule` and `Scoring/application condition` remain separate sections.
-- The Interpretation Assistant now explains response count and data limitations before broader Structural Summary interpretations.
+- Supporting explanations in the interface and the reference pages describe the same input rule.
+- The Coding Assistant does not present `M`, `FM`, or `m` as complete codes for individual responses and instead asks for the `a`, `p`, or `a-p` information needed to complete the code.
+- The Interpretation Assistant explains response count and data limitations before broader Structural Summary interpretations.
 
-## Testing and verification
+The AI assistants do not guarantee the accuracy of answers to every clinical question, and their answers are not an answer key for Structural Summary calculations.
 
-The first checks confirmed that input codes and result fields retained their different roles.
-
-- The scoring dropdown now contains only the 29 complete determinant codes.
-- `M`, `FM`, and `m` remain in Structural Summary results as totals by movement type.
-- An older autosaved value without active or passive quality, the historical Excel-style `m'a`, or an unregistered custom code blocks calculation without changing the original value.
-- Total movement frequency, Single determinants, and Blends continue to be counted as separate concepts in the Structural Summary.
-- Regression tests lock in the CDI boundary behavior: two valid `Mp` entries meet the fourth condition, while only one does not.
-
-The five-language reference pages and optional AI assistants were checked as well.
-
-- All 365 reference-search questions retrieved the relevant document, and neither broad nor explicitly named questions placed an unrelated work area first.
-- Prepared questions confirmed the Coding and Interpretation Assistants' response boundaries. A long-form explanation-order issue and an English synonym-matching issue found during review were corrected and checked again across all five languages and through the web application's answer path.
-- Across the full automated suite, 447 checks in 81 test files passed and 7 were skipped because their execution conditions were unavailable. All 222 deployment pages were generated, and static analysis, the five-language copy audit, secret scanning, and production and development dependency audits also passed.
-
-These checks cover prepared answer boundaries only. They do not guarantee the clinical accuracy of every possible question, and AI responses were not used as the answer key for Structural Summary calculations.
-
-## UI/UX, privacy, and database
+## Interface and privacy
 
 - No new screen or input field was added.
 - The three invalid options were removed from the [Determinants] dropdown.
 - If an older autosave contains an invalid determinant, the existing alert identifies the row and code and calculation stops.
 - No new personal information is collected.
-- The existing rule that scoring data is not stored in the server database remains unchanged.
-- The feedback database structure and request limits were not changed.
-
-The verification record is based on public professional references, the CS scope adopted by this application, and reproducible calculation results.
-
-## Technical appendix
-
-<details>
-<summary><strong>Commands for developers to repeat the checks</strong></summary>
-
-```bash
-npm test
-npm run lint
-npm run build
-npm run security:check
-npm run docs:evaluate-rag:all
-npm run docs:evaluate-hybrid:openai -- --enforce
-npm run ai:evaluate-contracts
-```
-
-</details>
+- Autosaved scoring data remains on the user's device.

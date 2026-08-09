@@ -10,10 +10,10 @@ Write the Korean canonical document first. Before translation, confirm that it a
 2. Under what response or data condition does it matter?
 3. Could an earlier result be affected?
 4. Does an existing protocol need to be recalculated?
-5. What evidence or test was used to check the change?
+5. What source or clinically meaningful evidence supports the conclusion?
 6. What remains unchanged or outside this release?
 
-Use the natural `~합니다` tone found in the v1 GAS release notes. Explain the clinical effect before implementation details and state each point directly in the project's voice. Do not narrate internal review, label audience categories, or describe abandoned drafts.
+Use the natural `~합니다` tone found in the v1 GAS release notes. Explain the clinical effect directly in the project's voice. Do not narrate internal review, editorial corrections, archive maintenance, test execution, build or deployment preparation, audience categories, or abandoned drafts.
 
 ## 2. Register the Document Group
 
@@ -44,7 +44,7 @@ Translate every companion directly from the Korean canonical document.
 
 Use `clinical-terminology.json` and `TERMINOLOGY_SOURCES.md`. Preserve Exner codes, formulas, versions, dates, links, test counts, and recalculation guidance. If a recurring term is uncertain, mark it for review in the evidence register; do not invent a confident translation.
 
-Use the release-category labels in `manifest.json` exactly. This keeps release headings, archive lists, and changelog rows consistent while allowing each language to use natural terminology.
+Use the release-category labels in `manifest.json` exactly. This keeps release headings, archive lists, and changelog rows consistent while allowing each language to use natural terminology. Preserve product facts and recalculation guidance, but do not preserve internal test counts or publication-process narration merely because an older companion contains them.
 
 ## 4. Run Structural Checks
 
@@ -92,7 +92,7 @@ Use headings that fit the actual release; do not force empty sections. A typical
 
 ## 기존 결과를 다시 계산해야 하나요?
 
-## 어떻게 확인했나요?
+## 근거와 한계
 
 ## 함께 확인할 내용
 ```

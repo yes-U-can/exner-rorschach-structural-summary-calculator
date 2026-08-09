@@ -26,46 +26,8 @@ The dot motion is reduced when the operating system requests reduced motion.
 
 The selected state of the helpful and unhelpful buttons was too similar to their unselected state. The button background and border now retain their existing appearance, while only the selected thumb changes to a solid icon in the app's blue brand color. This makes the current choice easy to identify without introducing a new feedback color scheme.
 
-The rating is saved as soon as either button is pressed. Choosing [Skip] in the optional reason dialog keeps the rating with no reason codes. Pressing the same selected button again deletes that rating from the server database and returns the button to its unselected state. The question and answer text are not sent to the feedback database.
-
-### Public archive documentation
-
-The archive dates for v1.0.2 and v1.0.3 are now aligned to the same Asia/Seoul date, 2025-10-18. Within that date, v1.0.3 is listed before v1.0.2.
-
-Four-digit technical counts in public documents in all five languages are now written without a thousands separator, as in `5604`, `1015`, `5589`, and `2000`. This avoids ambiguity in Spanish and Portuguese, where a comma may be read as a decimal separator.
-
-This documentation correction is included in v2.2.9. It does not alter the calculation code or deployed artifacts of earlier versions.
+The rating is saved as soon as either button is pressed. Choosing [Skip] in the optional reason dialog keeps the rating with no reason. Pressing the same selected button again deletes the rating and returns the button to its unselected state. Question and answer text are not included in the feedback record.
 
 ## Are existing calculation results affected?
 
 No. This release does not change Structural Summary formulas, available input codes, reference-document content, or AI-answer rules. Existing protocols do not need to be recalculated.
-
-## Testing and verification
-
-- The complete automated suite passed 600 checks in 98 test files, with 7 checks skipped because their execution conditions were unavailable.
-- An already sorted sample was checked directly as it changed from `I-X` to `X-I` and back to `I-X`.
-- A local test session was started after selecting [Interpretation Assistant] from the scoring page, and the app was confirmed to open the assistant. The test key was removed immediately from the local session and was not sent to OpenAI.
-- Automated checks cover the session destination in all five languages, keeping the current page after general session setup, the three streaming dots, and the idle down arrow.
-- Automated checks also cover the selected feedback appearance, saving a rating with no reasons, and deleting the stored rating when the same button is pressed again.
-- TypeScript validation and static analysis of the changed files passed.
-
-This release does not change answer-generation behavior, so the existing answer-boundary checks remain applicable.
-
-## Scope confirmed unchanged
-
-- Structural Summary formulas and result fields are unchanged.
-- Reference documents and the Coding and Interpretation Assistant response rules are unchanged.
-- The existing policy of not storing scoring data or OpenAI API keys in the server database remains in place.
-
-## Technical appendix
-
-<details>
-<summary><strong>Commands for reproducing the checks</strong></summary>
-
-```bash
-npm test
-npm run lint
-npx tsc --noEmit
-```
-
-</details>

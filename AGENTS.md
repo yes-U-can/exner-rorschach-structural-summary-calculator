@@ -12,8 +12,10 @@ These instructions apply to the public showcase repository.
 
 - Read `v2-nextjs/source/docs/ops/PUBLIC_RELEASE_DOCUMENTATION.md` before editing reader-facing documents.
 - Read the complete v1 GAS release-note series before a repository-wide voice rewrite. For routine work, also read the latest two v2 notes, the root README, and the root CHANGELOG.
+- Treat the owner-authored v1 GAS patch notes as protected historical originals. Do not rewrite, modernize, or shorten them. Revert a later non-owner insertion only when an exact preserved original proves the difference; otherwise obtain the owner's explicit approval before any v1 edit.
 - Write the released product story, not the draft history. Do not narrate agent conversations, internal approval, rejected drafts, or audience strategy.
-- Explain the visible or clinical effect first, followed by the affected condition, recalculation guidance, verification, limitations, and then technical details.
+- Explain the visible or clinical effect first, followed by the affected condition, recalculation guidance, evidence, and limitations. Keep internal verification procedures and technical operations out of reader-facing release notes.
+- Correct archive metadata, ordering, formatting, and inaccurate public prose quietly. Never add dated correction banners or narrate documentation cleanup, test reruns, database or credential handling, build gates, deployment preparation, or mirror synchronization in reader-facing prose.
 
 ## Five-Language Contract
 

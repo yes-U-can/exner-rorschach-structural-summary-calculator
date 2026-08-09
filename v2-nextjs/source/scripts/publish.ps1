@@ -13,6 +13,12 @@ param(
 
 $ErrorActionPreference = "Stop"
 
+$readerFacingReleaseGuard = Join-Path $PSScriptRoot 'assert-reader-facing-release-prose.ps1'
+if (-not (Test-Path -LiteralPath $readerFacingReleaseGuard -PathType Leaf)) {
+  throw "Reader-facing release prose guard not found: $readerFacingReleaseGuard"
+}
+. $readerFacingReleaseGuard
+
 $sourceRoot = (Resolve-Path ".").Path
 $privateReferencePolicy = @('curated', 'internal', 'reference') -join '-'
 $publicReferencePolicy = 'curated-reference'
@@ -410,7 +416,11 @@ function Assert-NoReaderFacingProductionNarrative {
   if (Test-Path -LiteralPath $opsRoot -PathType Container) {
     $readerFiles += Get-ChildItem -LiteralPath $opsRoot -File -Filter '*calculation-source-crosscheck*.md' -ErrorAction SilentlyContinue
   }
-  $readerFiles = @($readerFiles | Sort-Object -Property FullName -Unique)
+  $readerFiles = @(
+    $readerFiles |
+      Where-Object { -not (Test-IsProtectedV1ReleasePath -Path $_.FullName) } |
+      Sort-Object -Property FullName -Unique
+  )
 
   $patterns = @(
     [regex]::Escape($internalAiGuidanceMarker),
@@ -647,12 +657,14 @@ if ($SanitizeOnlyRoot) {
   Remove-PublicEvalPrivateMetadata -Root $resolvedSanitizeRoot -WhatIf:$DryRun
   Remove-PublicAuthoringMetadata -Root $resolvedSanitizeRoot -WhatIf:$DryRun
   if ($DryRun) {
+    Assert-NoReaderFacingReleaseProcessNarrative -Root $resolvedSanitizeRoot
     Write-Host "[dry-run] sanitize-only simulation completed."
   } else {
     Assert-NoPublicGitMetadata -Root $resolvedSanitizeRoot
     Assert-NoPublicAuthoringMetadata -Root $resolvedSanitizeRoot
     Assert-NoPublicEditorialLeak -Root $resolvedSanitizeRoot
     Assert-NoReaderFacingProductionNarrative -Root $resolvedSanitizeRoot
+    Assert-NoReaderFacingReleaseProcessNarrative -Root $resolvedSanitizeRoot
     Write-Host "[sanitize-only] public mirror boundary verified."
   }
   exit 0
@@ -727,6 +739,12 @@ if ($UseCurrentRepo) {
   if (-not $gitRoot) {
     throw "Current repo root could not be resolved from $sourceRoot"
   }
+  $releaseGuardRoot = if (Test-Path -LiteralPath (Join-Path $gitRoot 'docs\localization\manifest.json') -PathType Leaf) {
+    $gitRoot
+  } else {
+    $sourceRoot
+  }
+  Assert-NoReaderFacingReleaseProcessNarrative -Root $releaseGuardRoot
 
   $relativePath = Get-RelativePathCompat -BasePath $gitRoot -TargetPath $sourceRoot
   if ([string]::IsNullOrWhiteSpace($relativePath)) {
@@ -830,11 +848,14 @@ if ($rc -ge 8) {
 Remove-PublicMirrorPrivateArtifacts -Root $targetRoot -WhatIf:$DryRun
 Remove-PublicEvalPrivateMetadata -Root $targetRoot -WhatIf:$DryRun
 Remove-PublicAuthoringMetadata -Root $targetRoot -WhatIf:$DryRun
-if (-not $DryRun) {
+if ($DryRun) {
+  Assert-NoReaderFacingReleaseProcessNarrative -Root $resolvedPublishRoot
+} else {
   Assert-NoPublicGitMetadata -Root $targetRoot
   Assert-NoPublicAuthoringMetadata -Root $targetRoot
   Assert-NoPublicEditorialLeak -Root $resolvedPublishRoot
   Assert-NoReaderFacingProductionNarrative -Root $resolvedPublishRoot
+  Assert-NoReaderFacingReleaseProcessNarrative -Root $resolvedPublishRoot
 }
 
 if ($DryRun) {

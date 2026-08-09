@@ -14,6 +14,27 @@ export type VersionArchiveEntry = {
   videoUrl?: string | null;
 };
 
+export function sortVersionArchiveEntries(
+  entries: VersionArchiveEntry[],
+  sortOrder: 'desc' | 'asc',
+) {
+  return [...entries].sort((a, b) => {
+    const leftDate = a.publishedAt ?? '';
+    const rightDate = b.publishedAt ?? '';
+    const dateComparison = leftDate.localeCompare(rightDate);
+
+    if (dateComparison !== 0) {
+      return sortOrder === 'asc' ? dateComparison : -dateComparison;
+    }
+
+    const versionComparison = a.version.localeCompare(b.version, undefined, {
+      numeric: true,
+      sensitivity: 'base',
+    });
+    return sortOrder === 'asc' ? versionComparison : -versionComparison;
+  });
+}
+
 const exhibitionRepoUrl = 'https://github.com/yes-U-can/exner-rorschach-structural-summary-calculator';
 const v1ArchiveUrl = (version: string) => `${exhibitionRepoUrl}/tree/main/v1-gas/releases/${version}`;
 const v2ReleaseUrl = (version: string) => `${exhibitionRepoUrl}/tree/main/v2-nextjs/releases/${version}`;
@@ -28,7 +49,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     releaseKind: 'bugfix',
     releaseLabel: '버그 패치',
     summary:
-      'Lower Section 화면과 PDF에 빠져 있던 GHR:PHR 비율을 원전의 구조요약 배치에 맞춰 복원하고, PDF의 일반 Lower Section 표와 Special Indices 판정 표시를 정리했습니다. 다섯 언어 Interpersonal 참조 문서, 검색 벡터와 GPT-5.5 경계 답변도 같은 범위로 다시 확인했습니다. 계산식은 변경하지 않았습니다.',
+      'Lower Section 화면과 PDF에 빠져 있던 GHR:PHR 비율을 원전의 구조요약 배치에 맞춰 복원하고, PDF의 일반 Lower Section 표와 Special Indices 판정 표시를 정리했습니다. 다섯 언어 Interpersonal 참조 문서에도 GHR:PHR 설명을 추가하고, 다른 로샤 체계의 규칙이 Exner 계산에 섞이지 않도록 했습니다. 계산식은 변경하지 않았습니다.',
     sourceUrl: v2SourceUrl,
     releaseUrl: v2ReleaseUrl('v2.2.10'),
   },
@@ -40,7 +61,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     releaseKind: 'bugfix',
     releaseLabel: '버그 패치',
     summary:
-      'CARD 정렬 버튼을 오름차순과 내림차순으로 전환할 수 있게 고치고, 해석 도우미로 들어가며 AI 세션을 시작했을 때 목적 화면으로 바로 이동하게 했습니다. 대화 중에는 응답 상태에 따라 최신 메시지 이동 버튼이 점 세 개 또는 아래 화살표로 바뀝니다. 공개 아카이브의 날짜와 숫자 표기도 함께 정리했습니다.',
+      '[Card] 정렬 버튼을 오름차순과 내림차순으로 전환할 수 있게 고치고, 해석 도우미로 들어가며 AI 세션을 시작했을 때 목적 화면으로 바로 이동하게 했습니다. 대화 중에는 응답 상태에 따라 최신 메시지 이동 버튼이 점 세 개 또는 아래 화살표로 바뀝니다.',
     sourceUrl: v2SourceUrl,
     releaseUrl: v2ReleaseUrl('v2.2.9'),
   },
@@ -52,7 +73,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     releaseKind: 'bugfix',
     releaseLabel: '버그 패치',
     summary:
-      '구조요약 계산식은 유지하면서, 한 반응 안의 중복 내용 부호와 잘못된 Z 점수를 계산 전에 차단하고 데스크톱·모바일의 부호화 규칙을 같은 기준으로 통합했습니다. 자동저장 복구, AI 세션 요청 제한과 대화 맥락 방어, 피드백 시간대, 공개 자료 생성·배포 검증도 보강했습니다.',
+      '구조요약 계산식은 유지하면서, 한 반응 안의 중복 내용 부호와 잘못된 Z 점수를 계산 전에 차단하고 Level 1·Level 2 충돌을 데스크톱과 모바일에서 같은 방식으로 처리합니다. 자동저장 자료를 보호하고, AI 요청이 지나치게 반복되면 기다리도록 안내합니다. 이어지는 대화에서 비공개 정보 공개 요청에는 응답하지 않고, 위기 관련 표현에는 긴급 도움 안내를 제공합니다.',
     sourceUrl: v2SourceUrl,
     releaseUrl: v2ReleaseUrl('v2.2.8'),
   },
@@ -76,7 +97,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     releaseKind: 'bugfix',
     releaseLabel: '버그 패치',
     summary:
-      '다섯 언어 검색 정보의 기본 언어와 브라질 포르투갈어 표기를 바로잡고, Alt+마우스 휠 조작이 일부 브라우저 입력 경로에서 화면 이동으로 처리되던 문제를 수정했습니다. 구조요약 계산식, 입력값, 개인정보 처리 방식은 변경하지 않았습니다.',
+      '다섯 언어 페이지가 검색 결과와 공유 링크에서 해당 언어의 제목과 설명을 올바르게 표시하도록 수정하고, Alt+마우스 휠 조작이 일부 Windows 브라우저에서 화면 이동으로 처리되던 문제를 고쳤습니다. 구조요약 계산식, 입력값과 개인정보 처리 방식은 변경하지 않았습니다.',
     sourceUrl: v2SourceUrl,
     releaseUrl: v2ReleaseUrl('v2.2.6'),
   },
@@ -100,7 +121,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     releaseKind: 'bugfix',
     releaseLabel: '버그 패치',
     summary:
-      '다섯 언어의 참조 문서 용어와 문체를 각 언어권의 전문 용례에 맞춰 정리하고, 참조 문서 표기와 AI 검색 무결성, 요청 과부하 방어를 보강한 패치입니다. 계산식과 채점 화면 배치는 변경하지 않았습니다.',
+      '다섯 언어 참조 문서는 각 언어권의 전문 용례와 채점·해석 흐름을 따릅니다. AI 도우미는 관련 문서를 우선 찾고 Exner CS 범위 밖의 질문이나 비공개 정보를 요구하는 요청에는 답하지 않으며, 요청이 지나치게 반복되면 기다리도록 안내합니다. 계산식과 채점 화면 배치는 변경하지 않았습니다.',
     sourceUrl: v2SourceUrl,
     releaseUrl: v2ReleaseUrl('v2.2.4'),
   },
@@ -112,7 +133,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     releaseKind: 'bugfix',
     releaseLabel: '버그 패치',
     summary:
-      '임상심리사가 먼저 이해할 수 있도록 공개 문서의 설명 방식을 정리하고, 다섯 언어 검색·링크 미리보기 정보와 선택형 AI 응답 피드백의 과도한 요청 방어를 보강한 패치입니다. 계산식과 화면 배치는 변경하지 않았습니다.',
+      '다섯 언어의 검색·링크 미리보기 정보를 화면 언어에 맞추고, 선택형 AI 응답 평가가 짧은 시간에 과도하게 반복되지 않도록 보호한 패치입니다. 계산식과 화면 배치는 변경하지 않았습니다.',
     sourceUrl: v2SourceUrl,
     releaseUrl: v2ReleaseUrl('v2.2.3'),
   },
@@ -124,7 +145,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     releaseKind: 'hotfix',
     releaseLabel: '핫픽스',
     summary:
-      'v2.2.1 계산 교정을 독립 재감사하고 FC:CF+C 표시의 Cn 포함과 WSumC·S-CON·Color-Shading의 Cn 제외 경계를 회귀 테스트, 다섯 언어 AI 지식층과 실전 평가에 고정한 후속 정확성 핫픽스입니다.',
+      '화면의 FC:CF+C 오른쪽 값에는 Cn을 포함하고 WSumC, S-CON 7번 기준, Color-Shading 계산에서는 Cn을 제외하도록 경계를 분리했습니다. 형태질이 비어 있는 미완성 행의 GHR/PHR 임시 분류도 막았습니다.',
     sourceUrl: v2SourceUrl,
     releaseUrl: v2ReleaseUrl('v2.2.2'),
   },
@@ -136,7 +157,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     releaseKind: 'hotfix',
     releaseLabel: '핫픽스',
     summary:
-      'Exner 원전, 2019 Excel, v1 GAS, v2, CHESSSS와 공개 완성 사례를 교차감사해 D/AdjD, EBPer, GHR/PHR, FC:CF+C 표시의 Cn 포함, 정의 불가 분모 처리를 교정하고 계산기와 연령 해석의 경계를 고정한 계산 정확성 핫픽스입니다.',
+      'D/AdjD의 극단값, EBPer 표시 조건, GHR/PHR 판정 순서, WDA%와 Afr의 0분모 처리, FC:CF+C 오른쪽 값의 Cn 포함을 바로잡았습니다. 나이를 입력받지 않으며 연령에 따른 해석을 자동화하지 않습니다.',
     sourceUrl: v2SourceUrl,
     releaseUrl: v2ReleaseUrl('v2.2.1'),
   },
@@ -148,7 +169,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     releaseKind: 'minor',
     releaseLabel: '마이너 패치',
     summary:
-      '전역 앱 사이드바와 AI SaaS형 해석 대화 화면, 채점·참조 문서·버전 아카이브 UX를 정비하고, 구조요약 계산 로직 독립 감사와 GPT-5.5 경계·다국어 실전 평가를 반영한 v2.2.x 첫 릴리즈입니다.',
+      '데스크톱 주요 메뉴를 왼쪽 사이드바로 모으고 해석 도우미를 일반적인 AI 대화 화면에 가깝게 구성했습니다. 답변 중지, 메시지 복사와 평가, 대화 스크롤, 참조 문서와 버전 기록 이용 방식도 개선하고, AI 답변은 Exner 종합체계 범위 안으로 제한했습니다.',
     sourceUrl: v2SourceUrl,
     releaseUrl: v2ReleaseUrl('v2.2.0'),
   },
@@ -160,7 +181,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     releaseKind: 'bugfix',
     releaseLabel: '버그 패치',
     summary:
-      '최종 독립 감사에서 확인된 일본어 붙여쓰기 기호, broad 해석 오염, lexical fallback 불일치와 fresh DB migration replay 문제를 수정하고 회귀·CI 게이트를 추가한 AI 검색 품질 마감 패치입니다.',
+      '일본어 문장에 붙은 로샤 부호를 보존하고, 넓은 해석 질문에는 해석 문서만 제시하며, 같은 참조 문서가 중복으로 나타나지 않도록 했습니다. 처음 사용할 때부터 참조 문서를 정상적으로 검색할 수 있습니다. 앱 화면과 계산식은 변경하지 않았습니다.',
     sourceUrl: v2SourceUrl,
     releaseUrl: v2ReleaseUrl('v2.1.10'),
   },
@@ -172,7 +193,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     releaseKind: 'bugfix',
     releaseLabel: '버그 패치',
     summary:
-      '다섯 언어 RAG 검색의 토큰 처리와 hybrid fusion을 보강하고, 실제 API 경로 평가·벡터 관측성·OpenAI-only provider 정리 게이트를 추가한 AI 검색 품질 강화 패치입니다.',
+      '코딩 도우미와 해석 도우미가 다섯 언어 질문의 핵심 용어와 관련 참조 문서를 더 안정적으로 찾도록 개선했습니다. 앱 화면과 계산식은 변경하지 않았습니다.',
     sourceUrl: v2SourceUrl,
     releaseUrl: v2ReleaseUrl('v2.1.9'),
   },
@@ -184,7 +205,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     releaseKind: 'bugfix',
     releaseLabel: '버그 패치',
     summary:
-      '다섯 언어 AI 지식층의 근거 수준을 재정렬하고 전체 벡터 임베딩을 갱신했으며, GPT-5.5 단일·멀티턴 실전 평가와 공개 미러 보안 경계를 강화한 v2.1.x AI 품질 마감 패치입니다.',
+      'AI 도우미가 다섯 언어의 참조 문서에서 질문과 가까운 근거를 먼저 찾도록 개선했습니다. 앱 화면과 구조요약 계산식은 변경하지 않았습니다.',
     sourceUrl: v2SourceUrl,
     releaseUrl: v2ReleaseUrl('v2.1.8'),
   },
@@ -196,7 +217,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     releaseKind: 'bugfix',
     releaseLabel: '버그 패치',
     summary:
-      'v2.1.x AI 품질 작업을 마감하며 공개 릴리즈 노트, README, 버전 아카이브, AI eval 증거 문서가 따라야 할 문서 운영 원칙을 명문화한 거버넌스 패치입니다.',
+      '사용자 기능, 앱 화면, 구조요약 계산식과 AI 답변 방식은 변경되지 않았습니다.',
     sourceUrl: v2SourceUrl,
     releaseUrl: v2ReleaseUrl('v2.1.7'),
   },
@@ -208,7 +229,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     releaseKind: 'bugfix',
     releaseLabel: '버그 패치',
     summary:
-      'AI 지식층 검색 평가를 모든 런타임 언어로 묶고, 포르투갈어 RAG 평가 누락과 다국어 의도 판별 문제를 수정했으며, AI 릴리즈 게이트에 dependency audit과 보안 기준을 포함한 v2.1.x AI 품질 마감 패치입니다.',
+      '포르투갈어 질문에서 코딩, 해석, 관련 문서 찾기와 짧은 부호 질문을 더 정확히 구분하고, 당시 알려진 웹앱 보안 문제를 해결했습니다.',
     sourceUrl: v2SourceUrl,
     releaseUrl: v2ReleaseUrl('v2.1.6'),
   },
@@ -220,7 +241,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     releaseKind: 'bugfix',
     releaseLabel: '버그 패치',
     summary:
-      'AI 릴리즈 준비를 반복 가능하게 만들기 위해 ai:release-gate 명령, privacy-safe gate report, GitHub Actions AI gate wiring을 추가한 품질 강화 패치입니다.',
+      '앱 화면과 구조요약 계산식은 변경되지 않았습니다. 코딩·해석 도우미는 임상가의 최종 판단을 대신하지 않습니다.',
     sourceUrl: v2SourceUrl,
     releaseUrl: v2ReleaseUrl('v2.1.5'),
   },
@@ -232,7 +253,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     releaseKind: 'bugfix',
     releaseLabel: '버그 패치',
     summary:
-      'AI 응답 품질 검증을 강화하기 위해 multi-turn eval, human review record scorer, live multi-turn batch entry point, and v2.1.4 eval hardening report를 추가한 버전입니다.',
+      '앱 화면과 구조요약 계산식은 변경되지 않았습니다. 이어지는 대화에서도 AI 도우미는 임상가의 최종 판단을 대신하지 않습니다.',
     sourceUrl: v2SourceUrl,
     releaseUrl: v2ReleaseUrl('v2.1.4'),
   },
@@ -244,7 +265,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     releaseKind: 'bugfix',
     releaseLabel: '버그 패치',
     summary:
-      'AI 응답 품질을 보여주고 재현할 수 있도록 saved live eval artifact audit, final-pass 검증, human review rubric, AI 품질 게이트 문서를 추가한 품질 강화 패치입니다.',
+      '앱 화면, 구조요약 계산과 AI 답변 방식은 변경되지 않았습니다.',
     sourceUrl: v2SourceUrl,
     releaseUrl: v2ReleaseUrl('v2.1.3'),
   },
@@ -256,7 +277,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     releaseKind: 'bugfix',
     releaseLabel: '버그 패치',
     summary:
-      'AI 응답 품질을 안정화하기 위해 OpenAI 전용 하네스, 코딩/해석 도우미별 시스템 프롬프트, HITL 경계, 응답 끊김 감지, retrieval 계약 테스트, live eval 배치와 공개용 평가 리포트를 추가한 패치입니다.',
+      '코딩 도우미는 후보 부호와 임상가가 확인할 범위를 설명하고, 해석 도우미는 단일 지표만으로 진단·치료·법적 판단을 확정하지 않습니다.',
     sourceUrl: v2SourceUrl,
     releaseUrl: v2ReleaseUrl('v2.1.2'),
   },
@@ -268,7 +289,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     releaseKind: 'bugfix',
     releaseLabel: '버그 패치',
     summary:
-      '반응 메모 팝업이 텍스트 드래그 중 닫히던 UX 문제와 코딩 도우미 대화가 행 전환 때 초기화되던 문제를 수정하고, AI 세션을 OpenAI 전용 BYOK 흐름으로 정리한 안정화 버전입니다.',
+      '반응 메모 팝업이 텍스트 드래그 중 닫히던 문제와 코딩 도우미 대화가 행 전환 때 초기화되던 문제를 수정하고, 사용자가 제공한 OpenAI API 키로 AI 도우미에 연결하도록 했습니다.',
     sourceUrl: v2SourceUrl,
     releaseUrl: v2ReleaseUrl('v2.1.1'),
   },
@@ -280,7 +301,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     releaseKind: 'minor',
     releaseLabel: '마이너 패치',
     summary:
-      '웹앱을 설치형 앱처럼 열 수 있도록 manifest-only PWA 지원을 추가하고, 보안 범위를 유지하기 위해 service worker와 오프라인 캐시는 도입하지 않았습니다. 초기 구현 학습 참고 자료였던 RorScore에 대한 감사 기록도 함께 정리한 버전입니다.',
+      '지원 브라우저에서 웹앱을 설치형 앱처럼 열 수 있습니다. 민감한 평가 자료나 AI 응답을 기기에 별도로 저장하는 오프라인 기능은 추가하지 않았습니다.',
     sourceUrl: v2SourceUrl,
     releaseUrl: v2ReleaseUrl('v2.1.0'),
   },
@@ -292,7 +313,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     releaseKind: 'bugfix',
     releaseLabel: '버그 패치',
     summary:
-      '참조 문서 페이지가 참조 코퍼스 데이터 전체를 브라우저에 내려보내던 문제를 수정해 로딩 성능을 크게 개선하고, BYOK 세션 쿠키 처리 보강과 Next.js 16.2.9 보안 패치 적용을 함께 반영한 버전입니다.',
+      '참조 문서 화면이 더 빠르게 열리도록 개선하고, 잘못되거나 만료된 AI 연결 정보는 안전하게 처리하며, 당시 알려진 웹앱 보안 문제를 해결했습니다.',
     sourceUrl: v2SourceUrl,
     releaseUrl: v2ReleaseUrl('v2.0.3'),
   },
@@ -303,7 +324,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     publishedAt: '2026-05-21',
     releaseKind: 'bugfix',
     releaseLabel: '버그 패치',
-    summary: '구조요약 값 복사와 구조요약 CSV 내보내기의 중복 헤더 및 누락 항목 문제를 수정하고, 데이터 다운로드 항목명, 해석 도우미 입력 완료 표시, BYOK 채팅 오류 처리, OpenAI 기본 모델 GPT-5.5 전환을 함께 반영한 버전입니다.',
+    summary: '구조요약 값 복사와 CSV 내보내기의 중복 헤더 및 누락 항목 문제를 수정하고, 데이터 다운로드 항목명, 해석 도우미 입력 완료 표시, 사용자 API 키 연결 오류 처리와 OpenAI 기본 모델 변경을 반영했습니다.',
     sourceUrl: v2SourceUrl,
     releaseUrl: v2ReleaseUrl('v2.0.2'),
   },
@@ -314,7 +335,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     publishedAt: '2026-04-27',
     releaseKind: 'bugfix',
     releaseLabel: '버그 패치',
-    summary: 'v2.0.0 공개 이후 AI 도우미, BYOK 세션, 다크모드, 참조 문서 라우팅, 문서 정리를 안정화한 버전입니다.',
+    summary: '결과 화면에서 복사한 구조요약 값을 해석 도우미에 붙여넣을 수 있게 하고, AI 자동 채우기를 제거했으며, 다크모드 안내와 참조 문서 링크를 바로잡았습니다.',
     sourceUrl: v2SourceUrl,
     releaseUrl: v2ReleaseUrl('v2.0.1'),
   },
@@ -325,7 +346,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     publishedAt: '2026-02-15',
     releaseKind: 'major',
     releaseLabel: '메이저 패치',
-    summary: 'Next.js 기반 웹앱으로 재구성하고, BYOK AI 보조 기능과 참조 문서 검색을 추가한 버전입니다.',
+    summary: '새로운 웹앱으로 전면 개편하고, 사용자가 제공한 API 키로 연결하는 선택형 AI 도우미와 참조 문서 검색을 추가했습니다.',
     sourceUrl: v2SourceUrl,
     releaseUrl: v2ReleaseUrl('v2.0.0'),
   },

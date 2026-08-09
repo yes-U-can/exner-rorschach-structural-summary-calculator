@@ -28,61 +28,22 @@ Los protocolos existentes en los que la localización, los determinantes de movi
 
 ### Correcciones relacionadas
 
-- Los documentos de referencia en cinco idiomas sobre la localización `S`, los determinantes de movimiento y la calidad formal indican ahora estas reglas de entrada con el mismo contenido.
-- Se introdujo una lista de reglas que comprueba automáticamente que los documentos de los cinco idiomas enuncien las mismas reglas clínicas. Ahora, si se corrige el documento de un solo idioma y se omiten los demás, la comprobación falla en la etapa de generación de documentos.
-- Se reforzaron las reglas de respuesta para que el Asistente de Codificación no presente la `S` aislada, los duplicados de la misma familia de movimiento ni la calidad formal en blanco como códigos completos.
-- Tras modificar los documentos de referencia, se reconstruyeron los datos de búsqueda de los cinco idiomas.
-- Se corrigieron erratas y notaciones terminológicas en los documentos en español y portugués, así como títulos en inglés que permanecían en cuatro lugares de los documentos en japonés.
-- Se eliminó un indicador de estado que no se utilizaba realmente en los borradores de los documentos de referencia y se añadió una comprobación del rango permitido de los valores de estado de los documentos.
+- Los documentos de referencia en cinco idiomas sobre la localización `S`, los determinantes de movimiento y la calidad formal explican estas reglas de entrada.
+- El Asistente de Codificación no presenta la `S` aislada, los duplicados de la misma familia de movimiento ni la calidad formal en blanco como códigos completos.
 
-## Pruebas y verificación
+## Fundamento clínico
 
-Las reglas de cálculo se comprobaron con materiales públicos.
+- En la secuencia de codificación del informe de ejemplo oficial de RIAP v5, el espacio en blanco aparece siempre combinado con una localización básica, como `WS` y `DdS`.
+- En el mismo ejemplo, `none` se contabiliza como categoría oficial en la tabla de calidad formal y se indica expresamente que S-CON se aplica a personas mayores de 14 años.
+- La bibliografía clínica pública que reproduce el contenido de la obra original de Exner describe las reglas activo-pasivo de los determinantes de movimiento y las condiciones de aplicación de `a-p`.
+- La notación de Lambda como número de respuestas de F pura es una forma de informe de software en la que coinciden varios materiales públicos.
 
-- Se comprobó que, en la secuencia de codificación del informe de ejemplo oficial de RIAP v5, el espacio en blanco aparece siempre combinado con una localización básica, como `WS` y `DdS`.
-- En el mismo ejemplo se comprobó que `none` se contabiliza como categoría oficial en la tabla de calidad formal y que se indica expresamente que S-CON se aplica a personas mayores de 14 años.
-- Las reglas activo-pasivo de los determinantes de movimiento y las condiciones de aplicación de `a-p` se comprobaron con bibliografía clínica pública que reproduce el contenido de la obra original de Exner.
-- Se comprobó que los valores del Sumario Estructural de un caso público de 20 respuestas se calculan de forma idéntica antes y después de este parche.
+Estos materiales fundamentan las reglas de entrada; la codificación de cada respuesta y la aplicación real de los índices corresponden al juicio del profesional clínico.
 
-El bloqueo de entradas y los avisos en cinco idiomas también se comprobaron en la pantalla real.
-
-- La `S` aislada no aparece entre las opciones de localización.
-- Al elegir un código de una familia de movimiento, los demás códigos de la misma familia se muestran como no seleccionables.
-- Para cualquier determinante, un código ya seleccionado se muestra como no seleccionable en las demás casillas.
-- Si la calidad formal está en blanco, el cálculo se detiene y se indican las filas que requieren revisión. Los textos de aviso de los cinco idiomas se comprobaron uno por uno en la pantalla real.
-- Las `S` aisladas, los códigos de movimiento duplicados y la calidad formal en blanco que permanecen en datos antiguos guardados automáticamente se señalan de la misma manera, sin modificar el original.
-
-También se comprobaron los datos de búsqueda en cinco idiomas y los asistentes de IA.
-
-- Las 380 preguntas de búsqueda de documentos de referencia recuperaron el documento correspondiente, que apareció primero tanto en preguntas amplias como en preguntas con nombre explícito.
-- Se comprobaron en cinco idiomas preguntas representativas sobre la `S` aislada, los códigos de movimiento duplicados y la calidad formal en blanco, y las respuestas se mantuvieron dentro de las nuevas reglas.
-- En el conjunto automatizado completo se superaron 476 comprobaciones de 83 archivos de prueba y 7 se omitieron porque no se cumplían sus condiciones de ejecución. También se superaron la compilación de producción, el análisis estático del código, la auditoría de textos en cinco idiomas y la detección de secretos.
-
-La notación de Lambda como número de respuestas de F pura es una forma de informe de software en la que coinciden varios materiales públicos. El alcance de la evidencia comprobada por vías públicas y las limitaciones pendientes se registraron tal cual en la documentación de verificación.
-
-La verificación se basó en fuentes profesionales públicas y resultados de cálculo reproducibles.
-
-## UI/UX, privacidad y alcance del cálculo
+## Interfaz, privacidad y alcance del cálculo
 
 - No se añadieron pantallas ni campos de entrada nuevos.
 - Se eliminó la `S` aislada de las opciones de [Location], y la selección duplicada dentro de la misma familia de movimiento se indica mediante opciones desactivadas.
 - Los resultados de cálculo de los protocolos existentes introducidos según las reglas no cambian.
 - No se recopila nueva información personal.
-- Se mantiene el principio existente de no guardar los datos de codificación ni las claves API en la base de datos del servidor.
-
-## Apéndice técnico
-
-<details>
-<summary><strong>Comandos para que los desarrolladores repitan las comprobaciones</strong></summary>
-
-```bash
-npm test
-npm run lint
-npm run build
-npm run security:check
-npm run docs:evaluate-rag:all
-npm run docs:evaluate-hybrid:openai -- --enforce
-npm run ai:evaluate-contracts
-```
-
-</details>
+- Los datos de codificación autoguardados permanecen únicamente en el dispositivo. La clave API se usa cifrada para una conexión de IA durante un máximo de 24 horas y se elimina al finalizar la conexión.

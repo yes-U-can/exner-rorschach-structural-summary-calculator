@@ -2,18 +2,18 @@
 
 [한국어](./README.md) | [English](./README.en.md) | [日本語](./README.ja.md) | [Español](./README.es.md) | [Português (Brasil)](./README.pt-BR.md)
 
-Esta pasta contém o histórico de versões e o código-fonte que pode ser disponibilizado publicamente da v2 da calculadora do Sumário Estrutural de Rorschach. As notas do patch descrevem as alterações mais recentes, enquanto o código público reúne materiais de verificação dos cálculos e de implementação.
+Esta pasta contém o histórico de versões e o código-fonte público da v2 da calculadora do Sumário Estrutural de Rorschach. As notas do patch descrevem as alterações mais recentes, e o guia bibliográfico explica as fontes de cálculo.
 
-- Notas do patch mais recente: [releases/v2.2.10](./releases/v2.2.10/README.pt-BR.md)
-- Fontes de cálculo e escopo bibliográfico: [methodology/reference-audit-v2.2.10](./methodology/reference-audit-v2.2.10/README.pt-BR.md)
-- Verificação das fontes de cálculo do Sumário Estrutural: [source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md](./source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md)
-- Auditoria anterior da exatidão dos cálculos: [source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md](./source/docs/ops/2026-07-17-v2.2.2-calculation-reaudit.md)
-- Notas da primeira versão v2: [releases/v2.0.0](./releases/v2.0.0/)
-- Código-fonte público: [source](./source/)
+- Notas do patch mais recente: [notas da v2.2.10](./releases/v2.2.10/README.pt-BR.md)
+- Fontes de cálculo e escopo bibliográfico: [fontes de cálculo e escopo bibliográfico](./methodology/reference-audit-v2.2.10/README.pt-BR.md)
+- Notas da primeira versão v2: [notas da v2.0.0](./releases/v2.0.0/)
+- Código-fonte público: [código-fonte da versão 2](./source/)
 
 ## Escopo público
 
-`source/` contém o código-fonte central necessário para executar e revisar o aplicativo, os arquivos de tradução, o corpus breve de documentos de referência pesquisado pelos assistentes de IA, as verificações automáticas e a configuração de implantação.
+`source/` contém o código-fonte, as traduções e os documentos de referência públicos necessários para executar o aplicativo.
+
+Os recursos opcionais de IA usam a chave da API da OpenAI de cada pessoa. A chave é mantida criptografada por no máximo 24 horas, é apagada quando a conexão de IA termina e não é preservada como dado de conta de longo prazo.
 
 <details>
 <summary><strong>Como executar o código-fonte localmente</strong></summary>
@@ -24,7 +24,5 @@ npm install
 cp .env.example .env.local
 npm run build
 ```
-
-Para utilizar os recursos opcionais de IA, cada pessoa deve inserir sua própria chave da API da OpenAI na sessão BYOK do aplicativo. As chaves de API dos usuários não são armazenadas no banco de dados do servidor.
 
 </details>

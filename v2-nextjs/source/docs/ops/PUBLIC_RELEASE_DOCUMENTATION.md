@@ -2,15 +2,15 @@
 
 Status: Active
 Owner: Product + Engineering
-Last Updated: 2026-07-20
+Last Updated: 2026-08-09
 
 ## Purpose
 
-This project keeps a private production repository and a public showcase archive. The public archive is not a raw dump of the production repository. It is a curated record that lets readers understand what changed, why it mattered, how it was verified, and which privacy boundaries were preserved.
+This project keeps a private production repository and a public showcase archive. The public archive is not a raw dump of the production repository. It is a curated record that lets readers understand what changed, why it mattered, whether their existing results are affected, and which privacy boundaries the product preserves.
 
 This standard exists so release notes, README files, version archive entries, and public evidence documents stay consistent across releases.
 
-Public prose starts with the clinical and practical meaning of a change. Reproducible engineering details follow in a technical section so the same document also supports independent verification.
+Public release prose is written first for clinicians. Engineering evidence, publication operations, and internal verification records belong in separate technical or private records, not in the release note.
 
 ## Scope
 
@@ -27,19 +27,19 @@ This standard does not require source code or machine-readable artifacts under `
 
 Every human-readable public document must explain product and calculation changes in clear professional language.
 
-The original v1 GAS patch notes are the project's writing reference. Their strongest pattern is simple: name the visible problem first, explain the relevant Rorschach concept in ordinary language, show when the problem appears, and then explain what was corrected. The v2 notes should preserve that human, first-hand tone while improving consistency and technical precision.
+The original v1 GAS patch notes are owner-authored historical originals as well as the project's writing reference. Do not rewrite, modernize, shorten, or otherwise editorialize them. A later non-owner insertion may be reverted only when a preserved owner-authored original proves the exact difference; any other v1 edit requires the owner's explicit approval. Their strongest pattern is simple: name the visible problem first, explain the relevant Rorschach concept in ordinary language, show when the problem appears, and then explain what was corrected. The v2 notes should preserve that human, first-hand tone while improving consistency and technical precision.
 
 1. Write in the voice of the project or development team. Natural phrases such as "수정했습니다", "확인했습니다", and "다시 계산할 필요는 없습니다" are preferred over detached audit-report language.
 2. Do not write as an AI assistant reporting to its owner, and do not refer to the project owner as "the user".
 3. Begin with the released change: where the problem appeared, what changed, which protocols can be affected, whether recalculation is necessary, and what action is needed.
 4. Follow the v1 explanatory order: visible symptom or affected card -> relevant scoring concept -> exact triggering condition -> correction -> verification and limitations.
 5. Explain calculation changes with a concrete response or coding example whenever that helps a clinician recognize the affected condition. Make clear that the example is illustrative and that coding remains a clinician's responsibility.
-6. Keep the main explanation in ordinary professional language. Terms such as `uncommitted draft`, `Git history`, `runtime`, `regression test`, `fixture`, `contract`, `guardrail`, `workflow`, `production parity`, and `release gate` belong in a technical appendix unless the term itself is essential.
+6. Keep the explanation in ordinary professional language. Terms such as `uncommitted draft`, `Git history`, `runtime`, `regression test`, `fixture`, `contract`, `guardrail`, `workflow`, `production parity`, and `release gate` belong in separate developer or private records unless the term itself describes a user-facing product feature.
 7. When a technical term or identifier is essential, explain it in plain language at first use. A command or variable name must never stand in for the explanation.
-8. Verification tools are not the protagonists of a release note. Name an AI model only when the release actually changes or tests that model-facing feature and the fact helps readers understand the result. Never narrate agent-to-agent work allocation, internal approval dialogue, intermediate worktree state, rejected drafts, or changing internal hypotheses.
+8. Verification tools are not the protagonists of a release note. Name an AI model only when the released product actually uses or changes that model and the fact helps readers understand the product. Never narrate agent-to-agent work allocation, internal approval dialogue, intermediate worktree state, rejected drafts, changing internal hypotheses, test reruns, database preparation, credential cleanup, build gates, or deployment preparation.
 9. Describe corrections at release level. Write "v2.2.1 corrected X, and v2.2.2 added Y" instead of recounting who first believed, rejected, or rediscovered a claim during development.
-10. Preserve historical facts, declared release dates, measurements, failures, and limitations. Improve the explanation without silently rewriting released behavior.
-11. Use headings and tables to put the clinical impact first. Detailed commands, file paths, hashes, and reproducibility notes may follow under a clearly labeled technical appendix.
+10. Preserve the truth about released product behavior, clinical impact, declared release dates, measurements, and limitations. Correct editorial metadata, ordering, formatting, and inaccurate prose directly and quietly. Git history and private evidence preserve the editing history; the public note must not announce the editing act.
+11. Use headings and tables only when they help clinicians understand the change. Detailed commands, file paths, hashes, test counts, build output, and reproducibility procedures belong in separate developer or evidence documents, not in the release note.
 12. When a release checks or corrects a calculation, coding boundary, Structural Summary field, or Special Index, identify the bibliographic source, edition, printed page, rule that was checked, affected app output, and repeatable verification. Readers should be able to trace a released conclusion without needing access to the private source collection.
 13. Cite printed book pages rather than local PDF viewer pages when printed pagination is available. Do not publish source PDFs, OCR exports, local filenames, acquisition paths, or private hashes. Paraphrase source rules and keep any indispensable quotation brief.
 
@@ -51,7 +51,7 @@ Public rewrites should follow these examples:
 | "The project owner approved the final gate." | Omit it. Approval workflow is not a product change. |
 | "The user said the workbook came from..." | "The initial v1 implementation used the publicly distributed 2019 workbook as a programming reference." |
 | "Two AI systems agreed that the formula was correct." | "The formula was checked against the stated rule, completed Structural Summary examples, program output, and repeatable boundary cases." |
-| "A regression contract and production-parity harness passed." | "The same calculation and answer path used by the web app passed repeatable checks." Put exact test names in the technical appendix. |
+| "A regression contract and production-parity harness passed." | "The released calculation was checked against the stated rule and representative boundary cases." Keep exact test names outside the release note. |
 
 ## Language Coverage Policy
 
@@ -59,7 +59,7 @@ The public documentation has a five-language reader-facing layer and an original
 
 1. Korean is the canonical source for reader-facing public documentation. The supported companion locales are English, Japanese, Spanish, and Brazilian Portuguese.
 2. Every reader-facing document group listed in the public localization manifest must provide all five locale files. This includes public entry README files, CHANGELOG files, acknowledgements, current release notes, and clinician-readable calculation explanations selected for publication.
-3. Historical release notes preserve released product facts. They may receive a clearly scoped editorial correction when private provenance, agent dialogue, local-environment wording, or other internal production notes were published by mistake; such a correction must not invent or alter released behavior.
+3. Historical v2 release notes preserve released product facts. When private provenance, agent dialogue, local-environment wording, inaccurate prose, or other internal production notes were published by mistake, edit the reader-facing text directly. Do not add a dated correction banner or describe the cleanup itself. The owner-authored v1 GAS notes remain protected by the stricter rule above.
 4. Raw AI evaluation reports, machine-generated evidence, deployment checklists, architecture rules, commands, and source-level technical records may remain in their original technical language. A reader-facing README or summary that introduces those records must be available in all five locales when it is listed in the manifest.
 5. Keep one prose language per file. Use separate locale files rather than placing several complete translations in one Markdown document.
 6. Translation is not a literal substitution task. Use the approved locale glossary, the existing five-language reference corpus, and professional target-language sources. Preserve Exner notation and explicitly review any term whose established target-language usage is uncertain.
@@ -120,8 +120,8 @@ The queryless URL is the Korean canonical page. Every indexable page must identi
 Public history begins at the released state, not at every draft considered while preparing it.
 
 1. A release note describes what changed between released versions. It does not recount uncommitted drafts, rejected wording, changing internal hypotheses, agent conversations, or the order in which possible solutions were considered.
-2. When a released note contains a factual mistake, preserve the released statement and add a dated correction that points to the release where behavior was corrected.
-3. When a declared release date is later normalized because a working session crossed midnight, update every archive display consistently and record the normalization once in the CHANGELOG and the release that performs the documentation correction.
+2. When a released note contains inaccurate prose, correct the reader-facing statement directly. If a later release changed product behavior, describe that product change in the later release and keep only the clinically necessary cross-version guidance in the older note. Never add a dated editorial correction banner.
+3. When a declared release date, archive order, or formatting is corrected, update every public display consistently and quietly. Keep the reason, comparison table, commit-time discussion, and correction history in Git or private evidence, not in README, CHANGELOG, release notes, or app copy.
 4. Do not change report dates, test-run dates, commit timestamps, or source history merely to match a normalized release date. Those dates describe different events.
 5. Do not infer a release date solely from Git history. The project declares the release date after reviewing the Asia/Seoul working boundary.
 
@@ -167,13 +167,13 @@ Use this structure for the Korean canonical public v2 Next.js release note. The 
 
 관련 로샤 개념, 정확한 발동 조건, 구체적인 예, 수정 내용을 순서대로 설명합니다.
 
-## 테스트 및 검증
+## 기존 결과를 다시 계산해야 하나요?
 
-검산에 사용한 근거와 반복 확인 결과를 먼저 설명합니다. 명령어와 파일 경로는 필요한 경우 기술 부록에 적습니다.
+영향받는 조건과 사용자가 해야 할 일을 직접 설명합니다.
 
-## 기술 부록
+## 근거와 한계
 
-재현에 필요한 명령어, 파일, 수치와 같은 개발 세부 사항을 적습니다.
+임상적으로 필요한 출처, 확인된 결론, 남아 있는 한계만 간단히 설명합니다. 내부 검사 절차와 개발 명령은 별도 기록에 둡니다.
 ```
 
 Patch notes can add a short extra section when needed, but the order above is the default.
@@ -187,8 +187,8 @@ Every public-facing release record must answer these questions:
 3. Do existing results need to be recalculated, or is any other action required?
 4. Why was it worth a release?
 5. Did the app UI/UX, data collection, or privacy behavior change?
-6. What evidence and checks support the conclusion, expressed first in plain language?
-7. For a calculation or coding change, which source edition and printed pages support it, and which app output and repeatable check demonstrate the implementation?
+6. What evidence supports the conclusion, expressed in plain language without narrating the internal checking process?
+7. For a calculation or coding change, which source edition and printed pages support it, and what clinically relevant limitation remains?
 
 For AI-related releases, state whether the user-visible assistant behavior changed. Internal evaluation harness changes belong in technical evidence, not in the reader-facing release story.
 
@@ -196,11 +196,9 @@ For AI-related releases, state whether the user-visible assistant behavior chang
 
 Release documents must distinguish between closing a specific engineering scope and ending an entire version line.
 
-1. Do not call a patch the "last" or "final" patch of a version line unless the version line has been explicitly frozen as a release decision.
-2. Prefer scope-specific wording such as "closes the initial harness scope", "completes the corpus recalibration batch", or "records the final pass of this eval run".
-3. `final-pass` may describe a particular eval artifact or release candidate. It must not imply that no later corrective release can exist.
-4. If later use reveals more work in the same version line, add a short scope clarification instead of silently deleting the old claim.
-5. The clarification must describe releases, not internal deliberation. State what the earlier release completed and which later release added or corrected the remaining behavior. Historical metrics and verification results remain unchanged unless separately corrected with evidence.
+1. Do not call a patch the "last" or "final" patch of a version line unless the version line has actually ended as a product decision.
+2. Describe the concrete product change instead of an internal engineering milestone, evaluation run, or closure label.
+3. If later work makes an old summary inaccurate, rewrite the summary so it states the released scope accurately. Do not add a follow-up banner explaining that the old wording was changed.
 
 ## Public Archive Update Checklist
 
@@ -215,8 +213,8 @@ When preparing a release:
 7. Run the public documentation localization check and resolve stale hashes, missing files, or structural drift.
 8. Ensure public-facing release text follows the language coverage policy and stays technically precise.
 9. Ensure the public source mirror excludes secrets, private work material, and raw model output. Enforce this as a publication check; do not turn the excluded-item inventory into reader-facing prose.
-10. Confirm that the impact, affected condition, need for recalculation, and limitations are clear before technical details appear.
-11. Remove AI-to-owner reporting language, agent names, local-environment narration, model-call counts or costs, mirror mechanics, and unexplained internal engineering terms from the reader-facing document. A technical appendix may contain reproducible public commands and public artifact names, but never private paths, acquisition notes, internal approval dialogue, or agent work allocation.
+10. Confirm that the impact, affected condition, need for recalculation, and limitations are clear, and remove technical material that does not help a clinician act on the release.
+11. Remove dated correction notices, archive/date/order maintenance, documentation synchronization, AI-to-owner reporting language, agent names, local-environment narration, test and model-call counts, credential or database cleanup, build and deployment preparation, mirror mechanics, commands, file-level diffs, and unexplained internal engineering terms from the reader-facing document.
 12. For calculation-related releases, verify every public source citation against the private source page before publication, and confirm that no copyrighted source file or extended passage entered the public mirror.
 
 ## Agent Rule
@@ -230,6 +228,6 @@ Before writing a public release note, an AI coding assistant must read:
 
 For a repository-wide voice rewrite, the assistant must read the complete v1 GAS release-note series before editing. For a routine new release after that baseline has been established, the representative v1 notes above are sufficient unless the new release revisits an older calculation or historical claim.
 
-The assistant must then perform a plain-language voice review before publication. It must specifically search for third-person references to the project owner and internal-process expressions such as uncommitted work, adversarial audit, independent reproduction, release gate, developer approval, runtime, fixture, and regression contract.
+The assistant must then perform a plain-language voice review before publication. It must specifically search every reader-facing file for dated correction or follow-up notices, archive/date/order maintenance, documentation synchronization, third-person references to the project owner, and internal-process expressions such as uncommitted work, adversarial audit, independent reproduction, release gate, developer approval, runtime, fixture, regression contract, test reruns, database reconstruction, credential cleanup, build output, and deployment preparation. A literal keyword scan is not sufficient: the final reviewer must ask whether each sentence helps a clinician understand or act on the released product.
 
 If the assistant finds a conflict between old release-note style and this standard, it must follow this standard and mention the inconsistency in its private implementation summary. That inconsistency does not belong in the public release narrative unless it changes the facts readers need to know.

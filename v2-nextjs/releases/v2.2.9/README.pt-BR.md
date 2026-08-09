@@ -26,46 +26,8 @@ O movimento dos pontos é reduzido quando o sistema operacional solicita a redu�
 
 O estado selecionado dos botões útil e não útil era pouco diferente do estado não selecionado. O fundo e a borda do botão agora mantêm a aparência existente, e apenas o polegar selecionado passa a ser um ícone sólido no azul do aplicativo. Assim, a escolha atual fica clara sem introduzir um novo código de cores para as avaliações.
 
-A avaliação é salva assim que um dos botões é pressionado. Ao escolher [Pular] na janela opcional de motivos, apenas a avaliação é mantida, sem códigos de motivo. Pressionar novamente o mesmo botão selecionado exclui a avaliação do banco de dados do servidor e devolve o botão ao estado não selecionado. O texto da pergunta e da resposta não é enviado ao banco de dados de avaliações.
-
-### Documentação do arquivo público
-
-As datas de arquivo da v1.0.2 e da v1.0.3 foram alinhadas à mesma data de Asia/Seoul, 2025-10-18. Dentro dessa data, a v1.0.3 aparece antes da v1.0.2.
-
-As contagens técnicas de quatro algarismos nos documentos públicos dos cinco idiomas agora são escritas sem separador de milhares, como `5604`, `1015`, `5589` e `2000`. Isso evita a ambiguidade de uma vírgula que possa ser interpretada como separador decimal em espanhol e português.
-
-Esta correção documental faz parte da v2.2.9. Ela não altera o código de cálculo nem os artefatos implantados de versões anteriores.
+A avaliação é salva assim que um dos botões é pressionado. Ao escolher [Pular] na janela opcional de motivos, apenas a avaliação é mantida, sem motivo. Pressionar novamente o mesmo botão selecionado exclui a avaliação e devolve o botão ao estado não selecionado. O texto da pergunta e da resposta não é incluído nas informações da avaliação.
 
 ## Resultados de cálculo existentes são afetados?
 
 Não. Esta versão não altera as fórmulas do Sumário Estrutural, os códigos de entrada disponíveis, o conteúdo dos documentos de referência nem as regras de resposta da IA. Protocolos existentes não precisam ser recalculados.
-
-## Testes e verificação
-
-- O conjunto completo de testes aprovou 600 verificações em 98 arquivos de teste; 7 foram ignoradas porque suas condições de execução não estavam disponíveis.
-- Em uma verificação direta, uma amostra já ordenada mudou de `I-X` para `X-I` e depois voltou para `I-X`.
-- Uma sessão local de teste foi iniciada após a seleção de [Assistente de Interpretação] na tela de pontuação, e a abertura do assistente foi confirmada. A chave de teste foi removida imediatamente da sessão local e não foi enviada à OpenAI.
-- Os testes automáticos cobrem o destino da sessão nos cinco idiomas, a permanência na tela atual após o início geral de sessão, os três pontos durante o streaming e a seta para baixo no estado ocioso.
-- Os testes automáticos também cobrem a aparência selecionada da avaliação, o salvamento sem motivos e a exclusão da avaliação armazenada quando o mesmo botão é pressionado novamente.
-- A validação do TypeScript e a análise estática dos arquivos modificados foram aprovadas.
-
-Esta versão não altera a geração de respostas, portanto as verificações existentes dos limites de resposta continuam aplicáveis.
-
-## Escopo confirmado sem alterações
-
-- As fórmulas do Sumário Estrutural e os campos de resultados não foram alterados.
-- Os documentos de referência e as regras de resposta dos assistentes de Codificação e Interpretação não foram alterados.
-- Permanece a política de não armazenar dados de pontuação nem chaves de API da OpenAI no banco de dados do servidor.
-
-## Apêndice técnico
-
-<details>
-<summary><strong>Comandos para reproduzir as verificações</strong></summary>
-
-```bash
-npm test
-npm run lint
-npx tsc --noEmit
-```
-
-</details>

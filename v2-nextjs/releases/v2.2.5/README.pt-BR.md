@@ -22,77 +22,25 @@ Mesmo quando um valor de movimento sem classificação como ativo ou passivo era
 
 Em particular, a quarta condição do CDI verifica se `movimento passivo > movimento ativo + 1`. Próximo ao ponto de corte, a ausência dessa classificação em um único movimento podia alterar se o CDI apareceria como positivo.
 
-Como exemplo concreto, foi usado um registro hipotético no qual as respostas “Uma pessoa está descansando” e “Outra pessoa está deitada dormindo” foram codificadas como `Mp H`. Se ambos os movimentos são `Mp`, o movimento passivo é 2 e o ativo é 0; portanto, a quarta condição é atendida e a tela mostra o CDI como `4, Positive`.
+Em um registro hipotético no qual “Uma pessoa está descansando” e “Outra pessoa está deitada dormindo” são codificadas como `Mp H`, o movimento passivo é 2 e o ativo é 0; portanto, a quarta condição é atendida e a tela mostra o CDI como `4, Positive`.
 
 Se, em uma versão anterior, o segundo `Mp` tivesse sido inserido como `M` sem classificação como ativo ou passivo, o total de movimento humano ainda apareceria como 2, mas a frequência passiva seria contabilizada apenas como 1. No mesmo registro situado no limite, a quarta condição deixaria de ser atendida e o CDI poderia aparecer como `3, NO`.
 
 Este exemplo é um registro hipotético formado por apenas duas respostas para demonstrar o limite do cálculo; não é um protocolo completo adequado à interpretação clínica. O profissional classifica o movimento como ativo ou passivo depois de examinar o registro de respostas e o inquérito (Inquiry).
 
-### Onde o problema começou?
-
-Os materiais do início do desenvolvimento foram comparados novamente.
-
-- A lista de entrada do arquivo de cálculo do Excel de 2019 usado no desenvolvimento da v1 continha apenas códigos de movimento classificados como ativos ou passivos, enquanto `M`, `FM` e `m` eram usados como totais derivados desses códigos.
-- A implementação em Perl do RorScore também lia códigos de movimento classificados como ativos ou passivos e calculava separadamente os totais `M`, `FM` e `m` e as frequências ativas e passivas.
-- O menu suspenso de codificação da v1.0.0 combinou códigos inseridos para respostas individuais com campos de total apresentados no Sumário Estrutural, e essa situação continuou até a v2.
-- O histórico da correção de MQual da v1.0.2 mostra que `M` sem classificação como ativo ou passivo foi tratado como código de resposta individual junto com `Ma`, `Mp` e `Ma-p`.
-
-Os registros preservados não permitem estabelecer a sequência manual exata pela qual a lista de entrada do Excel e os campos de total do Perl foram combinados. Dentro do que pode ser verificado, a explicação mais precisa é que **a distinção entre os códigos inseridos para respostas individuais e os totais exibidos no Sumário Estrutural se tornou imprecisa na implementação da v1**.
-
-Excel e Perl distinguiam, cada um em seu próprio contexto, os códigos de movimento de respostas individuais e os totais por tipo de movimento. O problema confirmado não estava na regra de cálculo de nenhum dos materiais de referência, mas na implementação do aplicativo que colocou itens com funções diferentes na mesma lista de entrada. O histórico do desenvolvimento e os limites das evidências disponíveis são descritos em detalhe no [documento de revisão do limite de entrada dos determinantes de movimento](../../source/docs/ops/2026-07-18-v2.2.5-movement-input-boundary.md).
-
 ## Correções relacionadas
 
 - As páginas de referência de `M`, `FM` e `m` nos cinco idiomas agora explicam a diferença entre os campos de total do Sumário Estrutural e os códigos inseridos para respostas individuais.
-- As explicações complementares na interface e as páginas de referência passaram a seguir o mesmo critério.
+- As explicações complementares na interface e as páginas de referência descrevem a mesma regra de entrada.
 - O Assistente de Codificação não apresenta mais `M`, `FM` ou `m` como códigos completos que podem ser inseridos diretamente para uma resposta individual e, em vez disso, pede as informações `a`, `p` ou `a-p` necessárias para completar o código.
-- Caracteres corrompidos foram restaurados em 4 perguntas de busca em japonês e em um registro coreano de manutenção de documentos.
-- Depois da alteração das páginas de referência, os dados de busca nos cinco idiomas foram reconstruídos.
-- As regras de geração de documentos e os testes de regressão foram reforçados para manter `Regra do código de entrada` e `Condição de codificação/aplicação` como seções separadas.
-- A ordem de resposta do Assistente de Interpretação foi reforçada para explicar primeiro o número de respostas e as limitações dos dados diante de perguntas amplas sobre o Sumário Estrutural.
+- O Assistente de Interpretação explica primeiro o número de respostas e as limitações dos dados diante de perguntas amplas sobre o Sumário Estrutural.
 
-## Testes e verificação
+Os assistentes de IA não garantem a exatidão das respostas a todas as perguntas clínicas, e suas respostas não servem como gabarito dos cálculos do Sumário Estrutural.
 
-Primeiro, foi verificado se os códigos de entrada e os campos de resultados mantinham funções diferentes.
-
-- O menu suspenso de codificação apresenta apenas os 29 códigos completos de determinantes.
-- `M`, `FM` e `m` permanecem nos resultados do Sumário Estrutural como totais por tipo de movimento.
-- Um valor antigo salvo automaticamente sem classificação como ativo ou passivo, o formato histórico do Excel `m'a` ou um código arbitrário não registrado interrompem o cálculo sem alterar o valor original.
-- A frequência total de movimento, os determinantes simples (Single) e as combinações de determinantes (Blends) continuam sendo contabilizados como conceitos distintos no Sumário Estrutural.
-- Os testes de regressão fixam o comportamento no limite do CDI: duas entradas `Mp` válidas atendem à quarta condição, enquanto apenas uma não atende.
-
-As páginas de referência nos cinco idiomas e os assistentes opcionais de IA também foram verificados.
-
-- As 365 perguntas de busca nos documentos recuperaram o material correspondente, e perguntas amplas ou com tema explícito não colocaram primeiro uma área de trabalho sem relação.
-- Perguntas preparadas confirmaram os limites de resposta dos assistentes de Codificação e Interpretação. Um problema na ordem de uma explicação longa e outro no reconhecimento de um sinônimo em inglês foram corrigidos e verificados novamente nos cinco idiomas e pela rota de resposta do aplicativo web.
-- No conjunto automatizado completo, 447 verificações em 81 arquivos de teste passaram e 7 foram ignoradas porque suas condições de execução não estavam disponíveis. Todas as 222 páginas de implantação foram geradas, e também passaram a análise estática, a auditoria de textos nos cinco idiomas, a verificação de segredos e as auditorias de dependências de produção e desenvolvimento.
-
-Essas verificações cobrem apenas limites de resposta preparados. Elas não garantem a exatidão clínica de todas as perguntas possíveis, e as respostas da IA não foram usadas como gabarito dos cálculos do Sumário Estrutural.
-
-## UI/UX, privacidade e banco de dados
+## Interface e privacidade
 
 - Nenhuma nova tela ou campo de entrada foi adicionado.
 - As três opções inválidas foram removidas do menu suspenso [Determinants].
 - Se um salvamento automático anterior contiver um determinante inválido, o aviso existente identifica a linha e o código, e o cálculo é interrompido.
 - Nenhuma nova informação pessoal é coletada.
-- Permanece a regra de que os dados de codificação não são armazenados no banco de dados do servidor.
-- A estrutura do banco de dados de feedback e os limites de requisição não foram alterados.
-
-O registro de verificação se baseia em referências profissionais públicas, no escopo do CS adotado por este aplicativo e em resultados de cálculo reproduzíveis.
-
-## Apêndice técnico
-
-<details>
-<summary><strong>Comandos para que desenvolvedores repitam as verificações</strong></summary>
-
-```bash
-npm test
-npm run lint
-npm run build
-npm run security:check
-npm run docs:evaluate-rag:all
-npm run docs:evaluate-hybrid:openai -- --enforce
-npm run ai:evaluate-contracts
-```
-
-</details>
+- Os dados de codificação salvos automaticamente permanecem apenas no dispositivo da pessoa usuária.

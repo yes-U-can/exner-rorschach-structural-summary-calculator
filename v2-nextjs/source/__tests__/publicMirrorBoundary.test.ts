@@ -6,6 +6,10 @@ import { describe, expect, it } from 'vitest';
 describe('public mirror privacy boundary', () => {
   it('excludes and purges private corpus working material', () => {
     const script = fs.readFileSync(path.join(process.cwd(), 'scripts', 'publish.ps1'), 'utf8');
+    const releaseProseGuard = fs.readFileSync(
+      path.join(process.cwd(), 'scripts', 'assert-reader-facing-release-prose.ps1'),
+      'utf8',
+    );
     const internalGuidanceGuard = '[regex]::Escape($internalAiGuidanceMarker)';
     const readerFacingGuard = script.slice(
       script.indexOf('function Assert-NoReaderFacingProductionNarrative'),
@@ -39,6 +43,13 @@ describe('public mirror privacy boundary', () => {
     expect(script).toContain('Assert-NoPublicGitMetadata');
     expect(script).toContain('Assert-NoPublicAuthoringMetadata');
     expect(script).toContain('Assert-NoReaderFacingProductionNarrative');
+    expect(script).toContain(". $readerFacingReleaseGuard");
+    expect(script.match(/Assert-NoReaderFacingReleaseProcessNarrative/g)?.length).toBeGreaterThanOrEqual(3);
+    expect(releaseProseGuard).toContain("'^v2\\.\\d+\\.\\d+$'");
+    expect(releaseProseGuard).toContain('Get-ReaderFacingReleaseProcessLeaks');
+    expect(releaseProseGuard).toContain('Test-IsProtectedV1ReleasePath');
+    expect(releaseProseGuard).toContain('Get-ReaderFacingV2ArchiveSummaries');
+    expect(releaseProseGuard).toContain("series:\\s*'v2-nextjs'");
     expect(readerFacingGuard).toContain(internalGuidanceGuard);
     expect(authoringGuard).toContain(internalGuidanceGuard);
     expect(script).toContain('-Recurse -Force');
@@ -49,5 +60,24 @@ describe('public mirror privacy boundary', () => {
     expect(script).toContain('Refusing to publish outside publish root');
     expect(script).toContain('PublishTargetRelativePath');
     expect(script).toContain('SyncOnly');
+
+    const publicLocalizationCheck = path.resolve(
+      process.cwd(),
+      '..',
+      '..',
+      'scripts',
+      'verify-public-document-locales.ps1',
+    );
+    if (fs.existsSync(publicLocalizationCheck)) {
+      const localizationScript = fs.readFileSync(publicLocalizationCheck, 'utf8');
+      expect(localizationScript).toContain('Get-ReaderFacingReleaseProcessLeaks -Root $repoRoot');
+      expect(localizationScript).toContain('[reader-facing-release-prose]');
+      const releaseProseFailure = localizationScript.indexOf(
+        'if ($releaseProseLeaks.Count -gt 0)',
+      );
+      const hashUpdate = localizationScript.indexOf('if ($UpdateHashes)');
+      expect(releaseProseFailure).toBeGreaterThan(0);
+      expect(hashUpdate).toBeGreaterThan(releaseProseFailure);
+    }
   });
 });

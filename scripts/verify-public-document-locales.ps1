@@ -5,6 +5,11 @@ param(
 
 $ErrorActionPreference = "Stop"
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
+$readerFacingReleaseGuard = Join-Path $repoRoot "v2-nextjs\source\scripts\assert-reader-facing-release-prose.ps1"
+if (-not (Test-Path -LiteralPath $readerFacingReleaseGuard -PathType Leaf)) {
+  throw "Reader-facing release prose guard not found: $readerFacingReleaseGuard"
+}
+. $readerFacingReleaseGuard
 $manifestPath = Join-Path $repoRoot "docs\localization\manifest.json"
 $manifest = Get-Content -LiteralPath $manifestPath -Raw -Encoding UTF8 | ConvertFrom-Json
 $errors = [System.Collections.Generic.List[string]]::new()
@@ -177,6 +182,13 @@ $expectedLocales = @('en', 'ja', 'es', 'pt-BR')
 $allLocales = @('ko') + $expectedLocales
 $allowedReviewStates = @('draft', 'reviewed', 'stale')
 $expectedReleaseTypes = @('major', 'minor', 'bug', 'hotfix')
+$releaseProseLeaks = @(Get-ReaderFacingReleaseProcessLeaks -Root $repoRoot)
+if ($releaseProseLeaks.Count -gt 0) {
+  $releaseProseLeaks | ForEach-Object {
+    Write-Host "[reader-facing-release-prose] $_" -ForegroundColor Red
+  }
+  throw "Public document localization verification stopped before hash updates because reader-facing release prose contains $($releaseProseLeaks.Count) internal-process issue(s)."
+}
 Assert-SequenceEqual -Label 'manifest locale order' -Expected $expectedLocales -Actual @($manifest.companionLocales) -GroupId 'manifest' -Locale 'all'
 
 if ($null -eq $manifest.releaseTypeLabels) {

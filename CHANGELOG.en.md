@@ -2,13 +2,9 @@
 
 [한국어](./CHANGELOG.md) | [English](./CHANGELOG.en.md) | [日本語](./CHANGELOG.ja.md) | [Español](./CHANGELOG.es.md) | [Português (Brasil)](./CHANGELOG.pt-BR.md)
 
-This document lists the public releases of `exner-rorschach-structural-summary-calculator` in reverse chronological order. Beginning with v2.2.1, each patch note for a change that may affect calculation results explains the affected condition and whether existing results need to be recalculated before presenting implementation details.
+This document lists the public releases of `exner-rorschach-structural-summary-calculator` in reverse chronological order. Beginning with v2.2.1, each patch note for a change that may affect calculation results explains the affected condition and whether existing results need to be recalculated.
 
-> **Release-date notation aligned (2026-07-18):** Some work sessions crossed midnight. For those releases, the archive now consistently uses the Asia/Seoul date declared for operations at the time rather than the commit timestamp. v2.2.3 began this correction, and v2.2.4 moved the continuous v2.1.8-v2.2.4 range one day earlier to match the corresponding work dates. Source history and the dates of verification reports were not changed.
-
-> **Additional correction (2026-08-01):** After rechecking the release order of v1.0.2 and v1.0.3, the archive date for v1.0.2 was aligned to the same Asia/Seoul date as v1.0.3: 2025-10-18. The calculation code and deployed versions from that time were not changed.
-
-## [Next.js] Version 2 release history
+## [v2] Version 2 release history
 
 | Date | Version | Type | Patch Note | Source |
 | --- | --- | --- | --- | --- |

@@ -58,11 +58,11 @@ Use this checklist before deploying the BYOK-only RAG build to production.
 
 1. `docs/ops/PUBLIC_RELEASE_DOCUMENTATION.md` is reviewed before writing public-facing release notes.
 2. Public-facing README, CHANGELOG, release notes, and companion summaries follow the language coverage policy.
-3. Human-readable public documents explain clinical impact and recalculation needs before engineering details.
+3. Human-readable public release notes explain clinical impact, affected conditions, recalculation needs, and limitations without including internal engineering operations.
 4. Public prose uses the project team's voice. It does not read like an AI reporting to its owner and does not call the project owner "the user".
-5. The note follows the v1 writing pattern: visible problem, relevant Rorschach concept, triggering condition, correction, and verification.
-6. The public narrative describes released behavior only. It does not recount rejected drafts, changing internal hypotheses, agent roles, worktree state, or approval dialogue.
-7. Internal terms such as uncommitted draft, adversarial audit, independent reproduction, release gate, runtime, regression test, fixture, and contract are removed from the main narrative or explained in a clearly labeled technical appendix.
+5. The note follows the v1 writing pattern: visible problem, relevant Rorschach concept, triggering condition, correction, recalculation guidance, and limitations.
+6. The public narrative describes released behavior only. It does not recount dated editorial corrections, archive maintenance, rejected drafts, changing internal hypotheses, agent roles, worktree state, approval dialogue, test reruns, database preparation, credential cleanup, build gates, or deployment preparation.
+7. Commands, file-level diffs, test counts, audit reports, and internal terms such as uncommitted draft, adversarial audit, independent reproduction, release gate, runtime, regression test, fixture, and contract remain outside the reader-facing release note.
 8. Korean canonical release notes keep essential technical identifiers in their original English form and explain them in plain language at first use.
 9. The English companion overview is updated when repository positioning, latest release, or key evidence links change.
 10. The app version archive entry points to the public `exner-rorschach-structural-summary-calculator` release note and source mirror.
@@ -70,7 +70,7 @@ Use this checklist before deploying the BYOK-only RAG build to production.
 12. AI eval evidence used in public documentation contains metadata only, not raw prompts, raw model answers, API keys, or private assessment payloads.
 13. Public source mirror excludes `.env*`, `.vercel/`, `node_modules/`, runtime logs, local caches, private work notes, API keys, and raw model output.
 14. Release dates use the date declared for the release in Asia/Seoul after accounting for work that crossed midnight. Do not infer or rewrite that date from a commit timestamp.
-15. Public history describes the state that was actually released. Pre-release drafts and changing internal hypotheses are not release history.
+15. Public history describes the state that was actually released. Editorial metadata and inaccurate prose are corrected consistently and quietly; the reason and editing history remain in Git or private evidence instead of a public correction banner.
 
 ## 7) Final Smoke Test
 

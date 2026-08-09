@@ -4,7 +4,7 @@
 
 Este documento explica as fontes de cálculo e o escopo bibliográfico da v2.2.10. Ele classifica 50 obras publicadas como evidência direta de cálculo, apoio interpretativo, limites em relação a outros sistemas de Rorschach, contexto histórico ou de pesquisa, ou material fora do escopo do produto.
 
-**A revisão bibliográfica não encontrou nenhum novo defeito que exija alteração dos resultados atuais do Resumo Estrutural. Protocolos existentes inseridos de acordo com as regras de codificação não precisam ser recalculados.**
+**A revisão bibliográfica não encontrou nenhum novo defeito que exija alteração dos resultados atuais do Sumário Estrutural. Protocolos existentes inseridos de acordo com as regras de codificação não precisam ser recalculados.**
 
 ## Método de revisão
 
@@ -50,7 +50,7 @@ A lista abaixo identifica as publicações revisadas e a função de cada uma no
 | 12 | John E. Exner Jr. (editor). *Issues and Methods in Rorschach Research*; Lawrence Erlbaum Associates; 1995; en | Suplemento especializado | Campo especializado ou adjacente | Não usado como evidência de cálculo ou interpretação |
 | 13 | Irving B. Weiner. *Principles of Rorschach Interpretation, Second Edition*; Second edition; Lawrence Erlbaum Associates; 2003; en | Fonte interpretativa central | Interpretação Exner CS | Apoio para interpretação Exner verificada |
 | 14 | John E. Exner Jr. *The Rorschach: A Comprehensive System, Volume 2: Interpretation, Second Edition*; Second edition; John Wiley & Sons; 1991; en | Fonte direta de Exner CS | Sistema Compreensivo de Exner | Apoio para interpretação Exner verificada |
-| 15 | John E. Exner Jr.; Irving B. Weiner. *The Rorschach: A Comprehensive System, Volume 3: Assessment of Children and Adolescents*; John Wiley & Sons; 1982; en | Fonte direta de Exner CS | Sistema Compreensivo de Exner | Não usado no escopo adulto do Resumo Estrutural |
+| 15 | John E. Exner Jr.; Irving B. Weiner. *The Rorschach: A Comprehensive System, Volume 3: Assessment of Children and Adolescents*; John Wiley & Sons; 1982; en | Fonte direta de Exner CS | Sistema Compreensivo de Exner | Não usado no escopo adulto do Sumário Estrutural |
 | 16 | J. Reid Meloy; Marvin W. Acklin; Carl B. Gacono; James F. Murray; Charles A. Peterson. *Contemporary Rorschach Interpretation*; Lawrence Erlbaum Associates; 1997; en | Suplemento especializado | Campo especializado ou adjacente | Não usado como evidência de cálculo ou interpretação |
 | 17 | James H. Kleiger. *Disordered Thinking and the Rorschach: Theory, Research, and Differential Diagnosis*; The Analytic Press; 1999; en | Suplemento especializado | Campo especializado ou adjacente | Não usado como evidência de cálculo ou interpretação |
 | 18 | John E. Exner Jr.; Manuel Esbert Ramírez (translator). *Manual de Codificación del Rorschach para el Sistema Comprehensivo*; Third Spanish edition; source original fifth edition; Editorial Psimática; 2008; es | Fonte direta de Exner CS | Sistema Compreensivo de Exner | Usado somente para comparar terminologia |
@@ -93,7 +93,7 @@ Upper Section, Lower Section, Special Indices e as regras de entrada foram verif
 
 | Escopo | Evidência direta | Resultado |
 | --- | --- | --- |
-| Administração, codificação e Resumo Estrutural | Volume 1, 4.ª ed., pp. impressas 68-157; Workbook, 5.ª ed., capítulos pertinentes e pp. impressas 91-101 | As regras de entrada e todo o Resumo Estrutural foram vinculados a funções, tela, PDF e testes. |
+| Administração, codificação e Sumário Estrutural | Volume 1, 4.ª ed., pp. impressas 68-157; Workbook, 5.ª ed., capítulos pertinentes e pp. impressas 91-101 | As regras de entrada e todo o Sumário Estrutural foram vinculados a funções, tela, PDF e testes. |
 | Upper Section | Volume 1, 4.ª ed., pp. impressas 148-150; Workbook, 5.ª ed., pp. impressas 91-92 | Foram verificados os totais de Location, DQ, FQ, determinantes, conteúdos, Special Scores e Z. |
 | Lower Section | Volume 1, 4.ª ed., pp. impressas 151-155; Workbook, 5.ª ed., pp. impressas 93-99 | Foram verificados cálculos e apresentação de Core a Self-Perception, e a apresentação ausente de `GHR:PHR` foi restaurada. |
 | Special Indices | Volume 1, 4.ª ed., p. impressa 156; Workbook, 5.ª ed., pp. impressas 100-101 | Foram conferidas as condições e os limites de PTI, DEPI, CDI, S-CON, HVI e OBS. |
@@ -108,8 +108,8 @@ Fontes de outros sistemas não complementam a referência normativa do cálculo.
 | Administração | O R-PAS controla o número de respostas por meio da administração R-Optimized, diferente da administração Exner CS. | A administração R-PAS não é convertida automaticamente em CS. |
 | Location, DQ e espaço | Sy, Vg, SI e SR do R-PAS não equivalem diretamente a DQ e S do CS. | Códigos exclusivos do R-PAS não são aceitos nem convertidos em entradas CS. |
 | Determinantes | O R-PAS reúne várias variantes de sombreado e reflexo e não codifica Cn. Basic Rorschach também é outro sistema. | A lista Exner e os qualificadores de movimento são mantidos. |
-| Qualidade Formal e normas | As tabelas de Qualidade Formal e os escores padronizados do R-PAS não são as tabelas FQ nem as normas do Resumo Estrutural do CS. | Valores R-PAS não são inseridos no Resumo Estrutural CS. |
-| Resumo e índices | O R-PAS não preserva sem alterações Upper/Lower/Special Indices do CS. | O aplicativo calcula apenas o Resumo Estrutural de Exner CS. |
+| Qualidade Formal e normas | As tabelas de Qualidade Formal e os escores padronizados do R-PAS não são as tabelas FQ nem as normas do Sumário Estrutural do CS. | Valores R-PAS não são inseridos no Sumário Estrutural CS. |
+| Resumo e índices | O R-PAS não preserva sem alterações Upper/Lower/Special Indices do CS. | O aplicativo calcula apenas o Sumário Estrutural de Exner CS. |
 | Sistemas históricos e locais | Klopfer, Beck, Piotrowski, kan/kob/clob da escola francesa e códigos chineses locais seguem regras diferentes. | Letras semelhantes não são convertidas em códigos Exner; o limite é explicado. |
 | Testes adjacentes e julgamentos | Integração com MMPI, diagnóstico, tratamento e julgamento forense excedem o escopo. | O assistente recusa o pedido e retorna a uma pergunta Exner CS. |
 
@@ -117,7 +117,7 @@ Fontes de outros sistemas não complementam a referência normativa do cálculo.
 
 - Os documentos de referência e o assistente de IA são limitados à codificação, ao cálculo e à interpretação do Sistema Compreensivo de Exner.
 - As regras do R-PAS, Basic Rorschach, escola projetiva francesa e sistemas locais ou históricos não são convertidas nem misturadas aos cálculos Exner.
-- Para diagnóstico, tratamento, julgamento legal, integração com MMPI e outros pedidos além do cálculo do Resumo Estrutural, o assistente explica o limite do produto.
+- Para diagnóstico, tratamento, julgamento legal, integração com MMPI e outros pedidos além do cálculo do Sumário Estrutural, o assistente explica o limite do produto.
 - Perguntas normais sobre Exner e perguntas fora do escopo foram verificadas nos cinco idiomas.
 
 ## Limitações restantes

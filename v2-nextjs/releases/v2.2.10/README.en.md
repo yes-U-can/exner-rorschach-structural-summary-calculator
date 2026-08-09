@@ -6,7 +6,7 @@
 
 v2.2.10 keeps the Structural Summary calculations unchanged, restores the missing `GHR:PHR` display on the result screen and in the PDF, and improves PDF readability.
 
-The source and boundary review found no new defect that requires a change to current results. Existing protocols entered according to the coding rules do not need to be recalculated.
+Existing protocols entered according to the coding rules do not need to be recalculated.
 
 ## Changes
 
@@ -20,37 +20,35 @@ The screen and PDF now show `GHR:PHR` after `COP` and `AG`, and before `a:p`. Th
 
 - Standard Lower Section cards now use a simpler two-column label-and-value table.
 - S-CON, DEPI, CDI, HVI, and OBS now print an overall-result checkbox and clearer criterion dividers.
-- The HVI result text was adjusted to avoid an awkward one-character line wrap.
+- The print size of the HVI result text was adjusted to avoid an awkward one-character line wrap.
 
 These changes improve presentation and printing only. They do not change formulas or decisions.
 
-## Calculation sources rechecked
+## Calculation sources
 
-The two primary calculation sources for this review were:
+The two primary calculation sources are:
 
 1. Exner, J. E., Jr. (2003). *The Rorschach: A Comprehensive System, Volume 1: Basic Foundations and Principles of Interpretation* (4th ed.). John Wiley & Sons.
 2. Exner, J. E., Jr. (2001). *A Rorschach Workbook for the Comprehensive System* (5th ed.). Rorschach Workshops.
 
 Page numbers in the table refer to the pages printed in each publication.
 
-| Area reviewed | Volume 1, 4th ed. | Workbook, 5th ed. | Result |
+| Area | Volume 1, 4th ed. | Workbook, 5th ed. | Scope in the app |
 | --- | --- | --- | --- |
 | Movement determinants and M, FM, m families | pp. 91-95 | pp. 35-37 | Active/passive qualifiers are entered while family totals appear in the Structural Summary. |
-| Multiple content codes and the An/Xy boundary | pp. 126, 128 | pp. 55-56 | Duplicate-content rules and Na/Bt/Ls and An/Xy entry boundaries were rechecked. |
-| Level 1 and 2, CONTAM, and multiple Special Scores | pp. 135, 138-139, 145 | pp. 62-63, 69-70, 79-80 | Level pairs, CONTAM exclusivity, and WSum6 boundaries were rechecked. |
+| Multiple content codes and the An/Xy boundary | pp. 126, 128 | pp. 55-56 | Duplicate-content rules and the Na/Bt/Ls and An/Xy entry boundaries are in scope. |
+| Level 1 and 2, CONTAM, and multiple Special Scores | pp. 135, 138-139, 145 | pp. 62-63, 69-70, 79-80 | Level pairs, CONTAM exclusivity, and WSum6 boundaries are in scope. |
 | GHR/PHR decisions | pp. 143-144 | p. 77 | The current calculation follows the seven-step decision sequence. |
-| Upper Section | pp. 148-150 | pp. 91-92 | Location, DQ, FQ, determinant, content, and Special Score totals were rechecked. |
-| Lower Section | pp. 151-155 | pp. 93-99 | Calculations and displays from Core through Self-Perception were compared. |
-| Six Special Indices | p. 156 | pp. 100-101 | PTI, DEPI, CDI, S-CON, HVI, and OBS criteria and boundaries were rechecked. |
+| Upper Section | pp. 148-150 | pp. 91-92 | The Structural Summary includes Location, DQ, FQ, determinant, content, and Special Score totals. |
+| Lower Section | pp. 151-155 | pp. 93-99 | Calculations and displays cover Core through Self-Perception. |
+| Six Special Indices | p. 156 | pp. 100-101 | The scope includes PTI, DEPI, CDI, S-CON, HVI, and OBS criteria and boundaries. |
 | Age applicability and adjustments | p. 157 | pp. 100-101 | The clinician continues to decide age-related applicability. |
-
-See the [calculation-source cross-check](../../source/docs/ops/2026-08-04-v2.2.10-calculation-source-crosscheck.md) for item-level mappings and [calculation sources and literature scope](../../methodology/reference-audit-v2.2.10/README.en.md) for the reviewed publications and system boundaries.
 
 ### PTI edition difference
 
-Volume 1, 4th edition, p. 156 prints the high-R branch of PTI's fourth criterion as `R > 16` with `WSum6 > 16`. Workbook, 5th edition, p. 101 and RIAP 5 operational output use `R > 16` with `WSum6 > 17`.
+Volume 1, 4th edition, p. 156 prints the high-R branch of PTI's fourth criterion as `R > 16` with `WSum6 > 16`. Workbook, 5th edition, p. 101 and RIAP 5 output use `R > 16` with `WSum6 > 17`.
 
-The app retains `> 17`, following the later Workbook and operational output. The edition difference is recorded in the cross-check.
+The app retains `> 17`, following the later Workbook and that output.
 
 ### S-CON and age
 
@@ -66,14 +64,6 @@ The AI assistant is limited to the Exner Comprehensive System. It does not mix r
 
 Existing protocols do not need to be recalculated. To keep an older protocol in the new PDF format, reopen it and generate the PDF again.
 
-## Checks completed
-
-- Calculation sources and both sides of the six Special Indices boundaries were rechecked.
-- Public examples and a varied set of synthetic protocols were used for calculation cross-checks.
-- The same input produced the same result in all five languages.
-- `GHR:PHR` placement and the PDF checkboxes, dividers, and wrapping were checked.
-- The full automated test suite, static analysis, security checks, and deployment build passed.
-
 ## Sources and copyright
 
-The public documents provide publication details, printed pages used for calculation, and concise verification results. They do not reproduce extended copyrighted passages or actual assessment material.
+The public documents provide publication details and the printed pages used for calculation. They do not reproduce extended copyrighted passages or actual assessment material.

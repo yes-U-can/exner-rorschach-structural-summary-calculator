@@ -28,61 +28,22 @@ Existing protocols in which location, movement determinants, and Form Quality we
 
 ### Related corrections
 
-- The five-language reference documents for location `S`, movement determinants, and Form Quality now state the input rules above in identical terms.
-- A rule list was introduced that automatically checks whether the five language versions state the same clinical rules. If a document is corrected in one language and missed in another, the check now fails at the document-generation step.
-- The Coding Assistant's response rules were strengthened so that it does not present a standalone `S`, duplicates within a movement family, or blank Form Quality as complete codes.
-- After the reference documents were changed, the search data for all five languages was rebuilt.
-- Typos and terminology in the Spanish and Portuguese documents were cleaned up, along with English headings that remained in four places in the Japanese documents.
-- A status marker that was never actually used was removed from the reference-document drafts, and a validity check was added for the allowed document-status values.
+- The five-language reference documents for location `S`, movement determinants, and Form Quality explain the input rules above.
+- The Coding Assistant does not present a standalone `S`, duplicates within a movement family, or blank Form Quality as complete codes.
 
-## Testing and verification
+## Clinical basis
 
-The calculation rules were verified against public materials.
+- Official RIAP v5 sample reports show white space combined with a basic location, as in `WS` and `DdS`.
+- The same samples tally `none` as a formal Form Quality category and state that S-CON applies to subjects over 14.
+- The active-passive rules for movement determinants and the conditions for applying `a-p` follow public clinical literature covering the Exner source material.
+- Reporting Lambda as the pure F count is a software reporting convention used in multiple public sources.
 
-- In the scoring sequences of the official RIAP v5 sample reports, white space was confirmed to always appear combined with a basic location, as in `WS` and `DdS`.
-- The same samples confirmed that `none` is tallied as a formal category in the Form Quality table, and that S-CON is explicitly stated to apply to subjects over 14.
-- The active-passive rules for movement determinants and the conditions for applying `a-p` were confirmed with public clinical literature that reproduces the Exner source material.
-- The Structural Summary values of a published 20-response case were confirmed to be identical before and after this patch.
+These materials explain the input rules. Clinicians remain responsible for coding individual responses and deciding whether an index applies in practice.
 
-Input blocking and the five-language guidance were also checked on the actual screens.
-
-- A standalone `S` does not appear among the location options.
-- Once a code from a movement family is selected, the other codes in the same family are shown as unavailable.
-- For every determinant, a code that is already selected is shown as unavailable in the other slots.
-- When Form Quality is blank, calculation stops and the rows that need review are identified. The guidance text was checked on screen in each of the five languages.
-- A standalone `S`, duplicate movement codes, or blank Form Quality remaining in older autosaves is announced the same way without changing the original data.
-
-The five-language search data and AI assistants were also checked.
-
-- All 380 reference-search questions retrieved the relevant document, with relevant material appearing first for both broad and explicitly named questions.
-- Representative questions about a standalone `S`, duplicate movement codes, and blank Form Quality were checked in all five languages, and the answers stayed within the new rules.
-- In the full automated suite, 83 test files passed all 476 checks; 7 checks were skipped because their run conditions were unavailable. The production build, static code checks, five-language copy audit, and secret scanning also passed.
-
-Reporting Lambda as the pure F count is a software reporting convention on which several public sources agree. The scope of evidence confirmed through public sources and the remaining limits are recorded as-is in the verification documents.
-
-Verification was based on public professional references and reproducible calculation results.
-
-## UI/UX, privacy, and calculation scope
+## Interface, privacy, and calculation scope
 
 - No new screen or input field was added.
 - The standalone `S` was removed from the [Location] options, and duplicate selection within a movement family is indicated with disabled options.
 - Calculation results for existing protocols entered by the rules are unchanged.
 - No new personal information is collected.
-- The existing rule that scoring data and API keys are not stored in the server database remains unchanged.
-
-## Technical appendix
-
-<details>
-<summary><strong>Commands for developers to repeat the checks</strong></summary>
-
-```bash
-npm test
-npm run lint
-npm run build
-npm run security:check
-npm run docs:evaluate-rag:all
-npm run docs:evaluate-hybrid:openai -- --enforce
-npm run ai:evaluate-contracts
-```
-
-</details>
+- Autosaved scoring data remains on the user's device. An API key is used in encrypted form for an AI connection for up to 24 hours and is deleted when the connection ends.
