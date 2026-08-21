@@ -186,11 +186,11 @@ const CONTENT: Record<Language, AboutContent> = {
   es: {
     title: 'Presentación del servicio',
     introParagraphs: [
-      'Esta aplicación apoya el cálculo del Resumen Estructural del Sistema Comprehensivo de Rorschach de Exner y la búsqueda de documentos de referencia. El cálculo y la búsqueda pueden usarse sin crear una cuenta.',
+      'Esta aplicación apoya el cálculo del Sumario Estructural del Sistema Comprehensivo de Rorschach de Exner y la búsqueda de documentos de referencia. El cálculo y la búsqueda pueden usarse sin crear una cuenta.',
       'Las funciones de IA usan una sesión BYOK, no una cuenta de usuario. Cuando se introduce una clave API de OpenAI, la clave se cifra en una cookie HttpOnly de 24 horas y no se guarda en la base de datos del servidor.',
       'La base de datos RAG de referencias públicas se usa solo para la recuperación y se mantiene separada de la base de datos opcional de valoraciones de IA, que no contiene el texto. Ninguna guarda cuentas, claves API, historial de chat ni datos de cálculo.',
       'El asistente de IA es una herramienta de apoyo para revisión y aprendizaje. No sustituye el juicio clínico profesional, el diagnóstico formal ni la responsabilidad final de la persona usuaria.',
-      'MOW es responsable de la planificación, el diseño, el desarrollo, el despliegue, la operación técnica y el mantenimiento del servicio. El Instituto de Psicología Clínica de Seúl (Seoul Institute of Clinical Psychology, SICP) aportó la revisión clínica de la transferencia inicial de la lógica de cálculo al programa, verificó las fórmulas y los resultados del Resumen Estructural y proporcionó comentarios basados en el uso práctico.',
+      'MOW es responsable de la planificación, el diseño, el desarrollo, el despliegue, la operación técnica y el mantenimiento del servicio. El Instituto de Psicología Clínica de Seúl (Seoul Institute of Clinical Psychology, SICP) aportó la revisión clínica de la transferencia inicial de la lógica de cálculo al programa, verificó las fórmulas y los resultados del Sumario Estructural y proporcionó comentarios basados en el uso práctico.',
     ],
     frameworkTitle: 'Human-in-the-Loop: principios de IA centrada en la persona',
     frameworkLead:

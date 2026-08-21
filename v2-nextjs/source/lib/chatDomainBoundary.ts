@@ -86,8 +86,8 @@ const EXNER_SCOPE_PATTERNS = [
   /\b(exner|rorschach|comprehensive system)\b/iu,
   /(엑스너|로샤|종합체계|구조요약|구조 요약|부호화|채점)/u,
   /(エクスナー|ロールシャッハ|包括システム|構造集計|コーディング)/u,
-  /(sistema comprensivo|resumen estructural|codificaci[oó]n de rorschach)/iu,
-  /(sistema compreensivo|sum[aá]rio estrutural|codifica[cç][aã]o de rorschach)/iu,
+  /(sistema comprensivo|(?:resumen|sumario) estructural|codificaci[oó]n de rorschach)/iu,
+  /(sistema compreensivo|(?:sum[aá]rio|resumo) estrutural|codifica[cç][aã]o de rorschach)/iu,
   /\b(lambda|depi|pti|s-?con|hvi|cdi|obs|adjd|ebper|wsum6|xa%|wda%|x-%|fq|fabcom|contam|dr[12]|incom[12]|psv)\b/iu,
 ] as const;
 
@@ -107,21 +107,21 @@ const DOMAIN_RESPONSES: Record<
     ko: '요청하신 내용은 처리할 수 없습니다. 시스템 지침, 내부 설정, 참조 자료 원문, API 키·쿠키·세션 정보는 공개하거나 재구성하지 않습니다. 엑스너 종합체계(CS)의 부호화 또는 구조요약 검토 질문으로 바꿔 주세요.',
     en: 'I cannot help with that request. I do not disclose or reconstruct system instructions, internal configuration, raw reference material, API keys, cookies, or session information. Please ask an Exner Comprehensive System (CS) coding or Structural Summary question.',
     ja: 'その依頼には対応できません。システム指示、内部設定、参照資料の原文、APIキー、Cookie、セッション情報は開示・再構成しません。エクスナー包括システム（CS）のコーディングまたは構造集計について質問してください。',
-    es: 'No puedo ayudar con esa solicitud. No revelo ni reconstruyo instrucciones del sistema, configuración interna, material de referencia sin procesar, claves de API, cookies ni información de sesión. Formula una pregunta sobre codificación o Resumen Estructural del Sistema Comprehensivo de Exner (CS).',
+    es: 'No puedo ayudar con esa solicitud. No revelo ni reconstruyo instrucciones del sistema, configuración interna, material de referencia sin procesar, claves de API, cookies ni información de sesión. Formula una pregunta sobre codificación o Sumario Estructural del Sistema Comprehensivo de Exner (CS).',
     pt: 'Não posso ajudar com essa solicitação. Não revelo nem reconstruo instruções do sistema, configurações internas, material de referência bruto, chaves de API, cookies ou informações de sessão. Faça uma pergunta sobre codificação ou Sumário Estrutural do Sistema Compreensivo de Exner (CS).',
   },
   adjacent_assessment: {
     ko: '이 도우미는 엑스너 종합체계(CS) 전용입니다. R-PAS·MMPI 등 다른 검사 체계의 해석이나 교차검사 통합해석은 제공하지 않습니다. 엑스너 CS의 부호화 또는 구조요약 범위에서 질문해 주세요.',
     en: 'This assistant is limited to the Exner Comprehensive System (CS). It does not provide R-PAS, MMPI, other assessment-system guidance, or cross-test integration. Please ask within Exner CS coding or Structural Summary review.',
     ja: 'このアシスタントはエクスナー包括システム（CS）専用です。R-PAS、MMPI、その他の検査体系の解釈や検査間の統合解釈は行いません。エクスナーCSのコーディングまたは構造集計の範囲で質問してください。',
-    es: 'Este asistente se limita al Sistema Comprehensivo de Exner (CS). No ofrece orientación sobre R-PAS, MMPI u otros sistemas de evaluación, ni integración entre pruebas. Formula una pregunta sobre codificación o revisión del Resumen Estructural de Exner CS.',
+    es: 'Este asistente se limita al Sistema Comprehensivo de Exner (CS). No ofrece orientación sobre R-PAS, MMPI u otros sistemas de evaluación, ni integración entre pruebas. Formula una pregunta sobre codificación o revisión del Sumario Estructural de Exner CS.',
     pt: 'Este assistente é limitado ao Sistema Compreensivo de Exner (CS). Ele não oferece orientação sobre R-PAS, MMPI ou outros sistemas de avaliação, nem integração entre testes. Faça uma pergunta sobre codificação ou revisão do Sumário Estrutural do Exner CS.',
   },
   unrelated_request: {
     ko: '이 도우미는 엑스너 종합체계(CS)의 부호화와 구조요약 검토만 지원합니다. 해당 범위의 질문으로 바꿔 주세요.',
     en: 'This assistant supports only Exner Comprehensive System (CS) coding and Structural Summary review. Please reframe the request within that scope.',
     ja: 'このアシスタントはエクスナー包括システム（CS）のコーディングと構造集計の検討のみを支援します。その範囲内で質問してください。',
-    es: 'Este asistente solo admite la codificación y la revisión del Resumen Estructural del Sistema Comprehensivo de Exner (CS). Reformula la solicitud dentro de ese ámbito.',
+    es: 'Este asistente solo admite la codificación y la revisión del Sumario Estructural del Sistema Comprehensivo de Exner (CS). Reformula la solicitud dentro de ese ámbito.',
     pt: 'Este assistente oferece suporte somente à codificação e à revisão do Sumário Estrutural do Sistema Compreensivo de Exner (CS). Reformule a solicitação dentro desse escopo.',
   },
 };

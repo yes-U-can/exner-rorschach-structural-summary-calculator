@@ -1573,7 +1573,7 @@ function resultEntryText(title: string, base: string, section: string, lang: Lan
       '[臨床上の注意] 信頼度は、プロトコルの妥当性と採点の信頼性に左右されます。',
     ].join('\n\n'),
     es: [
-      `[Concepto] ${title} se interpreta en el marco de ${sec} del Resumen Estructural. ${safeBase}`,
+      `[Concepto] ${title} se interpreta en el marco de ${sec} del Sumario Estructural. ${safeBase}`,
       `[Logica de Lectura] Evalua nivel, direccion y estabilidad del indicador a lo largo del protocolo.`,
       `[Regla de Variables Cruzadas] Verifique convergencia con variables vecinas antes de concluir.`,
       `[Cautela Clinica] Es apoyo estructurado y no sustituye el juicio clinico integral.`,
@@ -1581,7 +1581,7 @@ function resultEntryText(title: string, base: string, section: string, lang: Lan
       '[Precaución clínica] La confianza depende de la suficiencia del protocolo y una codificación fiable.',
     ].join('\n\n'),
     pt: [
-      `[Conceito] ${title} e interpretado no contexto de ${sec} no Resumo Estrutural. ${safeBase}`,
+      `[Conceito] ${title} e interpretado no contexto de ${sec} no Sumário Estrutural. ${safeBase}`,
       `[Logica de Leitura] Avalie nivel, direcao e estabilidade do indicador ao longo do protocolo.`,
       `[Regra de Variaveis Cruzadas] Confirme convergencia com variaveis vizinhas antes de concluir.`,
       `[Cautela Clinica] E suporte estruturado e nao substitui julgamento clinico integral.`,
@@ -1614,12 +1614,12 @@ function categoryText(title: string, lang: Language): string {
       `[Reliability Focus] Apply hierarchy, exclusion, and card-context checks before final coding.`,
     ].join('\n\n'),
     es: [
-      `[Resumen] ${title} es un dominio principal de codificacion e interpretacion en el Resumen Estructural de Exner.`,
+      `[Resumen] ${title} es un dominio principal de codificacion e interpretacion en el Sumario Estructural de Exner.`,
       `[Alcance] Esta seccion transforma respuestas crudas en indicadores estructurados mediante reglas explicitas.`,
       `[Confiabilidad] Aplique jerarquia, exclusion y ajuste por contexto de lamina antes del cierre.`,
     ].join('\n\n'),
     pt: [
-      `[Visao Geral] ${title} e um dominio central de codificacao e interpretacao no Resumo Estrutural de Exner.`,
+      `[Visao Geral] ${title} e um dominio central de codificacao e interpretacao no Sumário Estrutural de Exner.`,
       `[Escopo] Esta secao transforma respostas brutas em indicadores estruturados por regras explicitas.`,
       `[Confiabilidade] Aplique hierarquia, exclusao e adequacao ao contexto do cartao antes do fechamento.`,
     ].join('\n\n'),

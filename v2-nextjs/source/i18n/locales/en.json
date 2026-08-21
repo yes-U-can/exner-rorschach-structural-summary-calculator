@@ -1,7 +1,7 @@
 {
   "app": {
     "title": "Rorschach Structural Summary Calculator",
-    "version": "v2.2.10",
+    "version": "v2.2.11",
     "provider": "Developed and maintained by MOW"
   },
   "nav": {
@@ -257,6 +257,10 @@
     "validity": {
       "title": "Validity Warning",
       "message": "If the number of responses is less than 14, the profile validity may be low, reducing the reliability of interpretation."
+    },
+    "missingCards": {
+      "title": "Check Card Entry",
+      "message": "Before calculating, enter at least one response for each card from I through X. Missing cards: {cards}"
     },
     "invalidDeterminants": {
       "title": "Review Movement Determinants",

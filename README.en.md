@@ -20,13 +20,21 @@ Each patch note explains what changed, the conditions that may be affected, whet
 ## What is available
 
 - [v2] Live web app: [exner.yesucan.co.kr](https://exner.yesucan.co.kr)
-- [v2] Latest version 2 release: [v2-nextjs/releases/v2.2.10](./v2-nextjs/releases/v2.2.10/README.en.md)
+- [v2] Latest version 2 release: [v2-nextjs/releases/v2.2.11](./v2-nextjs/releases/v2.2.11/README.en.md)
 - [v2] v2.2.10 calculation sources and literature scope: [calculation sources and literature scope](./v2-nextjs/methodology/reference-audit-v2.2.10/README.en.md)
 - [v2] Version 2 release archive: [v2-nextjs/releases](./v2-nextjs/releases/)
 - [v2] Version 2 public source: [v2-nextjs/source](./v2-nextjs/source/)
 - [Google Apps Script] Version 1 release archive: [v1-gas/releases](./v1-gas/releases/)
 - Latest v1 deployment: [v1.4.1 deployment](https://script.google.com/macros/s/AKfycbxMCx13pkrSzFs8f2qXfmxy2LRhkBpZTItFTIfEOoOi-zwurbysnKGfDIYtAeEdQP99/exec)
 - Latest v1 source: [v1-gas/current](./v1-gas/current/)
+
+## v2.2.11
+
+v2.2.11 adjusts the calculation start rule so that a record with R of 10–13 can be calculated after the existing validity warning when cards I–X have all been entered. When cards I–X have all been entered and R is 14 or more, calculation proceeds as before. If any card is missing, calculation does not proceed regardless of the response count, and the missing cards are identified.
+
+The Spanish name is standardized as Sumario Estructural and the Portuguese name as Sumário Estrutural. The service name Yes, U Can! remains unchanged, while the Korean search description states the free-use information more clearly.
+
+The formulas, calculated values, and privacy handling have not changed. Existing protocols do not need to be recalculated. Records with a low response count should be used for study and review while considering the displayed validity warning and clinical limitations.
 
 ## v2.2.10
 
@@ -100,6 +108,7 @@ The AI assistants were restricted from expanding beyond the Exner Comprehensive 
 
 ## [v2] Version 2 release history
 
+- **[2026-08-21] v2.2.11 (bug-fix release)** [Patch note](./v2-nextjs/releases/v2.2.11/README.en.md) [Source](./v2-nextjs/source/)
 - **[2026-08-08] v2.2.10 (bug-fix release)** [Patch note](./v2-nextjs/releases/v2.2.10/README.en.md) [Source](./v2-nextjs/source/)
 - **[2026-08-01] v2.2.9 (bug-fix release)** [Patch note](./v2-nextjs/releases/v2.2.9/README.en.md) [Source](./v2-nextjs/source/)
 - **[2026-07-31] v2.2.8 (bug-fix release)** [Patch note](./v2-nextjs/releases/v2.2.8/README.en.md) [Source](./v2-nextjs/source/)

@@ -86,6 +86,7 @@ describe('chat Exner domain boundary', () => {
     ['en', 'What does S-CON mean in the Exner Comprehensive System?'],
     ['ja', 'この行のFQについて、もう少し詳しく説明してください。'],
     ['es', 'Explica el Lambda de este resumen estructural.'],
+    ['es', 'Explica el Lambda de este Sumario Estructural.'],
     ['pt', 'O pai foi citado no histórico; isso muda a hipótese baseada no EB?'],
     ['en', 'In Exner CS, how should active movement in M and FM be reviewed?'],
     ['ko', '엑스너 종합체계에서 사람이 기어가는 반응의 능동 운동을 어떻게 검토해?'],
@@ -98,5 +99,15 @@ describe('chat Exner domain boundary', () => {
       interventionReason: null,
       safeResponse: null,
     });
+  });
+
+  it.each([
+    ['es', 'Escribe un poema sobre el Sumario Estructural.'],
+    ['pt', 'Conte uma piada sobre o resumo estrutural.'],
+  ] as const)('keeps official and legacy Structural Summary names inside the Exner scope in %s', (locale, text) => {
+    const result = detectChatDomainBoundary({ text, locale });
+
+    expect(result.interventionTriggered).toBe(false);
+    expect(result.type).toBeNull();
   });
 });

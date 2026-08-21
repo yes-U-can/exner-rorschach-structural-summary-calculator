@@ -17,6 +17,7 @@ import { exportToCSV, exportSummaryToCSV, generateSummaryCsv } from '@/lib/csv';
 import { exportToPdf } from '@/lib/pdf';
 import { buildPrintResponseMemoGroups } from '@/lib/printResponseMemos';
 import {
+  evaluateProtocolReadiness,
   findScoringInputIssues,
   summarizeScoringInputIssues,
 } from '@/lib/scoringInputValidation';
@@ -165,7 +166,7 @@ const homeUiByLanguage = {
     rawCsvLabel: 'CSV de datos de entrada',
     rawCsvDescription: 'Guarda en CSV los valores codificados ingresados en la tabla.',
     summaryCsvLabel: 'CSV de valores del resumen',
-    summaryCsvDescription: 'Guarda en CSV los valores calculados del resumen estructural.',
+    summaryCsvDescription: 'Guarda en CSV los valores calculados del Sumario Estructural.',
     copySummaryButton: 'Copiar valores del resumen',
     copySummarySuccessTitle: 'Valores del resumen copiados',
     copySummarySuccessMessage: 'Pégalos en el asistente de interpretación.',
@@ -198,7 +199,7 @@ const homeUiByLanguage = {
     rawCsvLabel: 'CSV dos dados de entrada',
     rawCsvDescription: 'Salva em CSV os valores codificados digitados na tabela.',
     summaryCsvLabel: 'CSV dos valores do resumo',
-    summaryCsvDescription: 'Salva em CSV os valores calculados do resumo estrutural.',
+    summaryCsvDescription: 'Salva em CSV os valores calculados do Sumário Estrutural.',
     copySummaryButton: 'Copiar valores do resumo',
     copySummarySuccessTitle: 'Valores do resumo copiados',
     copySummarySuccessMessage: 'Cole-os no assistente de interpretação.',
@@ -900,13 +901,25 @@ export default function HomePage() {
 
     if (showScoringInputWarnings(responses)) return;
 
-    if (validResponseCount < 14) {
+    const protocolReadiness = evaluateProtocolReadiness(responses);
+
+    if (!protocolReadiness.canCalculate) {
+      showToast({
+        type: 'warning',
+        title: t('toast.missingCards.title'),
+        message: t('toast.missingCards.message', {
+          cards: protocolReadiness.missingCards.join(', '),
+        }),
+      });
+      return;
+    }
+
+    if (protocolReadiness.shouldWarnAboutValidity) {
       showToast({
         type: 'warning',
         title: t('toast.validity.title'),
         message: t('toast.validity.message')
       });
-      return;
     }
 
     calculate();

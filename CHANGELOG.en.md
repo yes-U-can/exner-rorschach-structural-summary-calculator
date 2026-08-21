@@ -8,6 +8,7 @@ This document lists the public releases of `exner-rorschach-structural-summary-c
 
 | Date | Version | Type | Patch Note | Source |
 | --- | --- | --- | --- | --- |
+| 2026-08-21 | v2.2.11 | Bug-fix release | [Patch notes](./v2-nextjs/releases/v2.2.11/README.en.md) | [Source code](./v2-nextjs/source/) |
 | 2026-08-08 | v2.2.10 | Bug-fix release | [Patch notes](./v2-nextjs/releases/v2.2.10/README.en.md) | [Source code](./v2-nextjs/source/) |
 | 2026-08-01 | v2.2.9 | Bug-fix release | [Patch notes](./v2-nextjs/releases/v2.2.9/README.en.md) | [Source code](./v2-nextjs/source/) |
 | 2026-07-31 | v2.2.8 | Bug-fix release | [Patch notes](./v2-nextjs/releases/v2.2.8/README.en.md) | [Source code](./v2-nextjs/source/) |

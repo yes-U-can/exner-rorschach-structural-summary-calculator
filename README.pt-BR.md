@@ -20,13 +20,21 @@ Cada nota de atualização explica o que mudou, as condições que podem ser afe
 ## Conteúdo publicado
 
 - [v2] Aplicativo web: [exner.yesucan.co.kr](https://exner.yesucan.co.kr)
-- [v2] Versão 2 mais recente: [v2-nextjs/releases/v2.2.10](./v2-nextjs/releases/v2.2.10/README.pt-BR.md)
+- [v2] Versão 2 mais recente: [v2-nextjs/releases/v2.2.11](./v2-nextjs/releases/v2.2.11/README.pt-BR.md)
 - [v2] Fontes de cálculo e escopo bibliográfico da v2.2.10: [fontes de cálculo e escopo bibliográfico](./v2-nextjs/methodology/reference-audit-v2.2.10/README.pt-BR.md)
 - [v2] Histórico de versões 2: [v2-nextjs/releases](./v2-nextjs/releases/)
 - [v2] Código-fonte público da versão 2: [v2-nextjs/source](./v2-nextjs/source/)
 - [Google Apps Script] Histórico de versões 1: [v1-gas/releases](./v1-gas/releases/)
 - Versão executável mais recente da v1: [implantação v1.4.1](https://script.google.com/macros/s/AKfycbxMCx13pkrSzFs8f2qXfmxy2LRhkBpZTItFTIfEOoOi-zwurbysnKGfDIYtAeEdQP99/exec)
 - Código-fonte mais recente da v1: [v1-gas/current](./v1-gas/current/)
+
+## v2.2.11
+
+A v2.2.11 ajusta o critério para iniciar o cálculo, permitindo que um registro com R de 10–13 seja calculado após o aviso de validade existente quando todas as pranchas I–X tiverem sido inseridas. Quando todas as pranchas I–X foram inseridas e R é 14 ou mais, o cálculo prossegue como antes. Se faltar alguma prancha, o cálculo não prossegue independentemente do número de respostas, e as pranchas ausentes são informadas.
+
+A denominação em espanhol foi padronizada como Sumario Estructural e a denominação em português como Sumário Estrutural. O nome do serviço Yes, U Can! permanece inalterado, enquanto a descrição em coreano para mecanismos de busca informa com mais clareza que o uso é gratuito.
+
+As fórmulas, os valores calculados e o tratamento da privacidade não mudaram. Não é necessário recalcular protocolos existentes. Registros com poucas respostas devem ser usados para estudo e revisão, considerando o aviso de validade exibido e as limitações clínicas.
 
 ## v2.2.10
 
@@ -100,6 +108,7 @@ Os assistentes de IA foram limitados ao Sistema Compreensivo de Exner. As corre�
 
 ## [v2] Histórico de versões 2
 
+- **[2026-08-21] v2.2.11 (correção de erros)** [Nota da versão](./v2-nextjs/releases/v2.2.11/README.pt-BR.md) [Código-fonte](./v2-nextjs/source/)
 - **[2026-08-08] v2.2.10 (correção de erros)** [Nota da versão](./v2-nextjs/releases/v2.2.10/README.pt-BR.md) [Código-fonte](./v2-nextjs/source/)
 - **[2026-08-01] v2.2.9 (correção de erros)** [Nota da versão](./v2-nextjs/releases/v2.2.9/README.pt-BR.md) [Código-fonte](./v2-nextjs/source/)
 - **[2026-07-31] v2.2.8 (correção de erros)** [Nota da versão](./v2-nextjs/releases/v2.2.8/README.pt-BR.md) [Código-fonte](./v2-nextjs/source/)

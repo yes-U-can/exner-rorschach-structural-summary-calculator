@@ -44,7 +44,7 @@ const SIGNALS: Record<Language, LocalizedSignals> = {
     scope: ['Exner', 'Sistema Comprehensivo', 'CS'],
     refusal: ['limitado', 'ámbito', 'alcance', 'no puedo', 'no ofrece', 'no realizo'],
     normalCoding: ['M', 'activo', 'pasivo', 'movimiento'],
-    normalSummary: ['EB', 'D', 'AdjD', 'Resumen Estructural'],
+    normalSummary: ['EB', 'D', 'AdjD', 'Sumario Estructural'],
   },
   pt: {
     scope: ['Exner', 'Sistema Compreensivo', 'CS'],
