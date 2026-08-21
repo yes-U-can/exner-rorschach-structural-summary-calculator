@@ -18,7 +18,7 @@ import {
 describe('localized SEO metadata', () => {
   it('uses the clinician-reviewed Korean product name in the home description', () => {
     expect(SEO_COPY.ko.home.description).toBe(
-      '회원가입, 설치, 결제가 필요 없는 오픈소스 Exner 로샤 종합체계(Comprehensive System, CS) 구조요약 계산기입니다. 본 서비스는 전문가의 임상 판단을 대체하지 않습니다.',
+      '회원가입, 설치, 결제가 필요 없는 무료 오픈소스 Exner 로샤 종합체계(Comprehensive System, CS) 구조요약 계산기입니다. 본 서비스는 전문가의 임상 판단을 대체하지 않습니다.',
     );
   });
 
@@ -33,7 +33,15 @@ describe('localized SEO metadata', () => {
 
     expect(PRODUCT_NAME_BY_LANGUAGE.ko).toBe('Exner 로샤 종합체계 구조요약 계산기');
     expect(SEO_KEYWORDS_BY_LANGUAGE.ko).toEqual(
-      expect.arrayContaining(['로샤', '엑스너', '종합체계', '구조요약']),
+      expect.arrayContaining([
+        '로샤',
+        '로르샤하',
+        '엑스너',
+        '종합체계',
+        '구조요약',
+        '로샤 계산기',
+        '무료 로샤 계산기',
+      ]),
     );
   });
 

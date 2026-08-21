@@ -207,6 +207,35 @@ export function isParticipatingResponse(response: RorschachResponse): boolean {
   return response.card.trim().length > 0;
 }
 
+export type ProtocolReadiness = {
+  responseCount: number;
+  missingCards: string[];
+  canCalculate: boolean;
+  shouldWarnAboutValidity: boolean;
+};
+
+/**
+ * A complete Comprehensive System protocol includes at least one response for
+ * every card I-X. Brief but complete protocols may still be calculated for
+ * training, while retaining the existing R < 14 validity warning.
+ */
+export function evaluateProtocolReadiness(
+  responses: readonly RorschachResponse[],
+): ProtocolReadiness {
+  const participatingResponses = responses.filter(isParticipatingResponse);
+  const enteredCards = new Set(
+    participatingResponses.map((response) => response.card.trim().toUpperCase()),
+  );
+  const missingCards = OPTIONS.CARDS.filter((card) => !enteredCards.has(card));
+
+  return {
+    responseCount: participatingResponses.length,
+    missingCards,
+    canCalculate: missingCards.length === 0,
+    shouldWarnAboutValidity: participatingResponses.length < 14,
+  };
+}
+
 export function findScoringInputIssues(
   responses: readonly RorschachResponse[],
 ): ScoringInputIssue[] {

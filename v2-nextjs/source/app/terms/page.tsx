@@ -163,14 +163,14 @@ const CONTENT: Record<Language, TermsContent> = {
     title: 'Términos de Servicio',
     effectiveDate: 'Fecha de entrada en vigor: 15 de febrero de 2026',
     intro:
-      'Estos términos explican las condiciones básicas para usar la calculadora del Structural Summary del Sistema Comprehensivo de Rorschach de Exner y sus asistentes opcionales de IA mediante BYOK. El cálculo y la búsqueda de documentos de referencia no requieren una cuenta. Los asistentes de codificación e interpretación solo están disponibles cuando la persona usuaria conecta su propia clave API de OpenAI. El servicio no vende créditos ni suscripciones propias.',
+      'Estos términos explican las condiciones básicas para usar la calculadora del Sumario Estructural del Sistema Comprehensivo de Rorschach de Exner y sus asistentes opcionales de IA mediante BYOK. El cálculo y la búsqueda de documentos de referencia no requieren una cuenta. Los asistentes de codificación e interpretación solo están disponibles cuando la persona usuaria conecta su propia clave API de OpenAI. El servicio no vende créditos ni suscripciones propias.',
     sections: [
       {
         heading: 'Alcance del servicio',
         paragraphs: [
-          'El cálculo del Structural Summary y la búsqueda de documentos de referencia pueden usarse sin cuenta. El asistente de interpretación y el asistente de codificación están disponibles solo después de introducir una clave API de OpenAI.',
+          'El cálculo del Sumario Estructural y la búsqueda de documentos de referencia pueden usarse sin cuenta. El asistente de interpretación y el asistente de codificación están disponibles solo después de introducir una clave API de OpenAI.',
           'Las funciones de IA funcionan únicamente con la clave API de OpenAI introducida por la persona usuaria; el servicio no vende una suscripción de IA ni una cuenta de uso separada.',
-          'El servicio ayuda a calcular, estudiar y revisar el Resumen Estructural. No administra el Rorschach, emite diagnósticos formales, decide tratamientos ni sustituye decisiones jurídicas o administrativas.',
+          'El servicio ayuda a calcular, estudiar y revisar el Sumario Estructural. No administra el Rorschach, emite diagnósticos formales, decide tratamientos ni sustituye decisiones jurídicas o administrativas.',
         ],
       },
       {
@@ -206,12 +206,12 @@ const CONTENT: Record<Language, TermsContent> = {
     title: 'Termos de Uso',
     effectiveDate: 'Data de entrada em vigor: 15 de fevereiro de 2026',
     intro:
-      'Estes termos explicam as condições básicas para usar a calculadora do Structural Summary do Sistema Compreensivo de Rorschach de Exner e seus assistentes opcionais de IA via BYOK. O cálculo e a busca de documentos de referência não exigem uma conta. Os assistentes de codificação e interpretação ficam disponíveis somente quando a pessoa usuária conecta sua própria chave API da OpenAI. O serviço não vende créditos nem assinaturas próprias.',
+      'Estes termos explicam as condições básicas para usar a calculadora do Sumário Estrutural do Sistema Compreensivo de Rorschach de Exner e seus assistentes opcionais de IA via BYOK. O cálculo e a busca de documentos de referência não exigem uma conta. Os assistentes de codificação e interpretação ficam disponíveis somente quando a pessoa usuária conecta sua própria chave API da OpenAI. O serviço não vende créditos nem assinaturas próprias.',
     sections: [
       {
         heading: 'Escopo do serviço',
         paragraphs: [
-          'O cálculo do Structural Summary e a busca de documentos de referência podem ser usados sem conta. O assistente de interpretação e o assistente de codificação ficam disponíveis somente após inserir uma chave API da OpenAI.',
+          'O cálculo do Sumário Estrutural e a busca de documentos de referência podem ser usados sem conta. O assistente de interpretação e o assistente de codificação ficam disponíveis somente após inserir uma chave API da OpenAI.',
           'Os recursos de IA funcionam somente com a chave API da OpenAI inserida pela pessoa usuária; o serviço não vende uma assinatura de IA nem uma conta de uso separada.',
           'O serviço auxilia no cálculo, estudo e revisão do Sumário Estrutural. Ele não administra o Rorschach, emite diagnósticos formais, define tratamentos nem substitui decisões jurídicas ou administrativas.',
         ],

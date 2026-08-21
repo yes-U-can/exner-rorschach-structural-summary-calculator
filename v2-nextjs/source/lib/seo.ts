@@ -21,7 +21,17 @@ export const PRODUCT_NAME_BY_LANGUAGE: Record<Language, string> = {
 };
 
 export const SEO_KEYWORDS_BY_LANGUAGE: Record<Language, string[]> = {
-  ko: ['로샤', '엑스너', '종합체계', '구조요약', '로샤 채점', '임상심리'],
+  ko: [
+    '로샤',
+    '로르샤하',
+    '엑스너',
+    '종합체계',
+    '구조요약',
+    '로샤 계산기',
+    '무료 로샤 계산기',
+    '로샤 채점',
+    '임상심리',
+  ],
   en: ['Rorschach', 'Exner', 'Comprehensive System', 'Structural Summary', 'Rorschach scoring', 'clinical psychology'],
   ja: ['ロールシャッハ', 'エクスナー', '包括システム', '構造一覧表', 'スコアリング', '臨床心理学'],
   es: ['Rorschach', 'Exner', 'Sistema Comprehensivo', 'Sumario Estructural', 'codificación', 'psicología clínica'],
@@ -36,7 +46,7 @@ type SeoCopy = {
 };
 
 const HOME_DESCRIPTION_KO =
-  '회원가입, 설치, 결제가 필요 없는 오픈소스 Exner 로샤 종합체계(Comprehensive System, CS) 구조요약 계산기입니다. 본 서비스는 전문가의 임상 판단을 대체하지 않습니다.';
+  '회원가입, 설치, 결제가 필요 없는 무료 오픈소스 Exner 로샤 종합체계(Comprehensive System, CS) 구조요약 계산기입니다. 본 서비스는 전문가의 임상 판단을 대체하지 않습니다.';
 
 export const SEO_COPY: Record<Language, Record<SeoPage, SeoCopy>> = {
   ko: {

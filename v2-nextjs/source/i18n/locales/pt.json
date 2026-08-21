@@ -1,7 +1,7 @@
 {
   "app": {
     "title": "Calculadora do Sumário Estrutural de Rorschach",
-    "version": "v2.2.10",
+    "version": "v2.2.11",
     "provider": "Desenvolvido e mantido pela MOW"
   },
   "nav": {
@@ -258,6 +258,10 @@
       "title": "Aviso de Validade",
       "message": "Se o número de respostas for menor que 14, a validade do perfil pode ser baixa, reduzindo a confiabilidade da interpretação."
     },
+    "missingCards": {
+      "title": "Verificar as pranchas",
+      "message": "Antes de calcular, insira pelo menos uma resposta em cada prancha de I a X. Pranchas ausentes: {cards}"
+    },
     "invalidDeterminants": {
       "title": "Revisar os determinantes de movimento",
       "message": "As linhas {rows} contêm {codes}, que não são mais códigos válidos para uma resposta individual. Selecione novamente cada determinante de movimento com o sufixo a, p ou a-p. O cálculo ficará bloqueado até que essas linhas sejam corrigidas."
@@ -372,7 +376,7 @@
   },
   "export": {
     "rawDataTitle": "Exportar todos os itens inseridos pelo usuário em formato CSV",
-    "summaryTitle": "Exportar todos os itens calculados no sumário estrutural em formato CSV"
+    "summaryTitle": "Exportar todos os itens calculados no Sumário Estrutural em formato CSV"
   },
   "footer": {
     "title": "Calculadora do Sumário Estrutural de Rorschach",
@@ -464,7 +468,7 @@
   },
   "reference": {
     "title": "Documentos de referência",
-    "subtitle": "Pesquise páginas de referência sobre códigos e variáveis do resumo estrutural em formato wiki somente leitura.",
+    "subtitle": "Pesquise páginas de referência sobre códigos e variáveis do Sumário Estrutural em formato wiki somente leitura.",
     "searchLabel": "Pesquisar documentos de referência",
     "searchPlaceholder": "Buscar por código, título ou palavra-chave...",
     "empty": "Nenhum documento de referência correspondente foi encontrado. Tente uma palavra-chave mais ampla.",

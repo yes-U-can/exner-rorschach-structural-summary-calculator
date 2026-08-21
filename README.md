@@ -20,13 +20,21 @@ MOW(모오)는 웹앱의 기획, 제작, 배포, 운영과 유지보수를 맡�
 ## 현재 공개된 항목
 
 - [v2] 라이브 웹앱: [exner.yesucan.co.kr](https://exner.yesucan.co.kr)
-- [v2] 버전 2 최신 릴리즈: [v2-nextjs/releases/v2.2.10](./v2-nextjs/releases/v2.2.10/)
+- [v2] 버전 2 최신 릴리즈: [v2-nextjs/releases/v2.2.11](./v2-nextjs/releases/v2.2.11/)
 - [v2] v2.2.10 계산 근거와 문헌 범위: [계산 근거와 문헌 범위](./v2-nextjs/methodology/reference-audit-v2.2.10/)
 - [v2] 버전 2 릴리즈 기록: [v2-nextjs/releases](./v2-nextjs/releases/)
 - [v2] 버전 2 공개 소스코드: [v2-nextjs/source](./v2-nextjs/source/)
 - [Google Apps Script] 버전 1 릴리즈 기록: [v1-gas/releases](./v1-gas/releases/)
 - 최신 v1 실행본: [v1.4.1 배포링크](https://script.google.com/macros/s/AKfycbxMCx13pkrSzFs8f2qXfmxy2LRhkBpZTItFTIfEOoOi-zwurbysnKGfDIYtAeEdQP99/exec)
 - 최신 v1 소스코드: [v1-gas/current](./v1-gas/current/)
+
+## v2.2.11
+
+v2.2.11은 카드 I–X가 모두 입력되어 있으면 R이 10–13개인 기록도 기존 타당도 경고를 표시한 뒤 계산할 수 있도록 계산 시작 기준을 조정했습니다. 카드 I–X가 모두 입력되어 있고 R이 14개 이상이면 이전과 같이 계산하며, 입력되지 않은 카드가 하나라도 있으면 반응 수와 관계없이 계산하지 않고 누락된 카드를 안내합니다.
+
+스페인어 구조요약 명칭은 Sumario Estructural, 포르투갈어 명칭은 Sumário Estrutural로 통일했습니다. 서비스 이름 Yes, U Can!은 유지하면서 한국어 검색 설명에는 무료 이용 정보를 더 분명하게 반영했습니다.
+
+계산식과 산출값, 개인정보 처리 방식은 바뀌지 않았습니다. 기존 프로토콜을 다시 계산할 필요가 없으며, 반응 수가 적은 기록은 표시되는 타당도 경고와 임상적 한계를 고려해 학습과 검토 목적으로 사용해야 합니다.
 
 ## v2.2.10
 
@@ -100,6 +108,7 @@ AI 도우미는 Exner 종합체계 밖의 질문에 답변 범위를 넓히지 �
 
 ## [v2] 버전 2 릴리즈 기록
 
+- **[2026-08-21] v2.2.11 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.2.11/) [소스코드](./v2-nextjs/source/)
 - **[2026-08-08] v2.2.10 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.2.10/) [소스코드](./v2-nextjs/source/)
 - **[2026-08-01] v2.2.9 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.2.9/) [소스코드](./v2-nextjs/source/)
 - **[2026-07-31] v2.2.8 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.2.8/) [소스코드](./v2-nextjs/source/)

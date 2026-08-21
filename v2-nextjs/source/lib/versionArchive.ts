@@ -42,6 +42,18 @@ const v2SourceUrl = `${exhibitionRepoUrl}/tree/main/v2-nextjs/source`;
 
 export const v2NextVersions: VersionArchiveEntry[] = [
   {
+    version: 'v2.2.11',
+    title: 'Version 2.2.11',
+    series: 'v2-nextjs',
+    publishedAt: '2026-08-21',
+    releaseKind: 'bugfix',
+    releaseLabel: '버그 패치',
+    summary:
+      '카드 I–X가 모두 입력된 10–13개 반응 기록은 기존 타당도 주의를 표시한 뒤 계산할 수 있으며, 한 카드라도 빠진 기록은 계산을 멈춥니다. 스페인어와 포르투갈어의 구조요약 명칭을 공식 표기로 통일하고, Yes, U Can! 이름을 유지하면서 무료 이용 정보를 검색 설명에 더 분명히 표시했습니다. 기존 계산 결과는 다시 계산할 필요가 없습니다.',
+    sourceUrl: v2SourceUrl,
+    releaseUrl: v2ReleaseUrl('v2.2.11'),
+  },
+  {
     version: 'v2.2.10',
     title: 'Version 2.2.10',
     series: 'v2-nextjs',
