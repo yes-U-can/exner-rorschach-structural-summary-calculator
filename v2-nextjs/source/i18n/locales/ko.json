@@ -1,7 +1,7 @@
 {
   "app": {
     "title": "Exner 로샤 종합체계 구조요약 계산기",
-    "version": "v2.2.11",
+    "version": "v2.2.12",
     "provider": "MOW 제작·유지보수"
   },
   "nav": {

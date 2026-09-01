@@ -1,6 +1,6 @@
 {
   "name": "rorschach-calculator-v2",
-  "version": "2.2.11",
+  "version": "2.2.12",
   "private": true,
   "scripts": {
     "docs:generate-corpus": "npm run docs:audit-authoring && node scripts/generate-reference-corpus.mjs && node scripts/generate-reference-quality-report.mjs && node scripts/generate-reference-release-snapshot.mjs",
@@ -66,6 +66,7 @@
     "@headlessui/react": "^2.2.9",
     "@heroicons/react": "^2.2.0",
     "@prisma/client": "^7.9.1",
+    "@vercel/analytics": "2.0.1",
     "gray-matter": "^4.0.3",
     "next": "^16.2.12",
     "openai": "^6.21.0",

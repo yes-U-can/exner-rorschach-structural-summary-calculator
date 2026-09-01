@@ -20,13 +20,19 @@ Cada nota de atualização explica o que mudou, as condições que podem ser afe
 ## Conteúdo publicado
 
 - [v2] Aplicativo web: [exner.yesucan.co.kr](https://exner.yesucan.co.kr)
-- [v2] Versão 2 mais recente: [v2-nextjs/releases/v2.2.11](./v2-nextjs/releases/v2.2.11/README.pt-BR.md)
+- [v2] Versão 2 mais recente: [v2-nextjs/releases/v2.2.12](./v2-nextjs/releases/v2.2.12/README.pt-BR.md)
 - [v2] Fontes de cálculo e escopo bibliográfico da v2.2.10: [fontes de cálculo e escopo bibliográfico](./v2-nextjs/methodology/reference-audit-v2.2.10/README.pt-BR.md)
 - [v2] Histórico de versões 2: [v2-nextjs/releases](./v2-nextjs/releases/)
 - [v2] Código-fonte público da versão 2: [v2-nextjs/source](./v2-nextjs/source/)
 - [Google Apps Script] Histórico de versões 1: [v1-gas/releases](./v1-gas/releases/)
 - Versão executável mais recente da v1: [implantação v1.4.1](https://script.google.com/macros/s/AKfycbxMCx13pkrSzFs8f2qXfmxy2LRhkBpZTItFTIfEOoOi-zwurbysnKGfDIYtAeEdQP99/exec)
 - Código-fonte mais recente da v1: [v1-gas/current](./v1-gas/current/)
+
+## v2.2.12
+
+A v2.2.12 muda as estatísticas de visitas para um sistema sem cookies, anônimo e agregado. As novas visitas não são mais medidas com o Google Analytics. O Vercel Web Analytics permite consultar informações gerais como páginas visitadas, origem do acesso, país ou região aproximados, navegador, sistema operacional e tipo de dispositivo.
+
+As entradas do Sumário Estrutural, os resultados dos cálculos, o conteúdo das conversas com IA e as chaves API não são incluídos nas estatísticas de visitas. As fórmulas e os resultados não foram alterados, portanto não é necessário recalcular os protocolos existentes. Consulte as [notas da v2.2.12](./v2-nextjs/releases/v2.2.12/README.pt-BR.md) para obter mais informações.
 
 ## v2.2.11
 

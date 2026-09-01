@@ -42,6 +42,18 @@ const v2SourceUrl = `${exhibitionRepoUrl}/tree/main/v2-nextjs/source`;
 
 export const v2NextVersions: VersionArchiveEntry[] = [
   {
+    version: 'v2.2.12',
+    title: 'Version 2.2.12',
+    series: 'v2-nextjs',
+    publishedAt: '2026-09-01',
+    releaseKind: 'bugfix',
+    releaseLabel: '버그 패치',
+    summary:
+      '방문 통계를 쿠키 없는 익명·집계 방식으로 변경했습니다. 구조요약 입력값, 계산 결과, AI 대화 내용과 API 키는 방문 통계에 포함되지 않으며, 계산식과 산출값은 바뀌지 않아 기존 결과를 다시 계산할 필요가 없습니다.',
+    sourceUrl: v2SourceUrl,
+    releaseUrl: v2ReleaseUrl('v2.2.12'),
+  },
+  {
     version: 'v2.2.11',
     title: 'Version 2.2.11',
     series: 'v2-nextjs',

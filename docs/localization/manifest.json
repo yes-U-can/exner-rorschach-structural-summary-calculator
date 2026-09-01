@@ -46,7 +46,7 @@
                            {
                                "id":  "root-readme",
                                "canonical":  "README.md",
-                               "canonicalSha256":  "c6715ef5ea61290c55858e1937660b851fe32acc773c5860d62d4e39da1877f4",
+                               "canonicalSha256":  "7060b35e2b9d2b29d61348d66d185cf21d4d1f9470a49c0129409d4425fa557b",
                                "reviewStatus":  "reviewed",
                                "translations":  {
                                                     "en":  "README.en.md",
@@ -58,7 +58,7 @@
                            {
                                "id":  "root-changelog",
                                "canonical":  "CHANGELOG.md",
-                               "canonicalSha256":  "c367fa716ac90e313d30ddb6ef16ef93f5229363a070f70189abb97298bb7434",
+                               "canonicalSha256":  "fbd4a29eeb4542c40ceaa51f0832bdbbe344918ab1302582ce03a2cc32ae9f89",
                                "reviewStatus":  "reviewed",
                                "translations":  {
                                                     "en":  "CHANGELOG.en.md",
@@ -197,6 +197,18 @@
                                                     "ja":  "v2-nextjs/releases/v2.2.11/README.ja.md",
                                                     "es":  "v2-nextjs/releases/v2.2.11/README.es.md",
                                                     "pt-BR":  "v2-nextjs/releases/v2.2.11/README.pt-BR.md"
+                                                }
+                           },
+                           {
+                               "id":  "v2.2.12-release-note",
+                               "canonical":  "v2-nextjs/releases/v2.2.12/README.md",
+                               "canonicalSha256":  "acaf8dcb6a74bf6157cec6ded720834efd04d2b66af64c789a5df788883fbaa8",
+                               "reviewStatus":  "reviewed",
+                               "translations":  {
+                                                    "en":  "v2-nextjs/releases/v2.2.12/README.en.md",
+                                                    "ja":  "v2-nextjs/releases/v2.2.12/README.ja.md",
+                                                    "es":  "v2-nextjs/releases/v2.2.12/README.es.md",
+                                                    "pt-BR":  "v2-nextjs/releases/v2.2.12/README.pt-BR.md"
                                                 }
                            },
                            {

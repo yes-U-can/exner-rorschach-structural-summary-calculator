@@ -1,7 +1,7 @@
 {
   "app": {
     "title": "ロールシャッハ構造一覧表計算ツール",
-    "version": "v2.2.11",
+    "version": "v2.2.12",
     "provider": "MOWが制作・保守"
   },
   "nav": {

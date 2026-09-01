@@ -20,13 +20,19 @@ MOW（モオ）は、ウェブアプリの企画、制作、配布、運用、�
 ## 公開している内容
 
 - [v2] 公開ウェブアプリ: [exner.yesucan.co.kr](https://exner.yesucan.co.kr)
-- [v2] バージョン2の最新リリース: [v2-nextjs/releases/v2.2.11](./v2-nextjs/releases/v2.2.11/README.ja.md)
+- [v2] バージョン2の最新リリース: [v2-nextjs/releases/v2.2.12](./v2-nextjs/releases/v2.2.12/README.ja.md)
 - [v2] v2.2.10の計算根拠と文献範囲: [計算根拠と文献範囲](./v2-nextjs/methodology/reference-audit-v2.2.10/README.ja.md)
 - [v2] バージョン2のリリース記録: [v2-nextjs/releases](./v2-nextjs/releases/)
 - [v2] バージョン2の公開ソースコード: [v2-nextjs/source](./v2-nextjs/source/)
 - [Google Apps Script] バージョン1のリリース記録: [v1-gas/releases](./v1-gas/releases/)
 - 最新のv1実行版: [v1.4.1 デプロイ](https://script.google.com/macros/s/AKfycbxMCx13pkrSzFs8f2qXfmxy2LRhkBpZTItFTIfEOoOi-zwurbysnKGfDIYtAeEdQP99/exec)
 - 最新のv1ソースコード: [v1-gas/current](./v1-gas/current/)
+
+## v2.2.12
+
+v2.2.12では、訪問統計をCookieを使用しない匿名・集計方式に変更しました。新しい訪問記録にはGoogle Analyticsを使用せず、Vercel Web Analyticsにより、閲覧したページ、流入元、おおよその国・地域、ブラウザ、オペレーティングシステム、端末の種類などの一般的な訪問状況だけを確認します。
+
+構造一覧表の入力値、計算結果、AIチャットの内容、APIキーは訪問統計に含まれません。計算式と出力値は変更していないため、既存のプロトコルを再計算する必要はありません。詳細は[v2.2.12パッチノート](./v2-nextjs/releases/v2.2.12/README.ja.md)をご確認ください。
 
 ## v2.2.11
 
