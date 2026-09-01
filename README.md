@@ -20,13 +20,19 @@ MOW(모오)는 웹앱의 기획, 제작, 배포, 운영과 유지보수를 맡�
 ## 현재 공개된 항목
 
 - [v2] 라이브 웹앱: [exner.yesucan.co.kr](https://exner.yesucan.co.kr)
-- [v2] 버전 2 최신 릴리즈: [v2-nextjs/releases/v2.2.11](./v2-nextjs/releases/v2.2.11/)
+- [v2] 버전 2 최신 릴리즈: [v2-nextjs/releases/v2.2.12](./v2-nextjs/releases/v2.2.12/)
 - [v2] v2.2.10 계산 근거와 문헌 범위: [계산 근거와 문헌 범위](./v2-nextjs/methodology/reference-audit-v2.2.10/)
 - [v2] 버전 2 릴리즈 기록: [v2-nextjs/releases](./v2-nextjs/releases/)
 - [v2] 버전 2 공개 소스코드: [v2-nextjs/source](./v2-nextjs/source/)
 - [Google Apps Script] 버전 1 릴리즈 기록: [v1-gas/releases](./v1-gas/releases/)
 - 최신 v1 실행본: [v1.4.1 배포링크](https://script.google.com/macros/s/AKfycbxMCx13pkrSzFs8f2qXfmxy2LRhkBpZTItFTIfEOoOi-zwurbysnKGfDIYtAeEdQP99/exec)
 - 최신 v1 소스코드: [v1-gas/current](./v1-gas/current/)
+
+## v2.2.12
+
+v2.2.12는 방문 통계를 쿠키 없는 익명·집계 방식으로 변경했습니다. 새 방문 기록에는 Google Analytics를 사용하지 않으며, Vercel Web Analytics를 통해 방문한 페이지, 접속 경로, 대략적인 국가·지역, 브라우저·운영체제·기기 유형 같은 일반적인 방문 현황만 확인합니다.
+
+구조요약 입력값, 계산 결과, AI 대화 내용과 API 키는 방문 통계에 포함되지 않습니다. 계산식과 산출값은 바뀌지 않았으므로 기존 프로토콜을 다시 계산할 필요가 없습니다. 자세한 내용은 [v2.2.12 패치노트](./v2-nextjs/releases/v2.2.12/)에서 확인할 수 있습니다.
 
 ## v2.2.11
 

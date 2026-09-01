@@ -40,7 +40,7 @@ import Button from '@/components/ui/Button';
 import { getAppShortcutAction, isEditableShortcutTarget } from '@/lib/appShortcuts';
 import { getKeyboardShortcutsUi } from '@/lib/keyboardShortcutsUi';
 
-const APP_VERSION = '2.2.11';
+const APP_VERSION = '2.2.12';
 
 type AuthStatus = 'loading' | 'authenticated' | 'unauthenticated';
 

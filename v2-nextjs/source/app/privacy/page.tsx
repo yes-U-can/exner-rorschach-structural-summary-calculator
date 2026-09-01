@@ -33,7 +33,7 @@ export async function generateMetadata({ searchParams }: PrivacyPageProps): Prom
 const CONTENT: Record<Language, PrivacyContent> = {
   ko: {
     title: '개인정보처리방침',
-    effectiveDate: '시행일: 2026년 7월 18일',
+    effectiveDate: '시행일: 2026년 9월 1일',
     intro:
       '이 문서는 현재 서비스가 어떤 데이터를 처리하고, 어떤 데이터를 서버에 저장하지 않는지 설명합니다. 이 서비스의 기본 원칙은 사용자 계정, API 키, AI 대화 기록, 구조요약 계산 데이터를 서버 DB에 지속적으로 저장하지 않는 것입니다.',
     sections: [
@@ -50,6 +50,13 @@ const CONTENT: Record<Language, PrivacyContent> = {
         paragraphs: [
           '공개 참조문서 검색(RAG)용 DB는 참조문서 벡터와 메타데이터에만 사용하며, 운영 환경에서는 읽기 전용 권한을 사용합니다. 사용자 계정 정보, API 키, AI 대화 기록, 구조요약 계산 데이터는 이 DB에 저장하지 않습니다.',
           '사용자가 선택적으로 제출한 AI 응답 평가는 아래에 설명한 별도의 피드백 DB에만 저장되며, RAG DB와 그 접근 권한을 공유하지 않습니다.',
+        ],
+      },
+      {
+        heading: '익명 방문 통계',
+        paragraphs: [
+          '서비스 이용 현황을 파악하기 위해 Vercel Web Analytics를 사용합니다. 이 과정에서 방문한 페이지, 접속 경로, 대략적인 국가·지역, 브라우저·운영체제·기기 유형 등의 정보가 익명·집계 형태로 처리될 수 있습니다.',
+          'Vercel Web Analytics는 방문자를 식별하는 쿠키를 사용하지 않으며, 서로 다른 날짜나 웹사이트의 이용 기록을 연결하지 않습니다. 구조요약 입력값, 계산 결과, AI 대화 내용 및 API 키는 방문 통계에 포함되지 않습니다.',
         ],
       },
       {
@@ -87,7 +94,7 @@ const CONTENT: Record<Language, PrivacyContent> = {
   },
   en: {
     title: 'Privacy Policy',
-    effectiveDate: 'Effective Date: July 18, 2026',
+    effectiveDate: 'Effective Date: September 1, 2026',
     intro:
       'This policy explains what data is processed in the current BYOK-only architecture. The core principle is that user accounts, API keys, chat history, and calculator data are not stored in the server database.',
     sections: [
@@ -104,6 +111,13 @@ const CONTENT: Record<Language, PrivacyContent> = {
         paragraphs: [
           'The public-reference RAG database is used only for reference vectors and metadata, with a read-only role in production. User accounts, API keys, chat history, and calculator data are not stored in that database.',
           'Optional AI response ratings are stored only in the separate feedback database described below. It does not share the RAG database or its access role.',
+        ],
+      },
+      {
+        heading: 'Anonymous visitor statistics',
+        paragraphs: [
+          'The service uses Vercel Web Analytics to understand how the service is used. Information such as pages visited, referral source, approximate country or region, browser, operating system, and device type may be processed in anonymous, aggregated form.',
+          'Vercel Web Analytics does not use cookies to identify visitors or link activity across different days or websites. Structural Summary inputs, calculation results, AI chat content, and API keys are not included in visitor statistics.',
         ],
       },
       {
@@ -141,7 +155,7 @@ const CONTENT: Record<Language, PrivacyContent> = {
   },
   ja: {
     title: 'プライバシーポリシー',
-    effectiveDate: '施行日: 2026年7月18日',
+    effectiveDate: '施行日: 2026年9月1日',
     intro:
       '本ポリシーは、現在のBYOK-only構成で処理されるデータと保存場所を説明します。基本原則は、ユーザーアカウント、APIキー、チャット履歴、計算データをサーバーDBに保存しないことです。',
     sections: [
@@ -158,6 +172,13 @@ const CONTENT: Record<Language, PrivacyContent> = {
         paragraphs: [
           '公開参照文書用のRAGデータベースは参照ベクトルとメタデータのみに使用し、本番環境では読み取り専用権限を使用します。ユーザーアカウント、APIキー、チャット履歴、計算データはこのデータベースに保存されません。',
           '任意で送信されたAI応答評価は、下記の専用フィードバックデータベースにのみ保存されます。RAGデータベースやそのアクセス権限とは共有されません。',
+        ],
+      },
+      {
+        heading: '匿名の訪問統計',
+        paragraphs: [
+          'サービスの利用状況を把握するため、Vercel Web Analyticsを使用します。この過程で、閲覧したページ、流入元、おおよその国・地域、ブラウザ、オペレーティングシステム、端末の種類などの情報が、匿名かつ集計された形で処理される場合があります。',
+          'Vercel Web Analyticsは訪問者を識別するCookieを使用せず、異なる日付やウェブサイト間の利用記録を関連付けません。構造一覧表の入力値、計算結果、AIチャットの内容、APIキーは訪問統計に含まれません。',
         ],
       },
       {
@@ -195,7 +216,7 @@ const CONTENT: Record<Language, PrivacyContent> = {
   },
   es: {
     title: 'Política de Privacidad',
-    effectiveDate: 'Fecha de entrada en vigor: 18 de julio de 2026',
+    effectiveDate: 'Fecha de entrada en vigor: 1 de septiembre de 2026',
     intro:
       'Esta política explica qué datos se procesan en la arquitectura BYOK-only actual. El principio central es no guardar cuentas, claves API, historial de chat ni datos de cálculo en la base de datos del servidor.',
     sections: [
@@ -212,6 +233,13 @@ const CONTENT: Record<Language, PrivacyContent> = {
         paragraphs: [
           'La base de datos RAG de referencias públicas se usa solo para vectores y metadatos de referencia, con un rol de solo lectura en producción. Las cuentas, claves API, historial de chat y datos de cálculo no se guardan en esa base de datos.',
           'Las valoraciones opcionales de respuestas de IA se guardan únicamente en la base de datos de feedback independiente descrita a continuación. No comparte la base de datos RAG ni su rol de acceso.',
+        ],
+      },
+      {
+        heading: 'Estadísticas anónimas de visitas',
+        paragraphs: [
+          'El servicio utiliza Vercel Web Analytics para conocer cómo se usa. Se puede procesar de forma anónima y agregada información como las páginas visitadas, la fuente de referencia, el país o la región aproximados, el navegador, el sistema operativo y el tipo de dispositivo.',
+          'Vercel Web Analytics no utiliza cookies para identificar a las personas visitantes ni vincula la actividad entre días o sitios web distintos. Las entradas del Sumario Estructural, los resultados de los cálculos, el contenido de los chats de IA y las claves API no se incluyen en las estadísticas de visitas.',
         ],
       },
       {
@@ -249,7 +277,7 @@ const CONTENT: Record<Language, PrivacyContent> = {
   },
   pt: {
     title: 'Política de Privacidade',
-    effectiveDate: 'Data de entrada em vigor: 18 de julho de 2026',
+    effectiveDate: 'Data de entrada em vigor: 1 de setembro de 2026',
     intro:
       'Esta política explica quais dados são processados na arquitetura BYOK-only atual. O princípio central é não salvar contas, chaves API, histórico de chat nem dados de cálculo no banco de dados do servidor.',
     sections: [
@@ -266,6 +294,13 @@ const CONTENT: Record<Language, PrivacyContent> = {
         paragraphs: [
           'O banco de dados RAG de referências públicas é usado somente para vetores e metadados de referência, com um papel somente leitura em produção. Contas, chaves API, histórico de chat e dados de cálculo não são salvos nesse banco de dados.',
           'As avaliações opcionais de respostas de IA são salvas apenas no banco de dados de feedback separado descrito abaixo. Ele não compartilha o banco de dados RAG nem seu papel de acesso.',
+        ],
+      },
+      {
+        heading: 'Estatísticas anônimas de visitas',
+        paragraphs: [
+          'O serviço usa o Vercel Web Analytics para entender como é utilizado. Informações como páginas visitadas, origem do acesso, país ou região aproximados, navegador, sistema operacional e tipo de dispositivo podem ser processadas de forma anônima e agregada.',
+          'O Vercel Web Analytics não usa cookies para identificar visitantes nem vincula atividades entre dias ou sites diferentes. As entradas do Sumário Estrutural, os resultados dos cálculos, o conteúdo das conversas com IA e as chaves API não são incluídos nas estatísticas de visitas.',
         ],
       },
       {

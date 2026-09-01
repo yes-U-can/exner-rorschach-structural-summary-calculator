@@ -20,13 +20,19 @@ Each patch note explains what changed, the conditions that may be affected, whet
 ## What is available
 
 - [v2] Live web app: [exner.yesucan.co.kr](https://exner.yesucan.co.kr)
-- [v2] Latest version 2 release: [v2-nextjs/releases/v2.2.11](./v2-nextjs/releases/v2.2.11/README.en.md)
+- [v2] Latest version 2 release: [v2-nextjs/releases/v2.2.12](./v2-nextjs/releases/v2.2.12/README.en.md)
 - [v2] v2.2.10 calculation sources and literature scope: [calculation sources and literature scope](./v2-nextjs/methodology/reference-audit-v2.2.10/README.en.md)
 - [v2] Version 2 release archive: [v2-nextjs/releases](./v2-nextjs/releases/)
 - [v2] Version 2 public source: [v2-nextjs/source](./v2-nextjs/source/)
 - [Google Apps Script] Version 1 release archive: [v1-gas/releases](./v1-gas/releases/)
 - Latest v1 deployment: [v1.4.1 deployment](https://script.google.com/macros/s/AKfycbxMCx13pkrSzFs8f2qXfmxy2LRhkBpZTItFTIfEOoOi-zwurbysnKGfDIYtAeEdQP99/exec)
 - Latest v1 source: [v1-gas/current](./v1-gas/current/)
+
+## v2.2.12
+
+v2.2.12 changes visitor statistics to a cookie-free, anonymous, and aggregated approach. New visits are no longer measured with Google Analytics. Vercel Web Analytics now provides general visit information such as pages visited, referral source, approximate country or region, browser, operating system, and device type.
+
+Structural Summary inputs, calculation results, AI chat content, and API keys are not included in visitor statistics. The scoring formulas and outputs have not changed, so existing protocols do not need to be recalculated. See the [v2.2.12 patch note](./v2-nextjs/releases/v2.2.12/README.en.md) for details.
 
 ## v2.2.11
 
