@@ -20,4 +20,21 @@ describe('scoring workspace entry modal', () => {
     expect(handlerSource).toContain('setShowWelcomeModal(true)');
     expect(handlerSource).not.toContain('hasSavedData()');
   });
+
+  it('shows the institute brand lockup above the entry choices', () => {
+    const modalStart = homePageSource.indexOf('{/* Welcome Modal */}');
+    const modalEnd = homePageSource.indexOf('isOpen={showDownloadModal}');
+    const modalSource = homePageSource.slice(modalStart, modalEnd);
+
+    expect(modalSource).toContain('data-testid="sicp-brand-lockup"');
+    expect(modalSource).toContain('href="https://www.yesucan.co.kr/"');
+    expect(modalSource).toContain('target="_blank"');
+    expect(modalSource).toContain('src="/sicp-icon.png"');
+    expect(modalSource).toContain('서울임상심리연구소');
+    expect(modalSource).toContain('Seoul Institute of Clinical Psychology');
+    expect(modalSource.indexOf('sicp-brand-lockup')).toBeLessThan(
+      modalSource.indexOf("t('modal.welcome.new')"),
+    );
+    expect(modalSource).toContain('autoFocus');
+  });
 });

@@ -30,9 +30,9 @@ Each patch note explains what changed, the conditions that may be affected, whet
 
 ## v2.2.12
 
-v2.2.12 changes visitor statistics to a cookie-free, anonymous, and aggregated approach. New visits are no longer measured with Google Analytics. Vercel Web Analytics now provides general visit information such as pages visited, referral source, approximate country or region, browser, operating system, and device type.
+v2.2.12 starts using Vercel Web Analytics for cookie-free, anonymous, aggregated visitor statistics. It also fixes the scoring table shifting briefly after a refresh and adds the Seoul Institute of Clinical Psychology symbol, institute names, and website link to the top of the start dialog.
 
-Structural Summary inputs, calculation results, AI chat content, and API keys are not included in visitor statistics. The scoring formulas and outputs have not changed, so existing protocols do not need to be recalculated. See the [v2.2.12 patch note](./v2-nextjs/releases/v2.2.12/README.en.md) for details.
+Structural Summary inputs, calculation results, AI chat content, and API keys are not included in visitor statistics. The scoring formulas, coding rules, and outputs have not changed, so existing protocols do not need to be recalculated. See the [v2.2.12 patch note](./v2-nextjs/releases/v2.2.12/README.en.md) for details.
 
 ## v2.2.11
 

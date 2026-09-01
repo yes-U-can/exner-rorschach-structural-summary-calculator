@@ -30,9 +30,9 @@ Cada nota de atualização explica o que mudou, as condições que podem ser afe
 
 ## v2.2.12
 
-A v2.2.12 muda as estatísticas de visitas para um sistema sem cookies, anônimo e agregado. As novas visitas não são mais medidas com o Google Analytics. O Vercel Web Analytics permite consultar informações gerais como páginas visitadas, origem do acesso, país ou região aproximados, navegador, sistema operacional e tipo de dispositivo.
+A v2.2.12 passa a usar o Vercel Web Analytics para estatísticas de visitas anônimas, agregadas e sem cookies. Também corrige o breve deslocamento da tabela de pontuação ao atualizar a tela e acrescenta, na parte superior da janela inicial, o símbolo e os nomes do Seoul Institute of Clinical Psychology, além de um link para o site do instituto.
 
-As entradas do Sumário Estrutural, os resultados dos cálculos, o conteúdo das conversas com IA e as chaves API não são incluídos nas estatísticas de visitas. As fórmulas e os resultados não foram alterados, portanto não é necessário recalcular os protocolos existentes. Consulte as [notas da v2.2.12](./v2-nextjs/releases/v2.2.12/README.pt-BR.md) para obter mais informações.
+As entradas do Sumário Estrutural, os resultados dos cálculos, o conteúdo das conversas com IA e as chaves API não são incluídos nas estatísticas de visitas. As fórmulas, os critérios de codificação e os resultados não foram alterados, portanto não é necessário recalcular os protocolos existentes. Consulte as [notas da v2.2.12](./v2-nextjs/releases/v2.2.12/README.pt-BR.md) para obter mais informações.
 
 ## v2.2.11
 

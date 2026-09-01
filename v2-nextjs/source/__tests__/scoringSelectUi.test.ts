@@ -118,5 +118,9 @@ describe('scoring select geometry', () => {
     expect(globalStyles).toContain('transition: transform 110ms cubic-bezier(0.22, 1, 0.36, 1);');
     expect(globalStyles).toContain('html.ui-scoring-canvas-active');
     expect(globalStyles).toContain('height: 100dvh;');
+    expect(inputTableSource).toContain("useLayoutEffect(() => {\n    const root = document.documentElement;\n    root.classList.add('ui-scoring-canvas-active');");
+    expect(inputTableSource).toContain("data-scoring-ready={tableCanvasBaseWidth === null ? 'false' : 'true'}");
+    expect(globalStyles).toContain(".ui-scoring-table-stage[data-scoring-ready='false']");
+    expect(globalStyles).toContain('visibility: hidden;');
   });
 });
