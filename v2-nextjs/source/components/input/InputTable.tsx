@@ -264,7 +264,7 @@ export default function InputTable({
     dragInsertRef.current = dragInsertIndex;
   }, [dragInsertIndex]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const root = document.documentElement;
     root.classList.add('ui-scoring-canvas-active');
     window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
@@ -810,6 +810,7 @@ export default function InputTable({
           ref={tableStageRef}
           className="ui-scoring-table-stage"
           data-scoring-motion="smooth"
+          data-scoring-ready={tableCanvasBaseWidth === null ? 'false' : 'true'}
           data-scoring-offset-x="0.00"
           data-scoring-offset-y="0.00"
           data-scoring-zoom={SCORING_CANVAS_DEFAULT_ZOOM.toFixed(3)}

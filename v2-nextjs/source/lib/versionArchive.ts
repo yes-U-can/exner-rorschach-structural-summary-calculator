@@ -49,7 +49,7 @@ export const v2NextVersions: VersionArchiveEntry[] = [
     releaseKind: 'bugfix',
     releaseLabel: '버그 패치',
     summary:
-      '방문 통계를 쿠키 없는 익명·집계 방식으로 변경했습니다. 구조요약 입력값, 계산 결과, AI 대화 내용과 API 키는 방문 통계에 포함되지 않으며, 계산식과 산출값은 바뀌지 않아 기존 결과를 다시 계산할 필요가 없습니다.',
+      '쿠키 없는 익명·집계 방문 통계를 위해 Vercel Web Analytics를 사용하기 시작했습니다. 새로고침할 때 채점표가 순간적으로 움직이던 현상을 고치고, 시작 선택창에는 서울임상심리연구소 CI와 홈페이지 연결을 추가했습니다. 계산식과 산출값은 바뀌지 않아 기존 결과를 다시 계산할 필요가 없습니다.',
     sourceUrl: v2SourceUrl,
     releaseUrl: v2ReleaseUrl('v2.2.12'),
   },

@@ -1,6 +1,7 @@
 ﻿'use client';
 
 import { useState, useEffect, lazy, Suspense, useMemo, useCallback } from 'react';
+import Image from 'next/image';
 import { useTranslation } from '@/hooks/useTranslation';
 import { useRorschachForm } from '@/hooks/useRorschachForm';
 import { useAutoSave } from '@/hooks/useAutoSave';
@@ -1261,8 +1262,33 @@ export default function HomePage() {
         showCloseButton={false}
       >
         <div className="space-y-4">
+          <a
+            href="https://www.yesucan.co.kr/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mx-auto mb-6 flex w-fit items-center justify-center gap-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand-500)] focus-visible:ring-offset-4 focus-visible:ring-offset-[var(--surface-base)]"
+            data-testid="sicp-brand-lockup"
+          >
+            <Image
+              src="/sicp-icon.png"
+              alt=""
+              width={44}
+              height={40}
+              className="h-10 w-11 shrink-0 object-contain"
+              priority
+            />
+            <div className="relative top-px min-w-0 text-left">
+              <p className="text-xl font-black leading-tight text-[var(--text-strong)]">
+                서울임상심리연구소
+              </p>
+              <p className="text-[9.15px] font-bold leading-4 tracking-[0.02em] text-[var(--text-soft)]">
+                Seoul Institute of Clinical Psychology
+              </p>
+            </div>
+          </a>
           <div className="space-y-3">
             <button
+              autoFocus
               onClick={handleNewStart}
               className="w-full rounded-xl border border-[var(--border-subtle)] px-4 py-3 text-left transition-colors hover:border-[var(--brand-200)] hover:bg-[var(--surface-muted)]"
             >

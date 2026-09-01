@@ -1449,6 +1449,10 @@ html.theme-switching [data-theme-allow-transition]::after {
     will-change: transform;
   }
 
+  .ui-scoring-table-stage[data-scoring-ready='false'] {
+    visibility: hidden;
+  }
+
   .ui-scoring-table-stage[data-scoring-motion='direct'] {
     transition: none;
   }
