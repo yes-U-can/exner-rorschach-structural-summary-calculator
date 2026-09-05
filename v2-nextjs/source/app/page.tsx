@@ -282,6 +282,13 @@ export default function HomePage() {
     if (issues.length === 0) return false;
 
     const summary = summarizeScoringInputIssues(issues);
+    if (summary.missingRequiredFieldsRows) {
+      showToast({
+        type: 'warning',
+        title: t('toast.missingRequiredFields.title'),
+        message: t('toast.missingRequiredFields.message', { rows: summary.missingRequiredFieldsRows }),
+      });
+    }
     if (summary.invalidDeterminants.rows) {
       showToast({
         type: 'warning',
@@ -370,6 +377,13 @@ export default function HomePage() {
         type: 'warning',
         title: t('toast.missingFormQuality.title'),
         message: t('toast.missingFormQuality.message', { rows: summary.missingFormQualityRows }),
+      });
+    }
+    if (summary.incompatibleFormQualityRows) {
+      showToast({
+        type: 'warning',
+        title: t('toast.incompatibleFormQuality.title'),
+        message: t('toast.incompatibleFormQuality.message', { rows: summary.incompatibleFormQualityRows }),
       });
     }
 

@@ -89,4 +89,46 @@ describe('shared scoring response rules', () => {
       expect(normalized.appliedRules).toContain('formless_fq');
     },
   );
+
+  it('requires FQ to be selected again after changing pure C to form-dominant FC', () => {
+    const pureColor = applyScoringResponseRules(response({
+      determinants: ['C'],
+      fq: 'o',
+    })).response;
+    expect(pureColor.fq).toBe('none');
+
+    const formColor = applyScoringResponseRules(
+      { ...pureColor, determinants: ['FC'] },
+      pureColor,
+    );
+
+    expect(formColor.response.fq).toBe('');
+    expect(formColor.response.determinants).toEqual(['FC']);
+    expect(pureColor.fq).toBe('none');
+  });
+
+  it('preserves a newly reviewed FQ when the determinant and FQ change together', () => {
+    const previous = response({ determinants: ['C'], fq: 'none' });
+    const reviewed = applyScoringResponseRules(
+      { ...previous, determinants: ['FC'], fq: 'o' },
+      previous,
+    );
+
+    expect(reviewed.response.fq).toBe('o');
+  });
+
+  it.each([
+    { determinants: ['Ma'] },
+    { determinants: ['Mp'] },
+    { determinants: ['Ma-p'] },
+    { determinants: ['Mp', "C'"] },
+  ])('keeps none available for formless human movement $determinants', ({ determinants }) => {
+    const previous = response({ determinants: ['C'], fq: 'none', dq: 'v' });
+    const movement = applyScoringResponseRules(
+      { ...previous, determinants, contents: ['Hx'], specialScores: ['AB'] },
+      previous,
+    );
+
+    expect(movement.response.fq).toBe('none');
+  });
 });

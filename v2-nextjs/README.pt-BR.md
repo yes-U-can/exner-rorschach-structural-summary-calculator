@@ -4,7 +4,7 @@
 
 Esta pasta contém o histórico de versões e o código-fonte público da v2 da calculadora do Sumário Estrutural de Rorschach. As notas do patch descrevem as alterações mais recentes, e o guia bibliográfico explica as fontes de cálculo.
 
-- Notas do patch mais recente: [notas da v2.2.11](./releases/v2.2.11/README.pt-BR.md)
+- Notas do patch mais recente: [notas da v2.2.13](./releases/v2.2.13/README.pt-BR.md)
 - Fontes de cálculo e escopo bibliográfico: [fontes de cálculo e escopo bibliográfico](./methodology/reference-audit-v2.2.10/README.pt-BR.md)
 - Notas da primeira versão v2: [notas da v2.0.0](./releases/v2.0.0/)
 - Código-fonte público: [código-fonte da versão 2](./source/)

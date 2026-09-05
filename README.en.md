@@ -20,13 +20,19 @@ Each patch note explains what changed, the conditions that may be affected, whet
 ## What is available
 
 - [v2] Live web app: [exner.yesucan.co.kr](https://exner.yesucan.co.kr)
-- [v2] Latest version 2 release: [v2-nextjs/releases/v2.2.12](./v2-nextjs/releases/v2.2.12/README.en.md)
+- [v2] Latest version 2 release: [v2-nextjs/releases/v2.2.13](./v2-nextjs/releases/v2.2.13/README.en.md)
 - [v2] v2.2.10 calculation sources and literature scope: [calculation sources and literature scope](./v2-nextjs/methodology/reference-audit-v2.2.10/README.en.md)
 - [v2] Version 2 release archive: [v2-nextjs/releases](./v2-nextjs/releases/)
 - [v2] Version 2 public source: [v2-nextjs/source](./v2-nextjs/source/)
 - [Google Apps Script] Version 1 release archive: [v1-gas/releases](./v1-gas/releases/)
 - Latest v1 deployment: [v1.4.1 deployment](https://script.google.com/macros/s/AKfycbxMCx13pkrSzFs8f2qXfmxy2LRhkBpZTItFTIfEOoOi-zwurbysnKGfDIYtAeEdQP99/exec)
 - Latest v1 source: [v1-gas/current](./v1-gas/current/)
+
+## v2.2.13
+
+v2.2.13 fixes a problem that allowed rows with missing required codes or incompatible determinants and Form Quality (FQ) to be included in calculations. Rows requiring review are identified before calculation. When a determinant is changed to one that uses form, a remaining `none` is cleared so the scorer can select the appropriate FQ.
+
+The formulas and Special Index thresholds are unchanged. Existing records completed according to the coding rules do not need to be recalculated, but records with the affected omissions or inconsistencies should be checked against the original material, corrected, and recalculated. An actual absence of a response to a card cannot be resolved by inventing codes or deleting a row. The requirement for a response to each of cards I–X and the allowance for valid formless responses remain in place. See the [v2.2.13 patch note](./v2-nextjs/releases/v2.2.13/README.en.md) for details.
 
 ## v2.2.12
 
@@ -114,6 +120,8 @@ The AI assistants were restricted from expanding beyond the Exner Comprehensive 
 
 ## [v2] Version 2 release history
 
+- **[2026-09-05] v2.2.13 (bug-fix release)** [Patch note](./v2-nextjs/releases/v2.2.13/README.en.md) [Source](./v2-nextjs/source/)
+- **[2026-09-01] v2.2.12 (bug-fix release)** [Patch note](./v2-nextjs/releases/v2.2.12/README.en.md) [Source](./v2-nextjs/source/)
 - **[2026-08-21] v2.2.11 (bug-fix release)** [Patch note](./v2-nextjs/releases/v2.2.11/README.en.md) [Source](./v2-nextjs/source/)
 - **[2026-08-08] v2.2.10 (bug-fix release)** [Patch note](./v2-nextjs/releases/v2.2.10/README.en.md) [Source](./v2-nextjs/source/)
 - **[2026-08-01] v2.2.9 (bug-fix release)** [Patch note](./v2-nextjs/releases/v2.2.9/README.en.md) [Source](./v2-nextjs/source/)

@@ -9,7 +9,7 @@
 import { SCORING_CONFIG } from './constants';
 import { val, fix1, fix2, zestFromZf, dTable } from './utils';
 import { classifyGPHR } from './gphr';
-import { findScoringInputIssues } from './scoringInputValidation';
+import { findScoringInputIssues, isParticipatingResponse } from './scoringInputValidation';
 import type { RorschachResponse, CalculationResult, StructuralSummary } from '@/types';
 
 /**
@@ -66,13 +66,25 @@ export function calculateStructuralSummary(
   responses: RorschachResponse[]
 ): CalculationResult {
   try {
-    const validResponses = responses;
-    const scoringInputIssues = findScoringInputIssues(validResponses);
+    const validResponses = responses.filter(isParticipatingResponse);
+    const scoringInputIssues = findScoringInputIssues(responses);
     if (scoringInputIssues.length > 0) {
       return {
         success: false,
         errors: scoringInputIssues.map((issue) => {
           const row = issue.responseIndex + 1;
+          if (issue.type === 'missing_required_field') {
+            return {
+              field: `responses.${issue.responseIndex}.${issue.field}`,
+              message: `Required scoring field is missing at row ${row}: ${issue.field}`,
+            };
+          }
+          if (issue.type === 'incompatible_form_quality') {
+            return {
+              field: `responses.${issue.responseIndex}.fq`,
+              message: `Form Quality does not match the determinants at row ${row}; review the response before calculating.`,
+            };
+          }
           if (issue.type === 'invalid_determinant') {
             return {
               field: `responses.${issue.responseIndex}.determinants`,

@@ -8,6 +8,7 @@ Este documento presenta las versiones públicas de `exner-rorschach-structural-s
 
 | Fecha | Versión | Tipo | Notas | Código fuente |
 | --- | --- | --- | --- | --- |
+| 2026-09-05 | v2.2.13 | Corrección de errores | [Notas del parche](./v2-nextjs/releases/v2.2.13/README.es.md) | [Código fuente](./v2-nextjs/source/) |
 | 2026-09-01 | v2.2.12 | Corrección de errores | [Notas del parche](./v2-nextjs/releases/v2.2.12/README.es.md) | [Código fuente](./v2-nextjs/source/) |
 | 2026-08-21 | v2.2.11 | Corrección de errores | [Notas del parche](./v2-nextjs/releases/v2.2.11/README.es.md) | [Código fuente](./v2-nextjs/source/) |
 | 2026-08-08 | v2.2.10 | Corrección de errores | [Notas del parche](./v2-nextjs/releases/v2.2.10/README.es.md) | [Código fuente](./v2-nextjs/source/) |

@@ -1,7 +1,7 @@
 {
   "app": {
     "title": "Exner 로샤 종합체계 구조요약 계산기",
-    "version": "v2.2.12",
+    "version": "v2.2.13",
     "provider": "MOW 제작·유지보수"
   },
   "nav": {
@@ -305,6 +305,14 @@
     "invalidZ": {
       "title": "Z 부호 재확인",
       "message": "행 {rows}에 사용할 수 없는 Z 부호 {codes}가 입력되어 있습니다. ZW, ZA, ZD, ZS 중 하나를 선택하거나 비워 주세요. 수정하기 전에는 계산할 수 없습니다."
+    },
+    "missingRequiredFields": {
+      "title": "필수 채점값 재확인",
+      "message": "행 {rows}에 필수 채점값이 빠져 있습니다. 위치, DQ, 결정인, 내용을 확인해 누락된 항목을 입력해 주세요. 수정하기 전에는 계산할 수 없습니다."
+    },
+    "incompatibleFormQuality": {
+      "title": "결정인과 형태질 재확인",
+      "message": "행 {rows}의 결정인과 FQ 조합이 맞지 않습니다. 반응기록과 질문단계를 확인해 원반응에 맞는 결정인과 FQ를 선택해 주세요. 수정하기 전에는 계산할 수 없습니다."
     },
     "missingFormQuality": {
       "title": "형태질 재확인",
