@@ -18,9 +18,9 @@ Uma linha na qual a codificação de uma resposta já foi iniciada precisa conte
 
 Quando uma linha incompleta é contada como uma resposta real, o número de respostas (R) e as proporções que o utilizam podem mudar. Se faltarem a localização ou os determinantes, valores que usam esses códigos, como WDA% ou Lambda, também podem ser afetados. Linhas vazias que não foram utilizadas não entram no número de respostas.
 
-**Quando realmente não houve resposta à prancha VI**
+**Exemplo: ausência de resposta a uma prancha**
 
-Se realmente não houve resposta à prancha VI, não se deve preencher a linha arbitrariamente com `none` ou outro código para tratá-la como uma resposta completa. A opção `none` de FQ representa uma resposta real que não utiliza a forma; não é um código para indicar ausência de resposta.
+Por exemplo, se realmente não houve resposta à prancha VI, preencher a linha com `none` ou outros códigos não a transforma em uma resposta completa. A opção `none` de FQ representa uma resposta real que não utiliza a forma; não é um código para indicar ausência de resposta.
 
 Excluir essa linha também não muda o fato de que não houve resposta à prancha VI. O critério existente continua o mesmo: cada prancha I–X precisa ter pelo menos uma resposta para que o cálculo seja realizado. É necessário distinguir uma resposta presente no material original que não foi digitada de uma ausência real de resposta durante a aplicação do teste.
 

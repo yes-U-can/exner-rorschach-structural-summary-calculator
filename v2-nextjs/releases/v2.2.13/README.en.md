@@ -18,9 +18,9 @@ Once coding has begun for a response, its row needs Location, Developmental Qual
 
 If an incomplete row is counted as an actual response, the response count (R) and ratios that use it can change. Missing Location or Determinants can also affect values such as WDA% or Lambda that depend on those codes. Unused blank rows are not included in the response count.
 
-**When no response was actually given to card VI**
+**Example: no response to a card**
 
-If no response was actually given to card VI, the row must not be treated as a completed response by entering `none` or other codes without a basis in the response record. The FQ selection `none` represents an actual response in which form was not used; it is not a code for the absence of a response.
+For example, if no response was actually given to card VI, entering `none` or other codes in that row does not make it a completed response. The FQ selection `none` represents an actual response in which form was not used; it is not a code for the absence of a response.
 
 Deleting the row does not change the fact that no response was given to card VI. The existing requirement for at least one response to each of cards I–X before calculation remains in place. Review the original material to distinguish a response that was given but not entered from a card that received no response during administration.
 
