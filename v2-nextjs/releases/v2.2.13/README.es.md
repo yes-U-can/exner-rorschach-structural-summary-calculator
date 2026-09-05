@@ -18,9 +18,9 @@ Cada fila en la que se haya empezado a codificar una respuesta debe incluir loca
 
 Si una fila incompleta se cuenta como una respuesta real, pueden cambiar el número de respuestas (R) y las proporciones que lo utilizan. Cuando faltan la localización o los determinantes, también pueden verse afectados valores que utilizan esos códigos, como WDA% o Lambda. Las filas vacías que no se hayan utilizado no se incluyen en el número de respuestas.
 
-**Cuando realmente no hubo respuesta a la lámina VI**
+**Ejemplo: ausencia de respuesta a una lámina**
 
-Si realmente no hubo respuesta a la lámina VI, no debe introducirse arbitrariamente `none` ni otro código en esa fila para tratarla como una respuesta completa. La opción `none` de FQ representa una respuesta real que no utiliza la forma; no es un código para indicar que no hubo respuesta.
+Por ejemplo, si realmente no hubo respuesta a la lámina VI, introducir `none` u otros códigos en esa fila no la convierte en una respuesta completa. La opción `none` de FQ representa una respuesta real que no utiliza la forma; no es un código para indicar que no hubo respuesta.
 
 Eliminar esa fila tampoco cambia el hecho de que no hubo respuesta a la lámina VI. Se mantiene el criterio existente de que cada lámina I–X debe tener al menos una respuesta para poder calcular. Es necesario distinguir entre una respuesta que figura en el material original pero no se introdujo y una ausencia real de respuesta durante la administración de la prueba.
 
