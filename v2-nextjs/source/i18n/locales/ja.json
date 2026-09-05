@@ -1,7 +1,7 @@
 {
   "app": {
     "title": "ロールシャッハ構造一覧表計算ツール",
-    "version": "v2.2.12",
+    "version": "v2.2.13",
     "provider": "MOWが制作・保守"
   },
   "nav": {
@@ -305,6 +305,14 @@
     "invalidZ": {
       "title": "Zコードを再確認",
       "message": "行 {rows} に使用できないZコード {codes} が入力されています。ZW、ZA、ZD、ZSのいずれかを選択するか、空欄にしてください。修正するまで計算できません。"
+    },
+    "missingRequiredFields": {
+      "title": "必須の採点項目を再確認",
+      "message": "行 {rows} に未入力の必須採点項目があります。位置、DQ、決定因、内容を確認し、未入力の項目を入力してください。修正するまで計算できません。"
+    },
+    "incompatibleFormQuality": {
+      "title": "決定因と形態水準を再確認",
+      "message": "行 {rows} の決定因とFQの組み合わせが適合していません。反応記録と質問段階を確認し、元の反応に合った決定因とFQを選択してください。修正するまで計算できません。"
     },
     "missingFormQuality": {
       "title": "形態水準を再確認",

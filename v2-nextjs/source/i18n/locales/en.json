@@ -1,7 +1,7 @@
 {
   "app": {
     "title": "Rorschach Structural Summary Calculator",
-    "version": "v2.2.12",
+    "version": "v2.2.13",
     "provider": "Developed and maintained by MOW"
   },
   "nav": {
@@ -305,6 +305,14 @@
     "colorProjectionConflict": {
       "title": "Review Color Projection Coding",
       "message": "Rows {rows} contain codes that cannot be recorded together: {codes}. CP identifies chromatic color projected onto an achromatic area, so it is not recorded with FC, CF, or C. Calculation is blocked until these rows are corrected."
+    },
+    "missingRequiredFields": {
+      "title": "Review Required Scoring Fields",
+      "message": "Required scoring fields are missing in rows {rows}. Check Location, DQ, Determinants, and Contents, and complete the missing entries. Calculation is blocked until these rows are corrected."
+    },
+    "incompatibleFormQuality": {
+      "title": "Review Determinants and Form Quality",
+      "message": "Rows {rows} contain incompatible combinations of determinants and FQ. Review the response record and inquiry, then select determinants and FQ that match the original response. Calculation is blocked until these rows are corrected."
     },
     "missingFormQuality": {
       "title": "Review Form Quality",

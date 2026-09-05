@@ -30,6 +30,8 @@ En particular, la lista de entrada del libro de 2019 contenía únicamente códi
 
 ## Herramientas de desarrollo y revisión independiente con IA
 
-OpenAI Codex se utilizó para la implementación y las pruebas repetidas de v2. Claude Fable 5 y Claude Opus 4.8 se utilizaron para la revisión independiente previa a la publicación.
+OpenAI Codex se utilizó para la implementación y las pruebas repetidas de v2. Claude Fable 5 y Claude Opus 4.8 se utilizaron para la revisión independiente previa a la publicación, y Claude Opus 5 se utilizó para la revisión independiente de v2.2.10.
+
+Para v2.2.13, se utilizó GPT-6 Astra en OpenAI Codex para el desarrollo y la verificación, y Claude Fable 5.1 en Claude Code para la revisión independiente. Son herramientas de desarrollo del producto; el modelo del asistente de IA de la aplicación web no ha cambiado.
 
 La coincidencia entre herramientas de IA no se considera prueba de que un cálculo o un juicio clínico sea correcto. MOW conserva la responsabilidad final sobre el producto y contrasta fuentes profesionales públicas, resultados reproducibles del programa y pruebas de regresión, así como la revisión clínica realizada por el Seoul Institute of Clinical Psychology desde la perspectiva del uso real.

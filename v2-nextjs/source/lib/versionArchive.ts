@@ -42,6 +42,18 @@ const v2SourceUrl = `${exhibitionRepoUrl}/tree/main/v2-nextjs/source`;
 
 export const v2NextVersions: VersionArchiveEntry[] = [
   {
+    version: 'v2.2.13',
+    title: 'Version 2.2.13',
+    series: 'v2-nextjs',
+    publishedAt: '2026-09-05',
+    releaseKind: 'bugfix',
+    releaseLabel: '버그 패치',
+    summary:
+      '필수 채점값이 빠진 행과 결정인·형태질이 맞지 않는 행이 계산으로 이어지던 문제를 수정했습니다. 정상 무형태 반응은 계속 입력할 수 있습니다. 해당 누락이나 불일치가 있었던 기록은 원자료를 확인하고 수정한 뒤 다시 계산합니다.',
+    sourceUrl: v2SourceUrl,
+    releaseUrl: v2ReleaseUrl('v2.2.13'),
+  },
+  {
     version: 'v2.2.12',
     title: 'Version 2.2.12',
     series: 'v2-nextjs',

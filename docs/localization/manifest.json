@@ -46,7 +46,7 @@
                            {
                                "id":  "root-readme",
                                "canonical":  "README.md",
-                               "canonicalSha256":  "ca8e76e99b4125a0e8fbc28657ef598a09c7d77ef37e843f3e84165f8511ecaf",
+                               "canonicalSha256":  "ef803294b327b4532812781e483fe3fdd46800b8aa46eefa0ecb756937c4b356",
                                "reviewStatus":  "reviewed",
                                "translations":  {
                                                     "en":  "README.en.md",
@@ -58,7 +58,7 @@
                            {
                                "id":  "root-changelog",
                                "canonical":  "CHANGELOG.md",
-                               "canonicalSha256":  "fbd4a29eeb4542c40ceaa51f0832bdbbe344918ab1302582ce03a2cc32ae9f89",
+                               "canonicalSha256":  "90657a0aa3d7db16407b76b36a5c8c5c3c78b1e166b875db2cc03c97cd16b78d",
                                "reviewStatus":  "reviewed",
                                "translations":  {
                                                     "en":  "CHANGELOG.en.md",
@@ -70,7 +70,7 @@
                            {
                                "id":  "acknowledgements",
                                "canonical":  "ACKNOWLEDGEMENTS.md",
-                               "canonicalSha256":  "9a988ff6a59477350e0fc79d065a2f513636f59b2aedc2861d14f050fccfd4cc",
+                               "canonicalSha256":  "23ab2afb4115d2bb635eef87cc5455bbce2e5fcbc191fd77f7551ac7dc5b5a36",
                                "reviewStatus":  "reviewed",
                                "translations":  {
                                                     "en":  "ACKNOWLEDGEMENTS.en.md",
@@ -106,7 +106,7 @@
                            {
                                "id":  "v2-readme",
                                "canonical":  "v2-nextjs/README.md",
-                               "canonicalSha256":  "3e25d5a6b1f6a401357741420881dd03df6fea5e8cc6894e9147420fc5df4d70",
+                               "canonicalSha256":  "15820f928e364670e9ac87dbb59134aa7a410c55d76124af0d7630c30943a223",
                                "reviewStatus":  "reviewed",
                                "translations":  {
                                                     "en":  "v2-nextjs/README.en.md",
@@ -221,6 +221,18 @@
                                                     "ja":  "v2-nextjs/methodology/reference-audit-v2.2.10/README.ja.md",
                                                     "es":  "v2-nextjs/methodology/reference-audit-v2.2.10/README.es.md",
                                                     "pt-BR":  "v2-nextjs/methodology/reference-audit-v2.2.10/README.pt-BR.md"
+                                                }
+                           },
+                           {
+                               "id":  "v2.2.13-release-note",
+                               "canonical":  "v2-nextjs/releases/v2.2.13/README.md",
+                               "canonicalSha256":  "3a5ba3f62fab3a1b23e10f6492686793bee7be2a8a47e90a49f71e7da2f20f59",
+                               "reviewStatus":  "reviewed",
+                               "translations":  {
+                                                    "en":  "v2-nextjs/releases/v2.2.13/README.en.md",
+                                                    "ja":  "v2-nextjs/releases/v2.2.13/README.ja.md",
+                                                    "es":  "v2-nextjs/releases/v2.2.13/README.es.md",
+                                                    "pt-BR":  "v2-nextjs/releases/v2.2.13/README.pt-BR.md"
                                                 }
                            }
                        ],

@@ -20,13 +20,19 @@ Cada nota de versión explica los cambios, las condiciones que podrían verse af
 ## Contenido publicado
 
 - [v2] Aplicación web: [exner.yesucan.co.kr](https://exner.yesucan.co.kr)
-- [v2] Versión 2 más reciente: [v2-nextjs/releases/v2.2.12](./v2-nextjs/releases/v2.2.12/README.es.md)
+- [v2] Versión 2 más reciente: [v2-nextjs/releases/v2.2.13](./v2-nextjs/releases/v2.2.13/README.es.md)
 - [v2] Fuentes de cálculo y alcance bibliográfico de v2.2.10: [fuentes de cálculo y alcance bibliográfico](./v2-nextjs/methodology/reference-audit-v2.2.10/README.es.md)
 - [v2] Historial de versiones 2: [v2-nextjs/releases](./v2-nextjs/releases/)
 - [v2] Código fuente público de la versión 2: [v2-nextjs/source](./v2-nextjs/source/)
 - [Google Apps Script] Historial de versiones 1: [v1-gas/releases](./v1-gas/releases/)
 - Última versión ejecutable de v1: [despliegue v1.4.1](https://script.google.com/macros/s/AKfycbxMCx13pkrSzFs8f2qXfmxy2LRhkBpZTItFTIfEOoOi-zwurbysnKGfDIYtAeEdQP99/exec)
 - Último código fuente de v1: [v1-gas/current](./v1-gas/current/)
+
+## v2.2.13
+
+La v2.2.13 corrige un problema que permitía incluir en el cálculo filas con códigos obligatorios ausentes o con determinantes y calidad formal (FQ) incompatibles. Antes del cálculo se indican las filas que requieren revisión. Al cambiar a un determinante que utiliza la forma, el valor `none` que haya quedado se borra para que se seleccione la FQ correspondiente.
+
+Las fórmulas y los umbrales de los índices especiales no han cambiado. No es necesario volver a calcular los registros completados conforme a las reglas de codificación; los registros con las omisiones o incompatibilidades descritas deben revisarse con el material original, corregirse y volver a calcularse. La ausencia real de respuesta a una lámina no se resuelve inventando códigos ni eliminando una fila. Se mantienen el requisito de una respuesta a cada lámina I–X y la admisión de respuestas sin forma válidamente codificadas. Consulte la [nota de v2.2.13](./v2-nextjs/releases/v2.2.13/README.es.md) para obtener más información.
 
 ## v2.2.12
 
@@ -114,6 +120,8 @@ Los asistentes de IA se limitaron al Sistema Comprehensivo de Exner. Las correcc
 
 ## [v2] Historial de versiones 2
 
+- **[2026-09-05] v2.2.13 (corrección de errores)** [Nota del parche](./v2-nextjs/releases/v2.2.13/README.es.md) [Código fuente](./v2-nextjs/source/)
+- **[2026-09-01] v2.2.12 (corrección de errores)** [Nota del parche](./v2-nextjs/releases/v2.2.12/README.es.md) [Código fuente](./v2-nextjs/source/)
 - **[2026-08-21] v2.2.11 (corrección de errores)** [Nota del parche](./v2-nextjs/releases/v2.2.11/README.es.md) [Código fuente](./v2-nextjs/source/)
 - **[2026-08-08] v2.2.10 (corrección de errores)** [Nota del parche](./v2-nextjs/releases/v2.2.10/README.es.md) [Código fuente](./v2-nextjs/source/)
 - **[2026-08-01] v2.2.9 (corrección de errores)** [Nota del parche](./v2-nextjs/releases/v2.2.9/README.es.md) [Código fuente](./v2-nextjs/source/)

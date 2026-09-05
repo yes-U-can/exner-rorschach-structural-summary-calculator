@@ -1,7 +1,7 @@
 {
   "app": {
     "title": "Calculadora do Sumário Estrutural de Rorschach",
-    "version": "v2.2.12",
+    "version": "v2.2.13",
     "provider": "Desenvolvido e mantido pela MOW"
   },
   "nav": {
@@ -305,6 +305,14 @@
     "colorProjectionConflict": {
       "title": "Revisar a codificação de projeção de cor",
       "message": "As linhas {rows} contêm códigos que não podem ser registrados juntos: {codes}. CP identifica cor cromática projetada em uma área acromática, por isso não é registrado junto com FC, CF ou C. O cálculo ficará bloqueado até que essas linhas sejam corrigidas."
+    },
+    "missingRequiredFields": {
+      "title": "Revisar os campos obrigatórios de codificação",
+      "message": "Faltam dados de codificação obrigatórios nas linhas {rows}. Revise Localização, DQ, Determinantes e Conteúdos e preencha os campos em branco. O cálculo ficará bloqueado até que essas linhas sejam corrigidas."
+    },
+    "incompatibleFormQuality": {
+      "title": "Revisar os determinantes e a qualidade formal",
+      "message": "As linhas {rows} contêm combinações incompatíveis de determinantes e FQ. Revise o registro e o inquérito e selecione os determinantes e a FQ que correspondam à resposta original. O cálculo ficará bloqueado até que essas linhas sejam corrigidas."
     },
     "missingFormQuality": {
       "title": "Revisar a qualidade formal",

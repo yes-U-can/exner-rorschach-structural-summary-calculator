@@ -1,7 +1,7 @@
 import { findInvalidDeterminantInputs } from '@/lib/determinantInput';
 import { SCORING_CONFIG } from '@/lib/constants';
 import { OPTIONS } from '@/lib/options';
-import { SPECIAL_SCORE_LEVEL_PAIRS } from '@/lib/scoringResponseRules';
+import { getFormQualityRequirement, SPECIAL_SCORE_LEVEL_PAIRS } from '@/lib/scoringResponseRules';
 import type { RorschachResponse } from '@/types';
 
 export const MOVEMENT_CODE_FAMILIES = {
@@ -45,6 +45,15 @@ export const CONTENT_CODE_CONFLICT_GROUPS = {
 export type ContentConflictRule = keyof typeof CONTENT_CODE_CONFLICT_GROUPS;
 
 export type ScoringInputIssue =
+  | {
+      type: 'missing_required_field';
+      responseIndex: number;
+      field: 'location' | 'dq' | 'determinants' | 'contents';
+    }
+  | {
+      type: 'incompatible_form_quality';
+      responseIndex: number;
+    }
   | {
       type: 'invalid_determinant';
       responseIndex: number;
@@ -256,6 +265,17 @@ export function findScoringInputIssues(
   responses.forEach((response, responseIndex) => {
     if (!participatingRows.has(responseIndex)) return;
 
+    for (const field of ['location', 'dq'] as const) {
+      if (!response[field].trim()) {
+        issues.push({ type: 'missing_required_field', responseIndex, field });
+      }
+    }
+    for (const field of ['determinants', 'contents'] as const) {
+      if (!response[field].some((code) => code.trim().length > 0)) {
+        issues.push({ type: 'missing_required_field', responseIndex, field });
+      }
+    }
+
     if (response.location === 'S') {
       issues.push({ type: 'standalone_space', responseIndex });
     }
@@ -379,6 +399,14 @@ export function findScoringInputIssues(
 
     if (response.fq.trim().length === 0) {
       issues.push({ type: 'missing_form_quality', responseIndex });
+    } else {
+      const requirement = getFormQualityRequirement(response.determinants);
+      if (
+        (requirement === 'form' && response.fq === 'none')
+        || (requirement === 'none' && response.fq !== 'none')
+      ) {
+        issues.push({ type: 'incompatible_form_quality', responseIndex });
+      }
     }
   });
 
@@ -431,6 +459,8 @@ export function summarizeScoringInputIssues(issues: readonly ScoringInputIssue[]
   );
 
   return {
+    missingRequiredFieldsRows: rowsFor('missing_required_field'),
+    incompatibleFormQualityRows: rowsFor('incompatible_form_quality'),
     invalidDeterminants: {
       rows: rowsFor('invalid_determinant'),
       codes: [...new Set(invalidDeterminants.map((issue) => issue.code))].join(', '),

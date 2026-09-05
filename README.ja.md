@@ -20,13 +20,19 @@ MOW（モオ）は、ウェブアプリの企画、制作、配布、運用、�
 ## 公開している内容
 
 - [v2] 公開ウェブアプリ: [exner.yesucan.co.kr](https://exner.yesucan.co.kr)
-- [v2] バージョン2の最新リリース: [v2-nextjs/releases/v2.2.12](./v2-nextjs/releases/v2.2.12/README.ja.md)
+- [v2] バージョン2の最新リリース: [v2-nextjs/releases/v2.2.13](./v2-nextjs/releases/v2.2.13/README.ja.md)
 - [v2] v2.2.10の計算根拠と文献範囲: [計算根拠と文献範囲](./v2-nextjs/methodology/reference-audit-v2.2.10/README.ja.md)
 - [v2] バージョン2のリリース記録: [v2-nextjs/releases](./v2-nextjs/releases/)
 - [v2] バージョン2の公開ソースコード: [v2-nextjs/source](./v2-nextjs/source/)
 - [Google Apps Script] バージョン1のリリース記録: [v1-gas/releases](./v1-gas/releases/)
 - 最新のv1実行版: [v1.4.1 デプロイ](https://script.google.com/macros/s/AKfycbxMCx13pkrSzFs8f2qXfmxy2LRhkBpZTItFTIfEOoOi-zwurbysnKGfDIYtAeEdQP99/exec)
 - 最新のv1ソースコード: [v1-gas/current](./v1-gas/current/)
+
+## v2.2.13
+
+v2.2.13では、必須の採点項目が未入力の行や、決定因と形態水準（FQ）が適合しない行が計算に含まれる問題を修正しました。計算前に確認が必要な行を案内し、形態を使用する決定因に変更した後に残っていた `none` は未入力の状態に戻して、FQを選び直せるようにします。
+
+計算式と特殊指標の基準値は変更していません。符号化の規則に沿って完成している既存の記録は再計算する必要がありませんが、該当する未入力や不一致があった記録は、原資料を確認し、修正した後に再計算する必要があります。実際に反応がなかったカードについて、任意の符号を入力したり行を削除したりして解決することはできません。カードI～Xのそれぞれに反応が必要という基準と、適切な無形態反応の許容は維持しています。詳細は[v2.2.13パッチノート](./v2-nextjs/releases/v2.2.13/README.ja.md)をご確認ください。
 
 ## v2.2.12
 
@@ -114,6 +120,8 @@ AIアシスタントがエクスナー包括システム以外へ回答範囲を
 
 ## [v2] バージョン2リリース記録
 
+- **[2026-09-05] v2.2.13（バグ修正）** [パッチノート](./v2-nextjs/releases/v2.2.13/README.ja.md) [ソースコード](./v2-nextjs/source/)
+- **[2026-09-01] v2.2.12（バグ修正）** [パッチノート](./v2-nextjs/releases/v2.2.12/README.ja.md) [ソースコード](./v2-nextjs/source/)
 - **[2026-08-21] v2.2.11（バグ修正）** [パッチノート](./v2-nextjs/releases/v2.2.11/README.ja.md) [ソースコード](./v2-nextjs/source/)
 - **[2026-08-08] v2.2.10（バグ修正）** [パッチノート](./v2-nextjs/releases/v2.2.10/README.ja.md) [ソースコード](./v2-nextjs/source/)
 - **[2026-08-01] v2.2.9（バグ修正）** [パッチノート](./v2-nextjs/releases/v2.2.9/README.ja.md) [ソースコード](./v2-nextjs/source/)

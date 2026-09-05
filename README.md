@@ -20,13 +20,19 @@ MOW(모오)는 웹앱의 기획, 제작, 배포, 운영과 유지보수를 맡�
 ## 현재 공개된 항목
 
 - [v2] 라이브 웹앱: [exner.yesucan.co.kr](https://exner.yesucan.co.kr)
-- [v2] 버전 2 최신 릴리즈: [v2-nextjs/releases/v2.2.12](./v2-nextjs/releases/v2.2.12/)
+- [v2] 버전 2 최신 릴리즈: [v2-nextjs/releases/v2.2.13](./v2-nextjs/releases/v2.2.13/)
 - [v2] v2.2.10 계산 근거와 문헌 범위: [계산 근거와 문헌 범위](./v2-nextjs/methodology/reference-audit-v2.2.10/)
 - [v2] 버전 2 릴리즈 기록: [v2-nextjs/releases](./v2-nextjs/releases/)
 - [v2] 버전 2 공개 소스코드: [v2-nextjs/source](./v2-nextjs/source/)
 - [Google Apps Script] 버전 1 릴리즈 기록: [v1-gas/releases](./v1-gas/releases/)
 - 최신 v1 실행본: [v1.4.1 배포링크](https://script.google.com/macros/s/AKfycbxMCx13pkrSzFs8f2qXfmxy2LRhkBpZTItFTIfEOoOi-zwurbysnKGfDIYtAeEdQP99/exec)
 - 최신 v1 소스코드: [v1-gas/current](./v1-gas/current/)
+
+## v2.2.13
+
+v2.2.13은 필수 채점값이 빠진 행이나 결정인과 형태질(FQ)이 맞지 않는 행이 계산에 포함되던 문제를 수정했습니다. 계산 전에 확인이 필요한 행을 안내하며, 형태를 사용하는 결정인으로 바꾼 뒤 남아 있던 `none`은 미입력 상태로 되돌려 다시 선택하도록 합니다.
+
+계산식과 특수지표 임계값은 그대로입니다. 규칙대로 완성된 기존 기록은 다시 계산할 필요가 없지만, 해당 누락이나 불일치가 있었던 기록은 원자료를 확인하고 수정한 뒤 다시 계산해야 합니다. 실제 무반응 카드는 임의의 부호나 행 삭제로 해결하지 않으며, 카드 I–X에 각각 반응이 필요하다는 기준과 정상 무형태 반응의 허용은 유지됩니다. 자세한 내용은 [v2.2.13 패치노트](./v2-nextjs/releases/v2.2.13/)에서 확인할 수 있습니다.
 
 ## v2.2.12
 
@@ -114,6 +120,8 @@ AI 도우미는 Exner 종합체계 밖의 질문에 답변 범위를 넓히지 �
 
 ## [v2] 버전 2 릴리즈 기록
 
+- **[2026-09-05] v2.2.13 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.2.13/) [소스코드](./v2-nextjs/source/)
+- **[2026-09-01] v2.2.12 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.2.12/) [소스코드](./v2-nextjs/source/)
 - **[2026-08-21] v2.2.11 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.2.11/) [소스코드](./v2-nextjs/source/)
 - **[2026-08-08] v2.2.10 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.2.10/) [소스코드](./v2-nextjs/source/)
 - **[2026-08-01] v2.2.9 (버그 패치)** [패치노트](./v2-nextjs/releases/v2.2.9/) [소스코드](./v2-nextjs/source/)

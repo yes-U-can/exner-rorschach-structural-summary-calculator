@@ -130,7 +130,8 @@ describe('Comprehensive System calculation conformance', () => {
       makeResponse(0, { determinants: ['FC'] }),
       makeResponse(1, { determinants: ['FC'] }),
       makeResponse(2, { determinants: ['CF'] }),
-      makeResponse(3, { determinants: ['Cn', 'FY'], fq: 'none' }),
+      // FY uses form even when Cn is present in this synthetic blend.
+      makeResponse(3, { determinants: ['Cn', 'FY'], fq: 'o' }),
       makeResponse(4, { determinants: ['Cn'], fq: 'none' }),
     ]);
 

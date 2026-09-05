@@ -20,13 +20,19 @@ Cada nota de atualização explica o que mudou, as condições que podem ser afe
 ## Conteúdo publicado
 
 - [v2] Aplicativo web: [exner.yesucan.co.kr](https://exner.yesucan.co.kr)
-- [v2] Versão 2 mais recente: [v2-nextjs/releases/v2.2.12](./v2-nextjs/releases/v2.2.12/README.pt-BR.md)
+- [v2] Versão 2 mais recente: [v2-nextjs/releases/v2.2.13](./v2-nextjs/releases/v2.2.13/README.pt-BR.md)
 - [v2] Fontes de cálculo e escopo bibliográfico da v2.2.10: [fontes de cálculo e escopo bibliográfico](./v2-nextjs/methodology/reference-audit-v2.2.10/README.pt-BR.md)
 - [v2] Histórico de versões 2: [v2-nextjs/releases](./v2-nextjs/releases/)
 - [v2] Código-fonte público da versão 2: [v2-nextjs/source](./v2-nextjs/source/)
 - [Google Apps Script] Histórico de versões 1: [v1-gas/releases](./v1-gas/releases/)
 - Versão executável mais recente da v1: [implantação v1.4.1](https://script.google.com/macros/s/AKfycbxMCx13pkrSzFs8f2qXfmxy2LRhkBpZTItFTIfEOoOi-zwurbysnKGfDIYtAeEdQP99/exec)
 - Código-fonte mais recente da v1: [v1-gas/current](./v1-gas/current/)
+
+## v2.2.13
+
+A v2.2.13 corrige um problema que permitia incluir no cálculo linhas com códigos obrigatórios ausentes ou com determinantes e qualidade formal (FQ) incompatíveis. Antes do cálculo, são indicadas as linhas que precisam de revisão. Ao mudar para um determinante que utiliza a forma, o valor `none` que tenha permanecido é apagado para que se selecione a FQ correspondente.
+
+As fórmulas e os valores de corte dos índices especiais não foram alterados. Registros preenchidos conforme as regras de codificação não precisam ser recalculados; registros com as omissões ou incompatibilidades descritas devem ser conferidos com o material original, corrigidos e recalculados. A ausência real de resposta a uma prancha não se resolve inventando códigos nem excluindo uma linha. Permanecem o requisito de uma resposta a cada prancha I–X e a aceitação de respostas sem forma corretamente codificadas. Consulte as [notas da v2.2.13](./v2-nextjs/releases/v2.2.13/README.pt-BR.md) para obter mais informações.
 
 ## v2.2.12
 
@@ -114,6 +120,8 @@ Os assistentes de IA foram limitados ao Sistema Compreensivo de Exner. As corre�
 
 ## [v2] Histórico de versões 2
 
+- **[2026-09-05] v2.2.13 (correção de erros)** [Nota da versão](./v2-nextjs/releases/v2.2.13/README.pt-BR.md) [Código-fonte](./v2-nextjs/source/)
+- **[2026-09-01] v2.2.12 (correção de erros)** [Nota da versão](./v2-nextjs/releases/v2.2.12/README.pt-BR.md) [Código-fonte](./v2-nextjs/source/)
 - **[2026-08-21] v2.2.11 (correção de erros)** [Nota da versão](./v2-nextjs/releases/v2.2.11/README.pt-BR.md) [Código-fonte](./v2-nextjs/source/)
 - **[2026-08-08] v2.2.10 (correção de erros)** [Nota da versão](./v2-nextjs/releases/v2.2.10/README.pt-BR.md) [Código-fonte](./v2-nextjs/source/)
 - **[2026-08-01] v2.2.9 (correção de erros)** [Nota da versão](./v2-nextjs/releases/v2.2.9/README.pt-BR.md) [Código-fonte](./v2-nextjs/source/)

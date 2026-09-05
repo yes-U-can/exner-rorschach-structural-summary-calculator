@@ -435,6 +435,14 @@ describe('movement determinant input boundary', () => {
             title?: string;
             message?: string;
           };
+          missingRequiredFields?: {
+            title?: string;
+            message?: string;
+          };
+          incompatibleFormQuality?: {
+            title?: string;
+            message?: string;
+          };
         };
       };
       const warning = messages.toast.invalidDeterminants;
@@ -450,6 +458,8 @@ describe('movement determinant input boundary', () => {
         messages.toast.standaloneSpace,
         messages.toast.movementConflict,
         messages.toast.missingFormQuality,
+        messages.toast.missingRequiredFields,
+        messages.toast.incompatibleFormQuality,
       ]) {
         expect(boundaryWarning?.title?.trim()).toBeTruthy();
         expect(boundaryWarning?.message?.trim()).toBeTruthy();

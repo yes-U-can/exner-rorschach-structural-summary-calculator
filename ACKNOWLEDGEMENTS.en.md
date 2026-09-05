@@ -30,6 +30,8 @@ In particular, the input list in the 2019 workbook contained only movement codes
 
 ## AI development and independent review tools
 
-OpenAI Codex was used for implementation and repeated testing in v2. Claude Fable 5 and Claude Opus 4.8 were used for independent review before publication.
+OpenAI Codex was used for implementation and repeated testing in v2. Claude Fable 5 and Claude Opus 4.8 were used for independent review before publication, and Claude Opus 5 was used for the independent review of v2.2.10.
+
+For v2.2.13, GPT-6 Astra in OpenAI Codex was used for development and verification, and Claude Fable 5.1 in Claude Code for independent review. These are product development tools; the model used by the web app's AI assistant remains unchanged.
 
 Agreement between AI tools is not treated as proof of a calculation or clinical judgment. MOW retains final responsibility for the product and compares public professional references, reproducible program output and regression tests, and the clinical review conducted by the Seoul Institute of Clinical Psychology from the perspective of actual use.
